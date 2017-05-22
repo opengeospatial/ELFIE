@@ -12,3 +12,7 @@ The Environmental Linked Feature Interoperability Experiment (ELFIE) will bring 
 - Provide draft linked data encodings to be considered by relevant standards working groups.
 
 [See the activity plan for more.](https://github.com/opengeospatial/ELFIE/wiki/Activity-Plan)
+
+## Contributing
+
+Contributions to the ELFIE repository can be made in one of two ways. For users familiar with git and github, contributions can be made through [a pull request](https://github.com/opengeospatial/ELFIE/pulls) from a fork of the repository. For users not familiar with git and github, contributions can be made by [submitting an issue](https://github.com/opengeospatial/ELFIE/issues) describing where your contribution can be found and someone will help add the content through a pull request.
