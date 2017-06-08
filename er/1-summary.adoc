@@ -28,7 +28,7 @@ All questions regarding this document should be directed to the editor or the co
 [width="80%",options="header"]
 |====================
 |Name |Organization
-|((editor)) | (( from org ))
+|David Blodgett | U.S. Geological Survey
 |((contributor)) | ((from org))
 |====================
 

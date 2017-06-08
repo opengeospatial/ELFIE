@@ -1,6 +1,14 @@
 # ELFIE Engineering Report
 This asciidoc Engineering Report is based on a template built for Testbed 13. The notes below are based on what was included in the template.
 
+### Contributing
+1. Open `1-summary.adoc` and add yourself as a contributor in the contacts section.
+2. Review existing content. example.adoc will be persisted and has good reference material.
+2. Your contribution, what document to add to, should be called out in a github issue.
+3. Before commiting changes, add line breaks to make text easier to review / edit in github.
+4. Commit with "fixes #123" or "related to #123" where 123 is the issue number being addressed.
+5. Push your commit to your personal fork and open a pull request for review.
+
 ### Original Documentation:
 > This is a template proposed for Testbed-13 Engineering Reports.  The objective is for editors to check this out (Clone a version) and begin editing it with a tool such as e.g. Atom editor and Asciidoctor conversion tool.
 

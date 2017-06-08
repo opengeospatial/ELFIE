@@ -2,15 +2,15 @@
 // please provide the following elements
 // *****************************************************************************
 // name of the ER after the colon
-:title: OGC Testbed-13:
+:title: OGC Environmental Linked Features Interoperability Experiment Engineering Report
 // document identifier. The identifier has the format OGC YY-nnn, e.g. OGC 17-067. You can obtain the identifier from the OGC Portal: https://portal.opengeospatial.org/?m=public&subtab=request&tab=1
 :docReference: OGC XX-XXX
 // date when you posted the document to OGC Portal>Pending Documents. Please use the format: yyyy-mm-dd
 :postedDate: YYYY-MM-DD
 // name of all editors. Separate multiple editors by comma, e.g. John Wayne, Bud Spencer
-:editor: Your Name
+:editor: David Blodgett
 // proposed working group for review, e.g. Architecture DWG, or WCS SWG
-:workingGroup:
+:workingGroup: Hydrology DWG
 // *****************************************************************************
 // done, please continue with the imports at line 62 of this document
 // *****************************************************************************
