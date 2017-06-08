@@ -1,0 +1,13 @@
+[[Overview]]
+== Overview
+
+[NOTE]
+.Instructions
+====
+This 4-overview.adoc file helps the reader to better understand the various sections of the ER. It should be written like an extended table of contents.
+
+The following clauses (clause-requirements, clause-solutions, clauses 6-n and Annexes A-D of this template are general recommendations for Engineering Reports. As ERs can be of many different types and purposes, these clauses should be tailored to meet the needs of the report. However in most cases, clause-requirements and clause-solutions should be used.
+====
+
+
+(( Text goes here... ))

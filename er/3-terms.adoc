@@ -1,0 +1,23 @@
+== Terms and definitions
+
+For the purposes of this report, the definitions specified in Clause 4 of the OWS Common Implementation Standard https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9] shall apply. In addition, the following terms and definitions apply.
+
+===	term name
+ text of the definition
+
+===	term name|synonym
+ text of the definition
+
+.NOTE: 	The Terms and definitions clause is an optional element giving definitions necessary for the understanding of certain terms used in this document.
+
+==	Abbreviated terms
+
+.NOTE: The abbreviated terms clause gives a list of the abbreviated terms and the symbols necessary for understanding this document. All symbols should be listed in alphabetical order.	Some more frequently used abbreviated terms are provided below as examples.
+
+* API	Application Program Interface
+* COM	Component Object Model
+* CORBA	Common Object Request Broker Architecture
+* COTS	Commercial Off The Shelf
+* DCE	Distributed Computing Environment
+* DCOM	Distributed Component Object Model
+* IDL	Interface Definition Language
