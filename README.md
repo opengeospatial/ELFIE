@@ -1,9 +1,7 @@
 # Environmental Linked Features Interoperability Experiment (ELFIE)
 
 ## Summary
-In recent years, environmental domain feature models have been established by a number of sub-domain groups. However, there is no best practice or standard methodology to encode documents containing links between and among domain features, such as a rivers, aquifers, or soils, and observational data about those features. A common approach to encoding such links is required to allow cross-domain and cross-system sharing and interoperability of such linked information.
-
-The Environmental Linked Feature Interoperability Experiment (ELFIE) will bring interested stakeholders together around the shared goal of providing a best practice for encoding documents expressing links between hydrologic and related features from models including but not limited to HY_Features, GWML2, and SoilIEML as well as observations and related content from a variety of observations and monitoring standards. The IE will produce an OGC engineering report summarizing the overall cross-domain inter-standard findings and recommendations for a best practice and/or standard to follow. This report will include encoded examples that should feed future linked-data encoding implementation standard development in one or more related standards working groups. To keep scope limited, this IE will not test service interfaces or processing capabilities that would necessarily exist to create or consume the data and documents being tested. The IE is informed by a number of existing systems, examples included with use cases, that offer or could offer services that would benefit from a linked feature data-encoding best practice.
+The ELFIE is intended to test existing OGC and W3C standards with the goal of establishing a best practice for exposing links between and among environmental domain and sampling features. The IE is focused on two cross-domain use cases: 1) exposing topological and domain feature model relationships between features and 2) description of sampling data available for and linked to sampled domain features While addressing these use cases, the IE will strive to address issues of encoding data as specific views of a linked data graph that would be passed between systems. These linked data graph views are expected to support archictures involving linked data catalogs and registries. For example, data providers can use the linked data graph views as a way to advertise their monitoring or domain features to catalogs or other applications that want to crawl and index available data. Similarly, integrated catalogs that index and construct links between features can use the views as a linked data response to search queries.
 
 ## Objectives
 
@@ -12,6 +10,17 @@ The Environmental Linked Feature Interoperability Experiment (ELFIE) will bring 
 - Provide draft linked data encodings to be considered by relevant standards working groups.
 
 [See the activity plan for more.](https://github.com/opengeospatial/ELFIE/wiki/Activity-Plan)
+
+## ELFIE Expectations to be Tested
+*Long Term Vision*  
+We think we can eliminate the need for ad-hoc one-off mappings between non-standard feature types with best practices that entail a well known set of semantics and feature models that allow automated traversal and interpretation of linked information.
+  
+**Specific Near Term Expectations**  
+We think we can express connections between features in an ostensibly open world using existing technologies and data models.  
+  
+This includes basic spatio-tempoal topological links, monitoring relationships, and domain feature model connections.  
+  
+We think that use of resources resolved according to a view of a linked data graph will allow us to create documents that could be built from formal linked open data yet are compatible with basic REST/JSON pattern.  
 
 ## Contributing
 
