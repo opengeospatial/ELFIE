@@ -12,7 +12,7 @@ The ELFIE is intended to test existing OGC and W3C standards with the goal of es
 [See the activity plan for more.](https://github.com/opengeospatial/ELFIE/wiki/Activity-Plan)
 
 ## ELFIE Expectations to be Tested
-*Long Term Vision*  
+**Long Term Vision**  
 We think we can eliminate the need for ad-hoc one-off mappings between non-standard feature types with best practices that entail a well known set of semantics and feature models that allow automated traversal and interpretation of linked information.
   
 **Specific Near Term Expectations**  
