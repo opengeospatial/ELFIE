@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShapeChangeConfiguration xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1 http://shapechange.net/resources/schema/ShapeChangeConfiguration.xsd">
+	<input>
+	   <parameter name="inputModelType" value="EA7"/>
+	    <parameter name="inputFile" value="../HY_Features.EAP"/>
+		<parameter name="appSchemaName" value="HY_HydroFeature"/>
+		<parameter name="checkingConstraints" value="disabled"/>
+		<xi:include href="http://shapechange.net/resources/config/StandardAliases.xml"/>
+		
+	</input>
+	<targets>
+		<TargetOwl class="de.interactive_instruments.ShapeChange.Target.Ontology.OWLISO19150" mode="enabled">
+			<targetParameter name="outputDirectory" value="."/>
+			<targetParameter name="outputFormat" value="ttl"/>
+			<targetParameter name="defaultEncodingRule" value="OGC-base"/>
+			<targetParameter name="language" value="en"/>
+			<targetParameter name="defaultTypeImplementation" value="owl:Class"/>
+			<targetParameter name="ontologyNameCode" value="hyf"/>
+			<targetParameter name="source" value="HY_Features"/>
+			<targetParameter name="URIbase" value="http://opengeospatial/def/ontology"/>
+			<targetParameter name="skosConceptSchemeSuffix" value="_ConceptScheme"/>
+			<targetParameter name="codeNamespaceForEnumerations" value="http://opengeospatial/def/ontology/enum"/>
+			<targetParameter name="codeListOwlClassNamespaceForEnumerations" value="http://opengeospatial/def/ontology/enum"/>
+			<xi:include href="http://shapechange.net/resources/config/StandardMapEntries-owl.xml"/>
+			<descriptorTargets>
+				<DescriptorTarget target="rdfs:label" template="[[name]]"/>
+				<DescriptorTarget target="rdfs:comment" template="[[TV:description]]" noValueText="N/A"/>
+				<DescriptorTarget target="rdfs:comment" template="[[TV:documentation]]" noValueText="N/A"/>
+			</descriptorTargets>
+			<xi:include href="http://shapechange.net/resources/config/StandardNamespaces-owl.xml"/>
+			<rules>
+				<EncodingRule name="OGC-base" extends="*">
+					 <rule name="rule-owl-pkg-singleOntologyPerSchema"/>
+					 <rule name="rule-owl-pkg-ontologyName-code"/>
+					 <rule name="rule-owl-pkg-versionInfo"/>
+					 <rule name="rule-owl-pkg-versionIRI"/>
+					 <rule name="rule-owl-cls-generalization"/>
+					 <rule name="rule-owl-cls-encode-featuretypes"/>
+					 <rule name="rule-owl-cls-encode-objecttypes"/>
+					 <rule name="rule-owl-cls-encode-datatypes"/>
+					 <rule name="rule-owl-prop-general"/>
+					 <rule name="rule-owl-prop-range-global"/>
+					 <rule name="rule-owl-prop-globalScopeByUniquePropertyName"/>
+					 <!-- rule name="rule-owl-prop-localScopeAll" /-->
+					 <rule name="rule-owl-prop-multiplicityAsUnqualifiedCardinalityRestriction"/>
+					 <rule name="rule-owl-prop-inverseOf"/>
+					 <rule name="rule-owl-cls-union"/>
+					 <rule name="rule-owl-cls-unionSets"/>
+					 <rule name="rule-owl-cls-iso191502Enumeration"/>
+					 <rule name="rule-owl-cls-codelist-19150-2"/> 
+				</EncodingRule>
+			</rules>
+		</TargetOwl>
+		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" mode="disabled">
+			<xi:include href="http://shapechange.net/resources/config/StandardNamespaces.xml"/>
+			<xi:include href="http://shapechange.net/resources/config/StandardMapEntries.xml"/>
+			<xsdMapEntries>
+				<XsdMapEntry type="URI" xsdEncodingRules="iso19136_2007" xmlPropertyType="anyURI" xmlType="anyURI" xmlTypeType="simple" xmlTypeContent="simple"/>
+			</xsdMapEntries>
+		</TargetXmlSchema>
+	</targets>
+</ShapeChangeConfiguration>

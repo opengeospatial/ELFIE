@@ -1,0 +1,382 @@
+@prefix sc:    <http://shapechange.net/resources/ont/base#> .
+@prefix hyf:   <http://opengeospatial/def/ontology/hyf#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+hyf:locatedReferent  a  owl:ObjectProperty ;
+        rdfs:label  "locatedReferent"@en ;
+        rdfs:range  hyf:HY_HydroLocation .
+
+hyf:HY_FlowPath  a       owl:Class ;
+        rdfs:label       "HY_FlowPath"@en ;
+        rdfs:subClassOf  hyf:HY_CatchmentRealization .
+
+hyf:HY_HydroLocation  a  owl:Class ;
+        rdfs:label       "HY_HydroLocation"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:hydroLocationType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:referencedPosition
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:realizedNexus
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:HY_HydroLocation.shape
+                         ] .
+
+hyf:exorheicDrainage  a  owl:ObjectProperty ;
+        rdfs:label  "exorheicDrainage"@en ;
+        rdfs:range  hyf:HY_DendriticCatchment .
+
+hyf:HY_HydroLocationType
+        a                owl:Class ;
+        rdfs:label       "HY_HydroLocationType"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+hyf:catchmentDivide  a  owl:ObjectProperty ;
+        rdfs:label  "catchmentDivide"@en ;
+        rdfs:range  hyf:HY_CatchmentDivide .
+
+hyf:accuracyStatement
+        a           owl:DatatypeProperty ;
+        rdfs:label  "accuracyStatement"@en ;
+        rdfs:range  xsd:string .
+
+hyf:conjointCatchment
+        a           owl:ObjectProperty ;
+        rdfs:label  "conjointCatchment"@en ;
+        rdfs:range  hyf:HY_Catchment .
+
+hyf:HY_CartographicRealization
+        a                owl:Class ;
+        rdfs:label       "HY_CartographicRealization"@en ;
+        rdfs:subClassOf  hyf:HY_CatchmentRealization .
+
+hyf:variantSpelling  a  owl:DatatypeProperty ;
+        rdfs:label  "variantSpelling"@en ;
+        rdfs:range  xsd:boolean .
+
+hyf:absolute  a     owl:DatatypeProperty ;
+        rdfs:label  "absolute"@en ;
+        rdfs:range  sc:Measure .
+
+hyf:namesPart  a    owl:DatatypeProperty ;
+        rdfs:label  "namesPart"@en ;
+        rdfs:range  xsd:boolean .
+
+hyf:HY_HydroLocation.shape
+        a            owl:ObjectProperty ;
+        rdfs:domain  hyf:HY_HydroLocation ;
+        rdfs:label   "shape"@en ;
+        rdfs:range   gsp:Geometry .
+
+hyf:realizedNexus  a   owl:ObjectProperty ;
+        rdfs:label     "realizedNexus"@en ;
+        rdfs:range     hyf:HY_HydroNexus ;
+        owl:inverseOf  hyf:nexusRealization .
+
+hyf:HY_HydroNexus  a  owl:Class ;
+        rdfs:label  "HY_HydroNexus"@en .
+
+hyf:catchmentRealization
+        a              owl:ObjectProperty ;
+        rdfs:label     "catchmentRealization"@en ;
+        rdfs:range     hyf:HY_CatchmentRealization ;
+        owl:inverseOf  hyf:realizedCatchment .
+
+hyf:endorheicDrainage
+        a           owl:ObjectProperty ;
+        rdfs:label  "endorheicDrainage"@en ;
+        rdfs:range  hyf:HY_InteriorCatchment .
+
+hyf:containingCatchment
+        a              owl:ObjectProperty ;
+        rdfs:label     "containingCatchment"@en ;
+        rdfs:range     hyf:HY_Catchment ;
+        owl:inverseOf  hyf:containedCatchment .
+
+hyf:referenceLocation
+        a              owl:ObjectProperty ;
+        rdfs:label     "referenceLocation"@en ;
+        rdfs:range     hyf:HY_HydroLocation ;
+        owl:inverseOf  hyf:referencedPosition .
+
+<http://opengeospatial/def/ontology/hyf>
+        a            owl:Ontology ;
+        rdfs:label   "HY_HydroFeature"@en ;
+        owl:imports  <http://shapechange.net/resources/ont/base> , <http://www.opengis.net/ont/geosparql> .
+
+hyf:HY_HydroFeature  a  owl:Class ;
+        rdfs:label  "HY_HydroFeature"@en .
+
+hyf:HY_IndirectPosition
+        a                owl:Class ;
+        rdfs:label       "HY_IndirectPosition"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:distanceDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:distanceExpression
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:locatedReferent
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:linearElement
+                         ] .
+
+hyf:HY_HydroFeatureName
+        a                owl:Class ;
+        rdfs:label       "HY_HydroFeatureName"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:usage
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:preferredBy
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:variantSpelling
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:namesPart
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   hyf:HY_HydroFeatureName.name
+                         ] .
+
+hyf:HY_DendriticCatchment
+        a                owl:Class ;
+        rdfs:label       "HY_DendriticCatchment"@en ;
+        rdfs:subClassOf  hyf:HY_Catchment .
+
+hyf:usage  a        owl:ObjectProperty ;
+        rdfs:label  "usage"@en ;
+        rdfs:range  hyf:HY_NameUsage .
+
+hyf:catchmentArea  a  owl:ObjectProperty ;
+        rdfs:label  "catchmentArea"@en ;
+        rdfs:range  hyf:HY_CatchmentArea .
+
+hyf:HY_CatchmentArea  a  owl:Class ;
+        rdfs:label       "HY_CatchmentArea"@en ;
+        rdfs:subClassOf  hyf:HY_CatchmentRealization .
+
+hyf:referencedPosition
+        a              owl:ObjectProperty ;
+        rdfs:label     "referencedPosition"@en ;
+        rdfs:range     hyf:HY_IndirectPosition ;
+        owl:inverseOf  hyf:referenceLocation .
+
+hyf:flowpath  a     owl:ObjectProperty ;
+        rdfs:label  "flowpath"@en ;
+        rdfs:range  hyf:HY_FlowPath .
+
+hyf:HY_HydroFeatureName.name
+        a            owl:DatatypeProperty ;
+        rdfs:domain  hyf:HY_HydroFeatureName ;
+        rdfs:label   "name"@en ;
+        rdfs:range   xsd:string .
+
+hyf:HY_DistanceFromReferent
+        a                owl:Class ;
+        rdfs:label       "HY_DistanceFromReferent"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:precisionStatement
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:accuracyStatement
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:interpolative
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:absolute
+                         ] .
+
+hyf:linearElement  a  owl:ObjectProperty ;
+        rdfs:label  "linearElement"@en ;
+        rdfs:range  hyf:HY_FlowPath .
+
+hyf:HY_CatchmentRealization
+        a                owl:Class ;
+        rdfs:label       "HY_CatchmentRealization"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:realizedCatchment
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:HY_CatchmentRealization.shape
+                         ] .
+
+hyf:HY_CatchmentAggregate
+        a                owl:Class ;
+        rdfs:label       "HY_CatchmentAggregate"@en ;
+        rdfs:subClassOf  hyf:HY_Catchment ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:exorheicDrainage
+                         ] .
+
+hyf:inflow  a          owl:ObjectProperty ;
+        rdfs:label     "inflow"@en ;
+        rdfs:range     hyf:HY_HydroNexus ;
+        owl:inverseOf  hyf:receivingCatchment .
+
+hyf:receivingCatchment
+        a              owl:ObjectProperty ;
+        rdfs:label     "receivingCatchment"@en ;
+        rdfs:range     hyf:HY_Catchment ;
+        owl:inverseOf  hyf:inflow .
+
+hyf:HY_CatchmentRealization.shape
+        a            owl:ObjectProperty ;
+        rdfs:domain  hyf:HY_CatchmentRealization ;
+        rdfs:label   "shape"@en ;
+        rdfs:range   gsp:Geometry .
+
+hyf:interpolative  a  owl:DatatypeProperty ;
+        rdfs:label  "interpolative"@en ;
+        rdfs:range  xsd:double .
+
+hyf:outflow  a         owl:ObjectProperty ;
+        rdfs:label     "outflow"@en ;
+        rdfs:range     hyf:HY_HydroNexus ;
+        owl:inverseOf  hyf:contributingCatchment .
+
+hyf:HY_NameUsage  a      owl:Class ;
+        rdfs:label       "HY_NameUsage"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+hyf:preferredBy  a  owl:ObjectProperty ;
+        rdfs:label  "preferredBy"@en ;
+        rdfs:range  owl:Class .
+
+hyf:code  a         owl:ObjectProperty ;
+        rdfs:label  "code"@en ;
+        rdfs:range  rdfs:Resource .
+
+hyf:HY_Catchment  a      owl:Class ;
+        rdfs:label       "HY_Catchment"@en ;
+        rdfs:subClassOf  hyf:HY_HydroFeature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:code
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:containingCatchment
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:containedCatchment
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:outflow
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      hyf:inflow
+                         ] .
+
+hyf:distanceExpression
+        a           owl:ObjectProperty ;
+        rdfs:label  "distanceExpression"@en ;
+        rdfs:range  hyf:HY_DistanceFromReferent .
+
+hyf:contributingCatchment
+        a              owl:ObjectProperty ;
+        rdfs:label     "contributingCatchment"@en ;
+        rdfs:range     hyf:HY_Catchment ;
+        owl:inverseOf  hyf:outflow .
+
+hyf:HY_InteriorCatchment
+        a                owl:Class ;
+        rdfs:label       "HY_InteriorCatchment"@en ;
+        rdfs:subClassOf  hyf:HY_Catchment .
+
+hyf:hydroLocationType
+        a           owl:ObjectProperty ;
+        rdfs:label  "hydroLocationType"@en ;
+        rdfs:range  hyf:HY_HydroLocationType .
+
+hyf:containedCatchment
+        a              owl:ObjectProperty ;
+        rdfs:label     "containedCatchment"@en ;
+        rdfs:range     hyf:HY_Catchment ;
+        owl:inverseOf  hyf:containingCatchment .
+
+hyf:nexusRealization  a  owl:ObjectProperty ;
+        rdfs:label     "nexusRealization"@en ;
+        rdfs:range     hyf:HY_HydroLocation ;
+        owl:inverseOf  hyf:realizedNexus .
+
+hyf:HY_HydroFeature.name
+        a            owl:ObjectProperty ;
+        rdfs:domain  hyf:HY_HydroFeature ;
+        rdfs:label   "name"@en ;
+        rdfs:range   hyf:HY_HydroFeatureName .
+
+hyf:realizedCatchment
+        a              owl:ObjectProperty ;
+        rdfs:label     "realizedCatchment"@en ;
+        rdfs:range     hyf:HY_Catchment ;
+        owl:inverseOf  hyf:catchmentRealization .
+
+hyf:precisionStatement
+        a           owl:DatatypeProperty ;
+        rdfs:label  "precisionStatement"@en ;
+        rdfs:range  sc:Measure .
+
+hyf:HY_HydroNetwork  a   owl:Class ;
+        rdfs:label       "HY_HydroNetwork"@en ;
+        rdfs:subClassOf  hyf:HY_CatchmentRealization .
+
+hyf:HY_CatchmentDivide
+        a                owl:Class ;
+        rdfs:label       "HY_CatchmentDivide"@en ;
+        rdfs:subClassOf  hyf:HY_CatchmentRealization .
+
+hyf:upperCatchment  a  owl:ObjectProperty ;
+        rdfs:label     "upperCatchment"@en ;
+        rdfs:range     hyf:HY_Catchment ;
+        owl:inverseOf  hyf:lowerCatchment .
+
+hyf:HY_DistanceDescription
+        a                owl:Class ;
+        rdfs:label       "HY_DistanceDescription"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+hyf:distanceDescription
+        a           owl:ObjectProperty ;
+        rdfs:label  "distanceDescription"@en ;
+        rdfs:range  hyf:HY_DistanceDescription .
+
+hyf:lowerCatchment  a  owl:ObjectProperty ;
+        rdfs:label     "lowerCatchment"@en ;
+        rdfs:range     hyf:HY_Catchment ;
+        owl:inverseOf  hyf:upperCatchment .

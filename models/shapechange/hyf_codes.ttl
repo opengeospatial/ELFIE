@@ -1,0 +1,206 @@
+@prefix hyf:   <http://opengeospatial/def/ontology/hyf#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hyfcode: <http://opengeospatial/def/ontology/hyf/code#> .
+
+hyfcode:HY_HydroLocationType_ConceptScheme
+        a               skos:ConceptScheme ;
+        rdfs:label      "HY_HydroLocationType"@en ;
+        dct:isFormatOf  hyf:HY_HydroLocationType .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/weir>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "weir"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/sinkhole>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "sinkhole"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/bifurcation>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "bifurcation"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/rapids>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "rapids"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+hyfcode:HY_DistanceDescription_ConceptScheme
+        a               skos:ConceptScheme ;
+        rdfs:label      "HY_DistanceDescription"@en ;
+        dct:isFormatOf  hyf:HY_DistanceDescription .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/right>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "right"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/injectionWell>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "injectionWell"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/extractionWell>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "extractionWell"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/source>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "source"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/upstream>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "upstream"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/at>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "at"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/ponor>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "ponor"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/catchmentOutlet>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "catchmentOutlet"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_NameUsage/vernacular>
+        a              hyf:HY_NameUsage ;
+        rdfs:label     "vernacular"@en ;
+        skos:inScheme  hyfcode:HY_NameUsage_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_NameUsage/historical>
+        a              hyf:HY_NameUsage ;
+        rdfs:label     "historical"@en ;
+        skos:inScheme  hyfcode:HY_NameUsage_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/riverMouth>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "riverMouth"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/referenceClimatologicalStation>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "referenceClimatologicalStation"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/inletStructure>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "inletStructure"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/left>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "left"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/between>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "between"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/pourPoint>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "pourPoint"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/infiltrationWell>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "infiltrationWell"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/barrage>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "barrage"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/confluence>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "confluence"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/fork>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "fork"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/nearby>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "nearby"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/outletStructure>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "outletStructure"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/diversionOfWater>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "diversionOfWater"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+hyfcode:HY_NameUsage_ConceptScheme
+        a               skos:ConceptScheme ;
+        rdfs:label      "HY_NameUsage"@en ;
+        dct:isFormatOf  hyf:HY_NameUsage .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/waterfall>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "waterfall"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/spring>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "spring"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/intake>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "intake"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/middle>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "middle"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_NameUsage/conventional>
+        a              hyf:HY_NameUsage ;
+        rdfs:label     "conventional"@en ;
+        skos:inScheme  hyfcode:HY_NameUsage_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_NameUsage/official>
+        a              hyf:HY_NameUsage ;
+        rdfs:label     "official"@en ;
+        skos:inScheme  hyfcode:HY_NameUsage_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/hydrometricStation>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "hydrometricStation"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_DistanceDescription/downstream>
+        a              hyf:HY_DistanceDescription ;
+        rdfs:label     "downstream"@en ;
+        skos:inScheme  hyfcode:HY_DistanceDescription_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code#HY_HydroLocationType/dam>
+        a              hyf:HY_HydroLocationType ;
+        rdfs:label     "dam"@en ;
+        skos:inScheme  hyfcode:HY_HydroLocationType_ConceptScheme .
+
+<http://opengeospatial/def/ontology/hyf/code>
+        a       owl:Ontology .
