@@ -1,0 +1,2 @@
+jsonkey_huc12	rdfs:type	rdfs:label	rdfs:comment	owl:versionInfo	dcterms:creator	owl:sameAs	dcterms:license	foaf:img
+NA	http://www.opengis.net/def/HY_HydrographicNetwork	NHDPlus V2.0 Network for Waunakee Marsh-Sixmile Creek	Collection of Flowlines for HUC12 watershed.	http://www.horizon-systems.com/nhdplus/		https://creativecommons.org/publicdomain/zero/1.0/	
