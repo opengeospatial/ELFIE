@@ -1,17 +1,21 @@
 {
 	"@context": {
+		"geojson": "http://ld.geojson.org/vocab#",
+		"type": "@type",
 		"ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
-		"@vocab": "http://schema.org/"
+		"@vocab": "http://schema.org/",
+		"ef:EnvironmentalMonitoringFacility": "Feature"
 	},
 
 	"type": "FeatureCollection",
 	"features": [{
 			"type": "ef:EnvironmentalMonitoringFacility",
-
-			"geo": {
-				"@type": "GeoCoordinates",
-				"longitude": "5.32424152077325",
-				"latitude": "47.5288404979028"
+			"geometry": {
+				"type": "geojson:Point",
+				"coordinates": [
+					47.5288404979028,
+					5.32424152077325
+				]
 			},
 
 			"properties": {
