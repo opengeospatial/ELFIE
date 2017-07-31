@@ -4,7 +4,10 @@
     "type": "@type",
     "ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
     "@vocab": "http://schema.org/",
-    "mediaMonitored": "ef:mediaMonitored",
+    "mediaMonitored": {
+      "@id": "ef:mediaMonitored",
+      "@type": "@id"
+    }
     "responsibleParty": "ef:responsibleParty",
     "observingCapability_process": "ef:observingCapability/ef:ObservingCapability/ef:procedure",
     "observingCapability_resultNature": "ef:observingCapability/ef:ObservingCapability/ef:resultNature",
@@ -32,7 +35,7 @@
         },
         "identifier": "04398X0002/SONDAG.2",
         "name": "Forage privé (Bourberain-21)",
-        "uri": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+        "url": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
         "mediaMonitored": "http://inspire.ec.europa.eu/codelist/MediaValue/water",
         "responsibleParty": "EAUBOU_S",
         "observingCapability_resultNature": "http://inspire.ec.europa.eu/codelist/ResultNatureValue/primary/",
