@@ -7,7 +7,7 @@
     "mediaMonitored": {
       "@id": "ef:mediaMonitored",
       "@type": "@id"
-    }
+    },
     "responsibleParty": "ef:responsibleParty",
     "observingCapability_process": "ef:observingCapability/ef:ObservingCapability/ef:procedure",
     "observingCapability_resultNature": "ef:observingCapability/ef:ObservingCapability/ef:resultNature",
