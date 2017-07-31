@@ -5,7 +5,14 @@
     "ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
     "@vocab": "http://schema.org/",
     "mediaMonitored": "ef:mediaMonitored",
-    "ef:EnvironmentalMonitoringFacility": "Feature"
+    "responsibleParty": "ef:responsibleParty",
+    "observingCapability_process": "ef:observingCapability/ef:ObservingCapability/ef:procedure",
+    "observingCapability_resultNature": "ef:observingCapability/ef:ObservingCapability/ef:resultNature",
+    "observingCapability_featureOfInterest": "ef:observingCapability/ef:ObservingCapability/ef:featureOfInterest",
+    "observingCapability_observedProperty": "ef:observingCapability/ef:ObservingCapability/ef:observedProperty",
+    "hasObservation": "ef:hasObservation",
+    "measurementRegime": "ef:measurementRegime",
+    "belongsToMonitoringNetwork": "ef:belongsTo"  
   },
   "type": "FeatureCollection",
   "features": [
