@@ -4,7 +4,7 @@
 		"type": "@type",
 		"ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
 		"@vocab": "http://schema.org/",
-		feature: "ef:EnvironmentalMonitoringFacility"
+		"feature": "ef:EnvironmentalMonitoringFacility"
 	},
 
 	"type": "FeatureCollection",
