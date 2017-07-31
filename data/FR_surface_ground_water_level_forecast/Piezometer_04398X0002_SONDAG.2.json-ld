@@ -1,11 +1,4 @@
 {
-	"@context": {
-		"geojson": "http://ld.geojson.org/vocab#",
-		"type": "@type",
-		"ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
-		"@vocab": "http://schema.org/",
-		"feature": "ef:EnvironmentalMonitoringFacility"
-	},
 
 	"type": "FeatureCollection",
 	"feature": [{ 
