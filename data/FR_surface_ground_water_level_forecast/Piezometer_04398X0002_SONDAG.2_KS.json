@@ -18,8 +18,10 @@
         ]
       },
       "properties": {
-        "source": "BRGM",
-        "sourceName": "Bureau de Recherches Geologiques et Minières",
+				"provider": {
+					"identifier": "BRGM",
+					"name": "Bureau de Recherches Geologiques et Minières"
+				},
         "identifier": "04398X0002/SONDAG.2",
         "name": "Forage privé (Bourberain-21)",
         "uri": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
