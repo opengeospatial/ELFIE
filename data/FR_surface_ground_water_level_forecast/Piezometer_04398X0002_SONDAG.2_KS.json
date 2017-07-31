@@ -4,6 +4,7 @@
     "type": "@type",
     "ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
     "@vocab": "http://schema.org/",
+    "mediaMonitored": "ef:mediaMonitored":
     "ef:EnvironmentalMonitoringFacility": "Feature"
   },
   "type": "FeatureCollection",
@@ -18,22 +19,22 @@
         ]
       },
       "properties": {
-				"provider": {
-					"identifier": "BRGM",
-					"name": "Bureau de Recherches Geologiques et Minières"
-				},
+        "provider": {
+          "identifier": "BRGM",
+          "name": "Bureau de Recherches Geologiques et Minières"
+        },
         "identifier": "04398X0002/SONDAG.2",
         "name": "Forage privé (Bourberain-21)",
         "uri": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
-		"mediaMonitored": "http://inspire.ec.europa.eu/codelist/MediaValue/water",
-		"responsibleParty": "EAUBOU_S",
-		"observingCapability_resultNature": "http://inspire.ec.europa.eu/codelist/ResultNatureValue/primary/",
-		"observingCapability_featureOfInterest": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
-		"observingCapability_observedProperty":"http://id.eaufrance.fr/par/1689.xml",
-		"hasObservation":"http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2&responseFormat=http://www.opengis.net/waterml/2.0&temporalFilter=om%3AphenomenonTime%2Clatest",
-		"measurementRegime":"http://inspire.ec.europa.eu/codelist/MeasurementRegimeValue/continuousDataCollection/",
-		"belongsToMonitoringNetwork":"http://ressource.brgm-rec.fr/data/DispositifCollecte/0600000216",
-		"belongsToMonitoringNetwork":"http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000070"
+        "mediaMonitored": "http://inspire.ec.europa.eu/codelist/MediaValue/water",
+        "responsibleParty": "EAUBOU_S",
+        "observingCapability_resultNature": "http://inspire.ec.europa.eu/codelist/ResultNatureValue/primary/",
+        "observingCapability_featureOfInterest": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
+        "observingCapability_observedProperty":"http://id.eaufrance.fr/par/1689.xml",
+        "hasObservation":"http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2&responseFormat=http://www.opengis.net/waterml/2.0&temporalFilter=om%3AphenomenonTime%2Clatest",
+        "measurementRegime":"http://inspire.ec.europa.eu/codelist/MeasurementRegimeValue/continuousDataCollection/",
+        "belongsToMonitoringNetwork":"http://ressource.brgm-rec.fr/data/DispositifCollecte/0600000216",
+        "belongsToMonitoringNetwork":"http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000070"
       }
     }
   ]
