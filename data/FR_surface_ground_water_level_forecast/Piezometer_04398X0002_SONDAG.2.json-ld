@@ -8,7 +8,7 @@
 	},
 
 	"type": "FeatureCollection",
-	"ef:EnvironmentalMonitoringFacility": [{ 
+	"feature": [{ 
 			"type": "Feature",
 			"geometry": {
 				"type": "geojson:Point",
