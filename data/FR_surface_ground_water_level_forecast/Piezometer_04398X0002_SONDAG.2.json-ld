@@ -4,12 +4,12 @@
 		"type": "@type",
 		"ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
 		"@vocab": "http://schema.org/",
-		"ef:EnvironmentalMonitoringFacility": "Feature"
+		feature: "ef:EnvironmentalMonitoringFacility"
 	},
 
 	"type": "FeatureCollection",
-	"features": [{ 
-			"type": "ef:EnvironmentalMonitoringFacility",
+	"ef:EnvironmentalMonitoringFacility": [{ 
+			"type": "Feature",
 			"geometry": {
 				"type": "geojson:Point",
 				"coordinates": [
