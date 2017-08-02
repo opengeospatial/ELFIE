@@ -1,0 +1,10 @@
+{
+    "@context": {
+        "time": "https://www.w3.org/TR/owl-time/",
+        "after": "time:after",
+        "before": "time:before",
+        "intervalAfter": "time:intervalAfter",
+        "intervalBefore": "time:intervalBefore",
+        "intervalDuring": "time:intervalDuring"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "@context": [
+        "http://some.elfie.location/elf-net-basic.jsonld",
+        "http://some.elfie.location/elf-net-spatial.jsonld",
+        "http://some.elfie.location/elf-net-temporal.jsonld"
+    ]
+}
