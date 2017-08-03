@@ -1,0 +1,16 @@
+{
+    "@context": "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/models/json-ld/elf-preview.jsonld",
+    "@id": "https://data.elfie.ogc/id/some/thing/001",
+    "@type": "https://data.elfie.ogc/def/some/thing",
+    "label": "Something",
+    "comment": "Should really be a real-world example but one doesn't want to start a flame war over 'incorrect' example data.",
+    "versionInfo": "1.0.0",
+    "creator": "https://data.elfie.ogc/id/dangerous/hacks/ritchiea",
+    "sameAs": [
+        "https://data.example.org/id/that/thing/2612",
+        "https://data.domain.name/id/and-that/thing/2601"
+    ],
+    "hasGeometry": "POINT(-43.640416 172.476688)",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/220px-The_Scream.jpg"
+}

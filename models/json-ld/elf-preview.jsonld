@@ -1,6 +1,6 @@
 {
     "@context": [
-        "http://some.elfie.location/elf-basic.jsonld",
+        "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/models/json-ld/elf-basic.jsonld",
         {
             "rdfs": "https://www.w3.org/TR/rdf-schema/",
             "owl": "https://www.w3.org/OWL/",
@@ -10,10 +10,19 @@
             "comment": "rdfs:comment",
             "versionInfo": "owl:versionInfo",
             "creator": "dcterms:creator",
-            "sameAs": "owl:sameAs",
+            "sameAs": {
+                "@id": "owl:sameAs",
+                "@type": "@id"
+            },
             "hasGeometry": "geo:hasGeometry",
-            "license": "dcterms:license",
-            "image": "schema:image"
+            "license": {
+                "@id": "dcterms:license",
+                "@type": "@id"
+            },
+            "image": {
+                "@id": "schema:image",
+                "@type": "@id"
+            }
         }
     ]
 }

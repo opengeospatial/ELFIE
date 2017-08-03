@@ -2,7 +2,6 @@
    "@context":
    {
       "rdfs": "https://www.w3.org/TR/rdf-schema/",
-      "type": "rdfs:type",
       "label": "rdfs:label"
    }
 }

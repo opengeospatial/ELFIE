@@ -1,6 +1,9 @@
 {
     "@context": {
         "skos": "https://www.w3.org/TR/skos-reference/",
-        "related": "skos:related"
+        "related": {
+            "@id": "skos:related",
+            "@type": "@id"
+        }
     }
 }
