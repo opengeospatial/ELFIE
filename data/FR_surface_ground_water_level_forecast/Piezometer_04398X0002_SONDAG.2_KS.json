@@ -4,7 +4,7 @@
     "type": "@type",
     "ef": "https://www.w3.org/2015/03/inspire/ef#",
     "@vocab": "http://schema.org/",
-		"sosa": https://raw.githubusercontent.com/w3c/sdw/gh-pages/ssn/integrated/sosa.ttl,
+    "sosa": "https://raw.githubusercontent.com/w3c/sdw/gh-pages/ssn/integrated/sosa.ttl",
     "mediaMonitored": {
       "@id": "ef:mediaMonitored",
       "@type": "@id"
