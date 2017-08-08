@@ -2,20 +2,42 @@
   "@context": {
     "geojson": "http://ld.geojson.org/vocab#",
     "type": "@type",
-    "ef": "http://inspire.ec.europa.eu/schemas/ef/4.0/#",
+    "ef": "https://www.w3.org/2015/03/inspire/ef#",
     "@vocab": "http://schema.org/",
+		"sosa": https://raw.githubusercontent.com/w3c/sdw/gh-pages/ssn/integrated/sosa.ttl,
     "mediaMonitored": {
       "@id": "ef:mediaMonitored",
       "@type": "@id"
     },
     "responsibleParty": "ef:responsibleParty",
-    "observingCapability_process": "ef:observingCapability/ef:ObservingCapability/ef:procedure",
-    "observingCapability_resultNature": "ef:observingCapability/ef:ObservingCapability/ef:resultNature",
-    "observingCapability_featureOfInterest": "ef:observingCapability/ef:ObservingCapability/ef:featureOfInterest",
-    "observingCapability_observedProperty": "ef:observingCapability/ef:ObservingCapability/ef:observedProperty",
-    "hasObservation": "ef:hasObservation",
-    "measurementRegime": "ef:measurementRegime",
-    "belongsToMonitoringNetwork": "ef:belongsTo"  
+    "obsCaps_process": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
+    "obsCaps_resultNature": {
+      "@id": "ef:resultNature",
+      "@type": "@id"
+    },
+    "obsCaps_featureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "obsCaps_observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
+    "hasObservation": {
+      "@id": "ef:hasObservation",
+      "@type": "@id"
+    },
+    "measurementRegime": {
+      "@id": "ef:measurementRegime",
+      "@type": "@id"
+    },
+    "belongsToMonitoringNetwork": {
+      "@id": "ef:belongsTo",
+      "@type": "@id"
+    }  
   },
   "type": "FeatureCollection",
   "features": [
@@ -38,9 +60,10 @@
         "url": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
         "mediaMonitored": "http://inspire.ec.europa.eu/codelist/MediaValue/water",
         "responsibleParty": "EAUBOU_S",
-        "observingCapability_resultNature": "http://inspire.ec.europa.eu/codelist/ResultNatureValue/primary/",
-        "observingCapability_featureOfInterest": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
-        "observingCapability_observedProperty":"http://id.eaufrance.fr/par/1689.xml",
+        "obsCaps_resultNature": "http://inspire.ec.europa.eu/codelist/ResultNatureValue/primary/",
+        "obsCaps_featureOfInterest": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
+        "obsCaps_observedProperty":"http://id.eaufrance.fr/par/1689.xml",
+				"obsCaps_process": "http://ressource.brgm-rec.fr/data/process/something",
         "hasObservation":"http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2&responseFormat=http://www.opengis.net/waterml/2.0&temporalFilter=om%3AphenomenonTime%2Clatest",
         "measurementRegime":"http://inspire.ec.europa.eu/codelist/MeasurementRegimeValue/continuousDataCollection/",
         "belongsToMonitoringNetwork":"http://ressource.brgm-rec.fr/data/DispositifCollecte/0600000216",
