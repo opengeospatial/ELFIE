@@ -5,6 +5,7 @@
     "ef": "https://www.w3.org/2015/03/inspire/ef#",
     "@vocab": "http://schema.org/",
     "sosa": "https://raw.githubusercontent.com/w3c/sdw/gh-pages/ssn/integrated/sosa.ttl",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "mediaMonitored": {
       "@id": "ef:mediaMonitored",
       "@type": "@id"
@@ -16,7 +17,8 @@
     },
     "obsCaps_resultNature": {
       "@id": "ef:resultNature",
-      "@type": "@id"
+      "@type": "@id",
+      "rdfs:seeAlso": "http://inspire.ec.europa.eu/codeList/ResultNatureValue"
     },
     "obsCaps_featureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
@@ -32,7 +34,8 @@
     },
     "measurementRegime": {
       "@id": "ef:measurementRegime",
-      "@type": "@id"
+      "@type": "@id",
+      "rdfs:seeAlso": "http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue"
     },
     "belongsToMonitoringNetwork": {
       "@id": "ef:belongsTo",
