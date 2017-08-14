@@ -1,0 +1,49 @@
+{
+    "@context": "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/models/json-ld/elf-geojson.jsonld",
+    "type": "Feature",
+    "id": "https://data.elfie.ogc/id/some/thing/001",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            172.476688,
+            -43.640416
+        ]
+    },
+    "properties": {
+        "@type": "https://data.elfie.ogc/def/some/thing",
+        "label": "Something",
+        "comment": "Everything smashed into a GeoJSON feature. @id and hasGeometry values left out in favour of the GeoJSON equivalents.",
+        "versionInfo": "1.0.0",
+        "creator": "https://data.elfie.ogc/id/dangerous/hacks/ritchiea",
+        "sameAs": [
+            "https://data.example.org/id/that/thing/2612",
+            "https://data.domain.name/id/and-that/thing/2601"
+        ],
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/220px-The_Scream.jpg",
+        "related": [
+            "https://data.elfie.ogc/id/some/thing/else"
+        ],
+        "intersects": [
+            "https://data.elfie.ogc/id/a/region",
+            "https://data.elfie.ogc/id/an/area"
+        ],
+        "touches": [
+            "https://data.elfie.ogc/id/river/waimakariri"
+        ],
+        "within": [
+            "https://data.elfie.ogc/id/this/administrative-area",
+            "https://data.elfie.ogc/id/that/country",
+            "https://data.elfie.ogc/id/animal/farm"
+        ],
+        "intervalAfter": [
+            "https://data.elfie.ogc/id/some/earlier/time-period"
+        ],
+        "intervalBefore": [
+            "https://data.elfie.ogc/id/some/later/time-period"
+        ],
+        "intervalDuring": [
+            "https://data.elfie.ogc/id/some/really/exciting/event"
+        ]
+    }
+}

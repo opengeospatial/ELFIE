@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "geo": "http://www.opengeospatial.org/standards/geosparql/",
+        "intersects": {
+            "@id": "geo:sfIntersects",
+            "@type": "@id"
+        },
+        "touches": {
+            "@id": "geo:sfTouches",
+            "@type": "@id"
+        },
+        "within": {
+            "@id": "geo:sfWithin",
+            "@type": "@id"
+        }
+    }
+}

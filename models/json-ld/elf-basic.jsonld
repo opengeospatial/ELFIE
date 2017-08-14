@@ -1,0 +1,7 @@
+{
+   "@context":
+   {
+      "rdfs": "https://www.w3.org/TR/rdf-schema/",
+      "label": "rdfs:label"
+   }
+}
