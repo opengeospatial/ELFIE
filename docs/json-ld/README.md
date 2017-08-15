@@ -62,7 +62,7 @@ hyperlinks)?_
 | elf-net | elf-net.json-ld |  | Imports elf-net-basic.jsonld, elf-net-spatial.jsonld, elf-net-temporal.jsonld |
 | elf-geojson | elf-geojson.jsonld | xample-elf-geojson.json | See 'Experiment - ELFIE GeoJSON-LD' below. Imports http://geojson.org/geojson-ld/geojson-context.jsonld |
 - Until something a bit better is sorted out the URLs for the context files use the path 
-https://raw.githubusercontent.com/opengeospatial/ELFIE/master/docs/json-ld/ but omit the token 
+https://opengeospatial.github.io/ELFIE/json-ld/ but omit the token 
 parameter for clarity (so they will 404 if you try to access them).
 
 ## Experiment - ELFIE GeoJSON-LD

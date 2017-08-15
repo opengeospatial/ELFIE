@@ -1,7 +1,7 @@
 {
     "@context": [
-        "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/docs/json-ld/elf-basic.jsonld",
-        "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/docs/json-ld/elf-net-temporal.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld"
     ],
     "@id": "https://data.elfie.ogc/id/some/thing/001",
     "@type": "https://data.elfie.ogc/def/some/thing",
