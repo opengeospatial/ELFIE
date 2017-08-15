@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.82191667,
+          -35.58805556
+        ]
+      },
+      "properties": {
+        "source": "bomwdo",
+        "sourceName": "WDO station from ACT - ACTEW Corporation Limited",
+        "identifier": "w00002-410730",
+        "name": "Cotter River at Gingera",
+        "uri": "http://www.bom.gov.au/waterdata/station.html?dataowner=w00002&station=410730",
+        "comid": "15559",
+        "navigation": "http://www.bom.gov.au/water/hrs/#id=410730"
+      }
+    }
+  ]
+}
