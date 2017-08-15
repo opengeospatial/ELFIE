@@ -1,5 +1,5 @@
 {
-    "@context": "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/models/json-ld/elf-geojson.jsonld",
+    "@context": "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/docs/json-ld/elf-geojson.jsonld",
     "type": "Feature",
     "id": "https://data.elfie.ogc/id/some/thing/001",
     "geometry": {

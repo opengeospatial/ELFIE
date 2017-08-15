@@ -1,5 +1,5 @@
 {
-    "@context": "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/models/json-ld/elf-all.jsonld",
+    "@context": "https://raw.githubusercontent.com/opengeospatial/ELFIE/master/docs/json-ld/elf-all.jsonld",
     "@id": "https://data.elfie.ogc/id/some/thing/001",
     "@type": "https://data.elfie.ogc/def/some/thing",
     "label": "Something",
