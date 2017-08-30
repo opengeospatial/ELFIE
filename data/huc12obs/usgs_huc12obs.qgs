@@ -5,16 +5,16 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_wqp_07090002060120170627101728998" name="usgs_wqp_070900020601 OGRGeoJSON Point">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_wqp_07090002060120170627101728998" name="usgs_wqp_huc12obs OGRGeoJSON Point">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_nwissite_07090002060120170627101725475" name="usgs_nwissite_070900020601 OGRGeoJSON Point">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_nwissite_07090002060120170627101725475" name="usgs_nwissite_huc12obs1 OGRGeoJSON Point">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_huc_07090002060120170627101721051" name="usgs_huc_070900020601 OGRGeoJSON MultiPolygon">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_huc_07090002060120170627101721051" name="usgs_huc_huc12obs OGRGeoJSON MultiPolygon">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_nhdplusflowline_07090002060120170627102442477" name="usgs_nhdplusflowline_070900020601 OGRGeoJSON LineString">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_nhdplusflowline_huc12obs20170830141228879" name="usgs_nhdplusflowline_huc12obs OGRGeoJSON MultiLineString">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="OpenLayers_plugin_layer20170627102222276" name="Google Physical">
@@ -25,10 +25,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-9987187.87190401926636696</xmin>
-      <ymin>5324655.37592065148055553</ymin>
-      <xmax>-9931642.29337137565016747</xmax>
-      <ymax>5357239.01654942519962788</ymax>
+      <xmin>-9975315.6676026489585638</xmin>
+      <ymin>5336089.86321691144257784</ymin>
+      <xmax>-9953066.47791413404047489</xmax>
+      <ymax>5352381.68353129830211401</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -47,10 +47,12 @@
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_huc_07090002060120170627101721051"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20170830141011198"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_wqp_07090002060120170627101728998"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenLayers_plugin_layer20170627102222276"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_nwissite_07090002060120170627101725475"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenLayers_plugin_layer20170627102145769"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_nhdplusflowline_huc12obs20170830141228879"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_nhdplusflowline_07090002060120170627102442477"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
@@ -60,28 +62,28 @@
       <item>usgs_nwissite_07090002060120170627101725475</item>
       <item>usgs_wqp_07090002060120170627101728998</item>
       <item>OpenLayers_plugin_layer20170627102222276</item>
-      <item>usgs_nhdplusflowline_07090002060120170627102442477</item>
+      <item>usgs_nhdplusflowline_huc12obs20170830141228879</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_wqp_070900020601 OGRGeoJSON Point" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_wqp_huc12obs OGRGeoJSON Point" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="usgs_wqp_07090002060120170627101728998" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_nwissite_070900020601 OGRGeoJSON Point" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_nwissite_huc12obs1 OGRGeoJSON Point" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="usgs_nwissite_07090002060120170627101725475" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_huc_070900020601 OGRGeoJSON MultiPolygon" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_huc_huc12obs OGRGeoJSON MultiPolygon" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="usgs_huc_07090002060120170627101721051" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_nhdplusflowline_070900020601 OGRGeoJSON LineString" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_nhdplusflowline_huc12obs OGRGeoJSON MultiLineString" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="usgs_nhdplusflowline_07090002060120170627102442477" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="usgs_nhdplusflowline_huc12obs20170830141228879" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Google Physical" showFeatureCount="0">
@@ -128,11 +130,11 @@
         <ymax>43.26237586836483473</ymax>
       </extent>
       <id>usgs_huc_07090002060120170627101721051</id>
-      <datasource>./usgs_huc_070900020601.json</datasource>
+      <datasource>./usgs_huc_huc12obs.json</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>usgs_huc_070900020601 OGRGeoJSON MultiPolygon</layername>
+      <layername>usgs_huc_huc12obs OGRGeoJSON MultiPolygon</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -549,12 +551,12 @@ def my_form_open(dialog, layer, feature):
         <xmax>-89.46320810168980131</xmax>
         <ymax>43.24296269565819983</ymax>
       </extent>
-      <id>usgs_nhdplusflowline_07090002060120170627102442477</id>
-      <datasource>./usgs_nhdplusflowline_070900020601.json</datasource>
+      <id>usgs_nhdplusflowline_huc12obs20170830141228879</id>
+      <datasource>./usgs_nhdplusflowline_huc12obs.geojson</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>usgs_nhdplusflowline_070900020601 OGRGeoJSON LineString</layername>
+      <layername>usgs_nhdplusflowline_huc12obs OGRGeoJSON MultiLineString</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -593,9 +595,9 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="0,17,255,255"/>
+              <prop k="line_color" v="1,39,255,255"/>
               <prop k="line_style" v="solid"/>
-              <prop k="line_width" v="1.2"/>
+              <prop k="line_width" v="2"/>
               <prop k="line_width_unit" v="MM"/>
               <prop k="offset" v="0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -780,7 +782,6 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
-          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -806,23 +807,23 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform>.</annotationform>
+      <annotationform></annotationform>
       <aliases>
         <alias field="nhdplus_comid" index="0" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="-266507875">
         <columns>
           <column width="-1" hidden="0" type="field" name="nhdplus_comid"/>
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform>.</editform>
+      <editform></editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitfilepath></editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -849,12 +850,18 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-89.47288890000000094</xmin>
+        <ymin>43.19222220000000334</ymin>
+        <xmax>-89.47288890000000094</xmax>
+        <ymax>43.19222220000000334</ymax>
+      </extent>
       <id>usgs_nwissite_07090002060120170627101725475</id>
-      <datasource>./usgs_nwissite_070900020601.json</datasource>
+      <datasource>./usgs_nwissite_huc12obs.json</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>usgs_nwissite_070900020601 OGRGeoJSON Point</layername>
+      <layername>usgs_nwissite_huc12obs1 OGRGeoJSON Point</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -1188,12 +1195,18 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-89.5925060000000002</xmin>
+        <ymin>43.17692000000000263</ymin>
+        <xmax>-89.47276800000000208</xmax>
+        <ymax>43.21391669999999863</ymax>
+      </extent>
       <id>usgs_wqp_07090002060120170627101728998</id>
-      <datasource>./usgs_wqp_070900020601.json</datasource>
+      <datasource>./usgs_wqp_huc12obs.json</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>usgs_wqp_070900020601 OGRGeoJSON Point</layername>
+      <layername>usgs_wqp_huc12obs OGRGeoJSON Point</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -1556,8 +1569,10 @@ def my_form_open(dialog, layer, feature):
         <value>usgs_huc_07090002060120170627101721051</value>
         <value>usgs_nwissite_07090002060120170627101725475</value>
         <value>usgs_wqp_07090002060120170627101728998</value>
+        <value>usgs_nhdplusflowline_huc12obs20170830141228879</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -1568,8 +1583,10 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -1577,6 +1594,7 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
