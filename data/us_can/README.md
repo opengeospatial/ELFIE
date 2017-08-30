@@ -2,6 +2,8 @@ _NOTE: This is still a work in progress. Geospatial data only so far._
 
 ## USA Canada Cross Border Data  
 
+Use Case id: `cr`
+
 Region: [Champlain-Richelieu.](http://www.ijc.org/en_/Lake_Champlain_Basin)  
 
 1) WBDHU8 - [US eight digit hydrologic units.](https://catalog.data.gov/dataset/usgs-national-watershed-boundary-dataset-wbd-downloadable-data-collection-national-geospatial-)  
