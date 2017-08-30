@@ -2,6 +2,8 @@ _NOTE: this is a work in progress. Data and predicates are still being finalized
 
 ## Basic Observations for a Watershed  
 
+Use Case ID: `huc12obs`
+
 Region: [Waunakee Marsh-Sixmile Creek](https://cida.usgs.gov/nwc/#!waterbudget/achuc/070900020601)  
 
 1) huc - 12 digit hydrologic unit boudary  
