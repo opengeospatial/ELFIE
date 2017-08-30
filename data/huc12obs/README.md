@@ -10,3 +10,5 @@ Region: [Waunakee Marsh-Sixmile Creek](https://cida.usgs.gov/nwc/#!waterbudget/a
 2) nhdplusflowline - blue lines  
 3) nwissite - active stream monitoring  
 4) wqp - water quality observation sites  
+
+The `.R` and `.rds` files are tracking some scripting that was used to create the associated files.
