@@ -14,7 +14,7 @@
                 "@id": "owl:sameAs",
                 "@type": "@id"
             },
-            "hasGeometry": "geo:hasGeometry",
+            "hasPreviewGeometry": "geo:hasGeometry",
             "license": {
                 "@id": "dcterms:license",
                 "@type": "@id"

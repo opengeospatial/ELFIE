@@ -10,7 +10,7 @@
         "https://data.example.org/id/that/thing/2612",
         "https://data.domain.name/id/and-that/thing/2601"
     ],
-    "hasGeometry": "POINT(-43.640416 172.476688)",
+    "hasPreviewGeometry": "POINT(-43.640416 172.476688)",
     "license": "https://creativecommons.org/licenses/by-sa/4.0/",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/220px-The_Scream.jpg"
 }
