@@ -1,7 +1,5 @@
 {
-    "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld"
-    ],
+    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
     "@id": "https://hydro.data.elfie.ogc/id/monitoring-station/101",
     "@type": "sosa:Sample",
     "label": "MS101",

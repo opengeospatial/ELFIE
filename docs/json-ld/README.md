@@ -22,7 +22,9 @@ Obviously, being JSON-LD, an appropriate context should be provided, either in-l
 reference, with a vigorous expectation that the semantics of ELFIE contexts be preserved.
 
 ## File structure
-- Files are named according to the ELFIE view they realize. Either the [core set of views](https://github.com/opengeospatial/ELFIE/wiki/Predicates) or the [domain-specific views](https://github.com/opengeospatial/ELFIE/wiki/Domain-Features-and-Predicates).
+- Files are named according to the ELFIE view they realize. Either the
+ [core set of views](https://github.com/opengeospatial/ELFIE/wiki/Predicates) or the
+ [domain-specific views](https://github.com/opengeospatial/ELFIE/wiki/Domain-Features-and-Predicates).
 - JSON keyword names are kept as simple as possible (i.e. no extended JSON-LD namespace prefixes). 
 This should minimise developer trauma and also take into account the fact that some parsers don't 
 like colons in keywords, even though they are legitimate JSON (_ABHR: it is possible that the devs 
@@ -31,7 +33,8 @@ who brought this to my attention didn't know to put extended keyords in [] when 
 namespace is only used once. This keeps all the files consistent (namespaces always in the same 
 place) and familiar for users used to TTL etc.
 - Context files are imported/re-used by creating the context as an array where the first value(s) 
-is the path(s) to the imported context, followed by an object - see [JSON-LD Syntax, Example 29](https://www.w3.org/TR/json-ld-syntax/#the-context).
+is the path(s) to the imported context, followed by an object - see
+ [JSON-LD Syntax, Example 29](https://www.w3.org/TR/json-ld-syntax/#the-context).
 - Example files (prefixed 'xample-') always contain a single JSOn object - we are interested in 
 responses that only ever describe a single resource. _ABHR: true? I can't think of an example where 
 we'd want multiple instances of the same resource._
@@ -43,10 +46,35 @@ we'd want multiple instances of the same resource._
     - have a JSON-LD @id (node identifier, equivalent to rdf:about, TTL's 'a') after the @context
     - have a JSON-LD @type (equivalent to rdfs:type) after the @id
 - All properties that can be multi-valued (e.g. any relationship) should be presented as an array, 
-regardless of the number of related resources.
+regardless of the number of related resources. _ABHR: if so, should the @type key always be an 
+array? It is possible for features to be of two types, e.g.: sosa:Sample_ and _hyf:HY\_HydrometricFeature._
+- Where all members of the array share the same context (overriding the root context) then the
+ value should be a JSON object with a @context key and a @graph key whose value is the array.
+ See [xample-elf-sosa-sample.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample.json). E.g.:
+    ```json
+    "isFeatureOfInterestOf": {
+        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+        "@graph": [{...},{...},...]
+    } 
+     ```
 - Each mapping shall defer typing of a property to the source RDF scheme, the exception being 
 relations - these shall be explicitly typed as @ids to force the use of URIs. (See the last 
 paragraph of the summary for why relations will always be by reference.)
+- In elf-preview should provide link relations as elf-basic objects, allowing the target resource
+ to be typed and supporting decisions by a crawler (adding label key allows creation of hyperlinks. E.g.:  
+    ```json
+    "relation": [
+         {"@id": "http://data.example.org/id/thing/1", "@type": "sosa:Sample"},
+         {"@id": "http://data.example.org/id/thing/2", "@type": "hyf:HY_River"}
+    ]  
+     ```
+    instead of  
+    ```json
+    "relation": [
+        "http://data.example.org/id/thing/1",
+        "http://data.example.org/id/thing/2"
+    ]
+    ```
 - _Should everything import elf-basic.jsonld (so we can have a friendly label, say for creating 
 hyperlinks)?_
 
