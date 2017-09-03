@@ -1,0 +1,23 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld"
+    ],
+    "@id": "https://hydro.data.elfie.ogc/id/monitoring-station/101",
+    "@type": "sosa:Sample",
+    "label": "MS101",
+    "comment": "A monitoring station somewhere in the world.",
+    "versionInfo": "1.0.0",
+    "creator": "https://data.elfie.ogc/id/dangerous/hacks/ritchiea",
+    "sameAs": [
+        "https://data.example.org/id/energy-company/thing/2612",
+        "https://data.domain.name/id/irrigation-scheme/thing/2601"
+    ],
+    "hasPreviewGeometry": "POINT(-43.640416 172.476688)",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "image": "https://en.wikipedia.org/wiki/File:Snoqualmie_Gaging_Station_04135.JPG",
+    "related": [
+        "https://data.elfie.ogc/id/some/river",
+        "https://hydro.data.elfie.ogc/id/monitoring-network/10",
+        "https://hydro.data.elfie.ogc/id/water-sample/10.1"
+    ]
+}

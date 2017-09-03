@@ -63,7 +63,10 @@ hyperlinks)?_
 | elf-geojson | [elf-geojson.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-geojson.jsonld) | [xample-elf-geojson.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-geojson.json) | See 'Experiment - ELFIE GeoJSON-LD' below. Imports http://geojson.org/geojson-ld/geojson-context.jsonld |
 | _elf-sosa_ |  |  | Based on the [O&M ttl examples](https://www.w3.org/TR/vocab-ssn/integrated/examples/om-20.ttl) introduced in [Annex C.10 of SOSA specification](https://www.w3.org/TR/vocab-ssn/#omxml-examples). Restricted to O&M sampling features for simplicity's sake (no sensor descriptions etc). Split into a context per feature type for clarity. Possibly no real need? |
 | elf-sosa-observation | [elf-sosa-observation.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld) | [xample-elf-sosa-observation.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-observation.json) | Context for Observations. |
-| elf-sosa-sample | [elf-sosa-sample.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld) | [xample-elf-sosa-sample.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample.json) | Context for Samples - in our case sampling features such as monitoring stations, boreholes etc. |   
+| elf-sosa-sample | [elf-sosa-sample.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld) | | Context for Samples - in our case sampling features such as monitoring stations, boreholes etc. |
+| | | [xample-elf-sosa-sample.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample.json) | Example with multiple observations inline - used the @graph key as all objects in the array share the same context. |
+| | | [xample-elf-sosa-sample-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample-byref.json) | As above, but observations by reference. |
+| | | [xample-elf-sosa-sample-preview.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample-preview.json) | Monitoring station using only preview and simple relationship keys. |  
 
 Context and example files are published in the docs folder and can be refered to at the path 
 https://opengeospatial.github.io/ELFIE/json-ld/.  
