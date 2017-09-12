@@ -81,6 +81,7 @@ hyperlinks)?_
 ## Contexts
 Assuming one context file per type, e.g. sosa:Sample. For elf-basic, elf-preview and elf-net-* this is effectively rdfs:Class (owl:Thing?).  
 skos:editorialNotes have been smuggled into the (e)xample files to explain some decisions that otherwise might get lost in the readme.
+
 | VIEW | CONTEXT FILE | EXAMPLE | COMMENT |
 | ---- | ------------ | ------- | ------- |
 | eld-all | [elf-all.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld) | [xample-elf-all.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-all.json) | An all components context that imports everything for when you just want to say everything you know. _Necessary? Even more importantly - is this legitimate?_ |
