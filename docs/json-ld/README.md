@@ -85,12 +85,12 @@ skos:editorialNotes have been smuggled into the (e)xample files to explain some 
 | VIEW | CONTEXT FILE | EXAMPLE | COMMENT |
 | ---- | ------------ | ------- | ------- |
 | eld-all | [elf-all.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld) | [xample-elf-all.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-all.json) | An all components context that imports everything for when you just want to say everything you know. _Necessary? Even more importantly - is this legitimate?_ |
-| elf-basic | [elf-basic.json-ld](https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.json-ld) | [xample-elf-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-basic.json) | rdfs:type from elf-basic maps on to JSON-LD's @type keyword. |
-| elf-preview | [elf-preview.json-ld](https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.json-ld) | [xample-elf-preview.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-preview.json) | Imports elf-basic.jsonld. |
-| elf-net-basic | [elf-net-basic.json-ld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.json-ld) | [xample-elf-net-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-basic.json) |  |
-| elf-net-spatial | [elf-net-spatial.json-ld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.json-ld) | [xample-elf-net-spatial.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-spatial.json) | Imports elf-net-basic.jsonld. Deliberately dropped 'sf' prefix from keyword names to reinforce the fact we recommend picking and sticking with one topology model. _(Discuss?)_ |
-| elf-net-temporal | [elf-net-temporal.json-ld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.json-ld) | [xample-elf-net-temporal.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-temporal.json) | Imports elf-net-basic.jsonld. |
-| elf-net | [elf-net.json-ld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net.json-ld) |  | Imports elf-net-basic.jsonld, elf-net-spatial.jsonld, elf-net-temporal.jsonld |
+| elf-basic | [elf-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.jsonld) | [xample-elf-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-basic.json) | rdfs:type from elf-basic maps on to JSON-LD's @type keyword. |
+| elf-preview | [elf-preview.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.jsonld) | [xample-elf-preview.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-preview.json) | Imports elf-basic.jsonld. |
+| elf-net-basic | [elf-net-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld) | [xample-elf-net-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-basic.json) |  |
+| elf-net-spatial | [elf-net-spatial.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld) | [xample-elf-net-spatial.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-spatial.json) | Imports elf-net-basic.jsonld. Deliberately dropped 'sf' prefix from keyword names to reinforce the fact we recommend picking and sticking with one topology model. _(Discuss?)_ |
+| elf-net-temporal | [elf-net-temporal.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld) | [xample-elf-net-temporal.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-temporal.json) | Imports elf-net-basic.jsonld. |
+| elf-net | [elf-net.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld) |  | Imports elf-net-basic.jsonld, elf-net-spatial.jsonld, elf-net-temporal.jsonld |
 | elf-geojson | [elf-geojson.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-geojson.jsonld) | [xample-elf-geojson.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-geojson.json) | See 'Experiment - ELFIE GeoJSON-LD' below. Imports http://geojson.org/geojson-ld/geojson-context.jsonld |
 | _elf-sosa_ |  |  | Based on the [O&M ttl examples](https://www.w3.org/TR/vocab-ssn/integrated/examples/om-20.ttl) introduced in [Annex C.10 of SOSA specification](https://www.w3.org/TR/vocab-ssn/#omxml-examples). Restricted to O&M sampling features for simplicity's sake (no sensor descriptions etc). Split into a context per feature type for clarity. Possibly no real need? |
 | elf-sosa-observation | [elf-sosa-observation.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld) | [xample-elf-sosa-observation.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-observation.json) | Context for Observations. |
@@ -101,7 +101,7 @@ skos:editorialNotes have been smuggled into the (e)xample files to explain some 
 
 Context and example files are published in the docs folder and can be refered to at the path 
 https://opengeospatial.github.io/ELFIE/json-ld/.  
-For example: https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.json-ld
+For example: https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.jsonld
 
 ## Experiment - ELFIE GeoJSON-LD
 There is a [GeoJSON-LD vocabulary](http://geojson.org/geojson-ld/) and I (ABHR) thought it would 
