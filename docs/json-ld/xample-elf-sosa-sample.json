@@ -39,15 +39,16 @@
                 "resultTime": "2017-08-31T15:40:03.00+12:00",
                 "usedProcedure": "https://data.elfie.ogc/id/wild-guess/sorry/rating-curve"
             }
-        ],
-        "hasSampleRelationship": [
-            {
-                "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-                "relatedSample": "https://hydro.data.elfie.ogc/id/monitoring-network/10"
-            },
-            {
-                "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
-                "relatedSample": "https://hydro.data.elfie.ogc/id/water-sample/10.1"
-            }
         ]
-    }
+    },
+    "hasSampleRelationship": [
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "https://hydro.data.elfie.ogc/id/monitoring-network/10"
+        },
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
+            "relatedSample": "https://hydro.data.elfie.ogc/id/water-sample/10.1"
+        }
+    ]
+}
