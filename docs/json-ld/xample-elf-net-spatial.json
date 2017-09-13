@@ -1,11 +1,11 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.jsonld",
+        "http://schema.org/docs/jsonldcontext.json",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld"
     ],
     "@id": "https://data.elfie.ogc/id/some/thing/001",
     "@type": "https://data.elfie.ogc/def/some/thing",
-    "label": "Something",
+    "name": "Something",
     "intersects": [
         "https://data.elfie.ogc/id/a/region",
         "https://data.elfie.ogc/id/an/area"

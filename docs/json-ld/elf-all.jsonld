@@ -1,6 +1,6 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.jsonld",
+        "http://schema.org/docs/jsonldcontext.json",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld"
     ]
 }

@@ -1,11 +1,11 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.jsonld",
+        "http://schema.org/docs/jsonldcontext.json",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld"
     ],
     "@id": "https://data.elfie.ogc/id/some/thing/001",
     "@type": "https://data.elfie.ogc/def/some/thing",
-    "label": "Something",
+    "name": "Something",
     "intervalAfter": [
         "https://data.elfie.ogc/id/some/earlier/time-period"
     ],
