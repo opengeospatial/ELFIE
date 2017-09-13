@@ -9,7 +9,7 @@
         "https://data.domain.name/id/and-that/thing/2601"
     ],
     "geo": {
-        "@type": "GeoCoordinates",
+        "@type": "schema:GeoCoordinates",
         "latitude": "-43.640416",
         "longitude": "172.476688"
     },
