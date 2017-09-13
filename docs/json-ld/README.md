@@ -35,7 +35,7 @@ place) and familiar for users used to TTL etc.
 - Context files are imported/re-used by creating the context as an array where the first value(s) 
 is the path(s) to the imported context, followed by an object - see
  [JSON-LD Syntax, Example 29](https://www.w3.org/TR/json-ld-syntax/#the-context).
-- Example files (prefixed 'xample-') always contain a single JSOn object - we are interested in 
+- Example files (prefixed 'xample-') always contain a single JSON object - we are interested in 
 responses that only ever describe a single resource. _ABHR: true? I can't think of an example where 
 we'd want multiple instances of the same resource._
 
@@ -85,8 +85,7 @@ skos:editorialNotes have been smuggled into the (e)xample files to explain some 
 | VIEW | CONTEXT FILE | EXAMPLE | COMMENT |
 | ---- | ------------ | ------- | ------- |
 | eld-all | [elf-all.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld) | [xample-elf-all.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-all.json) | An all components context that imports everything for when you just want to say everything you know. _Necessary? Even more importantly - is this legitimate?_ |
-| elf-basic | [elf-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.jsonld) | [xample-elf-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-basic.json) | rdfs:type from elf-basic maps on to JSON-LD's @type keyword. |
-| elf-preview | [elf-preview.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.jsonld) | [xample-elf-preview.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-preview.json) | Imports elf-basic.jsonld. |
+| elf-index | [elf-all.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld) | [xample-elf-index.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-index.json) | Core properties of each feature that support discovery/indexing. Each domain specific JSON file should include these. |
 | elf-net-basic | [elf-net-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld) | [xample-elf-net-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-basic.json) |  |
 | elf-net-spatial | [elf-net-spatial.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld) | [xample-elf-net-spatial.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-spatial.json) | Imports elf-net-basic.jsonld. Deliberately dropped 'sf' prefix from keyword names to reinforce the fact we recommend picking and sticking with one topology model. _(Discuss?)_ |
 | elf-net-temporal | [elf-net-temporal.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld) | [xample-elf-net-temporal.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-temporal.json) | Imports elf-net-basic.jsonld. |
@@ -113,3 +112,26 @@ It is really just a convenience document, there's nothing to stop a provided ind
 referencing the specific ELFIE contexts as appropriate.
 
 The example file (xample-elf-geojson.json) is valid according to the [GeoJSONLint validator](http://geojsonlint.com/).
+
+## Deprecated Contexts
+The following were removed during the course of the IE.
+
+Discussions at the Southampton TC showed that the proposed elf-basic and elf-preview contexts were 
+muddled and tried to do too many things:
+
+- Support indexing of data
+- Provide basic ownership data
+- Announce conditions for using the data
+
+As the IE is primarily about linking features and enabling discovery of data we agreed to switch 
+focus of the core ELFIE contexts to the indexing/discoverability use case. This is best implemented 
+using schema.org. elf-basic and elf-preview can be replaced with the schema.org context file. 
+(We'll only use a small subset of keys - those associated with a Thing or Place).
+
+[I]ssue 53](https://github.com/opengeospatial/ELFIE/issues/53) removed elf-basic and elf-preview 
+and added the link to the schema.org context to relevant contexts and example documents.
+
+| VIEW | CONTEXT FILE | EXAMPLE | COMMENT |
+| ---- | ------------ | ------- | ------- |
+| elf-basic | [elf-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/deprecated/elf-basic.jsonld) |  | rdfs:type from elf-basic maps on to JSON-LD's @type keyword. |
+| elf-preview | [elf-preview.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/deprecated/elf-preview.jsonld) |  |
