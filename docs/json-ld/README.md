@@ -128,7 +128,7 @@ focus of the core ELFIE contexts to the indexing/discoverability use case. This 
 using schema.org. elf-basic and elf-preview can be replaced with the schema.org context file. 
 (We'll only use a small subset of keys - those associated with a Thing or Place).
 
-[I]ssue 53](https://github.com/opengeospatial/ELFIE/issues/53) removed elf-basic and elf-preview 
+[Issue 53](https://github.com/opengeospatial/ELFIE/issues/53) removed elf-basic and elf-preview 
 and added the link to the schema.org context to relevant contexts and example documents.
 
 | VIEW | CONTEXT FILE | EXAMPLE | COMMENT |
