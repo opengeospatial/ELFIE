@@ -1,7 +1,7 @@
 {
 "type": "FeatureCollection",
 "name": "tx_rds_828",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4269" } },
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "OBJECTID": 207107, "YEAR_RECOR": 2015, "STATE_CODE": 48, "ROUTE_ID": "1127277", "COMMENTS": "LOCAL STREETS", "Shape_Leng": 0.0043802251009300002, "Elev": 0, "Status": "No Apparent Threat" }, "geometry": { "type": "LineString", "coordinates": [ [ -95.460426381672164, 29.756835309801772 ], [ -95.460342207826614, 29.756850923831106 ], [ -95.460070044197153, 29.756847897612435 ], [ -95.460042917946282, 29.756840909880111 ] ] } },
 { "type": "Feature", "properties": { "OBJECTID": 207107, "YEAR_RECOR": 2015, "STATE_CODE": 48, "ROUTE_ID": "1127277", "COMMENTS": "LOCAL STREETS", "Shape_Leng": 0.0043802251009300002, "Elev": 0, "Status": "No Apparent Threat" }, "geometry": { "type": "LineString", "coordinates": [ [ -95.462617420657409, 29.75680331372201 ], [ -95.462433631606757, 29.756872825020935 ], [ -95.462248310111363, 29.756913777448915 ], [ -95.462047439337823, 29.75692097472324 ] ] } },
