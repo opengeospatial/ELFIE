@@ -28,7 +28,7 @@ reference, with a vigorous expectation that the semantics of ELFIE contexts be p
 - JSON keyword names are kept as simple as possible (i.e. no extended JSON-LD namespace prefixes). 
 This should minimise developer trauma and also take into account the fact that some parsers don't 
 like colons in keywords, even though they are legitimate JSON (_ABHR: it is possible that the devs 
-who brought this to my attention didn't know to put extended keyords in [] when accessing values._).
+who brought this to my attention didn't know to put extended keywords in [] when accessing values._).
 - RDF namespace prefixes are used in the context mappings (e.g. "label": "rdfs:label"), even if the 
 namespace is only used once. This keeps all the files consistent (namespaces always in the same 
 place) and familiar for users used to TTL etc.
@@ -78,6 +78,25 @@ paragraph of the summary for why relations will always be by reference.)
 - _Should everything import elf-basic.jsonld (so we can have a friendly label, say for creating 
 hyperlinks)?_
 
+## TimeseriesML Examples
+- This is a hack - the namespaces are XML ones as the is no RDF encoding for TimeseriesML. _ABHR: perhaps 
+we should come up with a temporary ontology?_
+- The inline example result is a _tsml:TimeseriesDomainRange_ value - selected as the most 'web friendly' (terse) encoding.
+- The inline example only uses the _gml:domainSet_, _gml:rangeSet_ and _tsml:deafultPointMetadata_ properties. In an XML doc 
+the latter is nested deeper (gmlcov:metadata\gmlcov:Extension\tsml:TimeseriesMetadataExtension\tsml:defaultPointMetadata) 
+but this was ignored for clarity, and to stimulate discussion.
+- The inline example vocabulary references ("uom" and "interpolationType") are presented as typed and labelled object stubs.
+- The reference example result is an array of references for the same result with different encodings (DR and TVP). _ABHR: 
+this feels like a hack and that it is getting too close to the alternative representations problem we're trying to avoid 
+getting caught up in. Thoughts?_ An alternative to the typed example (see [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-observation-byref.json)) 
+is a simple array.
+    ```json
+    "hasResult": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-dr.xml",
+        "https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-tvp.xml"
+    ]
+     ```
+
 ## Contexts
 Assuming one context file per type, e.g. sosa:Sample. For elf-basic, elf-preview and elf-net-* this is effectively rdfs:Class (owl:Thing?).  
 skos:editorialNotes have been smuggled into the (e)xample files to explain some decisions that otherwise might get lost in the readme.
@@ -92,13 +111,18 @@ skos:editorialNotes have been smuggled into the (e)xample files to explain some 
 | elf-net | [elf-net.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld) |  | Imports elf-net-basic.jsonld, elf-net-spatial.jsonld, elf-net-temporal.jsonld |
 | elf-geojson | [elf-geojson.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-geojson.jsonld) | [xample-elf-geojson.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-geojson.json) | See 'Experiment - ELFIE GeoJSON-LD' below. Imports http://geojson.org/geojson-ld/geojson-context.jsonld |
 | _elf-sosa_ |  |  | Based on the [O&M ttl examples](https://www.w3.org/TR/vocab-ssn/integrated/examples/om-20.ttl) introduced in [Annex C.10 of SOSA specification](https://www.w3.org/TR/vocab-ssn/#omxml-examples). Restricted to O&M sampling features for simplicity's sake (no sensor descriptions etc). Split into a context per feature type for clarity. Possibly no real need? |
-| elf-sosa-observation | [elf-sosa-observation.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld) | [xample-elf-sosa-observation.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-observation.json) | Context for Observations. |
 | elf-sosa-sample | [elf-sosa-sample.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld) | | Context for Samples - in our case sampling features such as monitoring stations, boreholes etc. |
 | | | [xample-elf-sosa-sample.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample.json) | Example with multiple observations inline - used the @graph key as all objects in the array share the same context. |
 | | | [xample-elf-sosa-sample-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample-byref.json) | As above, but observations by reference. |
-| | | [xample-elf-sosa-sample-preview.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample-preview.json) | Monitoring station using only preview and simple relationship keys. |  
+| | | [xample-elf-sosa-sample-preview.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample-preview.json) | Monitoring station using only preview and simple relationship keys. |
+| elf-sosa-observation | [elf-sosa-observation.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld) | [xample-elf-sosa-observation.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-observation.json) | Context for Observations. |
+| elf-tsml-observation | [elf-sosa-observation.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld) |  | Context for time-series Observations. _See notes above._ |
+|  |  | [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-observation-byref.json) | Example where the observation result ("hasResult") is presented as a reference to another file. In this case a pair of TSML GML files (xample-elf-tsml-result-dr.xml; xample-elf-tsml-result-tvp.xml). |
+|  |  | [xample-elf-tsml-observation-inline.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-observation-inline.json) | Example where the observation result ("hasResult") is presented as an inline JSON object. |
+|  |  | [xample-elf-tsml-result-dr.xml](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-dr.xml) | Target of the reference in xample-elf-tsml-observation-byref.json. Domain-Range encoding. |
+|  |  | [xample-elf-tsml-result-tvp.xml](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-tvp.xml) | Target of the reference in xample-elf-tsml-observation-byref.json. Time-Value-Pair encoding. |  
 
-Context and example files are published in the docs folder and can be refered to at the path 
+Context and example files are published in the docs folder and can be referred to at the path 
 https://opengeospatial.github.io/ELFIE/json-ld/.  
 For example: https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.jsonld
 
