@@ -11,15 +11,17 @@
     },
     "properties": {
         "@type": "https://data.elfie.ogc/def/some/thing",
-        "label": "Something",
-        "comment": "Everything smashed into a GeoJSON feature. @id and hasGeometry values left out in favour of the GeoJSON equivalents.",
-        "versionInfo": "1.0.0",
-        "creator": "https://data.elfie.ogc/id/dangerous/hacks/ritchiea",
+        "name": "Something",
+        "description": "Everything smashed into a single object.",
         "sameAs": [
             "https://data.example.org/id/that/thing/2612",
             "https://data.domain.name/id/and-that/thing/2601"
         ],
-        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-43.640416",
+            "longitude": "172.476688"
+        },
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/220px-The_Scream.jpg",
         "related": [
             "https://data.elfie.ogc/id/some/thing/else"

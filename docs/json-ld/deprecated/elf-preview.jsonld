@@ -1,0 +1,28 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.jsonld",
+        {
+            "rdfs": "https://www.w3.org/TR/rdf-schema/",
+            "owl": "https://www.w3.org/OWL/",
+            "dcterms": "http://dublincore.org/documents/2012/06/14/dcmi-terms/",
+            "geo": "http://www.opengeospatial.org/standards/geosparql",
+            "schema": "http://schema.org/",
+            "comment": "rdfs:comment",
+            "versionInfo": "owl:versionInfo",
+            "creator": "dcterms:creator",
+            "sameAs": {
+                "@id": "owl:sameAs",
+                "@type": "@id"
+            },
+            "hasPreviewGeometry": "geo:hasGeometry",
+            "license": {
+                "@id": "dcterms:license",
+                "@type": "@id"
+            },
+            "image": {
+                "@id": "schema:image",
+                "@type": "@id"
+            }
+        }
+    ]
+}
