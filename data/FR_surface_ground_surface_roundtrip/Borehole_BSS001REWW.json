@@ -1,0 +1,46 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+    ],
+    "@id": "http://ressource.brgm-rec.fr/data/BoreholeView/BSS001REWW",
+    "@type": "sosa:Sample",
+    "name": "Forage BSS001REWW",
+    "hasGeometry": "POINT(46.1909541655103 5.18713262971692)",
+	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
+	"isFeatureOfInterestOf": {
+        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+        "@graph": [
+				{
+					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+					"@type": "sosa:Observation",
+					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS001REWW",
+					"hasResult": [
+						{
+							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+							"@type": "gwml2w:GW_GeologyLogCoverage "
+						}
+				],
+                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+                "observedProperty": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+                "phenomenonTime": {
+                    "hasBeginning": "1974-11-30T00:00:00.000Z",
+                    "hasEnd": "1974-11-30T00:00:00.000ZcouldBeInstant"
+                },
+                "resultTime": "1974-11-30T00:00:00.000Z",
+                "usedProcedure": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog"
+            }
+        ]
+    },
+	"image": "http://servicesgdm.brgm.fr/LogGDM/RGFLogServlet?HoleName=06512X0037&From=0&To=23",
+    "hasSampleRelationship": [
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/LinkToSomeDrillCoreDatabaseHere"
+        },
+		{
+			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2"
+		}
+    ]
+}
