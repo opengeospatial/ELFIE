@@ -1,0 +1,232 @@
+{
+    "head" : {
+        "vars" : [
+                  "jsonkey_LAWAid",
+                  "Coords"
+                  ]
+    },
+    "results" : {
+        "bindings" : [
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00006"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (176.01202000000012 -40.219709999999964)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00008"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.74511000000007 -40.565170000000023)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00010"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.93115000000023 -40.52365999999995)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00015"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.62773000000004 -40.373289999999997)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00016"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.96286000000009 -40.358859999999993)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00017"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.81803000000014 -40.331850000000031)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00018"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (176.11638000000005 -40.239469999999869)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00019"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.79173000000003 -40.436109999999928)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00022"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.61099000000002 -40.640359999999987)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00023"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.83121000000028 -40.449569999999994)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00026"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (176.1895300000001 -40.244680000000017)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00035"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.65990000000011 -40.17340999999999)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00037"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (176.03234000000009 -40.253420000000006)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00040"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.78300000000002 -40.224569999999915)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00047"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.99543000000006 -40.322869999999966)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00048"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (176.06491000000017 -40.24535000000003)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00050"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.92279000000008 -40.467109999999991)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00091"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.65775000000008 -40.088759999999979)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00092"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (175.53265999999996 -40.257380000000012)"
+                      }
+                      },
+                      {
+                      "jsonkey_LAWAid" : {
+                      "type" : "literal",
+                      "value" : "HRC-00095"
+                      },
+                      "Coords" : {
+                      "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type" : "literal",
+                      "value" : "POINT (176.06362999999999 -40.165179999999964)"
+                      }
+                      }
+                      ]
+    }
+}
