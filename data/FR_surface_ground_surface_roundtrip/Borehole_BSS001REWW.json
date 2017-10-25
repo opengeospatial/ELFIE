@@ -28,7 +28,11 @@
                     "hasEnd": "1974-11-30T00:00:00.000ZcouldBeInstant"
                 },
                 "resultTime": "1974-11-30T00:00:00.000Z",
-                "usedProcedure": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog"
+				"usedProcedure": {
+					"@id": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog",
+					"@type": "skos:Concept",
+					"name": "Driller log"
+				}
             }
         ]
     },

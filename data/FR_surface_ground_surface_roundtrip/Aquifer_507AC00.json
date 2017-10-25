@@ -8,9 +8,9 @@
     "name": "Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes",
     "description": "Aquifer from national BD LISA (Base de Données des Limites des Systèmes Aquifères) database",
     "geo": {
-        "@type": "GeoCoordinates TODO SG update this with a centroid (http://schema.org/geoMidpoint)?",
-        "latitude": "-43.640416",
-        "longitude": "172.476688"
+        "@type": "GeoCoordinates or http://schema.org/geoMidpoint would make more sense for polygon features ?",
+        "latitude": "46.06157803 ",
+        "longitude": "5.02112437" 
     },
 	"related": [
         "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/507AC",
