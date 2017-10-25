@@ -1,0 +1,49 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+    ],
+    "@id": "http://www.hydro.eaufrance.fr/stations/U1244040",
+    "@type": "sosa:Sample",
+    "name": "La Tille à Champdôtre",
+    "hasGeometry": "POINT(47.5288404979028 5.32424152077325) TODO SG : update this",
+	"isSampleOf": "http://id.eaufrance.fr/CEA/U12-0400", 
+    "isFeatureOfInterestOf": {
+        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+        "@graph": [
+				{
+					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2 TODO put good ref here",
+					"@type": "sosa:Observation",
+					"hasFeatureOfInterest": "http://id.eaufrance.fr/TronconHydrographique/U1240400",
+					"hasResult": [
+						{
+							"@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2&responseFormat=application/json TODO SG : restart here to finish the obs",
+							"@type": "wml2:MeasurementTimeseries"
+						}
+				],
+                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+				"observedProperty": {
+					"@id": "http://id.eaufrance.fr/par/1689.xml",
+					"@type": "skos:Concept",
+					"name": "Goundwater Level"
+				},
+                "phenomenonTime": {
+                    "hasBeginning": "2016-01-05T11:00:00.000Z",
+                    "hasEnd": "2017-10-10T10:00:00.000Z"
+                },
+                "resultTime": "2017-10-10T10:00:00.000Z",
+				"usedProcedure":  {
+					"@id": "http://id.eaufrance.fr/met/403.xml",
+					"@type": "skos:Concept",
+					"name": "Electronic piezometric probe"
+				}
+            }
+        ]
+    },
+	"hasSampleRelationship": [
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2"
+        }
+    ]
+}
