@@ -1,0 +1,1677 @@
+[
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00003",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Hautapu at Alabasters"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Hautapu at Alabasters"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.78086000000008"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-39.656880000000001"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Hautapu at Alabasters"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00003"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00003/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 445.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/rang"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/rangitikei"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Hautapu at Alabasters.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7023817"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00003"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00003"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00003"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00003"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00003"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00003"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00006",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Kumeti at Te Rehunga"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Kumeti at Te Rehunga"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "176.01202000000012"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.219709999999964"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Kumeti at Te Rehunga"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00006"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00006/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 234.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_4"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Kumeti at Te Rehunga.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7036367"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00006"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00006"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00006"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00006"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00006"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00006"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00008",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Makakahi at Hamua"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Makakahi at Hamua"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.74511000000007"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.565170000000023"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Makakahi at Hamua"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00008"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00008/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 168.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_8d"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Makakahi at Hamua.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7044946"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00008"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00008"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00008"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00008"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00008"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00008"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00010",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Makuri at Tuscan Hills"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Makuri at Tuscan Hills"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.93115000000023"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.52365999999995"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Makuri at Tuscan Hills"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00010"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00010/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 119.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_7d"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Makuri at Tuscan Hills.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7044151"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00010"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00010"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00010"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00010"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00010"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00010"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00011",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Manakau at S.H.1 Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Manakau at S.H.1 Bridge"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.21164999999996"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.724379999999996"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Manakau at S.H.1 Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00011"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00011/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7048887"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00011"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00011"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00011"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00011"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00015",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Manawatu at Teachers College"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Manawatu at Teachers College"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.62773000000004"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.373289999999997"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Manawatu at Teachers College"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00015"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00015/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 21.209
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_10a"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Manawatu at Teachers College.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7039931"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00015"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00015"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00015"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00015"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00015"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00015"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00016",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Manawatu at Hopelands"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Manawatu at Hopelands"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.96286000000009"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.358859999999993"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Manawatu at Hopelands"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00016"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00016/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 109.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_5a"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Manawatu at Hopelands.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7039708"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00016"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00016"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00016"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00016"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00016"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00016"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00017",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Manawatu at Upper Gorge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Manawatu at Upper Gorge"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.81803000000014"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.331850000000031"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Manawatu at Upper Gorge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00017"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00017/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 57.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_9a"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Manawatu at Upper Gorge.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7039002"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00017"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00017"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00017"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00017"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00017"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00017"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00018",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Manawatu at Weber Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Manawatu at Weber Road"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "176.11638000000005"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.239469999999869"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Manawatu at Weber Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00018"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00018/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 160.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_1a"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Manawatu at Weber Road.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7037199"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00018"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00018"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00018"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00018"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00018"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00018"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00019",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Mangahao at Ballance"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Mangahao at Ballance"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.79173000000003"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.436109999999928"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Mangahao at Ballance"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00019"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00019/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 96.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_9d"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Mangahao at Ballance.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7041259"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00019"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00019"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00019"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00019"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00019"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00019"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00022",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Mangatainoka at Larsons Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Mangatainoka at Larsons Road"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.61099000000002"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.640359999999987"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Mangatainoka at Larsons Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00022"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00022/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 256.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_8a"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Mangatainoka at Larsons Road.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7046821"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00022"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00022"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00022"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00022"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00023",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Mangatainoka at Pahiatua Town Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Mangatainoka at Pahiatua Town Bridge"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.83121000000028"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.449569999999994"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Mangatainoka at Pahiatua Town Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00023"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00023/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 103.7
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_8b"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@value": "http://hilltopserver.horizons.govt.nz/images/sitephotos/Mangatainoka at Pahiatua Town Bridge.jpg"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7041713"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00023"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00023"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/minRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/min-recorded-flow/HRC-00023"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/maxRecordedFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/max-recorded-flow/HRC-00023"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFloodFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flood-flow/HRC-00023"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/MALF": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/malf/HRC-00023"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00026",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Mangatoro at Mangahei Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Mangatoro at Mangahei Road"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "176.1895300000001"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.244680000000017"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Mangatoro at Mangahei Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00026"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00026/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 180.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_1c"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7037306"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00026"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00026"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00027",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Mangawhero at Raupiu Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Mangawhero at Raupiu Road"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.33113000000003"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-39.700280000000021"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Mangawhero at Raupiu Road"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00027"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00027/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 132.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/whau"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/whangaehu"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7024561"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00027"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00027"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00028",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Mangawhero at Pakihi Rd Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Mangawhero at Pakihi Rd Bridge"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.32311000000004"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-39.430999999999983"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Mangawhero at Pakihi Rd Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00028"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00028/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7017464"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00028"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00028"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00032",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Ohura at Tokorima"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Ohura at Tokorima"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.03237999999999"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-38.917500000000018"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Ohura at Tokorima"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00032"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00032/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 137.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/whai"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/whanganui"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7005708"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00032"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00032"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00035",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Oroua at Almadale Slackline"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Oroua at Almadale Slackline"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.65990000000011"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.17340999999999"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Oroua at Almadale Slackline"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00035"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00035/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 137.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_12a"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7035276"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00035"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00035"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00037",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Oruakeretaki at S.H.2 Napier"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Oruakeretaki at S.H.2 Napier"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "176.03234000000009"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.253420000000006"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Oruakeretaki at S.H.2 Napier"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00037"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00037/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 161.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_5d"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7037487"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00038",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Owahanga at Branscombe Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Owahanga at Branscombe Bridge"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "176.30245000000002"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.63078999999999"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Owahanga at Branscombe Bridge"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00038"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00038/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 40.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/owha_1"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/owahanga"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7047138"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00038"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00038"
+      }
+    ]
+  },
+  {
+    "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00040",
+    "@type": [
+      "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "http://envdatapoc.co.nz/def/MeasurementSite"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Pohangina at Mais Reach"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/siteID": [
+      {
+        "@value": "Pohangina at Mais Reach"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long": [
+      {
+        "@value": "175.78300000000002"
+      }
+    ],
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat": [
+      {
+        "@value": "-40.224569999999915"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/councilSiteID": [
+      {
+        "@value": "Pohangina at Mais Reach"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/lawaSiteID": [
+      {
+        "@value": "HRC-00040"
+      }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/measurement-site/HRC-00040/geometry"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/elevation": [
+      {
+        "@value": 90.0
+      }
+    ],
+    "http://envdatapoc.co.nz/def/managementZone": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/management-zone/mana_10b"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/catchment": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/catchment/manawatu"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/reach": [
+      {
+        "@id": "http://envdatapoc.co.nz/id/reach/7036595"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/meanAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/mean-annual-flow/HRC-00040"
+      }
+    ],
+    "http://envdatapoc.co.nz/def/medianAnnualFlow": [
+      {
+        "@id": "http://envdatapoc.co.nz/data/median-annual-flow/HRC-00040"
+      }
+    ]
+  }
+]
