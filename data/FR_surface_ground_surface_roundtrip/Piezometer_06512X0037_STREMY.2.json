@@ -29,7 +29,7 @@
 				"observedProperty": {
 					"@id": "http://id.eaufrance.fr/par/1689.xml",
 					"@type": "skos:Concept",
-					"name": "Goundwater Level"
+					"name": "Goundwater Level (in meter)"
 				},
                 "phenomenonTime": {
                     "hasBeginning": "2016-01-05T11:00:00.000Z",
