@@ -3,32 +3,28 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
     ],
-    "@id": "http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
+    "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
     "@type": "sosa:Sample",
-    "name": "La Tille à Champdôtre",
-    "hasGeometry": "POINT(47.179364 5.299577)",
-	"isSampleOf": {
-			"@id":"http://id.eaufrance.fr/CEA/U12-0400",
-			"@type":"hyf:HY_WaterBody",
-			"name":"La Tille"
-		},
+    "name": "DIJON-LONGVIC",
+    "hasGeometry": "POINT(47.267833 5.088333)",
+	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmAtmo.owl#AtmosphereLayer",
     "isFeatureOfInterestOf": {
         "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
         "@graph": [
 				{
-					"@id": "http://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=U124404001",
+					"@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
-						"@id":"http://id.eaufrance.fr/TronconHydrographique/U1240400",
-						"@type":"hyf:HY_Channel"
+						"@id":"http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
+						"@type":"sosa:Sample"
 					 },
 					"hasResult": [
 						{
-							"@id": "http://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=U124404001",
-							"@type": "wml2:MeasurementTimeseries"
+							"@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
+							"@type": "tsml:TimeseriesTVP"
 						}
 				],
-                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+                "madeBySensor": "http://i.mocked.something.up.meteofrance.fr/id/should_put_serial_number_here",
 				"observedProperty": {
 					"@id": "http://id.eaufrance.fr/nsa/520#H",
 					"@type": "skos:Concept",
@@ -54,6 +50,13 @@
 				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
 				"@type":"gwml2:GW_MonitoringSite",
 				"name":"forage privé (Bourberain-21)" }
-        }
+        },
+		{	
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": {
+				"@id":"http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
+				"@type":"hyf:HY_HydrometricFeature",
+				"name":"La Tille à Champdôtre" }
+		}
     ]
 }

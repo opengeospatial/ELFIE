@@ -18,7 +18,7 @@
 					"hasResult": [
 						{
 							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
-							"@type": "gwml2w:GW_GeologyLogCoverage "
+							"@type": "gwml2:GW_GeologyLog"
 						}
 				],
                 "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
