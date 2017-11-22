@@ -3,25 +3,25 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+    "@id": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2",
     "@type": "sosa:Sample",
-    "name": "forage privé (Bourberain-21)",
-    "hasGeometry": "POINT(47.5288404979028 5.32424152077325)",
+    "name": "Puits de l'Hotel (Charpey) - 26",
+    "hasGeometry": "POINT(44.9439393172635 5.08440249864289)",
 	"isSampleOf": {
-				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05", 
-				"@type": "gwml2:GW_HydrogeoUnit",
-                "name": "Calcaires jurassiques entre Ouche et Vingeanne"
+				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/507AC00", 
+				"@type": "gwml2: GW_HydrogeoUnit",
+                "name": "Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes"
             },
     "isFeatureOfInterestOf": {
         "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
         "@graph": [
 				{
-					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2",
+					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/06512X0037/STREMY.2",
 					"@type": "sosa:Observation",
-					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2",
 					"hasResult": [
 						{
-							"@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2&responseFormat=application/json",
+							"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/06512X0037/STREMY.2&responseFormat=application/json",
 							"@type": "wml2:MeasurementTimeseries"
 						}
 				],
@@ -36,7 +36,7 @@
                     "hasEnd": "2017-10-10T10:00:00.000Z"
                 },
                 "resultTime": "2017-10-10T10:00:00.000Z",
-				"usedProcedure":  {
+                "usedProcedure":  {
 					"@id": "http://id.eaufrance.fr/met/403.xml",
 					"@type": "skos:Concept",
 					"name": "Electronic piezometric probe"
@@ -44,14 +44,8 @@
             }
         ]
     },
-	"hasSampleRelationship": [
-		{	
-            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-            "relatedSample": {
-				"@id":"http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
-				"@type":"hyf:HY_HydrometricFeature",
-				"name":"La Tille à Champdôtre" }
-		},
+	"image": "http://fichebsseau.brgm.fr/bss_eau/filer/scans_bss_eau/bss_eau_1_vignette/00003677.JPG.jpg",
+    "hasSampleRelationship": [
         {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000070"
@@ -60,7 +54,7 @@
             "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000029"
         },{
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0600000233"
+            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0600000004"
         }
     ]
 }

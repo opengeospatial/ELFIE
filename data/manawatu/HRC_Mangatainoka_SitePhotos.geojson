@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Sitename": "Mangatainoka at Brewery - S.H.2 Bridge", "Purpose": "Water Quality", "Photo link": "https:\/\/www.lawa.org.nz\/media\/16277\/hrc-00024.jpg" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 175.86222247789021, -40.421745011220253 ] ] } },
+{ "type": "Feature", "properties": { "Sitename": "Mangatainoka at Putara", "Purpose": "Water Quality", "Photo link": "https:\/\/www.lawa.org.nz\/media\/16281\/hrc-00021.jpg" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 175.54859956162562, -40.681930957729477 ] ] } },
+{ "type": "Feature", "properties": { "Sitename": "Makakahi at Hamua", "Purpose": "Water Quality & Quantity", "Photo link": "https:\/\/www.lawa.org.nz\/media\/16777\/hrc-00008.jpg" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 175.7450748842939, -40.565190204443574 ] ] } },
+{ "type": "Feature", "properties": { "Sitename": "Mangatainoka at Larsons Road", "Purpose": "Water Quality & Quantity", "Photo link": "https:\/\/www.lawa.org.nz\/media\/16819\/mangatainoka-at-larsons-road-bridge-1stfebruary2013.jpg" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 175.61095425069499, -40.640377960250149 ] ] } },
+{ "type": "Feature", "properties": { "Sitename": "Mangatainoka at Pahiatua Town Bridge", "Purpose": "Water Quality & Quantity", "Photo link": "https:\/\/www.lawa.org.nz\/media\/3636910\/mangatainoka-at-pahiatua-town-bridge-.jpg" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 175.83117778438685, -40.449582318435908 ] ] } },
+{ "type": "Feature", "properties": { "Sitename": "Mangatainoka at Scarborough Konini Road", "Purpose": "Water Quality", "Photo link": "https:\/\/www.lawa.org.nz\/media\/3636911\/mangatainoka-at-scarborough-konini-road-.jpg" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 175.79486401351951, -40.476835073178584 ] ] } }
+]
+}
