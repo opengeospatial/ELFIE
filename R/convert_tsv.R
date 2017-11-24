@@ -18,8 +18,14 @@ for(data_file in data_files) {
   
   tsv_data <- readr::read_delim(file.path(data_path, data_file), delim = "\t")
   
+  geojson_file <- stringr::str_replace(data_file, ".tsv", ".json")
+  
+  geojson <- jsonlite::fromJSON(file.path(data_path, geojson_file))
+  
   for(i in 1:nrow(tsv_data)) {
     elf_index_list <- build_elf_index_list(id_base, tsv_data[i,], include_missing = F)
+    
+    elf_index_list$geo <- build_schema_geo(geojson$features$geometry[1,], id = elf_index_list$`@id`)
     
     jsonlite::write_json(elf_index_list, 
                          file.path(out_path, paste0(tsv_data[i,][1], ".json")),

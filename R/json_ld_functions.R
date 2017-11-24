@@ -21,3 +21,22 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
   }
   return(outlist)
 }
+
+build_schema_geo <- function(geojson_geometry, id = NULL) {
+  if(geojson_geometry$type == "Point") {
+    return(list("@type" = "schema:GeoCoordinates",
+                "latitude" = geojson_geometry$coordinates[[1]][2],
+                "longitude" = geojson_geometry$coordinates[[1]][1]))
+  } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
+    if(is.null(id)) stop("must specify an id for geojson")
+    return(list("@type" = "schema:GeoShape",
+           "polygon" = list("@context" = "http://geojson.org/geojson-ld/geojson-context.jsonld",
+                            "type" = "Feature",
+                            "id" = id,
+                            "geometry" = list("type" = geojson_geometry$type,
+                                              "coordinates" = geojson_geometry$coordinates))))
+  } else {
+    print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
+    return(NULL)
+  }
+}

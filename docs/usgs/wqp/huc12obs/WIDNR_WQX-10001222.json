@@ -3,5 +3,10 @@
   "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/wqp/huc12obs/WIDNR_WQX-10001222",
   "@type": "https://waterqualitydata.us/def/site",
   "name": "BRANDENBURG LAKE - BRANDENBURG LAKE",
-  "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-10001222"
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-10001222",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 43.18,
+    "longitude": -89.56
+  }
 }

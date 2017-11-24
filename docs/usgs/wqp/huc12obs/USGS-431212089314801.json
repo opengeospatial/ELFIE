@@ -3,5 +3,10 @@
   "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/wqp/huc12obs/USGS-431212089314801",
   "@type": "https://waterqualitydata.us/def/site",
   "name": "DANE CO MRBI WATERWAY 2 NR SPRINGFIELD CORNERS, WI",
-  "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS Wisconsin Water Science Center/USGS-431212089314801"
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS Wisconsin Water Science Center/USGS-431212089314801",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 43.18,
+    "longitude": -89.56
+  }
 }

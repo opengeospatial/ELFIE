@@ -3,5 +3,10 @@
   "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/wqp/huc12obs/WIDNR_WQX-10001221",
   "@type": "https://waterqualitydata.us/def/site",
   "name": "BARBIAN POND - BARBIAN POND",
-  "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-10001221"
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-10001221",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 43.18,
+    "longitude": -89.56
+  }
 }

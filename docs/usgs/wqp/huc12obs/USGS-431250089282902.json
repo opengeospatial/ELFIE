@@ -3,5 +3,10 @@
   "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/wqp/huc12obs/USGS-431250089282902",
   "@type": "https://waterqualitydata.us/def/site",
   "name": "DANE COUNTY MRBI WATERWAY 1-QW SITE-NR WAUNAKEE,WI",
-  "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS Wisconsin Water Science Center/USGS-431250089282902"
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS Wisconsin Water Science Center/USGS-431250089282902",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 43.18,
+    "longitude": -89.56
+  }
 }
