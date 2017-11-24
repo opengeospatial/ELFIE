@@ -1,6 +1,9 @@
 source("json_ld_functions.R")
 
-data_path <- "../data/huc12obs/"
+data_paths <- c("../data/huc12obs/",
+                "../data/uswb")
+
+for(data_path in data_paths) {
 data_files <- list.files(data_path, pattern = "*.tsv")
 
 out_path_base <- "../docs"
@@ -32,10 +35,7 @@ for(data_file in data_files) {
                          pretty = T, auto_unbox = T)
   }
 }
-
-
-
-
+}
 
 
 

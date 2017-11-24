@@ -1,8 +1,8 @@
 library(jsonlite)
 
-huc12pp <- fromJSON("usgs_huc12pp_uswb.geojson")
-huc12boundary <- fromJSON("usgs_huc12boundary_uswb.geojson")
-nhdplusflowline <- fromJSON("usgs_nhdplusflowline_uswb.geojson")
+huc12pp <- fromJSON("usgs_huc12pp_uswb.json")
+huc12boundary <- fromJSON("usgs_huc12boundary_uswb.json")
+nhdplusflowline <- fromJSON("usgs_nhdplusflowline_uswb.json")
 
 hucs <- huc12pp$features$properties$HUC_12
 
@@ -23,7 +23,7 @@ huc12boundary_info$`hyf:realizedCatchment` <- paste0("https://cida.usgs.gov/nwc/
 write.table(huc12boundary_info, file = "usgs_huc12boundary_uswb.tsv", sep = "\t", row.names = F)
 
 # HUC12 Pour Points
-preds <- c("jsonkey_huc12",	"rdfs:type",	"schema:name",
+preds <- c("jsonkey_HUC_12",	"rdfs:type",	"schema:name",
            "schema:description", "schema:sameAs", "schema:image")
 
 huc12pp_info <- data.frame(matrix(nrow = length(hucs), ncol = length(preds)))
@@ -41,3 +41,19 @@ huc12pp_info$`hyf:catchmentRealization` <- paste0("elfie/usgs/huc12/", rownames(
 
 write.table(huc12boundary_info, file = "usgs_huc12pp_uswb.tsv", sep = "\t", row.names = F)
 
+# NHDPlus FlowLines 
+preds <- c("jsonkey_huc12",	"rdfs:type",	"schema:name",
+           "schema:description", "schema:sameAs", "schema:image", "hyf:realizedCatchment")
+
+fline_info <- data.frame(matrix(nrow = length(hucs), ncol = length(preds)))
+names(fline_info) <- preds
+rownames(fline_info) <- nhdplusflowline$features$properties$huc12
+fline_info$jsonkey_huc12 <- rownames(fline_info)
+fline_info$`rdfs:type` <- "hyf:HY_HydrographicNetwork"
+fline_info$`schema:name` <- paste("Hydro Network of",
+                                    huc12boundary$features$properties$name[match(rownames(huc12boundary_info),
+                                                                                 rownames(fline_info))])
+fline_info$`schema:description` <- "comment describing the network of each watershed"
+fline_info$`hyf:realizedCatchment` <- paste0("https://cida.usgs.gov/nwc/#!waterbudget/achuc/", huc12boundary$features$properties$huc12)
+
+write.table(huc12boundary_info, file = "usgs_nhdplusflowline_uswb.tsv", sep = "\t", row.names = F)
