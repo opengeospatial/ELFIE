@@ -1,4 +1,4 @@
-#' @title elfi-index-core
+#' @title build elfie index
 #' @param tsv_data one row data.frame with predicates to be added to an R list
 #' @param id_base character giving feature type a unique id in @id url like:
 #' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
@@ -22,6 +22,12 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
   return(outlist)
 }
 
+#' @title build schema.org geo
+#' @param geojson_geometry geojson data for one feature with coordinates and type fields.
+#' @param id character the id of the feature in question like:
+#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
+#' 
 build_schema_geo <- function(geojson_geometry, id = NULL) {
   if(geojson_geometry$type == "Point") {
     return(list("@type" = "schema:GeoCoordinates",
