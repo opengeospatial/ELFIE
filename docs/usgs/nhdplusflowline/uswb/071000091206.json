@@ -1,9 +1,10 @@
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-hy_features.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/nhdplusflowline/uswb/071000091206",
-  "@type": "hyf:HY_CatchmentDivide",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Coppers Creek-Des Moines River",
   "description": "comment describing each watershed at a high level",
+  "realizedCatchment": "https://cida.usgs.gov/nwc/#!waterbudget/achuc/071000091206",
   "geo": {
     "@type": "schema:GeoShape",
     "polygon": {

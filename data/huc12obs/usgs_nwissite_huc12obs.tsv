@@ -1,2 +1,2 @@
 jsonkey_identifier	rdfs:type	schema:name	schema:description	schema:sameAs	schema:image
-USGS-05427880	https://waterservices.usgs.gov/nwis/site/	SIXMILE CREEK AT STATE HIGHWAY 19 NEAR WAUNAKEE,WI		https://waterdata.usgs.gov/nwis/inventory?site_no=05427880	https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=05427880&parm_cd=00060&period=7
+USGS-05427880	http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature	SIXMILE CREEK AT STATE HIGHWAY 19 NEAR WAUNAKEE,WI		https://waterdata.usgs.gov/nwis/inventory?site_no=05427880	https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=05427880&parm_cd=00060&period=7
