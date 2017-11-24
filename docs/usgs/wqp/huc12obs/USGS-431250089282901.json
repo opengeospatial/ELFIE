@@ -1,0 +1,7 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/wqp/huc12obs/USGS-431250089282901",
+  "@type": "https://waterqualitydata.us/def/site",
+  "name": "DANE COUNTY MRBI WATERWAY NUMBER 1 NR WAUNAKEE, WI",
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS Wisconsin Water Science Center/USGS-431250089282901"
+}

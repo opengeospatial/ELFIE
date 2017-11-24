@@ -1,0 +1,7 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/huc/huc12obs/070900020601",
+  "@type": "http://www.opengis.net/def/HY_DendriticCatchment",
+  "name": "Waunakee Marsh-Sixmile Creek",
+  "description": "USGS Watershed Boundary Dataset Twelve Digit Hydrologic Unit Code Watershed"
+}

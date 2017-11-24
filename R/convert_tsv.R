@@ -1,37 +1,35 @@
-context_urls <- c("https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-                  "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-                  "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld",
-                  "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld",
-                  "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld",
-                  "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld",
-                  "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld")
-              # Maybe Later
-                  # "https://opengeospatial.github.io/ELFIE/json-ld/elf-geojson.jsonld"
-                  # "http://geojson.org/geojson-ld/geojson-context.jsonld",
-                  # "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
-                  # "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld")
+source("json_ld_functions.R")
 
-contexts <- setNames(rep(list(list()), length(context_urls)), 
-                     context_urls)
+data_path <- "../data/huc12obs/"
+data_files <- list.files(data_path, pattern = "*.tsv")
 
-resolve_context <- function(conx) {
-  context <- jsonlite::fromJSON(conx)
-  if(!is.list(context[[1]])) {
-    context_out <- list()
-    for(conx2 in context[[1]]) {
-      context_out <- c(context_out,
-                       resolve_context(conx2))
-    }
-  } else {
-    context_out <- context
-  }
-  return(context_out)
-}
+out_path_base <- "../docs"
 
-for(conx in names(contexts)) {
-  contexts[conx] <- list(resolve_context(conx))
-  if(length(contexts[[conx]])>1) {
-    contexts[[conx]] <- do.call(c, contexts[[conx]])
-    names(contexts[[conx]]) <- stringr::str_replace(names(contexts[[conx]]), "@context.", "")
+for(data_file in data_files) {
+  print(data_file)
+  id_base <- paste(stringr::str_split(stringr::str_replace(data_file, 
+                                                           ".tsv", ""), 
+                                      "_")[[1]], 
+                   collapse = "/")
+  
+  out_path <- file.path(out_path_base, id_base)
+  
+  if(!dir.exists(out_path)) dir.create(out_path, recursive = T)
+  
+  tsv_data <- readr::read_delim(file.path(data_path, data_file), delim = "\t")
+  
+  for(i in 1:nrow(tsv_data)) {
+    elf_index_list <- build_elf_index_list(id_base, tsv_data[i,], include_missing = F)
+    
+    jsonlite::write_json(elf_index_list, 
+                         file.path(out_path, paste0(tsv_data[i,][1], ".json")),
+                         pretty = T, auto_unbox = T)
   }
 }
+
+
+
+
+
+
+

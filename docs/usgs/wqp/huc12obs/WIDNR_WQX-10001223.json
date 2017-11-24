@@ -1,0 +1,7 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/wqp/huc12obs/WIDNR_WQX-10001223",
+  "@type": "https://waterqualitydata.us/def/site",
+  "name": "DIEDRICH POND - DIEDRICH POND",
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-10001223"
+}

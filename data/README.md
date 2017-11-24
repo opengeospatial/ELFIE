@@ -29,7 +29,7 @@ Where `{{jsonkey}}` is the value of unique key that connects the `.json` and `.t
 for the organization/featuretype in question.  
 
 In the case that a given featuretype is a single feature for the whole use case, 
-such as is the case for a hydrographic network, the jsonkey id can be left as `NA` 
+such as is the case for a hydrographic network, the jsonkey id should be set to a use-case wide ID 
 in the tsv file and left off in the feature URI.
 
 **Please add additional conventions to this document as they are needed and or implemented.**

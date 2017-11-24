@@ -1,0 +1,7 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/nhdplusflowline/huc12obs/070900020601",
+  "@type": "http://www.opengis.net/def/HY_HydrographicNetwork",
+  "name": "NHDPlus V2.0 Network for Waunakee Marsh-Sixmile Creek",
+  "description": "Collection of Flowlines for HUC12 watershed."
+}
