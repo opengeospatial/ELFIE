@@ -1,0 +1,12 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/wqp/huc12obs/WIDNR_WQX-134002",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+  "name": "Brandenburg Lake - Brandenburg Lake",
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-134002",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 43.18,
+    "longitude": -89.56
+  }
+}
