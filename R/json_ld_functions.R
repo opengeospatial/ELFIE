@@ -58,7 +58,7 @@ build_schema_geo <- function(geojson_geometry, id = NULL) {
 build_hyf_net <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, function(x) gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x))
   
-  outlist <- suppressWarnings(list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-hy_features.jsonld",
+  outlist <- suppressWarnings(list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`,
                   "upstreamWaterBody" = tsv_data$`hyf:upstreamWaterBody`,

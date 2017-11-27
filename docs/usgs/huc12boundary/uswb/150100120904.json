@@ -1,5 +1,5 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-hy_features.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/huc12boundary/uswb/150100120904",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Anderson Wash-Muddy River",
