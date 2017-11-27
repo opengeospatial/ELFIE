@@ -1,10 +1,11 @@
 {
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
     "@id": "http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
-    "@type": "sosa:Sample",
+    "@type": ["sosa:Sample","hyf:HY_HydrometricFeature"],
     "name": "La Tille à Champdôtre",
     "hasGeometry": "POINT(47.179364 5.299577)",
 	"isSampleOf": {
