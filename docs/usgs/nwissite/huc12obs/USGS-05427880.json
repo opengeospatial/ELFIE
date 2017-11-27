@@ -1,6 +1,6 @@
 {
   "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/nwissite/huc12obs/USGS-05427880",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/huc12obs/USGS-05427880.json",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "SIXMILE CREEK AT STATE HIGHWAY 19 NEAR WAUNAKEE,WI",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory?site_no=05427880",

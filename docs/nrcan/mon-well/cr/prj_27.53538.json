@@ -1,6 +1,6 @@
 {
   "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/nrcan/mon-well/cr/prj_27.53538",
+  "@id": "https://opengeospatial.github.io/ELFIE/nrcan/mon-well/cr/prj_27.53538.json",
   "@type": "gwml2:GW_MonitoringSite",
   "name": "Name of site prj_27.53538",
   "description": "description not available",

@@ -1,6 +1,6 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/huc12pp/uswb/070200121110",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/070200121110.json",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Minnesota River",
   "description": "comment describing each watershed at a high level",
