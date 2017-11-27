@@ -1,7 +1,9 @@
+setwd("~/Documents/Projects/ELFIE/ELFIE/R")
 source("json_ld_functions.R")
 
-data_paths <- c("../data/huc12obs/",
-                "../data/uswb")
+data_paths <- c("../data/huc12obs",
+                "../data/uswb",
+                "../data/cr")
 
 for(data_path in data_paths) {
   data_files <- list.files(data_path, pattern = "*.tsv")
