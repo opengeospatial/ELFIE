@@ -1,5 +1,5 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://github.com/opengeospatial/ELFIE/blob/master/docs/json-ld/hyf.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/json-ld/usgs/nhdplusflowline/uswb/160201020603",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "West Weber-Weber River",
