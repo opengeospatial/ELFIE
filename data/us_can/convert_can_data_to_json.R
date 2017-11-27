@@ -43,7 +43,7 @@ names(can_aquifer_info) <- preds
 rownames(can_aquifer_info) <- can_aquifer$id_code
 
 can_aquifer_info$jsonkey_id_code <- can_aquifer$id_code
-can_aquifer_info$`rdfs:type` <- "gwml:aquifer"
+can_aquifer_info$`rdfs:type` <- "gwml2:GW_HydrogeoUnit"
 can_aquifer_info$`schema:name` <- can_aquifer$id_code
 can_aquifer_info$`schema:description` <- "description not available"
 can_aquifer_info$`schema:sameAs` <- "need a sameas url for each aquifer?"
@@ -75,7 +75,7 @@ names(can_mon_well_info) <- preds
 rownames(can_mon_well_info) <- can_mon_well$feature_of
 
 can_mon_well_info$jsonkey_id_code <- can_mon_well$feature_of
-can_mon_well_info$`rdfs:type` <- "gwml2:well"
+can_mon_well_info$`rdfs:type` <- "gwml2:GW_MonitoringSite"
 can_mon_well_info$`schema:name` <- can_mon_well$feature__2
 can_mon_well_info$`schema:description` <- "description not available"
 can_mon_well_info$`schema:sameAs` <- can_mon_well$schema_lin
@@ -107,7 +107,7 @@ names(can_well_info) <- preds
 rownames(can_well_info) <- can_well$statid
 
 can_well_info$jsonkey_id_code <- can_well$statid
-can_well_info$`rdfs:type` <- "gwml2:well"
+can_well_info$`rdfs:type` <- "gwml2:GW_Well"
 can_well_info$`schema:name` <- NA
 can_well_info$`schema:description` <- "description not available"
 can_well_info$`schema:sameAs` <- NA
