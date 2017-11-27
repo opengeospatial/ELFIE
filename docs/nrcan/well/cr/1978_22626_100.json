@@ -1,6 +1,6 @@
 {
   "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-  "@id": "https://opengeospatial.github.io/ELFIE/json-ld/nrcan/well/cr/1978_22626_100",
+  "@id": "https://opengeospatial.github.io/ELFIE/nrcan/well/cr/1978_22626_100.json",
   "@type": "gwml2:GW_Well",
   "description": "description not available",
   "geo": {
