@@ -1,4 +1,5 @@
 setwd("~/Documents/Projects/ELFIE/ELFIE/data/us_can/")
+library(sf)
 
 can_watersheds <- sf::st_layers("can/Watersheds.gdb/")
 can_watersheds <- can_watersheds$name[3]
@@ -33,7 +34,6 @@ wqp_ids <- wqp$features$properties$identifier
 #   sites[site] <- list(whatWQPsites(siteid=site))
 # }
 
-library(sf)
 # can_aquifer
 preds <- c("jsonkey_id_code",	"rdfs:type",	"schema:name",
            "schema:description", "schema:sameAs", "schema:image")
@@ -58,7 +58,7 @@ can_hydat_info <- data.frame(matrix(nrow = nrow(can_hydat), ncol = length(preds)
 names(can_hydat_info) <- preds
 rownames(can_hydat_info) <- can_hydat$Source_FeatureID
 
-can_hydat_info$jsonkey_id_code <- can_hydat$Source_FeatureID
+can_hydat_info$jsonkey_Source_FeatureID <- can_hydat$Source_FeatureID
 can_hydat_info$`rdfs:type` <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
 can_hydat_info$`schema:name` <- can_hydat$Source_FeatureID
 can_hydat_info$`schema:description` <- "description not available"
@@ -74,7 +74,7 @@ can_mon_well_info <- data.frame(matrix(nrow = nrow(can_mon_well), ncol = length(
 names(can_mon_well_info) <- preds
 rownames(can_mon_well_info) <- can_mon_well$feature_of
 
-can_mon_well_info$jsonkey_id_code <- can_mon_well$feature_of
+can_mon_well_info$jsonkey_feature_of <- can_mon_well$feature_of
 can_mon_well_info$`rdfs:type` <- "gwml2:GW_MonitoringSite"
 can_mon_well_info$`schema:name` <- can_mon_well$feature__2
 can_mon_well_info$`schema:description` <- "description not available"
@@ -90,7 +90,7 @@ can_watersheds_info <- data.frame(matrix(nrow = nrow(can_watersheds), ncol = len
 names(can_watersheds_info) <- preds
 rownames(can_watersheds_info) <- can_watersheds$HUC_8
 
-can_watersheds_info$jsonkey_id_code <- can_watersheds$HUC_8
+can_watersheds_info$jsonkey_HUC_8 <- can_watersheds$HUC_8
 can_watersheds_info$`rdfs:type` <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
 can_watersheds_info$`schema:name` <- can_watersheds$SUBBASIN
 can_watersheds_info$`schema:description` <- paste(can_watersheds$REGION, can_watersheds$SUBREGION, can_watersheds$BASIN)
@@ -106,7 +106,7 @@ can_well_info <- data.frame(matrix(nrow = nrow(can_well), ncol = length(preds)))
 names(can_well_info) <- preds
 rownames(can_well_info) <- can_well$statid
 
-can_well_info$jsonkey_id_code <- can_well$statid
+can_well_info$jsonkey_statid <- can_well$statid
 can_well_info$`rdfs:type` <- "gwml2:GW_Well"
 can_well_info$`schema:name` <- NA
 can_well_info$`schema:description` <- "description not available"
