@@ -1,0 +1,49 @@
+{
+    "@context": {
+        "hyf": "http://opengeospatial/def/ontology/hyf",
+        "upstreamWaterBody": {
+            "@id": "hyf:upstreamWaterBody",
+            "@type": "@id"
+        },
+        "downstreamWaterBody": {
+            "@id": "hyf:downstreamWaterBody",
+            "@type": "@id"
+        },
+        "lowerCatchment": {
+            "@id": "hyf:lowerCatchment",
+            "@type": "@id"
+        },
+        "upperCatchment": {
+            "@id": "hyf:upperCatchment",
+            "@type": "@id"
+        },
+        "realizedCatchment": {
+            "@id": "hyf:realizedCatchment",
+            "@type": "@id"
+        },
+        "catchmentRealization": {
+            "@id": "hyf:catchmentRealization",
+            "@type": "@id"
+        },
+        "contributingCatchment": {
+            "@id": "hyf:contributingCatchment",
+            "@type": "@id"
+        },
+        "outflow": {
+            "@id": "hyf:outflow",
+            "@type": "@id"
+        },        
+		"HY_Channel": {
+            "@id": "hyf:HY_Channel",
+            "@type": "@id"
+        },
+		"HY_HydrometricFeature": {
+            "@id": "hyf:HY_HydrometricFeature",
+            "@type": "@id"
+        },
+		"HY_WaterBody": {
+            "@id": "hyf:HY_WaterBody",
+            "@type": "@id"
+        }
+    }
+}
