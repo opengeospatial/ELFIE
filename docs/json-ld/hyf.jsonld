@@ -33,16 +33,44 @@
             "@id": "hyf:outflow",
             "@type": "@id"
         },        
-		"HY_Channel": {
+        "HY_Channel": {
             "@id": "hyf:HY_Channel",
             "@type": "@id"
         },
-		"HY_HydrometricFeature": {
+        "HY_HydrometricFeature": {
             "@id": "hyf:HY_HydrometricFeature",
             "@type": "@id"
         },
-		"HY_WaterBody": {
+        "HY_WaterBody": {
             "@id": "hyf:HY_WaterBody",
+            "@type": "@id"
+        },
+        "HY_Catchment": {
+            "@id": "hyf:HY_Catchment",
+            "@type": "@id"
+        },
+        "HY_Lake": {
+            "@id": "hyf:HY_Lake",
+            "@type": "@id"
+        },
+        "HY_River": {
+            "@id": "hyf:HY_River",
+            "@type": "@id"
+        },
+        "HY_Impoundment": {
+            "@id": "hyf:HY_Impoundment",
+            "@type": "@id"
+        },
+        "hyf:HY_HydrographicNetwork": {
+            "@id": "hyf:HY_HydrographicNetwork",
+            "@type": "@id"
+        },
+        "hyf:HY_CatchmentDivide": {
+            "@id": "hyf:HY_CatchmentDivide",
+            "@type": "@id"
+        },
+        "hyf:HY_HydroNexus": {
+            "@id": "hyf:HY_HydroNexus",
             "@type": "@id"
         }
     }

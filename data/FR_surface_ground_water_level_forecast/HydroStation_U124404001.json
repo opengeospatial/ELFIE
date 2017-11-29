@@ -5,12 +5,12 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
     "@id": "http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
-    "@type": ["sosa:Sample","hyf:HY_HydrometricFeature"],
+    "@type": ["sosa:Sample","HY_HydrometricFeature"],
     "name": "La Tille à Champdôtre",
     "hasGeometry": "POINT(47.179364 5.299577)",
 	"isSampleOf": {
 			"@id":"http://id.eaufrance.fr/CEA/U12-0400",
-			"@type":"hyf:HY_WaterBody",
+			"@type":"HY_WaterBody",
 			"name":"La Tille"
 		},
     "isFeatureOfInterestOf": {
@@ -21,7 +21,7 @@
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
 						"@id":"http://id.eaufrance.fr/TronconHydrographique/U1240400",
-						"@type":"hyf:HY_Channel"
+						"@type":"HY_Channel"
 					 },
 					"hasResult": [
 						{

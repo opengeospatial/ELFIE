@@ -1,0 +1,13 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/nrcan/mon-well/cr/prj_27.53537.json",
+  "@type": "gwml2:GW_MonitoringSite",
+  "name": "Name of site prj_27.53537",
+  "description": "description not available",
+  "sameAs": "http://ngwd-bdnes.cits.nrcan.gc.ca/service/gwml/schemas/gwml.xsd",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 45.5346,
+    "longitude": -72.7807
+  }
+}

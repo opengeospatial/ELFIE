@@ -1,0 +1,11 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/nrcan/well/cr/1978_47955_300.json",
+  "@type": "gwml2:GW_Well",
+  "description": "description not available",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 45.6188,
+    "longitude": -72.5471
+  }
+}
