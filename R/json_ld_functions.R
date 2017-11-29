@@ -34,13 +34,21 @@ build_schema_geo <- function(geojson_geometry, id = NULL) {
                 "latitude" = geojson_geometry$coordinates[[1]][2],
                 "longitude" = geojson_geometry$coordinates[[1]][1]))
   } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
+    
+    if(grepl("Polygon", geojson_geometry$type)) geo_name = "polygon"
+    if(grepl("Line", geojson_geometry$type)) geo_name = "line"
+    
     if(is.null(id)) stop("must specify an id for geojson")
-    return(list("@type" = "schema:GeoShape",
-                "polygon" = list("@context" = "http://geojson.org/geojson-ld/geojson-context.jsonld",
-                                 "type" = "Feature",
-                                 "id" = id,
-                                 "geometry" = list("type" = geojson_geometry$type,
-                                                   "coordinates" = geojson_geometry$coordinates))))
+    
+    out <- list("@type" = "schema:GeoShape")
+    out[[geo_name]] <- list("@context" = "http://geojson.org/geojson-ld/geojson-context.jsonld",
+                                "type" = "Feature",
+                                "id" = id,
+                                "geometry" = list("type" = geojson_geometry$type,
+                                                  "coordinates" = geojson_geometry$coordinates))
+    
+    return(out)
+    
   } else {
     print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
     return(NULL)
