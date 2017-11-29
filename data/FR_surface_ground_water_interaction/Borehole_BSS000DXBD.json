@@ -3,21 +3,21 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/BoreholeView/BSS001REWW",
+    "@id": "http://ressource.brgm-rec.fr/data/BoreholeView/BSS000DXBD",
     "@type": "sosa:Sample",
-    "name": "Forage BSS001REWW",
-    "hasGeometry": "POINT(46.1909541655103 5.18713262971692)",
+    "name": "Forage BSS000DXBD",
+    "hasGeometry": "POINT(49.9506859240222 2.3597603712661)",
 	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
 	"isFeatureOfInterestOf": {
         "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
         "@graph": [
 				{
-					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
 					"@type": "sosa:Observation",
-					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS001REWW",
+					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS000DXBD",
 					"hasResult": [
 						{
-							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
 							"@type": "gwml2:GW_GeologyLog"
 						}
 				],
@@ -25,7 +25,7 @@
                 "observedProperty": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
                 "phenomenonTime": {
                     "hasBeginning": "1974-11-30T00:00:00.000Z",
-                    "hasEnd": "1974-11-30T00:00:00.000ZcouldBeInstant"
+                    "hasEnd": "1974-11-30T00:00:00.000Z"
                 },
                 "resultTime": "1974-11-30T00:00:00.000Z",
 				"usedProcedure": {
@@ -36,7 +36,7 @@
             }
         ]
     },
-	"image": "http://servicesgdm.brgm.fr/LogGDM/RGFLogServlet?HoleName=06512X0037",
+	"image": "http://www.ades.eaufrance.fr/BDLisa.aspx?X=2.35976034402847&Y=49.9506874084473",
     "hasSampleRelationship": [
         {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
@@ -44,7 +44,7 @@
         },
 		{
 			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-            "relatedSample": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2"
+            "relatedSample": "http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2"
 		}
     ]
 }

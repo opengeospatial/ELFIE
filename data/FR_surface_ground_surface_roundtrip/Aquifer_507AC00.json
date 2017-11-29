@@ -1,10 +1,11 @@
 {
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-geojson.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-geojson.jsonld",
+		{"gwml2":"http://opengeospatial/def/ontology/gwml2"}
     ],
     "@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/507AC00",
-    "@type": "gwml2:aquifer",
+    "@type": "gwml2:GW_HydrogeoUnit",
     "name": "Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes",
     "description": "Aquifer from national BD LISA (Base de Données des Limites des Systèmes Aquifères) database",
     "geo": {
