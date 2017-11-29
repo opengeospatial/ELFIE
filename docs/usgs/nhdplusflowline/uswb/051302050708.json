@@ -7,7 +7,7 @@
   "realizedCatchment": "https://cida.usgs.gov/nwc/#!waterbudget/achuc/051302050708",
   "geo": {
     "@type": "schema:GeoShape",
-    "polygon": {
+    "line": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
       "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/051302050708.json",

@@ -6,7 +6,7 @@
   "description": "Collection of Flowlines for HUC12 watershed.",
   "geo": {
     "@type": "schema:GeoShape",
-    "polygon": {
+    "line": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
       "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601.json",
