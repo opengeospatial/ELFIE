@@ -3,25 +3,25 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2",
+    "@id": "http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2",
     "@type": "sosa:Sample",
-    "name": "Puits de l'Hotel (Charpey) - 26",
-    "hasGeometry": "POINT(44.9439393172635 5.08440249864289)",
+    "name": "PIEZOMETRE DE CARDONNETTE - 80",
+    "hasGeometry": "POINT(49.9506859240222 2.3597603712661)",
 	"isSampleOf": {
-				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/507AC00", 
+				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/121AT01", 
 				"@type": "gwml2:GW_HydrogeoUnit",
-                "name": "Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes"
+                "name": "Craie du Séno-Turonien en Artois-Picardie"
             },	
     "isFeatureOfInterestOf": {
         "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
         "@graph": [
 				{
-					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/06512X0037/STREMY.2",
+					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/00463X0036/H1.2",
 					"@type": "sosa:Observation",
-					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2",
+					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2",
 					"hasResult": [
 						{
-							"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/06512X0037/STREMY.2&responseFormat=application/json",
+							"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/00463X0036/H1.2&responseFormat=application/json",
 							"@type": "wml2:MeasurementTimeseries"
 						}
 				],
@@ -44,17 +44,18 @@
             }
         ]
     },
-	"image": "http://fichebsseau.brgm.fr/bss_eau/filer/scans_bss_eau/bss_eau_1_vignette/00003677.JPG.jpg",
+	"image": "http://fichebsseau.brgm.fr/bss_eau/filer/scans_bss_eau/bss_eau_1_vignette/00006964.JPG.jpg",
     "hasSampleRelationship": [
-        {
+        {	
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000070"
-        },{
+            "relatedSample": {
+				"@id":"http://id.eaufrance.fr/StationHydro/E639703001",
+				"@type":"hyf:HY_HydrometricFeature",
+				"name":"L'Hallue à Querrieu" }
+		},
+		{
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000029"
-        },{
-            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0600000004"
         }
     ]
 }

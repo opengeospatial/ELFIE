@@ -48,7 +48,7 @@
 		{	
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
+				"@id":"http://id.eaufrance.fr/StationHydro/U124404001",
 				"@type":"hyf:HY_HydrometricFeature",
 				"name":"La Tille à Champdôtre" }
 		},
