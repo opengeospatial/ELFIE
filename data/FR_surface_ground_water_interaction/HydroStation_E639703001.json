@@ -4,28 +4,28 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
-    "@id": "http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
+    "@id": "http://id.eaufrance.fr/StationHydro/E639703001",
     "@type": ["sosa:Sample","hyf:HY_HydrometricFeature"],
-    "name": "La Tille à Champdôtre",
-    "hasGeometry": "POINT(47.179364 5.299577)",
+    "name": "L'Hallue à Querrieu",
+    "hasGeometry": "POINT(49.937596 2.434795)",
 	"isSampleOf": {
-			"@id":"http://id.eaufrance.fr/CEA/U12-0400",
-			"@type":"hyf:HY_WaterBody",
-			"name":"La Tille"
+			"@id":"http://id.eaufrance.fr/CoursEau/E6390710",
+			"@type":"HY_WaterBody",
+			"name":"rivière l'hallue"
 		},
     "isFeatureOfInterestOf": {
         "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
         "@graph": [
 				{
-					"@id": "http://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=U124404001",
+					"@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001", 
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
-						"@id":"http://id.eaufrance.fr/TronconHydrographique/U1240400",
-						"@type":"hyf:HY_Channel"
+						"@id":"http://id.eaufrance.fr/TronconHydrographique/E6390700",
+						"@type":"HY_Channel"
 					 },
 					"hasResult": [
 						{
-							"@id": "http://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=U124404001",
+							"@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001",
 							"@type": "wml2:MeasurementTimeseries"
 						}
 				],
@@ -52,9 +52,9 @@
         {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2",
 				"@type":"gwml2:GW_MonitoringSite",
-				"name":"forage privé (Bourberain-21)" }
+				"name":"PIEZOMETRE DE CARDONNETTE - 80" }
         }
     ]
 }
