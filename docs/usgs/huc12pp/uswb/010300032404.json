@@ -7,7 +7,7 @@
   "realizedCatchment": "https://cida.usgs.gov/nwc/#!waterbudget/achuc/010300032404",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 44.8924,
-    "longitude": -93.1776
+    "latitude": 44.3203,
+    "longitude": -69.771
   }
 }

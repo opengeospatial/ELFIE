@@ -6,7 +6,7 @@
   "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-10001222",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 43.18,
-    "longitude": -89.56
+    "latitude": 43.19,
+    "longitude": -89.59
   }
 }

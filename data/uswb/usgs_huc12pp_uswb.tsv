@@ -1,4 +1,4 @@
-"jsonkey_huc12"	"rdfs:type"	"schema:name"	"schema:description"	"schema:sameAs"	"schema:image"	"hyf:realizedCatchment"
+"jsonkey_HUC_12"	"rdfs:type"	"schema:name"	"schema:description"	"schema:sameAs"	"schema:image"	"hyf:realizedCatchment"
 "070200121110"	"http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"	"Minnesota River"	"comment describing each watershed at a high level"	NA	NA	"https://cida.usgs.gov/nwc/#!waterbudget/achuc/070200121110"
 "070700051701"	"http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"	"Indian Creek-Wisconsin River"	"comment describing each watershed at a high level"	NA	NA	"https://cida.usgs.gov/nwc/#!waterbudget/achuc/070700051701"
 "031601130201"	"http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"	"Mill Creek-Black Warrior River"	"comment describing each watershed at a high level"	NA	NA	"https://cida.usgs.gov/nwc/#!waterbudget/achuc/031601130201"

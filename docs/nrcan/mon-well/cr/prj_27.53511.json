@@ -7,7 +7,7 @@
   "sameAs": "http://ngwd-bdnes.cits.nrcan.gc.ca/service/gwml/schemas/gwml.xsd",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 45.5346,
-    "longitude": -72.7807
+    "latitude": 45.3008,
+    "longitude": -72.701
   }
 }

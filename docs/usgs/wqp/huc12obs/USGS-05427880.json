@@ -6,7 +6,7 @@
   "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS Wisconsin Water Science Center/USGS-05427880",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 43.18,
-    "longitude": -89.56
+    "latitude": 43.1922,
+    "longitude": -89.4729
   }
 }
