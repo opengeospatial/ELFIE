@@ -32,7 +32,11 @@
         "outflow": {
             "@id": "hyf:outflow",
             "@type": "@id"
-        },        
+        },
+        "networkstation": {
+            "@id": "hyf:networkstation",
+            "@type": "@id"
+        },
         "HY_Channel": {
             "@id": "hyf:HY_Channel",
             "@type": "@id"

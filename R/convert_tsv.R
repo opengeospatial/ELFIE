@@ -25,11 +25,13 @@ for(data_path in data_paths) {
     
     geojson_file <- stringr::str_replace(data_file, ".tsv", ".json")
     
-    geojson <- jsonlite::fromJSON(file.path(data_path, geojson_file))
+    try(rm(geojson), silent = T)
+    
+    try(geojson <- jsonlite::fromJSON(file.path(data_path, geojson_file)), silent = T)
     
     joiner <- stringr::str_replace(names(tsv_data)[1], "jsonkey_", "")
     
-    matcher <- match(geojson$features$properties[[joiner]], tsv_data[,1][[1]])
+    try(matcher <- match(geojson$features$properties[[joiner]], tsv_data[,1][[1]]), silent = T)
     
     if(joiner == "") matcher <- 1
     
@@ -46,7 +48,7 @@ for(data_path in data_paths) {
         elf_index_list <- c(elf_index_list, elf_net_hyf_sublist)
       }
       
-      elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], id = elf_index_list$`@id`)
+      if(exists("geojson")) elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], id = elf_index_list$`@id`)
       
       jsonlite::write_json(elf_index_list, 
                            file.path(out_path, paste0(tsv_data[i,][1], ".json")),

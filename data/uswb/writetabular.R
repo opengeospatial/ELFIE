@@ -1,12 +1,12 @@
 library(jsonlite)
-
+library(dplyr)
 huc12pp <- fromJSON("usgs_huc12pp_uswb.json")
 huc12boundary <- fromJSON("usgs_huc12boundary_uswb.json")
 nhdplusflowline <- fromJSON("usgs_nhdplusflowline_uswb.json")
 
 hucs <- huc12pp$features$properties$HUC_12
 
-preds <- c("jsonkey_huc12",	"rdfs:type",	"schema:name",
+preds <- c("jsonkey_HUC_12",	"rdfs:type",	"schema:name",
            "schema:description", "schema:sameAs", "schema:image")
 
 huc12boundary_info <- data.frame(matrix(nrow = length(hucs), ncol = length(preds)))
@@ -14,7 +14,7 @@ huc12boundary_info <- data.frame(matrix(nrow = length(hucs), ncol = length(preds
 names(huc12boundary_info) <- preds
 rownames(huc12boundary_info) <- huc12boundary$features$properties$huc12
 
-huc12boundary_info$jsonkey_huc12 <- rownames(huc12boundary_info)
+huc12boundary_info$jsonkey_HUC_12 <- rownames(huc12boundary_info)
 huc12boundary_info$`rdfs:type` <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
 huc12boundary_info$`schema:name` <- huc12boundary$features$properties$name
 huc12boundary_info$`schema:description` <- "comment describing each watershed at a high level"
@@ -43,7 +43,7 @@ write.table(huc12boundary_info, file = "usgs_huc12pp_uswb.tsv", sep = "\t", row.
 
 # NHDPlus FlowLines 
 preds <- c("jsonkey_huc12",	"rdfs:type",	"schema:name",
-           "schema:description", "schema:sameAs", "schema:image", "hyf:realizedCatchment")
+           "schema:description", "schema:sameAs", "schema:image", "hyf:realizedCatchment", "hyf:networkStation")
 
 fline_info <- data.frame(matrix(nrow = length(hucs), ncol = length(preds)))
 names(fline_info) <- preds
@@ -56,5 +56,23 @@ fline_info$`schema:name` <- paste("Hydro Network of",
 fline_info$`schema:description` <- "comment describing the network of each watershed"
 fline_info$`hyf:realizedCatchment` <- paste0("https://cida.usgs.gov/nwc/#!waterbudget/achuc/", huc12boundary$features$properties$huc12)
 
+huc_nwis <- readr::read_delim("huc_nwis.csv", delim = "\t")
+
+fline_info <- left_join(fline_info, huc_nwis, by = c("jsonkey_huc12" = "huc12")) %>%
+  mutate(`hyf:networkStation` = paste0("https://waterdata.usgs.gov/nwis/inventory/?site_no=", nwis)) %>%
+  select(-nwis)
+
 write.table(huc12boundary_info, file = "usgs_nhdplusflowline_uswb.tsv", sep = "\t", row.names = F)
+
+huc12 <- huc12boundary_info %>%
+  mutate(`schema:sameAs` = `hyf:realizedCatchment`) %>%
+  select(-`hyf:realizedCatchment`) %>%
+  mutate(`rdfs:type` = "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment")
+
+huc12 <- cbind(huc12,  
+               list(`hyf:catchmentRealization` = paste0("elfie/usgs/uswb/huc12boundary/", hucs)),
+               list(`hyf:catchmentRealization` = paste0("elfie/usgs/uswb/nhdplusflowline/", hucs)),
+               list(`hyf:outflow` = paste0("elfie/usgs/uswb/huc12pp/", hucs)))
+
+write.table(huc12, file = "usgs_huc12_uswb.tsv", sep = "\t", row.names = F)
 
