@@ -5,6 +5,7 @@
   "name": "Hydro Network of Big Slough-Elkhorn River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102200031006.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06800500",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

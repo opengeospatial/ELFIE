@@ -5,6 +5,7 @@
   "name": "Outlet of Penholoway Swamp-Altamaha River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030701060405.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02226000",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 31.5393,

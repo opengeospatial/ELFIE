@@ -5,6 +5,7 @@
   "name": "Outlet of Minnesota River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070200121110.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=05330920",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 44.8924,

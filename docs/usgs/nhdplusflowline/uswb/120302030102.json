@@ -5,6 +5,7 @@
   "name": "Hydro Network of Fields Bayou-Trinity River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08066500",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

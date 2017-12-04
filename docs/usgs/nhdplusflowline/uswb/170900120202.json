@@ -5,6 +5,7 @@
   "name": "Hydro Network of Balch Creek-Willamette River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=14211720",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

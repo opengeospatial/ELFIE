@@ -5,6 +5,7 @@
   "name": "Hydro Network of Log Gulch-Missouri River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06066500",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

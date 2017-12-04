@@ -68,24 +68,40 @@ build_schema_geo <- function(geojson_geometry, id = NULL) {
 build_hyf_net <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- suppressWarnings(list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
                   "@id" = id,
-                  "@type" = tsv_data$`rdfs:type`,
-                  "upstreamWaterBody" = tsv_data$`hyf:upstreamWaterBody`,
-                  "downstreamWaterBody" = tsv_data$`hyf:downstreamWaterBody`,
-                  "lowerCatchment" = tsv_data$`hyf:lowerCatchment`,
-                  "upperCatchment" = tsv_data$`hyf:upperCatchment`,
-                  "realizedCatchment" = tsv_data$`hyf:realizedCatchment`,
-                  "catchmentRealization" = tsv_data$`hyf:catchmentRealization`,
-                  "contributingCatchment" = tsv_data$`hyf:contributingCatchment`,
-                  "outflow" = tsv_data$`hyf:outflow`))
-  
+                  "@type" = tsv_data$`rdfs:type`)
+                  
+  for(i in 1:length(names(tsv_data))) {
+    if(grepl("hyf:", names(tsv_data)[i])) {
+      outlist <- c(outlist, hyf_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
+    }
+  }
+
   if(!include_missing) {
     return(remove_missing(outlist))
   } else {
     return(outlist)
   }
   
+}
+
+hyf_mapper <- function(name, value) {
+  print(name)
+  print(value)
+  mapper <- list(`hyf:upstreamWaterBody` = "upstreamWaterBody",
+                 `hyf:downstreamWaterBody` = "downstreamWaterBody",
+                 `hyf:lowerCatchment` = "lowerCatchment",
+                 `hyf:upperCatchment` = "upperCatchment",
+                 `hyf:realizedCatchment` = "realizedCatchment",
+                 `hyf:catchmentRealization` = "catchmentRealization",
+                 `hyf:contributingCatchment` = "contributingCatchment",
+                 `hyf:outflow` = "outflow",
+                 `hyf:nexusRealization` = "nexusRealization",
+                 `hyf:networkStation` = "networkStation")
+  out <- list()
+  out[[mapper[[name]]]] <- value
+  return(out)
 }
 
 remove_missing <- function(x) {

@@ -5,6 +5,7 @@
   "name": "Hydro Network of Demumbers Creek-Cumberland River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=03438220",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

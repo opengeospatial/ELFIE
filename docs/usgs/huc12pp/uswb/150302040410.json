@@ -5,6 +5,7 @@
   "name": "Outlet of Bill Williams River-Lake Havasu",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09426620",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 34.3046,

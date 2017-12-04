@@ -5,6 +5,7 @@
   "name": "Outlet of Buck Creek-Delaware River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=01463500",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.2088,

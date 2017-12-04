@@ -5,6 +5,7 @@
   "name": "Outlet of Fields Bayou-Trinity River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08066500",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 30.3509,
