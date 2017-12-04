@@ -5,6 +5,8 @@
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
 build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE) {
+  tsv_data <- lapply(tsv_data, elfie_sub)
+  
   outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", 
                   "@id" = paste("https://opengeospatial.github.io/ELFIE", 
                                 id_base,
@@ -64,7 +66,7 @@ build_schema_geo <- function(geojson_geometry, id = NULL) {
 #' taken to handle the @context, @id, and @type between existing and new content.
 #' 
 build_hyf_net <- function(tsv_data, id, include_missing = F) {
-  tsv_data <- lapply(tsv_data, function(x) gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x))
+  tsv_data <- lapply(tsv_data, elfie_sub)
   
   outlist <- suppressWarnings(list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
                   "@id" = id,
@@ -91,3 +93,5 @@ remove_missing <- function(x) {
   x[sapply(x, is.na)] <- NULL
   return(x)
 }
+
+elfie_sub <- function(x) gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x)

@@ -1,10 +1,10 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/120302030102.json",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
-  "name": "Fields Bayou-Trinity River",
-  "description": "comment describing each watershed at a high level",
-  "realizedCatchment": "https://cida.usgs.gov/nwc/#!waterbudget/achuc/120302030102",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
+  "name": "Outlet of Fields Bayou-Trinity River",
+  "description": "comment describing the outlet of each watershed",
+  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 30.3509,
