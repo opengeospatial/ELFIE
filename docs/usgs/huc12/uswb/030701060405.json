@@ -4,7 +4,7 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Penholoway Swamp-Altamaha River",
   "description": "comment describing each watershed at a high level",
-  "sameAs": "https://cida.usgs.gov/nwc/#!waterbudget/achuc/030701060405",
+  "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030701060405.json",
   "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/030701060405",
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/030701060405"
 }
