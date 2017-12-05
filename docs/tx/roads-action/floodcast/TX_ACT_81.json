@@ -1,0 +1,35 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_81.json",
+  "@type": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_ACTION_TX_RDS&featureID=81",
+  "name": "257397_FUNCTIONALLY CLASSIFIED CITY STREETS",
+  "description": "This is route ID 257397 with Threatened status",
+  "geo": {
+    "@type": "schema:GeoShape",
+    "line": {
+      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
+      "type": "Feature",
+      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_81.json",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            [-95.4634, 29.7623],
+            [-95.463, 29.7625],
+            [-95.4627, 29.7626],
+            [-95.4624, 29.7629],
+            [-95.4621, 29.7631],
+            [-95.4619, 29.7633],
+            [-95.4617, 29.7634],
+            [-95.4614, 29.7635],
+            [-95.4612, 29.7636],
+            [-95.4609, 29.7637],
+            [-95.4606, 29.7638],
+            [-95.4599, 29.7639],
+            [-95.4597, 29.7639]
+          ]
+        ]
+      }
+    }
+  }
+}

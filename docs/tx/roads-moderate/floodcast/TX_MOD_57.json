@@ -1,0 +1,24 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-moderate/floodcast/TX_MOD_57.json",
+  "@type": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_MODERATE_TX_RDS&featureID=57",
+  "name": "1128208_LOCAL STREETS",
+  "description": "This is route ID 1128208 with Threatened status",
+  "geo": {
+    "@type": "schema:GeoShape",
+    "line": {
+      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
+      "type": "Feature",
+      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-moderate/floodcast/TX_MOD_57.json",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            [-95.4635, 29.765],
+            [-95.4636, 29.7666]
+          ]
+        ]
+      }
+    }
+  }
+}

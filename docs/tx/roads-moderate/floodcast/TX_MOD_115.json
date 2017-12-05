@@ -1,0 +1,31 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-moderate/floodcast/TX_MOD_115.json",
+  "@type": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_MODERATE_TX_RDS&featureID=115",
+  "name": "1128985_LOCAL STREETS",
+  "description": "This is route ID 1128985 with No Apparent Threat status",
+  "geo": {
+    "@type": "schema:GeoShape",
+    "line": {
+      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
+      "type": "Feature",
+      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-moderate/floodcast/TX_MOD_115.json",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            [-95.4687, 29.7614],
+            [-95.4689, 29.7614],
+            [-95.469, 29.7615],
+            [-95.4693, 29.7615],
+            [-95.4698, 29.7616],
+            [-95.4701, 29.7616],
+            [-95.4703, 29.7617],
+            [-95.4705, 29.7618],
+            [-95.4708, 29.7621]
+          ]
+        ]
+      }
+    }
+  }
+}
