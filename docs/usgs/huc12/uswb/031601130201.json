@@ -5,6 +5,8 @@
   "name": "Mill Creek-Black Warrior River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/031601130201.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/031601130201",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/031601130201", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/031601130201"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/031601130201"
 }

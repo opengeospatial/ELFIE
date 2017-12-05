@@ -5,6 +5,7 @@
   "name": "Outlet of Streets Run-Monongahela River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=03085000",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.4406,

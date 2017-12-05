@@ -5,6 +5,8 @@
   "name": "Antelope Creek-Bighorn River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100800071208.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/100800071208",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/100800071208", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/100800071208"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/100800071208"
 }

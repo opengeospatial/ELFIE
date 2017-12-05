@@ -5,6 +5,7 @@
   "name": "Hydro Network of Deer Creek-Smoky Hill River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102600080802.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06877600",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

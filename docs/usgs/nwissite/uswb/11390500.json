@@ -1,0 +1,14 @@
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/11390500.json",
+  "@type": "hyf:HY_HydrometricFeature",
+  "name": "SACRAMENTO R BL WILKINS SLOUGH NR GRIMES CA",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=11390500",
+  "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=11390500&period=365",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/180201041203",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 39.0099,
+    "longitude": -121.8247
+  }
+}

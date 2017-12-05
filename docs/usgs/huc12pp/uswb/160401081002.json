@@ -5,6 +5,7 @@
   "name": "Outlet of Rocky Canyon-Humboldt River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/160401081002.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=NA",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.3895,

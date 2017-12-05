@@ -5,6 +5,7 @@
   "name": "Outlet of Balch Creek-Willamette River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=14211720",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 45.6534,

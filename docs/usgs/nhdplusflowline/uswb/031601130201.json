@@ -5,6 +5,7 @@
   "name": "Hydro Network of Mill Creek-Black Warrior River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/031601130201.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02465000",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

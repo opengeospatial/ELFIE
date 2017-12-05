@@ -5,6 +5,7 @@
   "name": "Hydro Network of Penholoway Swamp-Altamaha River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030701060405.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02226000",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

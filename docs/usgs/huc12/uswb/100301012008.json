@@ -5,6 +5,8 @@
   "name": "Log Gulch-Missouri River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/100301012008",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/100301012008", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/100301012008"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/100301012008"
 }

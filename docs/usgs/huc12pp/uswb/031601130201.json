@@ -5,6 +5,7 @@
   "name": "Outlet of Mill Creek-Black Warrior River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/031601130201.json",
+  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02465000",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 33.2065,

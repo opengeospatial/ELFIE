@@ -1,0 +1,14 @@
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/02105769.json",
+  "@type": "hyf:HY_HydrometricFeature",
+  "name": "CAPE FEAR R AT LOCK #1 NR KELLY, NC",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02105769",
+  "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=02105769&period=365",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/030300050405",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 34.4044,
+    "longitude": -78.2936
+  }
+}

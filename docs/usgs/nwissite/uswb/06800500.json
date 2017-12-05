@@ -1,0 +1,14 @@
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/06800500.json",
+  "@type": "hyf:HY_HydrometricFeature",
+  "name": "Elkhorn River at Waterloo, Nebr.",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06800500",
+  "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=06800500&period=365",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/102200031006",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 41.2933,
+    "longitude": -96.2839
+  }
+}

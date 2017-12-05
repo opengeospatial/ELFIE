@@ -5,6 +5,7 @@
   "name": "Hydro Network of Mitchell Landing-Cape Fear River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030300050405.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02105769",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

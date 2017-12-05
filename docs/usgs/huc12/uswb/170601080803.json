@@ -5,6 +5,8 @@
   "name": "Palouse Lake",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170601080803.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/170601080803",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/170601080803", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/170601080803"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/170601080803"
 }

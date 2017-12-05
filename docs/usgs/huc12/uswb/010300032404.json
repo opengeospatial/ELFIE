@@ -5,6 +5,8 @@
   "name": "Riggs Branch-Kennebec River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/010300032404.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/010300032404",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/010300032404", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/010300032404"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/010300032404"
 }

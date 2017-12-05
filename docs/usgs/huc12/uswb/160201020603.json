@@ -5,6 +5,8 @@
   "name": "West Weber-Weber River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/160201020603.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/160201020603",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/160201020603", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/160201020603"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/160201020603"
 }

@@ -5,6 +5,7 @@
   "name": "Hydro Network of Riggs Branch-Kennebec River",
   "description": "comment describing the network of each watershed",
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/010300032404.json",
+  "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=01049265",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {

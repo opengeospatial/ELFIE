@@ -5,6 +5,8 @@
   "name": "Mitchell Landing-Cape Fear River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030300050405.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/030300050405",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/030300050405", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/030300050405"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/030300050405"
 }
