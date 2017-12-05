@@ -6,7 +6,7 @@
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708.json",
   "catchmentRealization": [
-    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/051302050708", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/051302050708"]
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/051302050708.json", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/051302050708.json"]
   ],
-  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/051302050708"
+  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/051302050708.json"
 }
