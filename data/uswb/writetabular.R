@@ -79,10 +79,10 @@ huc12 <- huc12boundary_info %>%
   mutate(`rdfs:type` = "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment")
 
 huc12 <- cbind(huc12,  
-               list(`hyf:catchmentRealization` = paste0("elfie/usgs/uswb/huc12boundary/", hucs, ".json", 
+               list(`hyf:catchmentRealization` = paste0("elfie/usgs/huc12boundary/uswb/", hucs, ".json", 
                                                         "_|_", 
-                                                        "elfie/usgs/uswb/nhdplusflowline/", hucs, ".json")),
-               list(`hyf:outflow` = paste0("elfie/usgs/uswb/huc12pp/", hucs, ".json")))
+                                                        "elfie/usgs/nhdplusflowline/uswb/", hucs, ".json")),
+               list(`hyf:outflow` = paste0("elfie/usgs/huc12pp/uswb/", hucs, ".json")))
 
 write.table(huc12, file = "usgs_huc12_uswb.tsv", sep = "\t", row.names = F)
 
