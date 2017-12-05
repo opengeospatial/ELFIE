@@ -1,0 +1,14 @@
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/09163500.json",
+  "@type": "hyf:HY_HydrometricFeature",
+  "name": "COLORADO RIVER NEAR COLORADO-UTAH STATE LINE",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09163500",
+  "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=09163500&period=365",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/140100051906",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 39.1328,
+    "longitude": -109.0271
+  }
+}

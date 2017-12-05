@@ -1,0 +1,14 @@
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/08313000.json",
+  "@type": "hyf:HY_HydrometricFeature",
+  "name": "RIO GRANDE AT OTOWI BRIDGE, NM",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08313000",
+  "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=08313000&period=365",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/130201011304",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 35.8745,
+    "longitude": -106.1424
+  }
+}

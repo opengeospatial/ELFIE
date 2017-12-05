@@ -3,8 +3,11 @@ library(dplyr)
 huc12pp <- fromJSON("usgs_huc12pp_uswb.json")
 huc12boundary <- fromJSON("usgs_huc12boundary_uswb.json")
 nhdplusflowline <- fromJSON("usgs_nhdplusflowline_uswb.json")
+nwis_sites <- fromJSON("usgs_nwissite_uswb.json")
 
 huc_nwis <- readr::read_delim("huc_nwis.csv", delim = "\t")
+
+nwis_sites$features$properties <-dplyr::left_join(nwis_sites$features$properties, huc_nwis, by = c("site_no" = "nwis"))
 
 hucs <- huc12pp$features$properties$HUC_12
 
@@ -82,3 +85,20 @@ huc12 <- cbind(huc12,
 
 write.table(huc12, file = "usgs_huc12_uswb.tsv", sep = "\t", row.names = F)
 
+preds <- c("jsonkey_site_no",	"rdfs:type",	"schema:name",
+           "schema:description", "schema:sameAs", "schema:image",
+           "hyf:hydrometricNetwork")
+
+nwissite<- data.frame(matrix(nrow = length(hucs), ncol = length(preds)))
+names(nwissite) <- preds
+rownames(nwissite) <- nwis_sites$features$properties$site_no
+nwissite$jsonkey_site_no <- rownames(nwissite)
+nwissite$`rdfs:type` <- "hyf:HY_HydrometricFeature"
+nwissite$`schema:name` <- nwis_sites$features$properties$station_nm
+nwissite$`schema:sameAs` <- paste0("https://waterdata.usgs.gov/nwis/inventory/?site_no=", 
+                                   nwis_sites$features$properties$site_no)
+nwissite$`schema:image` <- paste0("https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=", 
+                                  nwis_sites$features$properties$site_no, "&period=365")
+nwissite$`hyf:hydrometricNetwork` <- paste0("elfie/usgs/uswb/nhdplusflowline/", nwis_sites$features$properties$huc12)
+
+write.table(nwissite, file = "usgs_nwissite_uswb.tsv", sep = "\t", row.names = F)

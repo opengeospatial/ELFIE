@@ -3,6 +3,7 @@ library(rgdal)
 library(sp)
 library(dplyr)
 library(NWCEd)
+library(dataRetrieval)
 # HUC12 Watershed List
 watersheds <- c("070200121110", "070700051701", "031601130201", "160201020603",
                 "020401050911", "102600080802", "180201041203", "170601080803",
@@ -10,7 +11,9 @@ watersheds <- c("070200121110", "070700051701", "031601130201", "160201020603",
                 "051202021001", "051302050708", "050200050808", "140100051906", 
                 "100301012008", "170900120202", "180400012103", "010300032404",
                 "102200031006", "071000091206", "030701060405", "030300050405",
-                "110100040606", "100800071208", "150100120904", "160401081002")
+                "110100040606", "100800071208", "150100120904")
+
+nwis <- readr::read_delim("huc_nwis.csv", delim = "\t")$nwis
 
 # Watershed Outlets
 ws_outlet_wfs_base <- "https://www.sciencebase.gov/catalogMaps/mapping/ows/5762b664e4b07657d19a71ea"
@@ -103,9 +106,9 @@ for(ws in watersheds) {
   }
 }
 
-writeOGR(ws_outlets,"usgs_huc12pp_uswb.geojson", layer = "usgs_huc12pp_uswb", driver = "GeoJSON")
-writeOGR(ws_boundaries, "usgs_huc12boundary_uswb.geojson", layer = "usgs_huc12boundary_uswb", driver = "GeoJSON")
-writeOGR(ws_networks, "usgs_nhdplusflowline_uswb.geojson", layer = "usgs_nhdplusflowline_uswb", driver = "GeoJSON")
+writeOGR(ws_outlets,"usgs_huc12pp_uswb.json", layer = "usgs_huc12pp_uswb", driver = "GeoJSON")
+writeOGR(ws_boundaries, "usgs_huc12boundary_uswb.json", layer = "usgs_huc12boundary_uswb", driver = "GeoJSON")
+writeOGR(ws_networks, "usgs_nhdplusflowline_uswb.json", layer = "usgs_nhdplusflowline_uswb", driver = "GeoJSON")
 
 if(!exists("wb_data")) wb_data <- list()
 for(ws in watersheds) {
@@ -114,3 +117,10 @@ for(ws in watersheds) {
 }
 
 saveRDS(wb_data, "wb_data.rds")
+
+nwis_sites <- dataRetrieval::readNWISsite(nwis)
+
+nwis_points <- sf::st_as_sf(nwis_sites, coords = c("dec_long_va", "dec_lat_va"), crs = 4326)
+
+sf::write_sf(nwis_points, "usgs_nwissite_uswb.json", layer = "usgs_nwissite_uswb", driver = "GeoJSON")
+

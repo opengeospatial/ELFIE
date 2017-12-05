@@ -1,0 +1,14 @@
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/01049265.json",
+  "@type": "hyf:HY_HydrometricFeature",
+  "name": "Kennebec River at North Sidney, Maine",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=01049265",
+  "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=01049265&period=365",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/010300032404",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 44.4722,
+    "longitude": -69.6839
+  }
+}

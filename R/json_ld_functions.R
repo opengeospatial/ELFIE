@@ -87,19 +87,47 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
 }
 
 hyf_mapper <- function(name, value) {
-  print(name)
-  print(value)
-  mapper <- list(`hyf:upstreamWaterBody` = "upstreamWaterBody",
-                 `hyf:downstreamWaterBody` = "downstreamWaterBody",
-                 `hyf:lowerCatchment` = "lowerCatchment",
-                 `hyf:upperCatchment` = "upperCatchment",
-                 `hyf:realizedCatchment` = "realizedCatchment",
-                 `hyf:catchmentRealization` = "catchmentRealization",
-                 `hyf:contributingCatchment` = "contributingCatchment",
-                 `hyf:outflow` = "outflow",
-                 `hyf:nexusRealization` = "nexusRealization",
-                 `hyf:networkStation` = "networkStation")
   out <- list()
+  tryCatch({
+    mapper <- list(`hyf:upstreamWaterBody` = "upstreamWaterBody",
+                   `hyf:downstreamWaterBody` = "downstreamWaterBody",
+                   `hyf:lowerCatchment` = "lowerCatchment",
+                   `hyf:upperCatchment` = "upperCatchment",
+                   `hyf:realizedCatchment` = "realizedCatchment",
+                   `hyf:catchmentRealization` = "catchmentRealization",
+                   `hyf:contributingCatchment` = "contributingCatchment",
+                   `hyf:outflow` = "outflow",
+                   `hyf:nexusRealization` = "nexusRealization",
+                   `hyf:networkStation` = "networkStation",
+                   `hyf:hydrometricNetwork` = "hydrometricNetwork")
+    out[[mapper[[name]]]] <- value
+  }, error = function(e) {
+    warn(paste(e, "\n", "name", "\n", "value"))
+  })
+  return(out)
+}
+
+sosa_mapper <- function(name, value) {
+  out <- list()
+  tryCatch({
+    mapper <- list(`sosa:hasFeatureOfInterest` = "hasFeatureOfInterest",
+                   `sosa:hasResult` = "hasResult",
+                   `sosa:observedProperty` = "observedProperty",
+                   `sosa:phenomenonTime` = "phenomenonTime",
+                   `sosa:resultTime` = "resultTime",
+                   `sosa:madeBySensor` = "madeBySensor",
+                   `sosa:usedProcedure` = "usedProcedure",
+                   `time:hasBeginning` = "hasBeginning",
+                   `time:hasEnd` = "hasEnd",
+                   `geo:hasGeometry` = "hasGeometry",
+                   `sosa:isSampleOf` = "isSampleOf",
+                   `sosa:isFeatureOfInterestOf` = "isFeatureOfInterestOf",
+                   `sosa:hasSampleRelationship` = "hasSampleRelationship",
+                   `sosa:natureOfRelationship` = "natureOfRelationship",
+                   `sosa:relatedSample` = "relatedSample")
+  }, error = function(e) {
+    warn(paste(e, "\n", "name", "\n", "value"))
+  })
   out[[mapper[[name]]]] <- value
   return(out)
 }
