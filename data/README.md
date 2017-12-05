@@ -10,7 +10,7 @@ encoded documents. This document is a work in progress, please contribute to it!
 Please review the [`huc12obs`](https://github.com/opengeospatial/ELFIE/tree/master/data/huc12obs) 
 dataset for  a reference.
 
-- Each featuretype should have a `.json` (or `.geojson`) file and a `.tsv` file.  
+- Each featuretype should have a `.json` file and a `.tsv` file.  
   - File nameing should be in the form `{{organization}}_{{featuretype id}}_{{usecase id}}`
   - With these names we can construct URIs like: https://opengeospatial.gihub.io/ELFIE/usgs/huc/huc12obs/070900020601 where `070900020601` is an identifier for a feature stored in the `.json` or `.tsv` file.
 - The `.json` file should contain valid geojson for visualization of each feature.  
@@ -22,6 +22,7 @@ dataset for  a reference.
   - Column 1 should be labeled `jsonkey_{{key}}` where `{{key}}` is the unique key property in the json file.  
   - Other columns should contain associations (rdf:predicate) from [this wiki page.](https://github.com/opengeospatial/ELFIE/wiki/ELFIE-Associations)  
 - For convenience, consider providing a preview image and a `.qgs` file for data visualization and mapping.  
+- If one to many relationships are needed, delimit lists for a single `rdf:predicate` with the string `_|_`. It's a hack, but it'll do with how infrequently we'll deal with one to manys.
 
 For associations that link ELFIE features to eachother, express links as 
 `elfie/{{organization}}/{{featuretype id}}/{{usecase id}}/{{jsonkey id}}`. 
