@@ -5,7 +5,8 @@
   "name": "May Flat-Colorado River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/140100051906.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/140100051906",
-  "catchmentRealization.1": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/140100051906",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/140100051906", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/140100051906"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/140100051906"
 }

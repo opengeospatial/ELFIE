@@ -23,16 +23,6 @@ for(data_path in data_paths) {
     
     tsv_data <- readr::read_delim(file.path(data_path, data_file), delim = "\t", col_types = readr::cols())
     
-    bad_names <- grepl(".*_1$", names(tsv_data))
-    
-    if(any(bad_names)) {
-      bad_name <- which(bad_names)
-      tsv_names <- names(tsv_data)
-      tsv_names[bad_name] <- stringr::str_replace(tsv_names[bad_name], "_1$", "")
-      tsv_data <- data.frame(tsv_data, stringsAsFactors = F)
-      names(tsv_data) <- tsv_names
-    }
-    
     geojson_file <- stringr::str_replace(data_file, ".tsv", ".json")
     
     try(rm(geojson), silent = T)

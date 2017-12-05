@@ -5,7 +5,8 @@
   "name": "Betsey Gill Creek-White River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/110100040606.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/110100040606",
-  "catchmentRealization.1": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/110100040606",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/110100040606", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/110100040606"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/110100040606"
 }

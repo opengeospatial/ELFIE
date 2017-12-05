@@ -77,6 +77,8 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
       outlist <- c(outlist, hyf_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
     }
   }
+  
+  outlist <- check_outlist(outlist)
 
   if(!include_missing) {
     return(remove_missing(outlist))
@@ -139,3 +141,11 @@ remove_missing <- function(x) {
 }
 
 elfie_sub <- function(x) gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x)
+
+check_outlist <- function(outlist) {
+  dups <- grepl("_\\|_", outlist)
+  if(any(dups)) {
+    outlist[[which(dups)]] <- strsplit(outlist[dups][[1]], split = "_\\|_")
+  }
+  outlist
+}

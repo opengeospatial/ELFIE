@@ -5,7 +5,8 @@
   "name": "Big Slough-Elkhorn River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102200031006.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/102200031006",
-  "catchmentRealization.1": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/102200031006",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/102200031006", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/102200031006"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/102200031006"
 }

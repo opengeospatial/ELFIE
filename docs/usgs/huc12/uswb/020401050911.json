@@ -5,7 +5,8 @@
   "name": "Buck Creek-Delaware River",
   "description": "comment describing each watershed at a high level",
   "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911.json",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/020401050911",
-  "catchmentRealization.1": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/020401050911",
+  "catchmentRealization": [
+    ["https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12boundary/020401050911", "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/020401050911"]
+  ],
   "outflow": "https://opengeospatial.github.io/ELFIE/usgs/uswb/huc12pp/020401050911"
 }
