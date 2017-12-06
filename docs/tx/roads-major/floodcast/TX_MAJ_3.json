@@ -1,0 +1,29 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_3.json",
+  "@type": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_MAJOR_TX_RDS&featureID=3",
+  "name": "1131215_LOCAL STREETS",
+  "description": "This is route ID 1131215 with Monitor status",
+  "geo": {
+    "@type": "schema:GeoShape",
+    "line": {
+      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
+      "type": "Feature",
+      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_3.json",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            [-95.4577, 29.7569],
+            [-95.4577, 29.7574],
+            [-95.4577, 29.7578],
+            [-95.4576, 29.758],
+            [-95.4574, 29.7582],
+            [-95.4569, 29.7582],
+            [-95.4568, 29.7582]
+          ]
+        ]
+      }
+    }
+  }
+}

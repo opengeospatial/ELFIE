@@ -1,7 +1,7 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/09419507.json",
-  "@type": "hyf:HY_HydrometricFeature",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "MUDDY RV AT LEWIS AVENUE AT OVERTON, NV",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09419507",
   "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=09419507&period=365",

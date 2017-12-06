@@ -1,3 +1,4 @@
+setwd("~/Documents/Projects/ELFIE/ELFIE/data/uswb/")
 library(jsonlite)
 library(dplyr)
 huc12pp <- fromJSON("usgs_huc12pp_uswb.json")
@@ -60,7 +61,7 @@ fline_info <- data.frame(matrix(nrow = length(hucs), ncol = length(preds)))
 names(fline_info) <- preds
 rownames(fline_info) <- nhdplusflowline$features$properties$huc12
 fline_info$jsonkey_huc12 <- rownames(fline_info)
-fline_info$`rdfs:type` <- "hyf:HY_HydrographicNetwork"
+fline_info$`rdfs:type` <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
 fline_info$`schema:name` <- paste("Hydro Network of",
                                     huc12boundary$features$properties$name[match(rownames(huc12boundary_info),
                                                                                  rownames(fline_info))])
@@ -79,8 +80,10 @@ huc12 <- huc12boundary_info %>%
   mutate(`rdfs:type` = "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment")
 
 huc12 <- cbind(huc12,  
-               list(`hyf:catchmentRealization` = paste0("elfie/usgs/uswb/huc12boundary/", hucs, "_|_", "elfie/usgs/uswb/nhdplusflowline/", hucs)),
-               list(`hyf:outflow` = paste0("elfie/usgs/uswb/huc12pp/", hucs)))
+               list(`hyf:catchmentRealization` = paste0("elfie/usgs/huc12boundary/uswb/", hucs, ".json", 
+                                                        "_|_", 
+                                                        "elfie/usgs/nhdplusflowline/uswb/", hucs, ".json")),
+               list(`hyf:outflow` = paste0("elfie/usgs/huc12pp/uswb/", hucs, ".json")))
 
 write.table(huc12, file = "usgs_huc12_uswb.tsv", sep = "\t", row.names = F)
 
@@ -92,7 +95,7 @@ nwissite<- data.frame(matrix(nrow = length(hucs), ncol = length(preds)))
 names(nwissite) <- preds
 rownames(nwissite) <- nwis_sites$features$properties$site_no
 nwissite$jsonkey_site_no <- rownames(nwissite)
-nwissite$`rdfs:type` <- "hyf:HY_HydrometricFeature"
+nwissite$`rdfs:type` <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
 nwissite$`schema:name` <- nwis_sites$features$properties$station_nm
 nwissite$`schema:sameAs` <- paste0("https://waterdata.usgs.gov/nwis/inventory/?site_no=", 
                                    nwis_sites$features$properties$site_no)
