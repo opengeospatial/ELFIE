@@ -1,15 +1,2 @@
-<<<<<<< HEAD:data/Floodcast_ELFIE/USGS_HUC10.txt
-jsonkey_identifier	rdfs:type	schema:name	schema:description	dcterms:creator	schema:image	schema:geo	hyf:contributingCatchment	hyf:nexusRealization
-1204010403	http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus	1204010403	USGS HUC10: https://water.usgs.gov/GIS/huc.html	Floodcast_Dewberry	NA	NA	ELFIE/data/floodcast/usgs_huc10_floodcast.json	https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=08072600
-								
-								
-								
-								
-								
-								
-								
-								
-=======
-jsonkey_identifier	rdfs:type	schema:name	schema:description	dcterms:creator	schema:image	schema:geo
-1204010403	http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_USGS_HUC10	1204010403	USGS HUC10: https://water.usgs.gov/GIS/huc.html	Floodcast_Dewberry	NA	NA
->>>>>>> f3b1f7dd6eb0f165b8bf4d81efadff7a83df2133:data/floodcast/usgs_huc10_floodcast.tsv
+jsonkey_HUC10	rdfs:type	schema:name	schema:description	schema:image
+1204010403	http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide	Whiteoak Bayou-Buffalo Bayou	USGS HUC10: https://water.usgs.gov/GIS/huc.html	NA
