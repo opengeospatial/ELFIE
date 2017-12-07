@@ -1,8 +1,8 @@
 {
   "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403.json",
-  "@type": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_USGS_HUC10",
-  "name": "1204010403",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
+  "name": "Whiteoak Bayou-Buffalo Bayou",
   "description": "USGS HUC10: https://water.usgs.gov/GIS/huc.html",
   "geo": {
     "@type": "schema:GeoShape",
