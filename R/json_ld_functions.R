@@ -65,13 +65,37 @@ build_schema_geo <- function(geojson_geometry, id = NULL) {
 #' @details Note that this can be combined with other elf lists. If it is, care must be 
 #' taken to handle the @context, @id, and @type between existing and new content.
 #' 
+#' This function attempts to build an HY_IndirectPosition if it finds a "linearElement" reference.
+#' This functionality requires values for: hyf:linearElement, hyf:HY_DistanceFromReferent/interpolative, 
+#' and hyf:HY_DistanceDescription and only supports that form of linear referencing.
+#' 
 build_hyf_net <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
   outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
-                  
+  
+  if(any(grepl("linearElement", names(tsv_data)))) {
+    warning("found a linearElement, attempting to create an HY_IndirectPosition read the docs for limitations")
+    
+    linref <- list(referencedPosition = 
+                     list(HY_IndirectPosition = 
+                            list(distanceExpression = 
+                                   list(HY_DistanceFromReferent = 
+                                          list(interpolative = tsv_data$`hyf:HY_DistanceFromReferent/interpolative`)),
+                                 distanceDescription = 
+                                   list(HY_DistanceDescription = tsv_data$`hyf:HY_DistanceDescription`),
+                                 linearElement = tsv_data$`hyf:linearElement`)))
+    
+    tsv_data$`hyf:linearElement` <- 
+      tsv_data$`hyf:HY_DistanceFromReferent/interpolative` <- 
+      tsv_data$`hyf:HY_DistanceDescription` <- NULL
+    
+    outlist <- c(outlist, linref)
+    
+  }
+  
   for(i in 1:length(names(tsv_data))) {
     if(grepl("hyf:", names(tsv_data)[i])) {
       outlist <- c(outlist, hyf_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
@@ -79,7 +103,7 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
   }
   
   outlist <- check_outlist(outlist)
-
+  
   if(!include_missing) {
     return(remove_missing(outlist))
   } else {
@@ -117,7 +141,11 @@ hyf_mapper <- function(name, value) {
                    `hyf:outflow` = "outflow",
                    `hyf:nexusRealization` = "nexusRealization",
                    `hyf:networkStation` = "networkStation",
-                   `hyf:hydrometricNetwork` = "hydrometricNetwork")
+                   `hyf:hydrometricNetwork` = "hydrometricNetwork",
+                   `hyf:HY_HydroLocationType` = "HY_HydroLocationType",
+                   `hyf:linearElement` = "linearElement",
+                   `hyf:HY_DistanceFromReferent` = "HY_DistanceFromReferent",
+                   `hyf:HY_DistanceDescription` = "HY_DistanceDescription")
     
     out[[mapper[[name]]]] <- value
   }, error = function(e) {

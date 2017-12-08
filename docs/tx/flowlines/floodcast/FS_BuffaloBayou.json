@@ -1,12 +1,10 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou.json",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Flowpath",
   "name": "Buffalo Bayou at State Hwy 6 nr Addicks, TX",
   "description": "This is the flowline for the gage used to model the floodplains for the harvey huricane event in this area of interest.",
-  "sameAs": "https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=08072600",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/data/floodcast/usgs_huc10_floodcast.json",
-  "networkStation": "https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=08072600",
+  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403.json",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {
