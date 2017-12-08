@@ -1,9 +1,13 @@
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403.json",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Whiteoak Bayou-Buffalo Bayou",
   "description": "USGS HUC10: https://water.usgs.gov/GIS/huc.html",
+  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou.json",
+  "hydrometricNetwork": {
+    "HY_HydrometricFeature": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600.json"
+  },
   "geo": {
     "@type": "schema:GeoShape",
     "polygon": {

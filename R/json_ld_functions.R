@@ -90,6 +90,22 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
 
 hyf_mapper <- function(name, value) {
   out <- list()
+  
+  if(grepl("/", name)) {
+    extension <- strsplit(name, "/")[[1]]
+    
+    name <- extension[1]
+    
+    if(length(extension) > 2) {
+      stop("nesting deeper than 1 not supported yet.")
+    }
+    
+    value_list <- list()
+    value_list[[extension[2]]] <- value
+    
+    value <- value_list
+  }
+  
   tryCatch({
     mapper <- list(`hyf:upstreamWaterBody` = "upstreamWaterBody",
                    `hyf:downstreamWaterBody` = "downstreamWaterBody",
@@ -102,10 +118,12 @@ hyf_mapper <- function(name, value) {
                    `hyf:nexusRealization` = "nexusRealization",
                    `hyf:networkStation` = "networkStation",
                    `hyf:hydrometricNetwork` = "hydrometricNetwork")
+    
     out[[mapper[[name]]]] <- value
   }, error = function(e) {
-    warn(paste(e, "\n", "name", "\n", "value"))
+    warning(paste(e, name, "\n", value))
   })
+  
   return(out)
 }
 
