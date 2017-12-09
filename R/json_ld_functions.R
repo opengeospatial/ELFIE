@@ -145,7 +145,8 @@ hyf_mapper <- function(name, value) {
                    `hyf:HY_HydroLocationType` = "HY_HydroLocationType",
                    `hyf:linearElement` = "linearElement",
                    `hyf:HY_DistanceFromReferent` = "HY_DistanceFromReferent",
-                   `hyf:HY_DistanceDescription` = "HY_DistanceDescription")
+                   `hyf:HY_DistanceDescription` = "HY_DistanceDescription",
+                   `hyf:realizedNexus` = "realizedNexus")
     
     out[[mapper[[name]]]] <- value
   }, error = function(e) {

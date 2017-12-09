@@ -5,7 +5,7 @@
   "name": "Outlet of Packer Lake-Sacramento River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180201041203.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=11390500",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/11390500.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 38.7852,

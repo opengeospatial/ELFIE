@@ -5,7 +5,7 @@
   "name": "Outlet of May Flat-Colorado River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/140100051906.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09163500",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/09163500.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 39.0927,

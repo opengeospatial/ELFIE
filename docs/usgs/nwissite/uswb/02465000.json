@@ -1,11 +1,12 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/02465000.json",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
   "name": "BLACK WARRIOR RIVER AT NORTHPORT AL",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02465000",
-  "image": "https://waterdata.usgs.gov/nwis/dv/?ts_id=91578&format=img_default&site_no=02465000&period=365",
-  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nhdplusflowline/031601130201",
+  "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=02465000&parm_cd=00060&period=100",
+  "HY_HydroLocationType": "hydrometricStation",
+  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/031601130201.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 33.2093,

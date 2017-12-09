@@ -5,7 +5,7 @@
   "name": "Outlet of Antelope Creek-Bighorn River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100800071208.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06274300",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/06274300.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 44.4703,

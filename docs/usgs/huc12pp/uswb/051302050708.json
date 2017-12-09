@@ -5,7 +5,7 @@
   "name": "Outlet of Demumbers Creek-Cumberland River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=03438220",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/03438220.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 37.0837,

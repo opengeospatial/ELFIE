@@ -5,7 +5,7 @@
   "name": "Outlet of Shag Slough-San Joaquin River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180400012103.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=11261500",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/11261500.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 37.3368,
