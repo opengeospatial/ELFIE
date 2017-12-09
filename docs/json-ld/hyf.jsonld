@@ -33,6 +33,10 @@
             "@id": "hyf:outflow",
             "@type": "@id"
         },
+        "realizedNexus": {
+            "@id": "hyf:realizedNexus",
+            "@type": "@id"
+        },
         "networkstation": {
             "@id": "hyf:networkstation",
             "@type": "@id"
@@ -51,6 +55,54 @@
         },
         "HY_Catchment": {
             "@id": "hyf:HY_Catchment",
+            "@type": "@id"
+        },
+        "HY_HydroLocation": {
+            "@id": "hyf:HY_HydroLocation",
+            "@type": "@id"
+        },
+        "referencedPosition": {
+            "@id": "hyf:referencedPosition",
+            "@type": "@id"
+        },
+        "HY_IndirectPosition": {
+            "@id": "hyf:"HY_IndirectPosition,
+            "@type": "@id"
+        },
+        "distanceExpression": {
+            "@id": "hyf:distanceExpression",
+            "@type": "@id"
+        },
+        "HY_DistanceFromReferent": {
+            "@id": "hyf:HY_DistanceFromReferent",
+            "@type": "@id"
+        },
+        "interpolative": {
+            "@id": "hyf:interpolative",
+            "@type": "@id"
+        },
+        "distanceDescription": {
+            "@id": "hyf:distanceDescription",
+            "@type": "@id"
+        },
+        "linearElement": {
+            "@id": "hyf:linearElement",
+            "@type": "@id"
+        },
+        "HY_HydroLocationType": {
+            "@id": "hyf:HY_HydroLocationType",
+            "@type": "@id"
+        },
+        "hydrometricNetwork": {
+            "@id": "hyf:hydrometricNetwork",
+            "@type": "@id"
+        },
+        "HY_HydrometricFeature": {
+            "@id": "hyf:HY_HydrometricFeature",
+            "@type": "@id"
+        },
+        "HY_DistanceDescription": {
+            "@id": "hyf:HY_DistanceDescription",
             "@type": "@id"
         },
         "HY_Lake": {
