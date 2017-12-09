@@ -39,14 +39,30 @@ for(data_path in data_paths) {
     for(i in 1:nrow(tsv_data)) {
       elf_index_list <- build_elf_index_list(id_base, tsv_data[i,], include_missing = F)
       
-      if(any(grepl("hyf", names(tsv_data)))) {
+      if(any(grepl("hyf:", names(tsv_data))) || any(grepl("fc:", names(tsv_data)))) {
         elf_net_hyf_list <- build_hyf_net(tsv_data[i,], elf_index_list$`@id`)
         elf_net_hyf_sublist <- elf_net_hyf_list
         elf_net_hyf_sublist[c("@context", "@id", "@type")] <- NULL
       
         elf_index_list$`@context` <- c(elf_index_list$`@context`, elf_net_hyf_list$`@context`)
+        
+        ### This is just hacked in here, refactor all this garbage later!
+        if(grepl("fc:", names(tsv_data)[i])) {
+          elf_index_list$`@context` <- c(elf_index_list$`@context`, 
+                                         "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld")
+        }
       
         elf_index_list <- c(elf_index_list, elf_net_hyf_sublist)
+      }
+      
+      if(any(grepl("time:", names(tsv_data))) || any(grepl("geo:", names(tsv_data)))) {
+        elf_net_list <- build_elf_net(tsv_data[i,], elf_index_list$`@id`)
+        elf_net_sublist <- elf_net_list
+        elf_net_sublist[c("@context", "@id", "@type")] <- NULL
+        
+        elf_index_list$`@context` <- c(elf_index_list$`@context`, elf_net_list$`@context`)
+        
+        elf_index_list <- c(elf_index_list, elf_net_sublist)
       }
       
       if(exists("geojson")) elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], id = elf_index_list$`@id`)
