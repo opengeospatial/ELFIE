@@ -5,7 +5,7 @@
   "name": "Outlet of Anderson Wash-Muddy River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150100120904.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09419507",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/09419507.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 36.5262,

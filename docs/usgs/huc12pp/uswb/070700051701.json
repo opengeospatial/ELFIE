@@ -5,7 +5,7 @@
   "name": "Outlet of Indian Creek-Wisconsin River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070700051701.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=05407000",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/05407000.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 43.2006,

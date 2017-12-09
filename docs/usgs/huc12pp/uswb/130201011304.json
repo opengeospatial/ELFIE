@@ -5,7 +5,7 @@
   "name": "Outlet of Los Alamos Canyon-Rio Grande",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/130201011304.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08313000",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/08313000.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 35.8729,

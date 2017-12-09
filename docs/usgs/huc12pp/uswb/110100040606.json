@@ -5,7 +5,7 @@
   "name": "Outlet of Betsey Gill Creek-White River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/110100040606.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=07061000",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/07061000.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 35.7593,

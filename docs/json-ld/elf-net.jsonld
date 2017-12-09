@@ -3,6 +3,5 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld"
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-hy_features.jsonld"
     ]
 }

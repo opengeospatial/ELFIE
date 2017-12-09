@@ -5,7 +5,7 @@
   "name": "Outlet of Lick Creek-White River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051202021001.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=03374000",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/03374000.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 38.51,

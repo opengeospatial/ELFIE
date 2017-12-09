@@ -69,6 +69,8 @@ build_schema_geo <- function(geojson_geometry, id = NULL) {
 #' This functionality requires values for: hyf:linearElement, hyf:HY_DistanceFromReferent/interpolative, 
 #' and hyf:HY_DistanceDescription and only supports that form of linear referencing.
 #' 
+#' Some floodcast relations can also be added with this function.
+#' 
 build_hyf_net <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
@@ -99,6 +101,52 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
   for(i in 1:length(names(tsv_data))) {
     if(grepl("hyf:", names(tsv_data)[i])) {
       outlist <- c(outlist, hyf_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
+    }
+    if(grepl("fc:", names(tsv_data)[i])) {
+      outlist <- c(outlist, floodcast_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
+    }
+  }
+  
+  outlist <- check_outlist(outlist)
+  
+  if(!include_missing) {
+    return(remove_missing(outlist))
+  } else {
+    return(outlist)
+  }
+  
+}
+
+#' @title build elfie net as described [here](https://github.com/opengeospatial/ELFIE/wiki/ELFIE-Relations)
+#' @param tsv_data one row data.frame with predicates to be added to an R list
+#' @param id character the id of the feature in question like:
+#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
+#' @details Note that this can be combined with other elf lists. If it is, care must be 
+#' taken to handle the @context, @id, and @type between existing and new content.
+#' 
+build_elf_net <- function(tsv_data, id, include_missing = F) {
+  tsv_data <- lapply(tsv_data, elfie_sub)
+  
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld",
+                  "@id" = id,
+                  "@type" = tsv_data$`rdfs:type`)
+  
+  for(i in 1:length(names(tsv_data))) {
+    if(grepl("geo:", names(tsv_data)[i])) {
+      
+      outlist <- c(outlist, geo_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
+      
+    }
+    if(grepl("time:", names(tsv_data)[i])) {
+      
+      outlist <- c(outlist, time_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
+      
+    }
+    if("skos:related" == names(tsv_data)[i]) {
+      
+      outlist <- c(outlist, list("skos:related" = tsv_data[[names(tsv_data)[i]]]))
+      
     }
   }
   
@@ -145,9 +193,11 @@ hyf_mapper <- function(name, value) {
                    `hyf:HY_HydroLocationType` = "HY_HydroLocationType",
                    `hyf:linearElement` = "linearElement",
                    `hyf:HY_DistanceFromReferent` = "HY_DistanceFromReferent",
-                   `hyf:HY_DistanceDescription` = "HY_DistanceDescription")
+                   `hyf:HY_DistanceDescription` = "HY_DistanceDescription",
+                   `hyf:realizedNexus` = "realizedNexus")
     
     out[[mapper[[name]]]] <- value
+    
   }, error = function(e) {
     warning(paste(e, name, "\n", value))
   })
@@ -155,8 +205,49 @@ hyf_mapper <- function(name, value) {
   return(out)
 }
 
+geo_mapper <- function(name, value) {
+  out <- list()
+  
+  tryCatch({
+    mapper <- list(`geo:sfIntersects` = "sfIntersects",
+                   `geo:sfTouches` = "sfTouches",
+                   `geo:sfWithin` = "sfWithin",
+                   `geo:Interacts` = "Interacts",
+                   `geo:hasGeometry` = "hasGeometry")
+    
+    out[[mapper[[name]]]] <- value
+    
+  }, error = function(e) {
+    warning(paste(e, name, "\n", value))
+  })
+  
+  return(out)
+}
+
+time_mapper <- function(name, value) {
+  out <- list()
+  tryCatch({
+    mapper <- list(`time:hasBeginning` = "hasBeginning",
+                   `time:hasEnd` = "hasEnd",
+                   `time:after` = "after",
+                   `time:before` = "before",
+                   `time:intervalAfter` = "intervalAfter",
+                   `time:intervalBefore` = "intervalBefore",
+                   `time:intervalDuring` = "intervalDuring")
+    
+    out[[mapper[[name]]]] <- value
+    
+  }, error = function(e) {
+    warning(paste(e, name, "\n", value))
+  })
+  
+  
+  return(out)
+}
+
 sosa_mapper <- function(name, value) {
   out <- list()
+  
   tryCatch({
     mapper <- list(`sosa:hasFeatureOfInterest` = "hasFeatureOfInterest",
                    `sosa:hasResult` = "hasResult",
@@ -167,16 +258,35 @@ sosa_mapper <- function(name, value) {
                    `sosa:usedProcedure` = "usedProcedure",
                    `time:hasBeginning` = "hasBeginning",
                    `time:hasEnd` = "hasEnd",
-                   `geo:hasGeometry` = "hasGeometry",
                    `sosa:isSampleOf` = "isSampleOf",
                    `sosa:isFeatureOfInterestOf` = "isFeatureOfInterestOf",
                    `sosa:hasSampleRelationship` = "hasSampleRelationship",
                    `sosa:natureOfRelationship` = "natureOfRelationship",
                    `sosa:relatedSample` = "relatedSample")
+    
+    out[[mapper[[name]]]] <- value
+    
   }, error = function(e) {
-    warn(paste(e, "\n", "name", "\n", "value"))
+    warning(paste(e, name, "\n", value))
   })
-  out[[mapper[[name]]]] <- value
+  
+  return(out)
+}
+
+floodcast_mapper <- function(name, value) {
+  out <- list()
+  
+  tryCatch({
+    mapper <- list(`fc:AssetsThreatened` = "AssetsThreatened",
+                   `fc:AssetsMonitored` = "AssetsMonitored",
+                   `fc:FloodEvent` = "FloodEvent")
+    
+    out[[mapper[[name]]]] <- value
+    
+  }, error = function(e) {
+    warning(paste(e, name, "\n", value))
+  })
+  
   return(out)
 }
 

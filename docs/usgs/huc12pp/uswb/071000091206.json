@@ -5,7 +5,7 @@
   "name": "Outlet of Coppers Creek-Des Moines River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/071000091206.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=05490500",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/05490500.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.6969,

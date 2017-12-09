@@ -5,7 +5,7 @@
   "name": "Outlet of Appel Creek",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/101102050210.json",
-  "nexusRealization": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06337000",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/06337000.json",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 47.5765,
