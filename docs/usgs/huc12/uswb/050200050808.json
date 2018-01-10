@@ -1,12 +1,12 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Streets Run-Monongahela River",
   "description": "comment describing each watershed at a high level",
-  "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808.json",
+  "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808",
   "catchmentRealization": [
-    ["https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/050200050808.json", "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/050200050808.json"]
+    ["https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/050200050808", "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/050200050808"]
   ],
-  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/050200050808.json"
+  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/050200050808"
 }

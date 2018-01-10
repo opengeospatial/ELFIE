@@ -14,7 +14,6 @@
     <title>jsonld-markup example</title>
   </head>
   <body>
-
     <div class="ui middle aligned two column grid">
       <div class="column">
         <h4 class="ui header">
@@ -29,7 +28,7 @@
       </div>
     </div>
     <div class="ui two column doubling stackable grid">
-      <div class="code column">
+      <div class="five wide code column">
     <h3 class="ui inverted header">Expanded Context</h3>
     <pre><code id="context">
 {
@@ -179,18 +178,18 @@
 }
     </code></pre>
       </div>
-      <div class="code column">
+      <div class="eleven wide code column">
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/05490500.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/05490500",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
   "name": "Des Moines River at Keosauqua, IA",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=05490500",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=05490500&parm_cd=00060&period=100",
   "HY_HydroLocationType": "hydrometricStation",
-  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/071000091206.json",
+  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/071000091206",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.7278,
@@ -198,6 +197,23 @@
   }
 }
     </code></pre>
+      </div>
+    </div>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Code for this pretty JSON-LD view derived from 
+          <a href="https://github.com/scienceai/jsonld-markup" target="_blank">
+            https://github.com/scienceai/jsonld-markup
+          </a>. 
+          Thanks <a href="https://science.ai/">science.ai</a>!
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
       </div>
     </div>
     <script type="text/javascript" src="https://opengeospatial.github.io/ELFIE/js/pretty_jsonld.js"></script>

@@ -1,17 +1,17 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/120302030102.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/120302030102",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",
   "name": "Hydro Network of Fields Bayou-Trinity River",
   "description": "comment describing the network of each watershed",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102.json",
+  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102",
   "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08066500",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/120302030102.json",
+      "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/120302030102",
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [

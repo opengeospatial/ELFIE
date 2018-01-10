@@ -1,11 +1,11 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/051302050708.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/051302050708",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Demumbers Creek-Cumberland River",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708.json",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/03438220.json",
+  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/03438220",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 37.0837,

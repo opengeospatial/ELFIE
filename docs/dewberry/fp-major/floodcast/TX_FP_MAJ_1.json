@@ -1,21 +1,21 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodExtent",
   "name": "Major_Floodplain",
   "description": "This is the major level flood indundation extent",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_MAJOR_FP&styles=&bbox=-1.0628371091E7,3472530.965099998,-1.06262048277E7,3474444.821999997&width=768&height=678&srs=EPSG:3857&format=image%2Fjpeg",
-  "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1.json",
-  "AssetsThreatened": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1.json",
-  "AssetsMonitored": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1.json",
-  "sfIntersects": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1.json",
-  "Interacts": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1.json",
+  "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
+  "AssetsThreatened": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
+  "AssetsMonitored": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
+  "sfIntersects": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
+  "Interacts": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
   "geo": {
     "@type": "schema:GeoShape",
     "polygon": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1.json",
+      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [

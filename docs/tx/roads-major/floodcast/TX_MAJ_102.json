@@ -1,6 +1,6 @@
 {
   "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_102.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_102",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "257204_FUNCTIONALLY CLASSIFIED CITY STREETS",
   "description": "This is route ID 257204 with No Apparent Threat status",
@@ -10,7 +10,7 @@
     "line": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_102.json",
+      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_102",
       "geometry": {
         "type": "LineString",
         "coordinates": [

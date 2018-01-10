@@ -1,11 +1,11 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/050200050808.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/050200050808",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Streets Run-Monongahela River",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808.json",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/03085000.json",
+  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/03085000",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.4406,

@@ -14,7 +14,6 @@
     <title>jsonld-markup example</title>
   </head>
   <body>
-
     <div class="ui middle aligned two column grid">
       <div class="column">
         <h4 class="ui header">
@@ -29,7 +28,7 @@
       </div>
     </div>
     <div class="ui two column doubling stackable grid">
-      <div class="code column">
+      <div class="five wide code column">
     <h3 class="ui inverted header">Expanded Context</h3>
     <pre><code id="context">
 {
@@ -179,27 +178,27 @@
 }
     </code></pre>
       </div>
-      <div class="code column">
+      <div class="eleven wide code column">
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodExtent",
   "name": "Action_Floodplain",
   "description": "This is the action level flood indundation extent",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_ACTION_FP&styles=&bbox=-1.0628371091E7,3472530.965099998,-1.06262048277E7,3474444.821999997&width=768&height=678&srs=EPSG:3857&format=image%2Fjpeg",
-  "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1.json",
-  "AssetsThreatened": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1.json",
-  "AssetsMonitored": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1.json",
-  "sfIntersects": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1.json",
-  "Interacts": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1.json",
+  "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
+  "AssetsThreatened": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
+  "AssetsMonitored": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
+  "sfIntersects": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
+  "Interacts": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
   "geo": {
     "@type": "schema:GeoShape",
     "polygon": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1.json",
+      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -761,6 +760,23 @@
   }
 }
     </code></pre>
+      </div>
+    </div>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Code for this pretty JSON-LD view derived from 
+          <a href="https://github.com/scienceai/jsonld-markup" target="_blank">
+            https://github.com/scienceai/jsonld-markup
+          </a>. 
+          Thanks <a href="https://science.ai/">science.ai</a>!
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
       </div>
     </div>
     <script type="text/javascript" src="https://opengeospatial.github.io/ELFIE/js/pretty_jsonld.js"></script>

@@ -1,6 +1,6 @@
 {
   "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_66.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_66",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "1129775_LOCAL STREETS",
   "description": "This is route ID 1129775 with No Apparent Threat status",
@@ -10,7 +10,7 @@
     "line": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_66.json",
+      "id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_66",
       "geometry": {
         "type": "LineString",
         "coordinates": [

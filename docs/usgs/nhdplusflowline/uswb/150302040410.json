@@ -1,17 +1,17 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/150302040410.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/150302040410",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",
   "name": "Hydro Network of Bill Williams River-Lake Havasu",
   "description": "comment describing the network of each watershed",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410.json",
+  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410",
   "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09426620",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/150302040410.json",
+      "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/150302040410",
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [

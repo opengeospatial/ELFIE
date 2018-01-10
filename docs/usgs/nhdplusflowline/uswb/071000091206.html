@@ -14,7 +14,6 @@
     <title>jsonld-markup example</title>
   </head>
   <body>
-
     <div class="ui middle aligned two column grid">
       <div class="column">
         <h4 class="ui header">
@@ -29,7 +28,7 @@
       </div>
     </div>
     <div class="ui two column doubling stackable grid">
-      <div class="code column">
+      <div class="five wide code column">
     <h3 class="ui inverted header">Expanded Context</h3>
     <pre><code id="context">
 {
@@ -179,23 +178,23 @@
 }
     </code></pre>
       </div>
-      <div class="code column">
+      <div class="eleven wide code column">
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/071000091206.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/071000091206",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",
   "name": "Hydro Network of Coppers Creek-Des Moines River",
   "description": "comment describing the network of each watershed",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/071000091206.json",
+  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/071000091206",
   "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=05490500",
   "geo": {
     "@type": "schema:GeoShape",
     "line": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/071000091206.json",
+      "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/071000091206",
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
@@ -20602,6 +20601,23 @@
   }
 }
     </code></pre>
+      </div>
+    </div>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Code for this pretty JSON-LD view derived from 
+          <a href="https://github.com/scienceai/jsonld-markup" target="_blank">
+            https://github.com/scienceai/jsonld-markup
+          </a>. 
+          Thanks <a href="https://science.ai/">science.ai</a>!
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
       </div>
     </div>
     <script type="text/javascript" src="https://opengeospatial.github.io/ELFIE/js/pretty_jsonld.js"></script>

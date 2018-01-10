@@ -10,7 +10,7 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
   outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", 
                   "@id" = paste("https://opengeospatial.github.io/ELFIE", 
                                 id_base,
-                                paste0(tsv_data[1], ".json"), 
+                                tsv_data[1], 
                                 sep = "/"), 
                   "@type" = tsv_data$`rdfs:type`,
                   "name" = tsv_data$`schema:name`,

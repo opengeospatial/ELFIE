@@ -1,12 +1,12 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/11261500.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/11261500",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
   "name": "SAN JOAQUIN R A FREMONT FORD BRIDGE CA",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=11261500",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=11261500&parm_cd=00060&period=100",
   "HY_HydroLocationType": "hydrometricStation",
-  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/180400012103.json",
+  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/180400012103",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 37.3099,

@@ -1,6 +1,6 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodEvent",
   "name": "TX_Harvey2017_1",
   "description": "This is the event extent for the Hurricane Harvey: https://stn.wim.usgs.gov/fev/#HarveyAug2017",
@@ -11,7 +11,7 @@
     "polygon": {
       "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
       "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1.json",
+      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
       "geometry": {
         "type": "Polygon",
         "coordinates": [

@@ -1,12 +1,12 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911.json",
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Buck Creek-Delaware River",
   "description": "comment describing each watershed at a high level",
-  "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911.json",
+  "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911",
   "catchmentRealization": [
-    ["https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/020401050911.json", "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/020401050911.json"]
+    ["https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/020401050911", "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/020401050911"]
   ],
-  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/020401050911.json"
+  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/020401050911"
 }

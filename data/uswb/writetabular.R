@@ -26,7 +26,7 @@ huc12boundary_info$jsonkey_huc12 <- rownames(huc12boundary_info)
 huc12boundary_info$`rdfs:type` <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
 huc12boundary_info$`schema:name` <- huc12boundary$features$properties$name
 huc12boundary_info$`schema:description` <- "comment describing each watershed at a high level"
-huc12boundary_info$`hyf:realizedCatchment` <- paste0("elfie/usgs/huc12/uswb/", huc12boundary$features$properties$huc12, ".json")
+huc12boundary_info$`hyf:realizedCatchment` <- paste0("elfie/usgs/huc12/uswb/", huc12boundary$features$properties$huc12)
 
 write.table(huc12boundary_info, file = "usgs_huc12boundary_uswb.tsv", sep = "\t", row.names = F)
 
@@ -46,10 +46,10 @@ huc12pp_info$`schema:name` <- paste("Outlet of",
                                    huc12boundary$features$properties$name[match(rownames(huc12boundary_info),
                                                                                 rownames(huc12pp_info))])
 huc12pp_info$`schema:description` <- "comment describing the outlet of each watershed"
-huc12pp_info$`hyf:contributingCatchment` <- paste0(paste0("elfie/usgs/huc12/uswb/", huc12pp$features$properties$HUC_12, ".json"))
+huc12pp_info$`hyf:contributingCatchment` <- paste0(paste0("elfie/usgs/huc12/uswb/", huc12pp$features$properties$HUC_12))
 
 huc12pp_info <- left_join(huc12pp_info, huc_nwis, by = c("jsonkey_HUC_12" = "huc12")) %>%
-  mutate(`hyf:nexusRealization` = paste0("elfie/usgs/nwissite/", nwis, ".json")) %>%
+  mutate(`hyf:nexusRealization` = paste0("elfie/usgs/nwissite/", nwis)) %>%
   select(-nwis)
 
 write.table(huc12pp_info, file = "usgs_huc12pp_uswb.tsv", sep = "\t", row.names = F)
@@ -69,7 +69,7 @@ fline_info$`schema:name` <- paste("Hydro Network of",
                                     huc12boundary$features$properties$name[match(rownames(huc12boundary_info),
                                                                                  rownames(fline_info))])
 fline_info$`schema:description` <- "comment describing the network of each watershed"
-fline_info$`hyf:realizedCatchment` <- paste0("elfie/usgs/huc12/uswb/", huc12boundary$features$properties$huc12, ".json")
+fline_info$`hyf:realizedCatchment` <- paste0("elfie/usgs/huc12/uswb/", huc12boundary$features$properties$huc12)
 
 fline_info <- left_join(fline_info, huc_nwis, by = c("jsonkey_huc12" = "huc12")) %>%
   mutate(`hyf:networkStation` = paste0("https://waterdata.usgs.gov/nwis/inventory/?site_no=", nwis)) %>%
@@ -84,10 +84,10 @@ huc12 <- huc12boundary_info %>%
   mutate(`rdfs:type` = "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment")
 
 huc12 <- cbind(huc12,  
-               list(`hyf:catchmentRealization` = paste0("elfie/usgs/huc12boundary/uswb/", hucs, ".json", 
+               list(`hyf:catchmentRealization` = paste0("elfie/usgs/huc12boundary/uswb/", hucs, 
                                                         "_|_", 
-                                                        "elfie/usgs/nhdplusflowline/uswb/", hucs, ".json")),
-               list(`hyf:outflow` = paste0("elfie/usgs/huc12pp/uswb/", hucs, ".json")))
+                                                        "elfie/usgs/nhdplusflowline/uswb/", hucs)),
+               list(`hyf:outflow` = paste0("elfie/usgs/huc12pp/uswb/", hucs)))
 
 write.table(huc12, file = "usgs_huc12_uswb.tsv", sep = "\t", row.names = F)
 
@@ -108,6 +108,6 @@ nwissite$`schema:sameAs` <- paste0("https://waterdata.usgs.gov/nwis/inventory/?s
 nwissite$`schema:image` <- paste0("https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=", 
                                   nwis_sites$features$properties$site_no, "&parm_cd=00060&period=100")
 nwissite$`hyf:HY_HydroLocationType` <- "hydrometricStation"
-nwissite$`hyf:realizedNexus` <- paste0("elfie/usgs/huc12pp/uswb/", nwis_sites$features$properties$huc12, ".json")
+nwissite$`hyf:realizedNexus` <- paste0("elfie/usgs/huc12pp/uswb/", nwis_sites$features$properties$huc12)
 
 write.table(nwissite, file = "usgs_nwissite_uswb.tsv", sep = "\t", row.names = F)
