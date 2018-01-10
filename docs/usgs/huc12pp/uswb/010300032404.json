@@ -5,7 +5,7 @@
   "name": "Outlet of Riggs Branch-Kennebec River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/010300032404",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/01049265",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/01049265",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 44.3203,

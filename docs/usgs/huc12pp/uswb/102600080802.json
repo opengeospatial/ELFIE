@@ -5,7 +5,7 @@
   "name": "Outlet of Deer Creek-Smoky Hill River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102600080802",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/06877600",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/06877600",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 38.9448,

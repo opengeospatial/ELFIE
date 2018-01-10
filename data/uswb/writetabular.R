@@ -49,7 +49,7 @@ huc12pp_info$`schema:description` <- "comment describing the outlet of each wate
 huc12pp_info$`hyf:contributingCatchment` <- paste0(paste0("elfie/usgs/huc12/uswb/", huc12pp$features$properties$HUC_12))
 
 huc12pp_info <- left_join(huc12pp_info, huc_nwis, by = c("jsonkey_HUC_12" = "huc12")) %>%
-  mutate(`hyf:nexusRealization` = paste0("elfie/usgs/nwissite/", nwis)) %>%
+  mutate(`hyf:nexusRealization` = paste0("elfie/usgs/uswb/nwissite/", nwis)) %>%
   select(-nwis)
 
 write.table(huc12pp_info, file = "usgs_huc12pp_uswb.tsv", sep = "\t", row.names = F)

@@ -5,7 +5,7 @@
   "name": "Outlet of Log Gulch-Missouri River",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/06066500",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/06066500",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 47.0231,

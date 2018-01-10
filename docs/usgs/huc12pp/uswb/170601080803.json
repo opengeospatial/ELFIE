@@ -5,7 +5,7 @@
   "name": "Outlet of Palouse Lake",
   "description": "comment describing the outlet of each watershed",
   "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170601080803",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/13351000",
+  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/13351000",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 46.7593,
