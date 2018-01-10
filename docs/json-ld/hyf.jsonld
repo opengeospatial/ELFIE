@@ -117,19 +117,19 @@
             "@id": "hyf:HY_Impoundment",
             "@type": "@id"
         },
-        "hyf:HY_HydrographicNetwork": {
+        "HY_HydrographicNetwork": {
             "@id": "hyf:HY_HydrographicNetwork",
             "@type": "@id"
         },
-        "hyf:HY_CatchmentDivide": {
+        "HY_CatchmentDivide": {
             "@id": "hyf:HY_CatchmentDivide",
             "@type": "@id"
         },
-        "hyf:HY_HydroNexus": {
+        "HY_HydroNexus": {
             "@id": "hyf:HY_HydroNexus",
             "@type": "@id"
         },
-        "hyf:nexusRealization": {
+        "nexusRealization": {
             "@id": "hyf:nexusRealization",
             "@type": "@id"
         }
