@@ -305,3 +305,21 @@ check_outlist <- function(outlist) {
   }
   outlist
 }
+
+#' @title resolve context
+#' @param conx A URL to a json-ld context
+#' @return A fully resolved json-ld context
+#' 
+resolve_context <- function(conx) {
+  context <- jsonlite::fromJSON(conx)
+  if(!is.list(context[[1]])) {
+    context_out <- list()
+    for(conx2 in context[[1]]) {
+      context_out <- c(context_out,
+                       resolve_context(conx2))
+    }
+  } else {
+    context_out <- context
+  }
+  return(context_out)
+}

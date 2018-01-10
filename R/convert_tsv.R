@@ -3,7 +3,7 @@ source("json_ld_functions.R")
 
 data_paths <- c("../data/huc12obs",
                 "../data/uswb",
-                "../data/cr",
+                # "../data/cr",
                 "../data/floodcast")
 
 for(data_path in data_paths) {
@@ -65,11 +65,36 @@ for(data_path in data_paths) {
         elf_index_list <- c(elf_index_list, elf_net_sublist)
       }
       
-      if(exists("geojson")) elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], id = elf_index_list$`@id`)
+      if(exists("geojson")) elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], 
+                                                                   id = elf_index_list$`@id`)
       
       jsonlite::write_json(elf_index_list, 
                            file.path(out_path, paste0(tsv_data[i,][1], ".json")),
                            pretty = T, auto_unbox = T)
+      
+      json_out <- readLines(file.path(out_path, paste0(tsv_data[i,][1], ".json")))
+      
+      context_out <- list()
+      
+      for(conx in elf_index_list$`@context`) {
+        context <- resolve_context(conx)
+        if(length(context)>1) {
+          context <- do.call(c, context)
+          names(context) <- stringr::str_replace(names(context), "@context.", "")
+        }
+        context_out <- c(context_out, context$`@context`)
+      }
+      
+      context_out <- list(`@context` = context_out)
+      
+      context_out <- jsonlite::toJSON(context_out, pretty = T, auto_unbox = T)
+      
+      json_out <- jsonlite::toJSON(elf_index_list, pretty = T, auto_unbox = T)
+      
+      whisker_list <- list(context = list(context_out), `json-ld` = json_out)
+      
+      writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
+                 file.path(out_path, paste0(tsv_data[i,][1], ".html")))
     }
   }
 }
