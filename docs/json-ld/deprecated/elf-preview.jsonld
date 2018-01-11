@@ -5,7 +5,7 @@
             "rdfs": "https://www.w3.org/TR/rdf-schema/",
             "owl": "https://www.w3.org/OWL/",
             "dcterms": "http://dublincore.org/documents/2012/06/14/dcmi-terms/",
-            "geo": "http://www.opengeospatial.org/standards/geosparql",
+            "gsp": "http://www.opengeospatial.org/standards/geosparql",
             "schema": "http://schema.org/",
             "comment": "rdfs:comment",
             "versionInfo": "owl:versionInfo",
@@ -14,7 +14,7 @@
                 "@id": "owl:sameAs",
                 "@type": "@id"
             },
-            "hasPreviewGeometry": "geo:hasGeometry",
+            "hasPreviewGeometry": "gsp:hasGeometry",
             "license": {
                 "@id": "dcterms:license",
                 "@type": "@id"
