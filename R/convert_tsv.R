@@ -6,19 +6,37 @@ data_paths <- c("../data/huc12obs",
                 "../data/cr",
                 "../data/floodcast")
 
+use_cases <- list(huc12obs = list(data_path = "../data/huc12obs",
+                                  name = "Observations for a Hydrologic Unit"),
+                  uswb = list(data_path = "../data/uswb",
+                              name = "US Water Budgets"),
+                  cr = list(data_path = "../data/cr",
+                            name = "Champlain-Richelieu River Data Index"),
+                  floodcast = list(data_path = "../data/floodcast",
+                                   name = "Floodcast"))
+
+out_md <- "../docs/file_index.md"
+
+write("# Environmental Linked Features Interoperability Experiment Demo File Index\n", file = out_md)
+
 unlink("cache/*")
 
-for(data_path in data_paths) {
+for(use_case in use_cases) {
+  data_path <- use_case$data_path
   data_files <- list.files(data_path, pattern = "*.tsv")
   
   out_path_base <- "../docs"
   
+  write(paste("##", use_case$name, "use case files\n"), out_md, append = T)
+  
   for(data_file in data_files) {
     print(data_file)
-    id_base <- paste(stringr::str_split(stringr::str_replace(data_file, 
-                                                             ".tsv", ""), 
-                                        "_")[[1]], 
-                     collapse = "/")
+    
+    feature_type <- stringr::str_replace(data_file, ".tsv", "")
+    
+    write(paste("### files for feature type", stringr::str_replace_all(feature_type, "_", "-"), " \n"), out_md, append = T)
+    
+    id_base <- paste(stringr::str_split(feature_type, "_")[[1]], collapse = "/")
     
     out_path <- file.path(out_path_base, id_base)
     
@@ -92,7 +110,10 @@ for(data_path in data_paths) {
       
       writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
                  file.path(out_path, paste0(tsv_data[i,][1], ".html")))
+      
+      write(paste0("[", elf_index_list$`@id`, "](", elf_index_list$`@id`, ") [plain json](", elf_index_list$`@id`, ".json)  "), out_md, append = T)
     }
+    write("  \n", out_md, append = T)
   }
 }
 
