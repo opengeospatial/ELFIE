@@ -45,12 +45,6 @@ for(data_path in data_paths) {
         elf_net_hyf_sublist[c("@context", "@id", "@type")] <- NULL
       
         elf_index_list$`@context` <- c(elf_index_list$`@context`, elf_net_hyf_list$`@context`)
-        
-        ### This is just hacked in here, refactor all this garbage later!
-        if(grepl("fc:", names(tsv_data)[i])) {
-          elf_index_list$`@context` <- c(elf_index_list$`@context`, 
-                                         "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld")
-        }
       
         elf_index_list <- c(elf_index_list, elf_net_hyf_sublist)
       }

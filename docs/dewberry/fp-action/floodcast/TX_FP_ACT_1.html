@@ -177,6 +177,27 @@
     "nexusRealization": {
       "@id": "hyf:nexusRealization",
       "@type": "@id"
+    },
+    "fc": "https://opengeospatial.github.io/ELFIE/floodcast",
+    "FloodEvent": {
+      "@id": "fc:FloodEvent",
+      "@type": "@id"
+    },
+    "FloodExtent": {
+      "@id": "fc:FloodExtent",
+      "@type": "@id"
+    },
+    "TransportationAssets": {
+      "@id": "fc:TransportationAssets",
+      "@type": "@id"
+    },
+    "AssetsThreatened": {
+      "@id": "fc:AssetsThreatened",
+      "@type": "@id"
+    },
+    "AssetsMonitored": {
+      "@id": "fc:AssetsMonitored",
+      "@type": "@id"
     }
   }
 }
@@ -186,7 +207,7 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodExtent",
   "name": "Action_Floodplain",

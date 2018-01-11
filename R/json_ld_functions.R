@@ -78,6 +78,11 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
   
+  if(any(grepl("fc:", names(tsv_data)))) {
+    outlist$`@context` <- c(outlist$`@context`, 
+                            "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld")
+  }
+  
   if(any(grepl("linearElement", names(tsv_data)))) {
     warning("found a linearElement, attempting to create an HY_IndirectPosition read the docs for limitations")
     
@@ -291,8 +296,8 @@ floodcast_mapper <- function(name, value) {
 }
 
 remove_missing <- function(x) {
-  x[sapply(x, is.null)] <- NULL
-  x[sapply(x, is.na)] <- NULL
+  x[sapply(x, function(x) all(is.null(x)))] <- NULL
+  x[sapply(x, function(x) all(is.na(x)))] <- NULL
   return(x)
 }
 
