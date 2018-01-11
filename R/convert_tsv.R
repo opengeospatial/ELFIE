@@ -6,6 +6,8 @@ data_paths <- c("../data/huc12obs",
                 "../data/cr",
                 "../data/floodcast")
 
+unlink("cache/*")
+
 for(data_path in data_paths) {
   data_files <- list.files(data_path, pattern = "*.tsv")
   
@@ -86,7 +88,7 @@ for(data_path in data_paths) {
       
       json_out <- jsonlite::toJSON(elf_index_list, pretty = T, auto_unbox = T)
       
-      whisker_list <- list(context = list(context_out), `json-ld` = json_out)
+      whisker_list <- list(context = list(context_out), `json-ld` = json_out, page_title = paste0(id_base, "/", tsv_data[i,1]))
       
       writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
                  file.path(out_path, paste0(tsv_data[i,][1], ".html")))
@@ -94,3 +96,4 @@ for(data_path in data_paths) {
   }
 }
 
+unlink("cache/*")

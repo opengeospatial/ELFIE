@@ -315,7 +315,14 @@ check_outlist <- function(outlist) {
 #' @return A fully resolved json-ld context
 #' 
 resolve_context <- function(conx) {
-  context <- jsonlite::fromJSON(conx)
+  cached <- file.path("cache", stringr::str_replace_all(stringr::str_replace_all(conx, "/", ""), ":", ""))
+  
+  if(file.exists(cached)) {
+    context <- readRDS(cached)
+  } else {
+    context <- grab_context(conx, cached)
+  }
+  
   if(!is.list(context[[1]])) {
     context_out <- list()
     for(conx2 in context[[1]]) {
@@ -326,4 +333,10 @@ resolve_context <- function(conx) {
     context_out <- context
   }
   return(context_out)
+}
+
+grab_context <- function(conx, cached) {
+  context <- jsonlite::fromJSON(conx)
+  saveRDS(context, file.path(cached))
+  return(context)
 }
