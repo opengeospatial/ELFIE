@@ -138,7 +138,7 @@ build_elf_net <- function(tsv_data, id, include_missing = F) {
                   "@type" = tsv_data$`rdfs:type`)
   
   for(i in 1:length(names(tsv_data))) {
-    if(grepl("geo:", names(tsv_data)[i])) {
+    if(grepl("gsp:", names(tsv_data)[i])) {
       
       outlist <- c(outlist, geo_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
       
@@ -214,9 +214,9 @@ geo_mapper <- function(name, value) {
   out <- list()
   
   tryCatch({
-    mapper <- list(`gsp:sfIntersects` = "Intersects",
-                   `gsp:sfTouches` = "Touches",
-                   `gsp:sfWithin` = "Within",
+    mapper <- list(`gsp:sfIntersects` = "intersects",
+                   `gsp:sfTouches` = "touches",
+                   `gsp:sfWithin` = "within",
                    `gsp:hasGeometry` = "hasGeometry")
     
     out[[mapper[[name]]]] <- value

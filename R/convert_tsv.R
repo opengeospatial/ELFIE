@@ -49,7 +49,7 @@ for(data_path in data_paths) {
         elf_index_list <- c(elf_index_list, elf_net_hyf_sublist)
       }
       
-      if(any(grepl("time:", names(tsv_data))) || any(grepl("geo:", names(tsv_data)))) {
+      if(any(grepl("time:", names(tsv_data))) || any(grepl("gsp:", names(tsv_data)))) {
         elf_net_list <- build_elf_net(tsv_data[i,], elf_index_list$`@id`)
         elf_net_sublist <- elf_net_list
         elf_net_sublist[c("@context", "@id", "@type")] <- NULL

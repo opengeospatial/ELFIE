@@ -8,7 +8,7 @@
   "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
   "AssetsThreatened": "https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1",
   "AssetsMonitored": "https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1",
-  "Interacts": "https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1",
+  "intersects": "https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1",
   "geo": {
     "@type": "schema:GeoShape",
     "polygon": {

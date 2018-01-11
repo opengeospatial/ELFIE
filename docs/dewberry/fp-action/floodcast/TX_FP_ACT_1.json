@@ -5,10 +5,10 @@
   "name": "Action_Floodplain",
   "description": "This is the action level flood indundation extent",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_ACTION_FP&styles=&bbox=-1.0628371091E7,3472530.965099998,-1.06262048277E7,3474444.821999997&width=768&height=678&srs=EPSG:3857&format=image%2Fjpeg",
-  "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
-  "AssetsThreatened": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
+  "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
+  "AssetsThreatened": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
   "AssetsMonitored": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
-  "Interacts": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
+  "intersects": "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1",
   "geo": {
     "@type": "schema:GeoShape",
     "polygon": {
