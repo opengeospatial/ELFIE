@@ -12,4 +12,6 @@ index and construct links between features can use the views as a linked data re
 
 [See JSON-LD Contexts Here.](https://opengeospatial.github.io/ELFIE/json-ld)
 
+[An index of all files in the ELFIE demo set is here.](https://opengeospatial.github.io/ELFIE/file_index)
+
 [US Water Budgets Demo Here.](https://opengeospatial.github.io/ELFIE/demo/uswb)
