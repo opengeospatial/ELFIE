@@ -214,11 +214,10 @@ geo_mapper <- function(name, value) {
   out <- list()
   
   tryCatch({
-    mapper <- list(`geo:sfIntersects` = "sfIntersects",
-                   `geo:sfTouches` = "sfTouches",
-                   `geo:sfWithin` = "sfWithin",
-                   `geo:Interacts` = "Interacts",
-                   `geo:hasGeometry` = "hasGeometry")
+    mapper <- list(`gsp:sfIntersects` = "Intersects",
+                   `gsp:sfTouches` = "Touches",
+                   `gsp:sfWithin` = "Within",
+                   `gsp:hasGeometry` = "hasGeometry")
     
     out[[mapper[[name]]]] <- value
     

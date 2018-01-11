@@ -3,7 +3,7 @@ source("json_ld_functions.R")
 
 data_paths <- c("../data/huc12obs",
                 "../data/uswb",
-                # "../data/cr",
+                "../data/cr",
                 "../data/floodcast")
 
 for(data_path in data_paths) {
@@ -78,7 +78,6 @@ for(data_path in data_paths) {
           context <- list(`@context` = context)
         }
         context_out <- c(context_out, context$`@context`)
-        context_out[grepl(".1", names(context_out))] <- NULL
       }
       
       context_out <- list(`@context` = context_out)
