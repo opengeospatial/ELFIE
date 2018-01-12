@@ -1,0 +1,16 @@
+{
+    "@context": [
+		"https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld",
+		{"gwml2":"http://opengeospatial/def/ontology/gwml2"}
+	],
+    "@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/121AT01",
+    "@type": "gwml2:GW_HydrogeoUnit",
+    "related": [
+        {
+			"@id":"http://id.eaufrance.fr/CoursEau/E6390710",
+			"@type":"HY_WaterBody",
+			"name":"rivière l'hallue" 
+		}
+    ]
+}

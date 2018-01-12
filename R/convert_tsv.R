@@ -15,8 +15,6 @@ use_cases <- list(huc12obs = list(data_path = "../data/huc12obs",
                   floodcast = list(data_path = "../data/floodcast",
                                    name = "Floodcast"))
 
-out_md <- "../docs/file_index.md"
-
 write("# Environmental Linked Features Interoperability Experiment Demo File Index\n", file = out_md)
 
 unlink("cache/*")
@@ -25,16 +23,14 @@ for(use_case in use_cases) {
   data_path <- use_case$data_path
   data_files <- list.files(data_path, pattern = "*.tsv")
   
-  out_path_base <- "../docs"
-  
-  write(paste("##", use_case$name, "use case files\n"), out_md, append = T)
+  write_use_case_name(out_md, use_case)
   
   for(data_file in data_files) {
     print(data_file)
     
     feature_type <- stringr::str_replace(data_file, ".tsv", "")
     
-    write(paste("### files for feature type", stringr::str_replace_all(feature_type, "_", "-"), " \n"), out_md, append = T)
+    write_feature_type_title(out_md, feature_type)
     
     id_base <- paste(stringr::str_split(feature_type, "_")[[1]], collapse = "/")
     
@@ -88,19 +84,7 @@ for(use_case in use_cases) {
       
       json_out <- readLines(file.path(out_path, paste0(tsv_data[i,][1], ".json")))
       
-      context_out <- list()
-      
-      for(conx in elf_index_list$`@context`) {
-        context <- resolve_context(conx)
-        if(length(context)>1) {
-          context <- do.call(c, context)
-          names(context) <- stringr::str_replace(names(context), "@context.", "")
-          context <- list(`@context` = context)
-        }
-        context_out <- c(context_out, context$`@context`)
-      }
-      
-      context_out <- list(`@context` = context_out)
+      context_out <- get_context_out(elf_index_list)
       
       context_out <- jsonlite::toJSON(context_out, pretty = T, auto_unbox = T)
       
@@ -111,7 +95,7 @@ for(use_case in use_cases) {
       writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
                  file.path(out_path, paste0(tsv_data[i,][1], ".html")))
       
-      write(paste0("[", elf_index_list$`@id`, "](", elf_index_list$`@id`, ") [plain json](", elf_index_list$`@id`, ".json)  "), out_md, append = T)
+      write_url_line(out_md, elf_index_list$`@id`)
     }
     write("  \n", out_md, append = T)
   }

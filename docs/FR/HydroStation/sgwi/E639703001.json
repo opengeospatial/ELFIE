@@ -1,0 +1,60 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+    ],
+    "@id": "http://id.eaufrance.fr/StationHydro/E639703001",
+    "@type": ["sosa:Sample","hyf:HY_HydrometricFeature"],
+    "name": "L'Hallue à Querrieu",
+    "hasGeometry": "POINT(49.937596 2.434795)",
+	"isSampleOf": {
+			"@id":"http://id.eaufrance.fr/CoursEau/E6390710",
+			"@type":"HY_WaterBody",
+			"name":"rivière l'hallue"
+		},
+    "isFeatureOfInterestOf": {
+        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+        "@graph": [
+				{
+					"@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001", 
+					"@type": "sosa:Observation",
+					"hasFeatureOfInterest": {
+						"@id":"http://id.eaufrance.fr/TronconHydrographique/E6390700",
+						"@type":"HY_Channel"
+					 },
+					"hasResult": [
+						{
+							"@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001",
+							"@type": "wml2:MeasurementTimeseries"
+						}
+				],
+                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+				"observedProperty": {
+					"@id": "http://id.eaufrance.fr/nsa/520#H",
+					"@type": "skos:Concept",
+					"name": "Water Height (uom = mm)"
+				},
+                "phenomenonTime": {	
+                    "hasBeginning": "2017-10-24T22:00:00.000Z",
+                    "hasEnd": "2017-10-25T22:00:00.000Z"
+                },
+                "resultTime": "2017-10-25T22:00:00.000Z",
+				"usedProcedure":  {
+					"@id": "http://id.eaufrance.fr/nsa/531#LIMNI",
+					"@type": "skos:Concept",
+					"name": "Limnimetric/Fluviometric Station"
+				}
+            }
+        ]
+    },
+	"hasSampleRelationship": [
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": {
+				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2",
+				"@type":"gwml2:GW_MonitoringSite",
+				"name":"PIEZOMETRE DE CARDONNETTE - 80" }
+        }
+    ]
+}

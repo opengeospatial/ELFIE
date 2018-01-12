@@ -1,0 +1,66 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+    ],
+    "@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+    "@type": "sosa:Sample",
+    "name": "forage privé (Bourberain-21)",
+    "hasGeometry": "POINT(47.5288404979028 5.32424152077325)",
+	"isSampleOf": {
+				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05", 
+				"@type": "gwml2:GW_HydrogeoUnit",
+                "name": "Calcaires jurassiques entre Ouche et Vingeanne"
+            },
+    "isFeatureOfInterestOf": {
+        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+        "@graph": [
+				{
+					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2",
+					"@type": "sosa:Observation",
+					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+					"hasResult": [
+						{
+							"@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2&responseFormat=application/json",
+							"@type": "wml2:MeasurementTimeseries"
+						}
+				],
+                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+				"observedProperty": {
+					"@id": "http://id.eaufrance.fr/par/1689.xml",
+					"@type": "skos:Concept",
+					"name": "Goundwater Level (in meter)"
+				},
+                "phenomenonTime": {
+                    "hasBeginning": "2016-01-05T11:00:00.000Z",
+                    "hasEnd": "2017-10-10T10:00:00.000Z"
+                },
+                "resultTime": "2017-10-10T10:00:00.000Z",
+				"usedProcedure":  {
+					"@id": "http://id.eaufrance.fr/met/403.xml",
+					"@type": "skos:Concept",
+					"name": "Electronic piezometric probe"
+				}
+            }
+        ]
+    },
+	"hasSampleRelationship": [
+		{	
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": {
+				"@id":"http://id.eaufrance.fr/StationHydro/U124404001",
+				"@type":"hyf:HY_HydrometricFeature",
+				"name":"La Tille à Champdôtre" }
+		},
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000070"
+        },{
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000029"
+        },{
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0600000233"
+        }
+    ]
+}
