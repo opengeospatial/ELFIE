@@ -7,6 +7,16 @@
 [https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601](https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601.json)  
   
 
+### files for feature type usgs-hucboundary-huc12obs  
+
+[https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601](https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601) [plain json](https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601.json)  
+  
+
+### files for feature type usgs-hydrometricnetwork-huc12obs  
+
+[https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601](https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601) [plain json](https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601.json)  
+  
+
 ### files for feature type usgs-nhdplusflowline-huc12obs  
 
 [https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601](https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601) [plain json](https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601.json)  
@@ -899,55 +909,5 @@
 ### files for feature type usgs-nwissite-floodcast  
 
 [https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600](https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600) [plain json](https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600.json)  
-  
-## Surface Water Ground Water Level Forecast use case files
-
-### files for feature type FlowModel  
-
-[https://opengeospatial.github.io/ELFIE/FlowModel/2695](https://opengeospatial.github.io/ELFIE/FlowModel/2695) [plain json](https://opengeospatial.github.io/ELFIE/FlowModel/2695.json)  
-### files for feature type HydroStation  
-
-[https://opengeospatial.github.io/ELFIE/HydroStation/U124404001](https://opengeospatial.github.io/ELFIE/HydroStation/U124404001) [plain json](https://opengeospatial.github.io/ELFIE/HydroStation/U124404001.json)  
-### files for feature type MeteoStation  
-
-[https://opengeospatial.github.io/ELFIE/MeteoStation/07280](https://opengeospatial.github.io/ELFIE/MeteoStation/07280) [plain json](https://opengeospatial.github.io/ELFIE/MeteoStation/07280.json)  
-### files for feature type Piezometer  
-
-[https://opengeospatial.github.io/ELFIE/Piezometer/04398X0002-SONDAG.2](https://opengeospatial.github.io/ELFIE/Piezometer/04398X0002-SONDAG.2) [plain json](https://opengeospatial.github.io/ELFIE/Piezometer/04398X0002-SONDAG.2.json)  
-  
-
-## Surface Water Ground Water Interaction use case files
-
-### files for feature type Borehole  
-
-[https://opengeospatial.github.io/ELFIE/Borehole/BSS000DXBD](https://opengeospatial.github.io/ELFIE/Borehole/BSS000DXBD) [plain json](https://opengeospatial.github.io/ELFIE/Borehole/BSS000DXBD.json)  
-### files for feature type GW-HydrogeoUnit  
-
-[https://opengeospatial.github.io/ELFIE/GW-HydrogeoUnit/121AT01](https://opengeospatial.github.io/ELFIE/GW-HydrogeoUnit/121AT01) [plain json](https://opengeospatial.github.io/ELFIE/GW-HydrogeoUnit/121AT01.json)  
-### files for feature type HY-WaterBody  
-
-[https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6--009-](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6--009-) [plain json](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6--009-.json)  
-### files for feature type HY-WaterBody  
-
-[https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6390710](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6390710) [plain json](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6390710.json)  
-### files for feature type HydroStation  
-
-[https://opengeospatial.github.io/ELFIE/HydroStation/E639703001](https://opengeospatial.github.io/ELFIE/HydroStation/E639703001) [plain json](https://opengeospatial.github.io/ELFIE/HydroStation/E639703001.json)  
-### files for feature type Piezometer  
-
-[https://opengeospatial.github.io/ELFIE/Piezometer/00463X0036-H1.2](https://opengeospatial.github.io/ELFIE/Piezometer/00463X0036-H1.2) [plain json](https://opengeospatial.github.io/ELFIE/Piezometer/00463X0036-H1.2.json)  
-  
-
-## Surface Water Ground Water Roundtrip use case files
-
-### files for feature type Aquifer  
-
-[https://opengeospatial.github.io/ELFIE/Aquifer/507AC00](https://opengeospatial.github.io/ELFIE/Aquifer/507AC00) [plain json](https://opengeospatial.github.io/ELFIE/Aquifer/507AC00.json)  
-### files for feature type Borehole  
-
-[https://opengeospatial.github.io/ELFIE/Borehole/BSS001REWW](https://opengeospatial.github.io/ELFIE/Borehole/BSS001REWW) [plain json](https://opengeospatial.github.io/ELFIE/Borehole/BSS001REWW.json)  
-### files for feature type Piezometer  
-
-[https://opengeospatial.github.io/ELFIE/Piezometer/06512X0037-STREMY.2](https://opengeospatial.github.io/ELFIE/Piezometer/06512X0037-STREMY.2) [plain json](https://opengeospatial.github.io/ELFIE/Piezometer/06512X0037-STREMY.2.json)  
   
 
