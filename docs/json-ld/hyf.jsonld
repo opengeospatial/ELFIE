@@ -37,8 +37,8 @@
             "@id": "hyf:realizedNexus",
             "@type": "@id"
         },
-        "networkstation": {
-            "@id": "hyf:networkstation",
+        "networkStation": {
+            "@id": "hyf:networkStation",
             "@type": "@id"
         },
         "HY_Channel": {
