@@ -172,6 +172,42 @@ build_elf_net <- function(tsv_data, id, include_missing = F) {
   
 }
 
+#' @title Parse ELFIE JSON-LD
+#' @param url url that will return json-ld data.
+#' @return parsed geosaptial content as sf and other json-ld elements
+#' 
+parse_elfie_json <- function(url) {
+  content <- rawToChar(httr::GET(url)$content)
+  jl <- jsonlite::fromJSON(content)
+  name <- jl$`@type`
+  if(!is.null(jl$geo) && !is.null(jl$geo$`@type`)) {
+    if(jl$geo$`@type` == "schema:GeoCoordinates") {
+      sfg <- sf::st_point(c(jl$geo$longitude, jl$geo$latitude))
+    } else if(jl$geo$`@type` == "schema:GeoShape") {
+      if(!is.null(jl$geo$polygon)) {
+        cData <- jl$geo$polygon$geometry$coordinates
+        if(!is.list(cData)) {
+          if(length(dim(cData)) == 4 && all(dim(cData)[1:2] == c(1,1))) {
+            pData <- cData[1,1,,]
+          } else if(length(dim(cData)) == 5 && all(dim(cData)[1:3] == c(1,1,1))) {
+            pData <- cData[1,1,1,,]
+          }
+          sfg <- sf::st_polygon(list(matrix(pData, ncol = 2, byrow = F)))
+        } else if(is.list(cData)) {
+          sfg <- sf::st_multipolygon(lapply(cData[[1]], function(x) sf::st_polygon(list(x))))
+        } else {
+          stop("found a multipolygon or multiple features, not supported")
+        }
+      } else if(!is.null(jl$geo$li)) {
+        sfg <- sf::st_multilinestring(lapply(jl$geo$line$geometry$coordinates[[1]], sf::st_linestring))
+      }
+    }
+    jl$geo <- sfg
+  }
+  return(jl)
+}
+
+
 hyf_mapper <- function(name, value) {
   out <- list()
   

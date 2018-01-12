@@ -44,6 +44,139 @@
     "sameAs": {
       "@id": "schema:sameAs",
       "@type": "@id"
+    },
+    "hyf": "http://opengeospatial/def/ontology/hyf",
+    "upstreamWaterBody": {
+      "@id": "hyf:upstreamWaterBody",
+      "@type": "@id"
+    },
+    "downstreamWaterBody": {
+      "@id": "hyf:downstreamWaterBody",
+      "@type": "@id"
+    },
+    "lowerCatchment": {
+      "@id": "hyf:lowerCatchment",
+      "@type": "@id"
+    },
+    "upperCatchment": {
+      "@id": "hyf:upperCatchment",
+      "@type": "@id"
+    },
+    "realizedCatchment": {
+      "@id": "hyf:realizedCatchment",
+      "@type": "@id"
+    },
+    "catchmentRealization": {
+      "@id": "hyf:catchmentRealization",
+      "@type": "@id"
+    },
+    "contributingCatchment": {
+      "@id": "hyf:contributingCatchment",
+      "@type": "@id"
+    },
+    "outflow": {
+      "@id": "hyf:outflow",
+      "@type": "@id"
+    },
+    "realizedNexus": {
+      "@id": "hyf:realizedNexus",
+      "@type": "@id"
+    },
+    "networkstation": {
+      "@id": "hyf:networkstation",
+      "@type": "@id"
+    },
+    "HY_Channel": {
+      "@id": "hyf:HY_Channel",
+      "@type": "@id"
+    },
+    "HY_HydrometricFeature": {
+      "@id": "hyf:HY_HydrometricFeature",
+      "@type": "@id"
+    },
+    "HY_WaterBody": {
+      "@id": "hyf:HY_WaterBody",
+      "@type": "@id"
+    },
+    "HY_Catchment": {
+      "@id": "hyf:HY_Catchment",
+      "@type": "@id"
+    },
+    "HY_HydroLocation": {
+      "@id": "hyf:HY_HydroLocation",
+      "@type": "@id"
+    },
+    "referencedPosition": {
+      "@id": "hyf:referencedPosition",
+      "@type": "@id"
+    },
+    "HY_IndirectPosition": {
+      "@id": "hyf:HY_IndirectPosition",
+      "@type": "@id"
+    },
+    "distanceExpression": {
+      "@id": "hyf:distanceExpression",
+      "@type": "@id"
+    },
+    "HY_DistanceFromReferent": {
+      "@id": "hyf:HY_DistanceFromReferent",
+      "@type": "@id"
+    },
+    "interpolative": {
+      "@id": "hyf:interpolative",
+      "@type": "@id"
+    },
+    "distanceDescription": {
+      "@id": "hyf:distanceDescription",
+      "@type": "@id"
+    },
+    "linearElement": {
+      "@id": "hyf:linearElement",
+      "@type": "@id"
+    },
+    "HY_HydroLocationType": {
+      "@id": "hyf:HY_HydroLocationType",
+      "@type": "@id"
+    },
+    "hydrometricNetwork": {
+      "@id": "hyf:hydrometricNetwork",
+      "@type": "@id"
+    },
+    "HY_HydrometricFeature.1": {
+      "@id": "hyf:HY_HydrometricFeature",
+      "@type": "@id"
+    },
+    "HY_DistanceDescription": {
+      "@id": "hyf:HY_DistanceDescription",
+      "@type": "@id"
+    },
+    "HY_Lake": {
+      "@id": "hyf:HY_Lake",
+      "@type": "@id"
+    },
+    "HY_River": {
+      "@id": "hyf:HY_River",
+      "@type": "@id"
+    },
+    "HY_Impoundment": {
+      "@id": "hyf:HY_Impoundment",
+      "@type": "@id"
+    },
+    "HY_HydrographicNetwork": {
+      "@id": "hyf:HY_HydrographicNetwork",
+      "@type": "@id"
+    },
+    "HY_CatchmentDivide": {
+      "@id": "hyf:HY_CatchmentDivide",
+      "@type": "@id"
+    },
+    "HY_HydroNexus": {
+      "@id": "hyf:HY_HydroNexus",
+      "@type": "@id"
+    },
+    "nexusRealization": {
+      "@id": "hyf:nexusRealization",
+      "@type": "@id"
     }
   }
 }
@@ -53,11 +186,12 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001223",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "DIEDRICH POND - DIEDRICH POND",
-  "sameAs": "https://www.waterqualitydata.us/provider/STORET/Wisconsin Department of Natural Resources/WIDNR_WQX-10001223",
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/WIDNR_WQX/WIDNR_WQX-10001223",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 43.2,

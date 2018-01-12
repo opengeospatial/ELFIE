@@ -1,9 +1,8 @@
-# relative to ELFIE project root.
-setwd("data/huc12_obs")
+setwd("~/Documents/Projects/ELFIE/ELFIE/data/huc12obs/")
 
 library(jsonlite)
 
-wqp <- fromJSON("usgs_wqp_070900020601.json")
+wqp <- fromJSON("usgs_wqp_huc12obs.json")
 wqp_ids <- wqp$features$properties$identifier
 
 # library(dataRetrieval)
@@ -13,9 +12,9 @@ wqp_ids <- wqp$features$properties$identifier
 # }
 # saveRDS(sites, "usgs_wqp_070900020601.rds")
 
-sites <- readRDS("usgs_wqp_070900020601.rds")
+sites <- readRDS("usgs_wqp_huc12obs.rds")
 
-preds <- c("jsonkey_identifier",	"rdfs:type",	"rdfs:label",	"rdfs:comment",	"owl:versionInfo",	"dcterms:creator",	"owl:sameAs",	"dcterms:license",	"foaf:img")
+preds <- c("jsonkey_identifier", "rdfs:type", "schema:name", "schema:sameAs", "schema:sameAs", "hyf:hydrometricNetwork")
 
 wqp_site_info <- data.frame(matrix(nrow = length(sites), ncol = length(preds)))
 
@@ -24,14 +23,14 @@ rownames(wqp_site_info) <- names(sites)
 
 for(site in names(sites)) {
   wqp_site_info[site,"jsonkey_identifier"] <- sites[site][[1]]$MonitoringLocationIdentifier
-  wqp_site_info[site, "rdfs:type"] <- "https://waterqualitydata.us/def/site" # made this up.
-  wqp_site_info[site, "rdfs:label"] <- sites[site][[1]]$MonitoringLocationName
-  #wqp_site_info[site, "rdfs:comment"] <- sites[site][[1]]
-  wqp_site_info[site, "dcterms:creator"] <- paste0("https://www.waterqualitydata.us/provider/STORET/", sites[site][[1]]$OrganizationFormalName)
-  wqp_site_info[site, "owl:sameAs"] <- paste0("https://www.waterqualitydata.us/provider/STORET/", 
-                                              sites[site][[1]]$OrganizationFormalName, "/",
+  wqp_site_info[site, "rdfs:type"] <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
+  wqp_site_info[site, "schema:name"] <- sites[site][[1]]$MonitoringLocationName
+  wqp_site_info[site, "schema:sameAs"] <- paste0("https://www.waterqualitydata.us/provider/STORET/", 
+                                              sites[site][[1]]$OrganizationIdentifier, "/",
                                               sites[site][[1]]$MonitoringLocationIdentifier)
+  wqp_site_info[site, "hyf:hydrometricNetwork"] <- "elfie/usgs/hydrometricnetwork/huc12obs/070900020601" 
 }
   
-write.table(wqp_site_info, file = "usgs_wqp_070900020601.tsv", sep = "\t", row.names = F)  
+write.table(wqp_site_info, file = "usgs_wqp_huc12obs.tsv", sep = "\t", row.names = F)  
   
+network_link_list <- paste0("elfie/usgs/wqp/huc12obs/", names(sites), collapse = "_|_")

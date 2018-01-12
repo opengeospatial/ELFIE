@@ -1,9 +1,10 @@
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431250089282901",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "DANE COUNTY MRBI WATERWAY NUMBER 1 NR WAUNAKEE, WI",
-  "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS Wisconsin Water Science Center/USGS-431250089282901",
+  "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS-WI/USGS-431250089282901",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 43.2139,
