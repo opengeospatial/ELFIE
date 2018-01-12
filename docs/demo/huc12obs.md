@@ -1,5 +1,9 @@
 # HUC12 Observations Index Demo
 
+This use case is meant to demonstrate the use of HY\_Features to link a catchment to the data representing it as well as
+the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of
+linked watershed information use cases.
+
 The data index for the huc12obs demo can be seen in [github here.](https://github.com/opengeospatial/ELFIE/tree/master/data/huc12obs)
 
 The primary entry point to the data is the non-spatial catchment that can be seen in 
