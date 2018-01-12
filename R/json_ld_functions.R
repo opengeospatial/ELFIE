@@ -1,3 +1,10 @@
+## Constants
+out_md <- "../docs/file_index.md"
+
+out_path_base <- "../docs"
+
+elf_url_base <- "https://opengeospatial.github.io/ELFIE"
+
 #' @title build elfie index
 #' @param tsv_data one row data.frame with predicates to be added to an R list
 #' @param id_base character giving feature type a unique id in @id url like:
@@ -339,4 +346,34 @@ grab_context <- function(conx, cached) {
   context <- jsonlite::fromJSON(conx)
   saveRDS(context, file.path(cached))
   return(context)
+}
+
+get_context_out <- function(json_ld) {
+  context_out <- list()
+  
+  for(conx in json_ld$`@context`) {
+    try({
+      context <- resolve_context(conx)
+      if(length(context)>1) {
+        context <- do.call(c, context)
+        names(context) <- stringr::str_replace(names(context), "@context.", "")
+        context <- list(`@context` = context)
+      }
+      context_out <- c(context_out, context$`@context`)
+    }, silent = F)
+  }
+  
+  context_out <- list(`@context` = context_out)
+}
+
+write_use_case_name <- function(out_md, use_case) {
+  write(paste("##", use_case$name, "use case files\n"), out_md, append = T)
+}
+
+write_feature_type_title <- function(out_md, feature_type) {
+  write(paste("### files for feature type", stringr::str_replace_all(feature_type, "_", "-"), " \n"), out_md, append = T)
+}
+
+write_url_line <- function(out_md, main_url) {
+  write(paste0("[", main_url, "](", main_url, ") [plain json](", main_url, ".json)  "), out_md, append = T)
 }

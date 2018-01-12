@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--Adapted/Stolen from: https://github.com/scienceai/jsonld-markup Thanks!!!-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://opengeospatial.github.io/ELFIE/css/jsonld-markup.css">
+    <style>
+    body { padding: 1em; }
+    .logo { margin-bottom: 3px; }
+    .code.column { background-color: rgb(51,51,51); color: white }
+    </style>
+    <title>Borehole/BSS001REWW</title>
+  </head>
+  <body>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Environmental Linked Features Interoperability Experiment Demonstration
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <div class="ui two column doubling stackable grid">
+      <div class="five wide code column">
+    <h3 class="ui inverted header">Expanded Context</h3>
+    <pre><code id="context">
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "description": "schema:description",
+    "geo": "schema:geo",
+    "image": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "sameAs": {
+      "@id": "schema:sameAs",
+      "@type": "@id"
+    },
+    "rdfs": "https://www.w3.org/TR/rdf-schema/",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql",
+    "sampling": "http://www.w3.org/ns/sosa/sampling/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": {
+      "@id": "sosa:isSampleOf",
+      "@type": "@id"
+    },
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": {
+      "@id": "sampling:natureOfRelationship",
+      "@type": "@id"
+    },
+    "relatedSample": {
+      "@id": "sampling:relatedSample",
+      "@type": "@id"
+    }
+  }
+}
+    </code></pre>
+      </div>
+      <div class="eleven wide code column">
+    <h3 class="ui inverted header">JSON-LD Document</h3>
+    <pre><code id="code">
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"],
+  "@id": "http://ressource.brgm-rec.fr/data/BoreholeView/BSS001REWW",
+  "@type": "sosa:Sample",
+  "name": "Forage BSS001REWW",
+  "hasGeometry": "POINT(46.1909541655103 5.18713262971692)",
+  "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
+  "isFeatureOfInterestOf": {
+    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+    "@graph": [
+      {
+        "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+        "@type": "sosa:Observation",
+        "hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS001REWW",
+        "hasResult": [
+          {
+            "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+            "@type": "gwml2:GW_GeologyLog"
+          }
+        ],
+        "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+        "observedProperty": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+        "phenomenonTime": {
+          "hasBeginning": "1974-11-30T00:00:00.000Z",
+          "hasEnd": "1974-11-30T00:00:00.000ZcouldBeInstant"
+        },
+        "resultTime": "1974-11-30T00:00:00.000Z",
+        "usedProcedure": {
+          "@id": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog",
+          "@type": "skos:Concept",
+          "name": "Driller log"
+        }
+      }
+    ]
+  },
+  "image": "http://servicesgdm.brgm.fr/LogGDM/RGFLogServlet?HoleName=06512X0037",
+  "hasSampleRelationship": [
+    {
+      "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
+      "relatedSample": "http://ressource.brgm-rec.fr/data/LinkToSomeDrillCoreDatabaseHere"
+    },
+    {
+      "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+      "relatedSample": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2"
+    }
+  ]
+}
+    </code></pre>
+      </div>
+    </div>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Code for this pretty JSON-LD view derived from 
+          <a href="https://github.com/scienceai/jsonld-markup" target="_blank">
+            https://github.com/scienceai/jsonld-markup
+          </a>. 
+          Thanks <a href="https://science.ai/">science.ai</a>!
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://opengeospatial.github.io/ELFIE/js/pretty_jsonld.js"></script>
+    <script type="text/javascript">
+     var $context = document.getElementById('context');
+     var $code = document.getElementById('code');
+     var ctx = JSON.parse($context.textContent.trim());
+     var data = JSON.parse($code.textContent.trim());
+     $context.innerHTML = jsonldMarkup(ctx);
+     $code.innerHTML = jsonldMarkup(data, ctx['@context']);
+    </script>
+  </body>
+</html>
