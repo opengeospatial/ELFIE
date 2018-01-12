@@ -14,7 +14,7 @@ wqp_ids <- wqp$features$properties$identifier
 
 sites <- readRDS("usgs_wqp_huc12obs.rds")
 
-preds <- c("jsonkey_identifier", "rdfs:type", "schema:name", "schema:sameAs", "schema:sameAs", "hyf:hydrometricNetwork")
+preds <- c("jsonkey_identifier", "rdfs:type", "schema:name", "schema:sameAs", "hyf:hydrometricNetwork")
 
 wqp_site_info <- data.frame(matrix(nrow = length(sites), ncol = length(preds)))
 
