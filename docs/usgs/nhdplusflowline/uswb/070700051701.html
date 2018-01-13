@@ -177,7 +177,33 @@
     "nexusRealization": {
       "@id": "hyf:nexusRealization",
       "@type": "@id"
-    }
+    },
+    "geojson": "https://purl.org/geojson/vocab#",
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
+    "geometry": "geojson:geometry",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "type": "@type"
   }
 }
     </code></pre>
@@ -186,7 +212,7 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070700051701",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",
   "name": "Hydro Network of Indian Creek-Wisconsin River",
@@ -195,12 +221,10 @@
   "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=05407000",
   "geo": {
     "@type": "schema:GeoShape",
-    "line": {
-      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
-      "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070700051701",
+    "schema:line": {
+      "@type": "Feature",
       "geometry": {
-        "type": "MultiLineString",
+        "@type": "MultiLineString",
         "coordinates": [
           [
             [

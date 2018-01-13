@@ -1,5 +1,36 @@
 # Environmental Linked Features Interoperability Experiment Demo File Index
 
+## US Water Budgets use case files
+
+### files for feature type usgs-huc12-uswb  
+
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070200121110](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070200121110) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070200121110.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070700051701](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070700051701) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070700051701.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/031601130201](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/031601130201) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/031601130201.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/160201020603](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/160201020603) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/160201020603.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102600080802](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102600080802) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102600080802.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180201041203](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180201041203) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180201041203.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170601080803](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170601080803) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170601080803.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/101102050210](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/101102050210) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/101102050210.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/120302030102.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/130201011304](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/130201011304) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/130201011304.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051202021001](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051202021001) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051202021001.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/140100051906](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/140100051906) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/140100051906.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180400012103](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180400012103) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180400012103.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/010300032404](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/010300032404) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/010300032404.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102200031006](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102200031006) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102200031006.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/071000091206](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/071000091206) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/071000091206.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030701060405](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030701060405) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030701060405.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030300050405](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030300050405) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030300050405.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/110100040606](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/110100040606) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/110100040606.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100800071208](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100800071208) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100800071208.json)  
+[https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150100120904](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150100120904) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150100120904.json)  
 ## Observations for a Hydrologic Unit use case files
 
 ### files for feature type usgs-huc-huc12obs  
@@ -909,56 +940,5 @@
 ### files for feature type usgs-nwissite-floodcast  
 
 [https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600](https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600) [plain json](https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600.json)  
-  
-
-## Surface Water Ground Water Level Forecast use case files
-
-### files for feature type FlowModel  
-
-[https://opengeospatial.github.io/ELFIE/FlowModel/2695](https://opengeospatial.github.io/ELFIE/FlowModel/2695) [plain json](https://opengeospatial.github.io/ELFIE/FlowModel/2695.json)  
-### files for feature type HydroStation  
-
-[https://opengeospatial.github.io/ELFIE/HydroStation/U124404001](https://opengeospatial.github.io/ELFIE/HydroStation/U124404001) [plain json](https://opengeospatial.github.io/ELFIE/HydroStation/U124404001.json)  
-### files for feature type MeteoStation  
-
-[https://opengeospatial.github.io/ELFIE/MeteoStation/07280](https://opengeospatial.github.io/ELFIE/MeteoStation/07280) [plain json](https://opengeospatial.github.io/ELFIE/MeteoStation/07280.json)  
-### files for feature type Piezometer  
-
-[https://opengeospatial.github.io/ELFIE/Piezometer/04398X0002-SONDAG.2](https://opengeospatial.github.io/ELFIE/Piezometer/04398X0002-SONDAG.2) [plain json](https://opengeospatial.github.io/ELFIE/Piezometer/04398X0002-SONDAG.2.json)  
-  
-
-## Surface Water Ground Water Interaction use case files
-
-### files for feature type Borehole  
-
-[https://opengeospatial.github.io/ELFIE/Borehole/BSS000DXBD](https://opengeospatial.github.io/ELFIE/Borehole/BSS000DXBD) [plain json](https://opengeospatial.github.io/ELFIE/Borehole/BSS000DXBD.json)  
-### files for feature type GW-HydrogeoUnit  
-
-[https://opengeospatial.github.io/ELFIE/GW-HydrogeoUnit/121AT01](https://opengeospatial.github.io/ELFIE/GW-HydrogeoUnit/121AT01) [plain json](https://opengeospatial.github.io/ELFIE/GW-HydrogeoUnit/121AT01.json)  
-### files for feature type HY-WaterBody  
-
-[https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6--009-](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6--009-) [plain json](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6--009-.json)  
-### files for feature type HY-WaterBody  
-
-[https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6390710](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6390710) [plain json](https://opengeospatial.github.io/ELFIE/HY-WaterBody/E6390710.json)  
-### files for feature type HydroStation  
-
-[https://opengeospatial.github.io/ELFIE/HydroStation/E639703001](https://opengeospatial.github.io/ELFIE/HydroStation/E639703001) [plain json](https://opengeospatial.github.io/ELFIE/HydroStation/E639703001.json)  
-### files for feature type Piezometer  
-
-[https://opengeospatial.github.io/ELFIE/Piezometer/00463X0036-H1.2](https://opengeospatial.github.io/ELFIE/Piezometer/00463X0036-H1.2) [plain json](https://opengeospatial.github.io/ELFIE/Piezometer/00463X0036-H1.2.json)  
-  
-
-## Surface Water Ground Water Roundtrip use case files
-
-### files for feature type Aquifer  
-
-[https://opengeospatial.github.io/ELFIE/Aquifer/507AC00](https://opengeospatial.github.io/ELFIE/Aquifer/507AC00) [plain json](https://opengeospatial.github.io/ELFIE/Aquifer/507AC00.json)  
-### files for feature type Borehole  
-
-[https://opengeospatial.github.io/ELFIE/Borehole/BSS001REWW](https://opengeospatial.github.io/ELFIE/Borehole/BSS001REWW) [plain json](https://opengeospatial.github.io/ELFIE/Borehole/BSS001REWW.json)  
-### files for feature type Piezometer  
-
-[https://opengeospatial.github.io/ELFIE/Piezometer/06512X0037-STREMY.2](https://opengeospatial.github.io/ELFIE/Piezometer/06512X0037-STREMY.2) [plain json](https://opengeospatial.github.io/ELFIE/Piezometer/06512X0037-STREMY.2.json)  
   
 

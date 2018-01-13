@@ -1,5 +1,5 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodEvent",
   "name": "TX_Harvey2017_1",
@@ -8,12 +8,10 @@
   "catchmentRealization": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_USGS_HUC10",
   "geo": {
     "@type": "schema:GeoShape",
-    "polygon": {
-      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
-      "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
+    "schema:polygon": {
+      "@type": "Feature",
       "geometry": {
-        "type": "Polygon",
+        "@type": "Polygon",
         "coordinates": [
           [
             [

@@ -1,17 +1,15 @@
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/watersheds/cr/04150405",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Lamoille River",
   "description": "Great Lakes Region Northeastern Lake Ontario-Lake Ontario-St. Lawrence Lake Champlain-Richelieu River",
   "geo": {
     "@type": "schema:GeoShape",
-    "polygon": {
-      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
-      "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/nrcan/watersheds/cr/04150405",
+    "schema:polygon": {
+      "@type": "Feature",
       "geometry": {
-        "type": "MultiPolygon",
+        "@type": "MultiPolygon",
         "coordinates": [
           [
             [

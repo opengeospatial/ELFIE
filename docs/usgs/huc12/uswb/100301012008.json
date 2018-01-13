@@ -1,5 +1,5 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Log Gulch-Missouri River",

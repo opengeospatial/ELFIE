@@ -1,5 +1,5 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Waunakee Marsh-Sixmile Creek Boundary",
@@ -7,12 +7,10 @@
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc/uswb/070900020601",
   "geo": {
     "@type": "schema:GeoShape",
-    "polygon": {
-      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
-      "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601",
+    "schema:polygon": {
+      "@type": "Feature",
       "geometry": {
-        "type": "MultiPolygon",
+        "@type": "MultiPolygon",
         "coordinates": [
           [
             [
