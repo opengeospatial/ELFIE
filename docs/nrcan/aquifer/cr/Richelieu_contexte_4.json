@@ -1,5 +1,5 @@
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_4",
   "@type": "gwml2:GW_HydrogeoUnit",
   "name": "Richelieu_contexte_4",
@@ -7,12 +7,10 @@
   "sameAs": "need a sameas url for each aquifer?",
   "geo": {
     "@type": "schema:GeoShape",
-    "polygon": {
-      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
-      "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_4",
+    "schema:polygon": {
+      "@type": "Feature",
       "geometry": {
-        "type": "MultiPolygon",
+        "@type": "MultiPolygon",
         "coordinates": [
           [
             [

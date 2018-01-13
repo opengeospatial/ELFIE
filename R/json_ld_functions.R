@@ -33,28 +33,26 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
 
 #' @title build schema.org geo
 #' @param geojson_geometry geojson data for one feature with coordinates and type fields.
-#' @param id character the id of the feature in question like:
+#' @param add_context boolean if False, no context will be in the returned document.
 #' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
-build_schema_geo <- function(geojson_geometry, id = NULL) {
+build_schema_geo <- function(geojson_geometry, add_context) {
   if(geojson_geometry$type == "Point") {
     return(list("@type" = "schema:GeoCoordinates",
                 "latitude" = geojson_geometry$coordinates[[1]][2],
                 "longitude" = geojson_geometry$coordinates[[1]][1]))
   } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
     
-    if(grepl("Polygon", geojson_geometry$type)) geo_name = "polygon"
-    if(grepl("Line", geojson_geometry$type)) geo_name = "line"
-    
-    if(is.null(id)) stop("must specify an id for geojson")
-    
+    if(grepl("Polygon", geojson_geometry$type)) geo_name = "schema:polygon"
+    if(grepl("Line", geojson_geometry$type)) geo_name = "schema:line"
+
     out <- list("@type" = "schema:GeoShape")
-    out[[geo_name]] <- list("@context" = "http://geojson.org/geojson-ld/geojson-context.jsonld",
-                                "type" = "Feature",
-                                "id" = id,
-                                "geometry" = list("type" = geojson_geometry$type,
-                                                  "coordinates" = geojson_geometry$coordinates))
+    if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    
+    out[[geo_name]] <- list("@type" = "Feature",
+                            "geometry" = list("@type" = geojson_geometry$type,
+                                              "coordinates" = geojson_geometry$coordinates))
     
     return(out)
     

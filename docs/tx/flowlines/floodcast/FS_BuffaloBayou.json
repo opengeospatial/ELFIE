@@ -1,5 +1,5 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Flowpath",
   "name": "Buffalo Bayou at State Hwy 6 nr Addicks, TX",
@@ -7,12 +7,10 @@
   "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403",
   "geo": {
     "@type": "schema:GeoShape",
-    "line": {
-      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
-      "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou",
+    "schema:line": {
+      "@type": "Feature",
       "geometry": {
-        "type": "MultiLineString",
+        "@type": "MultiLineString",
         "coordinates": [
           [
             [

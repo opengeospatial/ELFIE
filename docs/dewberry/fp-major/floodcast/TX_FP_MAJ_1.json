@@ -1,5 +1,5 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodExtent",
   "name": "Major_Floodplain",
@@ -11,12 +11,10 @@
   "intersects": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
   "geo": {
     "@type": "schema:GeoShape",
-    "polygon": {
-      "@context": "http://geojson.org/geojson-ld/geojson-context.jsonld",
-      "type": "Feature",
-      "id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
+    "schema:polygon": {
+      "@type": "Feature",
       "geometry": {
-        "type": "MultiPolygon",
+        "@type": "MultiPolygon",
         "coordinates": [
           [
             [

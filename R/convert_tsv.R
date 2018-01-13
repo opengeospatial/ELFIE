@@ -76,7 +76,10 @@ for(use_case in use_cases) {
       }
       
       if(exists("geojson")) elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], 
-                                                                   id = elf_index_list$`@id`)
+                                                                   add_context = F)
+      
+      elf_index_list$`@context` <- c(elf_index_list$`@context`, 
+                                     "http://geojson.org/geojson-ld/geojson-context.jsonld")
       
       jsonlite::write_json(elf_index_list, 
                            file.path(out_path, paste0(tsv_data[i,][1], ".json")),
