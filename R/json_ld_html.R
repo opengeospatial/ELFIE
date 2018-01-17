@@ -22,38 +22,34 @@ for(use_case in use_cases) {
   for(data_file in data_files) {
     print(data_file)
     
-    full_path <- file.path(data_path, data_file)
-    
     id_parts <- stringr::str_split(stringr::str_replace(data_file, ".json", ""), "_")[[1]]
     
-    feature_type <- id_parts[1]
+    write_feature_type_title(out_md, id_parts[1])
     
-    write_feature_type_title(out_md, feature_type)
+    id_base <- paste("FR", id_parts[1], use_case$id, sep = "/")
+      
+    out_path <- file.path(out_path_base, id_base)
     
-    id <- paste(id_parts, collapse = "/")
-    
-    out_path <- file.path(out_path_base, "FR", feature_type, use_case$id)
+    id <- paste(id_base, id_parts[2], sep = "/")
     
     if(!dir.exists(out_path)) dir.create(out_path, recursive = T)
-    
-    out_file <- file.path(out_path, paste0(id_parts[2], ".json"))
       
-    file.copy(full_path, out_file)
+    file.copy(file.path(data_path, data_file), file.path(out_path, paste0(id_parts[2], ".json")))
     
-    json_data <- jsonlite::fromJSON(out_file)
+    json_data <- jsonlite::fromJSON(file.path(data_path, data_file))
     
-    context_out <- get_context_out(json_data)
-    
-    context_out <- jsonlite::toJSON(context_out, pretty = T, auto_unbox = T)
+    context_out <- jsonlite::toJSON(get_context_out(json_data), pretty = T, auto_unbox = T)
     
     json_out <- jsonlite::toJSON(json_data, pretty = T, auto_unbox = T)
     
-    whisker_list <- list(context = context_out, `json-ld` = json_out, page_title = id)
+    whisker_list <- list(context = context_out, 
+                         `json-ld` = json_out, 
+                         page_title = id)
     
     writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
-               file.path(stringr::str_replace(out_file, ".json", ".html")))
+               file.path(out_path, paste0(id_parts[2], ".html"))))
     
-    write_url_line(out_md, paste(elf_url_base, feature_type, id_parts[2], sep = "/"))
+    write_url_line(out_md, paste(elf_url_base, id, sep = "/"))
   }
   write("  \n", out_md, append = T)
 }
