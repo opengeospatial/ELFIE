@@ -1,7 +1,7 @@
 {
   "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_9",
-  "@type": "https://opengeospatial.github.io/https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
+  "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "1130897_LOCAL STREETS",
   "description": "This is route ID 1130897 with No Apparent Threat status",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_ACTION_TX_RDS&styles=&bbox=-1.06283664329E7,3472306.523599997,-1.0626203496E7,3474471.4833000004&width=767&height=768&srs=EPSG:3857&format=image%2Fjpeg",

@@ -344,7 +344,7 @@ remove_missing <- function(x) {
 }
 
 elfie_sub <- function(x) {
-  gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x, ignore.case = T)
+  gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x)
 }
 
 check_outlist <- function(outlist) {
