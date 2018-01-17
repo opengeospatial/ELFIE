@@ -47,7 +47,7 @@ for(use_case in use_cases) {
                          page_title = id)
     
     writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
-               file.path(out_path, paste0(id_parts[2], ".html"))))
+               file.path(out_path, paste0(id_parts[2], ".html")))
     
     write_url_line(out_md, paste(elf_url_base, id, sep = "/"))
   }
