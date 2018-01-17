@@ -6,23 +6,22 @@
   "description": "This is route ID 1128902 with Monitor status",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_MODERATE_TX_RDS&styles=&bbox=-1.06283664329E7,3472306.523599997,-1.0626203496E7,3474471.4833000004&width=767&height=768&srs=EPSG:3857&format=image%2Fjpeg",
   "geo": {
-    "@type": "schema:GeoShape",
-    "schema:line": {
-      "@type": "Feature",
-      "geometry": {
-        "@type": "LineString",
-        "coordinates": [
-          [
-            [-95.4633, 29.7614],
-            [-95.4623, 29.7615],
-            [-95.4621, 29.7616],
-            [-95.4618, 29.7617],
-            [-95.4618, 29.7619],
-            [-95.4617, 29.762],
-            [-95.4611, 29.7624]
-          ]
-        ]
-      }
-    }
+    "@type": "schema:GeoCoordinates",
+    "latitude": 29.7618,
+    "longitude": -95.462
+  },
+  "geometry": {
+    "@type": "LineString",
+    "coordinates": [
+      [
+        [-95.4633, 29.7614],
+        [-95.4623, 29.7615],
+        [-95.4621, 29.7616],
+        [-95.4618, 29.7617],
+        [-95.4618, 29.7619],
+        [-95.4617, 29.762],
+        [-95.4611, 29.7624]
+      ]
+    ]
   }
 }
