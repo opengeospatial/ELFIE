@@ -349,8 +349,10 @@ elfie_sub <- function(x) {
 
 check_outlist <- function(outlist) {
   dups <- grepl("_\\|_", outlist)
-  if(any(dups)) {
-    outlist[[which(dups)]] <- strsplit(outlist[dups][[1]], split = "_\\|_")
+  for(i in 1:length(outlist)) {
+    if(dups[i]) {
+      outlist[[i]] <- strsplit(outlist[i][[1]], split = "_\\|_")
+    }
   }
   outlist
 }

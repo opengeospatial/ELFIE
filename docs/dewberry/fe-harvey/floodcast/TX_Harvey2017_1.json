@@ -7,16 +7,11 @@
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:EVENTS_SD_MERCATOR&styles=&bbox=-1.306738919646893E7,3837704.76745842,-1.2907989988042E7,3952106.39032544&width=768&height=551&srs=EPSG:3857&format=image%2Fjpeg",
   "catchmentRealization": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_USGS_HUC10",
   "FloodExtent": [
-    "https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1_|_https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1_|_https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1",
-    {},
-    {},
-    {},
-    {},
-    [
-      ["https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1", "https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1", "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1"]
-    ]
+    ["https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1", "https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1", "https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1"]
   ],
-  "TransportationAssets": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_10_|_https://opengeospatial.github.io/ELFIE/tx/roads-moderate/floodcast/TX_MOD_10_|_https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_10",
+  "TransportationAssets": [
+    ["https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_10", "https://opengeospatial.github.io/ELFIE/tx/roads-moderate/floodcast/TX_MOD_10", "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_10"]
+  ],
   "geo": {
     "@type": "schema:GeoShape",
     "schema:polygon": {
