@@ -399,6 +399,21 @@ get_context_out <- function(json_ld) {
         names(context) <- stringr::str_replace(names(context), "@context.", "")
         context <- list(`@context` = context)
       }
+      
+      name_check <- names(context$`@context`) %in% names(context_out)
+      if(any(name_check)) {
+        reverse_name_check <- names(context_out) %in% names(context$`@context`)
+        if(context$`@context`[which(name_check)][[1]] == context_out[which(reverse_name_check)][[1]]) {
+          warning(paste("Found context name conflict.", 
+                        names(context$`@context`[which(name_check)]),
+                        context$`@context`[which(name_check)][[1]],
+                        names(context_out[which(reverse_name_check)]),
+                        context_out[which(reverse_name_check)],
+                        "Removing the first."))
+        }
+        context$`@context`[name_check] <- NULL
+      }
+      
       context_out <- c(context_out, context$`@context`)
     }, silent = F)
   }
