@@ -3,36 +3,39 @@
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
-  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="nrcan_hydat_cr20171125080223220" name="nrcan_hydat_cr OGRGeoJSON Point">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="nrcan_hydat_cr20171125080223220" name="nrcan_hydat_cr OGRGeoJSON Point">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="us_can_nwissite20170828125840448" name="cr_nwissite">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="us_can_nwissite20170828125840448" name="cr_nwissite">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="us_can_wqp20170828130522094" name="cr_wqp">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="us_can_wqp20170828130522094" name="cr_wqp">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_nhdplusflowline_cr20171125080725519" name="usgs_nhdplusflowline_cr OGRGeoJSON MultiLineString">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="usgs_nhdplusflowline_cr20171125080725519" name="usgs_nhdplusflowline_cr OGRGeoJSON MultiLineString">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="nrcan_watersheds_cr20171125080223242" name="nrcan_watersheds_cr OGRGeoJSON MultiPolygon">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="nrcan_watersheds_cr20171125080223242" name="nrcan_watersheds_cr OGRGeoJSON MultiPolygon">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="us_can_WBDHU820170828122154681" name="cr_WBDHU8">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="us_can_WBDHU820170828122154681" name="cr_WBDHU8">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="nrcan_aquifer_cr20171125080223151" name="nrcan_aquifer_cr OGRGeoJSON MultiPolygon">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="nrcan_well_cr20171125080223702" name="nrcan_well_cr OGRGeoJSON Point">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="usgs_aquifer_cr_json20180116095744816" name="usgs_aquifer_cr.json OGRGeoJSON Polygon">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="nrcan_mon_well_cr20171125080223231" name="nrcan_mon-well_cr OGRGeoJSON Point">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="nrcan_well_cr20171125080223702" name="nrcan_well_cr OGRGeoJSON Point">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="OpenLayers_plugin_layer20170828120102394" name="Google Physical">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="nrcan_mon_well_cr20171125080223231" name="nrcan_mon-well_cr OGRGeoJSON Point">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="OpenLayers_plugin_layer20170828120102394" name="Google Physical">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -40,10 +43,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-8067859.87063974514603615</xmin>
-      <ymin>5339625.59924953803420067</ymin>
-      <xmax>-7799396.07150004245340824</xmax>
-      <ymax>5800957.20993826910853386</ymax>
+      <xmin>-8284386.79903953522443771</xmin>
+      <ymin>5513296.53069195710122585</ymin>
+      <xmax>-7966825.06081940978765488</xmax>
+      <ymax>5743962.33819535933434963</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -61,22 +64,24 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20170830143135901"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_canadwscssda20170828122004997"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_nhdplusflowline_cr20171125080725519"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_WBDHU820170828122154681"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_nwissite20170828125840448"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4269" srcDatumTransform="-1" destDatumTransform="-1" layerid="WBDHU820170828120403836"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_WBDHU820170828122154681"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_hydat_cr20171125080223220"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_nhdplusv2_flowline20170828125442205"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4269" srcDatumTransform="-1" destDatumTransform="-1" layerid="canadwscssda_p20170828114509943"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_nhdplusflowline_cr20170830145444903"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenLayers_plugin_layer20170828120102394"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_nwissite20170828125840448"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_nhdplusflowline_cr20171125080725519"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_wqp20170828130522094"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_watersheds_cr20171125080223242"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_aquifer_cr20171125080223151"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4269" srcDatumTransform="-1" destDatumTransform="-1" layerid="canadwscssda_p20170828114509943"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_hydat_cr20171125080223220"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_mon_well_cr20171125080223231"/>
-      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_nhdplusv2_flowline20170828125442205"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_well_cr20171125080223702"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_watersheds_cr20171125080223242"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="us_can_canadwscssda20170828122004997"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="aquifrp02520180116095115252"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_mon_well_cr20171125080223231"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20170830143135901"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="nrcan_aquifer_cr20171125080223151"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="usgs_aquifer_cr_json20180116095744816"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
@@ -91,37 +96,38 @@
       <item>nrcan_watersheds_cr20171125080223242</item>
       <item>nrcan_well_cr20171125080223702</item>
       <item>usgs_nhdplusflowline_cr20171125080725519</item>
+      <item>usgs_aquifer_cr_json20180116095744816</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="nrcan_hydat_cr OGRGeoJSON Point" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="nrcan_hydat_cr OGRGeoJSON Point" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="nrcan_hydat_cr20171125080223220" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="nrcan_hydat_cr20171125080223220" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="cr_nwissite" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="cr_nwissite" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="us_can_nwissite20170828125840448" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="us_can_nwissite20170828125840448" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="cr_wqp" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="cr_wqp" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="us_can_wqp20170828130522094" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="us_can_wqp20170828130522094" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_nhdplusflowline_cr OGRGeoJSON MultiLineString" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="usgs_nhdplusflowline_cr OGRGeoJSON MultiLineString" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="usgs_nhdplusflowline_cr20171125080725519" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="usgs_nhdplusflowline_cr20171125080725519" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="nrcan_watersheds_cr OGRGeoJSON MultiPolygon" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="nrcan_watersheds_cr OGRGeoJSON MultiPolygon" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="nrcan_watersheds_cr20171125080223242" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="nrcan_watersheds_cr20171125080223242" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="cr_WBDHU8" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="cr_WBDHU8" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="us_can_WBDHU820170828122154681" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="us_can_WBDHU820170828122154681" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="nrcan_aquifer_cr OGRGeoJSON MultiPolygon" showFeatureCount="0">
@@ -129,19 +135,24 @@
         <legendlayerfile isInOverview="0" layerid="nrcan_aquifer_cr20171125080223151" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="nrcan_well_cr OGRGeoJSON Point" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="usgs_aquifer_cr.json OGRGeoJSON Polygon" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="nrcan_well_cr20171125080223702" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="usgs_aquifer_cr_json20180116095744816" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="nrcan_mon-well_cr OGRGeoJSON Point" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="nrcan_well_cr OGRGeoJSON Point" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="nrcan_mon_well_cr20171125080223231" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="nrcan_well_cr20171125080223702" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Google Physical" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="nrcan_mon-well_cr OGRGeoJSON Point" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="OpenLayers_plugin_layer20170828120102394" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="nrcan_mon_well_cr20171125080223231" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Google Physical" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="OpenLayers_plugin_layer20170828120102394" visible="0"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -176,6 +187,12 @@
       </customproperties>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-73.61090590057020222</xmin>
+        <ymin>45.00422793139760103</ymin>
+        <xmax>-72.2020029997318602</xmax>
+        <ymax>46.11346501002780229</ymax>
+      </extent>
       <id>nrcan_aquifer_cr20171125080223151</id>
       <datasource>./nrcan_aquifer_cr.json</datasource>
       <keywordList>
@@ -455,6 +472,7 @@
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -480,7 +498,7 @@
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="id_code" index="1" name=""/>
@@ -519,10 +537,10 @@
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -549,6 +567,12 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-73.37082672155383989</xmin>
+        <ymin>45.11389160184916136</ymin>
+        <xmax>-72.32055664089243407</xmax>
+        <ymax>45.49082946793072324</ymax>
+      </extent>
       <id>nrcan_hydat_cr20171125080223220</id>
       <datasource>./nrcan_hydat_cr.json</datasource>
       <keywordList>
@@ -927,6 +951,12 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-73.33299828443639967</xmin>
+        <ymin>45.05788144235199866</ymin>
+        <xmax>-72.30305141037040073</xmax>
+        <ymax>45.95102696809450293</ymax>
+      </extent>
       <id>nrcan_mon_well_cr20171125080223231</id>
       <datasource>./nrcan_mon-well_cr.json</datasource>
       <keywordList>
@@ -1052,7 +1082,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="feature_of" index="0" name=""/>
         <alias field="feature__1" index="1" name=""/>
@@ -1071,10 +1101,10 @@ def my_form_open(dialog, layer, feature):
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1505,8 +1535,14 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-73.61383952699999611</xmin>
+        <ymin>45.00505258199999759</ymin>
+        <xmax>-72.17488181599999564</xmax>
+        <ymax>46.13830882199999905</ymax>
+      </extent>
       <id>nrcan_well_cr20171125080223702</id>
-      <datasource>./nrcan_well_cr.json</datasource>
+      <datasource>./too_big/nrcan_well_cr.json</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2643,6 +2679,12 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-74.42655609999999911</xmin>
+        <ymin>43.25007550000000123</ymin>
+        <xmax>-72.19948019999999644</xmax>
+        <ymax>45.03996800000000178</ymax>
+      </extent>
       <id>us_can_wqp20170828130522094</id>
       <datasource>./usgs_wqp_cr.json</datasource>
       <keywordList>
@@ -2981,7 +3023,358 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-94.22808027116434459</xmin>
+        <ymin>34.65546763752968218</ymin>
+        <xmax>-66.93956024574981711</xmax>
+        <ymax>47.46188364945646754</ymax>
+      </extent>
+      <id>usgs_aquifer_cr_json20180116095744816</id>
+      <datasource>./usgs_aquifer_cr.json.geojson</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>usgs_aquifer_cr.json OGRGeoJSON Polygon</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="UTF-8">ogr</provider>
+      <previewExpression></previewExpression>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <defaults>
+        <default field="OBJECTID" expression=""/>
+        <default field="ROCK_NAME" expression=""/>
+        <default field="ROCK_TYPE" expression=""/>
+        <default field="AQ_NAME" expression=""/>
+        <default field="AQ_CODE" expression=""/>
+        <default field="Shape_Leng" expression=""/>
+        <default field="Shape_Area" expression=""/>
+      </defaults>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="OBJECTID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="ROCK_NAME">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="ROCK_TYPE">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AQ_NAME">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AQ_CODE">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Shape_Leng">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Shape_Area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="0.384314" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="159,178,229,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="labeling" value="pal"/>
+        <property key="labeling/addDirectionSymbol" value="false"/>
+        <property key="labeling/angleOffset" value="0"/>
+        <property key="labeling/blendMode" value="0"/>
+        <property key="labeling/bufferBlendMode" value="0"/>
+        <property key="labeling/bufferColorA" value="255"/>
+        <property key="labeling/bufferColorB" value="255"/>
+        <property key="labeling/bufferColorG" value="255"/>
+        <property key="labeling/bufferColorR" value="255"/>
+        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferJoinStyle" value="128"/>
+        <property key="labeling/bufferNoFill" value="false"/>
+        <property key="labeling/bufferSize" value="1"/>
+        <property key="labeling/bufferSizeInMapUnits" value="false"/>
+        <property key="labeling/bufferSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/bufferTransp" value="0"/>
+        <property key="labeling/centroidInside" value="false"/>
+        <property key="labeling/centroidWhole" value="false"/>
+        <property key="labeling/decimals" value="3"/>
+        <property key="labeling/displayAll" value="false"/>
+        <property key="labeling/dist" value="0"/>
+        <property key="labeling/distInMapUnits" value="false"/>
+        <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/drawLabels" value="false"/>
+        <property key="labeling/enabled" value="false"/>
+        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/fitInPolygonOnly" value="false"/>
+        <property key="labeling/fontCapitals" value="0"/>
+        <property key="labeling/fontFamily" value=".SF NS Text"/>
+        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontLetterSpacing" value="0"/>
+        <property key="labeling/fontLimitPixelSize" value="false"/>
+        <property key="labeling/fontMaxPixelSize" value="10000"/>
+        <property key="labeling/fontMinPixelSize" value="3"/>
+        <property key="labeling/fontSize" value="13"/>
+        <property key="labeling/fontSizeInMapUnits" value="false"/>
+        <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/fontStrikeout" value="false"/>
+        <property key="labeling/fontUnderline" value="false"/>
+        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWordSpacing" value="0"/>
+        <property key="labeling/formatNumbers" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/labelOffsetInMapUnits" value="true"/>
+        <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/labelPerPart" value="false"/>
+        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+        <property key="labeling/limitNumLabels" value="false"/>
+        <property key="labeling/maxCurvedCharAngleIn" value="25"/>
+        <property key="labeling/maxCurvedCharAngleOut" value="-25"/>
+        <property key="labeling/maxNumLabels" value="2000"/>
+        <property key="labeling/mergeLines" value="false"/>
+        <property key="labeling/minFeatureSize" value="0"/>
+        <property key="labeling/multilineAlign" value="4294967295"/>
+        <property key="labeling/multilineHeight" value="1"/>
+        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/obstacle" value="true"/>
+        <property key="labeling/obstacleFactor" value="1"/>
+        <property key="labeling/obstacleType" value="0"/>
+        <property key="labeling/offsetType" value="0"/>
+        <property key="labeling/placeDirectionSymbol" value="0"/>
+        <property key="labeling/placement" value="1"/>
+        <property key="labeling/placementFlags" value="10"/>
+        <property key="labeling/plussign" value="false"/>
+        <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
+        <property key="labeling/preserveRotation" value="true"/>
+        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+        <property key="labeling/priority" value="5"/>
+        <property key="labeling/quadOffset" value="4"/>
+        <property key="labeling/repeatDistance" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/repeatDistanceUnit" value="1"/>
+        <property key="labeling/reverseDirectionSymbol" value="false"/>
+        <property key="labeling/rightDirectionSymbol" value=">"/>
+        <property key="labeling/scaleMax" value="10000000"/>
+        <property key="labeling/scaleMin" value="1"/>
+        <property key="labeling/scaleVisibility" value="false"/>
+        <property key="labeling/shadowBlendMode" value="6"/>
+        <property key="labeling/shadowColorB" value="0"/>
+        <property key="labeling/shadowColorG" value="0"/>
+        <property key="labeling/shadowColorR" value="0"/>
+        <property key="labeling/shadowDraw" value="false"/>
+        <property key="labeling/shadowOffsetAngle" value="135"/>
+        <property key="labeling/shadowOffsetDist" value="1"/>
+        <property key="labeling/shadowOffsetGlobal" value="true"/>
+        <property key="labeling/shadowOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowOffsetUnits" value="1"/>
+        <property key="labeling/shadowRadius" value="1.5"/>
+        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+        <property key="labeling/shadowRadiusMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowRadiusUnits" value="1"/>
+        <property key="labeling/shadowScale" value="100"/>
+        <property key="labeling/shadowTransparency" value="30"/>
+        <property key="labeling/shadowUnder" value="0"/>
+        <property key="labeling/shapeBlendMode" value="0"/>
+        <property key="labeling/shapeBorderColorA" value="255"/>
+        <property key="labeling/shapeBorderColorB" value="128"/>
+        <property key="labeling/shapeBorderColorG" value="128"/>
+        <property key="labeling/shapeBorderColorR" value="128"/>
+        <property key="labeling/shapeBorderWidth" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeBorderWidthUnits" value="1"/>
+        <property key="labeling/shapeDraw" value="false"/>
+        <property key="labeling/shapeFillColorA" value="255"/>
+        <property key="labeling/shapeFillColorB" value="255"/>
+        <property key="labeling/shapeFillColorG" value="255"/>
+        <property key="labeling/shapeFillColorR" value="255"/>
+        <property key="labeling/shapeJoinStyle" value="64"/>
+        <property key="labeling/shapeOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeOffsetUnits" value="1"/>
+        <property key="labeling/shapeOffsetX" value="0"/>
+        <property key="labeling/shapeOffsetY" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeRadiiUnits" value="1"/>
+        <property key="labeling/shapeRadiiX" value="0"/>
+        <property key="labeling/shapeRadiiY" value="0"/>
+        <property key="labeling/shapeRotation" value="0"/>
+        <property key="labeling/shapeRotationType" value="0"/>
+        <property key="labeling/shapeSVGFile" value=""/>
+        <property key="labeling/shapeSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeSizeType" value="0"/>
+        <property key="labeling/shapeSizeUnits" value="1"/>
+        <property key="labeling/shapeSizeX" value="0"/>
+        <property key="labeling/shapeSizeY" value="0"/>
+        <property key="labeling/shapeTransparency" value="0"/>
+        <property key="labeling/shapeType" value="0"/>
+        <property key="labeling/substitutions" value="&lt;substitutions/>"/>
+        <property key="labeling/textColorA" value="255"/>
+        <property key="labeling/textColorB" value="0"/>
+        <property key="labeling/textColorG" value="0"/>
+        <property key="labeling/textColorR" value="0"/>
+        <property key="labeling/textTransp" value="0"/>
+        <property key="labeling/upsidedownLabels" value="0"/>
+        <property key="labeling/useSubstitutions" value="false"/>
+        <property key="labeling/wrapChar" value=""/>
+        <property key="labeling/xOffset" value="0"/>
+        <property key="labeling/yOffset" value="0"/>
+        <property key="labeling/zIndex" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>id</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name=".SF NS Text"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
+          <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform>.</annotationform>
+      <aliases>
+        <alias field="OBJECTID" index="0" name=""/>
+        <alias field="ROCK_NAME" index="1" name=""/>
+        <alias field="ROCK_TYPE" index="2" name=""/>
+        <alias field="AQ_NAME" index="3" name=""/>
+        <alias field="AQ_CODE" index="4" name=""/>
+        <alias field="Shape_Leng" index="5" name=""/>
+        <alias field="Shape_Area" index="6" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="id"/>
+          <column width="-1" hidden="0" type="field" name="id_code"/>
+          <column width="-1" hidden="0" type="field" name="rank_"/>
+          <column width="-1" hidden="0" type="field" name="last_updat"/>
+          <column width="-1" hidden="0" type="field" name="area"/>
+          <column width="-1" hidden="0" type="field" name="geological"/>
+          <column width="-1" hidden="0" type="field" name="gw_proj_id"/>
+          <column width="-1" hidden="0" type="field" name="hydrogeolo"/>
+          <column width="-1" hidden="0" type="field" name="hydrogeo_1"/>
+          <column width="-1" hidden="0" type="field" name="usr"/>
+          <column width="-1" hidden="0" type="field" name="context_de"/>
+          <column width="-1" hidden="0" type="field" name="rdf_uri"/>
+          <column width="-1" hidden="0" type="field" name="area1"/>
+          <column width="-1" hidden="0" type="field" name="release"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+    </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>-74.44822000712160559</xmin>
+        <ymin>43.25096609443429685</ymin>
+        <xmax>-72.17976760119199753</xmax>
+        <ymax>45.04654089361429925</ymax>
+      </extent>
       <id>usgs_nhdplusflowline_cr20171125080725519</id>
       <datasource>./usgs_nhdplusflowline_cr.json</datasource>
       <keywordList>
@@ -3308,17 +3701,19 @@ def my_form_open(dialog, layer, feature):
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
-        <value>us_can_WBDHU820170828122154681</value>
-        <value>us_can_nwissite20170828125840448</value>
-        <value>us_can_wqp20170828130522094</value>
         <value>nrcan_aquifer_cr20171125080223151</value>
         <value>nrcan_hydat_cr20171125080223220</value>
         <value>nrcan_mon_well_cr20171125080223231</value>
         <value>nrcan_watersheds_cr20171125080223242</value>
         <value>nrcan_well_cr20171125080223702</value>
+        <value>us_can_WBDHU820170828122154681</value>
+        <value>us_can_nwissite20170828125840448</value>
+        <value>us_can_wqp20170828130522094</value>
         <value>usgs_nhdplusflowline_cr20171125080725519</value>
+        <value>usgs_aquifer_cr_json20180116095744816</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -3341,8 +3736,10 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -3356,6 +3753,7 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
