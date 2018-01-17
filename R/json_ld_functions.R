@@ -323,7 +323,10 @@ floodcast_mapper <- function(name, value) {
   tryCatch({
     mapper <- list(`fc:AssetsThreatened` = "AssetsThreatened",
                    `fc:AssetsMonitored` = "AssetsMonitored",
-                   `fc:FloodEvent` = "FloodEvent")
+                   `fc:FloodEvent` = "FloodEvent",
+                   `fc:FloodExtent` = "FloodExtent",
+                   `fc:FloodDepth` = "FloodDepth",
+                   `fc:TransportationAssets` = "TransportationAssets")
     
     out[[mapper[[name]]]] <- value
     
@@ -340,7 +343,9 @@ remove_missing <- function(x) {
   return(x)
 }
 
-elfie_sub <- function(x) gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x)
+elfie_sub <- function(x) {
+  gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x, ignore.case = T)
+}
 
 check_outlist <- function(outlist) {
   dups <- grepl("_\\|_", outlist)
