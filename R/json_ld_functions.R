@@ -390,8 +390,11 @@ grab_context <- function(conx, cached) {
 
 get_context_out <- function(json_ld) {
   context_out <- list()
-  
-  for(conx in json_ld$`@context`) {
+  contexts <- json_ld$`@context`
+  for(el in names(json_ld)) {
+    if(any(names(json_ld[[el]]) == "@context")) contexts <- c(contexts, json_ld[[el]]$`@context`)
+  }
+  for(conx in contexts) {
     try({
       context <- resolve_context(conx)
       if(length(context)>1) {
