@@ -6,25 +6,24 @@
   "description": "This is route ID 1123971 with Threatened status",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_MAJOR_TX_RDS&styles=&bbox=-1.06283664329E7,3472306.523599997,-1.0626203496E7,3474471.4833000004&width=767&height=768&srs=EPSG:3857&format=image%2Fjpeg",
   "geo": {
-    "@type": "schema:GeoShape",
-    "schema:line": {
-      "@type": "Feature",
-      "geometry": {
-        "@type": "LineString",
-        "coordinates": [
-          [
-            [-95.4696, 29.7683],
-            [-95.4696, 29.769],
-            [-95.4696, 29.7691],
-            [-95.4695, 29.7692],
-            [-95.4693, 29.7693],
-            [-95.4692, 29.7694],
-            [-95.4688, 29.7695],
-            [-95.4685, 29.7694],
-            [-95.4682, 29.7694]
-          ]
-        ]
-      }
-    }
+    "@type": "schema:GeoCoordinates",
+    "latitude": 29.7692,
+    "longitude": -95.4691
+  },
+  "geometry": {
+    "@type": "LineString",
+    "coordinates": [
+      [
+        [-95.4696, 29.7683],
+        [-95.4696, 29.769],
+        [-95.4696, 29.7691],
+        [-95.4695, 29.7692],
+        [-95.4693, 29.7693],
+        [-95.4692, 29.7694],
+        [-95.4688, 29.7695],
+        [-95.4685, 29.7694],
+        [-95.4682, 29.7694]
+      ]
+    ]
   }
 }

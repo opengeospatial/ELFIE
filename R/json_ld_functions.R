@@ -34,32 +34,56 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
 #' @title build schema.org geo
 #' @param geojson_geometry geojson data for one feature with coordinates and type fields.
 #' @param add_context boolean if False, no context will be in the returned document.
-#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' @param schema_lat schema.org latitude value
+#' @param schema_lon schema.org longitude value
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
-build_schema_geo <- function(geojson_geometry, add_context) {
-  if(geojson_geometry$type == "Point") {
-    return(list("@type" = "schema:GeoCoordinates",
-                "latitude" = geojson_geometry$coordinates[[1]][2],
-                "longitude" = geojson_geometry$coordinates[[1]][1]))
-  } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
-    
-    if(grepl("Polygon", geojson_geometry$type)) geo_name = "schema:polygon"
-    if(grepl("Line", geojson_geometry$type)) geo_name = "schema:line"
-
-    out <- list("@type" = "schema:GeoShape")
-    if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
-    
-    out[[geo_name]] <- list("@type" = "Feature",
-                            "geometry" = list("@type" = geojson_geometry$type,
-                                              "coordinates" = geojson_geometry$coordinates))
-    
-    return(out)
-    
-  } else {
-    print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
-    return(NULL)
+build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, schema_lon = NULL) {
+  
+  add_schema_geo <- is.null(schema_lat) && is.null(schema_lon)
+  
+  coords <- geojson_geometry$coordinates[[1]]
+  
+  if(add_schema_geo) {
+    if(geojson_geometry$type == "Point") {
+      schema_lat <- coords[2]
+      schema_lon <- coords[1]
+    } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
+      
+      if(is.list(coords)) {
+        if(length(coords) == 1) coords <- coords[[1]]
+        remover <- c()
+        for(l in 1:length(coords)) {
+          if(is.list(coords[[l]])) {
+            coords <- c(coords, coords[[l]])
+            remover <- c(remover, l)
+          }
+        }
+        coords[remover] <- NULL
+        
+        mean_ind <- function(x, ind = 1) mean(drop(x)[,ind])
+        
+        schema_lat <- mean(unlist(lapply(coords, mean_ind, ind = 2)))
+        schema_lon <- mean(unlist(lapply(coords, mean_ind, ind = 1)))
+        
+      } else {
+        schema_lat <- mean(drop(coords)[,2])
+        schema_lon <- mean(drop(coords)[,1])
+      }
+    } else {
+      print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
+      return(NULL)
+    }
   }
+  
+  if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  
+  out <- list("geo" = list("@type" = "schema:GeoCoordinates",
+                           "latitude" = schema_lat,
+                           "longitude" = schema_lon),
+              "geometry" = list("@type" = geojson_geometry$type,
+                                "coordinates" = geojson_geometry$coordinates))
+  return(out)
 }
 
 #' @title build elfie net for hy_features

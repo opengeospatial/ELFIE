@@ -6,21 +6,20 @@
   "description": "This is route ID 257397 with Threatened status",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_ACTION_TX_RDS&styles=&bbox=-1.06283664329E7,3472306.523599997,-1.0626203496E7,3474471.4833000004&width=767&height=768&srs=EPSG:3857&format=image%2Fjpeg",
   "geo": {
-    "@type": "schema:GeoShape",
-    "schema:line": {
-      "@type": "Feature",
-      "geometry": {
-        "@type": "LineString",
-        "coordinates": [
-          [
-            [-95.4597, 29.7639],
-            [-95.4595, 29.7639],
-            [-95.4592, 29.7641],
-            [-95.4589, 29.7643],
-            [-95.4574, 29.7651]
-          ]
-        ]
-      }
-    }
+    "@type": "schema:GeoCoordinates",
+    "latitude": 29.7643,
+    "longitude": -95.4589
+  },
+  "geometry": {
+    "@type": "LineString",
+    "coordinates": [
+      [
+        [-95.4597, 29.7639],
+        [-95.4595, 29.7639],
+        [-95.4592, 29.7641],
+        [-95.4589, 29.7643],
+        [-95.4574, 29.7651]
+      ]
+    ]
   }
 }

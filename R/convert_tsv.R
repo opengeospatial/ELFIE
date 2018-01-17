@@ -1,11 +1,6 @@
 setwd("~/Documents/Projects/ELFIE/ELFIE/R")
 source("json_ld_functions.R")
 
-data_paths <- c("../data/huc12obs",
-                "../data/uswb",
-                "../data/cr",
-                "../data/floodcast")
-
 use_cases <- list(huc12obs = list(data_path = "../data/huc12obs",
                                   name = "Observations for a Hydrologic Unit"),
                   uswb = list(data_path = "../data/uswb",
@@ -75,8 +70,9 @@ for(use_case in use_cases) {
         elf_index_list <- c(elf_index_list, elf_net_sublist)
       }
       
-      if(exists("geojson")) elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], 
-                                                                   add_context = F)
+      if(exists("geojson")) elf_index_list <- c(elf_index_list, 
+                                                build_schema_geo(geojson$features$geometry[matcher[i],],
+                                                                 add_context = F))
       
       elf_index_list$`@context` <- c(elf_index_list$`@context`, 
                                      "http://geojson.org/geojson-ld/geojson-context.jsonld")

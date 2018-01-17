@@ -9,5 +9,11 @@
     "@type": "schema:GeoCoordinates",
     "latitude": 45.1771,
     "longitude": -72.9292
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      [-72.9292, 45.1771]
+    ]
   }
 }

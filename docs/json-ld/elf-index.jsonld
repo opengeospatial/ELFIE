@@ -1,5 +1,7 @@
 {
-    "@context": {
+    "@context": [
+      "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+      {
         "schema": "http://schema.org/",
         "description": "schema:description",
         "geo": "schema:geo",
@@ -12,5 +14,5 @@
             "@id": "schema:sameAs",
             "@type": "@id"
         }
-    }
+    }]
 }
