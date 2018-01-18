@@ -8,7 +8,7 @@ elf_url_base <- "https://opengeospatial.github.io/ELFIE"
 #' @title build elfie index
 #' @param tsv_data one row data.frame with predicates to be added to an R list
 #' @param id_base character giving feature type a unique id in @id url like:
-#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' "https://opengeospatial.github.io/ELFIE/{{id_base}}/{{id}}"
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
 build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE) {
@@ -82,7 +82,7 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
                            "latitude" = schema_lat,
                            "longitude" = schema_lon),
               "geometry" = list("@type" = geojson_geometry$type,
-                                "coordinates" = geojson_geometry$coordinates))
+                                "coordinates" = geojson_geometry$coordinates[[1]]))
   return(out)
 }
 
@@ -154,7 +154,7 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
 #' @title build elfie net as described [here](https://github.com/opengeospatial/ELFIE/wiki/ELFIE-Relations)
 #' @param tsv_data one row data.frame with predicates to be added to an R list
 #' @param id character the id of the feature in question like:
-#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' "https://opengeospatial.github.io/ELFIE/{{id_base}}/{{id}}"
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' @details Note that this can be combined with other elf lists. If it is, care must be 
 #' taken to handle the @context, @id, and @type between existing and new content.
@@ -204,26 +204,12 @@ parse_elfie_json <- function(url) {
   if(!is.null(jl$geo) && !is.null(jl$geo$`@type`)) {
     if(jl$geo$`@type` == "schema:GeoCoordinates") {
       sfg <- sf::st_point(c(jl$geo$longitude, jl$geo$latitude))
-    } else if(jl$geo$`@type` == "schema:GeoShape") {
-      if(!is.null(jl$geo$`schema:polygon`)) { #schema:polygon is bad practice!!
-        cData <- jl$geo$`schema:polygon`$geometry$coordinates
-        if(!is.list(cData)) {
-          if(length(dim(cData)) == 4 && all(dim(cData)[1:2] == c(1,1))) {
-            pData <- cData[1,1,,]
-          } else if(length(dim(cData)) == 5 && all(dim(cData)[1:3] == c(1,1,1))) {
-            pData <- cData[1,1,1,,]
-          }
-          sfg <- sf::st_polygon(list(matrix(pData, ncol = 2, byrow = F)))
-        } else if(is.list(cData)) {
-          sfg <- sf::st_multipolygon(lapply(cData[[1]], function(x) sf::st_polygon(list(x))))
-        } else {
-          stop("found a multipolygon or multiple features, not supported")
-        }
-      } else if(!is.null(jl$geo$`schema:line`)) {
-        sfg <- sf::st_multilinestring(lapply(jl$geo$`schema:line`$geometry$coordinates[[1]], sf::st_linestring))
-      }
+      jl$geo <- sfg
     }
-    jl$geo <- sfg
+    if(!is.null(jl$geometry)) {
+      names(jl$geometry)[which(names(jl$geometry) == "@type")] <- "type"
+      sfg <- sf::read_sf(jsonlite::toJSON(jl$geometry, auto_unbox = T))$geometry
+    }
   }
   return(jl)
 }

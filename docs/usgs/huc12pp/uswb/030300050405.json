@@ -13,8 +13,6 @@
   },
   "geometry": {
     "@type": "Point",
-    "coordinates": [
-      [-78.2018, 34.3533]
-    ]
+    "coordinates": [-78.2018, 34.3533]
   }
 }
