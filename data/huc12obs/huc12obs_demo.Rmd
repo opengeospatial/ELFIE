@@ -34,10 +34,10 @@ for(realization in names(realizations)) {
     station_geo <- station_geo[which(!gs),]
   } else if(rzn$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide") {
     # print("divide") 
-    divide_geo <- sf::st_sf(name = rzn$name, geometry = rzn$geometry, stringsAsFactors = F)
+    divide_geo <- sf::st_sf(name = rzn$name, geometry = sf::st_sfc(rzn$geometry), stringsAsFactors = F)
   } else if(rzn$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork") {
     # print("hydrographic network")
-    network_geo <- sf::st_sf(name = rzn$name, geometry = rzn$geometry, stringsAsFactors = F)
+    network_geo <- sf::st_sf(name = rzn$name, geometry = sf::st_sfc(rzn$geometr), stringsAsFactors = F)
   } else {
     stop("got a type that was unexpected. This won't work")
   }
