@@ -4,8 +4,18 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Big Slough-Elkhorn River",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102200031006",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/06800500",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/102200031006",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/06800500",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 41.1223,

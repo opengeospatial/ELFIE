@@ -6,7 +6,12 @@
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02105769",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=02105769&parm_cd=00060&period=100",
   "HY_HydroLocationType": "hydrometricStation",
-  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/030300050405",
+  "realizedNexus": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/030300050405",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 34.4044,

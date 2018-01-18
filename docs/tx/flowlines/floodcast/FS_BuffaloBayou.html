@@ -11,7 +11,7 @@
     .logo { margin-bottom: 3px; }
     .code.column { background-color: rgb(51,51,51); color: white }
     </style>
-    <title>tx/flowlines/floodcast/FS_BuffaloBayou</title>
+    <title>/tx/flowlines/floodcast/FS_BuffaloBayou.json</title>
   </head>
   <body>
     <div class="ui middle aligned two column grid">
@@ -217,7 +217,12 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Flowpath",
   "name": "Buffalo Bayou at State Hwy 6 nr Addicks, TX",
   "description": "This is the flowline for the gage used to model the floodplains for the harvey huricane event in this area of interest.",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403",
+  "realizedCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 29.7651,

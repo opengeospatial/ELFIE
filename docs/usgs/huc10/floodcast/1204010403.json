@@ -4,9 +4,17 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Whiteoak Bayou-Buffalo Bayou",
   "description": "USGS HUC10: https://water.usgs.gov/GIS/huc.html",
-  "catchmentRealization": "https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou",
+  "catchmentRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Flowpath"
+    }
+  ],
   "hydrometricNetwork": {
-    "HY_HydrometricFeature": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600"
+    "HY_HydrometricFeature": {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+    }
   },
   "geo": {
     "@type": "schema:GeoCoordinates",

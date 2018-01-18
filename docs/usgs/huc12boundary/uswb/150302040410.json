@@ -4,7 +4,12 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Bill Williams River-Lake Havasu",
   "description": "comment describing each watershed at a high level",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410",
+  "realizedCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150302040410",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 34.6204,

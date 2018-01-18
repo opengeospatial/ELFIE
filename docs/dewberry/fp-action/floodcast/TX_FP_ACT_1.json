@@ -5,10 +5,20 @@
   "name": "Action_Floodplain",
   "description": "This is the action level flood indundation extent",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_ACTION_FP&styles=&bbox=-1.0628371091E7,3472530.965099998,-1.06262048277E7,3474444.821999997&width=768&height=678&srs=EPSG:3857&format=image%2Fjpeg",
-  "FloodEvent": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
+  "FloodEvent": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
+      "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodEvent"
+    }
+  ],
   "AssetsThreatened": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_ACTION_TX_RDS&CQL_FILTER=Status=%27Threatened%27",
   "AssetsMonitored": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_ACTION_TX_RDS&CQL_FILTER=Status=%27Monitor%27",
-  "FloodDepth": "https://opengeospatial.github.io/ELFIE/dewberry/fd-action/floodcast/TX_cov_depth_act.json",
+  "FloodDepth": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fd-action/floodcast/TX_cov_depth_act.json",
+      "@type": {}
+    }
+  ],
   "intersects": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_ACTION_TX_RDS&CQL_FILTER=Status=%27Threatened%27",
   "geo": {
     "@type": "schema:GeoCoordinates",

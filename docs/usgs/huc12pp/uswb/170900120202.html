@@ -11,7 +11,7 @@
     .logo { margin-bottom: 3px; }
     .code.column { background-color: rgb(51,51,51); color: white }
     </style>
-    <title>usgs/huc12pp/uswb/170900120202</title>
+    <title>/usgs/huc12pp/uswb/170900120202.json</title>
   </head>
   <body>
     <div class="ui middle aligned two column grid">
@@ -217,8 +217,18 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Balch Creek-Willamette River",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/14211720",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/14211720",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 45.6534,

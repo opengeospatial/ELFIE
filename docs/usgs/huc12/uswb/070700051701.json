@@ -4,9 +4,23 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Indian Creek-Wisconsin River",
   "description": "comment describing each watershed at a high level",
-  "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070700051701",
-  "catchmentRealization": [
-    ["https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070700051701", "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070700051701"]
+  "sameAs": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070700051701",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
   ],
-  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/070700051701"
+  "catchmentRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070700051701",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
+    },
+    "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070700051701"
+  ],
+  "outflow": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/070700051701",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ]
 }

@@ -357,6 +357,11 @@ elfie_sub <- function(x) {
   gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x)
 }
 
+elfie_url_local <- function(x) {
+  if(!grepl(".json", x)) x <- paste0(x, ".json")
+  gsub("https://opengeospatial.github.io/ELFIE/", "../docs/", x)
+}
+
 check_outlist <- function(outlist) {
   dups <- grepl("_\\|_", outlist)
   for(i in 1:length(outlist)) {
@@ -444,4 +449,23 @@ write_feature_type_title <- function(out_md, feature_type) {
 
 write_url_line <- function(out_md, main_url) {
   write(paste0("[", main_url, "](", main_url, ") [plain json](", main_url, ".json)  "), out_md, append = T)
+}
+
+prefetch_ids <- function(url) {
+  js <- jsonlite::fromJSON(elfie_url_local(url))
+  for(el in names(js)) {
+    if(!grepl("@", el)) {
+      for(u in 1:length(js[[el]])) {
+        if(!"@type" %in% names(js[[el]][[1]])) {
+          pre_url <- js[[el]][[u]]
+          if(grepl("https://opengeospatial.github.io/ELFIE", pre_url)) {
+            if(!is.list(js[[el]])) js[[el]] <- as.list(js[[el]])
+            prefetch <- jsonlite::fromJSON(elfie_url_local(pre_url))
+           js[[el]][u] <- list(list(`@id` = pre_url, `@type` = prefetch$`@type`))
+          }
+        }
+      }
+    }
+  }
+  return(js)
 }

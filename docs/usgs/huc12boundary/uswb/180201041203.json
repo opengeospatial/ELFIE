@@ -4,7 +4,12 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Packer Lake-Sacramento River",
   "description": "comment describing each watershed at a high level",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180201041203",
+  "realizedCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180201041203",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.5766,

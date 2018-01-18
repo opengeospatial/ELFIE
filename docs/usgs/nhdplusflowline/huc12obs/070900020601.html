@@ -11,7 +11,7 @@
     .logo { margin-bottom: 3px; }
     .code.column { background-color: rgb(51,51,51); color: white }
     </style>
-    <title>usgs/nhdplusflowline/huc12obs/070900020601</title>
+    <title>/usgs/nhdplusflowline/huc12obs/070900020601.json</title>
   </head>
   <body>
     <div class="ui middle aligned two column grid">
@@ -217,7 +217,12 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",
   "name": "NHDPlus V2.0 Network for Waunakee Marsh-Sixmile Creek",
   "description": "Collection of Flowlines for HUC12 watershed.",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601",
+  "realizedCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 43.2096,

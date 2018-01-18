@@ -11,7 +11,7 @@
     .logo { margin-bottom: 3px; }
     .code.column { background-color: rgb(51,51,51); color: white }
     </style>
-    <title>usgs/huc12boundary/uswb/020401050911</title>
+    <title>/usgs/huc12boundary/uswb/020401050911.json</title>
   </head>
   <body>
     <div class="ui middle aligned two column grid">
@@ -217,7 +217,12 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Buck Creek-Delaware River",
   "description": "comment describing each watershed at a high level",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911",
+  "realizedCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/020401050911",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 41.2152,
