@@ -5,7 +5,7 @@ Normative [JSON-LD Context Files](https://www.w3.org/TR/json-ld/#the-context) to
 JSON-LD encoded representations of resources provided by ELFIE participants.
 
 I've tried to stick as close as possible to Joan Maso and Alaitz Zabala's 'Testbed-12 JSON and 
-GeoJSON User Guide' [OGC 16-122r1](http://www.opengis.net/doc/PER/t12-A062). Have made the 
+GeoJSON User Guide' [OGC 16-122r1](http://docs.opengeospatial.org/guides/16-122r1.html). Have made the 
 assumption that it cumulatively summarises early discussions (e.g. those out of Testbed 11 etc).
 
 The context of a JSON-LD document should not be provided inline but by reference to one of these 
