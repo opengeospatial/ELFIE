@@ -208,7 +208,7 @@ parse_elfie_json <- function(url) {
     }
     if(!is.null(jl$geometry)) {
       names(jl$geometry)[which(names(jl$geometry) == "@type")] <- "type"
-      sfg <- sf::read_sf(jsonlite::toJSON(jl$geometry, auto_unbox = T))$geometry
+      jl$geometry <- sf::read_sf(jsonlite::toJSON(jl$geometry, auto_unbox = T))$geometry
     }
   }
   return(jl)
