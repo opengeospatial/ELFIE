@@ -19,12 +19,7 @@
   ],
   "AssetsThreatened": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_MAJOR_TX_RDS&CQL_FILTER=Status=%27Threatened%27",
   "AssetsMonitored": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_MAJOR_TX_RDS&CQL_FILTER=Status=%27Monitor%27",
-  "FloodDepth": [
-    {
-      "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fd-major/floodcast/TX_cov_depth_maj.json",
-      "@type": {}
-    }
-  ],
+  "FloodDepth": "https://opengeospatial.github.io/ELFIE/dewberry/fd-major/floodcast/TX_cov_depth_maj.json",
   "intersects": "http://54.225.76.222/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=ELFIE_MAJOR_TX_RDS&CQL_FILTER=Status=%27Threatened%27",
   "geo": {
     "@type": "schema:GeoCoordinates",
