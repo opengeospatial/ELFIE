@@ -1,5 +1,8 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_175",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "1122118_LOCAL STREETS",
@@ -13,12 +16,30 @@
   "geometry": {
     "@type": "LineString",
     "coordinates": [
-      [-95.4619, 29.7713],
-      [-95.4621, 29.7718],
-      [-95.4623, 29.772],
-      [-95.4623, 29.7721],
-      [-95.4622, 29.7722],
-      [-95.462, 29.7723]
+      [
+        -95.4619,
+        29.7713
+      ],
+      [
+        -95.4621,
+        29.7718
+      ],
+      [
+        -95.4623,
+        29.772
+      ],
+      [
+        -95.4623,
+        29.7721
+      ],
+      [
+        -95.4622,
+        29.7722
+      ],
+      [
+        -95.462,
+        29.7723
+      ]
     ]
   }
 }

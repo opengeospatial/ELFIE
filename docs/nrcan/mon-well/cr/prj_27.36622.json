@@ -1,5 +1,8 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/mon-well/cr/prj_27.36622",
   "@type": "gwml2:GW_MonitoringSite",
   "name": "Name of site prj_27.36622",
@@ -12,6 +15,9 @@
   },
   "geometry": {
     "@type": "Point",
-    "coordinates": [-72.7807, 45.5346]
+    "coordinates": [
+      -72.7807,
+      45.5346
+    ]
   }
 }

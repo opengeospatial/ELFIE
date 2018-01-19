@@ -212,7 +212,11 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/14211720",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
   "name": "WILLAMETTE RIVER AT PORTLAND, OR",
@@ -232,7 +236,10 @@
   },
   "geometry": {
     "@type": "Point",
-    "coordinates": [-122.6692, 45.5175]
+    "coordinates": [
+      -122.6692,
+      45.5175
+    ]
   }
 }
     </code></pre>

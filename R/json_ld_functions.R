@@ -451,17 +451,24 @@ write_url_line <- function(out_md, main_url) {
   write(paste0("[", main_url, "](", main_url, ") [plain json](", main_url, ".json)  "), out_md, append = T)
 }
 
-prefetch_ids <- function(url) {
-  js <- jsonlite::fromJSON(elfie_url_local(url))
-  for(el in names(js)) {
-    if(!grepl("@", el)) {
-      for(u in 1:length(js[[el]])) {
-        if(!"@type" %in% names(js[[el]][[1]])) {
+prefetch_ids <- function(id) {
+  
+  js <- jsonlite::fromJSON(elfie_url_local(id), simplifyVector = F)
+  
+  for(el in names(js)) {             # This is only going one level deep!!! 
+    if(!grepl("@", el)) {            # Skip @id, @type, and @context
+      for(u in 1:length(js[[el]])) { # If there's a list in the element -- look into its elements.
+        if(!"@type" %in% names(js[[el]][[u]]) &&  # If the list has an @type already, punt
+           is.character(js[[el]][[u]])) { # If the list element is not a character, punt.
+          
           pre_url <- js[[el]][[u]]
-          if(grepl("https://opengeospatial.github.io/ELFIE", pre_url)) {
-            if(!is.list(js[[el]])) js[[el]] <- as.list(js[[el]])
-            prefetch <- jsonlite::fromJSON(elfie_url_local(pre_url))
-           js[[el]][u] <- list(list(`@id` = pre_url, `@type` = prefetch$`@type`))
+          
+          if(grepl("https://opengeospatial.github.io/ELFIE", pre_url)) { # Only prefetch ELFIE URLs
+            if(!is.list(js[[el]])) js[[el]] <- as.list(js[[el]]) # initialize the thing as a list.
+            
+            prefetch <- jsonlite::fromJSON(elfie_url_local(pre_url)) # get the local file
+            
+            js[[el]][u] <- list(list(`@id` = pre_url, `@type` = prefetch$`@type`)) # make it @id and @type !!
           }
         }
       }

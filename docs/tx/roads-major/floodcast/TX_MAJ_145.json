@@ -1,5 +1,8 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_145",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "1129383_LOCAL STREETS",
@@ -13,9 +16,18 @@
   "geometry": {
     "@type": "LineString",
     "coordinates": [
-      [-95.4677, 29.763],
-      [-95.4677, 29.7634],
-      [-95.4677, 29.7643]
+      [
+        -95.4677,
+        29.763
+      ],
+      [
+        -95.4677,
+        29.7634
+      ],
+      [
+        -95.4677,
+        29.7643
+      ]
     ]
   }
 }

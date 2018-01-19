@@ -1,5 +1,8 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-action/floodcast/TX_ACT_81",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "257397_FUNCTIONALLY CLASSIFIED CITY STREETS",
@@ -13,19 +16,58 @@
   "geometry": {
     "@type": "LineString",
     "coordinates": [
-      [-95.4634, 29.7623],
-      [-95.463, 29.7625],
-      [-95.4627, 29.7626],
-      [-95.4624, 29.7629],
-      [-95.4621, 29.7631],
-      [-95.4619, 29.7633],
-      [-95.4617, 29.7634],
-      [-95.4614, 29.7635],
-      [-95.4612, 29.7636],
-      [-95.4609, 29.7637],
-      [-95.4606, 29.7638],
-      [-95.4599, 29.7639],
-      [-95.4597, 29.7639]
+      [
+        -95.4634,
+        29.7623
+      ],
+      [
+        -95.463,
+        29.7625
+      ],
+      [
+        -95.4627,
+        29.7626
+      ],
+      [
+        -95.4624,
+        29.7629
+      ],
+      [
+        -95.4621,
+        29.7631
+      ],
+      [
+        -95.4619,
+        29.7633
+      ],
+      [
+        -95.4617,
+        29.7634
+      ],
+      [
+        -95.4614,
+        29.7635
+      ],
+      [
+        -95.4612,
+        29.7636
+      ],
+      [
+        -95.4609,
+        29.7637
+      ],
+      [
+        -95.4606,
+        29.7638
+      ],
+      [
+        -95.4599,
+        29.7639
+      ],
+      [
+        -95.4597,
+        29.7639
+      ]
     ]
   }
 }

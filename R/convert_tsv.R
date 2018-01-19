@@ -91,10 +91,10 @@ for(use_case in use_cases) {
   }
 }
 
-unlink("cache/*")
-
 for(id in created_ids) {
-  json_out <- jsonlite::toJSON(prefetch_ids(id), pretty = T, auto_unbox = T)
+  json_out <- jsonlite::toJSON(prefetch_ids(id), 
+                               pretty = T, 
+                               auto_unbox = T)
   
   writeLines(json_out, elfie_url_local(id))
   
@@ -102,9 +102,13 @@ for(id in created_ids) {
   
   context_out <- jsonlite::toJSON(context_out, pretty = T, auto_unbox = T)
   
-  whisker_list <- list(context = list(context_out), `json-ld` = json_out, page_title = gsub("../docs", "", elfie_url_local(id)))
+  whisker_list <- list(context = list(context_out), 
+                       `json-ld` = json_out, 
+                       page_title = gsub("../docs", "", elfie_url_local(id)))
   
-  writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
+  writeLines(whisker::whisker.render(readLines("html_template.html"), 
+                                     whisker_list),
              file.path(gsub(".json", ".html", elfie_url_local(id))))
-  
 }
+
+unlink("cache/*")

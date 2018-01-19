@@ -79,7 +79,10 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_15",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "1128330_LOCAL STREETS",
@@ -93,8 +96,14 @@
   "geometry": {
     "@type": "LineString",
     "coordinates": [
-      [-95.4634, 29.7639],
-      [-95.4619, 29.764]
+      [
+        -95.4634,
+        29.7639
+      ],
+      [
+        -95.4619,
+        29.764
+      ]
     ]
   }
 }

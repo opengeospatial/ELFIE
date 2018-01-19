@@ -1,5 +1,9 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070200121110",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Minnesota River",
@@ -11,11 +15,10 @@
     }
   ],
   "catchmentRealization": [
-    {
-      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070200121110",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
-    },
-    "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070200121110"
+    [
+      "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070200121110",
+      "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070200121110"
+    ]
   ],
   "outflow": [
     {
