@@ -366,7 +366,7 @@ check_outlist <- function(outlist) {
   dups <- grepl("_\\|_", outlist)
   for(i in 1:length(outlist)) {
     if(dups[i]) {
-      outlist[[i]] <- strsplit(outlist[i][[1]], split = "_\\|_")
+      outlist[i] <- strsplit(outlist[i][[1]], split = "_\\|_")
     }
   }
   outlist

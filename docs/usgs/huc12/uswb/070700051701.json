@@ -15,10 +15,14 @@
     }
   ],
   "catchmentRealization": [
-    [
-      "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070700051701",
-      "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070700051701"
-    ]
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070700051701",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/070700051701",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
   ],
   "outflow": [
     {
