@@ -199,7 +199,8 @@ build_elf_net <- function(tsv_data, id, include_missing = F) {
 #' @return parsed geosaptial content as sf and other json-ld elements
 #' 
 parse_elfie_json <- function(url) {
-  jl <- jsonlite::fromJSON(url)
+  if(!grepl(".json", url)) url <- paste0(url, ".json")
+  jl <- jsonlite::fromJSON(url, simplifyVector = F)
   name <- jl$`@type`
   if(!is.null(jl$geo) && !is.null(jl$geo$`@type`)) {
     if(jl$geo$`@type` == "schema:GeoCoordinates") {

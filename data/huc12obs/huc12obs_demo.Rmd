@@ -10,34 +10,39 @@ catchment_id <- "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900
 
 catchment_data <- parse_elfie_json(paste0(catchment_id, ".json"))
 
-realization_ids <- catchment_data$catchmentRealization
+realizations <- catchment_data$catchmentRealization
 
-get_elfie_docs <- function(x) list(x = parse_elfie_json(paste0(x, ".json")))
+get_elfie_docs <- function(x) list(x = parse_elfie_json(paste0(x$`@id`)))
 
-realizations <- sapply(realization_ids, get_elfie_docs)
-names(realizations) <- realization_ids
-
-for(realization in names(realizations)) {
-  rzn <- realizations[realization][[1]]
-  if(rzn$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork") {
-    # print("hydrometric network")
+for(realization in realizations) {
+  if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork") {
+    
+    rzn <- parse_elfie_json(paste0(realization$`@id`))
+    
     station_list <- sapply(rzn$networkStation, get_elfie_docs)
-    names(station_list) <- rzn$networkStation
+    
     station_geo <- sf::st_sf("geometry" = sf::st_sfc(lapply(station_list, function(x) x$geo)),
                              "name" = sapply(station_list, function(x) x$name),
                              "link" = sapply(station_list, function(x) x$sameAs),
                              "graph" = sapply(station_list, function(x) ifelse(is.null(x$image), "", x$image)),
                              "elfie" = sapply(station_list, function(x) x$`@id`), stringsAsFactors = F)
-    rownames(station_geo) <- names(station_list)
+    
     gs <- !station_geo$graph==""
     graph_stations <- station_geo[which(gs),]
     station_geo <- station_geo[which(!gs),]
-  } else if(rzn$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide") {
-    # print("divide") 
+    
+  } else if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide") {
+    
+    rzn <- parse_elfie_json(paste0(realization$`@id`))
+    
     divide_geo <- sf::st_sf(name = rzn$name, geometry = sf::st_sfc(rzn$geometry), stringsAsFactors = F)
-  } else if(rzn$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork") {
-    # print("hydrographic network")
+    
+  } else if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork") {
+    
+    rzn <- parse_elfie_json(paste0(realization$`@id`))
+    
     network_geo <- sf::st_sf(name = rzn$name, geometry = sf::st_sfc(rzn$geometr), stringsAsFactors = F)
+    
   } else {
     stop("got a type that was unexpected. This won't work")
   }
