@@ -1,11 +1,6 @@
 setwd("~/Documents/Projects/ELFIE/ELFIE/R")
 source("json_ld_functions.R")
 
-data_paths <- c("../data/huc12obs",
-                "../data/uswb",
-                "../data/cr",
-                "../data/floodcast")
-
 use_cases <- list(huc12obs = list(data_path = "../data/huc12obs",
                                   name = "Observations for a Hydrologic Unit"),
                   uswb = list(data_path = "../data/uswb",
@@ -18,6 +13,8 @@ use_cases <- list(huc12obs = list(data_path = "../data/huc12obs",
 write("# Environmental Linked Features Interoperability Experiment Demo File Index\n", file = out_md)
 
 unlink("cache/*")
+
+created_ids <- list()
 
 for(use_case in use_cases) {
   data_path <- use_case$data_path
@@ -75,8 +72,9 @@ for(use_case in use_cases) {
         elf_index_list <- c(elf_index_list, elf_net_sublist)
       }
       
-      if(exists("geojson")) elf_index_list$geo <- build_schema_geo(geojson$features$geometry[matcher[i],], 
-                                                                   add_context = F)
+      if(exists("geojson")) elf_index_list <- c(elf_index_list, 
+                                                build_schema_geo(geojson$features$geometry[matcher[i],],
+                                                                 add_context = F))
       
       elf_index_list$`@context` <- c(elf_index_list$`@context`, 
                                      "http://geojson.org/geojson-ld/geojson-context.jsonld")
@@ -85,23 +83,32 @@ for(use_case in use_cases) {
                            file.path(out_path, paste0(tsv_data[i,][1], ".json")),
                            pretty = T, auto_unbox = T)
       
-      json_out <- readLines(file.path(out_path, paste0(tsv_data[i,][1], ".json")))
-      
-      context_out <- get_context_out(elf_index_list)
-      
-      context_out <- jsonlite::toJSON(context_out, pretty = T, auto_unbox = T)
-      
-      json_out <- jsonlite::toJSON(elf_index_list, pretty = T, auto_unbox = T)
-      
-      whisker_list <- list(context = list(context_out), `json-ld` = json_out, page_title = paste0(id_base, "/", tsv_data[i,1]))
-      
-      writeLines(whisker::whisker.render(readLines("html_template.html"), whisker_list),
-                 file.path(out_path, paste0(tsv_data[i,][1], ".html")))
-      
       write_url_line(out_md, elf_index_list$`@id`)
+      
+      created_ids <- c(created_ids, elf_index_list$`@id`)
     }
     write("  \n", out_md, append = T)
   }
+}
+
+for(id in created_ids) {
+  json_out <- jsonlite::toJSON(prefetch_ids(id), 
+                               pretty = T, 
+                               auto_unbox = T)
+  
+  writeLines(json_out, elfie_url_local(id))
+  
+  context_out <- get_context_out(jsonlite::fromJSON(json_out))
+  
+  context_out <- jsonlite::toJSON(context_out, pretty = T, auto_unbox = T)
+  
+  whisker_list <- list(context = list(context_out), 
+                       `json-ld` = json_out, 
+                       page_title = gsub("../docs", "", elfie_url_local(id)))
+  
+  writeLines(whisker::whisker.render(readLines("html_template.html"), 
+                                     whisker_list),
+             file.path(gsub(".json", ".html", elfie_url_local(id))))
 }
 
 unlink("cache/*")

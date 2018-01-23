@@ -1,13 +1,29 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431212089314801",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "DANE CO MRBI WATERWAY 2 NR SPRINGFIELD CORNERS, WI",
   "sameAs": "https://www.waterqualitydata.us/provider/STORET/USGS-WI/USGS-431212089314801",
-  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "hydrometricNetwork": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 43.2034,
     "longitude": -89.5299
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -89.5299,
+      43.2034
+    ]
   }
 }

@@ -1,14 +1,35 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/100800071208",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Antelope Creek-Bighorn River",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100800071208",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/06274300",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100800071208",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/06274300",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 44.4703,
     "longitude": -108.0491
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -108.0491,
+      44.4703
+    ]
   }
 }

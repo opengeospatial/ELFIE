@@ -1,15 +1,31 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/10141000",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
   "name": "WEBER RIVER NEAR PLAIN CITY, UT",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=10141000",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=10141000&parm_cd=00060&period=100",
   "HY_HydroLocationType": "hydrometricStation",
-  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/160201020603",
+  "realizedNexus": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/160201020603",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 41.2783,
     "longitude": -112.0919
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -112.0919,
+      41.2783
+    ]
   }
 }

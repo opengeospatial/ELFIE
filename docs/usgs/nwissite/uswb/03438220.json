@@ -1,15 +1,31 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/03438220",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
   "name": "CUMBERLAND RIVER NEAR GRAND RIVERS, KY",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=03438220",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=03438220&parm_cd=00060&period=100",
   "HY_HydroLocationType": "hydrometricStation",
-  "realizedNexus": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/051302050708",
+  "realizedNexus": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/051302050708",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 37.0217,
     "longitude": -88.2231
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -88.2231,
+      37.0217
+    ]
   }
 }

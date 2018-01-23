@@ -1,14 +1,35 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/170601080803",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Palouse Lake",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170601080803",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/13351000",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170601080803",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/13351000",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 46.7593,
     "longitude": -118.1557
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -118.1557,
+      46.7593
+    ]
   }
 }

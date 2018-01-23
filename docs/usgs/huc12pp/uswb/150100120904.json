@@ -1,14 +1,35 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/150100120904",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Anderson Wash-Muddy River",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150100120904",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/09419507",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/150100120904",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/09419507",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 36.5262,
     "longitude": -114.4179
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -114.4179,
+      36.5262
+    ]
   }
 }

@@ -5,7 +5,7 @@ Normative [JSON-LD Context Files](https://www.w3.org/TR/json-ld/#the-context) to
 JSON-LD encoded representations of resources provided by ELFIE participants.
 
 I've tried to stick as close as possible to Joan Maso and Alaitz Zabala's 'Testbed-12 JSON and 
-GeoJSON User Guide' [OGC 16-122r1](http://www.opengis.net/doc/PER/t12-A062). Have made the 
+GeoJSON User Guide' [OGC 16-122r1](http://docs.opengeospatial.org/guides/16-122r1.html). Have made the 
 assumption that it cumulatively summarises early discussions (e.g. those out of Testbed 11 etc).
 
 The context of a JSON-LD document should not be provided inline but by reference to one of these 
@@ -104,7 +104,7 @@ skos:editorialNotes have been smuggled into the (e)xample files to explain some 
 | VIEW | CONTEXT FILE | EXAMPLE | COMMENT |
 | ---- | ------------ | ------- | ------- |
 | eld-all | [elf-all.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld) | [xample-elf-all.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-all.json) | An all components context that imports everything for when you just want to say everything you know. _Necessary? Even more importantly - is this legitimate?_ |
-| elf-index | [elf-all.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld) | [xample-elf-index.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-index.json) | Core properties of each feature that support discovery/indexing. Each domain specific JSON file should include these. |
+| elf-index | [elf-index.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld) | [xample-elf-index.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-index.json) | Core properties of each feature that support discovery/indexing. Each domain specific JSON file should include these. |
 | elf-net-basic | [elf-net-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld) | [xample-elf-net-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-basic.json) |  |
 | elf-net-spatial | [elf-net-spatial.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld) | [xample-elf-net-spatial.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-spatial.json) | Imports elf-net-basic.jsonld. Deliberately dropped 'sf' prefix from keyword names to reinforce the fact we recommend picking and sticking with one topology model. _(Discuss?)_ |
 | elf-net-temporal | [elf-net-temporal.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld) | [xample-elf-net-temporal.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-temporal.json) | Imports elf-net-basic.jsonld. |

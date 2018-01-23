@@ -1,12 +1,33 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
   "name": "Demumbers Creek-Cumberland River",
   "description": "comment describing each watershed at a high level",
-  "sameAs": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708",
-  "catchmentRealization": [
-    ["https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/051302050708", "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/051302050708"]
+  "sameAs": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051302050708",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
   ],
-  "outflow": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/051302050708"
+  "catchmentRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/051302050708",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/051302050708",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "outflow": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/051302050708",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ]
 }

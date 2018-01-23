@@ -1,7 +1,7 @@
 {
     "@context": {
         "rdfs": "https://www.w3.org/TR/rdf-schema/",
-        "gsp": "http://www.opengeospatial.org/standards/geosparql",
+        "gsp": "http://www.opengeospatial.org/standards/geosparql/",
         "sampling": "http://www.w3.org/ns/sosa/sampling/",
         "sosa": "http://www.w3.org/ns/sosa/",
         "hasGeometry": "gsp:hasGeometry",

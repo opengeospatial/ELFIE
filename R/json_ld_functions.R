@@ -8,7 +8,7 @@ elf_url_base <- "https://opengeospatial.github.io/ELFIE"
 #' @title build elfie index
 #' @param tsv_data one row data.frame with predicates to be added to an R list
 #' @param id_base character giving feature type a unique id in @id url like:
-#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' "https://opengeospatial.github.io/ELFIE/{{id_base}}/{{id}}"
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
 build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE) {
@@ -34,32 +34,56 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
 #' @title build schema.org geo
 #' @param geojson_geometry geojson data for one feature with coordinates and type fields.
 #' @param add_context boolean if False, no context will be in the returned document.
-#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' @param schema_lat schema.org latitude value
+#' @param schema_lon schema.org longitude value
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
-build_schema_geo <- function(geojson_geometry, add_context) {
-  if(geojson_geometry$type == "Point") {
-    return(list("@type" = "schema:GeoCoordinates",
-                "latitude" = geojson_geometry$coordinates[[1]][2],
-                "longitude" = geojson_geometry$coordinates[[1]][1]))
-  } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
-    
-    if(grepl("Polygon", geojson_geometry$type)) geo_name = "schema:polygon"
-    if(grepl("Line", geojson_geometry$type)) geo_name = "schema:line"
-
-    out <- list("@type" = "schema:GeoShape")
-    if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
-    
-    out[[geo_name]] <- list("@type" = "Feature",
-                            "geometry" = list("@type" = geojson_geometry$type,
-                                              "coordinates" = geojson_geometry$coordinates))
-    
-    return(out)
-    
-  } else {
-    print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
-    return(NULL)
+build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, schema_lon = NULL) {
+  
+  add_schema_geo <- is.null(schema_lat) && is.null(schema_lon)
+  
+  coords <- geojson_geometry$coordinates[[1]]
+  
+  if(add_schema_geo) {
+    if(geojson_geometry$type == "Point") {
+      schema_lat <- coords[2]
+      schema_lon <- coords[1]
+    } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
+      
+      if(is.list(coords)) {
+        if(length(coords) == 1) coords <- coords[[1]]
+        remover <- c()
+        for(l in 1:length(coords)) {
+          if(is.list(coords[[l]])) {
+            coords <- c(coords, coords[[l]])
+            remover <- c(remover, l)
+          }
+        }
+        coords[remover] <- NULL
+        
+        mean_ind <- function(x, ind = 1) mean(drop(x)[,ind])
+        
+        schema_lat <- mean(unlist(lapply(coords, mean_ind, ind = 2)))
+        schema_lon <- mean(unlist(lapply(coords, mean_ind, ind = 1)))
+        
+      } else {
+        schema_lat <- mean(drop(coords)[,2])
+        schema_lon <- mean(drop(coords)[,1])
+      }
+    } else {
+      print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
+      return(NULL)
+    }
   }
+  
+  if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  
+  out <- list("geo" = list("@type" = "schema:GeoCoordinates",
+                           "latitude" = schema_lat,
+                           "longitude" = schema_lon),
+              "geometry" = list("@type" = geojson_geometry$type,
+                                "coordinates" = geojson_geometry$coordinates[[1]]))
+  return(out)
 }
 
 #' @title build elfie net for hy_features
@@ -130,7 +154,7 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
 #' @title build elfie net as described [here](https://github.com/opengeospatial/ELFIE/wiki/ELFIE-Relations)
 #' @param tsv_data one row data.frame with predicates to be added to an R list
 #' @param id character the id of the feature in question like:
-#' "https://opengeospatial.github.io/ELFIE/json-ld/{{id_base}}/{{id}}"
+#' "https://opengeospatial.github.io/ELFIE/{{id_base}}/{{id}}"
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' @details Note that this can be combined with other elf lists. If it is, care must be 
 #' taken to handle the @context, @id, and @type between existing and new content.
@@ -180,26 +204,12 @@ parse_elfie_json <- function(url) {
   if(!is.null(jl$geo) && !is.null(jl$geo$`@type`)) {
     if(jl$geo$`@type` == "schema:GeoCoordinates") {
       sfg <- sf::st_point(c(jl$geo$longitude, jl$geo$latitude))
-    } else if(jl$geo$`@type` == "schema:GeoShape") {
-      if(!is.null(jl$geo$`schema:polygon`)) { #schema:polygon is bad practice!!
-        cData <- jl$geo$`schema:polygon`$geometry$coordinates
-        if(!is.list(cData)) {
-          if(length(dim(cData)) == 4 && all(dim(cData)[1:2] == c(1,1))) {
-            pData <- cData[1,1,,]
-          } else if(length(dim(cData)) == 5 && all(dim(cData)[1:3] == c(1,1,1))) {
-            pData <- cData[1,1,1,,]
-          }
-          sfg <- sf::st_polygon(list(matrix(pData, ncol = 2, byrow = F)))
-        } else if(is.list(cData)) {
-          sfg <- sf::st_multipolygon(lapply(cData[[1]], function(x) sf::st_polygon(list(x))))
-        } else {
-          stop("found a multipolygon or multiple features, not supported")
-        }
-      } else if(!is.null(jl$geo$`schema:line`)) {
-        sfg <- sf::st_multilinestring(lapply(jl$geo$`schema:line`$geometry$coordinates[[1]], sf::st_linestring))
-      }
+      jl$geo <- sfg
     }
-    jl$geo <- sfg
+    if(!is.null(jl$geometry)) {
+      names(jl$geometry)[which(names(jl$geometry) == "@type")] <- "type"
+      jl$geometry <- sf::read_sf(jsonlite::toJSON(jl$geometry, auto_unbox = T))$geometry[[1]]
+    }
   }
   return(jl)
 }
@@ -323,7 +333,10 @@ floodcast_mapper <- function(name, value) {
   tryCatch({
     mapper <- list(`fc:AssetsThreatened` = "AssetsThreatened",
                    `fc:AssetsMonitored` = "AssetsMonitored",
-                   `fc:FloodEvent` = "FloodEvent")
+                   `fc:FloodEvent` = "FloodEvent",
+                   `fc:FloodExtent` = "FloodExtent",
+                   `fc:FloodDepth` = "FloodDepth",
+                   `fc:TransportationAssets` = "TransportationAssets")
     
     out[[mapper[[name]]]] <- value
     
@@ -340,12 +353,21 @@ remove_missing <- function(x) {
   return(x)
 }
 
-elfie_sub <- function(x) gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x)
+elfie_sub <- function(x) {
+  gsub("elfie/", "https://opengeospatial.github.io/ELFIE/", x)
+}
+
+elfie_url_local <- function(x) {
+  if(!grepl(".json", x)) x <- paste0(x, ".json")
+  gsub("https://opengeospatial.github.io/ELFIE/", "../docs/", x)
+}
 
 check_outlist <- function(outlist) {
   dups <- grepl("_\\|_", outlist)
-  if(any(dups)) {
-    outlist[[which(dups)]] <- strsplit(outlist[dups][[1]], split = "_\\|_")
+  for(i in 1:length(outlist)) {
+    if(dups[i]) {
+      outlist[i] <- strsplit(outlist[i][[1]], split = "_\\|_")
+    }
   }
   outlist
 }
@@ -383,8 +405,11 @@ grab_context <- function(conx, cached) {
 
 get_context_out <- function(json_ld) {
   context_out <- list()
-  
-  for(conx in json_ld$`@context`) {
+  contexts <- json_ld$`@context`
+  for(el in names(json_ld)) {
+    if(any(names(json_ld[[el]]) == "@context")) contexts <- c(contexts, json_ld[[el]]$`@context`)
+  }
+  for(conx in contexts) {
     try({
       context <- resolve_context(conx)
       if(length(context)>1) {
@@ -392,6 +417,21 @@ get_context_out <- function(json_ld) {
         names(context) <- stringr::str_replace(names(context), "@context.", "")
         context <- list(`@context` = context)
       }
+      
+      name_check <- names(context$`@context`) %in% names(context_out)
+      if(any(name_check)) {
+        reverse_name_check <- names(context_out) %in% names(context$`@context`)
+        if(context$`@context`[which(name_check)][[1]] == context_out[which(reverse_name_check)][[1]]) {
+          warning(paste("Found context name conflict.", 
+                        names(context$`@context`[which(name_check)]),
+                        context$`@context`[which(name_check)][[1]],
+                        names(context_out[which(reverse_name_check)]),
+                        context_out[which(reverse_name_check)],
+                        "Removing the first."))
+        }
+        context$`@context`[name_check] <- NULL
+      }
+      
       context_out <- c(context_out, context$`@context`)
     }, silent = F)
   }
@@ -409,4 +449,33 @@ write_feature_type_title <- function(out_md, feature_type) {
 
 write_url_line <- function(out_md, main_url) {
   write(paste0("[", main_url, "](", main_url, ") [plain json](", main_url, ".json)  "), out_md, append = T)
+}
+
+prefetch_ids <- function(id) {
+  
+  js <- jsonlite::fromJSON(elfie_url_local(id), simplifyVector = F)
+  
+  for(el in names(js)) {             # This is only going one level deep!!! 
+    if(!grepl("@", el)) {            # Skip @id, @type, and @context
+      for(u in 1:length(js[[el]])) { # If there's a list in the element -- look into its elements.
+        if(!"@type" %in% names(js[[el]][[u]]) &&  # If the list has an @type already, punt
+           is.character(js[[el]][[u]])) { # If the list element is not a character, punt.
+          
+          pre_url <- js[[el]][[u]]
+          
+          if(grepl("https://opengeospatial.github.io/ELFIE", pre_url)) { # Only prefetch ELFIE URLs
+            
+            prefetch <- jsonlite::fromJSON(elfie_url_local(pre_url)) # get the local file
+            
+            if(is.character(prefetch$`@type`)) {
+              if(!is.list(js[[el]])) js[[el]] <- as.list(js[[el]]) # initialize the thing as a list.
+            
+              js[[el]][u] <- list(list(`@id` = pre_url, `@type` = prefetch$`@type`)) # make it @id and @type !!
+            }
+          }
+        }
+      }
+    }
+  }
+  return(js)
 }

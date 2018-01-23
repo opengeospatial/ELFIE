@@ -1,29 +1,53 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/tx/roads-major/floodcast/TX_MAJ_139",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/TransportationAssets",
   "name": "257397_FUNCTIONALLY CLASSIFIED CITY STREETS",
   "description": "This is route ID 257397 with No Apparent Threat status",
   "image": "http://54.225.76.222/geoserver/Dewberry/wms?service=WMS&version=1.1.0&request=GetMap&layers=Dewberry:ELFIE_MAJOR_TX_RDS&styles=&bbox=-1.06283664329E7,3472306.523599997,-1.0626203496E7,3474471.4833000004&width=767&height=768&srs=EPSG:3857&format=image%2Fjpeg",
   "geo": {
-    "@type": "schema:GeoShape",
-    "schema:line": {
-      "@type": "Feature",
-      "geometry": {
-        "@type": "LineString",
-        "coordinates": [
-          [
-            [-95.471, 29.7635],
-            [-95.4705, 29.7633],
-            [-95.4701, 29.7633],
-            [-95.4696, 29.7632],
-            [-95.4688, 29.7632],
-            [-95.4684, 29.7632],
-            [-95.468, 29.7631],
-            [-95.4677, 29.7629]
-          ]
-        ]
-      }
-    }
+    "@type": "schema:GeoCoordinates",
+    "latitude": 29.7632,
+    "longitude": -95.4693
+  },
+  "geometry": {
+    "@type": "LineString",
+    "coordinates": [
+      [
+        -95.471,
+        29.7635
+      ],
+      [
+        -95.4705,
+        29.7633
+      ],
+      [
+        -95.4701,
+        29.7633
+      ],
+      [
+        -95.4696,
+        29.7632
+      ],
+      [
+        -95.4688,
+        29.7632
+      ],
+      [
+        -95.4684,
+        29.7632
+      ],
+      [
+        -95.468,
+        29.7631
+      ],
+      [
+        -95.4677,
+        29.7629
+      ]
+    ]
   }
 }

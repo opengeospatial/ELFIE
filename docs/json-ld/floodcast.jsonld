@@ -9,6 +9,10 @@
             "@id": "fc:FloodExtent",
             "@type": "@id"
         },
+        "FloodDepth": {
+          "@id": "fc:FloodDepth",
+          "@type": "@id"
+        },
         "TransportationAssets": {
             "@id": "fc:TransportationAssets",
             "@type": "@id"

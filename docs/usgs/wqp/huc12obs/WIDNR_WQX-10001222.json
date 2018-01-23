@@ -1,13 +1,29 @@
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001222",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "BRANDENBURG LAKE - BRANDENBURG LAKE",
   "sameAs": "https://www.waterqualitydata.us/provider/STORET/WIDNR_WQX/WIDNR_WQX-10001222",
-  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "hydrometricNetwork": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 43.19,
     "longitude": -89.59
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -89.59,
+      43.19
+    ]
   }
 }

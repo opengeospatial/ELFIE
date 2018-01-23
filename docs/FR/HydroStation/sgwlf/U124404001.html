@@ -11,7 +11,7 @@
     .logo { margin-bottom: 3px; }
     .code.column { background-color: rgb(51,51,51); color: white }
     </style>
-    <title>HydroStation/U124404001</title>
+    <title>FR/HydroStation/sgwlf/U124404001</title>
   </head>
   <body>
     <div class="ui middle aligned two column grid">
@@ -85,7 +85,6 @@
       "@type": "@id"
     },
     "rdfs": "https://www.w3.org/TR/rdf-schema/",
-    "gsp.1": "http://www.opengeospatial.org/standards/geosparql",
     "sampling": "http://www.w3.org/ns/sosa/sampling/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "hasGeometry": "gsp:hasGeometry",
@@ -234,6 +233,27 @@
     },
     "nexusRealization": {
       "@id": "hyf:nexusRealization",
+      "@type": "@id"
+    },
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "hasResult": "sosa:hasResult",
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasBeginning": "time:hasBeginning",
+    "hasEnd": "time:hasEnd",
+    "resultTime": "sosa:resultTime",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
       "@type": "@id"
     }
   }

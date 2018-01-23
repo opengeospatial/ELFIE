@@ -11,7 +11,7 @@
     .logo { margin-bottom: 3px; }
     .code.column { background-color: rgb(51,51,51); color: white }
     </style>
-    <title>usgs/huc12pp/uswb/050200050808</title>
+    <title>/usgs/huc12pp/uswb/050200050808.json</title>
   </head>
   <body>
     <div class="ui middle aligned two column grid">
@@ -212,17 +212,38 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/050200050808",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
   "name": "Outlet of Streets Run-Monongahela River",
   "description": "comment describing the outlet of each watershed",
-  "contributingCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808",
-  "nexusRealization": "https://opengeospatial.github.io/ELFIE/usgs/uswb/nwissite/03085000",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/050200050808",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/03085000",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 40.4406,
     "longitude": -80.0139
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      -80.0139,
+      40.4406
+    ]
   }
 }
     </code></pre>
