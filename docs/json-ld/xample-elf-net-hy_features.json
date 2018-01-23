@@ -1,12 +1,12 @@
 {
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
     "@id": "https://data.elfie.ogc/id/some/thing/001",
     "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Waterbody",
-    "name": "River McRiverface ",
+    "name": "River McRiverface",
     "intersects": [
         "https://data.elfie.ogc/id/a/region",
         "https://data.elfie.ogc/id/an/area"
@@ -24,5 +24,5 @@
     ],
     "downstreamWaterBody": [
         "https://data.elfie.ogc/id/river/mississippi"
-    ],
+    ]
 }
