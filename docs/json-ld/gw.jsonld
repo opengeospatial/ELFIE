@@ -1,6 +1,6 @@
 {
     "@context": {
-        "gw": "http://opengeospatial/def/ontology/gwml2",
+        "gw": "http://opengeospatial/def/ontology/gwml2#",
         "GW_HydrogeoUnit": {
             "@id": "gw:GW_HydrogeoUnit",
             "@type": "@id"
