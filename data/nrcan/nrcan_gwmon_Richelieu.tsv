@@ -1,0 +1,4 @@
+jsonkey_identifier	rdfs:type	schema:name	schemas:sameAs	sosa:featureOfInterest
+prj_27.53527	http://opengeospatial/def/ontology/gwml2#GW_MonitoringSite	53527	http://gin.gw-info.net/service/gin/sos2/timeseries/natres?ID=prj_27.53527	elfie/nrcan/aquifer/Richelieu_contexte_3
+prj_27.53528	http://opengeospatial/def/ontology/gwml2#GW_MonitoringSite	53528	http://gin.gw-info.net/service/gin/sos2/timeseries/natres?ID=prj_27.53528	elfie/nrcan/aquifer/Richelieu_contexte_3
+prj_27.53520	http://opengeospatial/def/ontology/gwml2#GW_MonitoringSite	53520	http://gin.gw-info.net/service/gin/sos2/timeseries/natres?ID=prj_27.53520	elfie/nrcan/aquifer/Richelieu_contexte_4
