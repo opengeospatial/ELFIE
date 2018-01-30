@@ -4,10 +4,9 @@
     "http://geojson.org/geojson-ld/geojson-context.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_2",
-  "@type": "gwml2:GW_HydrogeoUnit",
-  "name": "Richelieu_contexte_2",
-  "description": "description not available",
-  "sameAs": "need a sameas url for each aquifer?",
+  "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit",
+  "name": "Plate-forme du St-Laurent nord",
+  "image": "http://gin.gw-info.net/service/ngwds//en/wms/ngwd-wms/inset?REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=area&STYLES=&FORMAT=image/png&BGCOLOR=0xFFFFFF&TRANSPARENT=TRUE&SRS=EPSG:4326&BBOX=-73.5986876377091,45.3337367828915,-72.5095434474234,46.1505949256057&WIDTH=400&HEIGHT=300&TABLE=gw_data.hydrogeological_units&FIELD=id&ID=2",
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 45.6498,

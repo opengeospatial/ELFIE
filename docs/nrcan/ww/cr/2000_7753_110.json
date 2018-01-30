@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/2000_7753_110",
+  "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",
+  "name": "2000_7753_110",
+  "sameAs": "http://ngwd-bdnes.cits.nrcan.gc.ca/Reference/uri-cgi/feature/gsc/waterwell/ca.qc.gov.wells.2000_7753_110",
+  "image": "http://ngwd-bdnes.cits.nrcan.gc.ca/Reference/uri-cgi/feature/gsc/waterwell/ca.qc.gov.wells.2000_7753_110?format=png",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "latitude": 45.1718,
+    "longitude": -73.0336
+  },
+  "geometry": {
+    "@type": "Point",
+    "coordinates": [
+      [
+        -73.0336,
+        45.1718
+      ]
+    ]
+  }
+}
