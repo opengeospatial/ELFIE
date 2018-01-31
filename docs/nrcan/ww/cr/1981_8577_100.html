@@ -45,6 +45,29 @@
       "@id": "schema:sameAs",
       "@type": "@id"
     },
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "time": "http://www.w3.org/2006/time#",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "hasResult": "sosa:hasResult",
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasBeginning": "time:hasBeginning",
+    "hasEnd": "time:hasEnd",
+    "resultTime": "sosa:resultTime",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
     "geojson": "https://purl.org/geojson/vocab#",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -81,6 +104,7 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
     "http://geojson.org/geojson-ld/geojson-context.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1981_8577_100",
@@ -88,6 +112,12 @@
   "name": "1981_8577_100",
   "sameAs": "http://ngwd-bdnes.cits.nrcan.gc.ca/Reference/uri-cgi/feature/gsc/waterwell/ca.qc.gov.wells.1981_8577_100",
   "image": "http://ngwd-bdnes.cits.nrcan.gc.ca/Reference/uri-cgi/feature/gsc/waterwell/ca.qc.gov.wells.1981_8577_100?format=png",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_3",
+      "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 45.127,

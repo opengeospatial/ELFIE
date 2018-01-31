@@ -194,6 +194,39 @@ build_elf_net <- function(tsv_data, id, include_missing = F) {
   
 }
 
+#' @title build sosa relations as described [here](https://github.com/opengeospatial/ELFIE/wiki/ELFIE-Relations)
+#' @param tsv_data one row data.frame with predicates to be added to an R list
+#' @param id character the id of the feature in question like:
+#' "https://opengeospatial.github.io/ELFIE/{{id_base}}/{{id}}"
+#' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
+#' @details Note that this can be combined with other elf lists. If it is, care must be 
+#' taken to handle the @context, @id, and @type between existing and new content.
+#' 
+build_sosa <- function(tsv_data, id, include_missing = F) {
+  tsv_data <- lapply(tsv_data, elfie_sub)
+  
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+                  "@id" = id,
+                  "@type" = tsv_data$`rdfs:type`)
+  
+  for(i in 1:length(names(tsv_data))) {
+    if(grepl("sosa:", names(tsv_data)[i])) {
+      
+      outlist <- c(outlist, sosa_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
+      
+    }
+  }
+  
+  outlist <- check_outlist(outlist)
+  
+  if(!include_missing) {
+    return(remove_missing(outlist))
+  } else {
+    return(outlist)
+  }
+  
+}
+
 #' @title Parse ELFIE JSON-LD
 #' @param url url that will return json-ld data.
 #' @return parsed geosaptial content as sf and other json-ld elements
