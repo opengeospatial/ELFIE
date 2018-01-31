@@ -1,11 +1,18 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
     "http://geojson.org/geojson-ld/geojson-context.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/gwmon/cr/prj_27.53520",
   "@type": "http://opengeospatial/def/ontology/gwml2#GW_MonitoringSite",
   "name": "53520",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_4",
+      "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "latitude": 45.0656,

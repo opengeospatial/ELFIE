@@ -72,6 +72,16 @@ for(use_case in use_cases) {
         elf_index_list <- c(elf_index_list, elf_net_sublist)
       }
       
+      if(any(grepl("sosa:", names(tsv_data)))) {
+        elf_sosa_list <- build_sosa(tsv_data[i,], elf_index_list$`@id`)
+        elf_sosa_sublist <- elf_sosa_list
+        elf_sosa_sublist[c("@context", "@id", "@type")] <- NULL
+        
+        elf_index_list$`@context` <- c(elf_index_list$`@context`, elf_sosa_list$`@context`)
+        
+        elf_index_list <- c(elf_index_list, elf_sosa_sublist)
+      }
+      
       if(exists("geojson")) elf_index_list <- c(elf_index_list, 
                                                 build_schema_geo(geojson$features$geometry[matcher[i],],
                                                                  add_context = F))
