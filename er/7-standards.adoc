@@ -1,0 +1,17 @@
+[[Standards_Best_Practices]]
+== Applicable Best Practices and Standards
+
+=== Introduction
+**Derive from activity plan and scope notes**
+
+=== OGC Web Standards
+**Re: WFS, SOS, and other applicable feature and observations web (service) standards.**
+
+=== OGC Domain Models
+**Re: O&M, GWML2, HY_Features, etc.**
+
+=== W3C
+**Data on the web and spatial data on the web**
+
+=== JSON-LD
+**Schema.org compatibility and applicability to data models and linking standards**

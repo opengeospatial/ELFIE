@@ -1,0 +1,12 @@
+[[Relations_Contexts]]
+== Relations and JSON-LD Contexts
+
+=== Introduction
+**Overview of and scope of contexts and relations used.**  
+**Rationale and motivation for selection of core and extended relations**
+
+=== Relations
+**Broken down by source -- schema.org, geojson-ld, sosa, owl, hy_features, gwml2, ...**
+
+=== Contexts
+**Describe each context and its utility**

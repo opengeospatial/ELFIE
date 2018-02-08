@@ -1,0 +1,14 @@
+[[Objectives]]
+== Objectives
+
+=== Goals
+**Mostly derive from activity plan**
+
+=== Assumptions
+**Activity plan and some wiki content**
+
+=== Scope
+**Activity plan and some wiki content**
+
+=== Experiment Summary
+**Mine from meeting log and emails to group from face to face**

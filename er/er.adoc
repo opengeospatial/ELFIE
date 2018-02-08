@@ -69,18 +69,27 @@ include::3-terms.adoc[]
 
 include::4-overview.adoc[]
 
-include::5-example.adoc[]
+include::5-objectives.adoc[]
 
+include::6-usecases.adoc[]
 
+include::7-standards.adoc[]
+
+include::8-contexts.adoc[]
+
+include::9-outcomes.adoc[]
+
+include::10-recommendations.adoc[]
 
 ////
 add or remove annexes as necessary
-////
+
 include::annex-a.adoc[]
 
 include::annex-b.adoc[]
 
 include::annex-c.adoc[]
+////
 
 ////
 Revision History should be the last annex before the Bibliography

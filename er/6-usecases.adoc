@@ -1,0 +1,8 @@
+[[Use_Cases]]
+== Use Case Summary
+
+=== Introduction
+**Summary of use case considerations and overview**
+
+=== Use Case 1
+**Derive from use case write ups per the template**
