@@ -2,7 +2,32 @@
 == Use Case Summary
 
 === Introduction
-**Summary of use case considerations and overview**
+ELFIE design work was directed by a number of use cases that participants 
+submitted to the project that are either hurdles to systems they maintain 
+or would be nice additions to systems they rely on as users. Many of these
+use cases were described and used for discussion and vetting of ideas only, 
+others were taken further with implementation of example encoded linked data
+documents and client code to visualize data involved in the use case.  
 
-=== Use Case 1
-**Derive from use case write ups per the template**
+The full suite of use cases considered durring the design phase of the project 
+are described below. Each use cases takes the form of a simple description of 
+who or what system has an interest in what related datasets. Specific datasets are 
+listed to clarify the scope and provide a starting point for technical design
+work. Use cases that were implemented as demonstrations of the design outcomes 
+were described in more detail to include notional diagrams of how datasets 
+involved link to eachother, a thorough description of the use case, and an 
+example application that speaks to and/or satisfies the needs of the use case.
+
+=== Use Cases Considered in Design Process
+* **Use Case 1 Name**
+** One Sentence Summary
+*** Dataset 1
+*** Dataset 2
+* **Use Case 2 Name**
+** One Sentence Summary
+*** Dataset 1
+*** Dataset 2
+* **Use Case 3 Name**
+** One Sentence Summary
+*** Dataset 1
+*** Dataset 2
