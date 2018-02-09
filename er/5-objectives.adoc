@@ -2,13 +2,28 @@
 == Objectives
 
 === Goals
-**Mostly derive from activity plan**
+Functional goals of ELFIE focused on the description and use of links between and among features described by domain-specific feature models and observations data that describe the features. Within this, ELFIE aimed to leverage existing standards and best practices while maintaining a high degree of simplicity toward the goal of adoptibility by developers and users with a wide array of technical skill levels. Combining these goals led to IE participants to seek solutions that  
+
+. are ubiquitous and easily adoptible in any programming language,
+. apply best practices for linked data on the web, 
+. and adhere, to the extent possible to standard taxonomies and ontologies.  
+
+The IE participants took a positive view (assumption) -- that the above goals are possible and sought to test this assumption through design and implementation of compelling test use cases.
 
 === Assumptions
-**Activity plan and some wiki content**
+. A common approach to encoding links between and among environmental domain features which allow cross-domain and cross-system sharing and interoperability of such linked information is possible and desirable
+. Existing and pending OGC standards for the encoding of environmental observation data in an integrated dataset of features can be linked according to ReSTful and Linked Data principles
+. The ability to encode documents containing links between and among monitoring sites and environmental domain features in a common way will enable automation and lines of inquiry that are not possible without manual intervention today.
+. While currently not apparent given existing encodings, implementation standards, and best practices, a reusable approach to encode documents that use these information models in cross-disciplinary applications is doable.
 
 === Scope
-**Activity plan and some wiki content**
+. In order to focus this IE, only environmental domain models concerning landscape interactions with the hydrologic cycle will be considered.
+. Focus will be on 1) linked data documents that contain collections of linked features and related observations and 2) feature or observation representation documents that contain links to related features or observations.
+. ELFIE will not seek to solve problems regarding network architecture for resolving links or systems design and governance for applications that store and retrieving links or concept relationships.
+. Issues related to default behavior when dereferencing an identifier, while of great importance to ELFIE goals, is beyond the scope of this IE. Experiments of the IE may provide insight into the problem, but the IE will not seek to analyze the issue thoroughly.
+. Existing ontologies and vocabularies will be used wherever possible.
 
 === Experiment Summary
-**Mine from meeting log and emails to group from face to face**
+To test the assumptions described above, a number of example use cases (described below) were used to guide discussion and testing of potential technical solutions. The use cases were hypothetical, clearly of value to the domain, and technically difficult using existing technologies and practices. Discussion of use cases was predicated on the assumption that these use cases would be implemented as test cases under the IE. While time and resources did not allow all these use cases to be implemented for ELFIE, the use cases provided invaluable context and example systems to guide discussion and vetting of design alternatives.  
+
+The specifics of technologies and practices the IE tested are described below. With a clear direction, participants implemented test documents and code to exercise and demonstrate the IE outcomes. Applying some of the use cases considered in the design phase led to some refinement to the design, but the design selected largely satisfied the goals of the IE with some clear next steps and further work needed to formalize data models, encodings, and best practices. The experiment succeeded in identifying shortcomings of some existing practices and gaps in the standards base line that need to be filled. Putting further work and needed new work aside, the IE failed to find significant or fundamental problems with the best practices and standards tested.
