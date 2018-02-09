@@ -875,7 +875,13 @@ Note that inclusion of other properties is encouraged and implementors can ignor
 <div class="sect2">
 <h3 id="_goals"><a class="anchor" href="#_goals"></a>6.1. Goals</h3>
 <div class="paragraph">
-<p>Functional goals of ELFIE focused on the description and use of links between and among features described by domain-specific feature models and observations data that describe the features. Within this, ELFIE aimed to leverage existing standards and best practices while maintaining a high degree of simplicity toward the goal of adoptibility by developers and users with a wide array of technical skill levels. Combining these goals led to IE participants to seek solutions that</p>
+<p>Functional goals of ELFIE focused on the description and use of links
+between and among features described by domain-specific feature models and
+observations data that describe the features. Within this, ELFIE aimed to
+leverage existing standards and best practices while maintaining a high
+degree of simplicity toward the goal of adoptibility by developers and
+users with a wide array of technical skill levels. Combining these goals
+led to IE participants to seek solutions that</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -891,7 +897,9 @@ Note that inclusion of other properties is encouraged and implementors can ignor
 </ol>
 </div>
 <div class="paragraph">
-<p>The IE participants took a positive view (assumption)&#8201;&#8212;&#8201;that the above goals are possible and sought to test this assumption through design and implementation of compelling test use cases.</p>
+<p>The IE participants took a positive view (assumption)&#8201;&#8212;&#8201;that the above
+goals are possible and sought to test this assumption through design and
+implementation of compelling test use cases.</p>
 </div>
 </div>
 <div class="sect2">
@@ -899,16 +907,26 @@ Note that inclusion of other properties is encouraged and implementors can ignor
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>A common approach to encoding links between and among environmental domain features which allow cross-domain and cross-system sharing and interoperability of such linked information is possible and desirable</p>
+<p>A common approach to encoding links between and among environmental
+domain features which allow cross-domain and cross-system sharing and
+interoperability of such linked information is possible and desirable</p>
 </li>
 <li>
-<p>Existing and pending OGC standards for the encoding of environmental observation data in an integrated dataset of features can be linked according to ReSTful and Linked Data principles</p>
+<p>Existing and pending OGC standards for the encoding of environmental
+observation data in an integrated dataset of features can be linked
+according to ReSTful and Linked Data principles</p>
 </li>
 <li>
-<p>The ability to encode documents containing links between and among monitoring sites and environmental domain features in a common way will enable automation and lines of inquiry that are not possible without manual intervention today.</p>
+<p>The ability to encode documents containing links between and among
+monitoring sites and environmental domain features in a common way will
+enable automation and lines of inquiry that are not possible without
+manual intervention today.</p>
 </li>
 <li>
-<p>While currently not apparent given existing encodings, implementation standards, and best practices, a reusable approach to encode documents that use these information models in cross-disciplinary applications is doable.</p>
+<p>While currently not apparent given existing encodings, implementation
+standards, and best practices, a reusable approach to encode documents
+that use these information models in cross-disciplinary applications is
+doable.</p>
 </li>
 </ol>
 </div>
@@ -918,16 +936,25 @@ Note that inclusion of other properties is encouraged and implementors can ignor
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In order to focus this IE, only environmental domain models concerning landscape interactions with the hydrologic cycle will be considered.</p>
+<p>In order to focus this IE, only environmental domain models concerning
+landscape interactions with the hydrologic cycle will be considered.</p>
 </li>
 <li>
-<p>Focus will be on 1) linked data documents that contain collections of linked features and related observations and 2) feature or observation representation documents that contain links to related features or observations.</p>
+<p>Focus will be on 1) linked data documents that contain collections of
+linked features and related observations and 2) feature or observation
+representation documents that contain links to related features or
+observations.</p>
 </li>
 <li>
-<p>ELFIE will not seek to solve problems regarding network architecture for resolving links or systems design and governance for applications that store and retrieving links or concept relationships.</p>
+<p>ELFIE will not seek to solve problems regarding network
+architecture for resolving links or systems design and governance for
+applications that store and retrieving links or concept relationships.</p>
 </li>
 <li>
-<p>Issues related to default behavior when dereferencing an identifier, while of great importance to ELFIE goals, is beyond the scope of this IE. Experiments of the IE may provide insight into the problem, but the IE will not seek to analyze the issue thoroughly.</p>
+<p>Issues related to default behavior when dereferencing an identifier,
+while of great importance to ELFIE goals, is beyond the scope of this IE.
+Experiments of the IE may provide insight into the problem, but the IE
+will not seek to analyze the issue thoroughly.</p>
 </li>
 <li>
 <p>Existing ontologies and vocabularies will be used wherever possible.</p>
@@ -938,10 +965,28 @@ Note that inclusion of other properties is encouraged and implementors can ignor
 <div class="sect2">
 <h3 id="_experiment_summary"><a class="anchor" href="#_experiment_summary"></a>6.4. Experiment Summary</h3>
 <div class="paragraph">
-<p>To test the assumptions described above, a number of example use cases (described below) were used to guide discussion and testing of potential technical solutions. The use cases were hypothetical, clearly of value to the domain, and technically difficult using existing technologies and practices. Discussion of use cases was predicated on the assumption that these use cases would be implemented as test cases under the IE. While time and resources did not allow all these use cases to be implemented for ELFIE, the use cases provided invaluable context and example systems to guide discussion and vetting of design alternatives.</p>
+<p>To test the assumptions described above, a number of example use cases
+(described below) were used to guide discussion and testing of potential
+technical solutions. The use cases were hypothetical, clearly of value to
+the domain, and technically difficult using existing technologies and
+practices. Discussion of use cases was predicated on the assumption that
+these use cases would be implemented as test cases under the IE. While
+time and resources did not allow all these use cases to be implemented for
+ELFIE, the use cases provided invaluable context and example systems to
+guide discussion and vetting of design alternatives.</p>
 </div>
 <div class="paragraph">
-<p>The specifics of technologies and practices the IE tested are described below. With a clear direction, participants implemented test documents and code to exercise and demonstrate the IE outcomes. Applying some of the use cases considered in the design phase led to some refinement to the design, but the design selected largely satisfied the goals of the IE with some clear next steps and further work needed to formalize data models, encodings, and best practices. The experiment succeeded in identifying shortcomings of some existing practices and gaps in the standards base line that need to be filled. Putting further work and needed new work aside, the IE failed to find significant or fundamental problems with the best practices and standards tested.</p>
+<p>The specifics of technologies and practices the IE tested are described
+below. With a clear direction, participants implemented test documents and
+code to exercise and demonstrate the IE outcomes. Applying some of the use
+cases considered in the design phase led to some refinement to the design,
+but the design selected largely satisfied the goals of the IE with some
+clear next steps and further work needed to formalize data models,
+encodings, and best practices. The experiment succeeded in identifying
+shortcomings of some existing practices and gaps in the standards base
+line that need to be filled. Putting further work and needed new work
+aside, the IE failed to find significant or fundamental problems with the
+best practices and standards tested.</p>
 </div>
 </div>
 </div>
