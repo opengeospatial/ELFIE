@@ -79,8 +79,8 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
   if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
   
   out <- list("geo" = list("@type" = "schema:GeoCoordinates",
-                           "latitude" = schema_lat,
-                           "longitude" = schema_lon),
+                           "schema:latitude" = schema_lat,
+                           "schema:longitude" = schema_lon),
               "geometry" = list("@type" = geojson_geometry$type,
                                 "coordinates" = geojson_geometry$coordinates[[1]]))
   return(out)
