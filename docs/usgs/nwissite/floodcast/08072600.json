@@ -25,8 +25,8 @@
   "HY_HydroLocationType": "hydrometricStation",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 29.7596,
-    "longitude": -95.4571
+    "schema:latitude": 29.7596,
+    "schema:longitude": -95.4571
   },
   "geometry": {
     "@type": "Point",

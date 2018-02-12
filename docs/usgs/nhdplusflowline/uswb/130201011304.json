@@ -17,8 +17,8 @@
   "networkStation": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08313000",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 36.5065,
-    "longitude": -106.2362
+    "schema:latitude": 36.5065,
+    "schema:longitude": -106.2362
   },
   "geometry": {
     "@type": "MultiLineString",

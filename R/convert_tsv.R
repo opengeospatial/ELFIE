@@ -45,7 +45,7 @@ for(use_case in use_cases) {
     
     joiner <- stringr::str_replace(names(tsv_data)[1], "jsonkey_", "")
     
-    try(matcher <- match(geojson$features$properties[[joiner]], tsv_data[,1][[1]]), silent = T)
+    try(matcher <- match(tsv_data[,1][[1]], geojson$features$properties[[joiner]]), silent = T)
     
     if(joiner == "") matcher <- 1
     

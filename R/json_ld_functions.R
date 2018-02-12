@@ -79,8 +79,8 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
   if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
   
   out <- list("geo" = list("@type" = "schema:GeoCoordinates",
-                           "latitude" = schema_lat,
-                           "longitude" = schema_lon),
+                           "schema:latitude" = schema_lat,
+                           "schema:longitude" = schema_lon),
               "geometry" = list("@type" = geojson_geometry$type,
                                 "coordinates" = geojson_geometry$coordinates[[1]]))
   return(out)
@@ -496,7 +496,7 @@ prefetch_ids <- function(id) {
            is.character(js[[el]][[u]])) { # If the list element is not a character, punt.
           
           pre_url <- js[[el]][[u]]
-          
+          try({
           if(grepl("https://opengeospatial.github.io/ELFIE", pre_url)) { # Only prefetch ELFIE URLs
             
             prefetch <- jsonlite::fromJSON(elfie_url_local(pre_url)) # get the local file
@@ -507,6 +507,7 @@ prefetch_ids <- function(id) {
               js[[el]][u] <- list(list(`@id` = pre_url, `@type` = prefetch$`@type`)) # make it @id and @type !!
             }
           }
+          })
         }
       }
     }
