@@ -9,8 +9,8 @@
   "description": "Great Lakes Region Northeastern Lake Ontario-Lake Ontario-St. Lawrence Lake Champlain-Richelieu River",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 44.3256,
-    "longitude": -73.4047
+    "schema:latitude": 44.3256,
+    "schema:longitude": -73.4047
   },
   "geometry": {
     "@type": "MultiPolygon",

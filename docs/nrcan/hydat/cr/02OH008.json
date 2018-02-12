@@ -10,8 +10,8 @@
   "sameAs": "https://wateroffice.ec.gc.ca/report/real_time_e.html?stn=02OH008",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 45.1225,
-    "longitude": -72.9944
+    "schema:latitude": 45.1225,
+    "schema:longitude": -72.9944
   },
   "geometry": {
     "@type": "Point",

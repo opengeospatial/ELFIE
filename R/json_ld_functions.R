@@ -496,7 +496,7 @@ prefetch_ids <- function(id) {
            is.character(js[[el]][[u]])) { # If the list element is not a character, punt.
           
           pre_url <- js[[el]][[u]]
-          
+          try({
           if(grepl("https://opengeospatial.github.io/ELFIE", pre_url)) { # Only prefetch ELFIE URLs
             
             prefetch <- jsonlite::fromJSON(elfie_url_local(pre_url)) # get the local file
@@ -507,6 +507,7 @@ prefetch_ids <- function(id) {
               js[[el]][u] <- list(list(`@id` = pre_url, `@type` = prefetch$`@type`)) # make it @id and @type !!
             }
           }
+          })
         }
       }
     }
