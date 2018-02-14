@@ -22,7 +22,7 @@
 					"@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001", 
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
-						"@id":"http://id.eaufrance.fr/TronconHydrographique/E6390700",
+						"@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
 						"@type":"HY_Channel"
 					 },
 					"hasResult": [

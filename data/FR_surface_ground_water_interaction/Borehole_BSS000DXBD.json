@@ -16,7 +16,7 @@
 					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",				
 					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
 					"@type": "sosa:Observation",
-					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS000DXBD",
+					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
 					"hasResult": [
 						{
 							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
