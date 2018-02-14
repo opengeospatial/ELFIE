@@ -8,7 +8,7 @@
     "name": "Forage BSS000DXBD",
     "hasGeometry": {
 				"@type":"gsp:Geometry",
-				"POINT(49.9506859240222 2.3597603712661)"
+				"gsp:asWKT":"POINT(49.9506859240222 2.3597603712661)"
 				},
 	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
 	"isFeatureOfInterestOf": [
