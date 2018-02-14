@@ -3,15 +3,17 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/BoreholeView/BSS000DXBD",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
     "@type": "sosa:Sample",
     "name": "Forage BSS000DXBD",
-    "hasGeometry": "POINT(49.9506859240222 2.3597603712661)",
+    "hasGeometry": {
+				"@type":"gsp:Geometry",
+				"POINT(49.9506859240222 2.3597603712661)"
+				},
 	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
-	"isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
-				{
+	"isFeatureOfInterestOf": [
+					{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",				
 					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS000DXBD",
@@ -33,9 +35,9 @@
 					"@type": "skos:Concept",
 					"name": "Driller log"
 				}
-            }
-        ]
-    },
+            
+			}
+	],
 	"image": "http://www.ades.eaufrance.fr/BDLisa.aspx?X=2.35976034402847&Y=49.9506874084473",
     "hasSampleRelationship": [
         {
@@ -44,7 +46,7 @@
         },
 		{
 			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-            "relatedSample": "http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2"
+            "relatedSample": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2"
 		}
     ]
 }

@@ -4,19 +4,21 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
-    "@id": "http://id.eaufrance.fr/StationHydro/E639703001",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
     "@type": ["sosa:Sample","hyf:HY_HydrometricFeature"],
     "name": "L'Hallue à Querrieu",
-    "hasGeometry": "POINT(49.937596 2.434795)",
+    "hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT": "POINT(49.937596 2.434795)"
+				},
 	"isSampleOf": {
-			"@id":"http://id.eaufrance.fr/CoursEau/E6390710",
+			"@id":"https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710",
 			"@type":"HY_WaterBody",
 			"name":"rivière l'hallue"
 		},
-    "isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
-				{
+    "isFeatureOfInterestOf":[
+					{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
 					"@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001", 
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
@@ -46,13 +48,12 @@
 					"name": "Limnimetric/Fluviometric Station"
 				}
             }
-        ]
-    },
+	],
 	"hasSampleRelationship": [
         {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
 				"@type":"gwml2:GW_MonitoringSite",
 				"name":"PIEZOMETRE DE CARDONNETTE - 80" }
         }
