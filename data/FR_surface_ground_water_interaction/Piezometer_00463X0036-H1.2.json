@@ -1,18 +1,21 @@
 {
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",					
+		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
     "@type": "sosa:Sample",
     "name": "PIEZOMETRE DE CARDONNETTE - 80",
-    "hasGeometry": {
+    "gsp:hasGeometry": {
 				"@type":"gsp:Geometry",
-				"gsp:asWKT":"POINT(49.9506859240222 2.3597603712661)"
+				"gsp:asWKT":"POINT(2.3597603712661 49.9506859240222)"
 			},
 	"isSampleOf": {
 				"@id": "https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01", 
-				"@type": "gwml2:GW_HydrogeoUnit",
+				"@type": "GW_HydrogeoUnit",
                 "name": "Craie du Séno-Turonien en Artois-Picardie"
             },	
     "isFeatureOfInterestOf":[ 
@@ -54,7 +57,7 @@
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
 				"@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
-				"@type":"hyf:HY_HydrometricFeature",
+				"@type":"HY_HydrometricFeature",
 				"name":"L'Hallue à Querrieu" }
 		},
 		{
