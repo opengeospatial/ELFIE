@@ -122,7 +122,7 @@
             "@type": "@id"
         },
         "linearElement": {
-            "@id": "`",
+            "@id": "hyf:linearElement",
             "@type": "@id"
         },
         "hydrometricNetwork": {
