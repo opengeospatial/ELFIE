@@ -444,6 +444,9 @@ get_context_out <- function(json_ld) {
     if(any(names(json_ld[[el]]) == "@context")) contexts <- c(contexts, json_ld[[el]]$`@context`)
   }
   for(conx in contexts) {
+    if(is.list(conx)) {
+      context_out <- c(context_out, conx)
+    } else {
     try({
       context <- resolve_context(conx)
       if(length(context)>1) {
@@ -469,7 +472,7 @@ get_context_out <- function(json_ld) {
       context_out <- c(context_out, context$`@context`)
     }, silent = F)
   }
-  
+  }
   context_out <- list(`@context` = context_out)
 }
 
