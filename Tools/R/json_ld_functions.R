@@ -1,7 +1,7 @@
 ## Constants
-out_md <- "../docs/file_index.md"
+out_md <- "../../docs/file_index.md"
 
-out_path_base <- "../docs"
+out_path_base <- "../../docs/"
 
 elf_url_base <- "https://opengeospatial.github.io/ELFIE"
 
@@ -393,7 +393,7 @@ elfie_sub <- function(x) {
 
 elfie_url_local <- function(x) {
   if(!grepl(".json", x)) x <- paste0(x, ".json")
-  gsub("https://opengeospatial.github.io/ELFIE/", "../docs/", x)
+  gsub("https://opengeospatial.github.io/ELFIE/", out_path_base, x)
 }
 
 check_outlist <- function(outlist) {

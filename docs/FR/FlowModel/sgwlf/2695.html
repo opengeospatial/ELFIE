@@ -102,6 +102,156 @@
       "@id": "sampling:relatedSample",
       "@type": "@id"
     },
+    "gw": "http://opengeospatial/def/ontology/gwml2#",
+    "GW_HydrogeoUnit": {
+      "@id": "gw:GW_HydrogeoUnit",
+      "@type": "@id"
+    },
+    "GW_Aquifer": {
+      "@id": "gw:GW_Aquifer",
+      "@type": "@id"
+    },
+    "GW_Well": {
+      "@id": "gw:GW_Well",
+      "@type": "@id"
+    },
+    "GW_MonitoringSite": {
+      "@id": "gw:GW_MonitoringSite",
+      "@type": "@id"
+    },
+    "hyf": "http://opengeospatial/def/ontology/hyf",
+    "HY_Catchment": {
+      "@id": "hyf:HY_Catchment",
+      "@type": "@id"
+    },
+    "HY_CatchmentDivide": {
+      "@id": "hyf:HY_CatchmentDivide",
+      "@type": "@id"
+    },
+    "HY_HydrographicNetwork": {
+      "@id": "hyf:HY_HydrographicNetwork",
+      "@type": "@id"
+    },
+    "HY_HydrometricNetwork": {
+      "@id": "hyf:HY_HydrometricNetwork",
+      "@type": "@id"
+    },
+    "HY_HydroNexus": {
+      "@id": "hyf:HY_HydroNexus",
+      "@type": "@id"
+    },
+    "HY_HydroLocation": {
+      "@id": "hyf:HY_HydroLocation",
+      "@type": "@id"
+    },
+    "HY_HydrometricFeature": {
+      "@id": "hyf:HY_HydrometricFeature",
+      "@type": "@id"
+    },
+    "HY_WaterBody": {
+      "@id": "hyf:HY_WaterBody",
+      "@type": "@id"
+    },
+    "HY_Lake": {
+      "@id": "hyf:HY_Lake",
+      "@type": "@id"
+    },
+    "HY_Impoundment": {
+      "@id": "hyf:HY_Impoundment",
+      "@type": "@id"
+    },
+    "HY_River": {
+      "@id": "hyf:HY_River",
+      "@type": "@id"
+    },
+    "HY_Channel": {
+      "@id": "hyf:HY_Channel",
+      "@type": "@id"
+    },
+    "HY_FlowPath": {
+      "@id": "hyf:HY_FlowPath",
+      "@type": "@id"
+    },
+    "HY_DistanceDescription": {
+      "@id": "hyf:HY_DistanceDescription",
+      "@type": "@id"
+    },
+    "HY_HydroLocationType": {
+      "@id": "hyf:HY_HydroLocationType",
+      "@type": "@id"
+    },
+    "HY_IndirectPosition": {
+      "@id": "hyf:HY_IndirectPosition",
+      "@type": "@id"
+    },
+    "HY_DistanceFromReferent": {
+      "@id": "hyf:HY_DistanceFromReferent",
+      "@type": "@id"
+    },
+    "upstreamWaterBody": {
+      "@id": "hyf:upstreamWaterBody",
+      "@type": "@id"
+    },
+    "downstreamWaterBody": {
+      "@id": "hyf:downstreamWaterBody",
+      "@type": "@id"
+    },
+    "lowerCatchment": {
+      "@id": "hyf:lowerCatchment",
+      "@type": "@id"
+    },
+    "upperCatchment": {
+      "@id": "hyf:upperCatchment",
+      "@type": "@id"
+    },
+    "realizedCatchment": {
+      "@id": "hyf:realizedCatchment",
+      "@type": "@id"
+    },
+    "catchmentRealization": {
+      "@id": "hyf:catchmentRealization",
+      "@type": "@id"
+    },
+    "contributingCatchment": {
+      "@id": "hyf:contributingCatchment",
+      "@type": "@id"
+    },
+    "outflow": {
+      "@id": "hyf:outflow",
+      "@type": "@id"
+    },
+    "realizedNexus": {
+      "@id": "hyf:realizedNexus",
+      "@type": "@id"
+    },
+    "networkStation": {
+      "@id": "hyf:networkStation",
+      "@type": "@id"
+    },
+    "referencedPosition": {
+      "@id": "hyf:referencedPosition",
+      "@type": "@id"
+    },
+    "distanceExpression": {
+      "@id": "hyf:distanceExpression",
+      "@type": "@id"
+    },
+    "distanceDescription": {
+      "@id": "hyf:distanceDescription",
+      "@type": "@id"
+    },
+    "linearElement": {
+      "@id": "hyf:linearElement",
+      "@type": "@id"
+    },
+    "hydrometricNetwork": {
+      "@id": "hyf:hydrometricNetwork",
+      "@type": "@id"
+    },
+    "nexusRealization": {
+      "@id": "hyf:nexusRealization",
+      "@type": "@id"
+    },
     "hasFeatureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
@@ -131,72 +281,81 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"],
-  "@id": "http://ressource.brgm-rec.fr/data/HydroGeolModel/2695",
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/FR/FlowModel/sgwlf/2695",
   "@type": "sosa:Sample",
   "name": "Hydrogeological Model of  Calcaires jurassiques entre Ouche et Vingeanne",
-  "hasGeometry": "POINT(47.5288404979028 5.32424152077325)",
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT(5.32424152077325 47.5288404979028)"
+  },
   "isSampleOf": {
     "@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
-    "@type": "gwml2:GW_HydrogeoUnit",
+    "@type": "GW_HydrogeoUnit",
     "name": "Calcaires jurassiques entre Ouche et Vingeanne"
   },
-  "isFeatureOfInterestOf": {
-    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-    "@graph": [
-      {
-        "@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2/S1",
-        "@type": "sosa:Observation",
-        "hasFeatureOfInterest": {
-          "@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
-          "@type": "gwml2:GW_HydrogeoUnit"
-        },
-        "hasResult": [
-          {
-            "@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2/S1&responseFormat=application/json",
-            "@type": "wml2:MeasurementTimeseries"
-          }
-        ],
-        "madeBySensor": "http://ressource.brgm-rec.fr/vocab/algorithmTypes/virtualSensor",
-        "observedProperty": {
-          "@id": "http://id.eaufrance.fr/par/1689.xml",
-          "@type": "skos:Concept",
-          "name": "Goundwater Level (in meter)"
-        },
-        "phenomenonTime": {
-          "hasBeginning": "2017-11-08T22:00:00.000Z",
-          "hasEnd": "2018-11-08T22:00:00.000Z"
-        },
-        "resultTime": "2017-11-08T22:00:00.000Z",
-        "usedProcedure": {
-          "@id": "http://ressource.brgm-rec.fr/vocab/HydroGeolModelType/GardeniaIfIamRight",
-          "@type": "skos:Concept",
-          "name": "Hydrogeological model"
+  "isFeatureOfInterestOf": [
+    {
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+      "@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2/S1",
+      "@type": "sosa:Observation",
+      "hasFeatureOfInterest": {
+        "@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
+        "@type": "GW_HydrogeoUnit"
+      },
+      "hasResult": [
+        {
+          "@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2/S1&responseFormat=application/json",
+          "@type": "wml2:MeasurementTimeseries"
         }
+      ],
+      "madeBySensor": "http://ressource.brgm-rec.fr/vocab/algorithmTypes/virtualSensor",
+      "observedProperty": {
+        "@id": "http://id.eaufrance.fr/par/1689.xml",
+        "@type": "skos:Concept",
+        "name": "Goundwater Level (in meter)"
+      },
+      "phenomenonTime": {
+        "hasBeginning": "2017-11-08T22:00:00.000Z",
+        "hasEnd": "2018-11-08T22:00:00.000Z"
+      },
+      "resultTime": "2017-11-08T22:00:00.000Z",
+      "usedProcedure": {
+        "@id": "http://ressource.brgm-rec.fr/vocab/HydroGeolModelType/GardeniaIfIamRight",
+        "@type": "skos:Concept",
+        "name": "Hydrogeological model"
       }
-    ]
-  },
+    }
+  ],
   "hasSampleRelationship": [
     {
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
       "relatedSample": {
-        "@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
-        "@type": "gwml2:GW_MonitoringSite",
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwlf/04398X0002-SONDAG.2",
+        "@type": "GW_MonitoringSite",
         "name": "forage privé (Bourberain-21)"
       }
     },
     {
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
       "relatedSample": {
-        "@id": "http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
-        "@type": "hyf:HY_HydrometricFeature",
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwlf/U124404001",
+        "@type": "HY_HydrometricFeature",
         "name": "La Tille à Champdôtre"
       }
     },
     {
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
       "relatedSample": {
-        "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/MeteoStation/sgwlf/07280",
         "@type": "sosa:Sample",
         "name": "DIJON-LONGVIC"
       }

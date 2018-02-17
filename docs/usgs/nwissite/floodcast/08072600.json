@@ -1,9 +1,5 @@
 {
-  "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
-  ],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "http://geojson.org/geojson-ld/geojson-context.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
   "name": "Buffalo Bayou at State Hwy 6 nr Addicks, TX",
@@ -30,9 +26,6 @@
   },
   "geometry": {
     "@type": "Point",
-    "coordinates": [
-      -95.4571,
-      29.7596
-    ]
+    "coordinates": [-95.4571, 29.7596]
   }
 }

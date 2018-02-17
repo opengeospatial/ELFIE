@@ -1,15 +1,15 @@
-setwd("~/Documents/Projects/ELFIE/ELFIE/R")
+setwd("~/Documents/Projects/ELFIE/ELFIE/Tools/R/")
 source("json_ld_functions.R")
 
 unlink("cache/*")
 
-use_cases <- list(FR_surface_ground_water_level_forecast = list(data_path = "../data/FR_surface_ground_water_level_forecast",
+use_cases <- list(FR_surface_ground_water_level_forecast = list(data_path = "../../data/FR_surface_ground_water_level_forecast",
                                   name = "Surface Water Ground Water Level Forecast",
                                   id = "sgwlf"),
-                  FR_surface_ground_water_interaction = list(data_path = "../data/FR_surface_ground_water_interaction",
+                  FR_surface_ground_water_interaction = list(data_path = "../../data/FR_surface_ground_water_interaction",
                               name = "Surface Water Ground Water Interaction",
                               id = "sgwi"),
-                  FR_surface_ground_surface_roundtrip = list(data_path = "../data/FR_surface_ground_surface_roundtrip",
+                  FR_surface_ground_surface_roundtrip = list(data_path = "../../data/FR_surface_ground_surface_roundtrip",
                             name = "Surface Water Ground Water Roundtrip",
                             id = "sgsr"))
 

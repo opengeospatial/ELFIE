@@ -1,11 +1,11 @@
-setwd("~/Documents/Projects/ELFIE/ELFIE/R")
+setwd("~/Documents/Projects/ELFIE/ELFIE/Tools/R/")
 source("json_ld_functions.R")
 
-use_cases <- list(huc12obs = list(data_path = "../data/huc12obs",
+use_cases <- list(huc12obs = list(data_path = "../../data/huc12obs",
                                   name = "Observations for a Hydrologic Unit"),
-                  uswb = list(data_path = "../data/uswb",
+                  uswb = list(data_path = "../../data/uswb",
                               name = "US Water Budgets"),
-                  cr = list(data_path = "../data/cr",
+                  cr = list(data_path = "../../data/cr",
                             name = "Champlain-Richelieu River Data Index"),
                   floodcast = list(data_path = "../data/floodcast",
                                    name = "Floodcast"))
@@ -114,7 +114,7 @@ for(id in created_ids) {
   
   whisker_list <- list(context = list(context_out), 
                        `json-ld` = json_out, 
-                       page_title = gsub("../docs", "", elfie_url_local(id)))
+                       page_title = gsub("../../docs", "", elfie_url_local(id)))
   
   writeLines(whisker::whisker.render(readLines("html_template.html"), 
                                      whisker_list),

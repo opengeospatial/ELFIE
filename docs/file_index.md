@@ -273,41 +273,6 @@
 
 ## Floodcast use case files
 
-### files for feature type dewberry-fe-harvey-floodcast  
-
-[https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1](https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1) [plain json](https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1.json)  
-  
-
-### files for feature type dewberry-fp-action-floodcast  
-
-[https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1](https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1) [plain json](https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1.json)  
-  
-
-### files for feature type dewberry-fp-major-floodcast  
-
-[https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1](https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1) [plain json](https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1.json)  
-  
-
-### files for feature type dewberry-fp-moderate-floodcast  
-
-[https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1](https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1) [plain json](https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1.json)  
-  
-
-### files for feature type tx-flowlines-floodcast  
-
-[https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou](https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou) [plain json](https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou.json)  
-  
-
-### files for feature type usgs-huc10-floodcast  
-
-[https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403](https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403) [plain json](https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403.json)  
-  
-
-### files for feature type usgs-nwissite-floodcast  
-
-[https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600](https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600) [plain json](https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600.json)  
-  
-
 ## Surface Water Ground Water Level Forecast use case files
 
 ### files for feature type FlowModel  
@@ -329,6 +294,12 @@
 ### files for feature type Borehole  
 
 [https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD](https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD) [plain json](https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD.json)  
+### files for feature type GW-HydrogeoUnit  
+
+[https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121) [plain json](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121.json)  
+### files for feature type GW-HydrogeoUnit  
+
+[https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT) [plain json](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT.json)  
 ### files for feature type GW-HydrogeoUnit  
 
 [https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01) [plain json](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01.json)  
