@@ -206,7 +206,7 @@
       "@type": "@id"
     },
     "linearElement": {
-      "@id": "`",
+      "@id": "hyf:linearElement",
       "@type": "@id"
     },
     "hydrometricNetwork": {
@@ -216,7 +216,8 @@
     "nexusRealization": {
       "@id": "hyf:nexusRealization",
       "@type": "@id"
-    }
+    },
+    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -225,14 +226,24 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710",
   "@type": "HY_WaterBody",
   "name": "rivière l'hallue",
   "downstreamWaterBody": {
-    "@id": "https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6–009-",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6--009-",
     "@type": "HY_WaterBody",
     "name": "La Somme Canalisée"
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "LINESTRING(2.44607607580261 49.9010571593228,2.44621474326451 49.9009670551511,2.44711842741183 49.9007420686066,2.44802162860381 49.9005610918905,2.44850757353699 49.9003809218461,2.4487161922176 49.900380964474,2.44906340807745 49.9004256501707,2.44982816848691 49.9008288560818,2.45045488536518 49.9010077497464,2.45080168357432 49.9009625945279,2.4511489645143 49.9008725234682,2.45184389053107 49.9009169651442,2.45351368018393 49.9012298766876,2.45365185522295 49.9011846789553,2.45372102620869 49.9009595047081,2.45427606353626 49.9006897865825)"
   }
 }
     </code></pre>
