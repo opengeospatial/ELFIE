@@ -1,24 +1,29 @@
 {
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",		
+		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwlf/04398X0002-SONDAG.2",
     "@type": "sosa:Sample",
     "name": "forage privé (Bourberain-21)",
-    "hasGeometry": "POINT(47.5288404979028 5.32424152077325)",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(5.32424152077325 47.5288404979028)"
+				},
 	"isSampleOf": {
 				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05", 
-				"@type": "gwml2:GW_HydrogeoUnit",
+				"@type": "GW_HydrogeoUnit",
                 "name": "Calcaires jurassiques entre Ouche et Vingeanne"
             },
-    "isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
+    "isFeatureOfInterestOf": [
 				{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",        
 					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2",
 					"@type": "sosa:Observation",
-					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
+					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwlf/04398X0002-SONDAG.2",
 					"hasResult": [
 						{
 							"@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2&responseFormat=application/json",
@@ -42,14 +47,13 @@
 					"name": "Electronic piezometric probe"
 				}
             }
-        ]
-    },
+	],
 	"hasSampleRelationship": [
 		{	
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://id.eaufrance.fr/StationHydro/U124404001",
-				"@type":"hyf:HY_HydrometricFeature",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwlf/U124404001",
+				"@type":"HY_HydrometricFeature",
 				"name":"La Tille à Champdôtre" }
 		},
         {
