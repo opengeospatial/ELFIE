@@ -8,9 +8,9 @@
     "@type": "HY_WaterBody",
     "name": "rivière l'hallue",
     "downstreamWaterBody": {
-			"@id":"https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6--009-",
+			"@id":"https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390552",
 			"@type":"HY_WaterBody",
-			"name":"La Somme Canalisée" 
+			"name":"Bras de Décharge Aval Rd Ecl 15 Daours de Vanne Bras de Décharge au Canal de la Somme" 
     },
 	"gsp:hasGeometry": {
 				"@type":"gsp:Geometry",
