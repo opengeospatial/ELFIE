@@ -8,7 +8,7 @@
     "@type": "gwml2:GW_HydrogeoUnit",
     "related": [
         {
-			"@id":"https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710",
+			"@id":"https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390700",
 			"@type":"HY_WaterBody",
 			"name":"rivière l'hallue" 
 		}
