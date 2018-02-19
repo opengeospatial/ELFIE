@@ -78,3 +78,54 @@ An analyst working in a cross boarder watershed or aquifer needs information cha
 * Aquifer data
 * Streamflow monitoring locations and data
 * Aquifer monitoring wells and data
+
+**Water budget summary**::
+A person interested in a basic summary of the water budget for a given watershed needs information about the watershed and its waterbudget data.
+
+*Relevant datasets*:::
+* Watershed boundary
+* Watershed outlet location
+* Waterbudget component data
+* Links to additional information
+
+**Watershed data index**::
+A person with a stake in the conditions of a given watershed needs an index of all water-quality related information about the watershed.
+
+*Relevant datasets*:::
+* Impaired (e.g. poluted or degraded) waters
+* Drinking water quality violation reports
+* Facilities with discharge permits
+* Water quality infrastructure investments
+* Watershed characteristics
+* Modeled data such as nutrient concentrations
+
+**Flood monitoring at bridges**::
+A jurisdiction with significant infrastructure near or over waterways needs a system to link waterways, bridges, and various observations for situational awareness and model calibration/validation.
+
+*Relavant datasets*:::
+* River network
+* Bridge inventory
+* Monitoring stations and data
+* Locations where model results are available
+
+**Flood Impact Study**::
+A hydrologist conducting a flood impact study needs to collect relevant information from parious agencies.
+
+*Relevant datasets*:::
+* River network
+* Watershed boundaries
+* Hydrologic locations of vulnerable infrastructure
+* Hydrologic locations of monitoring stations and data
+* Meteorological monitoring stations and data
+* Elevation data
+* Water table / aquifer data
+* Rainfall forecast
+
+**Surface water impacted groundwater level forecasting**::
+A groundwater extraction modeler needs information about surface water that replenishes groundwater so they can understand and forecast groundwater availability.
+
+*Relevant datasets*:::
+* Groundwater wells and level data
+* Surface water monitoring sites and flow data
+* Meteorological monitoring sites and observations
+* Output predictions at groundwater prediction wells
