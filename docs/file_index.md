@@ -268,10 +268,7 @@
 [https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1983_394_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1983_394_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1983_394_300.json)  
 [https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50415_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50415_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50415_300.json)  
 [https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50416_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50416_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50416_300.json)  
-[https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300.json)  
-  
-
-## Floodcast use case files
+[https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300.json)
 
 ## Surface Water Ground Water Level Forecast use case files
 
