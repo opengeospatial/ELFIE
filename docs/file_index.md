@@ -266,6 +266,10 @@
 [https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50480_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50480_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50480_300.json)  
 [https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50816_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50816_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50816_300.json)  
 [https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1983_394_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1983_394_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1983_394_300.json)  
+[https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50415_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50415_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50415_300.json)  
+[https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50416_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50416_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50416_300.json)  
+[https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300) [plain json](https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300.json)
+
 ## Surface Water Ground Water Level Forecast use case files
 
 ### files for feature type FlowModel  
@@ -287,6 +291,12 @@
 ### files for feature type Borehole  
 
 [https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD](https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD) [plain json](https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD.json)  
+### files for feature type GW-HydrogeoUnit  
+
+[https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121) [plain json](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121.json)  
+### files for feature type GW-HydrogeoUnit  
+
+[https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT) [plain json](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT.json)  
 ### files for feature type GW-HydrogeoUnit  
 
 [https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01) [plain json](https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01.json)  

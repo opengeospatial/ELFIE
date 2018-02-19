@@ -1,0 +1,80 @@
+[[Use_Cases]]
+== Use Case Summary
+
+=== Introduction
+ELFIE design work was directed by a number of use cases with extensive need 
+for linked environmental data. These use cases are either hurdles to systems they maintain 
+or would be nice additions to systems they rely on as users. Many of these
+use cases were described and used for discussion and vetting of ideas only, 
+others were taken further with implementation of example encoded linked data
+documents and client code to visualize data involved in the use case.  
+
+The full suite of use cases considered durring the design phase of the project 
+are described below. Each use cases takes the form of a simple description of 
+who or what system has an interest in what related datasets. Specific datasets are 
+listed to clarify the scope and provide a starting point for technical design
+work. Use cases that were implemented as demonstrations of the design outcomes 
+were described in more detail to include notional diagrams of how datasets 
+involved link to eachother, a thorough description of the use case, and an 
+example application that speaks to and/or satisfies the needs of the use case.
+
+=== Use Cases Considered in Design Process
+
+**River network linked data to address hydrologic drought and ecology**::
+Water consumers and decision makers are interested in potential ecological and economic impacts of additonal water use.
+
+*Relevant datasets*:::
+* River network
+* Incremental catchments
+* Low flow and temperature sensitive species distributions
+* Monitoring locations
+* Low flow and temperature forecasts
+* Ecological stream classification
+* Historical streamflow characteristics
+* Flow and temperature regulations
+
+**Stream water quality and quantity monitoring**::
+Water consumers are interested in ambient stream characteristics and water quality impacts of water allocation decisions.
+
+*Relevant datasets*:::
+* River network
+* Monitoring locations
+* Water quality data
+* Water quantity data
+* Water allocation information
+* Diversions and discharges
+
+**Flood risks and impacts**::
+A person in a flood-impacted area needs information about the risks to them for a forecast or ongoing flood event.
+
+*Relevant datasets*:::
+* River network
+* Stream flow and stage forecasts
+* Topography
+* Flood depth and extent data for event
+* Flood plain map(s)
+* Flood control assets
+* Impacted transportation assets
+* At risk critical infrastructure
+
+**Water quality impacts monitorying of mining activities**::
+A waterquality analyst needs to know what data is available to assess baseline and impacted conditions of a waterbody impacted by mine-related runoff.
+
+*Relevant datasets*:::
+* River network
+* On network waterbodies
+* Realtime water quality monitoring locations and data
+* Water quality sampling locations and data
+* Mine locations
+* Snowpack and runoff
+* River flow monitoring locations and data
+
+**Cross boarder monitoring index**::
+An analyst working in a cross boarder watershed or aquifer needs information characterizing their study region from another country of jurisdiction.
+
+*Relevant datasets*:::
+* River network data
+* Catchment data
+* Aquifer data
+* Streamflow monitoring locations and data
+* Aquifer monitoring wells and data

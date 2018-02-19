@@ -1,0 +1,14 @@
+[[Experiment_Outcomes_Summary]]
+== Summary of experiment and analysis of outcomes
+
+=== Introduction
+**Recap goals and experiment design -- what were our expectations that were being tested?**
+
+=== What Worked?
+**Describe standards and best practices that worked as expected.**
+
+=== What Didn't Work?
+**Describe instances where standards and best practices that didn't meet our expectations.**
+
+=== Additional Section?
+**Is more needed here? Maybe what didn't we test that we hoped to?**

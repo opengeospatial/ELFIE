@@ -9,8 +9,8 @@
   "image": "http://gin.gw-info.net/service/ngwds//en/wms/ngwd-wms/inset?REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=area&STYLES=&FORMAT=image/png&BGCOLOR=0xFFFFFF&TRANSPARENT=TRUE&SRS=EPSG:4326&BBOX=-73.3885747084599,45.1204099338932,-72.5268975189717,45.7666678260093&WIDTH=400&HEIGHT=300&TABLE=gw_data.hydrogeological_units&FIELD=id&ID=5",
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 45.4587,
-    "longitude": -73.0193
+    "schema:latitude": 45.4587,
+    "schema:longitude": -73.0193
   },
   "geometry": {
     "@type": "MultiPolygon",

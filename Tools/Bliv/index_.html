@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Cartographie des unités hydrogéologiques </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="jQuery-ui/themes/base/jquery-ui.css" type="text/css">
+	<link rel="stylesheet" href="Openlayers/theme/default/style.css" type="text/css">
+	<style type="text/css">
+		html,body { 
+			width: 100%;
+			height: 100%;;
+		}
+		#map {
+			width: 98%;
+            height: 98%;
+			border: 1px solid black;
+		}
+		#popup{
+			font-size: 14px;
+		}
+		#localisation{
+			margin-bottom: 5px;
+			width: 180px;
+		}
+		#locate{
+			margin-right: 10px;
+			float: right;
+		}
+	</style>
+
+<script type="text/javascript" src="http://api.ign.fr/geoportail/api/js/2.0.3/GeoportalExtended.js"></script>
+<script src='./Openlayers/infoFormat3.js'></script>
+<script src='./Openlayers/infoFormat2.js'></script>
+<script src='./Openlayers/infoFormat.js'></script>
+<script src='./jQuery/jquery-2.0.0.js'></script>
+<script src='./jQuery-ui/ui/jquery-ui.js'></script>
+<script type="text/javascript">
+	var lng = 2.351074;
+	var lat = 48.857487;
+	var zoom = 12;
+	var map;
+	window.onload= function() {
+	
+			iv= Geoportal.load(
+					 // div's ID:
+					 'viewerDiv',
+					 // API's keys:
+					 //['nvx8ebpiw8tu77k1pxrg3ozj'],
+					 ['xmboc5e0r96wq3pdfxkuy4z9'],
+					 {// map's center :
+									// longitude:
+									lon: lng,
+									// latitude:
+									lat: lat,
+									afterCentered: function(){},
+					 },
+					 //zoom level 
+					 null,
+					 //options
+					 {
+						layers:['ORTHOIMAGERY.ORTHOPHOTOS', 'ADMINISTRATIVEUNITS.BOUNDARIES','BUILDINGS.BUILDINGS','CADASTRALPARCELS.PARCELS'],
+						type:'js',
+						maxZoomLevel: 18,
+						onView: initMap,
+						viewerClass: Geoportal.Viewer.Defaul,
+					 }
+			);
+	};
+	function initMap(){
+		viewer = iv.getViewer() ;
+		map = iv.getViewer().getMap();
+	
+			// adding layer switcher control				
+			map.addControl(new Geoportal.Control.LayerSwitcher());
+			
+			//Creation of the vector layer to the map
+		
+		 var styleC = new OpenLayers.Style({
+                    pointRadius: "${radius}",
+                    fillColor: "#ffcc66",
+                    fillOpacity: 0.8,
+                    strokeColor: "#cc6633",
+                    strokeWidth: 2,
+                    strokeOpacity: 0.8
+                }, {
+                    context: {
+                        radius: function(feature) {
+                            return Math.min(feature.attributes.count, 7) *2;
+                        }
+                    }
+                });
+				
+				 var renderer = OpenLayers.Util.getParameters(window.location.href).renderer;
+				renderer = (renderer) ? [renderer] : OpenLayers.Layer.Vector.prototype.renderers;
+			
+			//couche ilots
+			
+			var tiled = new OpenLayers.Layer.Vector( "ilots",{
+            strategies: [new OpenLayers.Strategy.Fixed(),
+			//new OpenLayers.Strategy.Cluster({distance:80, threshold:4})
+			],
+				protocol: new OpenLayers.Protocol.Script({
+					url: "http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2Fclusters",
+					//callbackKey: "callback",
+					//Custom format to handle dbpedia SPARQL results
+					format: new OpenLayers.Format.infoFormat3(),
+					params: {
+						format: "json",
+						
+					//},
+					//filterToParams: function(filter, params) {
+						//BBOX serialization
+						//if (filter.type === OpenLayers.Filter.Spatial.BBOX) {
+						//	var bbox = filter.value;
+							//params.
+							query : 
+								"SELECT distinct ?subject ?wkt ?classe WHERE { "
+							//	+ "?subject  rdf:type <http://localhost:8080/datalift/project/shp-to-rdf/source/my-shp-rdf-1#my-shp>. "
+								+ "?subject  <http://data.ign.fr/ontology/geometrie#Geometrie> ?geom. "
+								+ "?geom <http://www.opengis.net/ont/geosparql#asWKT> ?wkt. "
+								+ "?subject <http://localhost:8080/datalift/project/shp-to-rdf/source/my-shp-rdf-1#classe> ?classe. "								
+								+ "} LIMIT 4000",
+						//}
+						//return params;
+					},
+				}),
+			projection: new OpenLayers.Projection("EPSG:4326"),	
+			styleMap: new OpenLayers.StyleMap({
+                        "default": styleC,
+                        "select": {
+                            fillColor: "#8aeeef",
+                            strokeColor: "#32a8a9"
+                        }
+                    }),
+					renderers: renderer,
+			minZoomLevel: 11,
+			//maxZoomLevel: 18,
+		});
+				
+			var infos = new OpenLayers.Layer.Vector("Monuments mérimée", {
+            strategies: [new OpenLayers.Strategy.Fixed(),
+			//new OpenLayers.Strategy.Cluster({distance:80, threshold:4})
+			],
+				protocol: new OpenLayers.Protocol.Script({
+					url: "http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2Fbati_merimee",
+					//callbackKey: "callback",
+					//Custom format to handle dbpedia SPARQL results
+					format: new OpenLayers.Format.infoFormat2(),
+					params: {
+						format: "json",
+						
+					//},
+					//filterToParams: function(filter, params) {
+						//BBOX serialization
+						//if (filter.type === OpenLayers.Filter.Spatial.BBOX) {
+						//	var bbox = filter.value;
+							//params.
+							query : 
+								"SELECT distinct ?subject ?wkt ?monument ?siecle WHERE { "
+								+ "?subject a <http://data.ign.fr/ontology/geometrie#Geometrie>; a <http://data.ign.fr/ontology/geometrie#MultiPolygon>."
+								+ "?subject <http://www.opengis.net/ont/geosparql#asWKT> ?wkt. "
+								+ "filter exists{?point1 <http://www.w3.org/2002/07/owl#sameAs> ?subject. }"
+								+ "{"
+								+ "select ?subject1 (sql:GROUP_CONCAT(?mnt,\" ; \") as ?monument) (sql:GROUP_CONCAT(?scle,\" ; \") as ?siecle) where {"
+								+ "?point <http://www.w3.org/2002/07/owl#sameAs> ?subject1. "
+								+ "?mnt  <http://data.ign.fr/ontology/geometrie#Geometrie> ?point. "
+								+ "optional{?mnt <http://localhost:9091/project/nathalie/source/merimee-mh-75-csv-rdf-1#scle> ?scle. }"
+								+ "}GROUP BY ?subject1}"
+								+ "FILTER (?subject1=?subject)"
+								+ "} LIMIT 4000",
+						//}
+						//return params;
+					},
+				}),
+			projection: new OpenLayers.Projection("EPSG:4326"),	
+			styleMap: new OpenLayers.StyleMap({
+                        "default": styleC,
+                        "select": {
+                            fillColor: "#8aeeef",
+                            strokeColor: "#32a8a9"
+                        }
+                    }),
+					renderers: renderer,
+			minZoomLevel: 11,
+			//maxZoomLevel: 18,
+		});
+		
+		var infos2 = new OpenLayers.Layer.Vector("Monuments DBpedia", {
+            strategies: [new OpenLayers.Strategy.Fixed()],
+				protocol: new OpenLayers.Protocol.Script({
+					url: "http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2Fbati_bdtopo",
+					//callbackKey: "callback",
+					//Custom format to handle dbpedia SPARQL results
+					format: new OpenLayers.Format.infoFormat(),
+					params: {
+						format: "json",
+						
+					query : 
+								"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> "
+								+ "SELECT ?subject ?wkt ?dbpedia WHERE { "
+								+ "?subject a <http://data.ign.fr/ontology/geometrie#Geometrie>."
+								+ "?subject <http://www.opengis.net/ont/geosparql#asWKT> ?wkt. "
+								+ "filter exists {?dbpedia1 <http://www.w3.org/2002/07/owl#sameAs> ?subject.} "
+								+ "{"
+								+ "select ?subject1 (sql:GROUP_CONCAT(?dbp,\" ; \") as ?dbpedia) where {"
+								+ "{?dbp <http://www.w3.org/2002/07/owl#sameAs> ?subject1.}"
+								+ "}GROUP BY ?subject1}"
+								+ "FILTER (?subject1=?subject)"
+								+ "} LIMIT 500",
+								}						
+					
+				}),
+			projection: new OpenLayers.Projection("EPSG:4326"),	
+			renderers: renderer,
+			minZoomLevel: 12,
+			
+		});
+			//Jquery UI dialogbox initialisation
+			var dialog = $("#dialog").dialog({height: 600, width: 600, autoOpen: false});
+			var dialog2 = $("#dialog2").dialog({height: 600, width: 600, autoOpen: false});
+			//Creation of the Select/Click on feature control
+			var selectControl = new OpenLayers.Control.SelectFeature([infos,infos2]);			
+			
+			
+			
+			
+			//Setting the callbacks on the events		
+			infos.events.on({
+				'featureselected': onFeatureSelect,
+				'featureunselected': onFeatureUnselect,
+			});				
+			//Setting the callbacks on the events
+			infos2.events.on({
+				'featureselected': onFeatureSelect2,
+				'featureunselected': onFeatureUnselect2,
+			});
+			//------------------------------------------------ fr.dbpedia------------------------
+			
+			
+			//On select of a vector feature
+		function onFeatureSelect2(evt) {
+			feature = evt.feature;
+			feature.style.fillColor="green";
+			console.log(evt);
+			evt.object.redraw();
+			var reqUrl = "http://fr.dbpedia.org/sparql?default-graph-uri=&query="+encodeURIComponent("SELECT  ?name ?thumb ?abs WHERE {");
+			var tableau=feature.attributes.dbpedia.value.split(" ; ");
+			reqUrl = reqUrl +encodeURIComponent( "{ OPTIONAL {<"+tableau[0]+">  dbpedia-owl:thumbnail ?thumb}. OPTIONAL {<"+tableau[0]+">  dbpedia-owl:abstract ?abs. FILTER( lang(?abs) = 'fr') .}. OPTIONAL {<"+tableau[0]+">  <http://www.w3.org/2000/01/rdf-schema#label> ?name.FILTER(lang(?name) = 'fr' )}. }");
+			for (var i=1; i<tableau.length; i++) {
+			 reqUrl = reqUrl + encodeURIComponent("union { OPTIONAL {<"+tableau[i]+">  dbpedia-owl:thumbnail ?thumb}. OPTIONAL {<"+tableau[i]+">  dbpedia-owl:abstract ?abs. FILTER( lang(?abs) = 'fr') .}. OPTIONAL {<"+tableau[i]+">  <http://www.w3.org/2000/01/rdf-schema#label> ?name. FILTER(lang(?name) = 'fr' )}.   }");
+			}
+			 reqUrl = reqUrl +encodeURIComponent("}")+"&format=application%2Fsparql-results%2Bjson";;
+			$.ajax({
+				type: "GET",
+				//url: "http://fr.dbpedia.org/sparql?default-graph-uri=&query="+encodeURIComponent("PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>  SELECT  ?name ?thumb ?abs WHERE { OPTIONAL {<"+feature.attributes.dbpedia.value+">  dbpedia-owl:thumbnail ?thumb}. OPTIONAL {<"+feature.attributes.dbpedia.value+">  dbpedia-owl:abstract ?abs. FILTER( lang(?abs) = 'fr') .}. OPTIONAL {<"+feature.attributes.dbpedia.value+">  <http://www.w3.org/2000/01/rdf-schema#label> ?name. FILTER(lang(?name) = 'fr' )}.   } LIMIT 1000")+"&format=application%2Fsparql-results%2Bjson" ,
+				url: reqUrl,
+				success :function(data){ 
+				var extra= null;
+				output = "";
+				var bindings = data.results.bindings;
+				 $("#dialog2").dialog("option", "title", "infos");
+				for ( var i in bindings ){
+				extra= bindings[i];
+				output += "<ul>";
+				if (extra.abs) output += "<li>Monument:  " + extra.name.value	 + "</li><br>"
+				if (extra.thumb) output += "<center><img src='" + extra.thumb.value + "'/></center><br>";
+				if (extra.abs) output += "<li> Déscription: " + extra.abs.value	 + "</li><br>"
+			
+			output += "<li> Lien: <a href=\""+ tableau[i] +"\">" + tableau[i] + "</a ></li><br>"
+				+ "</ul><hr>";
+				}
+			$("#dialog2").html(output);
+			dialog2.dialog("open");
+				},
+				
+				error:function(){
+				alert ('error');
+				}
+				});
+						
+		};
+		//On unselect of a vectore feature
+		function onFeatureUnselect2(evt) {
+		feature.style.fillColor="white";
+			
+			evt.object.redraw();
+			dialog2.dialog("close");
+		};
+		
+		//-------------------------------------merimee----------------------------
+		
+		
+			
+			//On select of a vector feature
+		function onFeatureSelect(evt) {
+			feature = evt.feature;
+			
+			var reqUrl = "http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2Fbati_merimee&query="+encodeURIComponent("SELECT distinct ?name ?scle ?abs WHERE {");
+			var tableau=feature.attributes.monument.value.split(" ; ");
+			reqUrl = reqUrl +encodeURIComponent( "{  OPTIONAL {<"+tableau[0]+">  <http://localhost:9091/project/nathalie/source/merimee-mh-75-csv-rdf-1#ppro> ?abs.}. OPTIONAL {<"+tableau[0]+">  <http://localhost:9091/project/nathalie/source/merimee-mh-75-csv-rdf-1#tico> ?name. }. OPTIONAL {<"+tableau[0]+">  <http://localhost:9091/project/nathalie/source/merimee-mh-75-csv-rdf-1#scle> ?scle. }.  }");
+			for (var i=1; i<tableau.length; i++) {
+			 reqUrl = reqUrl + encodeURIComponent(" union {  OPTIONAL {<"+tableau[i]+">  <http://localhost:9091/project/nathalie/source/merimee-mh-75-csv-rdf-1#ppro> ?abs.}. OPTIONAL {<"+tableau[i]+">  <http://localhost:9091/project/nathalie/source/merimee-mh-75-csv-rdf-1#tico> ?name. }. OPTIONAL {<"+tableau[i]+">  <http://localhost:9091/project/nathalie/source/merimee-mh-75-csv-rdf-1#scle> ?scle. }.  }");
+			}
+			reqUrl = reqUrl +encodeURIComponent("}")+"&format=application%2Fsparql-results%2Bjson";
+			$.ajax({
+				type: "GET",
+				//url: "http://fr.dbpedia.org/sparql?default-graph-uri=&query="+encodeURIComponent("PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>  SELECT  ?name ?thumb ?abs WHERE { OPTIONAL {<"+feature.attributes.dbpedia.value+">  dbpedia-owl:thumbnail ?thumb}. OPTIONAL {<"+feature.attributes.dbpedia.value+">  dbpedia-owl:abstract ?abs. FILTER( lang(?abs) = 'fr') .}. OPTIONAL {<"+feature.attributes.dbpedia.value+">  <http://www.w3.org/2000/01/rdf-schema#label> ?name. FILTER(lang(?name) = 'fr' )}.   } LIMIT 1000")+"&format=application%2Fsparql-results%2Bjson" ,
+				url: reqUrl,
+				data:{Accept: 'application/json'},
+				success :function(data){ 
+				var extra= null;
+				output="";
+				var bindings = data.results.bindings;
+				 $("#dialog").dialog("option", "title", "infos");
+				for ( var i in bindings ){
+				extra= bindings[i];
+				output += "<ul>";
+				
+				if (extra.name) output += "<li> Nom:  " + extra.name.value	 + "</li><br>"
+				if (extra.scle) output += "<li>   " + extra.scle.value	 + "</li><br>"
+				if (extra.abs) output += "<li> Déscription: " + extra.abs.value	 + "</li><br>"
+			
+			    //output += "<li> Lien: <a href='"+ feature.attributes.dbpedia.value +"'>" + feature.attributes.dbpedia.value + "</a ></li><br>"
+				+ "</ul><HR>";
+				}
+			$("#dialog").html(output);
+			dialog.dialog("open");
+				},
+				
+				error:function(){
+				alert ('error');
+				}
+				});
+						
+		};
+		//On unselect of a vector feature
+		function onFeatureUnselect(evt) {
+			dialog.dialog("close");
+		};
+		
+			
+			
+		
+			//Adding the previously created layers to the map
+			map.addLayer(infos);
+			map.addLayer(infos2);
+			map.addLayer(tiled);
+			
+			//adding scale control
+			map.addControl(new Geoportal.Control.GraphicScale(), new OpenLayers.Pixel(550,5));
+			//adding toolbox control
+			//var zm=new Geoportal.Control.ZoomBar();
+			var tl= new Geoportal.Control.ToolBox();
+			
+			map.addControl(tl);
+			//var lg= new Geoportal.Control.Legend(infos);
+			var pl= new Geoportal.Control.Panel();
+			map.addControl(pl);
+			pl.activate();
+			pl.redraw();
+			//Adding the select/click on features control on the map
+			map.addControl(selectControl);
+			selectControl.activate();
+			
+			//Set the lon/lat and zoom on the map
+			map.setCenter(
+				new OpenLayers.LonLat(lng, lat).transform(
+					new OpenLayers.Projection("EPSG:4326"),
+					map.getProjectionObject()
+				), zoom
+			);
+			
+	};
+</script>
+</head>
+<body >
+	<div id="legend"><img src="legend.jpg" style="position:absolute;right:-5px;top:290px;z-index: 1029;"/></div>
+	<div id="viewerDiv"></div>
+	<div id="dialog"></div>
+	<div id="dialog2"></div>
+</body>
+</html>

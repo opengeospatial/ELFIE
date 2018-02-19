@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
-<title>OGC Testbed-13:</title>
+<meta name="generator" content="Asciidoctor 1.5.6">
+<title>OGC Environmental Linked Features Interoperability Experiment Engineering Report</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -89,13 +89,12 @@ strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -131,7 +130,11 @@ strong strong{font-weight:400}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menu{color:rgba(0,0,0,.8)}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
 b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
 b.button:before{content:"[";padding:0 3px 0 2px}
 b.button:after{content:"]";padding:0 2px 0 3px}
@@ -198,7 +201,7 @@ table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
 table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon img{max-width:initial}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
@@ -254,13 +257,13 @@ table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
 table.tableblock{max-width:100%;border-collapse:separate}
 table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
-table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
-table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
-table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
-table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
-table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
-table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
 table.frame-topbot{border-width:1px 0}
@@ -281,10 +284,12 @@ ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
-ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -301,7 +306,8 @@ ol.lowergreek{list-style-type:lower-greek}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
+.colist>table tr>td:first-of-type img{max-width:initial}
 .colist>table tr>td:last-of-type{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
 .imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
@@ -364,6 +370,7 @@ div.unbreakable{page-break-inside:avoid}
 .yellow{color:#bfbf00}
 .yellow-background{background-color:#fafa00}
 span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
@@ -511,7 +518,7 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="book">
 <div id="header">
-<h1>OGC Testbed-13:</h1>
+<h1>OGC Environmental Linked Features Interoperability Experiment Engineering Report</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -535,10 +542,10 @@ table.CodeRay td.code>pre{padding:0}
 <p>Category: Public Engineering Report</p>
 </div>
 <div class="paragraph">
-<p>Editor: Your Name</p>
+<p>Editor: David Blodgett</p>
 </div>
 <div class="paragraph">
-<p>Title: OGC Testbed-13:</p>
+<p>Title: OGC Environmental Linked Features Interoperability Experiment Engineering Report</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -601,25 +608,59 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </ul>
 </li>
 <li><a href="#_abbreviated_terms">4. Abbreviated terms</a></li>
-<li><a href="#Overview">5. Overview</a></li>
-<li><a href="#ExampleClause">6. Example Clause</a>
+<li><a href="#Overview">5. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_headlines">6.1. Headlines</a></li>
-<li><a href="#_figures">6.2. Figures</a></li>
-<li><a href="#_recommended_asciidoc_environment">6.3. Recommended Asciidoc Environment</a></li>
-<li><a href="#_asciidoc_conversion">6.4. Asciidoc Conversion</a></li>
-<li><a href="#_asciidoc_tor_syntax_help">6.5. Asciidoc(tor) Syntax Help</a></li>
-<li><a href="#_citations">6.6. Citations</a></li>
+<li><a href="#_scope">5.1. Scope</a></li>
 </ul>
 </li>
-<li><a href="#_abstract_test_suite">Appendix A: Abstract Test Suite</a></li>
-<li><a href="#_xml_schema_documents">Appendix C: XML Schema Documents</a>
+<li><a href="#Objectives">6. Objectives</a>
 <ul class="sectlevel2">
-<li><a href="#_uml_model">Appendix B: UML model</a></li>
+<li><a href="#_goals">6.1. Goals</a></li>
+<li><a href="#_assumptions">6.2. Assumptions</a></li>
+<li><a href="#_scope_2">6.3. Scope</a></li>
+<li><a href="#_experiment_summary">6.4. Experiment Summary</a></li>
 </ul>
 </li>
-<li><a href="#_revision_history">Appendix D: Revision History</a></li>
-<li><a href="#Bibliography">Appendix E: Bibliography</a></li>
+<li><a href="#Use_Cases">7. Use Case Summary</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction">7.1. Introduction</a></li>
+<li><a href="#_use_cases_considered_in_design_process">7.2. Use Cases Considered in Design Process</a></li>
+</ul>
+</li>
+<li><a href="#Standards_Best_Practices">8. Applicable Best Practices and Standards</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_2">8.1. Introduction</a></li>
+<li><a href="#_ogc_web_standards">8.2. OGC Web Standards</a></li>
+<li><a href="#_ogc_domain_models">8.3. OGC Domain Models</a></li>
+<li><a href="#_w3c">8.4. W3C</a></li>
+<li><a href="#_json_ld">8.5. JSON-LD</a></li>
+</ul>
+</li>
+<li><a href="#Relations_Contexts">9. Relations and JSON-LD Contexts</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_3">9.1. Introduction</a></li>
+<li><a href="#_relations">9.2. Relations</a></li>
+<li><a href="#_contexts">9.3. Contexts</a></li>
+</ul>
+</li>
+<li><a href="#Experiment_Outcomes_Summary">10. Summary of experiment and analysis of outcomes</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_4">10.1. Introduction</a></li>
+<li><a href="#_what_worked">10.2. What Worked?</a></li>
+<li><a href="#_what_didn_t_work">10.3. What Didn&#8217;t Work?</a></li>
+<li><a href="#_additional_section">10.4. Additional Section?</a></li>
+</ul>
+</li>
+<li><a href="#Issues_Recommendations">11. Issues and Recommendations for Future Work.</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_5">11.1. Introduction</a></li>
+<li><a href="#_ogc_service_standards_and_implementation_issues">11.2. OGC Service Standards and Implementation issues.</a></li>
+<li><a href="#_domain_feature_model_issues">11.3. Domain Feature Model Issues</a></li>
+<li><a href="#_general_linked_data_issues">11.4. General linked data issues</a></li>
+</ul>
+</li>
+<li><a href="#_revision_history">Appendix A: Revision History</a></li>
+<li><a href="#Bibliography">Appendix B: Bibliography</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -677,8 +718,8 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">editor</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">from org</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">David Blodgett</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U.S. Geological Survey</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contributor</p></td>
@@ -791,374 +832,432 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </table>
 </div>
 <div class="paragraph">
-<p>Text goes here&#8230;&#8203;</p>
+<p>The ELFIE is intended to test existing OGC and W3C standards with the goal of establishing a best practice for exposing links between and among environmental domain and sampling features.
+The IE is focused on two cross-domain use cases: 1) exposing topological and domain feature model relationships between features and 2) description of sampling data available for and linked to sampled domain features
+While addressing these use cases, the IE will strive to address issues of encoding data as specific views of a linked data graph that would be passed between systems.
+These linked data graph views are expected to support archictures involving linked data catalogs and registries.
+For example, data providers can use the linked data graph views as a way to advertise their monitoring or domain features to catalogs or other applications that want to crawl and index available data.
+Similarly, integrated catalogs that index and construct links between features can use the views as a linked data response to search queries.</p>
+</div>
+<div class="paragraph">
+<p>Current OGC services, while flexible and capable, do not allow exposure of features in a resource oriented way and provide opaque interfaces to structured and/or inter-related content.
+The encodings demonstrated in ELFIE turn the normal OGC service pattern (GetCapabilities followed by introspection to understand contents) inside out by encoding associations between features as linked data predicates.
+This approach takes the form of subject-resource predicate-association object-resource where the resources may be OGC web service requests.
+This leverages the power of services such as WFS to provide feature instances, but expresses the structure of complex features or cross-service associated features explicitely.
+The scope of this work could have easily gotten out of control.
+To focus the work, the IE attempted to avoid issues not directly related to encoding linked data documents as would be passed from server to client via http.</p>
+</div>
+<div class="paragraph">
+<p>As described in detail later, the IE has specified two constrained views of a resolved linked data graph that are specified with modular SHaCL shapes.
+These specific graph views could be implemented using the "_view" poattern of the Linked Data API or as the payload returned from a REST API endpoint.
+Using this approach, the recommendation takes advantage of the power and flexibility of Linked Open Data while providing just enough constraint and guidance to encourage interoperability.
+By specifying a partially resolve graph view, it also allows resources that are not traversable as linked open data (for watever reason) to be incorporated into a linked data system.
+This mechanism should provide a gateway to inclusion in and understanding the value of the Linked Open Data cloud.</p>
+</div>
+<div class="sect2">
+<h3 id="_scope"><a class="anchor" href="#_scope"></a>5.1. Scope</h3>
+<div class="paragraph">
+<p>Out of scope:
+Identifier permanence / referential integrity and implementation patterns to address it.
+Arrangements around discovery of inbound and outbound links. Links are the responsibility of the data provider only.
+ELFIE will not seek to solve problems regarding network architecture for resolving links or systems design and governance for applications that store and retrieving links or concept relationships.</p>
+</div>
+<div class="paragraph">
+<p>“just enough” semantic annotation that allows us to traverse links to and among monitoring data and domain features.
+Note that inclusion of other properties is encouraged and implementors can ignore things that aren&#8217;t in the recommendation.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ExampleClause"><a class="anchor" href="#ExampleClause"></a>6. Example Clause</h2>
+<h2 id="Objectives"><a class="anchor" href="#Objectives"></a>6. Objectives</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="title">Instructions</div>
-<div class="paragraph">
-<p>This section explains some concepts frequently required by Asciidoc novices. Please use this file as a template for your own clauses.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="sect2">
-<h3 id="_headlines"><a class="anchor" href="#_headlines"></a>6.1. Headlines</h3>
+<h3 id="_goals"><a class="anchor" href="#_goals"></a>6.1. Goals</h3>
 <div class="paragraph">
-<p>All headlines are marked by "=" signs. The top level in each each file starts with level 2 ("=="). Important: For whatever strange reason, headings in annexes are marked differently.</p>
+<p>Functional goals of ELFIE focused on the description and use of links
+between and among features described by domain-specific feature models and
+observations data that describe the features. Within this, ELFIE aimed to
+leverage existing standards and best practices while maintaining a high
+degree of simplicity toward the goal of adoptibility by developers and
+users with a wide array of technical skill levels. Combining these goals
+led to IE participants to seek solutions that</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>are ubiquitous and easily adoptible in any programming language,</p>
+</li>
+<li>
+<p>apply best practices for linked data on the web,</p>
+</li>
+<li>
+<p>and adhere, to the extent possible to standard taxonomies and ontologies.</p>
+</li>
+</ol>
 </div>
-<div class="sect2">
-<h3 id="_figures"><a class="anchor" href="#_figures"></a>6.2. Figures</h3>
 <div class="paragraph">
-<p>If you want to reference a figure by using a figure number, it is important to use the following syntax. The figure identifier for <a href="#img_overviewSimple">Figure 1</a> is the first statement of the header. Please adapt the width as appropriate.</p>
-</div>
-<div id="img_overviewSimple" class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/t13.png" alt="t13" width="800">
-</div>
-<div class="title">Figure 1. High level architecture of Testbed-13</div>
-</div>
-<div class="paragraph">
-<p>It is important that you use the same syntax for all images, otherwise the automatic numbering is corrupted!</p>
+<p>The IE participants took a positive view (assumption)&#8201;&#8212;&#8201;that the above
+goals are possible and sought to test this assumption through design and
+implementation of compelling test use cases.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_recommended_asciidoc_environment"><a class="anchor" href="#_recommended_asciidoc_environment"></a>6.3. Recommended Asciidoc Environment</h3>
-<div class="paragraph">
-<p>We recommend to use <a href="http://asciidoctor.org">asciidoctor</a> and <a href="http://asciidoctor.org/docs/convert-asciidoc-to-pdf/">asciidoctor-pdf</a> in combination with the <a href="https://atom.io">Atom</a> editor.</p>
-</div>
-<div class="paragraph">
-<p>In Atom, you should install the following packages:</p>
-</div>
-<div class="ulist">
-<ul>
+<h3 id="_assumptions"><a class="anchor" href="#_assumptions"></a>6.2. Assumptions</h3>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>asciidoc-preview</p>
+<p>A common approach to encoding links between and among environmental
+domain features which allow cross-domain and cross-system sharing and
+interoperability of such linked information is possible and desirable</p>
 </li>
 <li>
-<p>autocomplete-asciidoc</p>
+<p>Existing and pending OGC standards for the encoding of environmental
+observation data in an integrated dataset of features can be linked
+according to ReSTful and Linked Data principles</p>
 </li>
 <li>
-<p>language-asciidoc</p>
+<p>The ability to encode documents containing links between and among
+monitoring sites and environmental domain features in a common way will
+enable automation and lines of inquiry that are not possible without
+manual intervention today.</p>
 </li>
 <li>
-<p>markdown-writer</p>
+<p>While currently not apparent given existing encodings, implementation
+standards, and best practices, a reusable approach to encode documents
+that use these information models in cross-disciplinary applications is
+doable.</p>
 </li>
-<li>
-<p>platformio-IDE-terminal</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This environment allows you to use keyboard shortcuts, autocomplete, syntax highlighting and a rendered preview for asciidoc; and provides you an terminal window within the editor to convert your asciidoc to html and pdf.</p>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_asciidoc_conversion"><a class="anchor" href="#_asciidoc_conversion"></a>6.4. Asciidoc Conversion</h3>
-<div class="paragraph">
-<p>In order to achieve a uniform look-and-feel of all ERs in both HTML and PDF, we have provided a css and theme file. The following commands can be used to convert the ER:</p>
-</div>
-<div class="ulist">
-<ul>
+<h3 id="_scope_2"><a class="anchor" href="#_scope_2"></a>6.3. Scope</h3>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>asciidoctor er.adoc for HTML</p>
+<p>In order to focus this IE, only environmental domain models concerning
+landscape interactions with the hydrologic cycle will be considered.</p>
 </li>
 <li>
-<p>asciidoctor-pdf -a pdf-stylesdir=resources -a pdf-style=ogc -a pdf-fontsdir=resources/fonts cfp.adoc</p>
+<p>Focus will be on 1) linked data documents that contain collections of
+linked features and related observations and 2) feature or observation
+representation documents that contain links to related features or
+observations.</p>
 </li>
-</ul>
+<li>
+<p>ELFIE will not seek to solve problems regarding network
+architecture for resolving links or systems design and governance for
+applications that store and retrieving links or concept relationships.</p>
+</li>
+<li>
+<p>Issues related to default behavior when dereferencing an identifier,
+while of great importance to ELFIE goals, is beyond the scope of this IE.
+Experiments of the IE may provide insight into the problem, but the IE
+will not seek to analyze the issue thoroughly.</p>
+</li>
+<li>
+<p>Existing ontologies and vocabularies will be used wherever possible.</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_asciidoc_tor_syntax_help"><a class="anchor" href="#_asciidoc_tor_syntax_help"></a>6.5. Asciidoc(tor) Syntax Help</h3>
+<h3 id="_experiment_summary"><a class="anchor" href="#_experiment_summary"></a>6.4. Experiment Summary</h3>
 <div class="paragraph">
-<p>Is available e.g. here: <a href="http://asciidoctor.org/docs/" class="bare">http://asciidoctor.org/docs/</a></p>
+<p>To test the assumptions described above, a number of example use cases
+(described below) were used to guide discussion and testing of potential
+technical solutions. The use cases were hypothetical, clearly of value to
+the domain, and technically difficult using existing technologies and
+practices. Discussion of use cases was predicated on the assumption that
+these use cases would be implemented as test cases under the IE. While
+time and resources did not allow all these use cases to be implemented for
+ELFIE, the use cases provided invaluable context and example systems to
+guide discussion and vetting of design alternatives.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_citations"><a class="anchor" href="#_citations"></a>6.6. Citations</h3>
 <div class="paragraph">
-<p>Please use the following syntax to insert citiations:</p>
-</div>
-<div class="paragraph">
-<p>[<a href="#VanZyl2009">1</a>]</p>
+<p>The specifics of technologies and practices the IE tested are described
+below. With a clear direction, participants implemented test documents and
+code to exercise and demonstrate the IE outcomes. Applying some of the use
+cases considered in the design phase led to some refinement to the design,
+but the design selected largely satisfied the goals of the IE with some
+clear next steps and further work needed to formalize data models,
+encodings, and best practices. The experiment succeeded in identifying
+shortcomings of some existing practices and gaps in the standards base
+line that need to be filled. Putting further work and needed new work
+aside, the IE failed to find significant or fundamental problems with the
+best practices and standards tested.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_abstract_test_suite"><a class="anchor" href="#_abstract_test_suite"></a>Appendix A: Abstract Test Suite</h2>
+<h2 id="Use_Cases"><a class="anchor" href="#Use_Cases"></a>7. Use Case Summary</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>7.1. Introduction</h3>
 <div class="paragraph">
-<p>An Abstract Test Suite may be relevant to an Engineering Report.</p>
-</div>
-<div class="paragraph">
-<p>An Abstract Test Suite is specified in Clause 9 and Annex A of ISO 19105. That Clause and Annex specify the ISO/TC 211 requirements for Abstract Test Suites. Examples of Abstract Test Suites are available in an annex of most ISO 191XX documents, one of the more useful is in ISO 19136. Note that this guidance may be more abstract than needed in an OGC® Implementation Standard.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. A.1.1	Conformance level 1</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/test/case/id</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Confirm that the IUT satisfies all applicable requirements for conformance level 1.</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>GetCapabilities (mandatory)</p>
-</li>
-<li>
-<p>DescribeRecord (mandatory)</p>
-</li>
-<li>
-<p>GetRecords (mandatory)</p>
-</li>
-<li>
-<p>GetRecordById (mandatory)</p>
-</li>
-<li>
-<p>GetRepositoryItem (mandatory)</p>
-</li>
-<li>
-<p>GetDomain (optional)</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 07-110: cl. 2.2</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. A.1.2	Test case for validity of XML response entity</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse" class="bare">http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse</a></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The XML response entity is valid.</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validate content of response entity against corresponding element declaration.</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 07-006r1: cl. 10.2.5.1, p. 118</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 4. A.2.1	Conformance level 2</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/test/case/id</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Confirm that the IUT satisfies all applicable requirements for conformance level 1.</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top"><div><div class="paragraph">
-<p>Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>GetCapabilities (mandatory)</p>
-</li>
-<li>
-<p>DescribeRecord (mandatory)</p>
-</li>
-<li>
-<p>GetRecords (mandatory)</p>
-</li>
-<li>
-<p>GetRecordById (mandatory)</p>
-</li>
-<li>
-<p>GetRepositoryItem (mandatory)</p>
-</li>
-<li>
-<p>GetDomain (optional)</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 07-110: cl. 2.2</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 5. A.2.2	Test case for validity of XML response entity</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test identifier</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse" class="bare">http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse</a></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test purpose:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The XML response entity is valid.</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test method:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validate content of response entity against corresponding element declaration.</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Requirement:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OGC 07-006r1: cl. 10.2.5.1, p. 118</p></td>
-</tr>
-<tr>
-<th class="tableblock halign-right valign-top"><p class="tableblock">Test type:</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Capability</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_xml_schema_documents"><a class="anchor" href="#_xml_schema_documents"></a>Appendix C: XML Schema Documents</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>XML Schema Documents may be relevant to an Engineering Report.</p>
+<p>ELFIE design work was directed by a number of use cases with extensive need
+for linked environmental data. These use cases are either hurdles to systems they maintain
+or would be nice additions to systems they rely on as users. Many of these
+use cases were described and used for discussion and vetting of ideas only,
+others were taken further with implementation of example encoded linked data
+documents and client code to visualize data involved in the use case.</p>
 </div>
 <div class="paragraph">
-<p>The term “XML schema“ means all the XML schema parts having the same XML namespace, usually separated into multiple XML Schema Document files (with the file type “.xsd“. The XML schema parts in one XML namespace are usually separated into multiple XML Schema Documents to ease human understanding.</p>
-</div>
-<div class="paragraph">
-<p>In addition to this document, this report includes several XML Schema Documents. These XML Schema Documents are bundled in a zip file with the present document.</p>
-</div>
-<div class="paragraph">
-<p>The TBD abilities now specified in this document use TBD specified XML Schema Documents included in the zip file with this document. These XML Schema Documents combine the XML schema fragments listed in various subclauses of this document, eliminating duplications.</p>
-</div>
-<div class="paragraph">
-<p>These XML Schema Documents roughly match the TBD UML packages described in Annex B, and are named:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>TBD.xsd
-TBD.xsd</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>These XML Schema Documents use and build on the OWS common XML Schema Documents specified [OGC 06-121r3], named:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ows19115subset.xsd
-owsCommon.xsd
-owsDataIdentification.xsd
-owsExceptionReport.xsd
-owsGetCapabilities.xsd
-owsOperationsMetadata.xsd
-owsServiceIdentification.xsd
-owsServiceProvider.xsd</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>All these XML Schema Documents contain documentation of the meaning of each element and attribute, and this documentation shall be considered normative as specified in Subclause 11.6.3 of [OGC 06-121r9].</p>
-</div>
-<div class="listingblock">
-<div class="title">GetCapabilities.xsd</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;ows:Operation</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">GetCapabilities</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-  <span class="tag">&lt;ows:DCP&gt;</span>
-    <span class="tag">&lt;ows:HTTP&gt;</span>
-      <span class="tag">&lt;ows:Post</span> <span class="attribute-name">xlink:href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/?</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-        <span class="tag">&lt;ows:Constraint</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PostEncoding</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-          <span class="tag">&lt;allowedValues&gt;</span>
-            <span class="tag">&lt;ows:Value&gt;</span>SOAP<span class="tag">&lt;/ows:Value&gt;</span>
-          <span class="tag">&lt;/ows:AllowedValues&gt;</span>
-        <span class="tag">&lt;/ows:Constraint&gt;</span>
-      <span class="tag">&lt;/ows:Post&gt;</span>
-    <span class="tag">&lt;/ows:HTTP&gt;</span>
-  <span class="tag">&lt;/ows:DCP&gt;</span>
-<span class="tag">&lt;/ows:Operation&gt;</span>
-<span class="tag">&lt;ows:Operation</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">GetTile</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-  <span class="tag">&lt;ows:DCP&gt;</span>
-    <span class="tag">&lt;ows:HTTP&gt;</span>
-      <span class="tag">&lt;ows:Post</span> <span class="attribute-name">xlink:href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/?</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-        <span class="tag">&lt;ows:Constraint</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">PostEncoding</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-          <span class="tag">&lt;ows:AllowedValues&gt;</span>
-            <span class="tag">&lt;ows:Value&gt;</span>SOAP<span class="tag">&lt;/ows:Value&gt;</span>
-          <span class="tag">&lt;/ows:AllowedValues&gt;</span>
-        <span class="tag">&lt;/ows:Constraint&gt;</span>
-      <span class="tag">&lt;/ows:Post&gt;</span>
-    <span class="tag">&lt;/ows:HTTP&gt;</span>
-  <span class="tag">&lt;/ows:DCP&gt;</span>
-<span class="tag">&lt;/ows:Operation&gt;</span></code></pre>
+<p>The full suite of use cases considered durring the design phase of the project
+are described below. Each use cases takes the form of a simple description of
+who or what system has an interest in what related datasets. Specific datasets are
+listed to clarify the scope and provide a starting point for technical design
+work. Use cases that were implemented as demonstrations of the design outcomes
+were described in more detail to include notional diagrams of how datasets
+involved link to eachother, a thorough description of the use case, and an
+example application that speaks to and/or satisfies the needs of the use case.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_uml_model"><a class="anchor" href="#_uml_model"></a>Appendix B: UML model</h3>
-<div class="paragraph">
-<p>A UML model may be relevant to an Engineering Report. This template thus includes this annex as the place for recording this UML model.</p>
+<h3 id="_use_cases_considered_in_design_process"><a class="anchor" href="#_use_cases_considered_in_design_process"></a>7.2. Use Cases Considered in Design Process</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>River network linked data to address hydrologic drought and ecology</strong></dt>
+<dd>
+<p>Water consumers and decision makers are interested in potential ecological and economic impacts of additonal water use.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>River network</p>
+</li>
+<li>
+<p>Incremental catchments</p>
+</li>
+<li>
+<p>Low flow and temperature sensitive species distributions</p>
+</li>
+<li>
+<p>Monitoring locations</p>
+</li>
+<li>
+<p>Low flow and temperature forecasts</p>
+</li>
+<li>
+<p>Ecological stream classification</p>
+</li>
+<li>
+<p>Historical streamflow characteristics</p>
+</li>
+<li>
+<p>Flow and temperature regulations</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Instructions and guidelines on the usage of UML models are provided in OGC document <a href="https://portal.opengeospatial.org/files/?artifact_id=38867"> OGC-121r9</a>.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Stream water quality and quantity monitoring</strong></dt>
+<dd>
+<p>Water consumers are interested in ambient stream characteristics and water quality impacts of water allocation decisions.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>River network</p>
+</li>
+<li>
+<p>Monitoring locations</p>
+</li>
+<li>
+<p>Water quality data</p>
+</li>
+<li>
+<p>Water quantity data</p>
+</li>
+<li>
+<p>Water allocation information</p>
+</li>
+<li>
+<p>Diversions and discharges</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Flood risks and impacts</strong></dt>
+<dd>
+<p>A person in a flood-impacted area needs information about the risks to them for a forecast or ongoing flood event.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>River network</p>
+</li>
+<li>
+<p>Stream flow and stage forecasts</p>
+</li>
+<li>
+<p>Topography</p>
+</li>
+<li>
+<p>Flood depth and extent data for event</p>
+</li>
+<li>
+<p>Flood plain map(s)</p>
+</li>
+<li>
+<p>Flood control assets</p>
+</li>
+<li>
+<p>Impacted transportation assets</p>
+</li>
+<li>
+<p>At risk critical infrastructure</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Appendix D: Revision History</h2>
+<h2 id="Standards_Best_Practices"><a class="anchor" href="#Standards_Best_Practices"></a>8. Applicable Best Practices and Standards</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_2"><a class="anchor" href="#_introduction_2"></a>8.1. Introduction</h3>
+<div class="paragraph">
+<p><strong>Derive from activity plan and scope notes</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_web_standards"><a class="anchor" href="#_ogc_web_standards"></a>8.2. OGC Web Standards</h3>
+<div class="paragraph">
+<p><strong>Re: WFS, SOS, and other applicable feature and observations web (service) standards.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_domain_models"><a class="anchor" href="#_ogc_domain_models"></a>8.3. OGC Domain Models</h3>
+<div class="paragraph">
+<p><strong>Re: O&amp;M, GWML2, HY_Features, etc.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_w3c"><a class="anchor" href="#_w3c"></a>8.4. W3C</h3>
+<div class="paragraph">
+<p><strong>Data on the web and spatial data on the web</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_json_ld"><a class="anchor" href="#_json_ld"></a>8.5. JSON-LD</h3>
+<div class="paragraph">
+<p><strong>Schema.org compatibility and applicability to data models and linking standards</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Relations_Contexts"><a class="anchor" href="#Relations_Contexts"></a>9. Relations and JSON-LD Contexts</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>9.1. Introduction</h3>
+<div class="paragraph">
+<p><strong>Overview of and scope of contexts and relations used.</strong>
+<strong>Rationale and motivation for selection of core and extended relations</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_relations"><a class="anchor" href="#_relations"></a>9.2. Relations</h3>
+<div class="paragraph">
+<p><strong>Broken down by source&#8201;&#8212;&#8201;schema.org, geojson-ld, sosa, owl, hy_features, gwml2, &#8230;&#8203;</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contexts"><a class="anchor" href="#_contexts"></a>9.3. Contexts</h3>
+<div class="paragraph">
+<p><strong>Describe each context and its utility</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Experiment_Outcomes_Summary"><a class="anchor" href="#Experiment_Outcomes_Summary"></a>10. Summary of experiment and analysis of outcomes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_4"><a class="anchor" href="#_introduction_4"></a>10.1. Introduction</h3>
+<div class="paragraph">
+<p><strong>Recap goals and experiment design&#8201;&#8212;&#8201;what were our expectations that were being tested?</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_worked"><a class="anchor" href="#_what_worked"></a>10.2. What Worked?</h3>
+<div class="paragraph">
+<p><strong>Describe standards and best practices that worked as expected.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_didn_t_work"><a class="anchor" href="#_what_didn_t_work"></a>10.3. What Didn&#8217;t Work?</h3>
+<div class="paragraph">
+<p><strong>Describe instances where standards and best practices that didn&#8217;t meet our expectations.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_section"><a class="anchor" href="#_additional_section"></a>10.4. Additional Section?</h3>
+<div class="paragraph">
+<p><strong>Is more needed here? Maybe what didn&#8217;t we test that we hoped to?</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Issues_Recommendations"><a class="anchor" href="#Issues_Recommendations"></a>11. Issues and Recommendations for Future Work.</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_5"><a class="anchor" href="#_introduction_5"></a>11.1. Introduction</h3>
+<div class="paragraph">
+<p><strong>High level summary of the kinds of issues we found and what future work the IE implies</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_service_standards_and_implementation_issues"><a class="anchor" href="#_ogc_service_standards_and_implementation_issues"></a>11.2. OGC Service Standards and Implementation issues.</h3>
+<div class="paragraph">
+<p><strong>WFS issues and recs for WFS3</strong>
+<strong>SOS and SensorThings commentary?</strong>
+<strong>others?</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_domain_feature_model_issues"><a class="anchor" href="#_domain_feature_model_issues"></a>11.3. Domain Feature Model Issues</h3>
+<div class="paragraph">
+<p><strong>Availability of useful encodings / practices to generate them</strong>
+<strong>Monitoring networks <a href="https://github.com/opengeospatial/ELFIE/issues/65">issue 65</a></strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_general_linked_data_issues"><a class="anchor" href="#_general_linked_data_issues"></a>11.4. General linked data issues</h3>
+<div class="paragraph">
+<p><strong>Default behavior for resolution of a URI&#8201;&#8212;&#8201;esp. one with alternatives <a href="https://github.com/opengeospatial/ELFIE/issues/32">issue 32</a></strong>
+<strong>Picky details of namespace URIs and identifiers <a href="https://github.com/opengeospatial/ELFIE/issues/60">issue 60</a></strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Appendix A: Revision History</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -1176,7 +1275,7 @@ owsServiceProvider.xsd</pre>
 </table>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 6. Revision History</caption>
+<caption class="title">Table 2. Revision History</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -1227,61 +1326,17 @@ owsServiceProvider.xsd</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Appendix E: Bibliography</h2>
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Appendix B: Bibliography</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a id="VanZyl2009"></a>T. van Zyl, I. Simonis, and G. McFerren, “The Sensor Web: Systems of Sensor Systems,” <em>International Journal of Digital Earth</em>, vol. 2, no. 1, pp. 16–30, Mar. 2009.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="title">Example Bibliography (Delete this note).</div>
 <div class="paragraph">
-<p>The TC has approved Springer LNCS as the official document citation type.</p>
-</div>
-<div class="paragraph">
-<p>Springer LNCS is widely used in technical and computer science journals and other publications</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For citations in the text please use square brackets and consecutive numbers: [1], [2], [3]</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>– Actual References:</p>
-</div>
-<div class="paragraph">
-<p>[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p>
-</div>
-<div class="paragraph">
-<p>[n] Web: Author Surname, A.: Title, <a href="http://Website-Url" class="bare">http://Website-Url</a></p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p></p>
-</div>
-<div id="OGC2015" class="paragraph">
-<p>[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).</p>
+<p>bibliography::[]</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-12 14:08:32 CEST
+Last updated 2018-02-08 10:18:57 CST
 </div>
 </div>
 </body>

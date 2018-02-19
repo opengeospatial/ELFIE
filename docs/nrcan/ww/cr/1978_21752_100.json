@@ -17,8 +17,8 @@
   ],
   "geo": {
     "@type": "schema:GeoCoordinates",
-    "latitude": 45.0432,
-    "longitude": -72.9357
+    "schema:latitude": 45.0432,
+    "schema:longitude": -72.9357
   },
   "geometry": {
     "@type": "Point",

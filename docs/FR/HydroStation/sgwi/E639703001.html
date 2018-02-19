@@ -224,7 +224,7 @@
       "@type": "@id"
     },
     "linearElement": {
-      "@id": "`",
+      "@id": "hyf:linearElement",
       "@type": "@id"
     },
     "hydrometricNetwork": {
@@ -235,6 +235,24 @@
       "@id": "hyf:nexusRealization",
       "@type": "@id"
     },
+    "gw": "http://opengeospatial/def/ontology/gwml2#",
+    "GW_HydrogeoUnit": {
+      "@id": "gw:GW_HydrogeoUnit",
+      "@type": "@id"
+    },
+    "GW_Aquifer": {
+      "@id": "gw:GW_Aquifer",
+      "@type": "@id"
+    },
+    "GW_Well": {
+      "@id": "gw:GW_Well",
+      "@type": "@id"
+    },
+    "GW_MonitoringSite": {
+      "@id": "gw:GW_MonitoringSite",
+      "@type": "@id"
+    },
+    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/",
     "hasFeatureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
@@ -264,57 +282,66 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
-  "@id": "http://id.eaufrance.fr/StationHydro/E639703001",
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
   "@type": ["sosa:Sample", "hyf:HY_HydrometricFeature"],
   "name": "L'Hallue à Querrieu",
-  "hasGeometry": "POINT(49.937596 2.434795)",
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT(2.434795 49.937596)"
+  },
   "isSampleOf": {
-    "@id": "http://id.eaufrance.fr/CoursEau/E6390710",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710",
     "@type": "HY_WaterBody",
     "name": "rivière l'hallue"
   },
-  "isFeatureOfInterestOf": {
-    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-    "@graph": [
-      {
-        "@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001",
-        "@type": "sosa:Observation",
-        "hasFeatureOfInterest": {
-          "@id": "http://id.eaufrance.fr/TronconHydrographique/E6390700",
-          "@type": "HY_Channel"
-        },
-        "hasResult": [
-          {
-            "@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001",
-            "@type": "wml2:MeasurementTimeseries"
-          }
-        ],
-        "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
-        "observedProperty": {
-          "@id": "http://id.eaufrance.fr/nsa/520#H",
-          "@type": "skos:Concept",
-          "name": "Water Height (uom = mm)"
-        },
-        "phenomenonTime": {
-          "hasBeginning": "2017-10-24T22:00:00.000Z",
-          "hasEnd": "2017-10-25T22:00:00.000Z"
-        },
-        "resultTime": "2017-10-25T22:00:00.000Z",
-        "usedProcedure": {
-          "@id": "http://id.eaufrance.fr/nsa/531#LIMNI",
-          "@type": "skos:Concept",
-          "name": "Limnimetric/Fluviometric Station"
+  "isFeatureOfInterestOf": [
+    {
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+      "@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001",
+      "@type": "sosa:Observation",
+      "hasFeatureOfInterest": {
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
+        "@type": "HY_Channel"
+      },
+      "hasResult": [
+        {
+          "@id": "https://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=E639703001",
+          "@type": "wml2:MeasurementTimeseries"
         }
+      ],
+      "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+      "observedProperty": {
+        "@id": "http://id.eaufrance.fr/nsa/520#H",
+        "@type": "skos:Concept",
+        "name": "Water Height (uom = mm)"
+      },
+      "phenomenonTime": {
+        "hasBeginning": "2017-10-24T22:00:00.000Z",
+        "hasEnd": "2017-10-25T22:00:00.000Z"
+      },
+      "resultTime": "2017-10-25T22:00:00.000Z",
+      "usedProcedure": {
+        "@id": "http://id.eaufrance.fr/nsa/531#LIMNI",
+        "@type": "skos:Concept",
+        "name": "Limnimetric/Fluviometric Station"
       }
-    ]
-  },
+    }
+  ],
   "hasSampleRelationship": [
     {
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
       "relatedSample": {
-        "@id": "http://ressource.brgm-rec.fr/data/Piezometre/00463X0036/H1.2",
-        "@type": "gwml2:GW_MonitoringSite",
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
+        "@type": "GW_MonitoringSite",
         "name": "PIEZOMETRE DE CARDONNETTE - 80"
       }
     }

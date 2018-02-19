@@ -1,26 +1,31 @@
 {
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",		
+		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/HydroGeolModel/2695",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/FlowModel/sgwlf/2695",
     "@type": "sosa:Sample",
     "name": "Hydrogeological Model of  Calcaires jurassiques entre Ouche et Vingeanne",
-    "hasGeometry": "POINT(47.5288404979028 5.32424152077325)",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(5.32424152077325 47.5288404979028)"
+				},
 	"isSampleOf": {
 				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05", 
-				"@type": "gwml2:GW_HydrogeoUnit",
+				"@type": "GW_HydrogeoUnit",
                 "name": "Calcaires jurassiques entre Ouche et Vingeanne"
             },
-    "isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
-				{
+    "isFeatureOfInterestOf": [
+					{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
 					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/04398X0002/SONDAG.2/S1",
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
 						"@id":"http://ressource.brgm-rec.fr/data/EntiteHydroGeol/139AO05",
-						"@type": "gwml2:GW_HydrogeoUnit"
+						"@type": "GW_HydrogeoUnit"
 					 }, 
 					"hasResult": [
 						{
@@ -45,27 +50,26 @@
 					"name": "Hydrogeological model"
 				}
             }
-        ]
-    },
+	],
 	"hasSampleRelationship": [
         {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
-				"@type":"gwml2:GW_MonitoringSite",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwlf/04398X0002-SONDAG.2",
+				"@type":"GW_MonitoringSite",
 				"name":"forage privé (Bourberain-21)" }
         },
 		{	
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
-				"@type":"hyf:HY_HydrometricFeature",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwlf/U124404001",
+				"@type":"HY_HydrometricFeature",
 				"name":"La Tille à Champdôtre" }
 		},
 		{	
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/MeteoStation/sgwlf/07280",
 				"@type":"sosa:Sample",
 				"name":"DIJON-LONGVIC" }
 		}
