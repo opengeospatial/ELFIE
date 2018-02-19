@@ -2,19 +2,21 @@
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",				
+		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
     "@type": ["sosa:Sample","hyf:HY_HydrometricFeature"],
     "name": "L'Hallue à Querrieu",
-    "hasGeometry": {
+    "gsp:hasGeometry": {
 				"@type":"gsp:Geometry",
-				"gsp:asWKT": "POINT(49.937596 2.434795)"
+				"gsp:asWKT": "POINT(2.434795 49.937596)"
 				},
 	"isSampleOf": {
-			"@id":"https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710",
+			"@id":"https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390700",
 			"@type":"HY_WaterBody",
-			"name":"rivière l'hallue"
+			"name":"Rivière d'Hallue"
 		},
     "isFeatureOfInterestOf":[
 					{
@@ -54,7 +56,7 @@
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
 				"@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
-				"@type":"gwml2:GW_MonitoringSite",
+				"@type":"GW_MonitoringSite",
 				"name":"PIEZOMETRE DE CARDONNETTE - 80" }
         }
     ]
