@@ -1,7 +1,8 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+    "http://geojson.org/geojson-ld/geojson-context.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50204_300",
   "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",
@@ -13,5 +14,14 @@
       "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_1",
       "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit"
     }
-  ]
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 45.1454,
+    "schema:longitude": -73.1501
+  },
+  "schema:GeoShape": {
+    "@type": "FeatureCollection",
+    "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50204_300.geojson"
+  }
 }
