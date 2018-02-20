@@ -41,11 +41,15 @@ for(use_case in use_cases) {
     
     try(rm(geojson), silent = T)
     
-    try(geojson <- jsonlite::fromJSON(file.path(data_path, geojson_file)), silent = T)
+    try(geojson <- sf::st_read(file.path(data_path, geojson_file), check_ring_dir = TRUE, quiet = TRUE), silent = T)
+    
+    if(!exists("geojson")) {
+      try(geojson <- sf::st_read(file.path(data_path, geojson_file), quiet = TRUE), silent = T)
+    }
     
     joiner <- stringr::str_replace(names(tsv_data)[1], "jsonkey_", "")
     
-    try(matcher <- match(tsv_data[,1][[1]], geojson$features$properties[[joiner]]), silent = T)
+    try(matcher <- match(tsv_data[,1][[1]], geojson[[joiner]]), silent = T)
     
     if(joiner == "") matcher <- 1
     
@@ -82,16 +86,31 @@ for(use_case in use_cases) {
         elf_index_list <- c(elf_index_list, elf_sosa_sublist)
       }
       
-      if(exists("geojson")) elf_index_list <- c(elf_index_list, 
-                                                build_schema_geo(geojson$features$geometry[matcher[i],],
-                                                                 add_context = F))
+      if(exists("geojson")) {
+        try({geojson_f <- geojson[matcher[i],]
+        geojson_out <- paste0(tsv_data[i,][1], ".geojson")
+        
+        elf_index_list <- c(elf_index_list, 
+                            build_schema_geo(geojson_f,
+                                             add_context = F,
+                                             geojson_id = paste(elf_url_base, id_base, geojson_out, sep = "/")))
       
-      elf_index_list$`@context` <- c(elf_index_list$`@context`, 
-                                     "http://geojson.org/geojson-ld/geojson-context.jsonld")
+        elf_index_list$`@context` <- c(elf_index_list$`@context`, 
+                                      "http://geojson.org/geojson-ld/geojson-context.jsonld")
+        
+        geojson_out <- file.path(out_path, geojson_out)
+        
+        unlink(geojson_out)
+        
+        sf::write_sf(geojson_f, 
+                     geojson_out, 
+                     driver = "GeoJSON", 
+                     layer_options = c("WRITE_NAME=NO", "RFC7946=YES"))
+      })}
       
       jsonlite::write_json(elf_index_list, 
                            file.path(out_path, paste0(tsv_data[i,][1], ".json")),
-                           pretty = T, auto_unbox = T)
+                           pretty = TRUE, auto_unbox = T)
       
       write_url_line(out_md, elf_index_list$`@id`)
       
