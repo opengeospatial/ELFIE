@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "14211720", "station_nm": "WILLAMETTE RIVER AT PORTLAND, OR", "site_tp_cd": "ST", "lat_va": 453103.0, "long_va": 1224009.0, "coord_meth_cd": "N", "coord_acy_cd": "S", "coord_datum_cd": "NAD83", "dec_coord_datum_cd": "NAD83", "district_cd": "41", "state_cd": "41", "county_cd": "051", "country_cd": "US", "land_net_ds": "  NWNES03 T01S  R01E  W", "map_nm": null, "map_scale_fc": null, "alt_va": 1.55, "alt_meth_cd": "M", "alt_acy_va": 1.0, "alt_datum_cd": "NGVD29", "huc_cd": "17090012", "basin_cd": null, "topo_cd": null, "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 11200.0, "contrib_drain_area_va": null, "tz_cd": "PST", "local_time_fg": "Y", "reliability_cd": "C", "gw_file_cd": "NNNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": "4741-36600" }, "geometry": { "type": "Point", "coordinates": [ -122.6691667, 45.5175 ] } }
+]
+}

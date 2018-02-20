@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "09426620", "station_nm": "BILL WILLIAMS RIVER NEAR PARKER, AZ", "site_tp_cd": "ST", "lat_va": 341545.0, "long_va": 1140137.0, "coord_meth_cd": "M", "coord_acy_cd": "T", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "04", "state_cd": "04", "county_cd": "012", "country_cd": "US", "land_net_ds": "NESESES28 T 11N R 17W G", "map_nm": "MONKEYS HEAD", "map_scale_fc": "  24000", "alt_va": 500.0, "alt_meth_cd": "M", "alt_acy_va": 20.0, "alt_datum_cd": "NGVD29", "huc_cd": "15030204", "basin_cd": "02", "topo_cd": "C", "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 5337.0, "contrib_drain_area_va": 5327.0, "tz_cd": "MST", "local_time_fg": "N", "reliability_cd": null, "gw_file_cd": "NNNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": "BWM" }, "geometry": { "type": "Point", "coordinates": [ -114.0277209, 34.2625155 ] } }
+]
+}

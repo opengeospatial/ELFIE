@@ -19,11 +19,8 @@
     "schema:latitude": 43.1769,
     "schema:longitude": -89.5103
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      -89.5103,
-      43.1769
-    ]
+  "schema:GeoShape": {
+    "@type": "FeatureCollection",
+    "@id": "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024.geojson"
   }
 }

@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "03085000", "station_nm": "Monongahela River at Braddock, PA", "site_tp_cd": "ST", "lat_va": 402328.0, "long_va": 795130.0, "coord_meth_cd": "M", "coord_acy_cd": "S", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "42", "state_cd": "42", "county_cd": "003", "country_cd": "US", "land_net_ds": null, "map_nm": null, "map_scale_fc": null, "alt_va": 709.66, "alt_meth_cd": "M", "alt_acy_va": 10.0, "alt_datum_cd": "NGVD29", "huc_cd": "05020005", "basin_cd": null, "topo_cd": null, "instruments_cd": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 7337.0, "contrib_drain_area_va": null, "tz_cd": "EST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NNNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -79.8581042, 40.3911802 ] } }
+]
+}

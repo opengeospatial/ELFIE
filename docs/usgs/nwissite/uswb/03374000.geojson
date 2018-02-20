@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "03374000", "station_nm": "WHITE RIVER AT PETERSBURG, IN", "site_tp_cd": "ST", "lat_va": 383039.0, "long_va": 871722.0, "coord_meth_cd": "M", "coord_acy_cd": "S", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "18", "state_cd": "18", "county_cd": "125", "country_cd": "US", "land_net_ds": "  SESWS15 T01N  R08W  2", "map_nm": "MONROE CITY     169D", "map_scale_fc": "  24000", "alt_va": 399.38, "alt_meth_cd": "G", "alt_acy_va": 0.1, "alt_datum_cd": "NAVD88", "huc_cd": "05120202", "basin_cd": null, "topo_cd": "C", "instruments_cd": "YNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 11125.0, "contrib_drain_area_va": null, "tz_cd": "EST", "local_time_fg": "N", "reliability_cd": null, "gw_file_cd": "NYNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": "441800100" }, "geometry": { "type": "Point", "coordinates": [ -87.2894583, 38.5108822 ] } }
+]
+}

@@ -38,38 +38,24 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
 #' @param schema_lon schema.org longitude value
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
-build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, schema_lon = NULL) {
+build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, schema_lon = NULL, geojson_id) {
   
   add_schema_geo <- is.null(schema_lat) && is.null(schema_lon)
   
-  coords <- geojson_geometry$coordinates[[1]]
+  coords <- sf::st_coordinates(sf::st_zm(geojson_geometry))
+  
+  sf_column <- attr(geojson_geometry, "sf_column")
+  sf_geom_type <- class(geojson_geometry[[sf_column]])
   
   if(add_schema_geo) {
-    if(geojson_geometry$type == "Point") {
+    if("sfc_POINT" %in% sf_geom_type) {
       schema_lat <- coords[2]
       schema_lon <- coords[1]
-    } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
-      
-      if(is.list(coords)) {
-        if(length(coords) == 1) coords <- coords[[1]]
-        remover <- c()
-        for(l in 1:length(coords)) {
-          if(is.list(coords[[l]])) {
-            coords <- c(coords, coords[[l]])
-            remover <- c(remover, l)
-          }
-        }
-        coords[remover] <- NULL
+    } else if(any(grepl("POLYGON", sf_geom_type)) | any(grepl("LINE", sf_geom_type))) {
+
+        schema_lat <- mean(coords[,2])
+        schema_lon <- mean(coords[,1])
         
-        mean_ind <- function(x, ind = 1) mean(drop(x)[,ind])
-        
-        schema_lat <- mean(unlist(lapply(coords, mean_ind, ind = 2)))
-        schema_lon <- mean(unlist(lapply(coords, mean_ind, ind = 1)))
-        
-      } else {
-        schema_lat <- mean(drop(coords)[,2])
-        schema_lon <- mean(drop(coords)[,1])
-      }
     } else {
       print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
       return(NULL)
@@ -81,8 +67,8 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
   out <- list("geo" = list("@type" = "schema:GeoCoordinates",
                            "schema:latitude" = schema_lat,
                            "schema:longitude" = schema_lon),
-              "geometry" = list("@type" = geojson_geometry$type,
-                                "coordinates" = geojson_geometry$coordinates[[1]]))
+              "schema:GeoShape" = list("@type" = "FeatureCollection",
+                                       "@id" = geojson_id))
   return(out)
 }
 
