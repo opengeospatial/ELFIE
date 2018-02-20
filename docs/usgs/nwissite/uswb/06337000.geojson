@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "06337000", "station_nm": "LITTLE MISSOURI RIVER NR WATFORD CITY, ND", "site_tp_cd": "ST", "lat_va": 473525.0, "long_va": 1031505.0, "coord_meth_cd": "M", "coord_acy_cd": "F", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "38", "state_cd": "38", "county_cd": "053", "country_cd": "US", "land_net_ds": "      S35 T148N R99W  5", "map_nm": "LONG X DIVIDE, ND", "map_scale_fc": null, "alt_va": 1930.8, "alt_meth_cd": "L", "alt_acy_va": 0.1, "alt_datum_cd": "NAVD88", "huc_cd": "10110205", "basin_cd": null, "topo_cd": null, "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 8310.0, "contrib_drain_area_va": 8310.0, "tz_cd": "CST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NNNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": "ND001" }, "geometry": { "type": "Point", "coordinates": [ -103.2518572, 47.5902932 ] } }
+]
+}

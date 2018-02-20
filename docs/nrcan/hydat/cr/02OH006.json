@@ -13,11 +13,8 @@
     "schema:latitude": 45.3022,
     "schema:longitude": -72.3206
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      -72.3206,
-      45.3022
-    ]
+  "schema:GeoShape": {
+    "@type": "FeatureCollection",
+    "@id": "https://opengeospatial.github.io/ELFIE/nrcan/hydat/cr/02OH006.geojson"
   }
 }

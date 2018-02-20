@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "08066500", "station_nm": "Trinity Rv at Romayor, TX", "site_tp_cd": "ST", "lat_va": 302530.0, "long_va": 945102.0, "coord_meth_cd": "M", "coord_acy_cd": "F", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "48", "state_cd": "48", "county_cd": "291", "country_cd": "US", "land_net_ds": null, "map_nm": "Romayor, TX", "map_scale_fc": "  24000", "alt_va": 25.92, "alt_meth_cd": "L", "alt_acy_va": 0.1, "alt_datum_cd": "NGVD29", "huc_cd": "12030202", "basin_cd": null, "topo_cd": null, "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 17186.0, "contrib_drain_area_va": 17186.0, "tz_cd": "CST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NYNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": "8653-00150" }, "geometry": { "type": "Point", "coordinates": [ -94.8507622, 30.4252067 ] } }
+]
+}
