@@ -47,29 +47,74 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
   sf_column <- attr(geojson_geometry, "sf_column")
   sf_geom_type <- class(geojson_geometry[[sf_column]])
   
+  sf_geom <- sf::st_zm(geojson_geometry[[sf_column]])
+  
   if(add_schema_geo) {
     if("sfc_POINT" %in% sf_geom_type) {
       schema_lat <- coords[2]
       schema_lon <- coords[1]
+      
+      geoshape <- FALSE
+      
     } else if(any(grepl("POLYGON", sf_geom_type)) | any(grepl("LINE", sf_geom_type))) {
 
         schema_lat <- mean(coords[,2])
         schema_lon <- mean(coords[,1])
         
+        if(any(grepl("POLYGON", sf_geom_type))) {
+          geoshape_name = "schema:polygon"
+          geoshape_outline <- sf_geom
+          if(any(grepl("MULTI", sf_geom_type))) {
+            geoshape_outline <- sf::st_multipolygon(lapply(geoshape_outline[[1]], function(x) x[1]))
+          }
+          geoshape_coords <- sf::st_coordinates(sf::st_zm(geoshape_outline))
+          geoshape <- TRUE
+        }
+        
+        if(any(grepl("LINE", sf_geom_type))) {
+          if(any(grepl("MULTI", sf_geom_type))) {
+            warning("returning convex hull around the multilinestring")
+            geoshape_name <- "schema:polygon"
+            geoshape_coords <- sf::st_coordinates(sf::st_convex_hull(sf_geom))
+          } else {
+            geoshape_name = "schema:line"
+            geoshape_coords <- coords
+          }
+          geoshape <- TRUE
+        }
+        
+        geoshape_coords <- paste(as.vector(t(data.frame(x = as.character(geoshape_coords[,1]), 
+                                               y = as.character(geoshape_coords[,2])))),
+                        collapse = " ")
+        
     } else {
       print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
       return(NULL)
     }
+    
+    gsp <- TRUE
+    gsp_geometry <- list("@type" = "gsp:Geometry",
+                         "gsp:asWKT" = sf::st_as_text(sf_geom))
   }
   
   if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
   
   out <- list("geo" = list("@type" = "schema:GeoCoordinates",
-                           "schema:latitude" = schema_lat,
-                           "schema:longitude" = schema_lon),
-              "schema:GeoShape" = list("@type" = "FeatureCollection",
-                                       "@id" = geojson_id))
-  return(out)
+                                "schema:latitude" = schema_lat,
+                                "schema:longitude" = schema_lon))
+  
+  if(geoshape) {
+    gs <- list("@type" = "schema:GeoShape",
+               "schema:url" = geojson_id)
+    gs[[geoshape_name]] <- geoshape_coords
+    out$geo <- list(out$geo, gs)
+  }
+  
+  if(gsp) {
+    out[["gsp:hasGeometry"]] = gsp_geometry
+  }
+
+    return(out)
 }
 
 #' @title build elfie net for hy_features
