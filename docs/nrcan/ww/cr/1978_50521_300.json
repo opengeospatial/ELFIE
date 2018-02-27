@@ -20,8 +20,8 @@
     "schema:latitude": 45.0815,
     "schema:longitude": -73.1509
   },
-  "schema:GeoShape": {
-    "@type": "FeatureCollection",
-    "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50521_300.geojson"
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-73.15092 45.08154)"
   }
 }

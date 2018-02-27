@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "elev": 36.58, "watershed": "0304", "date": "1960\/10\/07 04:00:00+00", "depth": 10.7, "identifier": "1978_50209_300", "pk": 0, "seq": 90212, "foi": "Richelieu_contexte_1" }, "geometry": { "type": "Point", "coordinates": [ -73.1512803, 45.149062 ] } }
+]
+}

@@ -21,8 +21,8 @@
     "schema:latitude": 39.1328,
     "schema:longitude": -109.0271
   },
-  "schema:GeoShape": {
-    "@type": "FeatureCollection",
-    "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/09163500.geojson"
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-109.0271 39.13276)"
   }
 }
