@@ -51,10 +51,30 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
     if("sfc_POINT" %in% sf_geom_type) {
       schema_lat <- coords[2]
       schema_lon <- coords[1]
+      
+      geoshape <- FALSE
+      
     } else if(any(grepl("POLYGON", sf_geom_type)) | any(grepl("LINE", sf_geom_type))) {
 
         schema_lat <- mean(coords[,2])
         schema_lon <- mean(coords[,1])
+        
+        if(any(grepl("POLYGON", sf_geom_type))) {
+          geoshape_name = "schema:polygon"
+          geoshape_outline <- sf::st_zm(geojson_geometry)[[attr(geojson_geometry,"sf_column")]]
+          geoshape_outline <- sf::st_multipolygon(lapply(geoshape_outline[[1]], function(x) x[1]))
+          coords <- sf::st_coordinates(sf::st_zm(geoshape_outline))
+        }
+        
+        if(any(grepl("LINE", sf_geom_type))) {
+          geoshape_name = "schema:line"
+        }
+        
+        coords <- paste(as.vector(t(data.frame(x = as.character(coords[,1]), 
+                                               y = as.character(coords[,2])))),
+                        collapse = " ")
+        
+        geoshape <- TRUE
         
     } else {
       print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
@@ -65,11 +85,18 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
   if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
   
   out <- list("geo" = list("@type" = "schema:GeoCoordinates",
-                           "schema:latitude" = schema_lat,
-                           "schema:longitude" = schema_lon),
-              "schema:GeoShape" = list("@type" = "FeatureCollection",
-                                       "@id" = geojson_id))
-  return(out)
+                                "schema:latitude" = schema_lat,
+                                "schema:longitude" = schema_lon))
+  
+  if(geoshape) {
+    gs <- list("@type" = "schema:GeoShape")
+    gs[[geoshape_name]] <- coords
+    out$geo <- list(out$geo, gs)
+  }
+  
+  # Add geojson_id and geojson content here.
+
+    return(out)
 }
 
 #' @title build elfie net for hy_features
