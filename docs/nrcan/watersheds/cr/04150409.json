@@ -1,8 +1,5 @@
 {
-  "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
-  ],
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/watersheds/cr/04150409",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
   "name": "Richelieu River",

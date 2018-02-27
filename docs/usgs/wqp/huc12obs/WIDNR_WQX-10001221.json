@@ -1,8 +1,7 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001221",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",

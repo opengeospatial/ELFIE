@@ -97,8 +97,6 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
                          "gsp:asWKT" = sf::st_as_text(sf_geom))
   }
   
-  if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
-  
   out <- list("geo" = list("@type" = "schema:GeoCoordinates",
                                 "schema:latitude" = schema_lat,
                                 "schema:longitude" = schema_lon))

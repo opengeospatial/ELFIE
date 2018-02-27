@@ -1,8 +1,5 @@
 {
-  "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
-  ],
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_2",
   "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit",
   "name": "Plate-forme du St-Laurent nord",

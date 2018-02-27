@@ -94,9 +94,6 @@ for(use_case in use_cases) {
                             build_schema_geo(geojson_f,
                                              add_context = F,
                                              geojson_id = paste(elf_url_base, id_base, geojson_out, sep = "/")))
-      
-        elf_index_list$`@context` <- c(elf_index_list$`@context`, 
-                                      "http://geojson.org/geojson-ld/geojson-context.jsonld")
         
         geojson_out <- file.path(out_path, geojson_out)
         

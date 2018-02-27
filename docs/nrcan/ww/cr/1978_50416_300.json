@@ -1,8 +1,7 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50416_300",
   "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",
