@@ -83,6 +83,16 @@
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/071000091206",
   "@type": "sosa:Observation",
   "name": "Flow observation for  Coppers Creek-Des Moines River",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/05490500",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/071000091206",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
   "hasResult": {
     "@id": "https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=05490500",
     "@type": "wml2:MeasurementTimeseries"

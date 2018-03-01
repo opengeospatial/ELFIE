@@ -6,6 +6,16 @@
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/070700051701",
   "@type": "sosa:Observation",
   "name": "Flow observation for  Indian Creek-Wisconsin River",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/05407000",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/070700051701",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
   "hasResult": {
     "@id": "https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=05407000",
     "@type": "wml2:MeasurementTimeseries"

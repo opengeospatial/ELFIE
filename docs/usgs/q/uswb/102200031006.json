@@ -6,6 +6,16 @@
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/102200031006",
   "@type": "sosa:Observation",
   "name": "Flow observation for  Big Slough-Elkhorn River",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/06800500",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/102200031006",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
   "hasResult": {
     "@id": "https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=06800500",
     "@type": "wml2:MeasurementTimeseries"

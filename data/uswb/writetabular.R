@@ -128,7 +128,8 @@ q$`schema:name` <- paste("Flow observation for ",
                                                                                  rownames(q))])
 
 q <- left_join(q, huc_nwis, by = c("jsonkey_HUC_12" = "huc12")) %>%
-  mutate(`sosa:hasResult@id` = paste0("https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=", nwis)) %>%
+  mutate(`sosa:hasResult@id` = paste0("https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=", nwis),
+         `sosa:hasFeatureOfInterest` = paste0("elfie/usgs/nwissite/uswb/", nwis, "_|_", "elfie/usgs/huc12pp/uswb/", jsonkey_HUC_12)) %>%
   select(-nwis)
 q$`sosa:hasResult@type` = "wml2:MeasurementTimeseries"
 
@@ -150,6 +151,7 @@ et$`sosa:hasResult@id` <- paste0("https://cida.usgs.gov/nwc/thredds/sos/watersma
                                  et$jsonkey_HUC_12)
 et$`sosa:hasResult@type` = "swe:DataArray"
 
+et$`sosa:hasFeatureOfInterest` = paste0("elfie/usgs/huc12pp/uswb/", et$jsonkey_HUC_12)
 write.table(et, file = "usgs_et_uswb.tsv", sep = "\t", row.names = F)
 
 ### pr
@@ -167,5 +169,7 @@ pr$`sosa:hasResult@id` <- paste0("https://cida.usgs.gov/nwc/thredds/sos/watersma
                                  "?request=GetObservation&service=SOS&version=1.0.0&observedProperty=prcp&offering=", 
                                  pr$jsonkey_HUC_12)
 pr$`sosa:hasResult@type` = "swe:DataArray"
+
+pr$`sosa:hasFeatureOfInterest` = paste0("elfie/usgs/huc12pp/uswb/", pr$jsonkey_HUC_12)
 
 write.table(pr, file = "usgs_pr_uswb.tsv", sep = "\t", row.names = F)
