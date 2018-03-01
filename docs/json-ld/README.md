@@ -48,15 +48,6 @@ we'd want multiple instances of the same resource._
 - All properties that can be multi-valued (e.g. any relationship) should be presented as an array, 
 regardless of the number of related resources. _ABHR: if so, should the @type key always be an 
 array? It is possible for features to be of two types, e.g.: sosa:Sample_ and _hyf:HY\_HydrometricFeature._
-- Where all members of the array share the same context (overriding the root context) then the
- value should be a JSON object with a @context key and a @graph key whose value is the array.
- See [xample-elf-sosa-sample.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample.json). E.g.:
-    ```json
-    "isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [{...},{...},...]
-    } 
-     ```
 - Each mapping shall defer typing of a property to the source RDF scheme, the exception being 
 relations - these shall be explicitly typed as @ids to force the use of URIs. (See the last 
 paragraph of the summary for why relations will always be by reference.)
