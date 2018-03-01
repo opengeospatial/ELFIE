@@ -1,0 +1,13 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/030300050405",
+  "@type": "sosa:Observation",
+  "name": "Evapotranspiration observation for  Mitchell Landing-Cape Fear River",
+  "hasResult": {
+    "@id": "https://cida.usgs.gov/nwc/thredds/sos/watersmart/HUC12_data/HUC12_eta_agg.nc?request=GetObservation&service=SOS&version=1.0.0&observedProperty=et&offering=030300050405",
+    "@type": "swe:DataArray"
+  }
+}

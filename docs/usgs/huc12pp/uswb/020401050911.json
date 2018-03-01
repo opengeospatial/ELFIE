@@ -16,7 +16,7 @@
   "nexusRealization": [
     {
       "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/01463500",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample"
     }
   ],
   "geo": {

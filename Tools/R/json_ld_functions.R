@@ -241,6 +241,8 @@ build_sosa <- function(tsv_data, id, include_missing = F) {
   for(i in 1:length(names(tsv_data))) {
     if(grepl("sosa:", names(tsv_data)[i])) {
       
+      tsv_data <- check_outlist_data(tsv_data, i)
+      
       outlist <- c(outlist, sosa_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
       
     }
@@ -254,6 +256,19 @@ build_sosa <- function(tsv_data, id, include_missing = F) {
     return(outlist)
   }
   
+}
+
+check_outlist_data <- function(tsv_data, i) {
+  n <- names(tsv_data)[i]
+  if(grepl("@id", n)) {
+    try({
+      id <- stringr::str_replace(n, "@id", "")
+      t <- stringr::str_replace(n, "@id", "@type")
+      tsv_data[[id]] <- list(`@id` = tsv_data[[n]], `@type` = tsv_data[[t]])
+      tsv_data[[n]] <- tsv_data[[t]] <- NULL
+      })
+  }
+  return(tsv_data)
 }
 
 #' @title Parse ELFIE JSON-LD
