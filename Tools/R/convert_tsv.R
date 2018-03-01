@@ -7,7 +7,7 @@ use_cases <- list(huc12obs = list(data_path = "../../data/huc12obs",
                               name = "US Water Budgets"),
                   cr = list(data_path = "../../data/cr",
                             name = "Champlain-Richelieu River Data Index"),
-                  floodcast = list(data_path = "../data/floodcast",
+                  floodcast = list(data_path = "../../data/floodcast",
                                    name = "Floodcast"))
 
 write("# Environmental Linked Features Interoperability Experiment Demo File Index\n", file = out_md)
