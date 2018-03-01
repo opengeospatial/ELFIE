@@ -1,0 +1,13 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/101102050210",
+  "@type": "sosa:Observation",
+  "name": "Flow observation for  Appel Creek",
+  "hasResult": {
+    "@id": "https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=06337000",
+    "@type": "wml2:MeasurementTimeseries"
+  }
+}
