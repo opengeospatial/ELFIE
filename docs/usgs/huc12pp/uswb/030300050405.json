@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/030300050405",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
+  "name": "Outlet of Mitchell Landing-Cape Fear River",
+  "description": "comment describing the outlet of each watershed",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/030300050405",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/02105769",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 34.3533,
+    "schema:longitude": -78.2018
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-78.20178 34.35334)"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/02105769",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample",
+  "name": "CAPE FEAR R AT LOCK #1 NR KELLY, NC",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02105769",
+  "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=02105769&parm_cd=00060&period=100",
+  "HY_HydroLocationType": "hydrometricStation",
+  "realizedNexus": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/030300050405",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
+  "isSampleOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/030300050405",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "isFeatureOfInterestOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/030300050405",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/030300050405",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/pr/uswb/030300050405",
+      "@type": "sosa:Observation"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 34.4044,
+    "schema:longitude": -78.2936
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-78.29361 34.40444)"
+  }
+}

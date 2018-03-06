@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/05490500",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample",
+  "name": "Des Moines River at Keosauqua, IA",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=05490500",
+  "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=05490500&parm_cd=00060&period=100",
+  "HY_HydroLocationType": "hydrometricStation",
+  "realizedNexus": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/071000091206",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
+  "isSampleOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/071000091206",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "isFeatureOfInterestOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/071000091206",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/071000091206",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/pr/uswb/071000091206",
+      "@type": "sosa:Observation"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 40.7278,
+    "schema:longitude": -91.9596
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-91.95962 40.72781)"
+  }
+}

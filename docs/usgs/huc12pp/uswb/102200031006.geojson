@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "id": "fpp.30025", "FDCODE": 8, "FILL": 0, "PCTPOUR": 99.4021, "VPCTPOUR": 99.3889, "DOWNHUC": "102002020105", "HUC_12": "102200031006", "HU_12_DS": "102002020105", "ISSINK": 0, "DOWNFLAG": 0, "TOHUC_DIST": 0.0 }, "geometry": { "type": "Point", "coordinates": [ -96.3115258, 41.1223253 ] } }
+]
+}

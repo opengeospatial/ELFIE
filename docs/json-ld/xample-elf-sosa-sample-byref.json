@@ -1,11 +1,11 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-basic.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
     ],
     "@id": "https://hydro.data.elfie.ogc/id/monitoring-station/101",
     "@type": "sosa:Sample",
-    "label": "MS101",
+    "name": "MS101",
     "hasGeometry": "POINT(-43.640416 172.476688)",
     "isSampleOf": "https://data.elfie.ogc/id/some/river",
     "isFeatureOfInterestOf": {

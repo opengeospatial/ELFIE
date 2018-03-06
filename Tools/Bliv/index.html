@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> BLiV - BRGM Linked Data Visualizer </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="jQuery-ui/themes/base/jquery-ui.css" type="text/css">
+	<!--<link rel="stylesheet" href="Openlayers/theme/default/style.css" type="text/css">-->
+	<style type="text/css">
+		html,body { 
+			width: 100%;
+			height: 100%;;
+		}
+		#map {
+			width: 98%;
+            height: 98%;
+			border: 1px solid black;
+		}
+		#popup{
+			font-size: 14px;
+		}
+		#localisation{
+			margin-bottom: 5px;
+			width: 180px;
+		}
+		#locate{
+			margin-right: 10px;
+			float: right;
+		}
+	</style>
+	<!--<link rel="icon" type="image/ico" href="http://localhost:9091/images/semantic-web.ico"/>
+	<link rel="stylesheet" type="text/css" href="http://localhost:9091/wro/main.css"/>-->
+	<link rel="stylesheet" type="text/css" href="./viz/css/closeInterface.css"/>
+	<link rel="stylesheet" type="text/css" href="./viz/css/form-select.css"/>
+	<link rel="stylesheet" type="text/css" href="./viz/css/jquery.contextMenu.css"/>
+	<link rel="stylesheet" type="text/css" href="./viz/css/leaflet/leaflet.css"/>
+	<!--Open layer-->
+	<link rel="stylesheet" type="text/css" href="./viz/css/ol.css"/>
+	<!--Code mirror-->
+	<link rel="stylesheet" type="text/css" href="./viz/css/codeMirror/codemirror.css"/>
+	<link rel="stylesheet" type="text/css" href="./viz/css/codeMirror/xq-light.css"/>
+	<link rel="stylesheet" type="text/css" href="http://rdf-translator.appspot.com/static/style.css"/>
+	<link rel="stylesheet" type="text/css" href="http://rdf-translator.appspot.com/static/pygments.css"/>
+
+<script type="text/javascript" src="http://api.ign.fr/geoportail/api/js/2.0.3/GeoportalExtended.js"></script>
+<script src='./jQuery/jquery-2.0.0.js'></script>
+<script src='./jQuery-ui/ui/jquery-ui.js'></script>
+<!-- Library ol javascript -->
+	<script language="javascript" src="./viz/js/ol.js"></script>
+	<!-- JQuery + JQuery UI -->
+	<!--<script language="javascript" src="./jQuery/jquery.js"></script>-->
+	<script language="javascript" src="./viz/js/contextMenu/jquery-1.8.2.min.js"></script>
+	<script language="javascript" src="./jQuery/jquery-ui.js"></script>
+	<!-- JQuery Plugins -->
+	<script language="javascript" src="./jQuery/jquery.jqGrid.locale-en.js"></script>
+	<script language="javascript" src="./jQuery/jquery.jqGrid.js"></script>
+	<script language="javascript" src="./jQuery/jquery.history.js"></script>
+	<!-- Datalift common javascript
+	<script language="javascript" src="http://localhost:9091/js/common.js"></script> -->
+	<!-- Library highchartJS javascript 
+	<script language="javascript" src="./viz/js/highchart/highcharts.js"></script>
+	<script language="javascript" src="./viz/js/highchart/highcharts-more.js"></script>
+	<script language="javascript" src="./viz/js/highchart/exporting.js"></script>
+	<script language="javascript" src="./viz/js/highchart/highcharts-3d.js"></script>
+		<script language="javascript" src="./viz/js/highchart/treemap.js"></script>-->
+	<!-- AngularJs javascript -->
+	<script language="javascript" src="./viz/js/angular.min.js"></script>
+	<!-- Directive else if for AngularJs javascript -->
+	<script language="javascript" src="./viz/js/elif.js"></script>
+	<!-- Sgvizler javascript -->
+	<script language="javascript" src="./sgvizler_js/jsapi.js"></script>
+	<script language="javascript" src="sgvizler.js"></script>
+	<!-- jQuery contextMenu javascript -->
+	<script language="javascript" src="./viz/js/contextMenu/jquery.ui.position.js"></script>
+	<script language="javascript" src="./viz/js/contextMenu/jquery.contextMenu.js"></script>
+	<!-- Library JQuery javascript -->
+	<script language="javascript" src="./jQuery/jquery.js"></script>
+	<!-- Bridge for executing contextMenu javascript -->
+	<!--<script language="javascript" src="./viz/js/executeContextMenu.js"></script>
+	 Library Leaflet javascript -->
+	<script language="javascript" src="./viz/js/leaflet/leaflet.js"></script>
+	<!-- Library Wicket (transorm WKT) javascript -->
+	<script language="javascript" src="./viz/js/wicket/wicket.js"></script>
+	<script language="javascript" src="./viz/js/wicket/wicket-leaflet.js"></script>
+	<!-- Library codemirror javascript -->
+	<script language="javascript" src="./viz/js/codeMirror/codemirror.js"></script>
+	<script language="javascript" src="./viz/js/codeMirror/matchbrackets.js"></script>
+	<script language="javascript" src="./viz/js/codeMirror/sparql.js"></script>
+	<!-- interface for legacy visu javascript -->
+	<script language="javascript" src="./viz/js/legacy-visu.js"></script>
+
+	<!-- <script src="./viz/js/mapline.js"></script> -->
+	<!--<script src="http://localhost:9091/sparql/save-request/mapline.js"></script>-->
+	<script src="./jsonld-js/es6-promise@1.0.0"></script>
+	<script src="./jsonld-js/jsonld.js"></script>
+	<script type="text/javascript" src="./vis-4.21.0/dist/vis.js"></script>	
+		<!--<script language="javascript" src="https://raw.githubusercontent.com/digitalbazaar/jsonld.js/master/js/jsonld.js"></script> -->
+<script type="text/javascript">
+var map="";	
+var fGroup="";
+var labels = [];
+//var WKT = [];
+var global_index=0;
+function launchJsonLD(uri){
+			var q = getSPARQLRequest4(uri);
+			var sel = "internal";
+			$.ajax({
+				//url : 'http://localhost:8080/rdf4j-workbench/repositories/internal/query',
+				url : 'http://farfouille.brgm-rec.fr/datalift/sparql',
+				type : 'GET',
+				
+				data : {
+					'default-graph-uri' : sel,
+					'query' : q,
+					//'Accept': 'application/n-quads',
+					//'Accept': 'application/n-triples',
+					'format' :'application/n-triples',
+				},
+				dataType : 'text',
+				error : function(result, status, error){
+					
+						alert("Echec de récupération des données");
+					
+				},
+				success : function(d, status){
+					//console.log(d);
+					//executeJsonld(d);
+					
+					jsonld.fromRDF(d, {format: 'application/nquads'}, function(err, jsld) { 
+					var context = "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld";
+					jsonld.compact(jsld, context,function(err, compacted) {
+					document.getElementById("jsonld_text").value= JSON.stringify(compacted, null, "\t");
+					});
+						
+					});
+					
+				}
+			});	
+		}	
+		
+function executeJsonld(data){
+			$.ajax({
+				url : 'http://rdf-translator.appspot.com/convert/n3/json-ld/content',
+				type : 'POST',
+				data : {
+					'content': data,
+				},
+				//dataType : 'json',
+				error : function(result, status, error){
+					
+						alert("Echec de conversion: "+ result);
+					
+				},
+				success : function(d, status){
+					//console.log(d);
+					var conetxt= "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld";
+				
+					document.getElementById("jsonld_text").value= JSON.stringify(d, null, "\t");
+					//$("#graphs_jsonld").html(d);
+					//$("#graphs_jsonld").html(JSON.stringify(d, null, "\t"));
+					
+				}
+			});
+}		
+
+function launchLD(){
+			launchJsonLD(document.getElementById("query").value.trim());
+			tab=[];
+			arcs=[];
+			types=[];
+			opened=[]
+			launchVis(document.getElementById("query").value.trim());					
+			var q = getSPARQLRequest2();
+			var sel = "internal";
+			$.ajax({
+				//url : 'http://localhost:8080/rdf4j-workbench/repositories/internal/query',
+				url : 'http://farfouille.brgm-rec.fr/datalift/sparql',
+				type : 'GET',
+				
+				data : {
+					'default-graph-uri' : sel,
+					'query' : q,
+					//'Accept' : 'application/sparql-results+json',
+				},
+				dataType : 'json',
+				
+				error : function(result, status, error){
+					
+						alert("Echec de récupération de la geomertie");
+					
+				},
+				success : function(json, status){
+					visu.createContainer("spatial_div", "map");
+					map="";	
+					fGroup="";
+					labels = [];
+					WKT = [];
+					global_index=0;
+					executeSpatial(json);
+					//launchSgvizler(document.getElementById("query").value.trim());
+					//launchVisSample();
+				}
+			});	
+		}
+		
+function launchFromJSONLD(){
+			var data = JSON.parse(document.getElementById("jsonld_text").value);
+			
+			
+			jsonld.toRDF(data, {format: 'application/nquads'}, function(err, nquads) {
+				// nquads is a string of nquads
+					//console.log(nquads);
+					
+					visu.createContainer("spatial_div", "map");
+					map="";	
+					fGroup="";
+					labels = [];
+					WKT = [];
+					global_index=0;
+					//executeSpatial(data);
+					//launchSgvizler(document.getElementById("query").value.trim());
+					//launchJsonLD(document.getElementById("query").value.trim());
+					tab=[];
+					arcs=[];
+					types=[];
+					
+					
+					//launchVis(document.getElementById("query").value.trim());					
+					//launchVis2(data);
+					if (err==null){
+						//console.log(data["@id"]);
+						var mygraph= tablify(String(nquads).trim());
+						try{
+						triplesToGraph(mygraph,data["@id"],true);
+						}catch(e){
+						alert("error while creating graph");
+						}
+						
+						try{
+						triplesToSpatial(mygraph);
+						}catch(e){
+						console.log(e);
+						alert("map vizualisation error ");
+						}
+					}else{
+					alert("error while retrieveing jsonld");
+					}
+			});
+		}
+
+function tablify(triples){
+var lines = triples.split("\n");
+var t= [];
+var i=0
+for(l in lines){
+ var tamp= lines[l].split(" ");
+ tamp.pop(); 
+ t[i] =[];
+ t[i].push(String(tamp.shift()).trim().replace("<","").replace(">","")); 
+ t[i].push(String(tamp.shift()).trim().replace("<","").replace(">","")); 
+ 
+ t[i].push(tamp.join(" ").trim().replace("<","").replace(">","")); 
+  i++;
+
+}
+
+return t;
+
+}
+		
+function executeSpatial(data){
+	(function(){
+		var WKT = []; // Array contains lists of all WKT polygons extrated from SPARQL request
+		//var labels = []; // Array contains lists of all labels polygons extrated from SPARQL request
+		var colorSelect = "#4ff7f7";
+		var varNames = [];
+		if(data.results.bindings.length==0) {
+			alert("no results to show");
+		} else {
+			varNames = data.head.vars;
+			$.each(data.results.bindings, function(key, val) {	
+				
+				WKT.push(val[varNames[0]]['value']);
+				labels.push(getSPARQLRequest());
+				
+			});
+		}
+		
+		// Map configuration
+		//var 
+		map = L.map('map').setView([0, 0], 10);
+		// Add map box tile
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			maxZoom: 18,
+			id: 'dlift.b4e0fe33',
+			accessToken: 'pk.eyJ1IjoiZGxpZnQiLCJhIjoiMGRhOTQyM2NmNjkyN2E5ZDliYjdlYjhmZjk0MmRkMzQifQ.Jr2TI6X6zPRjpQAsYhX_PQ'
+		}).addTo(map);
+		
+		//Create feature group
+		//var 
+		fGroup = new L.featureGroup();
+		//Iterate dynamicly in all present polygons
+		global_index=0;
+		$.each(WKT,function(index,value){
+			var feature = transformToGeoJson(value, fGroup, map);
+			feature.bindPopup(labels[index]);
+			global_index++;
+		});
+		fGroup.addTo(map); // Add it to the map
+		
+		// bounds map on layers
+		map.fitBounds(fGroup.getBounds(), {padding: [0,0]});
+		
+		
+	})();
+}	
+
+//Function to transformate WKT geometries to GeoJson
+function transformToGeoJson(WKT, fGroup, map) {
+			var wkt = new Wkt.Wkt();
+			// Read wkt
+			try { // Catch any malformed WKT strings
+                wkt.read(WKT);
+            } catch (e1) {
+                try {
+                    wkt.read(WKT.replace('\n', '').replace('\r', '').replace('\t', ''));
+                } catch (e2) {
+                    if (e2.name === 'WKTError') {
+                        console.log('Could not understand the WKT string. Check that you have parentheses balanced, and try removing tabs and newline characters.');
+                        return;
+                    }
+                }
+            }
+			// Convert to object
+			var obj = wkt.toObject({
+                icon: new L.Icon({
+                    iconUrl: 'red_dot.png',
+                    iconSize: [16, 16],
+                    iconAnchor: [8, 8],
+                    //shadowUrl: 'dot_shadow.png',
+                    shadowSize: [16, 16],
+                    shadowAnchor: [8, 8]
+                }),
+                editable: true,
+                color: (WKT.startsWith("LINESTRING") ||WKT.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
+                weight: 3,
+                opacity: 1.0,
+                editable: true,
+                fillColor: (WKT.startsWith("LINESTRING") ||WKT.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
+                fillOpacity: 0.2
+            });
+			
+			// Draw geometries
+            if (Wkt.isArray(obj)) { // Distinguish multigeometries (Arrays) from objects
+                for (i in obj) {
+                    if (obj.hasOwnProperty(i) && !Wkt.isArray(obj[i])) {
+						obj[i].addTo(map);
+						fGroup.addLayer(obj[i]);
+                    }
+                }
+            } else {
+				obj.addTo(map);
+				fGroup.addLayer(obj);
+            }
+			return obj;
+		}
+function getSPARQLRequest() {
+			return document.getElementById("query").value.trim();
+		}
+function getSPARQLRequest2() {
+			var resource= document.getElementById("query").value.trim();
+			return "select ?geom where { {<"+resource+"> <http://www.opengis.net/ont/geosparql#hasGeometry>/<http://www.opengis.net/ont/geosparql#asWKT> ?geom } UNION {<"+resource+"> <http://data.ign.fr/def/geometrie#hasGeometry>/<http://www.opengis.net/ont/geosparql#asWKT> ?geom }.}"
+		}	
+function getSPARQLRequest3() {
+			var resource= document.getElementById("query").value.trim();
+			return "select ?s ?label ?o ?label2 ?pl ?color1 ?color2 "
+			+" where{ "
+			+"<"+resource+"> ?p ?o. "
+			+" filter (str(?p)!=\"http://vmrd87.brgm.fr/id/bdlisa/st-astext\") "
+			+"Bind (IRI(\""+resource+"\") as ?s) "
+			+"Bind (STR(?s) as ?label) "
+			+"Bind (STR(?o) as ?label2) "
+			+"Bind (REPLACE(STR(?p),\".*(\/|#)\",\"\") as ?pl) "
+			+"Bind (\"red\" as ?color1) "
+			+"Bind (\"blue\" as ?color2) "
+			+" }"
+		}
+function getSPARQLRequest4(uri) {
+			var resource= uri ;
+			return "construct {<"+resource+"> ?p ?o} "
+			+"WHERE { "
+			+"{"
+			+"<"+resource+"> a ?o ."
+			+"bind (iri(\"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\") as ?p)"
+			+" }  union  { "
+			+"<"+resource+"> <http://www.w3.org/2000/01/rdf-schema#label> ?o ."
+			+"bind (iri(\"http://schema.org/name\") as ?p)"
+			+" }  union  { "
+			+"<"+resource+"> <http://data.brgm.fr/id/aquifer/niveau> ?o."
+			+"bind (iri(\"http://schema.org/description\") as ?p)"
+			+"}union  { "
+			+"<"+resource+"> <http://data.brgm.fr/def/SciObj#relatedTo> ?o ."
+			+"bind (iri(\"http://data.brgm.fr/def/SciObj#relatedTo\") as ?p)"
+			+" }}"
+			//return "describe <"+resource+"> "
+		}
+
+function getSPARQLRequest5(URI) {
+			var resource= URI.trim();
+			return "select ?s ?label ?o ?label2 ?pl ?color1 ?color2 ?type1 ?type2"
+			+" where{ "
+			+"{<"+resource+"> ?p ?o. "
+			+"<"+resource+"> a ?type1. "
+			+"optional {?o a ?type2.} "
+			+"filter (?p in (<http://www.w3.org/2000/01/rdf-schema#label>,<http://data.brgm.fr/def/SciObj#relatedTo>) )"
+			//<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
+			+"Bind (IRI(\""+resource+"\") as ?s) "
+			+"Bind (STR(?s) as ?label) "
+			+"Bind (STR(?o) as ?label2) "
+			+"Bind (REPLACE(STR(?p),\".*(\/|#)\",\"\") as ?pl) "
+			+"Bind (\"blue\" as ?color1) "
+			+"Bind (\"green\" as ?color2) "
+			+"Bind (concat(\"<a href='\",str(?s),\"'>\", str(?s) , \"</a>\")as ?s2)} "
+			+"UNION"
+			+"{?o <http://data.brgm.fr/def/SciObj#relatedTo> <"+resource+">. "
+			+"<"+resource+"> a ?type1. "
+			+"optional {?o a ?type2.} "
+			+"Bind (IRI(\""+resource+"\") as ?s) "
+			+"Bind (STR(?s) as ?label) "
+			+"Bind (STR(?o) as ?label2) "
+			+"Bind (\"relatedTo\" as ?pl) "
+			+"Bind (\"blue\" as ?color1) "
+			+"Bind (\"green\" as ?color2) "
+			+"Bind (concat(\"<a href='\",str(?s),\"'>\", str(?s) , \"</a>\")as ?s2)} "
+			+"UNION "			
+			//+"{<"+resource+"> <http://data.brgm.fr/id/aquifer/entite> ?ent. "
+			//+"?piet <http://data.brgm.fr/id/monitoringfacility#observationcapability>/<http://data.brgm.fr/id/monitoringfacility/obscap/code-entite> ?ent. "
+			//+"?piet <http://data.brgm.fr/id/monitoringfacility#hasobservation> ?o. "
+			+"{<"+resource+"> <http://data.brgm.fr/id/monitoringfacility#hasobservation> ?o. "
+			+"<"+resource+"> a ?type1. "
+			+"optional {?o a ?type2.} "
+			+"Bind (IRI(\""+resource+"\") as ?s) "
+			+"Bind (STR(?s) as ?label) "
+			+"Bind (STR(?o) as ?label2) "
+			+"Bind (\"observation\" as ?pl) "
+			+"Bind (\"blue\" as ?color1) "
+			+"Bind (\"orange\" as ?color2) "
+			+"Bind (concat(\"<a href='\",str(?s),\"'>\", str(?s) , \"</a>\")as ?s2)} "
+			+" }"
+		}
+
+function addToMap(URI)
+{
+var query = "select ?geom ?label where { {<"+URI+"> <http://www.opengis.net/ont/geosparql#hasGeometry>/<http://www.opengis.net/ont/geosparql#asWKT> ?geom } UNION {<"+URI+"> <http://data.ign.fr/def/geometrie#hasGeometry>/<http://www.opengis.net/ont/geosparql#asWKT> ?geom }. <"+URI+"> <http://www.w3.org/2000/01/rdf-schema#label> ?label. }";
+var sel='internal';
+$.ajax({
+				//url : 'http://localhost:8080/rdf4j-workbench/repositories/internal/query',
+				url : 'http://farfouille.brgm-rec.fr/datalift/sparql',
+				type : 'GET',
+				
+				data : {
+					'default-graph-uri' : sel,
+					'query' : query,
+					//'Accept' : 'application/sparql-results+json',
+				},
+				dataType : 'json',
+				
+				error : function(result, status, error){
+					
+						alert("Echec de récupération de la geomertie");
+					
+				},
+				success : function(json, status){
+					
+					executeAddSpatial(URI,json);
+					
+				}
+			});
+}
+
+function executeAddSpatial(URI,data){
+
+var wkt = new Wkt.Wkt();
+
+for (g in data.results.bindings){
+
+WKT.push(data.results.bindings[g].geom.value);
+				labels.push("<button onclick='graphFocus(\""+URI+"\");' value='"+URI+"' title='"+URI+"' style='width: 100%; font-size: 14px'>"+URI+"</button><span>name: "+data.results.bindings[0].label.value+"</span>");
+// Read wkt
+			try { // Catch any malformed WKT strings
+                wkt.read(data.results.bindings[g].geom.value);
+            } catch (e1) {
+                try {
+                    wkt.read(data.results.bindings[g].geom.value.replace('\n', '').replace('\r', '').replace('\t', ''));
+                } catch (e2) {
+                    if (e2.name === 'WKTError') {
+                        console.log('Could not understand the WKT string. Check that you have parentheses balanced, and try removing tabs and newline characters.');
+                        return;
+                    }
+                }
+            }
+
+// Convert to object
+			var obj = wkt.toObject({
+                icon: new L.Icon({
+                    iconUrl: 'green_pin.ico',
+                    iconSize: [16, 16],
+                    iconAnchor: [8, 8],
+                    //shadowUrl: 'dot_shadow.png',
+                    shadowSize: [16, 16],
+                    shadowAnchor: [8, 8]
+                }),
+                editable: true,
+                color: '#AA0000',
+                weight: 3,
+                opacity: 1.0,
+                editable: true,
+                fillColor: '#AA0000',
+                fillOpacity: 0.2
+            });
+			
+// add to map
+obj.bindPopup(labels[global_index])
+obj.addTo(map);
+fGroup.addLayer(obj);			
+global_index++;
+}
+map.fitBounds(fGroup.getBounds(), {padding: [0,0]});
+}
+
+function graphFocus(URI){
+//console.log(URI);
+//launchSgvizler(URI);
+zoomon(URI);
+launchJsonLD(URI);
+}
+function zoomon(URI){
+var options = {
+scale: 2.0,              // scale to animate to  (Number)
+    offset: {x:0, y:0},      // offset from the center in DOM pixels (Numbers)
+    animation: {             // animation object, can also be Boolean
+      duration: 1000,                 // animation duration in milliseconds (Number)
+      easingFunction: "easeInOutQuad" // Animation easing function, available are:
+    }  
+};
+      
+network.focus(URI, options);
+
+}
+
+var tab=[];
+var arcs=[];
+var opened=[];
+var network=null;
+var nodes = null;
+var edges = null;
+var types= null;
+var level=0;
+
+function launchVis(URI){
+
+ notexists= function(table, id){ 
+ for (elem in table)
+ {
+ if (table[elem].id== id) return false;
+ }
+ return true
+ };
+var sparqlQueryString = getSPARQLRequest5(URI);
+
+var sel='internal';
+$.ajax({
+				//url : 'http://localhost:8080/rdf4j-workbench/repositories/internal/query',
+				url : 'http://farfouille.brgm-rec.fr/datalift/sparql',
+				type : 'GET',				
+				data : {
+					'default-graph-uri' : sel,
+					'query' : sparqlQueryString,
+					'Accept' : 'application/sparql-results+json',
+					
+				},
+				dataType : 'json',
+				error : function(result, status, error){
+					
+						alert("Echec de récupération des données");
+					
+				},
+				success : function(d, status){
+					var graph= d.results.bindings;
+					createGraph(graph,URI, "ld")
+					}
+					
+				
+			});	
+}
+
+function createGraph(graph, URI, method="ld"){
+document.getElementById('curentURI').innerHTML= URI;
+document.getElementById('curentURI').setAttribute("href",URI);
+opened=[];
+					/*if (notexists(tab, URI)){
+					tab.push({id: URI, label: URI, color: 'red', font: {size:12, color:'black', face:'arial'}, type: graph[0].type1.value, group:(graph[0].type1)?graph[0].type1.value: "none"})
+					if(graph[0].type1 && $.inArray(graph[0].type1.value, types) === -1) types.push(graph[0].type1.value);
+					};*/
+					var i=1;
+					for (t= 0; t< graph.length; t++){
+					//console.log(t);
+					if (notexists(tab, graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value)){
+					tab.push({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value , label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type: (graph[t].type1)?graph[t].type1.value: "none", group:(graph[t].type1)?graph[t].type1.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }   });
+					i++;
+					if(graph[t].type1 && $.inArray(graph[t].type1.value, types) === -1) types.push(graph[t].type1.value)
+					else if(!graph[t].type1 && $.inArray("none", types) === -1) types.push("none")
+					}
+					
+					if (notexists(tab, graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value) && graph[t].pl.value!= "label" && graph[t].pl.value!= "name"  && graph[t].pl.value!= "asWKT" ){
+					tab.push( {id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
+					i++;
+					if(graph[t].type2 && $.inArray(graph[t].type2.value, types) === -1) types.push(graph[t].type2.value)
+					else if(!graph[t].type2 && $.inArray("none", types) === -1) types.push("none")
+					}
+					
+					if (graph[t].pl.value!= "label" && graph[t].pl.value!= "name" && graph[t].pl.value!= "asWKT"  )arcs.push({from: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, to: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].pl.value, arrows:'to'});
+					if (graph[t].pl.value== "label" || graph[t].pl.value== "name" ) {for (el in tab) {if (tab[el].id== graph[t].s.value) tab[el].l2= graph[t].o.value}}
+					}
+					
+									  
+				  nodes = new vis.DataSet(tab);
+				  edges = new vis.DataSet(arcs);
+				  opened.push(URI);
+				  
+				  // create a network
+				  var container = document.getElementById('graph_div');
+				  var data = {
+					nodes: nodes,
+					edges: edges
+				  };
+				  var options = {
+					  "edges": {
+						"smooth": false
+					  },
+					  "physics": {
+						"minVelocity": 0.75,
+						"solver": "repulsion"
+					  }
+					};
+				  network = new vis.Network(container, data, options);
+				  if (method=="ld"){
+				    network.on("doubleClick", function (params) {
+					params.event = "[original event]";						
+					console.log('doubleClick event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
+					
+					addToMap(this.getNodeAt(params.pointer.DOM));
+					addToGraph(this.getNodeAt(params.pointer.DOM));
+					
+					});
+				    }else if (method=="jsonld"){
+					network.on("doubleClick", function (params) {
+					params.event = "[original event]";						
+					console.log('doubleClick event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
+					
+					//addToMap(this.getNodeAt(params.pointer.DOM));
+					addToGraphJsonld(this.getNodeAt(params.pointer.DOM));
+					
+					});
+					
+					}
+					network.on("click", function (params) {
+					if(typeof params.nodes[0] !== 'undefined'){
+					document.getElementById('curentURI').innerHTML= params.nodes[0];
+					document.getElementById('curentURI').setAttribute("href",params.nodes[0]);
+					 if (method=="jsonld"){$.ajax({url: (params.nodes[0].endsWith(".json"))?params.nodes[0]:params.nodes[0]+".json",dataType: 'json',async: false,success: function(data) {
+					 document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")}});}
+					 //if (method=="jsonld"){$.getJSON((params.nodes[0].endsWith(".json"))?params.nodes[0]:params.nodes[0]+".json", function (data){document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")});}
+					}
+					if(nodes.get(params.nodes[0]).l2){
+					params.event = "[original event]";						
+					console.log('click event, getNodeAt returns: ' + nodes.get(params.nodes[0]).l2);
+					var lbl= nodes.get(params.nodes[0]).label;
+					var lbl2= nodes.get(params.nodes[0]).l2;					
+					nodes.update({
+							id: params.nodes[0],
+							label: lbl2,
+							l2: lbl
+						});					
+					 }
+					 
+					});
+					
+				   
+				   document.getElementById('facets_div').innerHTML="Types"; 
+				   document.getElementById('facets_div').appendChild(setTypesList(types)); 
+					
+					
+				
+}
+
+function addToGraph(URI){
+notexists= function(table, id){
+ for (elem in table)
+ {
+ if (table[elem].id== id) return false;
+ }
+ return true
+ };
+var sparqlQueryString = getSPARQLRequest5(URI);
+var sel = 'internal';
+$.ajax({
+				//url : 'http://localhost:8080/rdf4j-workbench/repositories/internal/query',
+				url : 'http://farfouille.brgm-rec.fr/datalift/sparql',
+				type : 'GET',				
+				data : {
+					'default-graph-uri' : sel,
+					'query' : sparqlQueryString,
+					'Accept' : 'application/sparql-results+json',
+					
+				},
+				dataType : 'json',
+				error : function(result, status, error){
+					
+						alert("Echec de récupération des données");
+					
+				},
+				success : function(d, status){
+					if ($.inArray(URI, opened)===-1){
+					var graph= d.results.bindings;
+					addGraphPart(graph, URI, "ld")
+					opened.push(URI);
+					}
+				 
+				}
+					
+				
+			});	
+
+}
+
+function addGraphPart(graph, URI, source ){
+
+		var typesAdd= []
+			level++;		
+		//if (notexists(tab, URI)){tab.push({id: URI, label: URI, color: 'red', font: {size:12, color:'black', face:'arial'}})};
+		var i=1;
+		for (t in graph){
+		//console.log(t);
+		if (notexists(tab, graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value)){
+		tab.push({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type:(graph[t].type1)?graph[t].type1.value: "none", group:(graph[t].type1)?graph[t].type1.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
+		if(graph[t].type1 && $.inArray(graph[t].type1.value, types) === -1) {types.push(graph[t].type1.value); typesAdd.push(graph[t].type1.value)};
+		i++;
+		nodes.add({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type: (graph[t].type1)?graph[t].type1.value: "none" , group:(graph[t].type1)?graph[t].type1.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 } });
+		}
+		
+		if (notexists(tab, graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value) && graph[t].pl.value!= "label" && graph[t].pl.value!= "name" && graph[t].pl.value!= "asWKT" ){
+		tab.push( {id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
+		i++;
+		if(graph[t].type2 && $.inArray(graph[t].type2.value, types) === -1) {types.push(graph[t].type2.value); typesAdd.push(graph[t].type2.value)};
+		nodes.add({id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
+		}
+		
+		if(graph[t].pl.value!= "label" && graph[t].pl.value!= "name" && graph[t].pl.value!= "asWKT" ){
+		arcs.push({from: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, to: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].pl.value, arrows:'to'});
+		edges.add({from: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, to: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].pl.value, arrows:'to'});
+		}
+		if (graph[t].pl.value== "label" || graph[t].pl.value == "name") {
+			nodes.update({
+				id: graph[t].s.value,
+				label: graph[t].s.value,
+				l2: graph[t].o.value
+			});
+		}
+		}
+			var additionaTypeNodes= setTypesList(typesAdd, false).childNodes;
+			for ( j = 0; j < additionaTypeNodes.length; j++) {
+			document.getElementById('typesList').appendChild(additionaTypeNodes[j]);		  
+			}
+}
+
+
+function addToGraphJsonld(URI){
+
+            //$.getJSON((URI.endsWith(".json"))?URI:URI+".json", function (data){            
+			$.ajax({url: URI.endsWith(".json")?URI:URI+".json", dataType: 'json',async: false,success: function(data) {
+				
+				
+				if ($.inArray(URI, opened)===-1){
+					
+				jsonld.toRDF(data, {format: 'application/nquads'}, function(err, nquads) {
+				// nquads is a string of nquads
+					console.log(nquads);
+					if (err== null) {
+						var mygraph= tablify(String(nquads).trim());
+						try{
+						triplesToGraph(mygraph,URI,false);
+						}catch(e){
+						alert("error while adding to graph");
+						}
+						
+						try{
+						triplesToSpatial(mygraph, false);
+						}catch(e){
+						alert("error while adding to map ");
+						}
+						opened.push(URI);
+					}else{
+					alert("error while retrieveing jsonld");
+					}
+				});
+			
+			}
+			}});
+
+}
+
+function setTypesList(typesTable,isnew=true){
+
+var list = document.createElement('ul');
+	if (isnew){list.setAttribute('id', 'typesList'); list.setAttribute('style', 'font-size: 10px;');}
+    for(var i = 0; i < typesTable.length; i++) {
+        // Create the list item:
+        var item = document.createElement('li');
+
+        // Set its contents:
+		var input = document.createElement('input');
+	    var label = document.createElement('label');
+
+		input.setAttribute('type', 'checkbox');// add type chekbox
+		input.setAttribute('value', typesTable[i]);
+		input.setAttribute('name', typesTable[i]);
+		input.setAttribute('onclick', 'showType(\''+typesTable[i]+'\')');
+		input.setAttribute('id', 'id-'+typesTable[i]);
+		input.setAttribute('style', 'display: inline-block; margin-bottom: 0; vertical-align: middle; width: 40px;');// add style value
+
+		label.setAttribute('for', 'id-'+typesTable[i]);// set for attribute for each label
+		label.setAttribute('style', 'display: inline-block; margin-bottom: 0; vertical-align: middle; max-width: 100%');// set style attribute for each label
+		
+		label.appendChild(document.createTextNode(typesTable[i]));// add name between label tags
+		
+           
+        item.appendChild(input);
+        item.appendChild(label);
+
+        // Add it to the list:
+        list.appendChild(item);
+		input.checked = true;
+    }
+	return list;
+
+}
+
+function showType(type){
+var ch=document.getElementById('id-'+type);
+if (document.getElementById('id-'+type).checked) 
+  {
+    for (node in tab){
+		if (tab[node].type== type) {
+		nodes.add(tab[node]);
+		}
+	}	
+	
+  } else {
+    for (node in nodes._data){
+		if (nodes.get(node).type== type) {		
+		nodes.remove(node);
+		}
+	}
+  }
+}
+
+
+
+function triplesToGraph(triples,URI,newg =true){
+notexists= function(table, id){
+ for (elem in table)
+ {
+ if (table[elem].id== id) return false;
+ }
+ return true
+ };				
+					
+					var graph=[];
+					
+					for(t in triples){
+					graph.push( {s:{value: triples[t][0]}, label:{value: triples[t][0]}, o:{value: triples[t][2]}, label2:{value: triples[t][2]}, pl:{value: triples[t][1].replace(/.*(\/|#)/,"")}, color1:{value:''}, color2:{value: ""}});					
+					}
+					
+					// adding types
+					for(t in triples){
+						if (triples[t][1]== "http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+						{
+							for(g in graph){
+							if (graph[g].s.value== triples[t][0])	graph[g].type1={value: triples[t][2]}	;				
+							if (graph[g].o.value== triples[t][0])	graph[g].type2= {value: triples[t][2]}	;					
+							}
+						}
+					}
+					
+					if (newg) createGraph(graph,URI , "jsonld") 
+					else addGraphPart(graph,URI, "jsonld");
+
+
+					
+}
+ function triplesToSpatial(triplets, newg=true)
+ {
+		 var WKT = [];
+		 var longitude="";
+		 var latitude="";
+		 var point="";
+		 var t;
+		 var l="From JSONLD";
+		var added= false;
+		 for (t = 0; t < triplets.length; t++)
+		 {
+		 l="From JSONLD";
+		//console.log(triplets[t]);
+		 //console.log(triplets[t][1]);
+		 if (triplets[t][1].endsWith("latitude") || triplets[t][1].endsWith("#lat") ){
+		 latitude= triplets[t][2];
+		  for (var k= 0; k< triplets.length; k++){
+		 if ( triplets[k][0]==triplets[t][0]&&(triplets[k][1].endsWith("longitude") || triplets[k][1].endsWith("#long"))){
+		 longitude = triplets[k][2];
+		 }
+		 }
+		 l=triplets[t][0];
+		 for (var k= 0; k< triplets.length;k++){
+		 if (triplets[k][2]==triplets[t][0]) { l= triplets[k][0];  break}
+		 }
+		 labels.push("<button onclick='graphFocus(\""+l+"\");' value='"+l+"' title='"+l+"' style='width: 100%; font-size: 14px'>"+l+"</button>");
+		 
+		 point="POINT("+parseFloat(longitude.split('"').join(''))+" "+parseFloat(latitude.split('"').join(''))+")";
+		 WKT.push(point);
+		 added=true;
+		 }
+		 else if (triplets[t][1].endsWith("asWKT")){
+		 var gm= triplets[t][2];
+		 l= triplets[t][0];
+		 for (var k= 0; k< triplets.length;k++){
+		 if (triplets[k][1].endsWith("hasGeometry") && triplets[k][2]==triplets[t][0]) { l= triplets[k][0];  break}
+		 }
+		 labels.push("<button onclick='graphFocus(\""+l+"\");' value='"+l+"' title='"+l+"' style='width: 100%; font-size: 14px'>"+l+"</button>");
+		 
+		 WKT.push(gm.replace('"','').replace('"','').replace('"',''));
+		 added=true
+		 }else if(triplets[t][1].endsWith("GeoShape")){
+		 var linkgm= triplets[t][2];
+		 l= triplets[t][0];
+		 var gm;
+		 var gmwkt= new Wkt.Wkt();;
+		 labels.push("<button onclick='graphFocus(\""+l+"\");' value='"+l+"' title='"+l+"' style='width: 100%; font-size: 14px'>"+l+"</button>");
+		 $.ajax({url:linkgm ,dataType: 'json',async: false,success: function(data) {gm=gmwkt.fromObject(data.features[0].geometry).toString()}});
+		 //$.getJSON(linkgm,function (data){ gm=gmwkt.fromObject(data.features[0].geometry).toString() });
+		 WKT.push(gm);
+		 added=true
+		 }
+		 }
+		   if (added==false)return;		  
+		  var colorSelect = "#4ff7f7";	 
+				// Map configuration
+				//var 
+				if (newg) {
+				map = L.map('map').setView([0, 0], 10);
+				// Add map box tile
+				L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+					attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+					maxZoom: 18,
+					id: 'dlift.b4e0fe33',
+					accessToken: 'pk.eyJ1IjoiZGxpZnQiLCJhIjoiMGRhOTQyM2NmNjkyN2E5ZDliYjdlYjhmZjk0MmRkMzQifQ.Jr2TI6X6zPRjpQAsYhX_PQ'
+				}).addTo(map);
+				
+				//Create feature group
+				//var 
+				
+				fGroup = new L.featureGroup();
+				//Iterate dynamicly in all present polygons
+				global_index=0;
+				
+				$.each(WKT,function(index,value){
+					var feature = transformToGeoJson(value, fGroup, map);
+					feature.bindPopup(labels[index]);
+					global_index++;
+				});
+				fGroup.addTo(map); // Add it to the map
+				}else{
+					$.each(WKT,function(index,value){	
+						var w=  new Wkt.Wkt();
+						w.read(value);
+						var obj = w.toObject({
+						icon: new L.Icon({
+							iconUrl: 'green_pin.ico',
+							iconSize: [16, 16],
+							iconAnchor: [8, 8],
+							//shadowUrl: 'dot_shadow.png',
+							shadowSize: [16, 16],
+							shadowAnchor: [8, 8]
+						}),
+						editable: true,
+						color: (value.startsWith("LINESTRING") ||value.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
+						weight: 3,
+						opacity: 1.0,
+						editable: true,
+						fillColor: (value.startsWith("LINESTRING") ||value.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
+						fillOpacity: 0.2
+					});
+				
+				obj.bindPopup(labels[global_index])
+				obj.addTo(map);
+				fGroup.addLayer(obj);			
+				global_index++;
+				});
+				}
+				
+				// bounds map on layers
+				map.fitBounds(fGroup.getBounds(), {padding: [0,0]});
+ 
+ }
+
+function stabilize(){
+if (document.getElementById('stabilize').checked) 
+  {
+    network.physics.options.enabled = false;	
+	
+  } else {
+    network.physics.options.enabled = true;
+  }
+}
+
+
+</script>
+</head>
+<body >
+	
+<div id="content" >
+
+	<div style="width:50%; height:100%;margin-top:4px;margin-left: 25%" >
+		
+		<input type="text" id="query" name="query" placeholder="Enter BRGM linked data resource URI here..." style="width: 83%; display: inline-block;" autocomplete="on" spellcheck="false" onkeydown = "if (event.keyCode == 13) document.getElementById('query_submit').click()"></input>
+		<button  id="query_submit" onclick="launchLD();" id="myform" style="background-image:url('./viz/images/icons/run.png');background-repeat:no-repeat;width:30px;height:30px;float:right" title="Visualiser à partir du TripleStore"/>
+		
+	</div>
+		<div style= "margin-left: 45%">OR</div>
+	<div style="width:100%; height:100%;margin-top:4px;">			
+		<textarea id="jsonld_text" style="width:95%; max-width:90%; height:200px; min-height:200px; margin-left:5%" name="jsonld_text" spellcheck="false" placeholder="Enter your JsonLD here..."></textarea>					
+		<div style="height:30px;float:right;margin:auto;">
+			<button onclick="launchFromJSONLD();" id="jsonld_submit" value=" " style="background-image:url('./viz/images/icons/run.png');background-repeat:no-repeat;margin:2px;width:30px;height:30px;" title="Visualiser à partir du JsonLD"/>
+		</div>
+	</div>				
+		
+	<div id="graphs_show_description"  >
+		<div style="width:100%;margin:auto;">
+			<div style="height:40px;width:50%;margin-top:4px;float:left">				
+				<a id="curentURI" href="" style="float:right"></a>	
+			</div>		
+			<div style="height:40px;width:45%;margin-top:4px;float:right">				
+				<div style="height:30px;float:left;margin:auto">
+					<input type="checkbox" name="stabilize" id="stabilize" style="display: inline-block; margin-bottom: 0; vertical-align: middle; width: 40px;" onclick='stabilize()'>
+					<label style="display: inline-block; margin-bottom: 0; vertical-align: middle;" for="stabilize">Stabilize</label>				
+				</div>
+				
+			</div>
+		</div>
+		<div style="width:100%;margin:auto;">		
+			<div id="spatial_div" style="width:40%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:7px">
+			</div>			
+			<div id="facets_div" style="width:14%;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px">
+				 Types				  
+			</div>	
+			<div id="graph_div" style="width:44%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px" >
+			</div>		
+		</div>				
+	</div>	
+	
+</div>	
+
+	
+</body>
+</html>

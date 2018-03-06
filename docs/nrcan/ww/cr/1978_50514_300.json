@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50514_300",
+  "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",
+  "name": "1978_50514_300",
+  "sameAs": "http://ngwd-bdnes.cits.nrcan.gc.ca/Reference/uri-cgi/feature/gsc/waterwell/ca.qc.gov.wells.1978_50514_300",
+  "image": "http://ngwd-bdnes.cits.nrcan.gc.ca/Reference/uri-cgi/feature/gsc/waterwell/ca.qc.gov.wells.1978_50514_300?format=png",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_1",
+      "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 45.074,
+    "schema:longitude": -73.155
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-73.15497 45.07396)"
+  }
+}

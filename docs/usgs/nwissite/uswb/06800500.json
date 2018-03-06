@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/06800500",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample",
+  "name": "Elkhorn River at Waterloo, Nebr.",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06800500",
+  "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=06800500&parm_cd=00060&period=100",
+  "HY_HydroLocationType": "hydrometricStation",
+  "realizedNexus": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/102200031006",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
+  "isSampleOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/102200031006",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "isFeatureOfInterestOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/102200031006",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/102200031006",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/pr/uswb/102200031006",
+      "@type": "sosa:Observation"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 41.2933,
+    "schema:longitude": -96.2839
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-96.28389 41.29333)"
+  }
+}

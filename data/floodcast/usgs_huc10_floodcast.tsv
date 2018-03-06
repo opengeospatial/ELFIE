@@ -1,0 +1,2 @@
+jsonkey_HUC10	rdfs:type	schema:name	schema:description	hyf:catchmentRealization	hyf:hydrometricNetwork/HY_HydrometricFeature
+1204010403	http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment	Whiteoak Bayou-Buffalo Bayou	USGS HUC10: https://water.usgs.gov/GIS/huc.html	elfie/tx/flowlines/floodcast/FS_BuffaloBayou	elfie/usgs/nwissite/floodcast/08072600

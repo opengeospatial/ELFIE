@@ -1,0 +1,2 @@
+jsonkey_identifier	rdfs:type	schema:name	schema:description	hyf:realizedCatchment
+FS_BuffaloBayou	http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Flowpath	"Buffalo Bayou at State Hwy 6 nr Addicks, TX"	This is the flowline for the gage used to model the floodplains for the harvey huricane event in this area of interest.	elfie/usgs/huc10/floodcast/1204010403

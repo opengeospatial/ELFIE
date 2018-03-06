@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/170900120202",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
+  "name": "Outlet of Balch Creek-Willamette River",
+  "description": "comment describing the outlet of each watershed",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/170900120202",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/14211720",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 45.6534,
+    "schema:longitude": -122.765
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-122.765 45.65341)"
+  }
+}

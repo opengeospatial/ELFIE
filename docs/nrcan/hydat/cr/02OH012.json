@@ -1,0 +1,17 @@
+{
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@id": "https://opengeospatial.github.io/ELFIE/nrcan/hydat/cr/02OH012",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+  "name": "02OH012",
+  "description": "description not available",
+  "sameAs": "https://wateroffice.ec.gc.ca/report/real_time_e.html?stn=02OH012",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 45.1984,
+    "schema:longitude": -73.0328
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-73.0328 45.1984)"
+  }
+}

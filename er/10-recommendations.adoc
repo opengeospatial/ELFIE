@@ -1,0 +1,20 @@
+[[Issues_Recommendations]]
+== Issues and Recommendations for Future Work.
+
+=== Introduction
+**High level summary of the kinds of issues we found and what future work the IE implies**
+
+=== OGC Service Standards and Implementation issues.
+**WFS issues and recs for WFS3**
+**SOS and SensorThings commentary?**
+**others?**
+
+=== Domain Feature Model Issues
+**Availability of useful encodings / practices to generate them**
+**Monitoring networks https://github.com/opengeospatial/ELFIE/issues/65[issue 65]**
+
+=== General linked data issues
+**Default behavior for resolution of a URI -- esp. one with alternatives https://github.com/opengeospatial/ELFIE/issues/32[issue 32]**
+**Picky details of namespace URIs and identifiers https://github.com/opengeospatial/ELFIE/issues/60[issue 60]**
+
+

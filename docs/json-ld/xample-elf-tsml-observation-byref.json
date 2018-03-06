@@ -1,0 +1,24 @@
+{
+    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-tsml-observation.jsonld",
+    "@id": "https://soil.data.elfie.ogc/id/observation/001",
+    "@type": "sosa:Observation",
+    "hasFeatureOfInterest": "https://data.elfie.ogc/id/some/soil",
+    "hasResult": [
+        {
+            "@id": "https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-dr.xml",
+            "@type": "tsml:TimeseriesDomainRange"
+        },
+        {
+            "@id": "https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-tvp.xml",
+            "@type": "tsml:TimeseriesTVP"
+        }
+    ],
+    "madeBySensor": "https://hydro.data.elfie.ogc/id/machine-that-goes-ping/202",
+    "observedProperty": "https://soil.data.elfie.ogc/def/property/soil-moisture",
+    "phenomenonTime": {
+        "hasBeginning": "2012-06-13T00:30:00+12:00",
+        "hasEnd": "2012-06-14T00:00:00+12:00"
+    },
+    "resultTime": "2012-06-14T00:00:00+12:00",
+    "usedProcedure": "https://data.elfie.ogc/id/wild-guess/sorry/tdt-probe"
+}

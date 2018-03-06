@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/100301012008",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
+  "name": "Outlet of Log Gulch-Missouri River",
+  "description": "comment describing the outlet of each watershed",
+  "contributingCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/100301012008",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "nexusRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/06066500",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 47.0231,
+    "schema:longitude": -112.0155
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-112.0155 47.02311)"
+  }
+}

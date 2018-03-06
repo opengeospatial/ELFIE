@@ -1,0 +1,54 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",		
+		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
+    ],
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
+    "@type": "sosa:Sample",
+    "name": "Forage BSS000DXBD",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(2.3597603712661 49.9506859240222)"
+				},
+	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
+	"isFeatureOfInterestOf": [
+					{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",				
+					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
+					"@type": "sosa:Observation",
+					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
+					"hasResult": [
+						{
+							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
+							"@type": "GW_GeologyLog"
+						}
+				],
+                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+                "observedProperty": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+                "phenomenonTime": {
+                    "hasBeginning": "1974-11-30T00:00:00.000Z",
+                    "hasEnd": "1974-11-30T00:00:00.000Z"
+                },
+                "resultTime": "1974-11-30T00:00:00.000Z",
+				"usedProcedure": {
+					"@id": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog",
+					"@type": "skos:Concept",
+					"name": "Driller log"
+				}
+            
+			}
+	],
+	"image": "http://www.ades.eaufrance.fr/BDLisa.aspx?X=2.35976034402847&Y=49.9506874084473",
+    "hasSampleRelationship": [
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/LinkToSomeDrillCoreDatabaseHere"
+        },
+		{
+			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2"
+		}
+    ]
+}

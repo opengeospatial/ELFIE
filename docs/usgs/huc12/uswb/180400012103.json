@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/180400012103",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment",
+  "name": "Shag Slough-San Joaquin River",
+  "description": "comment describing each watershed at a high level",
+  "sameAs": "https://cida.usgs.gov/nwc/#!waterbudget/achuc/180400012103",
+  "catchmentRealization": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/180400012103",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/180400012103",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "outflow": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/180400012103",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ]
+}

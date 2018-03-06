@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--Adapted/Stolen from: https://github.com/scienceai/jsonld-markup Thanks!!!-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://opengeospatial.github.io/ELFIE/css/jsonld-markup.css">
+    <style>
+    body { padding: 1em; }
+    .logo { margin-bottom: 3px; }
+    .code.column { background-color: rgb(51,51,51); color: white }
+    </style>
+    <title>/usgs/nwissite/uswb/09163500.json</title>
+  </head>
+  <body>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Environmental Linked Features Interoperability Experiment Demonstration
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <div class="ui two column doubling stackable grid">
+      <div class="five wide code column">
+    <h3 class="ui inverted header">Expanded Context</h3>
+    <pre><code id="context">
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "description": "schema:description",
+    "geo": "schema:geo",
+    "image": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "sameAs": {
+      "@id": "schema:sameAs",
+      "@type": "@id"
+    },
+    "hyf": "http://opengeospatial/def/ontology/hyf",
+    "HY_Catchment": {
+      "@id": "hyf:HY_Catchment",
+      "@type": "@id"
+    },
+    "HY_CatchmentDivide": {
+      "@id": "hyf:HY_CatchmentDivide",
+      "@type": "@id"
+    },
+    "HY_HydrographicNetwork": {
+      "@id": "hyf:HY_HydrographicNetwork",
+      "@type": "@id"
+    },
+    "HY_HydrometricNetwork": {
+      "@id": "hyf:HY_HydrometricNetwork",
+      "@type": "@id"
+    },
+    "HY_HydroNexus": {
+      "@id": "hyf:HY_HydroNexus",
+      "@type": "@id"
+    },
+    "HY_HydroLocation": {
+      "@id": "hyf:HY_HydroLocation",
+      "@type": "@id"
+    },
+    "HY_HydrometricFeature": {
+      "@id": "hyf:HY_HydrometricFeature",
+      "@type": "@id"
+    },
+    "HY_WaterBody": {
+      "@id": "hyf:HY_WaterBody",
+      "@type": "@id"
+    },
+    "HY_Lake": {
+      "@id": "hyf:HY_Lake",
+      "@type": "@id"
+    },
+    "HY_Impoundment": {
+      "@id": "hyf:HY_Impoundment",
+      "@type": "@id"
+    },
+    "HY_River": {
+      "@id": "hyf:HY_River",
+      "@type": "@id"
+    },
+    "HY_Channel": {
+      "@id": "hyf:HY_Channel",
+      "@type": "@id"
+    },
+    "HY_FlowPath": {
+      "@id": "hyf:HY_FlowPath",
+      "@type": "@id"
+    },
+    "HY_DistanceDescription": {
+      "@id": "hyf:HY_DistanceDescription",
+      "@type": "@id"
+    },
+    "HY_HydroLocationType": {
+      "@id": "hyf:HY_HydroLocationType",
+      "@type": "@id"
+    },
+    "HY_IndirectPosition": {
+      "@id": "hyf:HY_IndirectPosition",
+      "@type": "@id"
+    },
+    "HY_DistanceFromReferent": {
+      "@id": "hyf:HY_DistanceFromReferent",
+      "@type": "@id"
+    },
+    "upstreamWaterBody": {
+      "@id": "hyf:upstreamWaterBody",
+      "@type": "@id"
+    },
+    "downstreamWaterBody": {
+      "@id": "hyf:downstreamWaterBody",
+      "@type": "@id"
+    },
+    "lowerCatchment": {
+      "@id": "hyf:lowerCatchment",
+      "@type": "@id"
+    },
+    "upperCatchment": {
+      "@id": "hyf:upperCatchment",
+      "@type": "@id"
+    },
+    "realizedCatchment": {
+      "@id": "hyf:realizedCatchment",
+      "@type": "@id"
+    },
+    "catchmentRealization": {
+      "@id": "hyf:catchmentRealization",
+      "@type": "@id"
+    },
+    "contributingCatchment": {
+      "@id": "hyf:contributingCatchment",
+      "@type": "@id"
+    },
+    "outflow": {
+      "@id": "hyf:outflow",
+      "@type": "@id"
+    },
+    "realizedNexus": {
+      "@id": "hyf:realizedNexus",
+      "@type": "@id"
+    },
+    "networkStation": {
+      "@id": "hyf:networkStation",
+      "@type": "@id"
+    },
+    "referencedPosition": {
+      "@id": "hyf:referencedPosition",
+      "@type": "@id"
+    },
+    "distanceExpression": {
+      "@id": "hyf:distanceExpression",
+      "@type": "@id"
+    },
+    "distanceDescription": {
+      "@id": "hyf:distanceDescription",
+      "@type": "@id"
+    },
+    "linearElement": {
+      "@id": "hyf:linearElement",
+      "@type": "@id"
+    },
+    "hydrometricNetwork": {
+      "@id": "hyf:hydrometricNetwork",
+      "@type": "@id"
+    },
+    "nexusRealization": {
+      "@id": "hyf:nexusRealization",
+      "@type": "@id"
+    },
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "time": "http://www.w3.org/2006/time#",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "hasResult": "sosa:hasResult",
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasBeginning": "time:hasBeginning",
+    "hasEnd": "time:hasEnd",
+    "resultTime": "sosa:resultTime",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    }
+  }
+}
+    </code></pre>
+      </div>
+      <div class="eleven wide code column">
+    <h3 class="ui inverted header">JSON-LD Document</h3>
+    <pre><code id="code">
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/09163500",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample",
+  "name": "COLORADO RIVER NEAR COLORADO-UTAH STATE LINE",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09163500",
+  "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=09163500&parm_cd=00060&period=100",
+  "HY_HydroLocationType": "hydrometricStation",
+  "realizedNexus": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/140100051906",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
+  "isSampleOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/140100051906",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "isFeatureOfInterestOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/140100051906",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/140100051906",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/pr/uswb/140100051906",
+      "@type": "sosa:Observation"
+    }
+  ],
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 39.1328,
+    "schema:longitude": -109.0271
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-109.0271 39.13276)"
+  }
+}
+    </code></pre>
+      </div>
+    </div>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Code for this pretty JSON-LD view derived from 
+          <a href="https://github.com/scienceai/jsonld-markup" target="_blank">
+            https://github.com/scienceai/jsonld-markup
+          </a>. 
+          Thanks <a href="https://science.ai/">science.ai</a>!
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://opengeospatial.github.io/ELFIE/js/pretty_jsonld.js"></script>
+    <script type="text/javascript">
+     var $context = document.getElementById('context');
+     var $code = document.getElementById('code');
+     var ctx = JSON.parse($context.textContent.trim());
+     var data = JSON.parse($code.textContent.trim());
+     $context.innerHTML = jsonldMarkup(ctx);
+     $code.innerHTML = jsonldMarkup(data, ctx['@context']);
+    </script>
+  </body>
+</html>

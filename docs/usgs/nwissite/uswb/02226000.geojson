@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "02226000", "station_nm": "ALTAMAHA RIVER AT DOCTORTOWN, GA", "site_tp_cd": "ST", "lat_va": 313916.0, "long_va": 814941.0, "coord_meth_cd": "M", "coord_acy_cd": "S", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "13", "state_cd": "13", "county_cd": "305", "country_cd": "US", "land_net_ds": null, "map_nm": "DOCTORTOWN", "map_scale_fc": null, "alt_va": 23.6, "alt_meth_cd": "L", "alt_acy_va": 0.1, "alt_datum_cd": "NAVD88", "huc_cd": "03070106", "basin_cd": null, "topo_cd": null, "instruments_cd": "YNNNYNNNNNYNNYNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 13600.0, "contrib_drain_area_va": 13600.0, "tz_cd": "EST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NNNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -81.827892, 31.6546586 ] } }
+]
+}

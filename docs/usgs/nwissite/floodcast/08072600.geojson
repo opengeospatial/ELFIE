@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "Id": 0, "GAGE_ID": "08072600", "GAGE_URL": "https:\/\/waterdata.usgs.gov\/nwis\/inventory?agency_code=USGS&site_no=08072600" }, "geometry": { "type": "Point", "coordinates": [ -95.4571388, 29.7596386 ] } }
+]
+}

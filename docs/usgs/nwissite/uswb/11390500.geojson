@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "11390500", "station_nm": "SACRAMENTO R BL WILKINS SLOUGH NR GRIMES CA", "site_tp_cd": "ST", "lat_va": 390036.0, "long_va": 1214925.0, "coord_meth_cd": "M", "coord_acy_cd": "F", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "06", "state_cd": "06", "county_cd": "011", "country_cd": "US", "land_net_ds": "  NWNES02 T13N  R01E", "map_nm": null, "map_scale_fc": null, "alt_va": null, "alt_meth_cd": null, "alt_acy_va": null, "alt_datum_cd": null, "huc_cd": "18020104", "basin_cd": null, "topo_cd": null, "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 12915.0, "contrib_drain_area_va": null, "tz_cd": "PST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NNNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -121.82469, 39.0098948 ] } }
+]
+}

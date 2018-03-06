@@ -1,0 +1,55 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",		
+		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
+    ],
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
+    "@type": "sosa:Sample",
+    "name": "Forage BSS001REWW",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(5.18713262971692 46.1909541655103)"
+				},
+	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
+	"isFeatureOfInterestOf": [   
+        
+				{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+					"@type": "sosa:Observation",
+					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
+					"hasResult": [
+						{
+							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+							"@type": "GW_GeologyLog"
+						}
+				],
+                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+                "observedProperty": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+                "phenomenonTime": {
+                    "hasBeginning": "1974-11-30T00:00:00.000Z",
+                    "hasEnd": "1974-11-30T00:00:00.000ZcouldBeInstant"
+                },
+                "resultTime": "1974-11-30T00:00:00.000Z",
+				"usedProcedure": {
+					"@id": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog",
+					"@type": "skos:Concept",
+					"name": "Driller log"
+				}
+            }
+	],
+	"image": "http://servicesgdm.brgm.fr/LogGDM/RGFLogServlet?HoleName=06512X0037",
+    "hasSampleRelationship": [
+        {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/LinkToSomeDrillCoreDatabaseHere"
+        },
+		{
+			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2"
+		}
+    ]
+}

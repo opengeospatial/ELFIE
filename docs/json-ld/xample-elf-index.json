@@ -1,0 +1,17 @@
+{
+    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "@id": "https://data.elfie.ogc/id/some/thing/001",
+    "@type": "https://data.elfie.ogc/def/some/thing",
+    "name": "Something",
+    "description": "Should really be a real-world example but one doesn't want to start a flame war over 'incorrect' example data.",
+    "sameAs": [
+        "https://data.example.org/id/that/thing/2612",
+        "https://data.domain.name/id/and-that/thing/2601"
+    ],
+    "geo": {
+        "@type": "schema:GeoCoordinates",
+        "latitude": "-43.640416",
+        "longitude": "172.476688"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/220px-The_Scream.jpg"
+}

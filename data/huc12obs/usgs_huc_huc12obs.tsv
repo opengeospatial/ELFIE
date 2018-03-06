@@ -1,2 +1,2 @@
-jsonkey_huc12	rdfs:type	rdfs:label	rdfs:comment	owl:versionInfo	dcterms:creator	owl:sameAs	dcterms:license	foaf:img	hyf:cathmentRealization
-070900020601	http://www.opengis.net/def/HY_DendriticCatchment	Waunakee Marsh-Sixmile Creek	USGS Watershed Boundary Dataset Twelve Digit Hydrologic Unit Code Watershed	30June2015	https://www.usgs.gov/		https://creativecommons.org/publicdomain/zero/1.0/	elfie/usgs/nhdplusvlowline/huc12obs/
+"jsonkey_"	"rdfs:type"	"schema:name"	"schema:description"	"hyf:catchmentRealization"
+070900020601	http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment	Waunakee Marsh-Sixmile Creek	USGS Watershed Boundary Dataset Twelve Digit Hydrologic Unit Code Watershed	elfie/usgs/nhdplusflowline/huc12obs/070900020601_|_elfie/usgs/hucboundary/huc12obs/070900020601_|_elfie/usgs/hydrometricnetwork/huc12obs/070900020601

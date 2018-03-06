@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+  "name": "Buffalo Bayou at State Hwy 6 nr Addicks, TX",
+  "description": "This is the gage used to model the floodplains for the harvey huricane event in this area of interest.",
+  "sameAs": "https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=08072600",
+  "referencedPosition": {
+    "HY_IndirectPosition": {
+      "distanceExpression": {
+        "HY_DistanceFromReferent": {
+          "interpolative": "95.56"
+        }
+      },
+      "distanceDescription": {
+        "HY_DistanceDescription": "upstream"
+      },
+      "linearElement": "https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou"
+    }
+  },
+  "HY_HydroLocationType": "hydrometricStation",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 29.7596,
+    "schema:longitude": -95.4571
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-95.45714 29.75964)"
+  }
+}

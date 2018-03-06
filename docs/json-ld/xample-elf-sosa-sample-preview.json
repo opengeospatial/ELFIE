@@ -2,7 +2,7 @@
     "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
     "@id": "https://hydro.data.elfie.ogc/id/monitoring-station/101",
     "@type": "sosa:Sample",
-    "label": "MS101",
+    "name": "MS101",
     "comment": "A monitoring station somewhere in the world.",
     "versionInfo": "1.0.0",
     "creator": "https://data.elfie.ogc/id/dangerous/hacks/ritchiea",
