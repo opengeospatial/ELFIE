@@ -2,26 +2,26 @@
 == Use Case Summary
 
 === Introduction
-ELFIE design work was directed by a number of use cases with extensive need 
-for linked environmental data. These use cases are either hurdles to systems they maintain 
+ELFIE design work was directed by a number of use cases with extensive need
+for linked environmental data. These use cases are either hurdles to systems they maintain
 or would be nice additions to systems they rely on as users. Many of these
-use cases were described and used for discussion and vetting of ideas only, 
+use cases were described and used for discussion and vetting of ideas only,
 others were taken further with implementation of example encoded linked data
-documents and client code to visualize data involved in the use case.  
+documents and client code to visualize data involved in the use case.
 
-The full suite of use cases considered durring the design phase of the project 
-are described below. Each use cases takes the form of a simple description of 
-who or what system has an interest in what related datasets. Specific datasets are 
+The full suite of use cases considered during the design phase of the project
+are described below. Each use cases takes the form of a simple description of
+who or what system has an interest in what related datasets. Specific datasets are
 listed to clarify the scope and provide a starting point for technical design
-work. Use cases that were implemented as demonstrations of the design outcomes 
-were described in more detail to include notional diagrams of how datasets 
-involved link to eachother, a thorough description of the use case, and an 
+work. Use cases that were implemented as demonstrations of the design outcomes
+were described in more detail to include notional diagrams of how datasets
+involved link to each other, a thorough description of the use case, and an
 example application that speaks to and/or satisfies the needs of the use case.
 
 === Use Cases Considered in Design Process
 
 **River network linked data to address hydrologic drought and ecology**::
-Water consumers and decision makers are interested in potential ecological and economic impacts of additonal water use.
+Water consumers and decision makers are interested in potential ecological and economic impacts of additional water use.
 
 *Relevant datasets*:::
 * River network
@@ -57,8 +57,8 @@ A person in a flood-impacted area needs information about the risks to them for 
 * Impacted transportation assets
 * At risk critical infrastructure
 
-**Water quality impacts monitorying of mining activities**::
-A waterquality analyst needs to know what data is available to assess baseline and impacted conditions of a waterbody impacted by mine-related runoff.
+**Water quality impacts monitoring of mining activities**::
+A water quality analyst needs to know what data is available to assess baseline and impacted conditions of a waterbody impacted by mine-related runoff.
 
 *Relevant datasets*:::
 * River network
@@ -69,8 +69,8 @@ A waterquality analyst needs to know what data is available to assess baseline a
 * Snowpack and runoff
 * River flow monitoring locations and data
 
-**Cross boarder monitoring index**::
-An analyst working in a cross boarder watershed or aquifer needs information characterizing their study region from another country of jurisdiction.
+**Cross border monitoring index**::
+An analyst working in a cross border watershed or aquifer needs information characterizing their study region from another country of jurisdiction.
 
 *Relevant datasets*:::
 * River network data
@@ -80,19 +80,19 @@ An analyst working in a cross boarder watershed or aquifer needs information cha
 * Aquifer monitoring wells and data
 
 **Water budget summary**::
-A person interested in a basic summary of the water budget for a given watershed needs information about the watershed and its waterbudget data.
+A person interested in a basic summary of the water budget for a given watershed needs information about the watershed and its water budget data.
 
 *Relevant datasets*:::
 * Watershed boundary
 * Watershed outlet location
-* Waterbudget component data
+* Water budget component data
 * Links to additional information
 
 **Watershed data index**::
 A person with a stake in the conditions of a given watershed needs an index of all water-quality related information about the watershed.
 
 *Relevant datasets*:::
-* Impaired (e.g. poluted or degraded) waters
+* Impaired (e.g. polluted or degraded) waters
 * Drinking water quality violation reports
 * Facilities with discharge permits
 * Water quality infrastructure investments
@@ -102,14 +102,14 @@ A person with a stake in the conditions of a given watershed needs an index of a
 **Flood monitoring at bridges**::
 A jurisdiction with significant infrastructure near or over waterways needs a system to link waterways, bridges, and various observations for situational awareness and model calibration/validation.
 
-*Relavant datasets*:::
+*Relevant datasets*:::
 * River network
 * Bridge inventory
 * Monitoring stations and data
 * Locations where model results are available
 
 **Flood Impact Study**::
-A hydrologist conducting a flood impact study needs to collect relevant information from parious agencies.
+A hydrologist conducting a flood impact study needs to collect relevant information from various agencies.
 
 *Relevant datasets*:::
 * River network

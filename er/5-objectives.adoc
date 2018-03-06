@@ -6,12 +6,12 @@ Functional goals of ELFIE focused on the description and use of links
 between and among features described by domain-specific feature models and
 observations data that describe the features. Within this, ELFIE aimed to
 leverage existing standards and best practices while maintaining a high
-degree of simplicity toward the goal of adoptibility by developers and
+degree of simplicity toward the goal of adoptability by developers and
 users with a wide array of technical skill levels. Combining these goals
 led to IE participants to seek solutions that
 
-. are ubiquitous and easily adoptible in any programming language,  
-. apply best practices for linked data on the web, 
+. are ubiquitous and easily adoptable in any programming language,  
+. apply best practices for linked data on the web,
 . and adhere, to the extent possible to standard taxonomies and ontologies.
 
 The IE participants took a positive view (assumption) -- that the above
@@ -22,13 +22,13 @@ implementation of compelling test use cases.
 === Assumptions
 . A common approach to encoding links between and among environmental
 domain features which allow cross-domain and cross-system sharing and
-interoperability of such linked information is possible and desirable  
+interoperability of such linked information is possible and desirable
 . Existing and pending OGC standards for the encoding of environmental
 observation data in an integrated dataset of features can be linked
-according to ReSTful and Linked Data principles  
-. The ability to encode documents containing links between and among 
-monitoring sites and environmental domain features in a common way will 
-enable automation and lines of inquiry that are not possible without 
+according to ReSTful and Linked Data principles
+. The ability to encode documents containing links between and among
+monitoring sites and environmental domain features in a common way will
+enable automation and lines of inquiry that are not possible without
 manual intervention today.
 . While currently not apparent given existing encodings, implementation
 standards, and best practices, a reusable approach to encode documents
@@ -38,18 +38,18 @@ doable.
 
 === Scope
 . In order to focus this IE, only environmental domain models concerning
-landscape interactions with the hydrologic cycle will be considered. 
+landscape interactions with the hydrologic cycle will be considered.
 . Focus will be on 1) linked data documents that contain collections of
 linked features and related observations and 2) feature or observation
 representation documents that contain links to related features or
-observations. 
+observations.
 . ELFIE will not seek to solve problems regarding network
 architecture for resolving links or systems design and governance for
-applications that store and retrieving links or concept relationships. 
+applications that store and retrieving links or concept relationships.
 . Issues related to default behavior when dereferencing an identifier,
 while of great importance to ELFIE goals, is beyond the scope of this IE.
 Experiments of the IE may provide insight into the problem, but the IE
-will not seek to analyze the issue thoroughly. 
+will not seek to analyze the issue thoroughly.
 . Existing ontologies and vocabularies will be used wherever possible.
 
 
