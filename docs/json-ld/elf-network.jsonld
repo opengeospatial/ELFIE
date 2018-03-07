@@ -1,0 +1,14 @@
+{
+    "@context": {
+        "gsp": "http://www.opengeospatial.org/standards/geosparql/",
+        "time": "https://www.w3.org/TR/owl-time/",
+        "intersects": "gsp:sfIntersects",
+        "touches": "gsp:sfTouches",
+        "within": "gsp:sfWithin",
+        "after": "time:after",
+        "before": "time:before",
+        "intervalAfter": "time:intervalAfter",
+        "intervalBefore": "time:intervalBefore",
+        "intervalDuring": "time:intervalDuring"
+    }
+}

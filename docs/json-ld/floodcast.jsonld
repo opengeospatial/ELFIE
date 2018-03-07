@@ -1,29 +1,11 @@
 {
     "@context": {
         "fc": "https://opengeospatial.github.io/ELFIE/floodcast",
-        "FloodEvent": {
-            "@id": "fc:FloodEvent",
-            "@type": "@id"
-        },
-        "FloodExtent": {
-            "@id": "fc:FloodExtent",
-            "@type": "@id"
-        },
-        "FloodDepth": {
-          "@id": "fc:FloodDepth",
-          "@type": "@id"
-        },
-        "TransportationAssets": {
-            "@id": "fc:TransportationAssets",
-            "@type": "@id"
-        },
-        "AssetsThreatened": {
-            "@id": "fc:AssetsThreatened",
-            "@type": "@id"
-        },
-        "AssetsMonitored": {
-            "@id": "fc:AssetsMonitored",
-            "@type": "@id"
-        }
+        "FloodEvent": "fc:FloodEvent",
+        "FloodExtent": "fc:FloodExtent",
+        "FloodDepth": "fc:FloodDepth",
+        "TransportationAssets": "fc:TransportationAssets",
+        "AssetsThreatened": "fc:AssetsThreatened",
+        "AssetsMonitored": "fc:AssetsMonitored"
     }
 }
