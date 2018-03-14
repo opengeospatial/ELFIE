@@ -14,7 +14,7 @@ elf_url_base <- "https://opengeospatial.github.io/ELFIE"
 build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", 
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld", 
                   "@id" = paste("https://opengeospatial.github.io/ELFIE", 
                                 id_base,
                                 tsv_data[1], 
@@ -191,7 +191,7 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
 build_elf_net <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld",
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
   
@@ -234,7 +234,7 @@ build_elf_net <- function(tsv_data, id, include_missing = F) {
 build_sosa <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
   
