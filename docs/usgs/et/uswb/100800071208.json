@@ -1,7 +1,7 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/100800071208",
   "@type": "sosa:Observation",

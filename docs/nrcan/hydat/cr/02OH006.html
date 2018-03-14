@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,10 +42,8 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    }
+    "sameAs": "schema:sameAs",
+    "related": "skos:related"
   }
 }
     </code></pre>
@@ -53,7 +52,7 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/hydat/cr/02OH006",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "02OH006",

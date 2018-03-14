@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,33 +42,30 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
+    "rdfs": "https://www.w3.org/TR/rdf-schema/",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
+    "sampling": "http://www.w3.org/ns/sosa/sampling/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "time": "http://www.w3.org/2006/time#",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "hasResult": "sosa:hasResult",
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
     "phenomenonTime": "sosa:phenomenonTime",
     "hasBeginning": "time:hasBeginning",
     "hasEnd": "time:hasEnd",
     "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    }
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample"
   }
 }
     </code></pre>
@@ -77,8 +75,8 @@
     <pre><code id="code">
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50417_300",
   "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",

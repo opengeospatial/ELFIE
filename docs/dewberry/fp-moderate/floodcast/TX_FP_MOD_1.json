@@ -1,9 +1,9 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodExtent",

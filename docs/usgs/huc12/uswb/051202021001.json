@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/051202021001",
