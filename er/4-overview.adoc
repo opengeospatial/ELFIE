@@ -24,7 +24,7 @@ The scope of this work could have easily gotten out of control.
 To focus the work, the IE attempted to avoid issues not directly related to encoding linked data documents as would be passed from server to client via http. 
  
 As described in detail later, the IE has specified two constrained views of a resolved linked data graph that are specified with modular SHaCL shapes. 
-These specific graph views could be implemented using the "_view" poattern of the Linked Data API or as the payload returned from a REST API endpoint. 
+These specific graph views could be implemented using the "_view" pattern of the Linked Data API or as the payload returned from a REST API endpoint. 
 Using this approach, the recommendation takes advantage of the power and flexibility of Linked Open Data while providing just enough constraint and guidance to encourage interoperability. 
 By specifying a partially resolve graph view, it also allows resources that are not traversable as linked open data (for watever reason) to be incorporated into a linked data system. 
 This mechanism should provide a gateway to inclusion in and understanding the value of the Linked Open Data cloud.
