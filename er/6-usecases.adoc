@@ -9,7 +9,7 @@ use cases were described and used for discussion and vetting of ideas only,
 others were taken further with implementation of example encoded linked data
 documents and client code to visualize data involved in the use case.
 
-The full suite of use cases considered during the design phase of the project
+The full suite of use cases considered durring the design phase of the project
 are described below. Each use cases takes the form of a simple description of
 who or what system has an interest in what related datasets. Specific datasets are
 listed to clarify the scope and provide a starting point for technical design
