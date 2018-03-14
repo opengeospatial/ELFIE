@@ -22,6 +22,9 @@ Obviously, being JSON-LD, an appropriate context should be provided, either in-l
 reference, with a vigorous expectation that the semantics of ELFIE contexts be preserved.
 
 ## File structure
+- Files are named according to the ELFIE view they realize. Either the
+ [core set of views](https://github.com/opengeospatial/ELFIE/wiki/Predicates) or the
+ [domain-specific views](https://github.com/opengeospatial/ELFIE/wiki/Domain-Features-and-Predicates).
 - JSON keyword names are kept as simple as possible (i.e. no extended JSON-LD namespace prefixes). 
 This should minimise developer trauma and also take into account the fact that some parsers don't 
 like colons in keywords, even though they are legitimate JSON (_ABHR: it is possible that the devs 
@@ -47,9 +50,9 @@ regardless of the number of related resources. _ABHR: if so, should the @type ke
 array? It is possible for features to be of two types, e.g.: sosa:Sample_ and _hyf:HY\_HydrometricFeature._
 - Each mapping shall defer typing of a property to the source RDF scheme, the exception being 
 relations - these shall be explicitly typed as @ids to force the use of URIs. (See the last 
-paragraph of the summary for why relations will always be by reference.) _NOTE_ This is no longer the case as our approach to 'linking' uses object stubs rather than IRIs as literal values. See below.
-- Documents should provide link relations as object stubs, allowing the target resource
- to be typed and supporting decisions by a crawler (adding name key allows creation of hyperlinks. E.g.:  
+paragraph of the summary for why relations will always be by reference.)
+- In elf-preview should provide link relations as elf-basic objects, allowing the target resource
+ to be typed and supporting decisions by a crawler (adding label key allows creation of hyperlinks. E.g.:  
     ```json
     "relation": [
          {"@id": "http://data.example.org/id/thing/1", "@type": "sosa:Sample"},
@@ -63,6 +66,8 @@ paragraph of the summary for why relations will always be by reference.) _NOTE_ 
         "http://data.example.org/id/thing/2"
     ]
     ```
+- _Should everything import elf-basic.jsonld (so we can have a friendly label, say for creating 
+hyperlinks)?_
 
 ## TimeseriesML Examples
 - This is a hack - the namespaces are XML ones as the is no RDF encoding for TimeseriesML. _ABHR: perhaps 
@@ -74,12 +79,12 @@ but this was ignored for clarity, and to stimulate discussion.
 - The inline example vocabulary references ("uom" and "interpolationType") are presented as typed and labelled object stubs.
 - The reference example result is an array of references for the same result with different encodings (DR and TVP). _ABHR: 
 this feels like a hack and that it is getting too close to the alternative representations problem we're trying to avoid 
-getting caught up in. Thoughts?_ An alternative to the typed example (see [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-tsml-observation-byref.json)) 
+getting caught up in. Thoughts?_ An alternative to the typed example (see [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-observation-byref.json)) 
 is a simple array.
     ```json
     "hasResult": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-tsml-result-dr.xml",
-        "https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-tsml-result-tvp.xml"
+        "https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-dr.xml",
+        "https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-tvp.xml"
     ]
      ```
 
@@ -87,23 +92,30 @@ is a simple array.
 Assuming one context file per type, e.g. sosa:Sample. For elf-basic, elf-preview and elf-net-* this is effectively rdfs:Class (owl:Thing?).  
 skos:editorialNotes have been smuggled into the (e)xample files to explain some decisions that otherwise might get lost in the readme.
 
-| CONTEXT FILE | EXAMPLE | COMMENT |
-| ------------ | ------- | ------- |
-| [elf.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld) | [xample-elf-all.json](https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-all.json) | Core properties of each feature that support discovery, indexing and basic linking. Each domain specific JSON file should include these. |
-| [elf-network.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld) | [xample-elf-net-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-net-basic.json) |  |
-| [sosa.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld) |  | Based on the [O&M ttl examples](https://www.w3.org/TR/vocab-ssn/integrated/examples/om-20.ttl) introduced in [Annex C.10 of SOSA specification](https://www.w3.org/TR/vocab-ssn/#omxml-examples). Restricted to O&M sampling and observation features for simplicity's sake (no sensor descriptions etc). Split into a context per feature type for clarity. Possibly no real need? |
-| [tsml.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld) |  | Context for time-series Observations. _See notes above._ |
-|  |  | [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-tsml-observation-byref.json) | Example where the observation result ("hasResult") is presented as a reference to another file. In this case a pair of TSML GML files (xample-elf-tsml-result-dr.xml; xample-elf-tsml-result-tvp.xml). |
-|  |  | [xample-elf-tsml-observation-inline.json](https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-tsml-observation-inline.json) | Example where the observation result ("hasResult") is presented as an inline JSON object. |
-|  |  | [xample-elf-tsml-result-dr.xml](https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-tsml-result-dr.xml) | Target of the reference in xample-elf-tsml-observation-byref.json. Domain-Range encoding. |
-|  |  | [xample-elf-tsml-result-tvp.xml](https://opengeospatial.github.io/ELFIE/json-ld/examples/xample-elf-tsml-result-tvp.xml) | Target of the reference in xample-elf-tsml-observation-byref.json. Time-Value-Pair encoding. |  
-| [floodcast.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld) |  | FloodCast classes. |
-| [gw.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld) |  | GWML 2.0 classes. |
-| [hyf.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld) |  | HY Features classes and relations. |
+| VIEW | CONTEXT FILE | EXAMPLE | COMMENT |
+| ---- | ------------ | ------- | ------- |
+| eld-all | [elf-all.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld) | [xample-elf-all.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-all.json) | An all components context that imports everything for when you just want to say everything you know. _Necessary? Even more importantly - is this legitimate?_ |
+| elf-index | [elf-index.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld) | [xample-elf-index.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-index.json) | Core properties of each feature that support discovery/indexing. Each domain specific JSON file should include these. |
+| elf-net-basic | [elf-net-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld) | [xample-elf-net-basic.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-basic.json) |  |
+| elf-net-spatial | [elf-net-spatial.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-spatial.jsonld) | [xample-elf-net-spatial.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-spatial.json) | Imports elf-net-basic.jsonld. Deliberately dropped 'sf' prefix from keyword names to reinforce the fact we recommend picking and sticking with one topology model. _(Discuss?)_ |
+| elf-net-temporal | [elf-net-temporal.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net-temporal.jsonld) | [xample-elf-net-temporal.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-net-temporal.json) | Imports elf-net-basic.jsonld. |
+| elf-net | [elf-net.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld) |  | Imports elf-net-basic.jsonld, elf-net-spatial.jsonld, elf-net-temporal.jsonld |
+| elf-geojson | [elf-geojson.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-geojson.jsonld) | [xample-elf-geojson.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-geojson.json) | See 'Experiment - ELFIE GeoJSON-LD' below. Imports http://geojson.org/geojson-ld/geojson-context.jsonld |
+| _elf-sosa_ |  |  | Based on the [O&M ttl examples](https://www.w3.org/TR/vocab-ssn/integrated/examples/om-20.ttl) introduced in [Annex C.10 of SOSA specification](https://www.w3.org/TR/vocab-ssn/#omxml-examples). Restricted to O&M sampling features for simplicity's sake (no sensor descriptions etc). Split into a context per feature type for clarity. Possibly no real need? |
+| elf-sosa-sample | [elf-sosa-sample.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld) | | Context for Samples - in our case sampling features such as monitoring stations, boreholes etc. |
+| | | [xample-elf-sosa-sample.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample.json) | Example with multiple observations inline - used the @graph key as all objects in the array share the same context. |
+| | | [xample-elf-sosa-sample-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample-byref.json) | As above, but observations by reference. |
+| | | [xample-elf-sosa-sample-preview.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-sample-preview.json) | Monitoring station using only preview and simple relationship keys. |
+| elf-sosa-observation | [elf-sosa-observation.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld) | [xample-elf-sosa-observation.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-sosa-observation.json) | Context for Observations. |
+| elf-tsml-observation | [elf-sosa-observation.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld) |  | Context for time-series Observations. _See notes above._ |
+|  |  | [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-observation-byref.json) | Example where the observation result ("hasResult") is presented as a reference to another file. In this case a pair of TSML GML files (xample-elf-tsml-result-dr.xml; xample-elf-tsml-result-tvp.xml). |
+|  |  | [xample-elf-tsml-observation-inline.json](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-observation-inline.json) | Example where the observation result ("hasResult") is presented as an inline JSON object. |
+|  |  | [xample-elf-tsml-result-dr.xml](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-dr.xml) | Target of the reference in xample-elf-tsml-observation-byref.json. Domain-Range encoding. |
+|  |  | [xample-elf-tsml-result-tvp.xml](https://opengeospatial.github.io/ELFIE/json-ld/xample-elf-tsml-result-tvp.xml) | Target of the reference in xample-elf-tsml-observation-byref.json. Time-Value-Pair encoding. |  
 
 Context and example files are published in the docs folder and can be referred to at the path 
 https://opengeospatial.github.io/ELFIE/json-ld/.  
-For example: https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld
+For example: https://opengeospatial.github.io/ELFIE/json-ld/elf-preview.jsonld
 
 ## Experiment - ELFIE GeoJSON-LD
 There is a [GeoJSON-LD vocabulary](http://geojson.org/geojson-ld/) and I (ABHR) thought it would 
@@ -138,5 +150,3 @@ and added the link to the schema.org context to relevant contexts and example do
 | ---- | ------------ | ------- | ------- |
 | elf-basic | [elf-basic.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/deprecated/elf-basic.jsonld) |  | rdfs:type from elf-basic maps on to JSON-LD's @type keyword. |
 | elf-preview | [elf-preview.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/deprecated/elf-preview.jsonld) |  |
-
-Update ... include latest deprecations.
