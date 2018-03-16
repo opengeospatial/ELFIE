@@ -33,247 +33,46 @@
     <pre><code id="context">
 {
   "@context": {
-    "schema": "http://schema.org/",
-    "description": "schema:description",
-    "geo": "schema:geo",
-    "image": {
-      "@id": "schema:image",
-      "@type": "@id"
-    },
-    "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
-    "skos": "https://www.w3.org/TR/skos-reference/",
-    "related": {
-      "@id": "skos:related",
-      "@type": "@id"
-    },
-    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
-    "intersects": {
-      "@id": "gsp:sfIntersects",
-      "@type": "@id"
-    },
-    "touches": {
-      "@id": "gsp:sfTouches",
-      "@type": "@id"
-    },
-    "within": {
-      "@id": "gsp:sfWithin",
-      "@type": "@id"
-    },
-    "time": "https://www.w3.org/TR/owl-time/",
-    "after": {
-      "@id": "time:after",
-      "@type": "@id"
-    },
-    "before": {
-      "@id": "time:before",
-      "@type": "@id"
-    },
-    "intervalAfter": {
-      "@id": "time:intervalAfter",
-      "@type": "@id"
-    },
-    "intervalBefore": {
-      "@id": "time:intervalBefore",
-      "@type": "@id"
-    },
-    "intervalDuring": {
-      "@id": "time:intervalDuring",
-      "@type": "@id"
-    },
-    "rdfs": "https://www.w3.org/TR/rdf-schema/",
-    "sampling": "http://www.w3.org/ns/sosa/sampling/",
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "hasGeometry": "gsp:hasGeometry",
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
-    "hasSampleRelationship": "sampling:hasSampleRelationship",
-    "natureOfRelationship": {
-      "@id": "sampling:natureOfRelationship",
-      "@type": "@id"
-    },
-    "relatedSample": {
-      "@id": "sampling:relatedSample",
-      "@type": "@id"
-    },
     "gw": "http://opengeospatial/def/ontology/gwml2#",
-    "GW_HydrogeoUnit": {
-      "@id": "gw:GW_HydrogeoUnit",
-      "@type": "@id"
-    },
-    "GW_Aquifer": {
-      "@id": "gw:GW_Aquifer",
-      "@type": "@id"
-    },
-    "GW_Well": {
-      "@id": "gw:GW_Well",
-      "@type": "@id"
-    },
-    "GW_MonitoringSite": {
-      "@id": "gw:GW_MonitoringSite",
-      "@type": "@id"
-    },
+    "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
+    "GW_Aquifer": "gw:GW_Aquifer",
+    "GW_Well": "gw:GW_Well",
+    "GW_MonitoringSite": "gw:GW_MonitoringSite",
     "hyf": "http://opengeospatial/def/ontology/hyf",
-    "HY_Catchment": {
-      "@id": "hyf:HY_Catchment",
-      "@type": "@id"
-    },
-    "HY_CatchmentDivide": {
-      "@id": "hyf:HY_CatchmentDivide",
-      "@type": "@id"
-    },
-    "HY_HydrographicNetwork": {
-      "@id": "hyf:HY_HydrographicNetwork",
-      "@type": "@id"
-    },
-    "HY_HydrometricNetwork": {
-      "@id": "hyf:HY_HydrometricNetwork",
-      "@type": "@id"
-    },
-    "HY_HydroNexus": {
-      "@id": "hyf:HY_HydroNexus",
-      "@type": "@id"
-    },
-    "HY_HydroLocation": {
-      "@id": "hyf:HY_HydroLocation",
-      "@type": "@id"
-    },
-    "HY_HydrometricFeature": {
-      "@id": "hyf:HY_HydrometricFeature",
-      "@type": "@id"
-    },
-    "HY_WaterBody": {
-      "@id": "hyf:HY_WaterBody",
-      "@type": "@id"
-    },
-    "HY_Lake": {
-      "@id": "hyf:HY_Lake",
-      "@type": "@id"
-    },
-    "HY_Impoundment": {
-      "@id": "hyf:HY_Impoundment",
-      "@type": "@id"
-    },
-    "HY_River": {
-      "@id": "hyf:HY_River",
-      "@type": "@id"
-    },
-    "HY_Channel": {
-      "@id": "hyf:HY_Channel",
-      "@type": "@id"
-    },
-    "HY_FlowPath": {
-      "@id": "hyf:HY_FlowPath",
-      "@type": "@id"
-    },
-    "HY_DistanceDescription": {
-      "@id": "hyf:HY_DistanceDescription",
-      "@type": "@id"
-    },
-    "HY_HydroLocationType": {
-      "@id": "hyf:HY_HydroLocationType",
-      "@type": "@id"
-    },
-    "HY_IndirectPosition": {
-      "@id": "hyf:HY_IndirectPosition",
-      "@type": "@id"
-    },
-    "HY_DistanceFromReferent": {
-      "@id": "hyf:HY_DistanceFromReferent",
-      "@type": "@id"
-    },
-    "upstreamWaterBody": {
-      "@id": "hyf:upstreamWaterBody",
-      "@type": "@id"
-    },
-    "downstreamWaterBody": {
-      "@id": "hyf:downstreamWaterBody",
-      "@type": "@id"
-    },
-    "lowerCatchment": {
-      "@id": "hyf:lowerCatchment",
-      "@type": "@id"
-    },
-    "upperCatchment": {
-      "@id": "hyf:upperCatchment",
-      "@type": "@id"
-    },
-    "realizedCatchment": {
-      "@id": "hyf:realizedCatchment",
-      "@type": "@id"
-    },
-    "catchmentRealization": {
-      "@id": "hyf:catchmentRealization",
-      "@type": "@id"
-    },
-    "contributingCatchment": {
-      "@id": "hyf:contributingCatchment",
-      "@type": "@id"
-    },
-    "outflow": {
-      "@id": "hyf:outflow",
-      "@type": "@id"
-    },
-    "realizedNexus": {
-      "@id": "hyf:realizedNexus",
-      "@type": "@id"
-    },
-    "networkStation": {
-      "@id": "hyf:networkStation",
-      "@type": "@id"
-    },
-    "referencedPosition": {
-      "@id": "hyf:referencedPosition",
-      "@type": "@id"
-    },
-    "distanceExpression": {
-      "@id": "hyf:distanceExpression",
-      "@type": "@id"
-    },
-    "distanceDescription": {
-      "@id": "hyf:distanceDescription",
-      "@type": "@id"
-    },
-    "linearElement": {
-      "@id": "hyf:linearElement",
-      "@type": "@id"
-    },
-    "hydrometricNetwork": {
-      "@id": "hyf:hydrometricNetwork",
-      "@type": "@id"
-    },
-    "nexusRealization": {
-      "@id": "hyf:nexusRealization",
-      "@type": "@id"
-    },
-    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
-    "hasResult": "sosa:hasResult",
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
-    "phenomenonTime": "sosa:phenomenonTime",
-    "hasBeginning": "time:hasBeginning",
-    "hasEnd": "time:hasEnd",
-    "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    }
+    "HY_Catchment": "hyf:HY_Catchment",
+    "HY_CatchmentDivide": "hyf:HY_CatchmentDivide",
+    "HY_HydrographicNetwork": "hyf:HY_HydrographicNetwork",
+    "HY_HydrometricNetwork": "hyf:HY_HydrometricNetwork",
+    "HY_HydroNexus": "hyf:HY_HydroNexus",
+    "HY_HydroLocation": "hyf:HY_HydroLocation",
+    "HY_HydrometricFeature": "hyf:HY_HydrometricFeature",
+    "HY_WaterBody": "hyf:HY_WaterBody",
+    "HY_Lake": "hyf:HY_Lake",
+    "HY_Impoundment": "hyf:HY_Impoundment",
+    "HY_River": "hyf:HY_River",
+    "HY_Channel": "hyf:HY_Channel",
+    "HY_FlowPath": "hyf:HY_FlowPath",
+    "HY_DistanceDescription": "hyf:HY_DistanceDescription",
+    "HY_HydroLocationType": "hyf:HY_HydroLocationType",
+    "HY_IndirectPosition": "hyf:HY_IndirectPosition",
+    "HY_DistanceFromReferent": "hyf:HY_DistanceFromReferent",
+    "upstreamWaterBody": "hyf:upstreamWaterBody",
+    "downstreamWaterBody": "hyf:downstreamWaterBody",
+    "lowerCatchment": "hyf:lowerCatchment",
+    "upperCatchment": "hyf:upperCatchment",
+    "realizedCatchment": "hyf:realizedCatchment",
+    "catchmentRealization": "hyf:catchmentRealization",
+    "contributingCatchment": "hyf:contributingCatchment",
+    "outflow": "hyf:outflow",
+    "realizedNexus": "hyf:realizedNexus",
+    "networkStation": "hyf:networkStation",
+    "referencedPosition": "hyf:referencedPosition",
+    "distanceExpression": "hyf:distanceExpression",
+    "distanceDescription": "hyf:distanceDescription",
+    "linearElement": "hyf:linearElement",
+    "hydrometricNetwork": "hyf:hydrometricNetwork",
+    "nexusRealization": "hyf:nexusRealization",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
