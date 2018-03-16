@@ -4,7 +4,7 @@
 
 This use case provides a person interested in a basic summary of the water budget for a given watershed information about a collection of watersheds and their water budget data. It links together various hydrographic representations of each watershed as well as observational water budget data and related web resources.
 
-[**The demo is available as a static data visualization**](https://opengeospatial.github.io/ELFIE/demo/uswb-viz)
+[**The demo is available as a static data visualization**](https://opengeospatial.github.io/ELFIE/demo/uswb-viz){:target="_blank"}
 
 ### User Story
 
@@ -30,21 +30,21 @@ The US Water Budgets demo is a static HTML and SVG visualization of various ELFI
 
 ### Links to Demo Resources
 
-The data index for the USWB demo can be seen in [github here.](https://github.com/opengeospatial/ELFIE/tree/master/data/uswb)
+The data index for the USWB demo can be seen in [github here.](https://github.com/opengeospatial/ELFIE/tree/master/data/uswb){:target="_blank"}
 
 The primary entry point to the data is the non-spatial set of catchments as can be seen in 
-[this tsv file.](https://github.com/opengeospatial/ELFIE/blob/master/data/uswb/usgs_huc12_uswb.tsv)
+[this tsv file.](https://github.com/opengeospatial/ELFIE/blob/master/data/uswb/usgs_huc12_uswb.tsv){:target="_blank"}
 
 Each catchment is linked to three spatial features, an outflow, a flowline network, and a boundary polygon. 
-This can be seen in a json-ld document such as [this one.](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070200121110)
+This can be seen in a json-ld document such as [this one.](https://opengeospatial.github.io/ELFIE/usgs/huc12/uswb/070200121110){:target="_blank"}
 
-Navigate to the [use case data home on github](https://github.com/opengeospatial/ELFIE/tree/master/data/uswb) and go to the 
-`usgs_huc12boundary_uswb` [.tsv](https://github.com/opengeospatial/ELFIE/blob/master/data/uswb/usgs_huc12boundary_uswb.tsv) 
-or [.json](https://github.com/opengeospatial/ELFIE/blob/master/data/uswb/usgs_huc12boundary_uswb.json) files to see the data
-that is in the demo ELFIE json-ld documents such as [this one](https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070200121110).
+Navigate to the [use case data home on github](https://github.com/opengeospatial/ELFIE/tree/master/data/uswb){:target="_blank"} and go to the 
+`usgs_huc12boundary_uswb` [.tsv](https://github.com/opengeospatial/ELFIE/blob/master/data/uswb/usgs_huc12boundary_uswb.tsv){:target="_blank"} 
+or [.json](https://github.com/opengeospatial/ELFIE/blob/master/data/uswb/usgs_huc12boundary_uswb.json){:target="_blank"} files to see the data
+that is in the demo ELFIE json-ld documents such as [this one](https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/070200121110){:target="_blank"}.
 
 This collection of files is accessed with R code that builds the map in the data visualization that 
-[can be seen here.](https://dblodgett-usgs.github.io/uswb-viz/)
+[can be seen here.](https://dblodgett-usgs.github.io/uswb-viz/){:target="_blank"}
 
 ## Demo findings and potential next steps
 

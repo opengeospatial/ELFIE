@@ -532,7 +532,7 @@ write_feature_type_title <- function(out_md, feature_type) {
 }
 
 write_url_line <- function(out_md, main_url) {
-  write(paste0("[", main_url, "](", main_url, ") [plain json](", main_url, ".json)  "), out_md, append = T)
+  write(paste0('[', main_url, '](', main_url, '){:target="_blank"} [plain json](', main_url, '.json){:target="_blank"}  '), out_md, append = T)
 }
 
 prefetch_ids <- function(id) {
