@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,106 +42,36 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
-    "skos": "https://www.w3.org/TR/skos-reference/",
-    "related": {
-      "@id": "skos:related",
-      "@type": "@id"
-    },
-    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
-    "intersects": {
-      "@id": "gsp:sfIntersects",
-      "@type": "@id"
-    },
-    "touches": {
-      "@id": "gsp:sfTouches",
-      "@type": "@id"
-    },
-    "within": {
-      "@id": "gsp:sfWithin",
-      "@type": "@id"
-    },
-    "time": "https://www.w3.org/TR/owl-time/",
-    "after": {
-      "@id": "time:after",
-      "@type": "@id"
-    },
-    "before": {
-      "@id": "time:before",
-      "@type": "@id"
-    },
-    "intervalAfter": {
-      "@id": "time:intervalAfter",
-      "@type": "@id"
-    },
-    "intervalBefore": {
-      "@id": "time:intervalBefore",
-      "@type": "@id"
-    },
-    "intervalDuring": {
-      "@id": "time:intervalDuring",
-      "@type": "@id"
-    },
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
     "rdfs": "https://www.w3.org/TR/rdf-schema/",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
     "sampling": "http://www.w3.org/ns/sosa/sampling/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "hasGeometry": "gsp:hasGeometry",
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
-    "hasSampleRelationship": "sampling:hasSampleRelationship",
-    "natureOfRelationship": {
-      "@id": "sampling:natureOfRelationship",
-      "@type": "@id"
-    },
-    "relatedSample": {
-      "@id": "sampling:relatedSample",
-      "@type": "@id"
-    },
-    "gw": "http://opengeospatial/def/ontology/gwml2#",
-    "GW_HydrogeoUnit": {
-      "@id": "gw:GW_HydrogeoUnit",
-      "@type": "@id"
-    },
-    "GW_Aquifer": {
-      "@id": "gw:GW_Aquifer",
-      "@type": "@id"
-    },
-    "GW_Well": {
-      "@id": "gw:GW_Well",
-      "@type": "@id"
-    },
-    "GW_MonitoringSite": {
-      "@id": "gw:GW_MonitoringSite",
-      "@type": "@id"
-    },
-    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
+    "time": "http://www.w3.org/2006/time#",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "hasResult": "sosa:hasResult",
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
     "phenomenonTime": "sosa:phenomenonTime",
     "hasBeginning": "time:hasBeginning",
     "hasEnd": "time:hasEnd",
     "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    }
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample",
+    "gw": "http://opengeospatial/def/ontology/gwml2#",
+    "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
+    "GW_Aquifer": "gw:GW_Aquifer",
+    "GW_Well": "gw:GW_Well",
+    "GW_MonitoringSite": "gw:GW_MonitoringSite",
+    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -150,15 +81,15 @@
     <pre><code id="code">
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
     {
       "gsp": "http://www.opengeospatial.org/standards/geosparql/"
     }
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
-  "@type": "sosa:Sample",
+  "@type": "Sample",
   "name": "Forage BSS000DXBD",
   "gsp:hasGeometry": {
     "@type": "gsp:Geometry",
@@ -167,9 +98,9 @@
   "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
   "isFeatureOfInterestOf": [
     {
-      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
       "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
-      "@type": "sosa:Observation",
+      "@type": "Observation",
       "hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
       "hasResult": [
         {
