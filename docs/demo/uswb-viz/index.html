@@ -1,0 +1,291 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ########################################################################
+   ___      ___ ___  ________  ___       ________  ________
+  |\  \    /  /|\  \|\_____  \|\  \     |\   __  \|\   __  \
+  \ \  \  /  / | \  \\|___/  /\ \  \    \ \  \|\  \ \  \|\ /_
+   \ \  \/  / / \ \  \   /  / /\ \  \    \ \   __  \ \   __  \
+    \ \    / /   \ \  \ /  /_/__\ \  \____\ \  \ \  \ \  \|\  \
+     \ \__/ /     \ \__\\________\ \_______\ \__\ \__\ \_______\
+      \|__|/       \|__|\|_______|\|_______|\|__|\|__|\|_______|
+  
+  ######################################################################### -->
+  
+  <!-- ############### VIEWPORT META TAG ############### -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <!-- ################################################# -->
+      <meta property="og:title" content="US Water Budgets" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://dblodgett-usgs.github.io/uswb-viz/" />
+      <meta property="og:image:url" content="https://dblodgett-usgs.github.io/uswb-viz/images/thumb-facebook.png" />
+      <meta property="og:image:height" content="400" />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:description" content="!!! PRELIMINARY AND SUBJECT TO REVISISON !!! U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US." />
+      <meta property="og:locale" content="en_US" />
+    
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@USGS_R" />
+      <meta name="twitter:title" content="US Water Budgets" />
+      <meta name="twitter:description" content="!!! PRELIMINARY AND SUBJECT TO REVISISON !!! U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US." />
+      <meta name="twitter:image" content="https://dblodgett-usgs.github.io/uswb-viz/images/thumb-twitter.png" />
+      <meta name="twitter:image:alt" content="How the water cycle varies across the United States" />
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "name": "US Water Budgets",
+          "about": "!!! PRELIMINARY AND SUBJECT TO REVISISON !!! U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US.",
+          "datePublished": "2018-01-20",
+          
+      "contributor": {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "David Blodgett",
+        "email": "dblodgett@usgs.gov",
+        "affiliation": {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "legalName": "U.S. Geological Survey"
+        }
+      },
+      
+      "audience": {
+        "@context": "http://schema.org",
+        "@type": "Audience",
+        "audienceType": "General public"
+      },
+      "publisher": {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "legalName": "U.S. Geological Survey"
+          },
+          "keywords": "water,USGS,VIZLAB,water budget"
+    	}
+      </script>
+      
+  <title>US Water Budgets</title>
+    <script src="js/d3-4.11.0.min.js?_c=1228887" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.min.js?_c=8037619" type="text/javascript"></script>
+    <script src="js/vizlab.js?_c=8565322" type="text/javascript"></script>
+    <script src="js/svg-injector-1.1.3.min.js?_c=7927418" type="text/javascript"></script>
+    <script src="js/animate.js?_c=8198920" type="text/javascript"></script>
+    <script src="js/tooltip.js?_c=3486936" type="text/javascript"></script>
+    <link href="css/header.css?_c=128249" rel="stylesheet" type="text/css" />
+    <link href="css/viz.css?_c=9417565" rel="stylesheet" type="text/css" />
+    <link href="css/svg.css?_c=6715376" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css?_c=9737222" rel="stylesheet" type="text/css" />
+    <link href="css/socialMedia.css?_c=2813560" rel="stylesheet" type="text/css" />
+  <noscript>Javascript is not enabled</noscript>
+    
+    <script type="application/javascript" src="https://www2.usgs.gov/scripts/analytics/usgs-analytics.js"></script>
+   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50928997-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-50928997-1');
+    </script>
+    
+</head>
+<body onload="load_default()">
+
+  <div id="header">
+  <div id="logo">
+    <a href="https://www.usgs.gov/" target="_blank" onclick="gtag('event','outbound', 'clicked on USGS.gov')">
+    	  <img src="images/usgsLogo.png?_c=4347510" alt="U.S. Geological Survey" title="U.S. Geological Survey" />
+    </a> 
+  	
+  	<h3>Water Budgets Across the U.S.</h3>
+  </div>
+</div>
+
+  <div class="verticalSocialHolder">
+  <div class="socialMediaOption" id="twitter">
+    <div class="socialMediaImage">
+      <a href="https://twitter.com/share?url=https%3A%2F%2Fcida.usgs.gov%2Fnwc-static%2Fwaterbudget-viz%2F%3Futm_source%3Dtwitter&text=Water%20Budgets%20Across%20the%20United%20States&hashtags=water,precipitation,evapotranspiration,dataviz
+" target="_blank">
+        <img src="images/twitter.svg"/>
+      </a>
+    </div>
+  </div>
+  <div class="socialMediaOption" id="facebook">
+    <div class="socialMediaImage">
+      <a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fcida.usgs.gov%2Fnwc-static%2Fwaterbudget-viz%2F%3Futm_source%3Dfacebook" target="_blank">
+        <img src="images/facebook.svg"/>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div id="vizContainer">
+  <div class="intro">
+      <h2>Water Budgets Across the United States</h2>
+
+      <h3>Hover over or click a watershed to see its waterbudget.</h3>
+
+  </div>
+  <div id="figureContent">
+    <div class="leftSideContent">
+      <div id="gage-map" class="map">
+        <figure>
+          <img class="vizlab-landscape vizlab-portrait" src="images/visualize_map.svg" title="U.S. Water Budgets" alt="Summary of water budgets for the conterminous US." />
+        </figure>
+      </div>
+    </div>
+    <div class="rightSideContent hide_span" id="barChart">
+      <img class="vizlab-landscape vizlab-portrait" src="images/visualize_watershed_wb_data.svg" title="U.S. Water Budgets Bar Chart" alt="Bar chart showing period of record mean annual water budget." />
+    </div>
+    <div class="rightSideContent hide_span" id="characteristicsHolder">
+      <div id="characteristics" class="hide_span">
+          <!--<p>
+<h3><span class="hide_span" id="wb-id-070700051701">Indian Creek-Wisconsin River</span><span class="hide_span" id="wb-id-031601130201">Mill Creek-Black Warrior River</span><span class="hide_span" id="wb-id-160201020603">West Weber-Weber River</span><span class="hide_span" id="wb-id-020401050911">Buck Creek-Delaware River</span><span class="hide_span" id="wb-id-102600080802">Deer Creek-Smoky Hill River</span><span class="hide_span" id="wb-id-180201041203">Packer Lake-Sacramento River</span><span class="hide_span" id="wb-id-170601080803">Palouse Lake</span><span class="hide_span" id="wb-id-150302040410">Bill Williams River-Lake Havasu</span><span class="hide_span" id="wb-id-101102050210">Appel Creek</span><span class="hide_span" id="wb-id-120302030102">Fields Bayou-Trinity River</span><span class="hide_span" id="wb-id-130201011304">Los Alamos Canyon-Rio Grande</span><span class="hide_span" id="wb-id-051202021001">Lick Creek-White River</span><span class="hide_span" id="wb-id-050200050808">Streets Run-Monongahela River</span><span class="hide_span" id="wb-id-140100051906">May Flat-Colorado River</span><span class="hide_span" id="wb-id-100301012008">Log Gulch-Missouri River</span><span class="hide_span" id="wb-id-170900120202">Balch Creek-Willamette River</span><span class="hide_span" id="wb-id-180400012103">Shag Slough-San Joaquin River</span><span class="hide_span" id="wb-id-010300032404">Riggs Branch-Kennebec River</span><span class="hide_span" id="wb-id-102200031006">Big Slough-Elkhorn River</span><span class="hide_span" id="wb-id-071000091206">Coppers Creek-Des Moines River</span><span class="hide_span" id="wb-id-030701060405">Penholoway Swamp-Altamaha River</span><span class="hide_span" id="wb-id-030300050405">Mitchell Landing-Cape Fear River</span><span class="hide_span" id="wb-id-110100040606">Betsey Gill Creek-White River</span><span class="hide_span" id="wb-id-100800071208">Antelope Creek-Bighorn River</span><span class="hide_span" id="wb-id-150100120904">Anderson Wash-Muddy River</span><br></h3>
+Drainage area (sqmi): <span class="hide_span" id="wb-id-070700051701">10244</span><span class="hide_span" id="wb-id-031601130201">4842</span><span class="hide_span" id="wb-id-160201020603">2069</span><span class="hide_span" id="wb-id-020401050911">6880</span><span class="hide_span" id="wb-id-102600080802">19069</span><span class="hide_span" id="wb-id-180201041203">13391</span><span class="hide_span" id="wb-id-170601080803">3083</span><span class="hide_span" id="wb-id-150302040410">5163</span><span class="hide_span" id="wb-id-101102050210">8350</span><span class="hide_span" id="wb-id-120302030102">17181</span><span class="hide_span" id="wb-id-130201011304">10966</span><span class="hide_span" id="wb-id-051202021001">14</span><span class="hide_span" id="wb-id-050200050808">7376</span><span class="hide_span" id="wb-id-140100051906">17822</span><span class="hide_span" id="wb-id-100301012008">17196</span><span class="hide_span" id="wb-id-170900120202">11230</span><span class="hide_span" id="wb-id-180400012103">8651</span><span class="hide_span" id="wb-id-010300032404">5502</span><span class="hide_span" id="wb-id-102200031006">6769</span><span class="hide_span" id="wb-id-071000091206">14079</span><span class="hide_span" id="wb-id-030701060405">13904</span><span class="hide_span" id="wb-id-030300050405">5315</span><span class="hide_span" id="wb-id-110100040606">11052</span><span class="hide_span" id="wb-id-100800071208">13251</span><span class="hide_span" id="wb-id-150100120904">6252</span><br>
+Impervious Surface from 2011 (%): <span class="hide_span" id="wb-id-070700051701">1.08</span><span class="hide_span" id="wb-id-031601130201">2.29</span><span class="hide_span" id="wb-id-160201020603">1.48</span><span class="hide_span" id="wb-id-020401050911">2.27</span><span class="hide_span" id="wb-id-102600080802">0.52</span><span class="hide_span" id="wb-id-180201041203">0.6</span><span class="hide_span" id="wb-id-170601080803">0.55</span><span class="hide_span" id="wb-id-150302040410">0.17</span><span class="hide_span" id="wb-id-101102050210">0.25</span><span class="hide_span" id="wb-id-120302030102">5.15</span><span class="hide_span" id="wb-id-130201011304">0.4</span><span class="hide_span" id="wb-id-051202021001">4.52</span><span class="hide_span" id="wb-id-050200050808">2.38</span><span class="hide_span" id="wb-id-140100051906">0.53</span><span class="hide_span" id="wb-id-100301012008">0.44</span><span class="hide_span" id="wb-id-170900120202">2.99</span><span class="hide_span" id="wb-id-180400012103">1.25</span><span class="hide_span" id="wb-id-010300032404">0.66</span><span class="hide_span" id="wb-id-102200031006">0.69</span><span class="hide_span" id="wb-id-071000091206">1.38</span><span class="hide_span" id="wb-id-030701060405">2.51</span><span class="hide_span" id="wb-id-030300050405">3.8</span><span class="hide_span" id="wb-id-110100040606">1.08</span><span class="hide_span" id="wb-id-100800071208">0.28</span><span class="hide_span" id="wb-id-150100120904">0.21</span><br>
+Population Density (people/sqkm): <span class="hide_span" id="wb-id-070700051701">2226.48</span><span class="hide_span" id="wb-id-031601130201">6269.31</span><span class="hide_span" id="wb-id-160201020603">4093.52</span><span class="hide_span" id="wb-id-020401050911">9922.9</span><span class="hide_span" id="wb-id-102600080802">347.82</span><span class="hide_span" id="wb-id-180201041203">1208.52</span><span class="hide_span" id="wb-id-170601080803">1093.27</span><span class="hide_span" id="wb-id-150302040410">93.68</span><span class="hide_span" id="wb-id-101102050210">30.95</span><span class="hide_span" id="wb-id-120302030102">15333.92</span><span class="hide_span" id="wb-id-130201011304">472.35</span><span class="hide_span" id="wb-id-051202021001">6918.82</span><span class="hide_span" id="wb-id-050200050808">7200.51</span><span class="hide_span" id="wb-id-140100051906">882.72</span><span class="hide_span" id="wb-id-100301012008">420.36</span><span class="hide_span" id="wb-id-170900120202">9020.77</span><span class="hide_span" id="wb-id-180400012103">3805.5</span><span class="hide_span" id="wb-id-010300032404">1201.39</span><span class="hide_span" id="wb-id-102200031006">795.03</span><span class="hide_span" id="wb-id-071000091206">2490.15</span><span class="hide_span" id="wb-id-030701060405">8058.75</span><span class="hide_span" id="wb-id-030300050405">12411.73</span><span class="hide_span" id="wb-id-110100040606">2572.96</span><span class="hide_span" id="wb-id-100800071208">158.73</span><span class="hide_span" id="wb-id-150100120904">58.36</span><br>
+Irrigated agriculture 2012 (%): <span class="hide_span" id="wb-id-070700051701">2.81</span><span class="hide_span" id="wb-id-031601130201">0.03</span><span class="hide_span" id="wb-id-160201020603">3.68</span><span class="hide_span" id="wb-id-020401050911">0.1</span><span class="hide_span" id="wb-id-102600080802">3.7</span><span class="hide_span" id="wb-id-180201041203">9.48</span><span class="hide_span" id="wb-id-170601080803">1.06</span><span class="hide_span" id="wb-id-150302040410">0.1</span><span class="hide_span" id="wb-id-101102050210">0.16</span><span class="hide_span" id="wb-id-120302030102">0.27</span><span class="hide_span" id="wb-id-130201011304">3.59</span><span class="hide_span" id="wb-id-051202021001">0</span><span class="hide_span" id="wb-id-050200050808">0.01</span><span class="hide_span" id="wb-id-140100051906">2.91</span><span class="hide_span" id="wb-id-100301012008">4.17</span><span class="hide_span" id="wb-id-170900120202">3.29</span><span class="hide_span" id="wb-id-180400012103">25.95</span><span class="hide_span" id="wb-id-010300032404">0.01</span><span class="hide_span" id="wb-id-102200031006">24.82</span><span class="hide_span" id="wb-id-071000091206">0.1</span><span class="hide_span" id="wb-id-030701060405">1.56</span><span class="hide_span" id="wb-id-030300050405">0.29</span><span class="hide_span" id="wb-id-110100040606">0.09</span><span class="hide_span" id="wb-id-100800071208">2.79</span><span class="hide_span" id="wb-id-150100120904">0.6</span><br>
+Number of dams in 2013: <span class="hide_span" id="wb-id-070700051701">279</span><span class="hide_span" id="wb-id-031601130201">185</span><span class="hide_span" id="wb-id-160201020603">77</span><span class="hide_span" id="wb-id-020401050911">694</span><span class="hide_span" id="wb-id-102600080802">1094</span><span class="hide_span" id="wb-id-180201041203">137</span><span class="hide_span" id="wb-id-170601080803">13</span><span class="hide_span" id="wb-id-150302040410">10</span><span class="hide_span" id="wb-id-101102050210">210</span><span class="hide_span" id="wb-id-120302030102">1791</span><span class="hide_span" id="wb-id-130201011304">123</span><span class="hide_span" id="wb-id-051202021001">3</span><span class="hide_span" id="wb-id-050200050808">332</span><span class="hide_span" id="wb-id-140100051906">497</span><span class="hide_span" id="wb-id-100301012008">130</span><span class="hide_span" id="wb-id-170900120202">280</span><span class="hide_span" id="wb-id-180400012103">63</span><span class="hide_span" id="wb-id-010300032404">103</span><span class="hide_span" id="wb-id-102200031006">118</span><span class="hide_span" id="wb-id-071000091206">878</span><span class="hide_span" id="wb-id-030701060405">1586</span><span class="hide_span" id="wb-id-030300050405">729</span><span class="hide_span" id="wb-id-110100040606">102</span><span class="hide_span" id="wb-id-100800071208">126</span><span class="hide_span" id="wb-id-150100120904">50</span><br>
+Freshwater withdrawals in (in/yr): <span class="hide_span" id="wb-id-070700051701">0.272</span><span class="hide_span" id="wb-id-031601130201">1.033</span><span class="hide_span" id="wb-id-160201020603">0.879</span><span class="hide_span" id="wb-id-020401050911">1.36</span><span class="hide_span" id="wb-id-102600080802">0.166</span><span class="hide_span" id="wb-id-180201041203">1.287</span><span class="hide_span" id="wb-id-170601080803">0.178</span><span class="hide_span" id="wb-id-150302040410">0.138</span><span class="hide_span" id="wb-id-101102050210">0.02</span><span class="hide_span" id="wb-id-120302030102">0.789</span><span class="hide_span" id="wb-id-130201011304">0.429</span><span class="hide_span" id="wb-id-051202021001">8.111</span><span class="hide_span" id="wb-id-050200050808">0.775</span><span class="hide_span" id="wb-id-140100051906">0.954</span><span class="hide_span" id="wb-id-100301012008">0.58</span><span class="hide_span" id="wb-id-170900120202">0.655</span><span class="hide_span" id="wb-id-180400012103">3.34</span><span class="hide_span" id="wb-id-010300032404">0.028</span><span class="hide_span" id="wb-id-102200031006">0.931</span><span class="hide_span" id="wb-id-071000091206">0.054</span><span class="hide_span" id="wb-id-030701060405">0.747</span><span class="hide_span" id="wb-id-030300050405">0.708</span><span class="hide_span" id="wb-id-110100040606">0.149</span><span class="hide_span" id="wb-id-100800071208">0.307</span><span class="hide_span" id="wb-id-150100120904">0.081</span><br>-->
+<h3><span>More Data for Currently Selected Basin</span><br></h3>
+<span class="hide_span" id="wb-id-070700051701"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/070700051701" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-031601130201"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/031601130201" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-160201020603"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/160201020603" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-020401050911"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/020401050911" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-102600080802"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/102600080802" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-180201041203"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/180201041203" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-170601080803"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/170601080803" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-150302040410"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/150302040410" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-101102050210"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/101102050210" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-120302030102"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/120302030102" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-130201011304"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/130201011304" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-051202021001"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/051202021001" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-050200050808"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/050200050808" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-140100051906"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/140100051906" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-100301012008"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/100301012008" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-170900120202"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/170900120202" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-180400012103"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/180400012103" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-010300032404"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/010300032404" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-102200031006"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/102200031006" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-071000091206"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/071000091206" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-030701060405"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/030701060405" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-030300050405"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/030300050405" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-110100040606"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/110100040606" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-100800071208"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/100800071208" target="_blank">National Water Census Data Resources</a></span><span class="hide_span" id="wb-id-150100120904"><a href="https://cida.usgs.gov/nwc/#!waterbudget/achuc/150100120904" target="_blank">National Water Census Data Resources</a></span><br>
+<span class="hide_span" id="wb-id-070700051701"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=05407000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-031601130201"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=02465000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-160201020603"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=10141000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-020401050911"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=01463500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-102600080802"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=06877600" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-180201041203"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=11390500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-170601080803"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=13351000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-150302040410"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=09426620" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-101102050210"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=06337000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-120302030102"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=08066500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-130201011304"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=08313000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-051202021001"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=03374000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-050200050808"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=03085000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-140100051906"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=09163500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-100301012008"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=06066500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-170900120202"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=14211720" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-180400012103"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=11261500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-010300032404"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=01049265" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-102200031006"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=06800500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-071000091206"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=05490500" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-030701060405"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=02226000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-030300050405"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=02105769" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-110100040606"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=07061000" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-100800071208"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=06274300" target="_blank">National Water Information System Stream Gage</a></span><span class="hide_span" id="wb-id-150100120904"><a href="http://waterdata.usgs.gov/nwis/nwisman/?site_no=09419507" target="_blank">National Water Information System Stream Gage</a></span><br>
+</p>
+<p>
+<h3><span>Information About Data Sources</span><br></h3>
+<span><a href="https://daymet.ornl.gov/" target="_blank">Precipitation: Daymet</a></span><br>
+<span><a href="https://pubs.usgs.gov/sir/2013/5126/" target="_blank">Evapotranspiration: SSEBop</a></span><br>
+<span><a href="https://waterdata.usgs.gov/nwis" target="_blank">Streamflow: NWIS</a></span><br>
+<h3><span>Related Publications</span><br></h3>
+<span><a href="https://pubs.er.usgs.gov/publication/cir1384" target="_blank">National Water Census Description</a></span><br>
+<span><a href="https://pubs.usgs.gov/circ/2007/1308/" target="_blank">Water Budgets Overview</a></span><br>
+</p>
+      </div>
+    </div>
+    <div class="leftSideContent" id="caption">
+        <p><strong>This information is preliminary and is subject to revision. It is being provided to meet the 
+need for timely best science. The information is provided on the condition that neither the 
+U.S. Geological Survey nor the U.S. Government shall be held liable for any damages resulting 
+from the authorized or unauthorized use of this information.</strong></p>
+
+<p>Water budgets are used to understand the movement of water into and out of a
+watershed. Much like a financial budget, inflows, storage, and outflows can
+be thought of like income, account balance, and expenses respectively.
+Unlike a bank account, we don&#39;t have perfect information about the flows of
+water into and out of a watershed.  </p>
+
+<p>In this data visualization, you can see how three major components of the
+water budget vary across the conterminous US. Precipitation is incoming rain
+and snow; evapotranspiration is outgoing evaporation from soil and water
+bodies and transpiration through plants; and runoff is excess water that
+makes its way to lakes and rivers through streams and spring discharges.
+Each of these components is estimated with a variety of measurement and
+modeling methods.  </p>
+
+<p>With perfect information, the water budget bar charts shown here would
+“balance”, showing that in the long run, inflows to each watershed are equal
+to outflows plus changes in storage. The imbalance in the bar charts
+highlights that our best estimates of the three major water budget
+components don&#39;t balance perfectly. Why might the budget not balance? We
+know the imbalance can be the result of (1) changes in storage, (2)
+unquantified sources and sinks, and (3) uncertainty in data. Although the
+imbalance is the difference between in and out, the true and complete (but
+unknown) budget could have additional terms on both sides (explanations 1 or
+2) and could have larger or smaller values for any of the existing terms
+(explanation 3).  </p>
+
+<p>The water budget shown here is missing one of the most difficult terms to
+quantify – change in storage. The amount of water stored in a particular
+watershed, whether in lakes, aquifers, or any other storage, fluctuates over
+time; at times storage shrinks due to larger outflows and/or smaller
+inflows, and at other times storage increases due to smaller outflows and/or
+larger inflows. Using the bank analogy, storage is the amount of money in a
+bank account. For a given period of time, the inflows and outflows may not
+be equivalent and the balance may shift. While this can be less important
+for long-term balances as is shown here, it becomes more important at
+monthly or daily time scales, making it a very important aspect of the water
+budget. The National Water Census (NWC) is exploring remotely sensed
+products and additional observational datasets such as groundwater well data
+to improve our characterization of storage.  </p>
+
+<p>The “imbalance” in the water budgets also stems from unquantified
+components. These could include human water use or natural processes such as
+groundwater flow out of a watershed. The NWC continues to apply cutting-edge
+science to expanding our ability to account for the complete water budget.No
+measurement is exact. Each of the water budget components shown here has
+some unknown uncertainty included in it. The NWC is analyzing observational
+and simulated data sets to to understand these uncertainties.  </p>
+
+<p>As we go forward, the NWC aims to improve our understanding of the unknowns
+in the water budget for every watershed in the country. In addition to
+improving our observational datasets and our understanding of their
+uncertainties, the NWC is developing a model to combine these datasets to
+estimate a complete and closed water budget. Building upon knowledge gained
+through comprehensive analysis of observational datasets, this model can be
+used to understand how the different water budget components relate to one
+another and may change under various land use and water management scenarios.  </p>
+
+    </div>
+  </div>
+</div>
+
+  <footer>
+    
+<div class="footerContentAligner">
+
+    <div id="vizlabPromo">
+      <p>This interactive data visualization was created by
+      <a href="https://owi.usgs.gov/vizlab/" target="_blank">
+        <strong>USGS VIZLAB</strong></p>
+      	<img src="images/atom.svg" alt="atom icon"/>
+    	</a>
+    </div>
+
+    <div id="github-contact">
+      <a class="githublink" href="" target="_blank" onclick="gtag('event','outbound', 'clicked on repo')">
+        <img src="images/github.svg" alt="github icon"/>
+      	<p>Get the Code</p>
+      </a>
+      <span>|</span>
+      <a href="mailto:vizlab@usgs.gov">
+    	  Contact Us
+    	</a>
+    	<span>|</span>
+      <a href="https://www.usgs.gov/" target="_blank" onclick="gtag('event','outbound', 'clicked on USGS.gov')">
+    	  U.S. Geological Survey
+    	</a> 
+    </div>
+
+    <div id="relatedItems">
+
+      <div id="relatedVizzies">
+        <h3>Related Visualizations:</h3>
+        <div class="relatedItemContainer">
+        		<div class="relatedItem">
+        		  <a href="https://owi.usgs.gov/vizlab/water-use/" target="_blank" onclick="gtag('event','outbound', 'clicked on related vizzy')">
+        		    <div class="footerThumbnail">
+        					<img src="https://owi.usgs.gov/vizlab/water-use/images/thumb_12_12_noSlider.png" alt=""/>
+        				</div>
+        			  <div class="titleHandler">
+        				  <h4>Visualizing water use by region and time</h4>
+        				</div>
+        			</a>
+        		</div>
+      	</div>
+      </div>
+
+    </div>
+
+</div>
+
+
+  </footer>
+</body>
+
+</html>
+
