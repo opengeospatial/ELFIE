@@ -50,9 +50,9 @@
             "@type": "skos:Concept",            
 			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-							  "@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2"
+							  "@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
 							  "@type": "Sample",
-							  "name": "PIEZOMETRE DE CARDONNETTE - 80",
+							  "name": "PIEZOMETRE DE CARDONNETTE - 80"
 			}
 		}
     ]
