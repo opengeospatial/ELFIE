@@ -33,6 +33,17 @@
     <pre><code id="context">
 {
   "@context": {
+    "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
+    "description": "schema:description",
+    "geo": "schema:geo",
+    "image": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
     "gw": "http://opengeospatial/def/ontology/gwml2#",
     "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
     "GW_Aquifer": "gw:GW_Aquifer",
@@ -82,7 +93,7 @@
     <pre><code id="code">
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
     {

@@ -104,8 +104,7 @@
     "distanceDescription": "hyf:distanceDescription",
     "linearElement": "hyf:linearElement",
     "hydrometricNetwork": "hyf:hydrometricNetwork",
-    "nexusRealization": "hyf:nexusRealization",
-    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/"
+    "nexusRealization": "hyf:nexusRealization"
   }
 }
     </code></pre>
@@ -114,15 +113,7 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    {
-      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
-    }
-  ],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
   "@type": "sosa:Sample",
   "name": "Forage BSS001REWW",
@@ -133,7 +124,7 @@
   "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
   "isFeatureOfInterestOf": [
     {
-      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
       "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
       "@type": "sosa:Observation",
       "hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",

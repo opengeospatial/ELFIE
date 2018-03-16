@@ -1,10 +1,9 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
-		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",		
-		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwlf/U124404001",
     "@type": ["sosa:Sample","HY_HydrometricFeature"],
@@ -20,7 +19,7 @@
 		},
     "isFeatureOfInterestOf": [
 				{
-					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",				
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",				
 					"@id": "http://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=U124404001",
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {

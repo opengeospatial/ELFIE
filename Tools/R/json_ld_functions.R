@@ -24,6 +24,9 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
                   "description" = tsv_data$`schema:description`,
                   "sameAs" = tsv_data$`schema:sameAs`,
                   "image" = tsv_data$`schema:image`)
+  
+  outlist <- check_outlist(outlist)
+  
   if(!include_missing) {
     return(remove_missing(outlist))
   } else {

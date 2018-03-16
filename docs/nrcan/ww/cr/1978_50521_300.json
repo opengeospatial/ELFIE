@@ -1,10 +1,7 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-    {
-      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
-    }
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_50521_300",
   "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",

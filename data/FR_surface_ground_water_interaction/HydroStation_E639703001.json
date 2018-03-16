@@ -3,8 +3,7 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",				
-		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld"
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
     "@type": ["Sample","HY_HydrometricFeature"],
