@@ -639,8 +639,13 @@ opened=[];
 						"smooth": false
 					  },
 					  "physics": {
-						"minVelocity": 0.75,
-						"solver": "repulsion"
+						"forceAtlas2Based": {
+						  "centralGravity": 0.001,
+						  "springLength": 100
+						},
+						"solver":"forceAtlas2Based",
+						"minVelocity": 0.75//,
+						//"solver": "repulsion"
 					  }
 					};
 				  network = new vis.Network(container, data, options);
@@ -668,8 +673,26 @@ opened=[];
 					if(typeof params.nodes[0] !== 'undefined'){
 					document.getElementById('curentURI').innerHTML= params.nodes[0];
 					document.getElementById('curentURI').setAttribute("href",params.nodes[0]);
-					 if (method=="jsonld"){$.ajax({url: (params.nodes[0].endsWith(".json"))?params.nodes[0]:params.nodes[0]+".json",dataType: 'json',async: false,success: function(data) {
-					 document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")}});}
+					 if (method=="jsonld"){
+						$.ajax({
+						url: (params.nodes[0].endsWith(".json"))?params.nodes[0]:params.nodes[0]+".json",
+						dataType: 'json',
+						async: false,
+						success: function(data) {
+						document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")},
+						error: function(){
+							$.ajax({
+							url: params.nodes[0],
+							dataType: 'json',
+							async: false,
+							success: function(data) {
+							document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")},
+							});
+						}
+					 
+					 });
+					 
+					 }
 					 //if (method=="jsonld"){$.getJSON((params.nodes[0].endsWith(".json"))?params.nodes[0]:params.nodes[0]+".json", function (data){document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")});}
 					}
 					if(nodes.get(params.nodes[0]).l2){
@@ -778,8 +801,7 @@ function addGraphPart(graph, URI, source ){
 function addToGraphJsonld(URI){
 
             //$.getJSON((URI.endsWith(".json"))?URI:URI+".json", function (data){            
-			$.ajax({url: URI.endsWith(".json")?URI:URI+".json", dataType: 'json',async: false,success: function(data) {
-				
+			$.ajax({url: URI.endsWith(".json")?URI:URI+".json", dataType: 'json',async: false,success: function(data) {			
 				
 				if ($.inArray(URI, opened)===-1){
 					
@@ -806,7 +828,38 @@ function addToGraphJsonld(URI){
 				});
 			
 			}
-			}});
+			},
+			error: function(){
+						$.ajax({url: URI, dataType: 'json',async: false,success: function(data) {						
+						if ($.inArray(URI, opened)===-1){							
+						jsonld.toRDF(data, {format: 'application/nquads'}, function(err, nquads) {
+						// nquads is a string of nquads
+							console.log(nquads);
+							if (err== null) {
+								var mygraph= tablify(String(nquads).trim());
+								try{
+								triplesToGraph(mygraph,URI,false);
+								}catch(e){
+								alert("error while adding to graph");
+								}
+								
+								try{
+								triplesToSpatial(mygraph, false);
+								}catch(e){
+								alert("error while adding to map ");
+								}
+								opened.push(URI);
+							}else{
+							alert("error while retrieveing jsonld");
+							}
+						});
+					
+					}
+					}
+					});
+			
+			}
+			});
 
 }
 
@@ -834,7 +887,7 @@ var list = document.createElement('ul');
 		
 		label.appendChild(document.createTextNode(typesTable[i]));// add name between label tags
 		
-           
+        item.setAttribute('style','display:inline;');   
         item.appendChild(input);
         item.appendChild(label);
 
@@ -940,8 +993,12 @@ notexists= function(table, id){
 		 
 		 WKT.push(gm.replace('"','').replace('"','').replace('"',''));
 		 added=true
-		 }else if(triplets[t][1].endsWith("GeoShape")){
+		 }else if(triplets[t][1].endsWith("geo")){
 		 var linkgm= triplets[t][2];
+			 for (var k= 0; k< triplets.length;k++){
+			 if (triplets[k][1].endsWith("seeAlso") && triplets[k][0]==triplets[t][2]) { linkgm= triplets[k][2];  break}
+			 }
+		 //var linkgm= triplets[t][2];
 		 l= triplets[t][0];
 		 var gm;
 		 var gmwkt= new Wkt.Wkt();;
@@ -1038,7 +1095,7 @@ if (document.getElementById('stabilize').checked)
 	</div>
 		<div style= "margin-left: 45%">OR</div>
 	<div style="width:100%; height:100%;margin-top:4px;">			
-		<textarea id="jsonld_text" style="width:95%; max-width:90%; height:200px; min-height:200px; margin-left:5%" name="jsonld_text" spellcheck="false" placeholder="Enter your JsonLD here..."></textarea>					
+		<textarea id="jsonld_text" style="width:95%; max-width:90%; height:200px; min-height:100px; margin-left:5%" name="jsonld_text" spellcheck="false" placeholder="Enter your JsonLD here..."></textarea>					
 		<div style="height:30px;float:right;margin:auto;">
 			<button onclick="launchFromJSONLD();" id="jsonld_submit" value=" " style="background-image:url('./viz/images/icons/run.png');background-repeat:no-repeat;margin:2px;width:30px;height:30px;" title="Visualiser à partir du JsonLD"/>
 		</div>
@@ -1046,24 +1103,27 @@ if (document.getElementById('stabilize').checked)
 		
 	<div id="graphs_show_description"  >
 		<div style="width:100%;margin:auto;">
-			<div style="height:40px;width:50%;margin-top:4px;float:left">				
+			<div style="height:20px;width:50%;margin-top:4px;float:left">				
 				<a id="curentURI" href="" style="float:right"></a>	
 			</div>		
-			<div style="height:40px;width:45%;margin-top:4px;float:right">				
-				<div style="height:30px;float:left;margin:auto">
+
+		</div>
+		
+		<div style="height:40px;width:100%;margin-top:4px;margin-bottom:4px">				
+				<div id="facets_div" style="width:94%;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px, padding-bottom: 7px;">
+				 Types				  
+				</div>
+				<div style="height:30px;float:right;margin:auto">
 					<input type="checkbox" name="stabilize" id="stabilize" style="display: inline-block; margin-bottom: 0; vertical-align: middle; width: 40px;" onclick='stabilize()'>
 					<label style="display: inline-block; margin-bottom: 0; vertical-align: middle;" for="stabilize">Stabilize</label>				
-				</div>
-				
-			</div>
-		</div>
-		<div style="width:100%;margin:auto;">		
+				</div>				
+		</div>	
+		<div style="width:100%;margin:auto;">
+			
+			
 			<div id="spatial_div" style="width:40%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:7px">
-			</div>			
-			<div id="facets_div" style="width:14%;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px">
-				 Types				  
-			</div>	
-			<div id="graph_div" style="width:44%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px" >
+			</div>				
+			<div id="graph_div" style="width:58%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px" >
 			</div>		
 		</div>				
 	</div>	
