@@ -95,6 +95,8 @@ for(use_case in use_cases) {
                                              add_context = F,
                                              geojson_id = paste(elf_url_base, id_base, geojson_out, sep = "/")))
         
+        elf_index_list$`@context` <- c(elf_index_list$`@context`, list(list(gsp = "http://www.opengeospatial.org/standards/geosparql/")))
+        
         geojson_out <- file.path(out_path, geojson_out)
         
         unlink(geojson_out)

@@ -65,7 +65,8 @@
     "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
     "hasSampleRelationship": "sampling:hasSampleRelationship",
     "natureOfRelationship": "sampling:natureOfRelationship",
-    "relatedSample": "sampling:relatedSample"
+    "relatedSample": "sampling:relatedSample",
+    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -76,7 +77,10 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_22229_100",
   "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",

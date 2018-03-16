@@ -1,7 +1,10 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/150100120904",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",

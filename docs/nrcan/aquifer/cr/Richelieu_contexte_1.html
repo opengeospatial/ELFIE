@@ -43,7 +43,8 @@
     },
     "name": "schema:name",
     "sameAs": "schema:sameAs",
-    "related": "skos:related"
+    "related": "skos:related",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -52,7 +53,12 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_1",
   "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit",
   "name": "Plate-forme du St-Laurent sud",

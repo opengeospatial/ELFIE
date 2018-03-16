@@ -43,7 +43,8 @@
     },
     "name": "schema:name",
     "sameAs": "schema:sameAs",
-    "related": "skos:related"
+    "related": "skos:related",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -52,7 +53,12 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/hydat/cr/02OH008",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "02OH008",
