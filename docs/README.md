@@ -16,11 +16,11 @@ or domain features to catalogs or other applications that want to crawl and inde
 Similarly, integrated catalogs that index and construct links between features can use the views as a 
 linked data response to search queries.
 
-[See JSON-LD Contexts Here.](https://opengeospatial.github.io/ELFIE/json-ld)
+[**JSON-LD Contexts**](https://opengeospatial.github.io/ELFIE/json-ld)
 
-[An index of all files in the ELFIE demo set is here.](https://opengeospatial.github.io/ELFIE/file_index)
+[**ELFIE Demo Files**](https://opengeospatial.github.io/ELFIE/file_index)
 
-[Watershed data index demo](https://opengeospatial.github.io/ELFIE/demo/huc12obs)
+[**Watershed Data Index Demo**](https://opengeospatial.github.io/ELFIE/demo/huc12obs)
 
-[US water budgets demo](https://opengeospatial.github.io/ELFIE/demo/uswb)
+[**US Water Budgets Demo**](https://opengeospatial.github.io/ELFIE/demo/uswb)
 
