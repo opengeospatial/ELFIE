@@ -94,6 +94,11 @@
 	<script src="./jsonld-js/jsonld.js"></script>
 	<script type="text/javascript" src="./vis-4.21.0/dist/vis.js"></script>	
 		<!--<script language="javascript" src="https://raw.githubusercontent.com/digitalbazaar/jsonld.js/master/js/jsonld.js"></script> -->
+		 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script type="text/javascript">
 var map="";	
 var fGroup="";
@@ -662,9 +667,12 @@ opened=[];
 					network.on("doubleClick", function (params) {
 					params.event = "[original event]";						
 					console.log('doubleClick event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
-					
-					//addToMap(this.getNodeAt(params.pointer.DOM));
-					addToGraphJsonld(this.getNodeAt(params.pointer.DOM));
+					console.log(nodes.get(params.nodes[0]).type);
+					if (nodes.get(params.nodes[0]).type== "wml2:MeasurementTimeseries")
+					{
+					getDataURL(nodes.get(params.nodes[0]).id+".json")
+					}
+					else addToGraphJsonld(this.getNodeAt(params.pointer.DOM));
 					
 					});
 					
@@ -807,7 +815,7 @@ function addToGraphJsonld(URI){
 					
 				jsonld.toRDF(data, {format: 'application/nquads'}, function(err, nquads) {
 				// nquads is a string of nquads
-					console.log(nquads);
+					//console.log(nquads);
 					if (err== null) {
 						var mygraph= tablify(String(nquads).trim());
 						try{
@@ -1080,6 +1088,102 @@ if (document.getElementById('stabilize').checked)
   }
 }
 
+function getDataURL(id){
+	var myArray = new Array();
+	var property= "the observerd Property";
+	
+		myArray[0] = property;
+		myArray[1] = id;
+		console.log(myArray);
+		plotFromAPI(myArray);
+}
+
+function plotFromAPI(dataURLArray){
+	dataTotal = 0;
+	var dataURL = dataURLArray[1];
+	var property = dataURLArray[0];
+	xData = [];
+	yData = [];
+	if(dataURL){
+		$('#myModal3 .modal-body').empty();
+		$('#myModal3 .modal-title').empty();
+		//$('#myModal3 .modal-footer').empty(); 
+		$.get(dataURL, function (res) {
+			var result = res;
+			var data = result.value;
+			var dataNext = result['@iot.nextLink'];
+			dataTotal = result['@iot.count'];
+			$('#myModal3 .modal-title').append(dataTotal + " observations for " + property);
+			
+			$.each(data, function (k, v) {
+				console.log(k,v);
+				xData.push(v['resultTime']);
+				yData.push(v['result']); 
+			})
+		})
+		.done(function(){
+			var data = [{x: xData, y: yData, type: 'scatter'}];
+			Plotly.newPlot('chartDiv', data);
+			$("#myModal3").modal();
+			/*
+			var limit = 1000;
+			if (dataTotal > 1000) {
+				page = 0;
+				pages = parseInt(dataTotal) / parseInt(limit);
+				console.log("NUMBER OF LOOPS:" + pages);
+				var urlNext = '';
+				while (page <= pages) {
+					$('#loaderImage').show();
+					page = page + 1;
+					console.log("PAGE:" + page);
+					urlNext = dataURL + '?$skip=' + page*1000;
+					$.get(urlNext, function (res) {
+						var result = JSON.parse(res);
+						var data = result.value;
+						$.each(data, function (k, v) {
+							console.log(k,v);
+							xData.push(v['resultTime']);
+							yData.push(v['result']); 
+						})
+					})
+					.done(function(){
+						var data = [{x: xData, y: yData, type: 'scatter'}];
+						Plotly.newPlot('chartDiv', data);
+						$("#myModal3").modal();
+					})
+				}
+			}
+			*/
+		})
+	}
+}
+
+
+
+function tableFromAPI(property,dataURL){
+	if(dataURL){
+		$('#myModal2 .modal-body').empty();
+		$('#myModal2 .modal-title').empty();
+		$('#myModal2 .modal-footer').empty(); 
+		$.get(dataURL, function (res) {
+			var data = res.value;
+			var dataNext = res['@iot.nextLink'];
+			var dataTotal = res['@iot.count'];
+			$('#myModal2 .modal-title').append(dataTotal + " observations for " + property);
+			var modalBody = '<table class="table table-striped"><tr><th>Time</th><th>Value</th></tr>';
+			$.each(data, function (k, v) {
+				console.log(k,v);
+				modalBody += '<tr><td>'+v['resultTime']+'</td><td>'+v['result']+'</td></tr>'; 
+			})
+			modalBody += '</table>';
+			$('#myModal2 .modal-body').append(modalBody);
+			if(dataNext){
+				$('#myModal2 .modal-footer').append('<button class="btn btn-default" onclick="tableFromAPI(\'' + property + '\',\'' + dataNext + '\');">Next</button>')
+			}			
+			$("#myModal2").modal();
+		})
+	}
+}
 
 </script>
 </head>
@@ -1127,6 +1231,25 @@ if (document.getElementById('stabilize').checked)
 			</div>		
 		</div>				
 	</div>	
+	
+	<div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body" id="chartDiv">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 	
 </div>	
 
