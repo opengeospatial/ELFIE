@@ -1,0 +1,136 @@
+*{
+	padding:0; margin:0;
+}
+
+/*IE SVG Width Fix*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    #gage-map figure{
+      width:100%;
+      height:506px;
+    }
+    
+    #doyNM-graph figure{
+      width:100%;
+      height:819px;
+    }
+}
+
+a{
+  text-decoration:none;
+  cursor:pointer;
+  font-weight:normal;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+body,
+html{
+  font-family:sans-serif;
+  font-size: 14px;
+  height:100%;
+}
+
+.socialMediaImage img{
+  width: 100%;
+}
+
+#github{
+  display:none;
+}
+
+.tooltip-text {
+  z-index: 100;
+  opacity: 1;
+}
+
+.tooltip-box, .tooltip-point{
+  stroke: none;
+  opacity: 0.5;
+  fill: white;
+}
+
+.tooltip-box.hidden, .tooltip-point.hidden {
+  opacity: 0;
+}
+
+.hide_span {
+  display: none;
+}
+
+.show_span {
+  display: inline;
+}
+
+#vizContainer{
+  min-height:85%;
+}
+
+.intro{
+  padding:10px;
+}
+
+#figureContent{
+  min-height:100px;
+}
+
+.leftSideContent,
+.rightSideContent{
+  min-height:100px;
+}
+
+#barChart{
+  margin-bottom:-5px;
+}
+
+#caption p{
+  padding:10px;
+}
+
+#characteristics {
+    line-height: 1.5em;
+    padding:2px;
+    font-size: 1.2em;
+}
+
+@media screen and (min-width:600px){
+  #figureContent{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+  
+  .leftSideContent{
+    width:60%;
+  }
+  
+  .rightSideContent{
+    width:40%;
+  }
+  
+  #characteristicsHolder{
+    order:4;
+  }
+}
+
+@media screen and (min-width:960px){
+  #vizContainer{
+    width:960px;
+    margin:0 auto;
+  }
+  
+  .intro,
+  #caption p{
+    padding:10px 0;
+  }
+}
+
+
+
+
+
+
+
+
+

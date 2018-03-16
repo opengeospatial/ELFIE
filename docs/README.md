@@ -16,11 +16,11 @@ or domain features to catalogs or other applications that want to crawl and inde
 Similarly, integrated catalogs that index and construct links between features can use the views as a 
 linked data response to search queries.
 
-[**JSON-LD Contexts**](https://opengeospatial.github.io/ELFIE/json-ld)
+The primary technical outcome of ELFIE is a collection of JSON-LD contexts. They are described here: [**JSON-LD Contexts**](https://opengeospatial.github.io/ELFIE/json-ld)
 
-[**ELFIE Demo Files**](https://opengeospatial.github.io/ELFIE/file_index)
+The IE has produced numerous experimental demonstration JSON-LD instance files. The full list is available here as html preview files and plain .json files: [**ELFIE Demo Files**](https://opengeospatial.github.io/ELFIE/file_index)
 
-[**Watershed Data Index Demo**](https://opengeospatial.github.io/ELFIE/demo/huc12obs)
-
-[**US Water Budgets Demo**](https://opengeospatial.github.io/ELFIE/demo/uswb)
+The IE has produced a number of demonstration visualizations. The list below will grow as the IE is wrapped up.  
+- [**Watershed Data Index Demo**](https://opengeospatial.github.io/ELFIE/demo/huc12obs)
+- [**US Water Budgets Demo**](https://opengeospatial.github.io/ELFIE/demo/uswb)
 

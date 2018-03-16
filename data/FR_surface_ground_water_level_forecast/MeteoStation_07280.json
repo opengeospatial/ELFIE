@@ -3,8 +3,7 @@
         "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
-		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",		
-		{"gsp":"http://www.opengeospatial.org/standards/geosparql/"}
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/MeteoStation/sgwlf/07280",
     "@type": "sosa:Sample",
@@ -16,7 +15,7 @@
 	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmAtmo.owl#AtmosphereLayer",
     "isFeatureOfInterestOf":[     
 					{
-					 "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+					 "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 					"@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {

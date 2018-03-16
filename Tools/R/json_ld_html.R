@@ -34,7 +34,7 @@ for(use_case in use_cases) {
     
     if(!dir.exists(out_path)) dir.create(out_path, recursive = T)
       
-    file.copy(file.path(data_path, data_file), file.path(out_path, paste0(id_parts[2], ".json")))
+    file.copy(file.path(data_path, data_file), file.path(out_path, paste0(id_parts[2], ".json")), overwrite = T)
     
     json_data <- jsonlite::fromJSON(file.path(data_path, data_file))
     

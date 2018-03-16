@@ -2,13 +2,14 @@
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-    {
-      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
-    }
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/06066500",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample",
+  "@type": [
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+    "sosa:Sample"
+  ],
   "name": "Missouri River bl Holter Dam nr Wolf Cr MT",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=06066500",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=06066500&parm_cd=00060&period=100",
