@@ -33,6 +33,39 @@
     <pre><code id="context">
 {
   "@context": {
+    "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
+    "description": "schema:description",
+    "geo": "schema:geo",
+    "image": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
+    "rdfs": "https://www.w3.org/TR/rdf-schema/",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
+    "sampling": "http://www.w3.org/ns/sosa/sampling/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "time": "http://www.w3.org/2006/time#",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
+    "hasResult": "sosa:hasResult",
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasBeginning": "time:hasBeginning",
+    "hasEnd": "time:hasEnd",
+    "resultTime": "sosa:resultTime",
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample",
     "gw": "http://opengeospatial/def/ontology/gwml2#",
     "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
     "GW_Aquifer": "gw:GW_Aquifer",
@@ -72,7 +105,7 @@
     "linearElement": "hyf:linearElement",
     "hydrometricNetwork": "hyf:hydrometricNetwork",
     "nexusRealization": "hyf:nexusRealization",
-    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    "gsp.1": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -82,8 +115,8 @@
     <pre><code id="code">
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
     {
