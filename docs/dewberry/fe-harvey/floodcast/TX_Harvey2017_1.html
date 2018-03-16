@@ -84,7 +84,8 @@
     "FloodDepth": "fc:FloodDepth",
     "TransportationAssets": "fc:TransportationAssets",
     "AssetsThreatened": "fc:AssetsThreatened",
-    "AssetsMonitored": "fc:AssetsMonitored"
+    "AssetsMonitored": "fc:AssetsMonitored",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -96,7 +97,10 @@
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1",
   "@type": "https://opengeospatial.github.io/ELFIE/floodcast/FloodEvent",

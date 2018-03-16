@@ -2,7 +2,10 @@
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/10141000",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation_|_http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature_|_sosa:Sample",

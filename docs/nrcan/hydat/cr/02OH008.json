@@ -1,5 +1,10 @@
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/hydat/cr/02OH008",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
   "name": "02OH008",

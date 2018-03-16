@@ -1,5 +1,10 @@
 {
-  "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/aquifer/cr/Richelieu_contexte_4",
   "@type": "http://opengeospatial/def/ontology/gwml2#GW_HydrogeoUnit",
   "name": "Zone interne des appalaches",
