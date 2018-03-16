@@ -77,7 +77,8 @@
     "distanceDescription": "hyf:distanceDescription",
     "linearElement": "hyf:linearElement",
     "hydrometricNetwork": "hyf:hydrometricNetwork",
-    "nexusRealization": "hyf:nexusRealization"
+    "nexusRealization": "hyf:nexusRealization",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -88,7 +89,10 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12boundary/uswb/051202021001",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
