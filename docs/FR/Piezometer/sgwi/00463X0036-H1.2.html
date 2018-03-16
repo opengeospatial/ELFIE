@@ -158,19 +158,20 @@
   ],
   "image": "http://fichebsseau.brgm.fr/bss_eau/filer/scans_bss_eau/bss_eau_1_vignette/00006964.JPG.jpg",
   "hasSampleRelationship": [
-    {
-      "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-      "relatedSample": {
-        "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
-        "@type": "HY_HydrometricFeature",
-        "name": "L'Hallue à Querrieu"
-      }
-    },
-    {
-      "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-      "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000029"
-    }
-  ]
+        {     
+                                                           "@id":"https://foo2",
+                                                           "@type": "skos:Concept",
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": {
+                                                           "@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
+                                                           "@type":"HY_HydrometricFeature",
+                                                           "name":"L'Hallue à Querrieu" }
+                              },
+                              {
+            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000029"
+        }
+    ]
 }
     </code></pre>
       </div>

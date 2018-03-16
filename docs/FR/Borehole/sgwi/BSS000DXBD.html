@@ -116,15 +116,21 @@
   ],
   "image": "http://www.ades.eaufrance.fr/BDLisa.aspx?X=2.35976034402847&Y=49.9506874084473",
   "hasSampleRelationship": [
-    {
-      "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
-      "relatedSample": "http://ressource.brgm-rec.fr/data/LinkToSomeDrillCoreDatabaseHere"
-    },
-    {
-      "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-      "relatedSample": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2"
-    }
-  ]
+        {
+			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
+            "relatedSample": "http://ressource.brgm-rec.fr/data/LinkToSomeDrillCoreDatabaseHere"
+        },
+		{
+			"@id":"https://foo1",
+            "@type": "skos:Concept",            
+			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
+            "relatedSample": {
+							  "@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2"
+							  "@type": "Sample",
+							  "name": "PIEZOMETRE DE CARDONNETTE - 80",
+			}
+		}
+    ]
 }
     </code></pre>
       </div>
