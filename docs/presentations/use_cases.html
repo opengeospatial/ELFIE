@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ELFIE</title>
+  <title>ELFIE Use Cases</title>
     
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -784,12 +784,17 @@ hljs.initHighlightingOnLoad();
   <div class="slides">
 
 <section data-state="section" data-transition="linear" data-transition-speed="default">
-<h1>ELFIE</h1><p>3&#x2F;19&#x2F;2018</p>
+<h1>ELFIE Use Cases</h1><p>3&#x2F;19&#x2F;2018</p>
 
 <div class="slideContent" >
-<p>Environmental Linked Feature Interoperability Experiment (ELFIE) Use Case Overview</p>
+<h2>Environmental Linked Feature Interoperability Experiment (ELFIE)</h2>
 
-<p>Purpose, Analysis, Implementation, and Demonstration</p>
+<h3>Use Cases Overview</h3>
+
+<p><strong>Purpose, Analysis, Implementation, and Demonstration</strong>  </p>
+
+<p>These slides were prepared for an OGC-TC demonstration of ELFIE outcomes.<br/>
+These materials should be considered preliminary and subject to change.</p>
 
 </div>
 
@@ -837,9 +842,11 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Implementation Use Cases</h3>
 <div class="slideContent" >
-<p>Simple index of hydrography and observations for a watershed
-  Watershed Boundary, hydrographic network, stream gage, water quality
-  Compiled into a simple map viewer</p>
+<h3>Simple index of hydrography and observations for a watershed</h3>
+
+<p><strong>Data:</strong> Watershed Boundary, hydrographic network, stream gage, water quality  </p>
+
+<p><strong>Demo:</strong> Compiled into a simple map viewer</p>
 
 </div>
 
@@ -847,9 +854,11 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Implementation Use Cases</h3>
 <div class="slideContent" >
-<p>Visualization of watershed and water budget data.
-  Watershed boundary, hyrographic network, outlet location, stream gage, and water budget time series
-  Built into a visualization suited to a broad audience</p>
+<h3>Visualization of watershed and water budget data.</h3>
+
+<p><strong>Data:</strong> Watershed boundary, hyrographic network, outlet location, stream gage, and water budget time series  </p>
+
+<p><strong>Demo:</strong> Built into a visualization suited to a broad audience</p>
 
 </div>
 
@@ -857,9 +866,19 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Implementation Use Cases</h3>
 <div class="slideContent" >
-<p>BRGM SW/GW Linked Data Round Trips
-  Waterbodies, watersheds, aquifers, wells, and streamgages
-  Visualized in a linked feature data / graph viewer (BRGM Linked data Viewer)</p>
+<h3>BRGM Ground/Surface water data round trip</h3>
+
+<p><strong>Data:</strong> Aquifer, wells, piezometers, waterbodies, streamgages. Features description, links, and associated observations</p>
+
+<p><strong>Demo:</strong> prototype of static JSON-LD files based on BRGM Goundwater Information Network content</p>
+
+<p>A comprehensive use case starting from a borehole/well its piezometer, the monitored aquifer and the resulting groundwater observations.</p>
+
+<!-- Given that ground/surface water interaction has been properly qualified in that area, the piezometer can be correlated with a surface streamgage and the aquifer with surface waterbody. -->
+
+<!-- This allows then to access to surface water observation and traverse the river network. -->
+
+<!-- When feasible feature description is reusing semantic defined is other OGC standards (HY_Feature, GWML2). This led to define dedicated JSON-LD contexts. -->
 
 </div>
 
@@ -867,9 +886,13 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Implementation Use Cases</h3>
 <div class="slideContent" >
-<p>USGS Prototype Station Pages
-  hydrolocation type and basic feature identification info
-  Working toward modern station pages experimenting with linked feature content</p>
+<h3>SensorThings based observational data provision</h3>
+
+<p><strong>Data:</strong> Sensors, their observations, and features they observe  </p>
+
+<p><strong>Demo:</strong> implemented in a prototype system for access to ELFIE structured JSON-LD transformed from a SensorThings service. </p>
+
+<p>Access to the ELFIE objects is enabled by resolvable http formated uri-guids, all associations are represented via these uri-guids, thus data structure totally aligned with the static ELFIE examples available from GITHUB, the data can be visualized via the BRGM Linked data Viewer</p>
 
 </div>
 
@@ -877,9 +900,11 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Implementation Use Cases</h3>
 <div class="slideContent" >
-<p>US/Canada Groundwater Surfacewater Interoperability Pilot
-  Catchments, aquifers, wells, stream gages, waterbodies
-  Visualized in an experimental app for a cross border data exchange</p>
+<h3>USGS Prototype Station Pages</h3>
+
+<p><strong>Data:</strong> hydrolocation type and basic feature identification info  </p>
+
+<p><strong>Demo:</strong> Working toward modern station pages experimenting with linked feature content</p>
 
 </div>
 
@@ -887,9 +912,11 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Implementation Use Cases</h3>
 <div class="slideContent" >
-<p>SensorThings based observational data index
-  Sensors and features they observe
-  implented in a prototype system for discovery and access of sensorthings based data</p>
+<h3>US/Canada Groundwater Surfacewater Interoperability Pilot</h3>
+
+<p><strong>Data:</strong> Catchments, aquifers, wells, stream gages, waterbodies  </p>
+
+<p><strong>Demo:</strong> Visualized in an experimental app for a cross border data exchange</p>
 
 </div>
 
@@ -897,8 +924,7 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Demo Time!</h3>
 <div class="slideContent" >
-<p>When ELFIE is complete, <a href="https://opengeospatial.github.io/ELFIE/demo/use_cases">this presentation</a>
-will include links to demonstration applications.</p>
+<h2>When ELFIE is complete, <a href="https://opengeospatial.github.io/ELFIE/demo/use_cases">this presentation</a> will include links to demonstration applications.</h2>
 
 </div>
 
