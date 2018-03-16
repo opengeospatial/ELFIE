@@ -436,6 +436,12 @@
 [https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6--009-](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6--009-) [plain json](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6--009-.json)  
 ### files for feature type HY-WaterBody  
 
+[https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390552](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390552) [plain json](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390552.json)  
+### files for feature type HY-WaterBody  
+
+[https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390700](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390700) [plain json](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390700.json)  
+### files for feature type HY-WaterBody  
+
 [https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710) [plain json](https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710.json)  
 ### files for feature type HydroStation  
 
