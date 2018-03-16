@@ -6,7 +6,7 @@ This use case is meant to demonstrate the use of HY\_Features to link a catchmen
 the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of
 linked watershed information use cases.
 
-[**The demo is available as an interactive map.**](https://opengeospatial.github.io/ELFIE/demo/huc12obs_map/)
+[**The demo is available as an interactive map.**](https://opengeospatial.github.io/ELFIE/demo/huc12obs_map)
 
 ### User Story
 
