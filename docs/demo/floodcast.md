@@ -22,7 +22,7 @@ A one sentence story.
 
 ## Demo Description and Links
 
-The FloodCast study team collaborated with the Open Geospatial Consortium (OGC) Hydrology Domain Working Group (Hydro DWG). In June 2017, members of the FloodCast study team attended the Hydro DWG’s annual workshop at the National Water Center in Tuscaloosa, Alabama focused on kicking off the Environmental Linked Features Interoperability Experiment (ELFIE).  ELFIE’s goal is to test existing standards for publishing environmental and related features on the internet using domain feature models (like HY_Features and Observations and Measurements) as formal documentation.  It is expected that this will set the stage for future automated, generalized software to serve decision support and other appilcations.  
+The FloodCast study team collaborated with the Open Geospatial Consortium (OGC) Hydrology Domain Working Group (Hydro DWG). In June 2017, members of the FloodCast study team attended the Hydro DWG’s annual workshop at the National Water Center in Tuscaloosa, Alabama focused on kicking off the Environmental Linked Features Interoperability Experiment (ELFIE).  ELFIE’s goal is to test existing standards for publishing environmental and related features on the internet using domain feature models (like HY_Features and Observations and Measurements) as formal documentation.  It is expected that this will set the stage for future automated, generalized software to serve decision support and other applications.  
 
 The ELFIE workshop brought together interested stakeholders with the goal of developing a standard for linking different domain features, and observational data about those features. A common approach to encoding such links is required to allow cross-domain and cross-system sharing and interoperability of such linked information. The FloodCast study team presented the FloodCast prototype demonstration to ELFIE participants followed by a discussion of how FloodCast could be included as an “event-driven” use case in ELFIE. The study team contributed example FloodCast datasets (e.g. flood event, flood extents and depths, and transportation assets) to demonstrate the importance of establishing these data types as domain features. Once established as domain features, each feature type will require a standard set of attributes to facilitate flood event analytics. For example, a relational attribute within the flood inundation extent polygon linking to all of the assets that are within (i.e. “threatened” status) or near (i.e. “monitor” status) the flooding.  
 
@@ -30,6 +30,7 @@ The data standards are built upon open source formats.  At the core of a prototy
 
 Figure 2. Various geospatial objects/data types used on the Floodcast system and their linkages  
 ![Figure 2. Various geospatial objects/data types used on the Floodcast system and their linkages](https://opengeospatial.github.io/ELFIE/images/floodcast_fig2.png)  
+![Figure 2-1](https://opengeospatial.github.io/ELFIE/images/floodcast_fig2-1.png)  
 
 ### Demo Screenshot(s)
 
@@ -41,10 +42,24 @@ so they show up at a path like: `https://opengeospatial.github.io/ELFIE/images/E
 
 ### Links to Demo Resources
 
-Add links to source files, code used, example JSON-LD files, etc. Add descriptive text so
-people can walk through the demo themselves without much prior knowledge. Describe how
-the links in the data can be traversed, especially how the links are/were traversed by the demo
-application.
+The URLs below displays the information in JSON-LD context for the Floodcast feature types. These URLs also depict the relations that are representative of ELFIE’s recommendations on data standards for linked geospatial features.
+
+FloodEvent:  
+https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1  
+HY_Catchment:  
+https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403  
+HY_HydrometricFeature:  
+https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou  
+HY_HydroLocation:  
+https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600  
+FloodExtent:  
+https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1  
+https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1  
+https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1  
+FloodDepth:  
+https://opengeospatial.github.io/ELFIE/dewberry/fd-action/floodcast/TX_cov_depth_act.json  
+https://opengeospatial.github.io/ELFIE/dewberry/fd-moderate/floodcast/TX_cov_depth_mod.json  
+https://opengeospatial.github.io/ELFIE/dewberry/fd-major/floodcast/TX_cov_depth_maj.json  
 
 ## Demo findings and potential next steps
 
