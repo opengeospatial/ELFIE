@@ -45,21 +45,21 @@ so they show up at a path like: `https://opengeospatial.github.io/ELFIE/images/E
 The URLs below displays the information in JSON-LD context for the Floodcast feature types. These URLs also depict the relations that are representative of ELFIE’s recommendations on data standards for linked geospatial features.
 
 FloodEvent:  
-https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1  
+[https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1](https://opengeospatial.github.io/ELFIE/dewberry/fe-harvey/floodcast/TX_Harvey2017_1)  
 HY_Catchment:  
-https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403  
+[https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403](https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403)  
 HY_HydrometricFeature:  
-https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou  
+[https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou](https://opengeospatial.github.io/ELFIE/tx/flowlines/floodcast/FS_BuffaloBayou)  
 HY_HydroLocation:  
-https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600  
+[https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600](https://opengeospatial.github.io/ELFIE/usgs/nwissite/floodcast/08072600)  
 FloodExtent:  
-https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1  
-https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1  
-https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1  
+[https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1](https://opengeospatial.github.io/ELFIE/dewberry/fp-action/floodcast/TX_FP_ACT_1)  
+[https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1](https://opengeospatial.github.io/ELFIE/dewberry/fp-moderate/floodcast/TX_FP_MOD_1)  
+[https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1](https://opengeospatial.github.io/ELFIE/dewberry/fp-major/floodcast/TX_FP_MAJ_1)  
 FloodDepth:  
-https://opengeospatial.github.io/ELFIE/dewberry/fd-action/floodcast/TX_cov_depth_act.json  
-https://opengeospatial.github.io/ELFIE/dewberry/fd-moderate/floodcast/TX_cov_depth_mod.json  
-https://opengeospatial.github.io/ELFIE/dewberry/fd-major/floodcast/TX_cov_depth_maj.json  
+[https://opengeospatial.github.io/ELFIE/dewberry/fd-action/floodcast/TX_cov_depth_act.json](https://opengeospatial.github.io/ELFIE/dewberry/fd-action/floodcast/TX_cov_depth_act.json)  
+[https://opengeospatial.github.io/ELFIE/dewberry/fd-moderate/floodcast/TX_cov_depth_mod.json](https://opengeospatial.github.io/ELFIE/dewberry/fd-moderate/floodcast/TX_cov_depth_mod.json)  
+[https://opengeospatial.github.io/ELFIE/dewberry/fd-major/floodcast/TX_cov_depth_maj.json](https://opengeospatial.github.io/ELFIE/dewberry/fd-major/floodcast/TX_cov_depth_maj.json)  
 
 ## Demo findings and potential next steps
 
