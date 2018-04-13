@@ -14,7 +14,7 @@ are described below. Each use cases takes the form of a simple description of
 who or what system has an interest in what related datasets. Specific datasets are
 listed to clarify the scope and provide a starting point for technical design
 work. Use cases that were implemented as demonstrations of the design outcomes
-were described in more detail to include notional diagrams of how datasets
+are described in more detail to include notional diagrams of how datasets
 involved link to each other, a thorough description of the use case, and an
 example application that speaks to and/or satisfies the needs of the use case.
 
@@ -129,3 +129,22 @@ A groundwater extraction modeler needs information about surface water that repl
 * Surface water monitoring sites and flow data
 * Meteorological monitoring sites and observations
 * Output predictions at groundwater prediction wells
+
+=== Use Cases Implemented as Demonstrations of Outcomes
+
+**Water budget summary**
+This use case provides a person interested in a basic summary of the water budget for a given watershed information about a collection of watersheds and their water budget data. It links together various hydrographic representations of each watershed as well as observational water budget data and related web resources.
+
+As shown in the <<img_uswb_data>>, the watershed feature is linked to various representations of it. This follows the HY_Features concept of a catchment as an _unrealized_ feature that is related to various realization features, there is no canonical representation of the watershed its self. 
+
+[#img_uswb_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of relationships between data in the water budget summary use case.
+image::images/uswb.png[width=800,align="center"]
+
+Additional details about the water budget summary use case implementation is available on the https://opengeospatial.github.io/ELFIE/demo/uswb[demonstration ELFIE web page.]
+
+**Watershed data index**
+
+**Flood risks and impacts**
+
+**Surface water impacted groundwater level forecasting**
