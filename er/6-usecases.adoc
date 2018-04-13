@@ -144,6 +144,13 @@ image::images/uswb.png[width=800,align="center"]
 Additional details about the water budget summary use case implementation is available on the https://opengeospatial.github.io/ELFIE/demo/uswb[demonstration ELFIE web page.]
 
 **Watershed data index**
+This use case is meant to demonstrate the use of HY_Features to link a catchment (12 digit hydrologic unit code (HUC12) watershed in this case) to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.
+
+[#img_huc12obs_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of relationships between data in the watershed data index use case.
+image::images/uswb.png[width=800,align="center"]
+
+Additional details about the water budget summary use case implementation is available on the https://opengeospatial.github.io/ELFIE/demo/huc12obs[demonstration ELFIE web page.]
 
 **Flood risks and impacts**
 
