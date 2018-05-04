@@ -153,5 +153,11 @@ image::images/uswb.png[width=800,align="center"]
 Additional details about the water budget summary use case implementation is available on the https://opengeospatial.github.io/ELFIE/demo/huc12obs[demonstration ELFIE web page.]
 
 **Flood risks and impacts**
+This use case provides a decision maker needing to respond to flooded transportation infrastructure the information they need to understand the impacted assets and flooded roads for a forecast flood. Under this use case, a flood forecasting system would be able to discover vulnerable infrastructure and assets published by local juridictions as linked data and publish flood forecasts that include potentially impacted features in forecast information products.
+
+[#img_floodcast_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of data in the floodcast use case.
+image::images/floodcast.png[width=800,align="center"]
 
 **Surface water impacted groundwater level forecasting**
+This use case tests the ability of established data models to link surfacewater and groundwater features and observations for applications like recharge estimation from rivers or water supply source selection. The implemented solution is a collection of rich linked data documents showing how features, observations, and related data can be encoded in JSON-LD.
