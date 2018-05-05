@@ -1,4 +1,4 @@
-# ELFIE Demonstration Write Up Template
+# FloodCast Linked Flood Information Demo
 
 ## Use Case Descrition
 
@@ -11,14 +11,16 @@ Figure 1. Key data elements in Floodcast
 
 ### User Story
 
-A one sentence story.
+A person who needs to operate or use transportation or other critical infrastructure needs a dashboard showing what assets and roads are expected to be impacted durring a forecast flood event.
 
 ### Datasets
 
-- A bulleted
-- list of datasets
-- that are used
-- in the use case.
+- Flood Event Feature
+- Contributing Catchment
+- Streamgages
+- Flooding Depth
+- Inundation Extent
+- Transportation Assets
 
 ## Demo Description and Links
 
@@ -34,11 +36,7 @@ Figure 2. Various geospatial objects/data types used on the Floodcast system and
 
 ### Demo Screenshot(s)
 
-One or more screenshots with a descriptive caption for each.  
-Add screenshots to https://github.com/opengeospatial/ELFIE/tree/master/docs/images
-so they show up at a path like: `https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png`  
-
-![alt text -- ELFIE Logo](https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png)
+![Floodcast Demo Screenshot](https://opengeospatial.github.io/ELFIE/images/floodcast_screenshot.png)
 
 ### Links to Demo Resources
 
@@ -63,5 +61,5 @@ FloodDepth:
 
 ## Demo findings and potential next steps
 
-Discuss issues that this demo works around or would otherwise need to be solved to take
-it from demonstration/experiment to production.
+Given currently available data and information models, the floodcast demo was the most ambitious undertaken in the project. A lack of a flood event feature model for inundation areas and impact types meant that some feature types and relations were created specifically for the use case. A significant next step toward further applications of linked flood information is establishment of such an information model to link hydrologic features, observed and modeled data, and inundated areas and assets.
+
