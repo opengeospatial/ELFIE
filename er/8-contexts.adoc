@@ -2,11 +2,62 @@
 == Relations and JSON-LD Contexts
 
 === Introduction
-**Overview of and scope of contexts and relations used.**  
-**Rationale and motivation for selection of core and extended relations**
+An important goal of the ELFIE was adoptability by web developers and
+compatibility with technologies that are ubiquitous on the internet. Given these
+goals, the IE team started to think in terms of "views" of the linked data graph
+describing a given environmental feature or observation. Two conceptual views,
+preview and network, were the primary focus on ELFIE. Preview is meant to be
+a very simple summary of a feature including type, name, and geometry. Network
+is meant to be a summary of relevant first-neighbor features in a topological
+network. These two views form the core interoperable set of ELFIE "views" but
+lack domain specific relations such as observational relations and hydrologic
+topology.
 
-=== Relations
-**Broken down by source -- schema.org, geojson-ld, sosa, owl, hy_features, gwml2, ...**
+Initial ELFIE discussions of the graph "view" concept used the
+https://www.w3.org/TR/shacl/[Shapes Constraint Language SHACL] technology as the
+logical implementation. Further evaluation and consideration of ELFIE goals
+around adoptability and ubiquity, the
+https://www.w3.org/TR/json-ld/#the-context[JSON-LD context] was chosen as the
+most appropriate technical solution to express the graph "views". ELFIE contexts
+are meant to be precise descriptions of what the IE found to be the most
+appropriate linked data relations. They are not intended to be used as a schema
+to specify or validate the contents of a given document. From a practical
+perspective, the contexts provide clear guidelines for what relations to use
+while not being overly prescriptive, limiting, or difficult to use in a
+typical web development workflow.
 
-=== Contexts
-**Describe each context and its utility**
+=== General ELFIE Contexts
+The ELFIE preview graph "view", is described by the
+https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld[elf.jsonld] context.
+It uses schema.org[http://schema.org/], skos[https://www.w3.org/TR/skos-reference/],
+and geosparql[http://www.opengeospatial.org/standards/geosparql] relations.
+Schema.org is used whenever possible to maintain compatibility with search
+engines, uses skos for a lose "related" relationship, and geosparql for precise
+specification of a geometric preview. The geometric preview of a feature was an
+area of contention for the IE.
+
+GeoJSON-LD[http://geojson.org/geojson-ld/] was
+seen as a logical solution, but as described in the outstanding issues for
+GeoJSON-LD[http://geojson.org/geojson-ld/], nested GeoJSON coordinate arrays
+are not supported by JSON-LD parsers. Additionally, the schema.org geometry
+schema was seen as bring under specified in that among other minor reasons,
+it does not provide a default coordinate reference system or a mechanism to
+declare one. For this reason, the geosparql well known text format was included
+providing a precise and JSON-LD compatible geometry format. However, if some
+logical assumptions are made for the use of schema.org geometry, it can be used
+to satisfy the basic geometry preview use case with significantly lower technical
+overhead than support for the full well known text standard. Further work should
+look more closely at this issue in an attempt to reconcile and or provide guidance.
+
+ The ELFIE network graph "view", is described by the
+ https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld[elf-network.jsonld]
+ context. It uses
+ geosparql[http://www.opengeospatial.org/standards/geosparql] and
+ OWL-time[https://www.w3.org/TR/owl-time/] relations. Its emphasis is on simple
+ topological relationships such as touches, intersects, before, etc. A network
+ context would logically include additional domain specific topological relations
+ derived from other contexts, but they are not included in the general network
+ context.
+
+ === Domain Specific Contexts
+ 
