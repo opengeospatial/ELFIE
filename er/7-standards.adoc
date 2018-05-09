@@ -17,7 +17,7 @@ between and among environmental domain features that would allow cross-domain
 and cross-system sharing and interoperability of such linked information. To
 do this, ELFIE worked with existing and pending OGC standards for encoding of
 environmental observation data in an integrated dataset of features. Such OGC
-data models were then linked togetyher according to W3C and other Linked Data
+data models were then linked together according to W3C and other Linked Data
 best practices.
 
 === OGC Web Standards
@@ -29,13 +29,13 @@ challenges in creating URLs for use in linked data, the APIs do offer
 sufficient HTTP GET functionality to embed useful content in linked data with
 a great degree of flexibility. Issues related to URL structure and a given
 API-call's relation to a canonical non-information resource URI were
-encountered but deffered for future investigations.
+encountered but deferred for future investigations.
 
 === OGC Domain Models
 
 OGC data models were used extensively in ELFIE. The Observations and
 Measurements (O&M) conceptual model provided a high level organizing
-framework for most ELFIE documdnts. The OGC-W3C Spatial Data On the Web
+framework for most ELFIE documents. The OGC-W3C Spatial Data On the Web
 Working Group implementation of O&M (Sensor, Observation, Sample, and
 Actuator (SOSA)) was used directly because of its applicability to the linked
 data technology pursued in ELFIE.
@@ -45,7 +45,7 @@ Features and WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) were also
 used for feature types and relations in ELFIE linked data documents. A major
 limitation for use of these data models in ELFIE was a lack of published
 taxonomies and ontologies of their feature types and relations;
-experimentatal content was generated for ELFIE and formalization of such
+experimental content was generated for ELFIE and formalization of such
 taxonomies and ontologies was left for future work.
 
 === W3C
@@ -66,10 +66,10 @@ seeking to apply OGC standards on their current infrastructure within the
 suggested W3C best practices would find it very difficult or expensive to
 achieve them.
 
-=== JSON-LD Given ELFIE goals related to adoptibility of outcomes and
+=== JSON-LD Given ELFIE goals related to adoptability of outcomes and
 applicability to mass market search, JSON-LD was used as the encoding for
 ELFIE documents. While there were other potential options that could be used,
-the ease of use (parsing and serialization) of JSON-LD accross practically
+the ease of use (parsing and serialization) of JSON-LD across practically
 all programming languages made it the clear choice for use in ELFIE. As
 described below, some technical limitations inherent to RDF and thus JSON-LD
 were encountered while attempting to encode preview geometries, but all basic

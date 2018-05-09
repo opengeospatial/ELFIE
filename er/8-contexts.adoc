@@ -60,4 +60,14 @@ look more closely at this issue in an attempt to reconcile and or provide guidan
  context.
 
  === Domain Specific Contexts
- 
+ Two extended general contexts and three domain specific contexts were created
+ for testing in ELFIE. The extended general contexts have content from the
+ https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld[timeseriesML] and
+ https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld[SOSA] data models.
+ The domain specific contexts have content from
+ https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[HY_Features],
+ https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2], and the
+ https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld[floodcast]
+ use case. All of these contexts, except SOSA, were created as part of the
+ ELFIE project without formal ontologies to back them. Work on these ontologies
+ should follow ELFIE.
