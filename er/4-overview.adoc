@@ -1,41 +1,66 @@
-[[Overview]]
-== Overview
+[[Overview]] == Overview
 
-[NOTE]
-.Instructions
-====
-This 4-overview.adoc file helps the reader to better understand the various sections of the ER. It should be written like an extended table of contents.
+[NOTE] .Instructions ==== This 4-overview.adoc file helps the reader to better
+understand the various sections of the ER. It should be written like an extended
+table of contents.
 
-The following clauses (clause-requirements, clause-solutions, clauses 6-n and Annexes A-D of this template are general recommendations for Engineering Reports. As ERs can be of many different types and purposes, these clauses should be tailored to meet the needs of the report. However in most cases, clause-requirements and clause-solutions should be used.
-====
+The following clauses (clause-requirements, clause-solutions, clauses 6-n and
+Annexes A-D of this template are general recommendations for Engineering
+Reports. As ERs can be of many different types and purposes, these clauses
+should be tailored to meet the needs of the report. However in most cases,
+clause-requirements and clause-solutions should be used. ====
 
-The ELFIE is intended to test existing OGC and W3C standards with the goal of establishing a best practice for exposing links between and among environmental domain and sampling features.  
-The IE is focused on two cross-domain use cases: 1) exposing topological and domain feature model relationships between features and 2) description of sampling data available for and linked to sampled domain features 
-While addressing these use cases, the IE will strive to address issues of encoding data as specific views of a linked data graph that would be passed between systems. 
-These linked data graph views are expected to support archictures involving linked data catalogs and registries. 
-For example, data providers can use the linked data graph views as a way to advertise their monitoring or domain features to catalogs or other applications that want to crawl and index available data. 
-Similarly, integrated catalogs that index and construct links between features can use the views as a linked data response to search queries. 
+The ELFIE is intended to test existing OGC and W3C standards with the goal of
+establishing a best practice for exposing links between and among environmental
+domain and sampling features.   The IE is focused on two cross-domain use cases:
+1) exposing topological and domain feature model relationships between features
+and 2) description of sampling data available for and linked to sampled domain
+features While addressing these use cases, the IE will strive to address issues
+of encoding data as specific views of a linked data graph that would be passed
+between systems. These linked data graph views are expected to support
+architectures involving linked data catalogs and registries. For example, data
+providers can use the linked data graph views as a way to advertise their
+monitoring or domain features to catalogs or other applications that want to
+crawl and index available data. Similarly, integrated catalogs that index and
+construct links between features can use the views as a linked data response to
+search queries.
 
-Current OGC services, while flexible and capable, do not allow exposure of features in a resource oriented way and provide opaque interfaces to structured and/or inter-related content. 
-The encodings demonstrated in ELFIE turn the normal OGC service pattern (GetCapabilities followed by introspection to understand contents) inside out by encoding associations between features as linked data predicates. 
-This approach takes the form of subject-resource predicate-association object-resource where the resources may be OGC web service requests. 
-This leverages the power of services such as WFS to provide feature instances, but expresses the structure of complex features or cross-service associated features explicitely. 
-The scope of this work could have easily gotten out of control. 
-To focus the work, the IE attempted to avoid issues not directly related to encoding linked data documents as would be passed from server to client via http. 
- 
-As described in detail later, the IE has specified two constrained views of a resolved linked data graph that are specified with modular SHaCL shapes. 
-These specific graph views could be implemented using the "_view" pattern of the Linked Data API or as the payload returned from a REST API endpoint. 
-Using this approach, the recommendation takes advantage of the power and flexibility of Linked Open Data while providing just enough constraint and guidance to encourage interoperability. 
-By specifying a partially resolve graph view, it also allows resources that are not traversable as linked open data (for watever reason) to be incorporated into a linked data system. 
-This mechanism should provide a gateway to inclusion in and understanding the value of the Linked Open Data cloud.
+Current OGC services, while flexible and capable, do not allow exposure of
+features in a resource oriented way and provide opaque interfaces to structured
+and/or inter-related content. The encodings demonstrated in ELFIE turn the
+normal OGC service pattern (GetCapabilities followed by introspection to
+understand contents) inside out by encoding associations between features as
+linked data predicates. This approach takes the form of subject-resource
+predicate-association object-resource where the resources may be OGC web service
+requests. This leverages the power of services such as WFS to provide feature
+instances, but expresses the structure of complex features or cross-service
+associated features explicitly. The scope of this work could have easily gotten
+out of control. To focus the work, the IE attempted to avoid issues not directly
+related to encoding linked data documents as would be passed from server to
+client via http.
+
+As described in detail later, the IE has specified two constrained views of a
+resolved linked data graph that are specified with modular SHaCL shapes. These
+specific graph views could be implemented using the "_view" pattern of the
+Linked Data API or as the payload returned from a REST API endpoint. Using this
+approach, the recommendation takes advantage of the power and flexibility of
+Linked Open Data while providing just enough constraint and guidance to
+encourage interoperability. By specifying a partially resolve graph view, it
+also allows resources that are not traversable as linked open data (for whatever
+reason) to be incorporated into a linked data system. This mechanism should
+provide a gateway to inclusion in and understanding the value of the Linked Open
+Data cloud.
 
 === Scope
 
-// Just dumping some content in here, maybe Byron can type this up as well as edit what I wrote above?
-Out of scope:
-Identifier permanence / referential integrity and implementation patterns to address it.
-Arrangements around discovery of inbound and outbound links. Links are the responsibility of the data provider only.
-ELFIE will not seek to solve problems regarding network architecture for resolving links or systems design and governance for applications that store and retrieving links or concept relationships.
+// Just dumping some content in here, maybe Byron can type this up as well as
+// edit what I wrote above? Out of scope: Identifier permanence / referential
+// integrity and implementation patterns to address it. Arrangements around
+// discovery of inbound and outbound links. Links are the responsibility of the
+// data provider only. ELFIE will not seek to solve problems regarding network
+// architecture for resolving links or systems design and governance for
+// applications that store and retrieving links or concept relationships.
 
-“just enough” semantic annotation that allows us to traverse links to and among monitoring data and domain features.
-Note that inclusion of other properties is encouraged and implementors can ignore things that aren't in the recommendation.
+“just enough” semantic annotation that allows us to traverse links to and among
+monitoring data and domain features. Note that inclusion of other properties is
+encouraged and implementors can ignore things that aren't in the recommendation.
