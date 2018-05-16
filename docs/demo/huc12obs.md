@@ -6,7 +6,7 @@ This use case is meant to demonstrate the use of HY\_Features to link a catchmen
 the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of
 linked watershed information use cases.
 
-[**The demo is available as an interactive map.**](https://opengeospatial.github.io/ELFIE/demo/huc12obs_map)
+[**The demo is available as an interactive map.**](https://opengeospatial.github.io/ELFIE/demo/huc12obs_map){:target="_blank"}
 
 ### User Story
 
@@ -31,21 +31,21 @@ The HUC12 Oservations demo is a simple interactive leaflet map of watershed hydr
 
 ### Links to Demo Resources
 
-The data index for the huc12obs demo can be seen in [github here.](https://github.com/opengeospatial/ELFIE/tree/master/data/huc12obs)
+The data index for the huc12obs demo can be seen in [github here.](https://github.com/opengeospatial/ELFIE/tree/master/data/huc12obs){:target="_blank"}
 
 The primary entry point to the data is the non-spatial catchment that can be seen in 
-[this json-ld document.](https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601)  
+[this json-ld document.](https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601){:target="_blank"}  
 
 The catchment is linked to three features, a flowline network, and a boundary polygon, and a hydrometric network.
 
-Navigate to the [use case data home on github](https://github.com/opengeospatial/ELFIE/tree/master/data/huc12obs) and go to the 
-`usgs_wqp_huc12obs.tsv` [.tsv](https://github.com/opengeospatial/ELFIE/blob/master/data/huc12obs/usgs_wqp_huc12obs.tsv) 
-or [.json](https://github.com/opengeospatial/ELFIE/blob/master/data/huc12obs/usgs_wqp_huc12obs.json) files to see the data
-that is in the demo ELFIE json-ld documents such as [this one](https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431208089314901).
+Navigate to the [use case data home on github](https://github.com/opengeospatial/ELFIE/tree/master/data/huc12obs){:target="_blank"} and go to the 
+`usgs_wqp_huc12obs.tsv` [.tsv](https://github.com/opengeospatial/ELFIE/blob/master/data/huc12obs/usgs_wqp_huc12obs.tsv){:target="_blank"} 
+or [.json](https://github.com/opengeospatial/ELFIE/blob/master/data/huc12obs/usgs_wqp_huc12obs.json){:target="_blank"} files to see the data
+that is in the demo ELFIE json-ld documents such as [this one](https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431208089314901){:target="_blank"}.
 Other tsv and json files in the use case home were used to construct the linked data documents.
 
 This collection of files is accessed with R code that builds the map in the data visualization that 
-[can be seen here.](https://opengeospatial.github.io/ELFIE/demo/huc12obs_map)
+[can be seen here.](https://opengeospatial.github.io/ELFIE/demo/huc12obs_map){:target="_blank"}
 
 ## Demo findings and potential next steps
 

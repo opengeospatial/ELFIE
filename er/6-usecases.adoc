@@ -1,131 +1,158 @@
-[[Use_Cases]]
-== Use Case Summary
+[[Use_Cases]] == Use Case Summary
 
-=== Introduction
-ELFIE design work was directed by a number of use cases with extensive need
-for linked environmental data. These use cases are either hurdles to systems they maintain
-or would be nice additions to systems they rely on as users. Many of these
-use cases were described and used for discussion and vetting of ideas only,
-others were taken further with implementation of example encoded linked data
-documents and client code to visualize data involved in the use case.
+=== Introduction ELFIE design work was directed by a number of use cases with
+extensive need for linked environmental data. These use cases are either
+hurdles to systems they maintain or would be nice additions to systems they
+rely on as users. Many of these use cases were described and used for
+discussion and vetting of ideas only, others were taken further with
+implementation of example encoded linked data documents and client code to
+visualize data involved in the use case.
 
-The full suite of use cases considered durring the design phase of the project
-are described below. Each use cases takes the form of a simple description of
-who or what system has an interest in what related datasets. Specific datasets are
-listed to clarify the scope and provide a starting point for technical design
-work. Use cases that were implemented as demonstrations of the design outcomes
-were described in more detail to include notional diagrams of how datasets
-involved link to each other, a thorough description of the use case, and an
-example application that speaks to and/or satisfies the needs of the use case.
+The full suite of use cases considered durring the design phase of the
+project are described below. Each use cases takes the form of a simple
+description of who or what system has an interest in what related datasets.
+Specific datasets are listed to clarify the scope and provide a starting
+point for technical design work. Use cases that were implemented as
+demonstrations of the design outcomes are described in more detail to include
+notional diagrams of how datasets involved link to each other, a thorough
+description of the use case, and an example application that speaks to and/or
+satisfies the needs of the use case.
 
 === Use Cases Considered in Design Process
 
 **River network linked data to address hydrologic drought and ecology**::
-Water consumers and decision makers are interested in potential ecological and economic impacts of additional water use.
+Water consumers and decision makers are interested in potential ecological
+and economic impacts of additional water use.
 
-*Relevant datasets*:::
-* River network
-* Incremental catchments
-* Low flow and temperature sensitive species distributions
-* Monitoring locations
-* Low flow and temperature forecasts
-* Ecological stream classification
-* Historical streamflow characteristics
-* Flow and temperature regulations
+*Relevant datasets*::: * River network * Incremental catchments * Low flow
+and temperature sensitive species distributions * Monitoring locations * Low
+flow and temperature forecasts * Ecological stream classification *
+Historical streamflow characteristics * Flow and temperature regulations
 
-**Stream water quality and quantity monitoring**::
-Water consumers are interested in ambient stream characteristics and water quality impacts of water allocation decisions.
+**Stream water quality and quantity monitoring**:: Water consumers are
+interested in ambient stream characteristics and water quality impacts of
+water allocation decisions.
 
-*Relevant datasets*:::
-* River network
-* Monitoring locations
-* Water quality data
-* Water quantity data
-* Water allocation information
-* Diversions and discharges
+*Relevant datasets*::: * River network * Monitoring locations * Water quality
+data * Water quantity data * Water allocation information * Diversions and
+discharges
 
-**Flood risks and impacts**::
-A person in a flood-impacted area needs information about the risks to them for a forecast or ongoing flood event.
+**Flood risks and impacts**:: A person in a flood-impacted area needs
+information about the risks to them for a forecast or ongoing flood event.
 
-*Relevant datasets*:::
-* River network
-* Stream flow and stage forecasts
-* Topography
-* Flood depth and extent data for event
-* Flood plain map(s)
-* Flood control assets
-* Impacted transportation assets
-* At risk critical infrastructure
+*Relevant datasets*::: * River network * Stream flow and stage forecasts *
+Topography * Flood depth and extent data for event * Flood plain map(s) *
+Flood control assets * Impacted transportation assets * At risk critical
+infrastructure
 
-**Water quality impacts monitoring of mining activities**::
-A water quality analyst needs to know what data is available to assess baseline and impacted conditions of a waterbody impacted by mine-related runoff.
+**Water quality impacts monitoring of mining activities**:: A water quality
+analyst needs to know what data is available to assess baseline and impacted
+conditions of a waterbody impacted by mine-related runoff.
 
-*Relevant datasets*:::
-* River network
-* On network waterbodies
-* Realtime water quality monitoring locations and data
-* Water quality sampling locations and data
-* Mine locations
-* Snowpack and runoff
-* River flow monitoring locations and data
+*Relevant datasets*::: * River network * On network waterbodies * Realtime
+water quality monitoring locations and data * Water quality sampling
+locations and data * Mine locations * Snowpack and runoff * River flow
+monitoring locations and data
 
-**Cross border monitoring index**::
-An analyst working in a cross border watershed or aquifer needs information characterizing their study region from another country of jurisdiction.
+**Cross border monitoring index**:: An analyst working in a cross border
+watershed or aquifer needs information characterizing their study region from
+another country of jurisdiction.
 
-*Relevant datasets*:::
-* River network data
-* Catchment data
-* Aquifer data
-* Streamflow monitoring locations and data
-* Aquifer monitoring wells and data
+*Relevant datasets*::: * River network data * Catchment data * Aquifer data *
+Streamflow monitoring locations and data * Aquifer monitoring wells and data
 
-**Water budget summary**::
-A person interested in a basic summary of the water budget for a given watershed needs information about the watershed and its water budget data.
+**Water budget summary**:: A person interested in a basic summary of the
+water budget for a given watershed needs information about the watershed and
+its water budget data.
 
-*Relevant datasets*:::
-* Watershed boundary
-* Watershed outlet location
-* Water budget component data
-* Links to additional information
+*Relevant datasets*::: * Watershed boundary * Watershed outlet location *
+Water budget component data * Links to additional information
 
-**Watershed data index**::
-A person with a stake in the conditions of a given watershed needs an index of all water-quality related information about the watershed.
+**Watershed data index**:: A person with a stake in the conditions of a given
+watershed needs an index of all water-quality related information about the
+watershed.
 
-*Relevant datasets*:::
-* Impaired (e.g. polluted or degraded) waters
-* Drinking water quality violation reports
-* Facilities with discharge permits
-* Water quality infrastructure investments
-* Watershed characteristics
-* Modeled data such as nutrient concentrations
+*Relevant datasets*::: * Impaired (e.g. polluted or degraded) waters *
+Drinking water quality violation reports * Facilities with discharge permits
+* Water quality infrastructure investments * Watershed characteristics *
+Modeled data such as nutrient concentrations
 
-**Flood monitoring at bridges**::
-A jurisdiction with significant infrastructure near or over waterways needs a system to link waterways, bridges, and various observations for situational awareness and model calibration/validation.
+**Flood monitoring at bridges**:: A jurisdiction with significant
+infrastructure near or over waterways needs a system to link waterways,
+bridges, and various observations for situational awareness and model
+calibration/validation.
 
-*Relevant datasets*:::
-* River network
-* Bridge inventory
-* Monitoring stations and data
-* Locations where model results are available
+*Relevant datasets*::: * River network * Bridge inventory * Monitoring
+stations and data * Locations where model results are available
 
-**Flood Impact Study**::
-A hydrologist conducting a flood impact study needs to collect relevant information from various agencies.
+**Flood Impact Study**:: A hydrologist conducting a flood impact study needs
+to collect relevant information from various agencies.
 
-*Relevant datasets*:::
-* River network
-* Watershed boundaries
-* Hydrologic locations of vulnerable infrastructure
-* Hydrologic locations of monitoring stations and data
-* Meteorological monitoring stations and data
-* Elevation data
-* Water table / aquifer data
-* Rainfall forecast
+*Relevant datasets*::: * River network * Watershed boundaries * Hydrologic
+locations of vulnerable infrastructure * Hydrologic locations of monitoring
+stations and data * Meteorological monitoring stations and data * Elevation
+data * Water table / aquifer data * Rainfall forecast
 
-**Surface water impacted groundwater level forecasting**::
-A groundwater extraction modeler needs information about surface water that replenishes groundwater so they can understand and forecast groundwater availability.
+**Surface water impacted groundwater level forecasting**:: A groundwater
+extraction modeler needs information about surface water that replenishes
+groundwater so they can understand and forecast groundwater availability.
 
-*Relevant datasets*:::
-* Groundwater wells and level data
-* Surface water monitoring sites and flow data
-* Meteorological monitoring sites and observations
-* Output predictions at groundwater prediction wells
+*Relevant datasets*::: * Groundwater wells and level data * Surface water
+monitoring sites and flow data * Meteorological monitoring sites and
+observations * Output predictions at groundwater prediction wells
+
+=== Use Cases Implemented as Demonstrations of Outcomes
+
+**Water budget summary** This use case provides a person interested in a
+basic summary of the water budget for a given watershed information about a
+collection of watersheds and their water budget data. It links together
+various hydrographic representations of each watershed as well as
+observational water budget data and related web resources.
+
+As shown in the <<img_uswb_data>>, the watershed feature is linked to various
+representations of it. This follows the HY_Features concept of a catchment as
+an _unrealized_ feature that is related to various realization features,
+there is no canonical representation of the watershed its self.
+
+[#img_uswb_data,reftext='{figure-caption} {counter:figure-num}'] .Notional
+diagram of relationships between data in the water budget summary use case.
+image::images/uswb.png[width=800,align="center"]
+
+Additional details about the water budget summary use case implementation is
+available on the
+https://opengeospatial.github.io/ELFIE/demo/uswb[demonstration ELFIE web
+page.]
+
+**Watershed data index** This use case is meant to demonstrate the use of
+HY_Features to link a catchment (12 digit hydrologic unit code (HUC12)
+watershed in this case) to the data representing it as well as the monitoring
+network associated with it. It serves as a general demonstration that could
+be used for a wide array of linked watershed information use cases.
+
+[#img_huc12obs_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of relationships between data in the watershed data index
+use case. image::images/uswb.png[width=800,align="center"]
+
+Additional details about the water budget summary use case implementation is
+available on the
+https://opengeospatial.github.io/ELFIE/demo/huc12obs[demonstration ELFIE web
+page.]
+
+**Flood risks and impacts** This use case provides a decision maker needing
+to respond to flooded transportation infrastructure the information they need
+to understand the impacted assets and flooded roads for a forecast flood.
+Under this use case, a flood forecasting system would be able to discover
+vulnerable infrastructure and assets published by local juridictions as
+linked data and publish flood forecasts that include potentially impacted
+features in forecast information products.
+
+[#img_floodcast_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of data in the floodcast use case.
+image::images/floodcast.png[width=800,align="center"]
+
+**Surface water impacted groundwater level forecasting** This use case tests
+the ability of established data models to link surfacewater and groundwater
+features and observations for applications like recharge estimation from
+rivers or water supply source selection. The implemented solution is a
+collection of rich linked data documents showing how features, observations,
+and related data can be encoded in JSON-LD.

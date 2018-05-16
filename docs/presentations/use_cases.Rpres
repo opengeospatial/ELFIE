@@ -1,11 +1,15 @@
-ELFIE
+ELFIE Use Cases
 ========================================================
 date: 3/19/2018
 autosize: true
 
-Environmental Linked Feature Interoperability Experiment (ELFIE) Use Case Overview
+## Environmental Linked Feature Interoperability Experiment (ELFIE)  
+### Use Cases Overview
 
-Purpose, Analysis, Implementation, and Demonstration
+**Purpose, Analysis, Implementation, and Demonstration**  
+
+These slides were prepared for an OGC-TC demonstration of ELFIE outcomes.  
+These materials should be considered preliminary and subject to change.
 
 Introduction
 ========================================================
@@ -51,10 +55,15 @@ Implementation Use Cases
 Implementation Use Cases
 ========================================================
 
-### BRGM SW/GW Linked Data Round Trips
-**Data:** Waterbodies, watersheds, aquifers, wells, and streamgages  
-
-**Demo:** Visualized in a linked feature data / graph viewer (BRGM Linked data Viewer)
+### BRGM Ground/Surface water data round trip
+**Data:** Aquifer, wells, piezometers, waterbodies, streamgages. Features description, links, and associated observations
+ 
+**Demo:** prototype of static JSON-LD files based on BRGM Goundwater Information Network content
+ 
+A comprehensive use case starting from a borehole/well its piezometer, the monitored aquifer and the resulting groundwater observations.
+<!-- Given that ground/surface water interaction has been properly qualified in that area, the piezometer can be correlated with a surface streamgage and the aquifer with surface waterbody. -->
+<!-- This allows then to access to surface water observation and traverse the river network. -->
+<!-- When feasible feature description is reusing semantic defined is other OGC standards (HY_Feature, GWML2). This led to define dedicated JSON-LD contexts. -->
 
 Implementation Use Cases
 ========================================================

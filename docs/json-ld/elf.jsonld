@@ -2,8 +2,11 @@
     "@context": {
         "schema": "http://schema.org/",
         "skos": "https://www.w3.org/TR/skos-reference/",
+        "gsp": "http://www.opengeospatial.org/standards/geosparql",
         "description": "schema:description",
         "geo": "schema:geo",
+        "hasGeometry": "gsp:hasGeometry",
+        "asWKT": "gsp:asWKT",
         "image": {
             "@id": "schema:image",
             "@type": "@id"
