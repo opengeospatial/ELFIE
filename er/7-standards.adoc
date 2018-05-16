@@ -38,7 +38,8 @@ Measurements (O&M) conceptual model provided a high level organizing
 framework for most ELFIE documents. The OGC-W3C Spatial Data On the Web
 Working Group implementation of O&M (Sensor, Observation, Sample, and
 Actuator (SOSA)) was used directly because of its applicability to the linked
-data technology pursued in ELFIE.
+data technology pursued in ELFIE. Geosparql ontology was also used directly for
+representing geometries and spatial relations between features.
 
 Domain specific data models such as WaterML2 Part 3: Surface Hydrologic
 Features and WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) were also
@@ -66,9 +67,12 @@ seeking to apply OGC standards on their current infrastructure within the
 suggested W3C best practices would find it very difficult or expensive to
 achieve them.
 
-=== JSON-LD Given ELFIE goals related to adoptability of outcomes and
+=== JSON-LD
+Given ELFIE goals related to adoptability of outcomes and
 applicability to mass market search, JSON-LD was used as the encoding for
-ELFIE documents. While there were other potential options that could be used,
+ELFIE documents. For a better search accessibility, Schema.org ontology was used
+to provide basic description for the features. While there were other potential
+options that could be used,
 the ease of use (parsing and serialization) of JSON-LD across practically
 all programming languages made it the clear choice for use in ELFIE. As
 described below, some technical limitations inherent to RDF and thus JSON-LD
