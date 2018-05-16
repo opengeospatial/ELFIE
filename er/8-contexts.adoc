@@ -20,17 +20,19 @@ around adoptability and ubiquity, the
 https://www.w3.org/TR/json-ld/#the-context[JSON-LD context] was chosen as the
 most appropriate technical solution to express the graph "views". ELFIE contexts
 are meant to be precise descriptions of what the IE found to be the most
-appropriate linked data relations. They are not intended to be used as a schema
-to specify or validate the contents of a given document. From a practical
-perspective, the contexts provide clear guidelines for what relations to use
-while not being overly prescriptive, limiting, or difficult to use in a
-typical web development workflow.
+appropriate linked data properties (attributes and relations) and types. They
+are not intended to be used as a schema to specify or validate the contents of a
+given document. However, they could provide a useful set of aliases for the only
+types and properties that could be parsed and interpreted by the client. From a
+practical perspective, the contexts provide clear guidelines for what properties
+and types to use while not being overly prescriptive, limiting, or difficult to
+use in a typical web development workflow.
 
 === General ELFIE Contexts
 The ELFIE preview graph "view", is described by the
 https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld[elf.jsonld] context.
 It uses schema.org[http://schema.org/], skos[https://www.w3.org/TR/skos-reference/],
-and geosparql[http://www.opengeospatial.org/standards/geosparql] relations.
+and geosparql[http://www.opengeospatial.org/standards/geosparql] properties and types.
 Schema.org is used whenever possible to maintain compatibility with search
 engines, uses skos for a lose "related" relationship, and geosparql for precise
 specification of a geometric preview. The geometric preview of a feature was an
@@ -49,25 +51,25 @@ to satisfy the basic geometry preview use case with significantly lower technica
 overhead than support for the full well known text standard. Further work should
 look more closely at this issue in an attempt to reconcile and or provide guidance.
 
- The ELFIE network graph "view", is described by the
- https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld[elf-network.jsonld]
- context. It uses
- geosparql[http://www.opengeospatial.org/standards/geosparql] and
- OWL-time[https://www.w3.org/TR/owl-time/] relations. Its emphasis is on simple
- topological relationships such as touches, intersects, before, etc. A network
- context would logically include additional domain specific topological relations
- derived from other contexts, but they are not included in the general network
- context.
+The ELFIE network graph "view", is described by the
+https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld[elf-network.jsonld]
+context. It uses
+geosparql[http://www.opengeospatial.org/standards/geosparql] and
+OWL-time[https://www.w3.org/TR/owl-time/] relations. Its emphasis is on simple
+topological relationships such as touches, intersects, before, etc. A network
+context would logically include additional domain specific topological relations
+derived from other contexts, but they are not included in the general network
+context.
 
- === Domain Specific Contexts
- Two extended general contexts and three domain specific contexts were created
- for testing in ELFIE. The extended general contexts have content from the
- https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld[timeseriesML] and
- https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld[SOSA] data models.
- The domain specific contexts have content from
- https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[HY_Features],
- https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2], and the
- https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld[floodcast]
- use case. All of these contexts, except SOSA, were created as part of the
- ELFIE project without formal ontologies to back them. Work on these ontologies
- should follow ELFIE.
+=== Domain Specific Contexts
+Two extended general contexts and three domain specific contexts were created
+for testing in ELFIE. The extended general contexts have content from the
+https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld[timeseriesML] and
+https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld[SOSA] data models.
+The domain specific contexts have content from
+https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[HY_Features],
+https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2], and the
+https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld[floodcast]
+use case. All of these contexts, except SOSA, were created as part of the
+ELFIE project without formal ontologies to back them. Work on these ontologies
+should follow ELFIE.
