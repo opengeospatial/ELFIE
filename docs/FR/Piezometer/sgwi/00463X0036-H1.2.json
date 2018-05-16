@@ -1,29 +1,31 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld"
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
-    "@type": "sosa:Sample",
+    "@type": "Sample",
     "name": "PIEZOMETRE DE CARDONNETTE - 80",
-    "hasGeometry": {
+    "gsp:hasGeometry": {
 				"@type":"gsp:Geometry",
-				"gsp:asWKT":"POINT(49.9506859240222 2.3597603712661)"
+				"gsp:asWKT":"POINT(2.3597603712661 49.9506859240222)"
 			},
 	"isSampleOf": {
 				"@id": "https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01", 
-				"@type": "gwml2:GW_HydrogeoUnit",
+				"@type": "GW_HydrogeoUnit",
                 "name": "Craie du Séno-Turonien en Artois-Picardie"
             },	
     "isFeatureOfInterestOf":[ 
 					{
-					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",				
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",				
 					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/00463X0036/H1.2",
-					"@type": "sosa:Observation",
+					"@type": "Observation",
 					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
 					"hasResult": [
 						{
-							"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/00463X0036/H1.2&responseFormat=application/json",
+							"@id": "https://opengeospatial.github.io/ELFIE/FR/PiezometerRes/sgwi/00463X0036-H1.2",
 							"@type": "wml2:MeasurementTimeseries"
 						}
 				],
@@ -50,16 +52,19 @@
 	,
 	"image": "http://fichebsseau.brgm.fr/bss_eau/filer/scans_bss_eau/bss_eau_1_vignette/00006964.JPG.jpg",
     "hasSampleRelationship": [
-        {	
+        {     
+                                                           "@id":"https://foo2",
+                                                           "@type": "skos:Concept",
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
-				"@type":"hyf:HY_HydrometricFeature",
-				"name":"L'Hallue à Querrieu" }
-		},
-		{
+                                                           "@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
+                                                           "@type":"HY_HydrometricFeature",
+                                                           "name":"L'Hallue à Querrieu" }
+                              },
+                              {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": "http://ressource.brgm-rec.fr/data/DispositifCollecte/0000000029"
         }
     ]
+
 }

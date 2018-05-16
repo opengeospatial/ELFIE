@@ -1,0 +1,15 @@
+{
+    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+    "@id": "https://hydro.data.elfie.ogc/id/observation/001",
+    "@type": "sosa:Observation",
+    "hasFeatureOfInterest": "https://data.elfie.ogc/id/some/river",
+    "hasResult": 42,
+    "madeBySensor": "https://hydro.data.elfie.ogc/id/machine-that-goes-ping/002",
+    "observedProperty": "https://hydro.data.elfie.ogc/def/property/stage",
+    "phenomenonTime": {
+        "hasBeginning": "2017-08-31T15:30:00.00+12:00",
+        "hasEnd": "2017-08-31T15:40:00.00+12:00"
+    },
+    "resultTime": "2017-08-31T15:40:03.00+12:00",
+    "usedProcedure": "https://data.elfie.ogc/id/wild-guess/sorry/rating-curve"
+}

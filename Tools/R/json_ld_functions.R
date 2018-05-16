@@ -1,7 +1,7 @@
 ## Constants
-out_md <- "../docs/file_index.md"
+out_md <- "../../docs/file_index.md"
 
-out_path_base <- "../docs"
+out_path_base <- "../../docs/"
 
 elf_url_base <- "https://opengeospatial.github.io/ELFIE"
 
@@ -14,7 +14,7 @@ elf_url_base <- "https://opengeospatial.github.io/ELFIE"
 build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", 
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld", 
                   "@id" = paste("https://opengeospatial.github.io/ELFIE", 
                                 id_base,
                                 tsv_data[1], 
@@ -24,6 +24,9 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
                   "description" = tsv_data$`schema:description`,
                   "sameAs" = tsv_data$`schema:sameAs`,
                   "image" = tsv_data$`schema:image`)
+  
+  outlist <- check_outlist(outlist)
+  
   if(!include_missing) {
     return(remove_missing(outlist))
   } else {
@@ -38,52 +41,81 @@ build_elf_index_list <- function(id_base, tsv_data, key, include_missing = FALSE
 #' @param schema_lon schema.org longitude value
 #' @return list ready to be written with jsonlite::toJSON({{list}}, auto_unbox = T)
 #' 
-build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, schema_lon = NULL) {
+build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, schema_lon = NULL, geojson_id) {
   
   add_schema_geo <- is.null(schema_lat) && is.null(schema_lon)
   
-  coords <- geojson_geometry$coordinates[[1]]
+  coords <- sf::st_coordinates(sf::st_zm(geojson_geometry))
+  
+  sf_column <- attr(geojson_geometry, "sf_column")
+  sf_geom_type <- class(geojson_geometry[[sf_column]])
+  
+  sf_geom <- sf::st_zm(geojson_geometry[[sf_column]])
   
   if(add_schema_geo) {
-    if(geojson_geometry$type == "Point") {
+    if("sfc_POINT" %in% sf_geom_type) {
       schema_lat <- coords[2]
       schema_lon <- coords[1]
-    } else if(grepl("Polygon", geojson_geometry$type) | grepl("Line", geojson_geometry$type)) {
       
-      if(is.list(coords)) {
-        if(length(coords) == 1) coords <- coords[[1]]
-        remover <- c()
-        for(l in 1:length(coords)) {
-          if(is.list(coords[[l]])) {
-            coords <- c(coords, coords[[l]])
-            remover <- c(remover, l)
+      geoshape <- FALSE
+      
+    } else if(any(grepl("POLYGON", sf_geom_type)) | any(grepl("LINE", sf_geom_type))) {
+
+        schema_lat <- mean(coords[,2])
+        schema_lon <- mean(coords[,1])
+        
+        if(any(grepl("POLYGON", sf_geom_type))) {
+          geoshape_name = "schema:polygon"
+          geoshape_outline <- sf_geom
+          if(any(grepl("MULTI", sf_geom_type))) {
+            geoshape_outline <- sf::st_multipolygon(lapply(geoshape_outline[[1]], function(x) x[1]))
           }
+          geoshape_coords <- sf::st_coordinates(sf::st_zm(geoshape_outline))
+          geoshape <- TRUE
         }
-        coords[remover] <- NULL
         
-        mean_ind <- function(x, ind = 1) mean(drop(x)[,ind])
+        if(any(grepl("LINE", sf_geom_type))) {
+          if(any(grepl("MULTI", sf_geom_type))) {
+            warning("returning convex hull around the multilinestring")
+            geoshape_name <- "schema:polygon"
+            geoshape_coords <- sf::st_coordinates(sf::st_convex_hull(sf_geom))
+          } else {
+            geoshape_name = "schema:line"
+            geoshape_coords <- coords
+          }
+          geoshape <- TRUE
+        }
         
-        schema_lat <- mean(unlist(lapply(coords, mean_ind, ind = 2)))
-        schema_lon <- mean(unlist(lapply(coords, mean_ind, ind = 1)))
+        geoshape_coords <- paste(as.vector(t(data.frame(x = as.character(geoshape_coords[,1]), 
+                                               y = as.character(geoshape_coords[,2])))),
+                        collapse = " ")
         
-      } else {
-        schema_lat <- mean(drop(coords)[,2])
-        schema_lon <- mean(drop(coords)[,1])
-      }
     } else {
       print("Unsupported geometry type. Only supports Point (Multi)Line and (Multi)Polygon")
       return(NULL)
     }
+    
+    gsp <- TRUE
+    gsp_geometry <- list("@type" = "gsp:Geometry",
+                         "gsp:asWKT" = sf::st_as_text(sf_geom))
   }
   
-  if(add_context) out[["@context"]] <- "http://geojson.org/geojson-ld/geojson-context.jsonld"
-  
   out <- list("geo" = list("@type" = "schema:GeoCoordinates",
-                           "schema:latitude" = schema_lat,
-                           "schema:longitude" = schema_lon),
-              "geometry" = list("@type" = geojson_geometry$type,
-                                "coordinates" = geojson_geometry$coordinates[[1]]))
-  return(out)
+                                "schema:latitude" = schema_lat,
+                                "schema:longitude" = schema_lon))
+  
+  if(geoshape) {
+    gs <- list("@type" = "schema:GeoShape",
+               "schema:url" = geojson_id)
+    gs[[geoshape_name]] <- geoshape_coords
+    out$geo <- list(out$geo, gs)
+  }
+  
+  if(gsp) {
+    out[["gsp:hasGeometry"]] = gsp_geometry
+  }
+
+    return(out)
 }
 
 #' @title build elfie net for hy_features
@@ -162,7 +194,7 @@ build_hyf_net <- function(tsv_data, id, include_missing = F) {
 build_elf_net <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-net.jsonld",
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
   
@@ -205,12 +237,14 @@ build_elf_net <- function(tsv_data, id, include_missing = F) {
 build_sosa <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
   
   for(i in 1:length(names(tsv_data))) {
     if(grepl("sosa:", names(tsv_data)[i])) {
+      
+      tsv_data <- check_outlist_data(tsv_data, i)
       
       outlist <- c(outlist, sosa_mapper(names(tsv_data)[i], tsv_data[[names(tsv_data)[i]]]))
       
@@ -225,6 +259,19 @@ build_sosa <- function(tsv_data, id, include_missing = F) {
     return(outlist)
   }
   
+}
+
+check_outlist_data <- function(tsv_data, i) {
+  n <- names(tsv_data)[i]
+  if(grepl("@id", n)) {
+    try({
+      id <- stringr::str_replace(n, "@id", "")
+      t <- stringr::str_replace(n, "@id", "@type")
+      tsv_data[[id]] <- list(`@id` = tsv_data[[n]], `@type` = tsv_data[[t]])
+      tsv_data[[n]] <- tsv_data[[t]] <- NULL
+      })
+  }
+  return(tsv_data)
 }
 
 #' @title Parse ELFIE JSON-LD
@@ -393,7 +440,7 @@ elfie_sub <- function(x) {
 
 elfie_url_local <- function(x) {
   if(!grepl(".json", x)) x <- paste0(x, ".json")
-  gsub("https://opengeospatial.github.io/ELFIE/", "../docs/", x)
+  gsub("https://opengeospatial.github.io/ELFIE/", out_path_base, x)
 }
 
 check_outlist <- function(outlist) {
@@ -444,6 +491,9 @@ get_context_out <- function(json_ld) {
     if(any(names(json_ld[[el]]) == "@context")) contexts <- c(contexts, json_ld[[el]]$`@context`)
   }
   for(conx in contexts) {
+    if(is.list(conx)) {
+      context_out <- c(context_out, conx)
+    } else {
     try({
       context <- resolve_context(conx)
       if(length(context)>1) {
@@ -469,7 +519,7 @@ get_context_out <- function(json_ld) {
       context_out <- c(context_out, context$`@context`)
     }, silent = F)
   }
-  
+  }
   context_out <- list(`@context` = context_out)
 }
 
@@ -482,7 +532,7 @@ write_feature_type_title <- function(out_md, feature_type) {
 }
 
 write_url_line <- function(out_md, main_url) {
-  write(paste0("[", main_url, "](", main_url, ") [plain json](", main_url, ".json)  "), out_md, append = T)
+  write(paste0('[', main_url, '](', main_url, '){:target="_blank"} [plain json](', main_url, '.json){:target="_blank"}  '), out_md, append = T)
 }
 
 prefetch_ids <- function(id) {

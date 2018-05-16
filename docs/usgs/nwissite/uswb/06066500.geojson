@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "06066500", "station_nm": "Missouri River bl Holter Dam nr Wolf Cr MT", "site_tp_cd": "ST", "lat_va": 465941.06, "long_va": 1120038.4, "coord_meth_cd": "N", "coord_acy_cd": "1", "coord_datum_cd": "NAD83", "dec_coord_datum_cd": "NAD83", "district_cd": "30", "state_cd": "30", "county_cd": "049", "country_cd": "US", "land_net_ds": "NESWSES5  T14N  R03W  P", "map_nm": "SHEEP CREEK", "map_scale_fc": null, "alt_va": 3464.11, "alt_meth_cd": "L", "alt_acy_va": 0.01, "alt_datum_cd": "NGVD29", "huc_cd": "10030102", "basin_cd": null, "topo_cd": null, "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 16924.0, "contrib_drain_area_va": null, "tz_cd": "MST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NYNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -112.0106667, 46.9947389 ] } }
+]
+}

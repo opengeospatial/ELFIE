@@ -1,11 +1,15 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/09163500",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+  "@type": [
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+    "sosa:Sample"
+  ],
   "name": "COLORADO RIVER NEAR COLORADO-UTAH STATE LINE",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=09163500",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=09163500&parm_cd=00060&period=100",
@@ -16,16 +20,33 @@
       "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
     }
   ],
+  "isSampleOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/140100051906",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "isFeatureOfInterestOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/140100051906",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/140100051906",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/pr/uswb/140100051906",
+      "@type": "sosa:Observation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "schema:latitude": 39.1328,
     "schema:longitude": -109.0271
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      -109.0271,
-      39.1328
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-109.0271 39.13276)"
   }
 }

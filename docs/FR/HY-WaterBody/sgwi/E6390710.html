@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,182 +42,43 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
-    "skos": "https://www.w3.org/TR/skos-reference/",
-    "related": {
-      "@id": "skos:related",
-      "@type": "@id"
-    },
-    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
-    "intersects": {
-      "@id": "gsp:sfIntersects",
-      "@type": "@id"
-    },
-    "touches": {
-      "@id": "gsp:sfTouches",
-      "@type": "@id"
-    },
-    "within": {
-      "@id": "gsp:sfWithin",
-      "@type": "@id"
-    },
-    "time": "https://www.w3.org/TR/owl-time/",
-    "after": {
-      "@id": "time:after",
-      "@type": "@id"
-    },
-    "before": {
-      "@id": "time:before",
-      "@type": "@id"
-    },
-    "intervalAfter": {
-      "@id": "time:intervalAfter",
-      "@type": "@id"
-    },
-    "intervalBefore": {
-      "@id": "time:intervalBefore",
-      "@type": "@id"
-    },
-    "intervalDuring": {
-      "@id": "time:intervalDuring",
-      "@type": "@id"
-    },
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
     "hyf": "http://opengeospatial/def/ontology/hyf",
-    "HY_Catchment": {
-      "@id": "hyf:HY_Catchment",
-      "@type": "@id"
-    },
-    "HY_CatchmentDivide": {
-      "@id": "hyf:HY_CatchmentDivide",
-      "@type": "@id"
-    },
-    "HY_HydrographicNetwork": {
-      "@id": "hyf:HY_HydrographicNetwork",
-      "@type": "@id"
-    },
-    "HY_HydrometricNetwork": {
-      "@id": "hyf:HY_HydrometricNetwork",
-      "@type": "@id"
-    },
-    "HY_HydroNexus": {
-      "@id": "hyf:HY_HydroNexus",
-      "@type": "@id"
-    },
-    "HY_HydroLocation": {
-      "@id": "hyf:HY_HydroLocation",
-      "@type": "@id"
-    },
-    "HY_HydrometricFeature": {
-      "@id": "hyf:HY_HydrometricFeature",
-      "@type": "@id"
-    },
-    "HY_WaterBody": {
-      "@id": "hyf:HY_WaterBody",
-      "@type": "@id"
-    },
-    "HY_Lake": {
-      "@id": "hyf:HY_Lake",
-      "@type": "@id"
-    },
-    "HY_Impoundment": {
-      "@id": "hyf:HY_Impoundment",
-      "@type": "@id"
-    },
-    "HY_River": {
-      "@id": "hyf:HY_River",
-      "@type": "@id"
-    },
-    "HY_Channel": {
-      "@id": "hyf:HY_Channel",
-      "@type": "@id"
-    },
-    "HY_FlowPath": {
-      "@id": "hyf:HY_FlowPath",
-      "@type": "@id"
-    },
-    "HY_DistanceDescription": {
-      "@id": "hyf:HY_DistanceDescription",
-      "@type": "@id"
-    },
-    "HY_HydroLocationType": {
-      "@id": "hyf:HY_HydroLocationType",
-      "@type": "@id"
-    },
-    "HY_IndirectPosition": {
-      "@id": "hyf:HY_IndirectPosition",
-      "@type": "@id"
-    },
-    "HY_DistanceFromReferent": {
-      "@id": "hyf:HY_DistanceFromReferent",
-      "@type": "@id"
-    },
-    "upstreamWaterBody": {
-      "@id": "hyf:upstreamWaterBody",
-      "@type": "@id"
-    },
-    "downstreamWaterBody": {
-      "@id": "hyf:downstreamWaterBody",
-      "@type": "@id"
-    },
-    "lowerCatchment": {
-      "@id": "hyf:lowerCatchment",
-      "@type": "@id"
-    },
-    "upperCatchment": {
-      "@id": "hyf:upperCatchment",
-      "@type": "@id"
-    },
-    "realizedCatchment": {
-      "@id": "hyf:realizedCatchment",
-      "@type": "@id"
-    },
-    "catchmentRealization": {
-      "@id": "hyf:catchmentRealization",
-      "@type": "@id"
-    },
-    "contributingCatchment": {
-      "@id": "hyf:contributingCatchment",
-      "@type": "@id"
-    },
-    "outflow": {
-      "@id": "hyf:outflow",
-      "@type": "@id"
-    },
-    "realizedNexus": {
-      "@id": "hyf:realizedNexus",
-      "@type": "@id"
-    },
-    "networkStation": {
-      "@id": "hyf:networkStation",
-      "@type": "@id"
-    },
-    "referencedPosition": {
-      "@id": "hyf:referencedPosition",
-      "@type": "@id"
-    },
-    "distanceExpression": {
-      "@id": "hyf:distanceExpression",
-      "@type": "@id"
-    },
-    "distanceDescription": {
-      "@id": "hyf:distanceDescription",
-      "@type": "@id"
-    },
-    "linearElement": {
-      "@id": "`",
-      "@type": "@id"
-    },
-    "hydrometricNetwork": {
-      "@id": "hyf:hydrometricNetwork",
-      "@type": "@id"
-    },
-    "nexusRealization": {
-      "@id": "hyf:nexusRealization",
-      "@type": "@id"
-    }
+    "HY_Catchment": "hyf:HY_Catchment",
+    "HY_CatchmentDivide": "hyf:HY_CatchmentDivide",
+    "HY_HydrographicNetwork": "hyf:HY_HydrographicNetwork",
+    "HY_HydrometricNetwork": "hyf:HY_HydrometricNetwork",
+    "HY_HydroNexus": "hyf:HY_HydroNexus",
+    "HY_HydroLocation": "hyf:HY_HydroLocation",
+    "HY_HydrometricFeature": "hyf:HY_HydrometricFeature",
+    "HY_WaterBody": "hyf:HY_WaterBody",
+    "HY_Lake": "hyf:HY_Lake",
+    "HY_Impoundment": "hyf:HY_Impoundment",
+    "HY_River": "hyf:HY_River",
+    "HY_Channel": "hyf:HY_Channel",
+    "HY_FlowPath": "hyf:HY_FlowPath",
+    "HY_DistanceDescription": "hyf:HY_DistanceDescription",
+    "HY_HydroLocationType": "hyf:HY_HydroLocationType",
+    "HY_IndirectPosition": "hyf:HY_IndirectPosition",
+    "HY_DistanceFromReferent": "hyf:HY_DistanceFromReferent",
+    "upstreamWaterBody": "hyf:upstreamWaterBody",
+    "downstreamWaterBody": "hyf:downstreamWaterBody",
+    "lowerCatchment": "hyf:lowerCatchment",
+    "upperCatchment": "hyf:upperCatchment",
+    "realizedCatchment": "hyf:realizedCatchment",
+    "catchmentRealization": "hyf:catchmentRealization",
+    "contributingCatchment": "hyf:contributingCatchment",
+    "outflow": "hyf:outflow",
+    "realizedNexus": "hyf:realizedNexus",
+    "networkStation": "hyf:networkStation",
+    "referencedPosition": "hyf:referencedPosition",
+    "distanceExpression": "hyf:distanceExpression",
+    "distanceDescription": "hyf:distanceDescription",
+    "linearElement": "hyf:linearElement",
+    "hydrometricNetwork": "hyf:hydrometricNetwork",
+    "nexusRealization": "hyf:nexusRealization",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
   }
 }
     </code></pre>
@@ -225,14 +87,24 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
   "@id": "https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390710",
   "@type": "HY_WaterBody",
   "name": "rivière l'hallue",
   "downstreamWaterBody": {
-    "@id": "https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6–009-",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/HY-WaterBody/sgwi/E6390552",
     "@type": "HY_WaterBody",
-    "name": "La Somme Canalisée"
+    "name": "Bras de Décharge Aval Rd Ecl 15 Daours de Vanne Bras de Décharge au Canal de la Somme"
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "LINESTRING(2.44607607580261 49.9010571593228,2.44621474326451 49.9009670551511,2.44711842741183 49.9007420686066,2.44802162860381 49.9005610918905,2.44850757353699 49.9003809218461,2.4487161922176 49.900380964474,2.44906340807745 49.9004256501707,2.44982816848691 49.9008288560818,2.45045488536518 49.9010077497464,2.45080168357432 49.9009625945279,2.4511489645143 49.9008725234682,2.45184389053107 49.9009169651442,2.45351368018393 49.9012298766876,2.45365185522295 49.9011846789553,2.45372102620869 49.9009595047081,2.45427606353626 49.9006897865825)"
   }
 }
     </code></pre>

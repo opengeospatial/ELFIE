@@ -1,11 +1,15 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/02226000",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+  "@type": [
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+    "sosa:Sample"
+  ],
   "name": "ALTAMAHA RIVER AT DOCTORTOWN, GA",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=02226000",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=02226000&parm_cd=00060&period=100",
@@ -16,16 +20,33 @@
       "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
     }
   ],
+  "isSampleOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/030701060405",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "isFeatureOfInterestOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/030701060405",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/030701060405",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/pr/uswb/030701060405",
+      "@type": "sosa:Observation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "schema:latitude": 31.6547,
     "schema:longitude": -81.8279
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      -81.8279,
-      31.6547
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-81.82789 31.65466)"
   }
 }

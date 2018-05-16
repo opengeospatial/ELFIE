@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/030701060405",
+  "@type": "sosa:Observation",
+  "name": "Flow observation for  Penholoway Swamp-Altamaha River",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/02226000",
+      "@type": ["http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation", "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature", "sosa:Sample"]
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/030701060405",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
+  "hasResult": {
+    "@id": "https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=02226000",
+    "@type": "wml2:MeasurementTimeseries"
+  }
+}

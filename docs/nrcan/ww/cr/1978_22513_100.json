@@ -1,8 +1,7 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/ww/cr/1978_22513_100",
   "@type": " http://opengeospatial/def/ontology/gwml2#GW_Well",
@@ -20,13 +19,8 @@
     "schema:latitude": 45.1544,
     "schema:longitude": -73.0137
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      [
-        -73.0137,
-        45.1544
-      ]
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-73.01371 45.1544)"
   }
 }

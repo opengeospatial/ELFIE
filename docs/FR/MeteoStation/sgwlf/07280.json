@@ -1,21 +1,25 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
-    "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/MeteoStation/sgwlf/07280",
     "@type": "sosa:Sample",
     "name": "DIJON-LONGVIC",
-    "hasGeometry": "POINT(47.267833 5.088333)",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(5.088333 47.267833)"
+				},
 	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmAtmo.owl#AtmosphereLayer",
-    "isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
-				{
+    "isFeatureOfInterestOf":[     
+					{
+					 "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 					"@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
-						"@id":"http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
+						"@id":"https://opengeospatial.github.io/ELFIE/FR/MeteoStation/sgwlf/07280",
 						"@type":"sosa:Sample"
 					 },
 					"hasResult": [
@@ -41,21 +45,20 @@
 					"name": "Limnimetric/Fluviometric Station"
 				}
             }
-        ]
-    },
+	],
 	"hasSampleRelationship": [
         {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
-				"@type":"gwml2:GW_MonitoringSite",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwlf/04398X0002-SONDAG.2",
+				"@type":"GW_MonitoringSite",
 				"name":"forage privé (Bourberain-21)" }
         },
 		{	
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
-				"@type":"hyf:HY_HydrometricFeature",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwlf/U124404001",
+				"@type":"HY_HydrometricFeature",
 				"name":"La Tille à Champdôtre" }
 		}
     ]

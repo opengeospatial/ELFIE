@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,51 +42,35 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
     "rdfs": "https://www.w3.org/TR/rdf-schema/",
     "gsp": "http://www.opengeospatial.org/standards/geosparql/",
     "sampling": "http://www.w3.org/ns/sosa/sampling/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "hasGeometry": "gsp:hasGeometry",
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
-    "hasSampleRelationship": "sampling:hasSampleRelationship",
-    "natureOfRelationship": {
-      "@id": "sampling:natureOfRelationship",
-      "@type": "@id"
-    },
-    "relatedSample": {
-      "@id": "sampling:relatedSample",
-      "@type": "@id"
-    },
     "time": "http://www.w3.org/2006/time#",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "hasResult": "sosa:hasResult",
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
     "phenomenonTime": "sosa:phenomenonTime",
     "hasBeginning": "time:hasBeginning",
     "hasEnd": "time:hasEnd",
     "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    }
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample",
+    "gw": "http://opengeospatial/def/ontology/gwml2#",
+    "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
+    "GW_Aquifer": "gw:GW_Aquifer",
+    "GW_Well": "gw:GW_Well",
+    "GW_MonitoringSite": "gw:GW_MonitoringSite"
   }
 }
     </code></pre>
@@ -94,25 +79,25 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
-  "@type": "sosa:Sample",
+  "@type": "Sample",
   "name": "Forage BSS000DXBD",
-  "hasGeometry": {
+  "gsp:hasGeometry": {
     "@type": "gsp:Geometry",
-    "gsp:asWKT": "POINT(49.9506859240222 2.3597603712661)"
+    "gsp:asWKT": "POINT(2.3597603712661 49.9506859240222)"
   },
   "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
   "isFeatureOfInterestOf": [
     {
-      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
       "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
-      "@type": "sosa:Observation",
+      "@type": "Observation",
       "hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
       "hasResult": [
         {
           "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
-          "@type": "gwml2:GW_GeologyLog"
+          "@type": "GW_GeologyLog"
         }
       ],
       "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
@@ -137,7 +122,13 @@
     },
     {
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-      "relatedSample": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2"
+      "relatedSample": {
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
+        "@type": "Sample",
+        "name": "PIEZOMETRE DE CARDONNETTE - 80"
+      },
+      "@id": "https://foo1",
+      "@type": "skos:Concept"
     }
   ]
 }

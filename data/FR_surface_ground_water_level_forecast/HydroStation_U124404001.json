@@ -1,22 +1,25 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
-    "@id": "http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwlf/U124404001",
     "@type": ["sosa:Sample","HY_HydrometricFeature"],
     "name": "La Tille à Champdôtre",
-    "hasGeometry": "POINT(47.179364 5.299577)",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(5.299577 47.179364)"
+				},
 	"isSampleOf": {
 			"@id":"http://id.eaufrance.fr/CEA/U12-0400",
 			"@type":"HY_WaterBody",
 			"name":"La Tille"
 		},
-    "isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
+    "isFeatureOfInterestOf": [
 				{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",				
 					"@id": "http://www.vigicrues.gouv.fr/niveau3.php?CdStationHydro=U124404001",
 					"@type": "sosa:Observation",
 					"hasFeatureOfInterest": {
@@ -46,14 +49,13 @@
 					"name": "Limnimetric/Fluviometric Station"
 				}
             }
-        ]
-    },
+	],
 	"hasSampleRelationship": [
         {
             "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
             "relatedSample": {
-				"@id":"http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
-				"@type":"gwml2:GW_MonitoringSite",
+				"@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwlf/04398X0002-SONDAG.2",
+				"@type":"GW_MonitoringSite",
 				"name":"forage privé (Bourberain-21)" }
         }
     ]

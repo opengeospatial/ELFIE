@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--Adapted/Stolen from: https://github.com/scienceai/jsonld-markup Thanks!!!-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://opengeospatial.github.io/ELFIE/css/jsonld-markup.css">
+    <style>
+    body { padding: 1em; }
+    .logo { margin-bottom: 3px; }
+    .code.column { background-color: rgb(51,51,51); color: white }
+    </style>
+    <title>/usgs/q/uswb/070200121110.json</title>
+  </head>
+  <body>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Environmental Linked Features Interoperability Experiment Demonstration
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <div class="ui two column doubling stackable grid">
+      <div class="five wide code column">
+    <h3 class="ui inverted header">Expanded Context</h3>
+    <pre><code id="context">
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
+    "description": "schema:description",
+    "geo": "schema:geo",
+    "image": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
+    "rdfs": "https://www.w3.org/TR/rdf-schema/",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
+    "sampling": "http://www.w3.org/ns/sosa/sampling/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "time": "http://www.w3.org/2006/time#",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
+    "hasResult": "sosa:hasResult",
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasBeginning": "time:hasBeginning",
+    "hasEnd": "time:hasEnd",
+    "resultTime": "sosa:resultTime",
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample"
+  }
+}
+    </code></pre>
+      </div>
+      <div class="eleven wide code column">
+    <h3 class="ui inverted header">JSON-LD Document</h3>
+    <pre><code id="code">
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/070200121110",
+  "@type": "sosa:Observation",
+  "name": "Flow observation for  Minnesota River",
+  "hasFeatureOfInterest": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/05330920",
+      "@type": ["http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation", "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature", "sosa:Sample"]
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/070200121110",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
+    }
+  ],
+  "hasResult": {
+    "@id": "https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&parameterCd=00060&sites=05330920",
+    "@type": "wml2:MeasurementTimeseries"
+  }
+}
+    </code></pre>
+      </div>
+    </div>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Code for this pretty JSON-LD view derived from 
+          <a href="https://github.com/scienceai/jsonld-markup" target="_blank">
+            https://github.com/scienceai/jsonld-markup
+          </a>. 
+          Thanks <a href="https://science.ai/">science.ai</a>!
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://opengeospatial.github.io/ELFIE/js/pretty_jsonld.js"></script>
+    <script type="text/javascript">
+     var $context = document.getElementById('context');
+     var $code = document.getElementById('code');
+     var ctx = JSON.parse($context.textContent.trim());
+     var data = JSON.parse($code.textContent.trim());
+     $context.innerHTML = jsonldMarkup(ctx);
+     $code.innerHTML = jsonldMarkup(data, ctx['@context']);
+    </script>
+  </body>
+</html>

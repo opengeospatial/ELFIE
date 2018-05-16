@@ -1,24 +1,29 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/BoreholeView/BSS001REWW",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
     "@type": "sosa:Sample",
     "name": "Forage BSS001REWW",
-    "hasGeometry": "POINT(46.1909541655103 5.18713262971692)",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(5.18713262971692 46.1909541655103)"
+				},
 	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
-	"isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
+	"isFeatureOfInterestOf": [   
+        
 				{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
 					"@type": "sosa:Observation",
-					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS001REWW",
+					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
 					"hasResult": [
 						{
 							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
-							"@type": "gwml2:GW_GeologyLog"
+							"@type": "GW_GeologyLog"
 						}
 				],
                 "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
@@ -34,8 +39,7 @@
 					"name": "Driller log"
 				}
             }
-        ]
-    },
+	],
 	"image": "http://servicesgdm.brgm.fr/LogGDM/RGFLogServlet?HoleName=06512X0037",
     "hasSampleRelationship": [
         {

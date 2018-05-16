@@ -94,11 +94,16 @@
 	<script src="./jsonld-js/jsonld.js"></script>
 	<script type="text/javascript" src="./vis-4.21.0/dist/vis.js"></script>	
 		<!--<script language="javascript" src="https://raw.githubusercontent.com/digitalbazaar/jsonld.js/master/js/jsonld.js"></script> -->
+		 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script type="text/javascript">
 var map="";	
 var fGroup="";
 var labels = [];
-var WKT = [];
+//var WKT = [];
 var global_index=0;
 function launchJsonLD(uri){
 			var q = getSPARQLRequest4(uri);
@@ -167,6 +172,7 @@ function launchLD(){
 			tab=[];
 			arcs=[];
 			types=[];
+			opened=[]
 			launchVis(document.getElementById("query").value.trim());					
 			var q = getSPARQLRequest2();
 			var sel = "internal";
@@ -222,22 +228,27 @@ function launchFromJSONLD(){
 					arcs=[];
 					types=[];
 					
+					
 					//launchVis(document.getElementById("query").value.trim());					
 					//launchVis2(data);
 					if (err==null){
-					var mygraph= tablify(String(nquads).trim());
-					//try{
-					triplesToGraph(mygraph,true);
-					//}catch(e){
-					//alert("error while creating graph");
-					//}
-					
-					try{
-					triplesToSpatial(mygraph);
-					}catch(e){
-					alert("map vizualisation error ");
- 					}
-}
+						//console.log(data["@id"]);
+						var mygraph= tablify(String(nquads).trim());
+						try{
+						triplesToGraph(mygraph,data["@id"],true);
+						}catch(e){
+						alert("error while creating graph");
+						}
+						
+						try{
+						triplesToSpatial(mygraph);
+						}catch(e){
+						console.log(e);
+						alert("map vizualisation error ");
+						}
+					}else{
+					alert("error while retrieveing jsonld");
+					}
 			});
 		}
 
@@ -263,7 +274,7 @@ return t;
 		
 function executeSpatial(data){
 	(function(){
-		//var WKT = []; // Array contains lists of all WKT polygons extrated from SPARQL request
+		var WKT = []; // Array contains lists of all WKT polygons extrated from SPARQL request
 		//var labels = []; // Array contains lists of all labels polygons extrated from SPARQL request
 		var colorSelect = "#4ff7f7";
 		var varNames = [];
@@ -336,11 +347,11 @@ function transformToGeoJson(WKT, fGroup, map) {
                     shadowAnchor: [8, 8]
                 }),
                 editable: true,
-                color: '#AA0000',
+                color: (WKT.startsWith("LINESTRING") ||WKT.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
                 weight: 3,
                 opacity: 1.0,
                 editable: true,
-                fillColor: '#AA0000',
+                fillColor: (WKT.startsWith("LINESTRING") ||WKT.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
                 fillOpacity: 0.2
             });
 			
@@ -544,6 +555,7 @@ network.focus(URI, options);
 
 var tab=[];
 var arcs=[];
+var opened=[];
 var network=null;
 var nodes = null;
 var edges = null;
@@ -590,35 +602,36 @@ $.ajax({
 function createGraph(graph, URI, method="ld"){
 document.getElementById('curentURI').innerHTML= URI;
 document.getElementById('curentURI').setAttribute("href",URI);
-
+opened=[];
 					/*if (notexists(tab, URI)){
 					tab.push({id: URI, label: URI, color: 'red', font: {size:12, color:'black', face:'arial'}, type: graph[0].type1.value, group:(graph[0].type1)?graph[0].type1.value: "none"})
 					if(graph[0].type1 && $.inArray(graph[0].type1.value, types) === -1) types.push(graph[0].type1.value);
 					};*/
 					var i=1;
 					for (t= 0; t< graph.length; t++){
-					console.log(t);
+					//console.log(t);
 					if (notexists(tab, graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value)){
-					tab.push({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value , label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type: (graph[t].type1)?graph[t].type1.value: "none", group:(graph[t].type1)?graph[t].type1.value: "none"  });
+					tab.push({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value , label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type: (graph[t].type1)?graph[t].type1.value: "none", group:(graph[t].type1)?graph[t].type1.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }   });
 					i++;
 					if(graph[t].type1 && $.inArray(graph[t].type1.value, types) === -1) types.push(graph[t].type1.value)
 					else if(!graph[t].type1 && $.inArray("none", types) === -1) types.push("none")
 					}
 					
-					if (notexists(tab, graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value) && graph[t].pl.value!= "label" && graph[t].pl.value!= "name" ){
-					tab.push( {id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none" });
+					if (notexists(tab, graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value) && graph[t].pl.value!= "label" && graph[t].pl.value!= "name"  && graph[t].pl.value!= "asWKT" ){
+					tab.push( {id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
 					i++;
 					if(graph[t].type2 && $.inArray(graph[t].type2.value, types) === -1) types.push(graph[t].type2.value)
 					else if(!graph[t].type2 && $.inArray("none", types) === -1) types.push("none")
 					}
 					
-					if (graph[t].pl.value!= "label" && graph[t].pl.value!= "name" )arcs.push({from: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, to: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].pl.value, arrows:'to'});
+					if (graph[t].pl.value!= "label" && graph[t].pl.value!= "name" && graph[t].pl.value!= "asWKT"  )arcs.push({from: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, to: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].pl.value, arrows:'to'});
 					if (graph[t].pl.value== "label" || graph[t].pl.value== "name" ) {for (el in tab) {if (tab[el].id== graph[t].s.value) tab[el].l2= graph[t].o.value}}
 					}
 					
 									  
 				  nodes = new vis.DataSet(tab);
 				  edges = new vis.DataSet(arcs);
+				  opened.push(URI);
 				  
 				  // create a network
 				  var container = document.getElementById('graph_div');
@@ -631,8 +644,13 @@ document.getElementById('curentURI').setAttribute("href",URI);
 						"smooth": false
 					  },
 					  "physics": {
-						"minVelocity": 0.75,
-						"solver": "repulsion"
+						"forceAtlas2Based": {
+						  "centralGravity": 0.001,
+						  "springLength": 100
+						},
+						"solver":"forceAtlas2Based",
+						"minVelocity": 0.75//,
+						//"solver": "repulsion"
 					  }
 					};
 				  network = new vis.Network(container, data, options);
@@ -649,9 +667,12 @@ document.getElementById('curentURI').setAttribute("href",URI);
 					network.on("doubleClick", function (params) {
 					params.event = "[original event]";						
 					console.log('doubleClick event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
-					
-					//addToMap(this.getNodeAt(params.pointer.DOM));
-					addToGraphJsonld(this.getNodeAt(params.pointer.DOM));
+					console.log(nodes.get(params.nodes[0]).type);
+					if (nodes.get(params.nodes[0]).type== "wml2:MeasurementTimeseries")
+					{
+					getDataURL(nodes.get(params.nodes[0]).id+".json")
+					}
+					else addToGraphJsonld(this.getNodeAt(params.pointer.DOM));
 					
 					});
 					
@@ -660,6 +681,27 @@ document.getElementById('curentURI').setAttribute("href",URI);
 					if(typeof params.nodes[0] !== 'undefined'){
 					document.getElementById('curentURI').innerHTML= params.nodes[0];
 					document.getElementById('curentURI').setAttribute("href",params.nodes[0]);
+					 if (method=="jsonld"){
+						$.ajax({
+						url: (params.nodes[0].endsWith(".json"))?params.nodes[0]:params.nodes[0]+".json",
+						dataType: 'json',
+						async: false,
+						success: function(data) {
+						document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")},
+						error: function(){
+							$.ajax({
+							url: params.nodes[0],
+							dataType: 'json',
+							async: false,
+							success: function(data) {
+							document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")},
+							});
+						}
+					 
+					 });
+					 
+					 }
+					 //if (method=="jsonld"){$.getJSON((params.nodes[0].endsWith(".json"))?params.nodes[0]:params.nodes[0]+".json", function (data){document.getElementById("jsonld_text").value= JSON.stringify(data, null, "\t")});}
 					}
 					if(nodes.get(params.nodes[0]).l2){
 					params.event = "[original event]";						
@@ -710,8 +752,11 @@ $.ajax({
 					
 				},
 				success : function(d, status){
+					if ($.inArray(URI, opened)===-1){
 					var graph= d.results.bindings;
 					addGraphPart(graph, URI, "ld")
+					opened.push(URI);
+					}
 				 
 				}
 					
@@ -724,31 +769,32 @@ function addGraphPart(graph, URI, source ){
 
 		var typesAdd= []
 			level++;		
-		if (notexists(tab, URI)){tab.push({id: URI, label: URI, color: 'red', font: {size:12, color:'black', face:'arial'}})};
+		//if (notexists(tab, URI)){tab.push({id: URI, label: URI, color: 'red', font: {size:12, color:'black', face:'arial'}})};
 		var i=1;
 		for (t in graph){
-		console.log(t);
+		//console.log(t);
 		if (notexists(tab, graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value)){
-		tab.push({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type:(graph[t].type1)?graph[t].type1.value: "none", group:(graph[t].type1)?graph[t].type1.value: "none" });
+		tab.push({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type:(graph[t].type1)?graph[t].type1.value: "none", group:(graph[t].type1)?graph[t].type1.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
 		if(graph[t].type1 && $.inArray(graph[t].type1.value, types) === -1) {types.push(graph[t].type1.value); typesAdd.push(graph[t].type1.value)};
 		i++;
-		nodes.add({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type: (graph[t].type1)?graph[t].type1.value: "none" , group:(graph[t].type1)?graph[t].type1.value: "none"});
+		nodes.add({id: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, label: graph[t].s.value,  color:graph[t].color1.value, font: {size:12, color:'black', face:'arial'}, type: (graph[t].type1)?graph[t].type1.value: "none" , group:(graph[t].type1)?graph[t].type1.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 } });
 		}
 		
-		if (notexists(tab, graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value) && graph[t].pl.value!= "label"){
-		tab.push( {id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none" });
+		if (notexists(tab, graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value) && graph[t].pl.value!= "label" && graph[t].pl.value!= "name" && graph[t].pl.value!= "asWKT" ){
+		tab.push( {id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
 		i++;
 		if(graph[t].type2 && $.inArray(graph[t].type2.value, types) === -1) {types.push(graph[t].type2.value); typesAdd.push(graph[t].type2.value)};
-		nodes.add({id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none" });
+		nodes.add({id: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].o.value,  color:graph[t].color2.value, font: {size:12, color:'black', face:'arial'} , shape: (graph[t].pl.value!= 'relatedTo' && graph[t].pl.value!= 'observation')?'box': 'ellipse', type: (graph[t].type2)?graph[t].type2.value: "none", group:(graph[t].type2)?graph[t].type2.value: "none", widthConstraint: { maximum: 250 },heightConstraint: { maximum: 170 }  });
 		}
 		
-		if(graph[t].pl.value!= "label" || graph[t].pl.value!= "name" ){
+		if(graph[t].pl.value!= "label" && graph[t].pl.value!= "name" && graph[t].pl.value!= "asWKT" ){
 		arcs.push({from: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, to: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].pl.value, arrows:'to'});
 		edges.add({from: graph[t].s.value.startsWith("_")? "_"+level+graph[t].s.value:graph[t].s.value, to: graph[t].o.value.startsWith("_")? "_"+level+graph[t].o.value:graph[t].o.value, label: graph[t].pl.value, arrows:'to'});
 		}
 		if (graph[t].pl.value== "label" || graph[t].pl.value == "name") {
 			nodes.update({
 				id: graph[t].s.value,
+				label: graph[t].s.value,
 				l2: graph[t].o.value
 			});
 		}
@@ -762,24 +808,65 @@ function addGraphPart(graph, URI, source ){
 
 function addToGraphJsonld(URI){
 
-            $.getJSON(URI+".json", function (data){ 
-			
+            //$.getJSON((URI.endsWith(".json"))?URI:URI+".json", function (data){            
+			$.ajax({url: URI.endsWith(".json")?URI:URI+".json", dataType: 'json',async: false,success: function(data) {			
+				
+				if ($.inArray(URI, opened)===-1){
+					
 				jsonld.toRDF(data, {format: 'application/nquads'}, function(err, nquads) {
 				// nquads is a string of nquads
-					console.log(nquads);					
-					var mygraph= tablify(String(nquads).trim());
-					try{
-					triplesToGraph(mygraph, false);
-					}catch(e){
-					alert("error while adding to graph");
+					//console.log(nquads);
+					if (err== null) {
+						var mygraph= tablify(String(nquads).trim());
+						try{
+						triplesToGraph(mygraph,URI,false);
+						}catch(e){
+						alert("error while adding to graph");
+						}
+						
+						try{
+						triplesToSpatial(mygraph, false);
+						}catch(e){
+						alert("error while adding to map ");
+						}
+						opened.push(URI);
+					}else{
+					alert("error while retrieveing jsonld");
 					}
+				});
+			
+			}
+			},
+			error: function(){
+						$.ajax({url: URI, dataType: 'json',async: false,success: function(data) {						
+						if ($.inArray(URI, opened)===-1){							
+						jsonld.toRDF(data, {format: 'application/nquads'}, function(err, nquads) {
+						// nquads is a string of nquads
+							console.log(nquads);
+							if (err== null) {
+								var mygraph= tablify(String(nquads).trim());
+								try{
+								triplesToGraph(mygraph,URI,false);
+								}catch(e){
+								alert("error while adding to graph");
+								}
+								
+								try{
+								triplesToSpatial(mygraph, false);
+								}catch(e){
+								alert("error while adding to map ");
+								}
+								opened.push(URI);
+							}else{
+							alert("error while retrieveing jsonld");
+							}
+						});
 					
-					try{
-					triplesToSpatial(mygraph, false);
-					}catch(e){
-					alert("map vizualisation error ");
-s 					}
-			});
+					}
+					}
+					});
+			
+			}
 			});
 
 }
@@ -804,11 +891,11 @@ var list = document.createElement('ul');
 		input.setAttribute('style', 'display: inline-block; margin-bottom: 0; vertical-align: middle; width: 40px;');// add style value
 
 		label.setAttribute('for', 'id-'+typesTable[i]);// set for attribute for each label
-		label.setAttribute('style', 'display: inline-block; margin-bottom: 0; vertical-align: middle;');// set style attribute for each label
+		label.setAttribute('style', 'display: inline-block; margin-bottom: 0; vertical-align: middle; max-width: 100%');// set style attribute for each label
 		
 		label.appendChild(document.createTextNode(typesTable[i]));// add name between label tags
 		
-           
+        item.setAttribute('style','display:inline;');   
         item.appendChild(input);
         item.appendChild(label);
 
@@ -841,7 +928,7 @@ if (document.getElementById('id-'+type).checked)
 
 
 
-function triplesToGraph(triples,newg =true){
+function triplesToGraph(triples,URI,newg =true){
 notexists= function(table, id){
  for (elem in table)
  {
@@ -867,77 +954,127 @@ notexists= function(table, id){
 						}
 					}
 					
-					if (newg) createGraph(graph,triples[0][0] , "jsonld") 
-					else addGraphPart(graph,triples[0][0], "jsonld");
+					if (newg) createGraph(graph,URI , "jsonld") 
+					else addGraphPart(graph,URI, "jsonld");
 
 
 					
 }
  function triplesToSpatial(triplets, newg=true)
  {
- 
- var longitude="";
- var latitude="";
- var point="";
- var t;
- var l="From JSONLD";
-
- for (t = 0; t < triplets.length; t++)
- {
- //console.log(triplets[t]);
- //console.log(triplets[t][1]);
- if (triplets[t][1].endsWith("latitude") || triplets[t][1].endsWith("#lat") ){
- latitude= triplets[t][2];
- }
- else if (triplets[t][1].endsWith("longitude") || triplets[t][1].endsWith("#long")){
- longitude = triplets[t][2];
- }
- else if (triplets[t][1].endsWith("asWKT")){
- point= triplets[t][2];
- l= triplets[t][0];
- }
- }
-  if (point=="" && longitude!="" && latitude!=""){
-  point="POINT("+longitude+" "+latitude+")";
-  }
-  else if (point=="")
-  {
- 
-  return;
-  }
-  console.log(point.replace('"',''));
-  
-  
-  var colorSelect = "#4ff7f7";
-						
-  WKT.push(point.replace('"','').replace('"',''));
-  labels[0]=l;
-		
-		// Map configuration
-		//var 
-		map = L.map('map').setView([0, 0], 10);
-		// Add map box tile
-		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-			maxZoom: 18,
-			id: 'dlift.b4e0fe33',
-			accessToken: 'pk.eyJ1IjoiZGxpZnQiLCJhIjoiMGRhOTQyM2NmNjkyN2E5ZDliYjdlYjhmZjk0MmRkMzQifQ.Jr2TI6X6zPRjpQAsYhX_PQ'
-		}).addTo(map);
-		
-		//Create feature group
-		//var 
-		if (newg) fGroup = new L.featureGroup();
-		//Iterate dynamicly in all present polygons
-		global_index=0;
-		$.each(WKT,function(index,value){
-			var feature = transformToGeoJson(value, fGroup, map);
-			feature.bindPopup(labels[index]);
-			global_index++;
-		});
-		fGroup.addTo(map); // Add it to the map
-		
-		// bounds map on layers
-		map.fitBounds(fGroup.getBounds(), {padding: [0,0]});
+		 var WKT = [];
+		 var longitude="";
+		 var latitude="";
+		 var point="";
+		 var t;
+		 var l="From JSONLD";
+		var added= false;
+		 for (t = 0; t < triplets.length; t++)
+		 {
+		 l="From JSONLD";
+		//console.log(triplets[t]);
+		 //console.log(triplets[t][1]);
+		 if (triplets[t][1].endsWith("latitude") || triplets[t][1].endsWith("#lat") ){
+		 latitude= triplets[t][2];
+		  for (var k= 0; k< triplets.length; k++){
+		 if ( triplets[k][0]==triplets[t][0]&&(triplets[k][1].endsWith("longitude") || triplets[k][1].endsWith("#long"))){
+		 longitude = triplets[k][2];
+		 }
+		 }
+		 l=triplets[t][0];
+		 for (var k= 0; k< triplets.length;k++){
+		 if (triplets[k][2]==triplets[t][0]) { l= triplets[k][0];  break}
+		 }
+		 labels.push("<button onclick='graphFocus(\""+l+"\");' value='"+l+"' title='"+l+"' style='width: 100%; font-size: 14px'>"+l+"</button>");
+		 
+		 point="POINT("+parseFloat(longitude.split('"').join(''))+" "+parseFloat(latitude.split('"').join(''))+")";
+		 WKT.push(point);
+		 added=true;
+		 }
+		 else if (triplets[t][1].endsWith("asWKT")){
+		 var gm= triplets[t][2];
+		 l= triplets[t][0];
+		 for (var k= 0; k< triplets.length;k++){
+		 if (triplets[k][1].endsWith("hasGeometry") && triplets[k][2]==triplets[t][0]) { l= triplets[k][0];  break}
+		 }
+		 labels.push("<button onclick='graphFocus(\""+l+"\");' value='"+l+"' title='"+l+"' style='width: 100%; font-size: 14px'>"+l+"</button>");
+		 
+		 WKT.push(gm.replace('"','').replace('"','').replace('"',''));
+		 added=true
+		 }else if(triplets[t][1].endsWith("geo")){
+		 var linkgm= triplets[t][2];
+			 for (var k= 0; k< triplets.length;k++){
+			 if (triplets[k][1].endsWith("seeAlso") && triplets[k][0]==triplets[t][2]) { linkgm= triplets[k][2];  break}
+			 }
+		 //var linkgm= triplets[t][2];
+		 l= triplets[t][0];
+		 var gm;
+		 var gmwkt= new Wkt.Wkt();;
+		 labels.push("<button onclick='graphFocus(\""+l+"\");' value='"+l+"' title='"+l+"' style='width: 100%; font-size: 14px'>"+l+"</button>");
+		 $.ajax({url:linkgm ,dataType: 'json',async: false,success: function(data) {gm=gmwkt.fromObject(data.features[0].geometry).toString()}});
+		 //$.getJSON(linkgm,function (data){ gm=gmwkt.fromObject(data.features[0].geometry).toString() });
+		 WKT.push(gm);
+		 added=true
+		 }
+		 }
+		   if (added==false)return;		  
+		  var colorSelect = "#4ff7f7";	 
+				// Map configuration
+				//var 
+				if (newg) {
+				map = L.map('map').setView([0, 0], 10);
+				// Add map box tile
+				L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+					attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+					maxZoom: 18,
+					id: 'dlift.b4e0fe33',
+					accessToken: 'pk.eyJ1IjoiZGxpZnQiLCJhIjoiMGRhOTQyM2NmNjkyN2E5ZDliYjdlYjhmZjk0MmRkMzQifQ.Jr2TI6X6zPRjpQAsYhX_PQ'
+				}).addTo(map);
+				
+				//Create feature group
+				//var 
+				
+				fGroup = new L.featureGroup();
+				//Iterate dynamicly in all present polygons
+				global_index=0;
+				
+				$.each(WKT,function(index,value){
+					var feature = transformToGeoJson(value, fGroup, map);
+					feature.bindPopup(labels[index]);
+					global_index++;
+				});
+				fGroup.addTo(map); // Add it to the map
+				}else{
+					$.each(WKT,function(index,value){	
+						var w=  new Wkt.Wkt();
+						w.read(value);
+						var obj = w.toObject({
+						icon: new L.Icon({
+							iconUrl: 'green_pin.ico',
+							iconSize: [16, 16],
+							iconAnchor: [8, 8],
+							//shadowUrl: 'dot_shadow.png',
+							shadowSize: [16, 16],
+							shadowAnchor: [8, 8]
+						}),
+						editable: true,
+						color: (value.startsWith("LINESTRING") ||value.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
+						weight: 3,
+						opacity: 1.0,
+						editable: true,
+						fillColor: (value.startsWith("LINESTRING") ||value.startsWith("MULTILINESTRING"))?'#00ffff':'#AA0000',
+						fillOpacity: 0.2
+					});
+				
+				obj.bindPopup(labels[global_index])
+				obj.addTo(map);
+				fGroup.addLayer(obj);			
+				global_index++;
+				});
+				}
+				
+				// bounds map on layers
+				map.fitBounds(fGroup.getBounds(), {padding: [0,0]});
  
  }
 
@@ -951,6 +1088,102 @@ if (document.getElementById('stabilize').checked)
   }
 }
 
+function getDataURL(id){
+	var myArray = new Array();
+	var property= "the observed Property";
+	
+		myArray[0] = property;
+		myArray[1] = id;
+		console.log(myArray);
+		plotFromAPI(myArray);
+}
+
+function plotFromAPI(dataURLArray){
+	dataTotal = 0;
+	var dataURL = dataURLArray[1];
+	var property = dataURLArray[0];
+	xData = [];
+	yData = [];
+	if(dataURL){
+		$('#myModal3 .modal-body').empty();
+		$('#myModal3 .modal-title').empty();
+		//$('#myModal3 .modal-footer').empty(); 
+		$.get(dataURL, function (res) {
+			var result = res;
+			var data = result.value;
+			var dataNext = result['@iot.nextLink'];
+			dataTotal = result['@iot.count'];
+			$('#myModal3 .modal-title').append(dataTotal + " observations for " + property);
+			
+			$.each(data, function (k, v) {
+				console.log(k,v);
+				xData.push(v['resultTime']);
+				yData.push(v['result']); 
+			})
+		})
+		.done(function(){
+			var data = [{x: xData, y: yData, type: 'scatter'}];
+			Plotly.newPlot('chartDiv', data);
+			$("#myModal3").modal();
+			/*
+			var limit = 1000;
+			if (dataTotal > 1000) {
+				page = 0;
+				pages = parseInt(dataTotal) / parseInt(limit);
+				console.log("NUMBER OF LOOPS:" + pages);
+				var urlNext = '';
+				while (page <= pages) {
+					$('#loaderImage').show();
+					page = page + 1;
+					console.log("PAGE:" + page);
+					urlNext = dataURL + '?$skip=' + page*1000;
+					$.get(urlNext, function (res) {
+						var result = JSON.parse(res);
+						var data = result.value;
+						$.each(data, function (k, v) {
+							console.log(k,v);
+							xData.push(v['resultTime']);
+							yData.push(v['result']); 
+						})
+					})
+					.done(function(){
+						var data = [{x: xData, y: yData, type: 'scatter'}];
+						Plotly.newPlot('chartDiv', data);
+						$("#myModal3").modal();
+					})
+				}
+			}
+			*/
+		})
+	}
+}
+
+
+
+function tableFromAPI(property,dataURL){
+	if(dataURL){
+		$('#myModal2 .modal-body').empty();
+		$('#myModal2 .modal-title').empty();
+		$('#myModal2 .modal-footer').empty(); 
+		$.get(dataURL, function (res) {
+			var data = res.value;
+			var dataNext = res['@iot.nextLink'];
+			var dataTotal = res['@iot.count'];
+			$('#myModal2 .modal-title').append(dataTotal + " observations for " + property);
+			var modalBody = '<table class="table table-striped"><tr><th>Time</th><th>Value</th></tr>';
+			$.each(data, function (k, v) {
+				console.log(k,v);
+				modalBody += '<tr><td>'+v['resultTime']+'</td><td>'+v['result']+'</td></tr>'; 
+			})
+			modalBody += '</table>';
+			$('#myModal2 .modal-body').append(modalBody);
+			if(dataNext){
+				$('#myModal2 .modal-footer').append('<button class="btn btn-default" onclick="tableFromAPI(\'' + property + '\',\'' + dataNext + '\');">Next</button>')
+			}			
+			$("#myModal2").modal();
+		})
+	}
+}
 
 </script>
 </head>
@@ -960,13 +1193,13 @@ if (document.getElementById('stabilize').checked)
 
 	<div style="width:50%; height:100%;margin-top:4px;margin-left: 25%" >
 		
-		<input type="text" id="query" name="query" placeholder="Enter LD resource URI here..." style="width: 83%; display: inline-block;" autocomplete="on" spellcheck="false" onkeydown = "if (event.keyCode == 13) document.getElementById('query_submit').click()"></input>
+		<input type="text" id="query" name="query" placeholder="Enter BRGM linked data resource URI here..." style="width: 83%; display: inline-block;" autocomplete="on" spellcheck="false" onkeydown = "if (event.keyCode == 13) document.getElementById('query_submit').click()"></input>
 		<button  id="query_submit" onclick="launchLD();" id="myform" style="background-image:url('./viz/images/icons/run.png');background-repeat:no-repeat;width:30px;height:30px;float:right" title="Visualiser à partir du TripleStore"/>
 		
 	</div>
 		<div style= "margin-left: 45%">OR</div>
 	<div style="width:100%; height:100%;margin-top:4px;">			
-		<textarea id="jsonld_text" style="width:95%; max-width:90%; height:200px; min-height:200px; margin-left:5%" name="jsonld_text" spellcheck="false" placeholder="Enter your JsonLD here..."></textarea>					
+		<textarea id="jsonld_text" style="width:95%; max-width:90%; height:200px; min-height:100px; margin-left:5%" name="jsonld_text" spellcheck="false" placeholder="Enter your JsonLD here..."></textarea>					
 		<div style="height:30px;float:right;margin:auto;">
 			<button onclick="launchFromJSONLD();" id="jsonld_submit" value=" " style="background-image:url('./viz/images/icons/run.png');background-repeat:no-repeat;margin:2px;width:30px;height:30px;" title="Visualiser à partir du JsonLD"/>
 		</div>
@@ -974,27 +1207,49 @@ if (document.getElementById('stabilize').checked)
 		
 	<div id="graphs_show_description"  >
 		<div style="width:100%;margin:auto;">
-			<div style="height:40px;width:50%;margin-top:4px;float:left">				
+			<div style="height:20px;width:50%;margin-top:4px;float:left">				
 				<a id="curentURI" href="" style="float:right"></a>	
 			</div>		
-			<div style="height:40px;width:45%;margin-top:4px;float:right">				
-				<div style="height:30px;float:left;margin:auto">
+
+		</div>
+		
+		<div style="height:40px;width:100%;margin-top:4px;margin-bottom:4px">				
+				<div id="facets_div" style="width:94%;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px, padding-bottom: 7px;">
+				 Types				  
+				</div>
+				<div style="height:30px;float:right;margin:auto">
 					<input type="checkbox" name="stabilize" id="stabilize" style="display: inline-block; margin-bottom: 0; vertical-align: middle; width: 40px;" onclick='stabilize()'>
 					<label style="display: inline-block; margin-bottom: 0; vertical-align: middle;" for="stabilize">Stabilize</label>				
-				</div>
-				
-			</div>
-		</div>
-		<div style="width:100%;margin:auto;">		
+				</div>				
+		</div>	
+		<div style="width:100%;margin:auto;">
+			
+			
 			<div id="spatial_div" style="width:40%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:7px">
-			</div>			
-			<div id="facets_div" style="width:14%;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px">
-				 Types				  
-			</div>	
-			<div id="graph_div" style="width:44%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px" >
+			</div>				
+			<div id="graph_div" style="width:58%;height:660px;border:1px solid #a6c9e2;max-height:680px;float:left; margin-left:10px" >
 			</div>		
 		</div>				
 	</div>	
+	
+	<div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body" id="chartDiv">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 	
 </div>	
 

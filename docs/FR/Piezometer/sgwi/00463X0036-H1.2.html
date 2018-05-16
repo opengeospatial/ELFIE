@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,88 +42,69 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
-    "skos": "https://www.w3.org/TR/skos-reference/",
-    "related": {
-      "@id": "skos:related",
-      "@type": "@id"
-    },
-    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
-    "intersects": {
-      "@id": "gsp:sfIntersects",
-      "@type": "@id"
-    },
-    "touches": {
-      "@id": "gsp:sfTouches",
-      "@type": "@id"
-    },
-    "within": {
-      "@id": "gsp:sfWithin",
-      "@type": "@id"
-    },
-    "time": "https://www.w3.org/TR/owl-time/",
-    "after": {
-      "@id": "time:after",
-      "@type": "@id"
-    },
-    "before": {
-      "@id": "time:before",
-      "@type": "@id"
-    },
-    "intervalAfter": {
-      "@id": "time:intervalAfter",
-      "@type": "@id"
-    },
-    "intervalBefore": {
-      "@id": "time:intervalBefore",
-      "@type": "@id"
-    },
-    "intervalDuring": {
-      "@id": "time:intervalDuring",
-      "@type": "@id"
-    },
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
     "rdfs": "https://www.w3.org/TR/rdf-schema/",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
     "sampling": "http://www.w3.org/ns/sosa/sampling/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "hasGeometry": "gsp:hasGeometry",
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
-    "hasSampleRelationship": "sampling:hasSampleRelationship",
-    "natureOfRelationship": {
-      "@id": "sampling:natureOfRelationship",
-      "@type": "@id"
-    },
-    "relatedSample": {
-      "@id": "sampling:relatedSample",
-      "@type": "@id"
-    },
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
+    "time": "http://www.w3.org/2006/time#",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "hasResult": "sosa:hasResult",
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
     "phenomenonTime": "sosa:phenomenonTime",
     "hasBeginning": "time:hasBeginning",
     "hasEnd": "time:hasEnd",
     "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    }
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample",
+    "hyf": "http://opengeospatial/def/ontology/hyf",
+    "HY_Catchment": "hyf:HY_Catchment",
+    "HY_CatchmentDivide": "hyf:HY_CatchmentDivide",
+    "HY_HydrographicNetwork": "hyf:HY_HydrographicNetwork",
+    "HY_HydrometricNetwork": "hyf:HY_HydrometricNetwork",
+    "HY_HydroNexus": "hyf:HY_HydroNexus",
+    "HY_HydroLocation": "hyf:HY_HydroLocation",
+    "HY_HydrometricFeature": "hyf:HY_HydrometricFeature",
+    "HY_WaterBody": "hyf:HY_WaterBody",
+    "HY_Lake": "hyf:HY_Lake",
+    "HY_Impoundment": "hyf:HY_Impoundment",
+    "HY_River": "hyf:HY_River",
+    "HY_Channel": "hyf:HY_Channel",
+    "HY_FlowPath": "hyf:HY_FlowPath",
+    "HY_DistanceDescription": "hyf:HY_DistanceDescription",
+    "HY_HydroLocationType": "hyf:HY_HydroLocationType",
+    "HY_IndirectPosition": "hyf:HY_IndirectPosition",
+    "HY_DistanceFromReferent": "hyf:HY_DistanceFromReferent",
+    "upstreamWaterBody": "hyf:upstreamWaterBody",
+    "downstreamWaterBody": "hyf:downstreamWaterBody",
+    "lowerCatchment": "hyf:lowerCatchment",
+    "upperCatchment": "hyf:upperCatchment",
+    "realizedCatchment": "hyf:realizedCatchment",
+    "catchmentRealization": "hyf:catchmentRealization",
+    "contributingCatchment": "hyf:contributingCatchment",
+    "outflow": "hyf:outflow",
+    "realizedNexus": "hyf:realizedNexus",
+    "networkStation": "hyf:networkStation",
+    "referencedPosition": "hyf:referencedPosition",
+    "distanceExpression": "hyf:distanceExpression",
+    "distanceDescription": "hyf:distanceDescription",
+    "linearElement": "hyf:linearElement",
+    "hydrometricNetwork": "hyf:hydrometricNetwork",
+    "nexusRealization": "hyf:nexusRealization",
+    "gw": "http://opengeospatial/def/ontology/gwml2#",
+    "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
+    "GW_Aquifer": "gw:GW_Aquifer",
+    "GW_Well": "gw:GW_Well",
+    "GW_MonitoringSite": "gw:GW_MonitoringSite"
   }
 }
     </code></pre>
@@ -131,28 +113,28 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"],
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld"],
   "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
-  "@type": "sosa:Sample",
+  "@type": "Sample",
   "name": "PIEZOMETRE DE CARDONNETTE - 80",
-  "hasGeometry": {
+  "gsp:hasGeometry": {
     "@type": "gsp:Geometry",
-    "gsp:asWKT": "POINT(49.9506859240222 2.3597603712661)"
+    "gsp:asWKT": "POINT(2.3597603712661 49.9506859240222)"
   },
   "isSampleOf": {
     "@id": "https://opengeospatial.github.io/ELFIE/FR/GW-HydrogeoUnit/sgwi/121AT01",
-    "@type": "gwml2:GW_HydrogeoUnit",
+    "@type": "GW_HydrogeoUnit",
     "name": "Craie du Séno-Turonien en Artois-Picardie"
   },
   "isFeatureOfInterestOf": [
     {
-      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
       "@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/00463X0036/H1.2",
-      "@type": "sosa:Observation",
+      "@type": "Observation",
       "hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
       "hasResult": [
         {
-          "@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/00463X0036/H1.2&responseFormat=application/json",
+          "@id": "https://opengeospatial.github.io/ELFIE/FR/PiezometerRes/sgwi/00463X0036-H1.2",
           "@type": "wml2:MeasurementTimeseries"
         }
       ],
@@ -177,10 +159,12 @@
   "image": "http://fichebsseau.brgm.fr/bss_eau/filer/scans_bss_eau/bss_eau_1_vignette/00006964.JPG.jpg",
   "hasSampleRelationship": [
     {
+      "@id": "https://foo2",
+      "@type": "skos:Concept",
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
       "relatedSample": {
         "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwi/E639703001",
-        "@type": "hyf:HY_HydrometricFeature",
+        "@type": "HY_HydrometricFeature",
         "name": "L'Hallue à Querrieu"
       }
     },

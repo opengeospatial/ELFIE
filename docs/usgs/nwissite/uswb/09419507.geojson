@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "09419507", "station_nm": "MUDDY RV AT LEWIS AVENUE AT OVERTON, NV", "site_tp_cd": "ST", "lat_va": 363207.0, "long_va": 1142542.0, "coord_meth_cd": "G", "coord_acy_cd": "S", "coord_datum_cd": "NAD83", "dec_coord_datum_cd": "NAD83", "district_cd": "32", "state_cd": "32", "county_cd": "003", "country_cd": "US", "land_net_ds": "  NENWS19 T16S  R68E  M", "map_nm": "OVERTON, NV", "map_scale_fc": "  24000", "alt_va": 1251.0, "alt_meth_cd": "M", "alt_acy_va": 1.0, "alt_datum_cd": "NAVD88", "huc_cd": "15010012", "basin_cd": null, "topo_cd": "C", "instruments_cd": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": 19990219, "drain_area_va": 6940.0, "contrib_drain_area_va": 3240.0, "tz_cd": "PST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NYNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -114.4283333, 36.5352778 ] } }
+]
+}

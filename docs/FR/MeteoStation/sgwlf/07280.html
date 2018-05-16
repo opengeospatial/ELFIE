@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,88 +42,69 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
-    "skos": "https://www.w3.org/TR/skos-reference/",
-    "related": {
-      "@id": "skos:related",
-      "@type": "@id"
-    },
-    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
-    "intersects": {
-      "@id": "gsp:sfIntersects",
-      "@type": "@id"
-    },
-    "touches": {
-      "@id": "gsp:sfTouches",
-      "@type": "@id"
-    },
-    "within": {
-      "@id": "gsp:sfWithin",
-      "@type": "@id"
-    },
-    "time": "https://www.w3.org/TR/owl-time/",
-    "after": {
-      "@id": "time:after",
-      "@type": "@id"
-    },
-    "before": {
-      "@id": "time:before",
-      "@type": "@id"
-    },
-    "intervalAfter": {
-      "@id": "time:intervalAfter",
-      "@type": "@id"
-    },
-    "intervalBefore": {
-      "@id": "time:intervalBefore",
-      "@type": "@id"
-    },
-    "intervalDuring": {
-      "@id": "time:intervalDuring",
-      "@type": "@id"
-    },
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
     "rdfs": "https://www.w3.org/TR/rdf-schema/",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/",
     "sampling": "http://www.w3.org/ns/sosa/sampling/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "hasGeometry": "gsp:hasGeometry",
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
-    "hasSampleRelationship": "sampling:hasSampleRelationship",
-    "natureOfRelationship": {
-      "@id": "sampling:natureOfRelationship",
-      "@type": "@id"
-    },
-    "relatedSample": {
-      "@id": "sampling:relatedSample",
-      "@type": "@id"
-    },
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
+    "time": "http://www.w3.org/2006/time#",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "hasResult": "sosa:hasResult",
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
     "phenomenonTime": "sosa:phenomenonTime",
     "hasBeginning": "time:hasBeginning",
     "hasEnd": "time:hasEnd",
     "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    }
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample",
+    "gw": "http://opengeospatial/def/ontology/gwml2#",
+    "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
+    "GW_Aquifer": "gw:GW_Aquifer",
+    "GW_Well": "gw:GW_Well",
+    "GW_MonitoringSite": "gw:GW_MonitoringSite",
+    "hyf": "http://opengeospatial/def/ontology/hyf",
+    "HY_Catchment": "hyf:HY_Catchment",
+    "HY_CatchmentDivide": "hyf:HY_CatchmentDivide",
+    "HY_HydrographicNetwork": "hyf:HY_HydrographicNetwork",
+    "HY_HydrometricNetwork": "hyf:HY_HydrometricNetwork",
+    "HY_HydroNexus": "hyf:HY_HydroNexus",
+    "HY_HydroLocation": "hyf:HY_HydroLocation",
+    "HY_HydrometricFeature": "hyf:HY_HydrometricFeature",
+    "HY_WaterBody": "hyf:HY_WaterBody",
+    "HY_Lake": "hyf:HY_Lake",
+    "HY_Impoundment": "hyf:HY_Impoundment",
+    "HY_River": "hyf:HY_River",
+    "HY_Channel": "hyf:HY_Channel",
+    "HY_FlowPath": "hyf:HY_FlowPath",
+    "HY_DistanceDescription": "hyf:HY_DistanceDescription",
+    "HY_HydroLocationType": "hyf:HY_HydroLocationType",
+    "HY_IndirectPosition": "hyf:HY_IndirectPosition",
+    "HY_DistanceFromReferent": "hyf:HY_DistanceFromReferent",
+    "upstreamWaterBody": "hyf:upstreamWaterBody",
+    "downstreamWaterBody": "hyf:downstreamWaterBody",
+    "lowerCatchment": "hyf:lowerCatchment",
+    "upperCatchment": "hyf:upperCatchment",
+    "realizedCatchment": "hyf:realizedCatchment",
+    "catchmentRealization": "hyf:catchmentRealization",
+    "contributingCatchment": "hyf:contributingCatchment",
+    "outflow": "hyf:outflow",
+    "realizedNexus": "hyf:realizedNexus",
+    "networkStation": "hyf:networkStation",
+    "referencedPosition": "hyf:referencedPosition",
+    "distanceExpression": "hyf:distanceExpression",
+    "distanceDescription": "hyf:distanceDescription",
+    "linearElement": "hyf:linearElement",
+    "hydrometricNetwork": "hyf:hydrometricNetwork",
+    "nexusRealization": "hyf:nexusRealization"
   }
 }
     </code></pre>
@@ -131,61 +113,62 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"],
-  "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/FR/MeteoStation/sgwlf/07280",
   "@type": "sosa:Sample",
   "name": "DIJON-LONGVIC",
-  "hasGeometry": "POINT(47.267833 5.088333)",
-  "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmAtmo.owl#AtmosphereLayer",
-  "isFeatureOfInterestOf": {
-    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-    "@graph": [
-      {
-        "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
-        "@type": "sosa:Observation",
-        "hasFeatureOfInterest": {
-          "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_station/07280",
-          "@type": "sosa:Sample"
-        },
-        "hasResult": [
-          {
-            "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
-            "@type": "tsml:TimeseriesTVP"
-          }
-        ],
-        "madeBySensor": "http://i.mocked.something.up.meteofrance.fr/id/should_put_serial_number_here",
-        "observedProperty": {
-          "@id": "http://id.eaufrance.fr/nsa/520#H",
-          "@type": "skos:Concept",
-          "name": "Water Height (uom = mm)"
-        },
-        "phenomenonTime": {
-          "hasBeginning": "2017-10-24T22:00:00.000Z",
-          "hasEnd": "2017-10-25T22:00:00.000Z"
-        },
-        "resultTime": "2017-10-25T22:00:00.000Z",
-        "usedProcedure": {
-          "@id": "http://id.eaufrance.fr/nsa/531#LIMNI",
-          "@type": "skos:Concept",
-          "name": "Limnimetric/Fluviometric Station"
-        }
-      }
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT(5.088333 47.267833)"
   },
+  "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmAtmo.owl#AtmosphereLayer",
+  "isFeatureOfInterestOf": [
+    {
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+      "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
+      "@type": "sosa:Observation",
+      "hasFeatureOfInterest": {
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/MeteoStation/sgwlf/07280",
+        "@type": "sosa:Sample"
+      },
+      "hasResult": [
+        {
+          "@id": "http://i.mocked.something.up.meteofrance.fr/id/SYNOP_Obs/07280",
+          "@type": "tsml:TimeseriesTVP"
+        }
+      ],
+      "madeBySensor": "http://i.mocked.something.up.meteofrance.fr/id/should_put_serial_number_here",
+      "observedProperty": {
+        "@id": "http://id.eaufrance.fr/nsa/520#H",
+        "@type": "skos:Concept",
+        "name": "Water Height (uom = mm)"
+      },
+      "phenomenonTime": {
+        "hasBeginning": "2017-10-24T22:00:00.000Z",
+        "hasEnd": "2017-10-25T22:00:00.000Z"
+      },
+      "resultTime": "2017-10-25T22:00:00.000Z",
+      "usedProcedure": {
+        "@id": "http://id.eaufrance.fr/nsa/531#LIMNI",
+        "@type": "skos:Concept",
+        "name": "Limnimetric/Fluviometric Station"
+      }
+    }
+  ],
   "hasSampleRelationship": [
     {
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
       "relatedSample": {
-        "@id": "http://ressource.brgm-rec.fr/data/Piezometre/04398X0002/SONDAG.2",
-        "@type": "gwml2:GW_MonitoringSite",
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwlf/04398X0002-SONDAG.2",
+        "@type": "GW_MonitoringSite",
         "name": "forage privé (Bourberain-21)"
       }
     },
     {
       "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
       "relatedSample": {
-        "@id": "http://www.sandre.eaufrance.fr/geo/StationHydro/U124404001",
-        "@type": "hyf:HY_HydrometricFeature",
+        "@id": "https://opengeospatial.github.io/ELFIE/FR/HydroStation/sgwlf/U124404001",
+        "@type": "HY_HydrometricFeature",
         "name": "La Tille à Champdôtre"
       }
     }

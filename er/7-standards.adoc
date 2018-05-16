@@ -1,17 +1,76 @@
-[[Standards_Best_Practices]]
-== Applicable Best Practices and Standards
+[[Standards_Best_Practices]] == Applicable Best Practices and Standards
 
 === Introduction
-**Derive from activity plan and scope notes**
+
+The approach taken in ELFIE was limited in contrast to recent IEs concerning
+environmental information models. ELFIE focused on linked data documents that
+contain collections of linked features and related observations. With regard
+to the OGC Reference Model, the IE seeks to understand how features
+(geospatial information) can be linked to each other in fully dereferenced
+documents or by reference through use of HTTP URIs. ELFIE did not seek to
+solve problems regarding network architecture for resolving links or systems
+design and governance for applications that store and retrieving links or
+concept relationships.
+
+Given this, ELFIE sought to define a common approach to encoding links
+between and among environmental domain features that would allow cross-domain
+and cross-system sharing and interoperability of such linked information. To
+do this, ELFIE worked with existing and pending OGC standards for encoding of
+environmental observation data in an integrated dataset of features. Such OGC
+data models were then linked together according to W3C and other Linked Data
+best practices.
 
 === OGC Web Standards
-**Re: WFS, SOS, and other applicable feature and observations web (service) standards.**
+
+OGC Web Service standards for features and observations (WFS and SOS
+respectively) were used to construct HTTP URLs for use in ELFIE linked data
+documents as much as possible. While the WFS and SOS APIs present some
+challenges in creating URLs for use in linked data, the APIs do offer
+sufficient HTTP GET functionality to embed useful content in linked data with
+a great degree of flexibility. Issues related to URL structure and a given
+API-call's relation to a canonical non-information resource URI were
+encountered but deferred for future investigations.
 
 === OGC Domain Models
-**Re: O&M, GWML2, HY_Features, etc.**
+
+OGC data models were used extensively in ELFIE. The Observations and
+Measurements (O&M) conceptual model provided a high level organizing
+framework for most ELFIE documents. The OGC-W3C Spatial Data On the Web
+Working Group implementation of O&M (Sensor, Observation, Sample, and
+Actuator (SOSA)) was used directly because of its applicability to the linked
+data technology pursued in ELFIE.
+
+Domain specific data models such as WaterML2 Part 3: Surface Hydrologic
+Features and WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) were also
+used for feature types and relations in ELFIE linked data documents. A major
+limitation for use of these data models in ELFIE was a lack of published
+taxonomies and ontologies of their feature types and relations;
+experimental content was generated for ELFIE and formalization of such
+taxonomies and ontologies was left for future work.
 
 === W3C
-**Data on the web and spatial data on the web**
 
-=== JSON-LD
-**Schema.org compatibility and applicability to data models and linking standards**
+W3C best practices for data on the web, spatial data in the web, and linked
+data were used to guide decisions related to ELFIE linked data documents.
+Several members of the ELFIE project team were involved in development of
+these best practices and represented them throughout the project. Given this,
+the ELFIE was an opportunity to apply these best practices in a practical
+engineering process, using them together and attempting to apply them to OGC
+web service and information models.
+
+This was largely successful and no major issues were encountered related to
+the best practices themselves. However, they were not achieved fully due to
+realities of the internet, organization's operational constraints, and
+limitations of current APIs and data models. In other words, a project
+seeking to apply OGC standards on their current infrastructure within the
+suggested W3C best practices would find it very difficult or expensive to
+achieve them.
+
+=== JSON-LD Given ELFIE goals related to adoptability of outcomes and
+applicability to mass market search, JSON-LD was used as the encoding for
+ELFIE documents. While there were other potential options that could be used,
+the ease of use (parsing and serialization) of JSON-LD across practically
+all programming languages made it the clear choice for use in ELFIE. As
+described below, some technical limitations inherent to RDF and thus JSON-LD
+were encountered while attempting to encode preview geometries, but all basic
+requirements of ELFIE were satisfied by the JSON-LD encoding.

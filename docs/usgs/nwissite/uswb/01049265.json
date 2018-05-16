@@ -1,11 +1,15 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/01049265",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+  "@type": [
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation",
+    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+    "sosa:Sample"
+  ],
   "name": "Kennebec River at North Sidney, Maine",
   "sameAs": "https://waterdata.usgs.gov/nwis/inventory/?site_no=01049265",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=01049265&parm_cd=00060&period=100",
@@ -16,16 +20,33 @@
       "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus"
     }
   ],
+  "isSampleOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/uswb/010300032404",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork"
+    }
+  ],
+  "isFeatureOfInterestOf": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/q/uswb/010300032404",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/et/uswb/010300032404",
+      "@type": "sosa:Observation"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/pr/uswb/010300032404",
+      "@type": "sosa:Observation"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "schema:latitude": 44.4722,
     "schema:longitude": -69.6839
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      -69.6839,
-      44.4722
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-69.68389 44.47222)"
   }
 }

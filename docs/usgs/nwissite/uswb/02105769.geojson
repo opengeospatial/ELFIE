@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "02105769", "station_nm": "CAPE FEAR R AT LOCK #1 NR KELLY, NC", "site_tp_cd": "ST", "lat_va": 342416.0, "long_va": 781737.0, "coord_meth_cd": "G", "coord_acy_cd": "S", "coord_datum_cd": "NAD83", "dec_coord_datum_cd": "NAD83", "district_cd": "37", "state_cd": "37", "county_cd": "017", "country_cd": "US", "land_net_ds": null, "map_nm": "KELLY", "map_scale_fc": null, "alt_va": -2.9, "alt_meth_cd": "R", "alt_acy_va": 0.01, "alt_datum_cd": "NGVD29", "huc_cd": "03030005", "basin_cd": "07", "topo_cd": null, "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 5255.0, "contrib_drain_area_va": null, "tz_cd": "EST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NYNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -78.2936111, 34.4044444 ] } }
+]
+}

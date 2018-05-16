@@ -1,0 +1,203 @@
+footer{
+	background:#414042;
+	min-height:200px;
+	color:#fff;
+	border-top:5px solid rgb(210,210,210);
+	margin-top:20px;
+	font-family:"Source Sans Pro", sans-serif;
+	padding-bottom: 10px;
+	}
+	
+footer a{
+  text-decoration:none;
+}
+	
+footer a:link{
+  color:#fff;
+}
+
+footer a:visited{
+  color:#fff;
+}
+
+footer a:link:hover,
+footer a:hover{
+  text-decoration:underline;
+}
+
+footer a:active{
+  color:#fff;
+}
+
+.footerContentAligner{
+  padding:0 10px;
+}
+
+.githublink{
+  display:inline-block;
+  height: 25px;
+  width:125px;
+}
+
+#github-contact{
+  width:100%;
+  margin:10px 0 15px 0;
+}
+
+#github-contact img{
+  max-height: 25px;
+  float: left;
+  width: 25px;
+  margin: 0 10px 0 0;
+}
+
+#github-contact a{
+  font-weight:300;
+}
+
+#github-contact p{
+  line-height:25px;
+  font-size: 1em;
+}
+
+#github-contact span{
+  margin-right:5px;
+}
+
+.usgsLogoFooterArea{
+  padding:10px;
+}
+
+#relatedItems{
+  min-height:20px;
+}
+
+#relatedItems h3,
+#relatedItems h4{
+  font-weight:400;
+}
+
+#relatedItems h3{
+  margin-bottom:10px;
+}
+
+#relatedItems h4{
+  font-size:.9em;
+}
+
+#relatedVizzies,
+#relatedBlogs{
+  min-height:40px;
+  margin-bottom:10px;
+}
+
+.relatedItem{
+  min-height:20px;
+  margin-bottom:20px;
+}
+
+.relatedItem a{
+  display:inline-block;
+  width:100%;
+  height:100%;
+  cursor:pointer;
+}
+
+.footerThumbnail{
+  background:#fff;
+  width:100%;
+  margin-bottom:5px;
+  height:180px;
+}
+
+.footerThumbnail img{
+  width:100%;
+  height: 100%;
+}
+
+#relatedVizzies .footerThumbnail img{
+  object-fit: cover;
+}
+
+#relatedBlogs .footerThumbnail img{
+  object-fit: scale-down;
+}
+
+#vizlabPromo{
+  min-height:20px;
+  margin:15px 0 20px 0;
+}
+
+#vizlabPromo a{
+  cursor:pointer;
+}
+
+#vizlabPromo p{
+  font-weight:300;
+  font-size:.75em;
+  float:left;
+  margin-right:10px;
+}
+
+#vizlabPromo img{
+  width:20px;
+  max-height:20px;
+  float:left;
+}
+
+@media screen and (min-width:500px){
+  #relatedItems{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+  }
+  
+  #relatedVizzies,
+  #relatedBlogs{
+    flex:1;
+  }
+  
+  #relatedVizzies{
+    margin-right:5%;
+  }
+  
+  .relatedItemContainer{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  
+  .relatedItem{
+    flex: 47.5%;
+    margin-right:10px;
+  }
+  
+  .footerThumbnail{
+    max-width:396px;
+  }
+  
+  #vizlabPromo p{
+    font-size:1em;
+  }
+  
+  #vizlabPromo img{
+    width:30px;
+  }
+}
+
+@media screen and (min-width:800px){
+  .footerContentAligner{
+    width:760px;
+    margin:0 auto;
+  }
+  
+  .footerThumbnail{
+    height:200px;
+  }
+}
+
+@media screen and (min-width:1200px){
+  .footerContentAligner{
+    width:960px;
+  }
+}
+

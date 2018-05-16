@@ -1,8 +1,0 @@
-{
-    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-net-basic.jsonld",
-    "@id": "https://data.elfie.ogc/id/some/thing/001",
-    "@type": "https://data.elfie.ogc/def/some/thing",
-    "related": [
-        "https://data.elfie.ogc/id/some/thing/else"
-    ]
-}

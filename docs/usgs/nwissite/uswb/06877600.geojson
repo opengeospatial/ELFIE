@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "06877600", "station_nm": "SMOKY HILL R AT ENTERPRISE, KS", "site_tp_cd": "ST", "lat_va": 385423.0, "long_va": 970703.0, "coord_meth_cd": "M", "coord_acy_cd": "M", "coord_datum_cd": "NAD27", "dec_coord_datum_cd": "NAD83", "district_cd": "20", "state_cd": "20", "county_cd": "041", "country_cd": "US", "land_net_ds": "NWNWSES20 T13S  R03E  6", "map_nm": null, "map_scale_fc": null, "alt_va": 1098.25, "alt_meth_cd": "M", "alt_acy_va": 1.0, "alt_datum_cd": "NGVD29", "huc_cd": "10260008", "basin_cd": "06", "topo_cd": null, "instruments_cd": "YYNNYNNNNYNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": 19341101, "drain_area_va": 19260.0, "contrib_drain_area_va": 19260.0, "tz_cd": "CST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": null, "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -97.1177952, 38.9063891 ] } }
+]
+}

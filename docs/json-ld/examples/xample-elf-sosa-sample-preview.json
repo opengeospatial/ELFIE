@@ -1,0 +1,42 @@
+{
+    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
+    "@id": "https://hydro.data.elfie.ogc/id/monitoring-station/101",
+    "@type": "sosa:Sample",
+    "name": "MS101",
+    "comment": "A monitoring station somewhere in the world.",
+    "versionInfo": "1.0.0",
+    "creator": "https://data.elfie.ogc/id/dangerous/hacks/ritchiea",
+    "sameAs": [
+        {
+            "@id": "https://data.example.org/id/energy-company/thing/2612",
+            "@type": "sosa:Platform"
+        },
+        {
+            "@id": "https://data.domain.name/id/irrigation-scheme/thing/2601",
+            "@type": "sosa:Sample"
+        }
+    ],
+    "hasPreviewGeometry": "POINT(-43.640416 172.476688)",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "image": "https://en.wikipedia.org/wiki/File:Snoqualmie_Gaging_Station_04135.JPG",
+    "related": [
+        {
+            "@id": "https://data.elfie.ogc/id/some/river",
+            "@type": "http://opengeospatial/def/ontology/hyf/HY_River"
+        },
+        {
+            "@id": "https://hydro.data.elfie.ogc/id/monitoring-network/10",
+            "@type": "sosa:SampleRelationship"
+        },
+        {
+            "@id": "https://hydro.data.elfie.ogc/id/water-sample/10.1",
+            "@type": "sosa:Sample"
+        }
+    ],
+    "skos:editorialNote": [
+        "'related' and 'sameAs' features here are included as typed-object-with-label according to elf-basic.",
+        "This allows crawlers to dereference links according to types they are interested in.",
+        "The provision of labels allows HTML clients to create hyperlinks.",
+        "Full URIs are used when the namespace prefix has not been declared in the @context - e.g. http://opengeospatial/def/ontology/hyf/"
+    ]
+}

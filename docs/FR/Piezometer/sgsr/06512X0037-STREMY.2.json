@@ -1,49 +1,52 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
     ],
-    "@id": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2",
+    "@id": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgsr/06512X0037-STREMY.2",
     "@type": "sosa:Sample",
     "name": "Puits de l'Hotel (Charpey) - 26",
-    "hasGeometry": "POINT(44.9439393172635 5.08440249864289)",
+    "gsp:hasGeometry": {
+				"@type":"gsp:Geometry",
+				"gsp:asWKT":"POINT(5.08440249864289 44.9439393172635)"
+				},
 	"isSampleOf": {
-				"@id": "http://ressource.brgm-rec.fr/data/EntiteHydroGeol/507AC00", 
-				"@type": "gwml2:GW_HydrogeoUnit",
+				"@id": "https://opengeospatial.github.io/ELFIE/FR/Aquifer/sgsr/507AC00", 
+				"@type": "GW_HydrogeoUnit",
                 "name": "Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes"
             },	
-    "isFeatureOfInterestOf": {
-        "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-        "@graph": [
+    "isFeatureOfInterestOf": [         
 				{
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 					"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/06512X0037/STREMY.2",
 					"@type": "sosa:Observation",
-					"hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Piezometre/06512X0037/STREMY.2",
+					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgsr/06512X0037-STREMY.2",
 					"hasResult": [
 						{
 							"@id": "http://ressource.brgm-rec.fr/obs/RawOfferingPiezo/06512X0037/STREMY.2&responseFormat=application/json",
 							"@type": "wml2:MeasurementTimeseries"
 						}
-				],
-                "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
-				"observedProperty": {
-					"@id": "http://id.eaufrance.fr/par/1689.xml",
-					"@type": "skos:Concept",
-					"name": "Goundwater Level (in meter)"
-				},
-                "phenomenonTime": {
-                    "hasBeginning": "2016-01-05T11:00:00.000Z",
-                    "hasEnd": "2017-10-10T10:00:00.000Z"
-                },
-                "resultTime": "2017-10-10T10:00:00.000Z",
-                "usedProcedure":  {
-					"@id": "http://id.eaufrance.fr/met/403.xml",
-					"@type": "skos:Concept",
-					"name": "Electronic piezometric probe"
-				}
-            }
-        ]
-    },
+					],
+					"madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+					"observedProperty": {
+						"@id": "http://id.eaufrance.fr/par/1689.xml",
+						"@type": "skos:Concept",
+						"name": "Goundwater Level (in meter)"
+					},
+					"phenomenonTime": {
+						"hasBeginning": "2016-01-05T11:00:00.000Z",
+						"hasEnd": "2017-10-10T10:00:00.000Z"
+					},
+					"resultTime": "2017-10-10T10:00:00.000Z",
+					"usedProcedure":  {
+						"@id": "http://id.eaufrance.fr/met/403.xml",
+						"@type": "skos:Concept",
+						"name": "Electronic piezometric probe"
+					}
+            }        
+	],
 	"image": "http://fichebsseau.brgm.fr/bss_eau/filer/scans_bss_eau/bss_eau_1_vignette/00003677.JPG.jpg",
     "hasSampleRelationship": [
         {

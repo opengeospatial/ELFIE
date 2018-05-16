@@ -625,6 +625,7 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <ul class="sectlevel2">
 <li><a href="#_introduction">7.1. Introduction</a></li>
 <li><a href="#_use_cases_considered_in_design_process">7.2. Use Cases Considered in Design Process</a></li>
+<li><a href="#_use_cases_implemented_as_demonstrations_of_outcomes">7.3. Use Cases Implemented as Demonstrations of Outcomes</a></li>
 </ul>
 </li>
 <li><a href="#Standards_Best_Practices">8. Applicable Best Practices and Standards</a>
@@ -849,7 +850,7 @@ To focus the work, the IE attempted to avoid issues not directly related to enco
 </div>
 <div class="paragraph">
 <p>As described in detail later, the IE has specified two constrained views of a resolved linked data graph that are specified with modular SHaCL shapes.
-These specific graph views could be implemented using the "_view" poattern of the Linked Data API or as the payload returned from a REST API endpoint.
+These specific graph views could be implemented using the "_view" pattern of the Linked Data API or as the payload returned from a REST API endpoint.
 Using this approach, the recommendation takes advantage of the power and flexibility of Linked Open Data while providing just enough constraint and guidance to encourage interoperability.
 By specifying a partially resolve graph view, it also allows resources that are not traversable as linked open data (for watever reason) to be incorporated into a linked data system.
 This mechanism should provide a gateway to inclusion in and understanding the value of the Linked Open Data cloud.</p>
@@ -879,14 +880,14 @@ Note that inclusion of other properties is encouraged and implementors can ignor
 between and among features described by domain-specific feature models and
 observations data that describe the features. Within this, ELFIE aimed to
 leverage existing standards and best practices while maintaining a high
-degree of simplicity toward the goal of adoptibility by developers and
+degree of simplicity toward the goal of adoptability by developers and
 users with a wide array of technical skill levels. Combining these goals
 led to IE participants to seek solutions that</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>are ubiquitous and easily adoptible in any programming language,</p>
+<p>are ubiquitous and easily adoptable in any programming language,</p>
 </li>
 <li>
 <p>apply best practices for linked data on the web,</p>
@@ -1010,8 +1011,8 @@ are described below. Each use cases takes the form of a simple description of
 who or what system has an interest in what related datasets. Specific datasets are
 listed to clarify the scope and provide a starting point for technical design
 work. Use cases that were implemented as demonstrations of the design outcomes
-were described in more detail to include notional diagrams of how datasets
-involved link to eachother, a thorough description of the use case, and an
+are described in more detail to include notional diagrams of how datasets
+involved link to each other, a thorough description of the use case, and an
 example application that speaks to and/or satisfies the needs of the use case.</p>
 </div>
 </div>
@@ -1021,7 +1022,7 @@ example application that speaks to and/or satisfies the needs of the use case.</
 <dl>
 <dt class="hdlist1"><strong>River network linked data to address hydrologic drought and ecology</strong></dt>
 <dd>
-<p>Water consumers and decision makers are interested in potential ecological and economic impacts of additonal water use.</p>
+<p>Water consumers and decision makers are interested in potential ecological and economic impacts of additional water use.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
@@ -1130,7 +1131,264 @@ example application that speaks to and/or satisfies the needs of the use case.</
 </dl>
 </div>
 </dd>
+<dt class="hdlist1"><strong>Water quality impacts monitoring of mining activities</strong></dt>
+<dd>
+<p>A water quality analyst needs to know what data is available to assess baseline and impacted conditions of a waterbody impacted by mine-related runoff.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>River network</p>
+</li>
+<li>
+<p>On network waterbodies</p>
+</li>
+<li>
+<p>Realtime water quality monitoring locations and data</p>
+</li>
+<li>
+<p>Water quality sampling locations and data</p>
+</li>
+<li>
+<p>Mine locations</p>
+</li>
+<li>
+<p>Snowpack and runoff</p>
+</li>
+<li>
+<p>River flow monitoring locations and data</p>
+</li>
+</ul>
+</div>
+</dd>
 </dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Cross border monitoring index</strong></dt>
+<dd>
+<p>An analyst working in a cross border watershed or aquifer needs information characterizing their study region from another country of jurisdiction.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>River network data</p>
+</li>
+<li>
+<p>Catchment data</p>
+</li>
+<li>
+<p>Aquifer data</p>
+</li>
+<li>
+<p>Streamflow monitoring locations and data</p>
+</li>
+<li>
+<p>Aquifer monitoring wells and data</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Water budget summary</strong></dt>
+<dd>
+<p>A person interested in a basic summary of the water budget for a given watershed needs information about the watershed and its water budget data.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Watershed boundary</p>
+</li>
+<li>
+<p>Watershed outlet location</p>
+</li>
+<li>
+<p>Water budget component data</p>
+</li>
+<li>
+<p>Links to additional information</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Watershed data index</strong></dt>
+<dd>
+<p>A person with a stake in the conditions of a given watershed needs an index of all water-quality related information about the watershed.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Impaired (e.g. polluted or degraded) waters</p>
+</li>
+<li>
+<p>Drinking water quality violation reports</p>
+</li>
+<li>
+<p>Facilities with discharge permits</p>
+</li>
+<li>
+<p>Water quality infrastructure investments</p>
+</li>
+<li>
+<p>Watershed characteristics</p>
+</li>
+<li>
+<p>Modeled data such as nutrient concentrations</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Flood monitoring at bridges</strong></dt>
+<dd>
+<p>A jurisdiction with significant infrastructure near or over waterways needs a system to link waterways, bridges, and various observations for situational awareness and model calibration/validation.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>River network</p>
+</li>
+<li>
+<p>Bridge inventory</p>
+</li>
+<li>
+<p>Monitoring stations and data</p>
+</li>
+<li>
+<p>Locations where model results are available</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Flood Impact Study</strong></dt>
+<dd>
+<p>A hydrologist conducting a flood impact study needs to collect relevant information from various agencies.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>River network</p>
+</li>
+<li>
+<p>Watershed boundaries</p>
+</li>
+<li>
+<p>Hydrologic locations of vulnerable infrastructure</p>
+</li>
+<li>
+<p>Hydrologic locations of monitoring stations and data</p>
+</li>
+<li>
+<p>Meteorological monitoring stations and data</p>
+</li>
+<li>
+<p>Elevation data</p>
+</li>
+<li>
+<p>Water table / aquifer data</p>
+</li>
+<li>
+<p>Rainfall forecast</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Surface water impacted groundwater level forecasting</strong></dt>
+<dd>
+<p>A groundwater extraction modeler needs information about surface water that replenishes groundwater so they can understand and forecast groundwater availability.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Groundwater wells and level data</p>
+</li>
+<li>
+<p>Surface water monitoring sites and flow data</p>
+</li>
+<li>
+<p>Meteorological monitoring sites and observations</p>
+</li>
+<li>
+<p>Output predictions at groundwater prediction wells</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_cases_implemented_as_demonstrations_of_outcomes"><a class="anchor" href="#_use_cases_implemented_as_demonstrations_of_outcomes"></a>7.3. Use Cases Implemented as Demonstrations of Outcomes</h3>
+<div class="paragraph">
+<p><strong>Water budget summary</strong>
+This use case provides a person interested in a basic summary of the water budget for a given watershed information about a collection of watersheds and their water budget data. It links together various hydrographic representations of each watershed as well as observational water budget data and related web resources.</p>
+</div>
+<div class="paragraph">
+<p>As shown in the <a href="#img_uswb_data">Figure 1</a>, the watershed feature is linked to various representations of it. This follows the HY_Features concept of a catchment as an <em>unrealized</em> feature that is related to various realization features, there is no canonical representation of the watershed its self.</p>
+</div>
+<div id="img_uswb_data" class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/uswb.png" alt="uswb" width="800">
+</div>
+<div class="title">Figure 1. Notional diagram of relationships between data in the water budget summary use case.</div>
+</div>
+<div class="paragraph">
+<p>Additional details about the water budget summary use case implementation is available on the <a href="https://opengeospatial.github.io/ELFIE/demo/uswb">demonstration ELFIE web page.</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Watershed data index</strong>
+This use case is meant to demonstrate the use of HY_Features to link a catchment (12 digit hydrologic unit code (HUC12) watershed in this case) to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.</p>
+</div>
+<div id="img_huc12obs_data" class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/uswb.png" alt="uswb" width="800">
+</div>
+<div class="title">Figure 2. Notional diagram of relationships between data in the watershed data index use case.</div>
+</div>
+<div class="paragraph">
+<p>Additional details about the water budget summary use case implementation is available on the <a href="https://opengeospatial.github.io/ELFIE/demo/huc12obs">demonstration ELFIE web page.</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Flood risks and impacts</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Surface water impacted groundwater level forecasting</strong></p>
 </div>
 </div>
 </div>

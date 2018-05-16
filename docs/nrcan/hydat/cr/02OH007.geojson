@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "Permanent_Identifier": " ", "EventDate": null, "ReachCode": " ", "ReachSMDate": null, "ReachResolution": 0, "Feature_Permanent_Identifier": null, "FeatureClassRef": null, "Source_Originator": "MINISTERE DE L'ENVIRONNEMENT DU QUEBEC", "Source_DataDesc": "HYDAT Database, format : mdb, version : 1.0, date : 20171016074843.000", "FeatureDetailURL": "https:\/\/wateroffice.ec.gc.ca\/report\/real_time_e.html?stn=02OH007", "Measure": 0.0, "EventType": 57003, "Source_FeatureID": "02OH007", "EventOffset": null, "NHDPlusID": null }, "geometry": { "type": "Point", "coordinates": [ -72.9877777, 45.1227798 ] } }
+]
+}

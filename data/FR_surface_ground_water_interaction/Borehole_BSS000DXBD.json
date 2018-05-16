@@ -1,26 +1,27 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld"
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
-    "@type": "sosa:Sample",
+    "@type": "Sample",
     "name": "Forage BSS000DXBD",
-    "hasGeometry": {
+    "gsp:hasGeometry": {
 				"@type":"gsp:Geometry",
-				"gsp:asWKT":"POINT(49.9506859240222 2.3597603712661)"
+				"gsp:asWKT":"POINT(2.3597603712661 49.9506859240222)"
 				},
 	"isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
 	"isFeatureOfInterestOf": [
 					{
-					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",				
+					"@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",				
 					"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
-					"@type": "sosa:Observation",
+					"@type": "Observation",
 					"hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
 					"hasResult": [
 						{
 							"@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS000DXBD",
-							"@type": "gwml2:GW_GeologyLog"
+							"@type": "GW_GeologyLog"
 						}
 				],
                 "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
@@ -41,12 +42,18 @@
 	"image": "http://www.ades.eaufrance.fr/BDLisa.aspx?X=2.35976034402847&Y=49.9506874084473",
     "hasSampleRelationship": [
         {
-            "natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
+			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/sample",
             "relatedSample": "http://ressource.brgm-rec.fr/data/LinkToSomeDrillCoreDatabaseHere"
         },
 		{
+			"@id":"https://foo1",
+            "@type": "skos:Concept",            
 			"natureOfRelationship": "https://hydro.data.elfie.ogc/def/sampling-complex/system",
-            "relatedSample": "https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2"
+            "relatedSample": {
+							  "@id":"https://opengeospatial.github.io/ELFIE/FR/Piezometer/sgwi/00463X0036-H1.2",
+							  "@type": "Sample",
+							  "name": "PIEZOMETRE DE CARDONNETTE - 80"
+			}
 		}
-    ]
+  ]
 }

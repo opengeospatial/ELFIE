@@ -1,8 +1,10 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
     "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc12pp/uswb/031601130201",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus",
@@ -17,7 +19,7 @@
   "nexusRealization": [
     {
       "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/uswb/02465000",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation"
+      "@type": ["http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroLocation", "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature", "sosa:Sample"]
     }
   ],
   "geo": {
@@ -25,11 +27,8 @@
     "schema:latitude": 33.2065,
     "schema:longitude": -87.6005
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      -87.6005,
-      33.2065
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-87.60054 33.20647)"
   }
 }

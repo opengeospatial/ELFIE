@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "rdfs": "https://www.w3.org/TR/rdf-schema/",
+        "gsp": "http://www.opengeospatial.org/standards/geosparql/",
+        "sampling": "http://www.w3.org/ns/sosa/sampling/",
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "hasGeometry": "gsp:hasGeometry",
+        "isSampleOf": {
+            "@id": "sosa:isSampleOf",
+            "@type": "@id"
+        },
+        "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+        "hasSampleRelationship": "sampling:hasSampleRelationship",
+        "natureOfRelationship": {
+            "@id": "sampling:natureOfRelationship",
+            "@type": "@id"
+        },
+        "relatedSample": {
+            "@id": "sampling:relatedSample",
+            "@type": "@id"
+        }
+    }
+}

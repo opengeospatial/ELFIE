@@ -1,0 +1,6 @@
+{
+    "@context": [
+        "http://geojson.org/geojson-ld/geojson-context.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/elf-all.jsonld"
+    ]
+}

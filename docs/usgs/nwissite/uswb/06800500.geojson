@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "agency_cd": "USGS", "site_no": "06800500", "station_nm": "Elkhorn River at Waterloo, Nebr.", "site_tp_cd": "ST", "lat_va": 411736.0, "long_va": 961702.0, "coord_meth_cd": "M", "coord_acy_cd": "S", "coord_datum_cd": "NAD83", "dec_coord_datum_cd": "NAD83", "district_cd": "31", "state_cd": "31", "county_cd": "055", "country_cd": "US", "land_net_ds": "  SESWS03 T15N  R10E", "map_nm": null, "map_scale_fc": null, "alt_va": 1105.19, "alt_meth_cd": "X", "alt_acy_va": 0.1, "alt_datum_cd": "NAVD88", "huc_cd": "10220003", "basin_cd": null, "topo_cd": null, "instruments_cd": "NNNNYNNNNNNNNNNNNNNNNNNNNNNNNN", "construction_dt": null, "inventory_dt": null, "drain_area_va": 6900.0, "contrib_drain_area_va": 5870.0, "tz_cd": "CST", "local_time_fg": "Y", "reliability_cd": null, "gw_file_cd": "NNNNNNNN", "nat_aqfr_cd": null, "aqfr_cd": null, "aqfr_type_cd": null, "well_depth_va": null, "hole_depth_va": null, "depth_src_cd": null, "project_no": null }, "geometry": { "type": "Point", "coordinates": [ -96.2838889, 41.2933333 ] } }
+]
+}

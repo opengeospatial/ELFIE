@@ -1,0 +1,126 @@
+.nill {
+  opacity:0;
+}
+
+.showIt {
+  opacity:100;  
+}
+
+.viz-background-color {
+  fill:#f5f8ef
+}
+
+.interior-state {
+  fill:#b8bfac;
+  stroke:#f5f8ef;
+}
+.exterior-state {
+  fill:#b8bfac;
+  stroke:none;
+}
+
+.watermark {
+  cursor: pointer;
+  fill: #c0c0c0;
+  stroke: #bdbdbd;
+  stroke-width:0.5;
+}
+
+.site-dot {
+  stroke:#828282;
+  stroke-linecap:round;
+  stroke-width:.5;
+  opacity:0.7;
+}
+
+circle.emphasis {
+  stroke-width:4;
+  fill: #dddddd;
+  stroke:#DC143C;
+  stroke-opacity: 1;
+}
+
+.watershed-boundary {
+  stroke-width: .5;
+  fill-opacity: 0.2;
+  fill: #52688c;
+  stroke: #828282;
+}
+
+.nhdplus-flowline {
+  stroke-width: 1;
+  stroke: #0090ff
+}
+
+.precip-bar {
+  stroke-width: 1.07; 
+  stroke: none; 
+  stroke-linecap: butt; 
+  fill: #F8766D;
+}
+
+.unknown-bar {
+  stroke-width: 1.07; 
+  stroke: none; 
+  stroke-linecap: butt; 
+  fill: #666699;
+}
+
+.streamflow-bar {
+  stroke-width: 1.07;
+  stroke: none; 
+  stroke-linecap: butt; 
+  fill: #619CFF;
+}
+
+.evapotranspiration-bar {
+  stroke-width: 1.07;
+  stroke: none;
+  stroke-linecap: butt;
+  fill: #00BA38;
+}
+
+.axis-tick {
+  stroke-width: 2;
+  stroke: #4D4D4D;
+  stroke-linecap: butt;
+}
+
+.wb-plot-title {
+  fill: #4D4D4D;
+  font-family: Arial;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.axis-label {
+  font-size: 14px;
+  fill: #4D4D4D;
+  font-family: Arial;
+}
+
+.y-axis {
+  fill: #4D4D4D;
+  stroke: none;
+}
+
+.legend-text {
+  font-size: 14px;
+  fill: #4D4D4D;
+  font-family: Arial;
+}
+
+.axis-units-label {
+  font-size: 14px;
+  fill: #4D4D4D;
+  font-family: Arial;}
+
+.svg-text {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	cursor: default;
+}
+

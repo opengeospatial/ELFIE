@@ -1,21 +1,9 @@
 {
     "@context": {
         "gw": "http://opengeospatial/def/ontology/gwml2#",
-        "GW_HydrogeoUnit": {
-            "@id": "gw:GW_HydrogeoUnit",
-            "@type": "@id"
-        },
-        "GW_Aquifer": {
-            "@id": "gw:GW_Aquifer",
-            "@type": "@id"
-        },
-        "GW_Well": {
-            "@id": "gw:GW_Well",
-            "@type": "@id"
-        },
-        "GW_MonitoringSite": {
-            "@id": "gw:GW_MonitoringSite",
-            "@type": "@id"
-        }
+        "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
+        "GW_Aquifer": "gw:GW_Aquifer",
+        "GW_Well": "gw:GW_Well",
+        "GW_MonitoringSite": "gw:GW_MonitoringSite"
     }
 }

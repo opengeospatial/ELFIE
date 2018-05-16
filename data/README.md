@@ -25,6 +25,7 @@ dataset for  a reference.
 - If one to many relationships are needed, delimit lists for a single `rdf:predicate` with the string `_|_`. It's a hack, but it'll do with how infrequently we'll deal with one to manys.
 - There is some special functionality for HY/_Features. See documentation on `build_hyf_net` function [here](https://github.com/opengeospatial/ELFIE/blob/master/R/json_ld_functions.R).
 - For HY/_Features relations, use of a `/` as in `hyf:hydrometricNetwork/HY_HydrometricFeature` inserts nesting in the output json-ld as can be seen [here](https://opengeospatial.github.io/ELFIE/usgs/huc10/floodcast/1204010403.json).
+- To add a custom @id and @type to a given relation, use the convention `ns:relation@id` and `ns:relation@type` e.g. `sosa:hasResult@id` and `sosa:hasResult@type`
 
 For associations that link ELFIE features to eachother, express links as 
 `elfie/{{organization}}/{{featuretype id}}/{{usecase id}}/{{jsonkey id}}`. 

@@ -1,8 +1,7 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-    "http://geojson.org/geojson-ld/geojson-context.jsonld"
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
   ],
   "@id": "https://opengeospatial.github.io/ELFIE/nrcan/gwmon/cr/prj_27.53520",
   "@type": "http://opengeospatial/def/ontology/gwml2#GW_MonitoringSite",
@@ -18,11 +17,8 @@
     "schema:latitude": 45.0656,
     "schema:longitude": -72.8721
   },
-  "geometry": {
-    "@type": "Point",
-    "coordinates": [
-      -72.8721,
-      45.0656
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-72.87211 45.06563)"
   }
 }

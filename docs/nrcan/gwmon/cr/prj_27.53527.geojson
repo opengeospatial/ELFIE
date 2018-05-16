@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "prov": 7, "url": "http:\/\/gin.gw-info.net\/service\/gin\/sos2\/timeseries\/natres?ID=prj_27.53527", "identifier": "prj_27.53527" }, "geometry": { "type": "Point", "coordinates": [ -72.9291887, 45.1770525 ] } }
+]
+}

@@ -34,6 +34,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
+    "skos": "https://www.w3.org/TR/skos-reference/",
     "description": "schema:description",
     "geo": "schema:geo",
     "image": {
@@ -41,51 +42,69 @@
       "@type": "@id"
     },
     "name": "schema:name",
-    "sameAs": {
-      "@id": "schema:sameAs",
-      "@type": "@id"
-    },
+    "sameAs": "schema:sameAs",
+    "related": "skos:related",
     "rdfs": "https://www.w3.org/TR/rdf-schema/",
     "gsp": "http://www.opengeospatial.org/standards/geosparql/",
     "sampling": "http://www.w3.org/ns/sosa/sampling/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "hasGeometry": "gsp:hasGeometry",
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
-    "hasSampleRelationship": "sampling:hasSampleRelationship",
-    "natureOfRelationship": {
-      "@id": "sampling:natureOfRelationship",
-      "@type": "@id"
-    },
-    "relatedSample": {
-      "@id": "sampling:relatedSample",
-      "@type": "@id"
-    },
     "time": "http://www.w3.org/2006/time#",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "hasResult": "sosa:hasResult",
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
+    "madeBySensor": "sosa:madeBySensor",
+    "observedProperty": "sosa:observedProperty",
     "phenomenonTime": "sosa:phenomenonTime",
     "hasBeginning": "time:hasBeginning",
     "hasEnd": "time:hasEnd",
     "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    }
+    "usedProcedure": "sosa:usedProcedure",
+    "hasGeometry": "gsp:hasGeometry",
+    "isSampleOf": "sosa:isSampleOf",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSampleRelationship": "sampling:hasSampleRelationship",
+    "natureOfRelationship": "sampling:natureOfRelationship",
+    "relatedSample": "sampling:relatedSample",
+    "gw": "http://opengeospatial/def/ontology/gwml2#",
+    "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
+    "GW_Aquifer": "gw:GW_Aquifer",
+    "GW_Well": "gw:GW_Well",
+    "GW_MonitoringSite": "gw:GW_MonitoringSite",
+    "hyf": "http://opengeospatial/def/ontology/hyf",
+    "HY_Catchment": "hyf:HY_Catchment",
+    "HY_CatchmentDivide": "hyf:HY_CatchmentDivide",
+    "HY_HydrographicNetwork": "hyf:HY_HydrographicNetwork",
+    "HY_HydrometricNetwork": "hyf:HY_HydrometricNetwork",
+    "HY_HydroNexus": "hyf:HY_HydroNexus",
+    "HY_HydroLocation": "hyf:HY_HydroLocation",
+    "HY_HydrometricFeature": "hyf:HY_HydrometricFeature",
+    "HY_WaterBody": "hyf:HY_WaterBody",
+    "HY_Lake": "hyf:HY_Lake",
+    "HY_Impoundment": "hyf:HY_Impoundment",
+    "HY_River": "hyf:HY_River",
+    "HY_Channel": "hyf:HY_Channel",
+    "HY_FlowPath": "hyf:HY_FlowPath",
+    "HY_DistanceDescription": "hyf:HY_DistanceDescription",
+    "HY_HydroLocationType": "hyf:HY_HydroLocationType",
+    "HY_IndirectPosition": "hyf:HY_IndirectPosition",
+    "HY_DistanceFromReferent": "hyf:HY_DistanceFromReferent",
+    "upstreamWaterBody": "hyf:upstreamWaterBody",
+    "downstreamWaterBody": "hyf:downstreamWaterBody",
+    "lowerCatchment": "hyf:lowerCatchment",
+    "upperCatchment": "hyf:upperCatchment",
+    "realizedCatchment": "hyf:realizedCatchment",
+    "catchmentRealization": "hyf:catchmentRealization",
+    "contributingCatchment": "hyf:contributingCatchment",
+    "outflow": "hyf:outflow",
+    "realizedNexus": "hyf:realizedNexus",
+    "networkStation": "hyf:networkStation",
+    "referencedPosition": "hyf:referencedPosition",
+    "distanceExpression": "hyf:distanceExpression",
+    "distanceDescription": "hyf:distanceDescription",
+    "linearElement": "hyf:linearElement",
+    "hydrometricNetwork": "hyf:hydrometricNetwork",
+    "nexusRealization": "hyf:nexusRealization"
   }
 }
     </code></pre>
@@ -94,40 +113,41 @@
     <h3 class="ui inverted header">JSON-LD Document</h3>
     <pre><code id="code">
 {
-  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-sample.jsonld"],
-  "@id": "http://ressource.brgm-rec.fr/data/BoreholeView/BSS001REWW",
+  "@context": ["https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld", "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"],
+  "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
   "@type": "sosa:Sample",
   "name": "Forage BSS001REWW",
-  "hasGeometry": "POINT(46.1909541655103 5.18713262971692)",
-  "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
-  "isFeatureOfInterestOf": {
-    "@context": "https://opengeospatial.github.io/ELFIE/json-ld/elf-sosa-observation.jsonld",
-    "@graph": [
-      {
-        "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
-        "@type": "sosa:Observation",
-        "hasFeatureOfInterest": "http://ressource.brgm-rec.fr/data/Borehole/BSS001REWW",
-        "hasResult": [
-          {
-            "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
-            "@type": "gwml2:GW_GeologyLog"
-          }
-        ],
-        "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
-        "observedProperty": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
-        "phenomenonTime": {
-          "hasBeginning": "1974-11-30T00:00:00.000Z",
-          "hasEnd": "1974-11-30T00:00:00.000ZcouldBeInstant"
-        },
-        "resultTime": "1974-11-30T00:00:00.000Z",
-        "usedProcedure": {
-          "@id": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog",
-          "@type": "skos:Concept",
-          "name": "Driller log"
-        }
-      }
-    ]
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT(5.18713262971692 46.1909541655103)"
   },
+  "isSampleOf": "https://sweet.jpl.nasa.gov/2.3/realmEarthReference.owl#EarthGeosphere",
+  "isFeatureOfInterestOf": [
+    {
+      "@context": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+      "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+      "@type": "sosa:Observation",
+      "hasFeatureOfInterest": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
+      "hasResult": [
+        {
+          "@id": "http://ressource.brgm-rec.fr/obs/RawGeologicLogs/BSS001REWW",
+          "@type": "GW_GeologyLog"
+        }
+      ],
+      "madeBySensor": "http://ressource.brgm-rec.fr/data/Sensor/should_put_serial_number_here",
+      "observedProperty": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+      "phenomenonTime": {
+        "hasBeginning": "1974-11-30T00:00:00.000Z",
+        "hasEnd": "1974-11-30T00:00:00.000ZcouldBeInstant"
+      },
+      "resultTime": "1974-11-30T00:00:00.000Z",
+      "usedProcedure": {
+        "@id": "http://ressource.brgm-rec.fr/methode/DrillerGeologicLog",
+        "@type": "skos:Concept",
+        "name": "Driller log"
+      }
+    }
+  ],
   "image": "http://servicesgdm.brgm.fr/LogGDM/RGFLogServlet?HoleName=06512X0037",
   "hasSampleRelationship": [
     {
