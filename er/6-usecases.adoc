@@ -1,6 +1,7 @@
 [[Use_Cases]] == Use Case Summary
 
-=== Introduction ELFIE design work was directed by a number of use cases with
+=== Introduction
+ELFIE design work was directed by a number of use cases with
 extensive need for linked environmental data. These use cases are either
 hurdles to systems they maintain or would be nice additions to systems they
 rely on as users. Many of these use cases were described and used for
@@ -93,6 +94,23 @@ locations of vulnerable infrastructure * Hydrologic locations of monitoring
 stations and data * Meteorological monitoring stations and data * Elevation
 data * Water table / aquifer data * Rainfall forecast
 
+**Ground water level monitoring**:: Groundwater level monitoring networks are
+deployed on the field to monitor Aquifer status. A groundwater specialist needs
+to be able to traverse links from the Well to the piezomter deployed and,
+furthermore to the acquired observation (timeseries).
+
+*Relevant datasets*::: * Groundwater wells description * Piezometer description *
+*Groundwater levels at piezometer level
+
+**Surface-ground water networks interaction**:: Management of the pressures on
+natural resources requires properly linking domain features not only using
+surface/ground water interaction at a local level but also taking benefit of
+the broader river networks and aquifer systems connectivity.
+
+*Relevant datasets*::: * Borehole/Well * Piezometer (+ associated observations)*
+*Aquifer * AquiferSystem * Aquifer/River interaction * River Network * River
+*gage (+ associated observations)
+
 **Surface water impacted groundwater level forecasting**:: A groundwater
 extraction modeler needs information about surface water that replenishes
 groundwater so they can understand and forecast groundwater availability.
@@ -150,9 +168,47 @@ features in forecast information products.
 .Notional diagram of data in the floodcast use case.
 image::images/floodcast.png[width=800,align="center"]
 
-**Surface water impacted groundwater level forecasting** This use case tests
-the ability of established data models to link surfacewater and groundwater
-features and observations for applications like recharge estimation from
-rivers or water supply source selection. The implemented solution is a
-collection of rich linked data documents showing how features, observations,
-and related data can be encoded in JSON-LD.
+// Sylvain 20180516 -> Dave : did you demonstrate this one ? Because from BRGM
+// this one was not For the moment I commented it
+
+// **Surface water impacted groundwater level forecasting** This use case tests
+// the ability of established data models to link surfacewater and groundwater
+// features and observations for applications like recharge estimation from
+// rivers or water supply source selection. The implemented solution is a
+// collection of rich linked data documents showing how features, observations,
+// and related data can be encoded in JSON-LD.
+
+**Ground water level monitoring** This use case is meant to demonstrate how from
+a given Well URI any user (domain expert, machine) can then traverse to the
+monitoring strategy deployed and then access to the ground water level time
+series. Further than advocating the linked data approach it serves as a
+demonstration artifact on how typed information can trigger type-specific data
+viewer (here map and time series).
+
+[#img_groundwater_monitoring_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of data in the ground water level monitoring use case.
+image::images/FR_groundwater_monitoring.png[width=350,align="center"]
+
+Additional details about the ground water level monitoring use case
+implementation is available on the
+https://opengeospatial.github.io/ELFIE/demo/groundwater_monitoring[demonstration
+ELFIE web page.]
+
+
+**Surface-ground water networks interaction** This use case is meant to
+demonstrate how from a given Piezometer URI any user (domain expert, machine)
+can traverse to the ground water monitoring strategy (see Ground water level
+monitoring Use Case) but also to the associated surface water monitoring one.
+Provided each surface/groundwater features are propertly linked together (River
+network, Aquifer system) it is then feasible to acquire knowledge about a fully
+comprehensive water system. This use case can be seen as a flagship one to
+demonstrate the usefulness of linked data in the environnemental context.
+
+[#img_surface_groundwater_networks,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of data in the surface-ground water networks interaction use case.
+image::images/FR_surface_ground_surface_roundtrip.png[width=650,align="center"]
+
+Additional details about the surface-ground water networks interaction use case
+implementation is available on the
+https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction[demonstration
+ELFIE web page.]
