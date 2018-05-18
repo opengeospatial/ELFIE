@@ -607,57 +607,45 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#_term_name_synonym">3.2. term name|synonym</a></li>
 </ul>
 </li>
-<li><a href="#_abbreviated_terms">4. Abbreviated terms</a></li>
-<li><a href="#Overview">5. Overview</a>
+<li><a href="#_abbreviated_terms">4. Abbreviated terms</a>
 <ul class="sectlevel2">
-<li><a href="#_scope">5.1. Scope</a></li>
+<li><a href="#_ie_summary">4.1. IE Summary</a></li>
 </ul>
 </li>
-<li><a href="#Objectives">6. Objectives</a>
+<li><a href="#Objectives">5. Objectives</a>
 <ul class="sectlevel2">
-<li><a href="#_goals">6.1. Goals</a></li>
-<li><a href="#_assumptions">6.2. Assumptions</a></li>
-<li><a href="#_scope_2">6.3. Scope</a></li>
-<li><a href="#_experiment_summary">6.4. Experiment Summary</a></li>
+<li><a href="#_goals">5.1. Goals</a></li>
+<li><a href="#_assumptions">5.2. Assumptions</a></li>
+<li><a href="#_scope">5.3. Scope</a></li>
+<li><a href="#_experiment_summary">5.4. Experiment Summary</a></li>
+<li><a href="#_introduction">5.5. Introduction</a></li>
+<li><a href="#_use_cases_considered_in_design_process">5.6. Use Cases Considered in Design Process</a></li>
+<li><a href="#_use_cases_implemented_as_demonstrations_of_outcomes">5.7. Use Cases Implemented as Demonstrations of Outcomes</a></li>
+<li><a href="#_introduction_2">5.8. Introduction</a></li>
+<li><a href="#_ogc_web_standards">5.9. OGC Web Standards</a></li>
+<li><a href="#_ogc_domain_models">5.10. OGC Domain Models</a></li>
+<li><a href="#_w3c">5.11. W3C</a></li>
+<li><a href="#_json_ld">5.12. JSON-LD</a></li>
 </ul>
 </li>
-<li><a href="#Use_Cases">7. Use Case Summary</a>
+<li><a href="#Relations_Contexts">6. Relations and JSON-LD Contexts</a>
 <ul class="sectlevel2">
-<li><a href="#_introduction">7.1. Introduction</a></li>
-<li><a href="#_use_cases_considered_in_design_process">7.2. Use Cases Considered in Design Process</a></li>
-<li><a href="#_use_cases_implemented_as_demonstrations_of_outcomes">7.3. Use Cases Implemented as Demonstrations of Outcomes</a></li>
+<li><a href="#_introduction_3">6.1. Introduction</a></li>
+<li><a href="#_general_elfie_contexts">6.2. General ELFIE Contexts</a></li>
+<li><a href="#_domain_specific_contexts">6.3. Domain Specific Contexts</a></li>
 </ul>
 </li>
-<li><a href="#Standards_Best_Practices">8. Applicable Best Practices and Standards</a>
+<li><a href="#Experiment_Outcomes_Summary">7. Summary of experiment and analysis of outcomes</a>
 <ul class="sectlevel2">
-<li><a href="#_introduction_2">8.1. Introduction</a></li>
-<li><a href="#_ogc_web_standards">8.2. OGC Web Standards</a></li>
-<li><a href="#_ogc_domain_models">8.3. OGC Domain Models</a></li>
-<li><a href="#_w3c">8.4. W3C</a></li>
-<li><a href="#_json_ld">8.5. JSON-LD</a></li>
+<li><a href="#_future_work">7.1. Future Work</a></li>
 </ul>
 </li>
-<li><a href="#Relations_Contexts">9. Relations and JSON-LD Contexts</a>
+<li><a href="#Issues_Recommendations">8. Issues and Recommendations for Future Work.</a>
 <ul class="sectlevel2">
-<li><a href="#_introduction_3">9.1. Introduction</a></li>
-<li><a href="#_relations">9.2. Relations</a></li>
-<li><a href="#_contexts">9.3. Contexts</a></li>
-</ul>
-</li>
-<li><a href="#Experiment_Outcomes_Summary">10. Summary of experiment and analysis of outcomes</a>
-<ul class="sectlevel2">
-<li><a href="#_introduction_4">10.1. Introduction</a></li>
-<li><a href="#_what_worked">10.2. What Worked?</a></li>
-<li><a href="#_what_didn_t_work">10.3. What Didn&#8217;t Work?</a></li>
-<li><a href="#_additional_section">10.4. Additional Section?</a></li>
-</ul>
-</li>
-<li><a href="#Issues_Recommendations">11. Issues and Recommendations for Future Work.</a>
-<ul class="sectlevel2">
-<li><a href="#_introduction_5">11.1. Introduction</a></li>
-<li><a href="#_ogc_service_standards_and_implementation_issues">11.2. OGC Service Standards and Implementation issues.</a></li>
-<li><a href="#_domain_feature_model_issues">11.3. Domain Feature Model Issues</a></li>
-<li><a href="#_general_linked_data_issues">11.4. General linked data issues</a></li>
+<li><a href="#_introduction_4">8.1. Introduction</a></li>
+<li><a href="#_ogc_service_standards_and_implementation_issues">8.2. OGC Service Standards and Implementation issues.</a></li>
+<li><a href="#_domain_feature_model_issues">8.3. Domain Feature Model Issues</a></li>
+<li><a href="#_general_linked_data_issues">8.4. General linked data issues</a></li>
 </ul>
 </li>
 <li><a href="#_revision_history">Appendix A: Revision History</a></li>
@@ -809,72 +797,109 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><a id="Overview"></a> == Overview</p>
+</div>
+<div class="paragraph">
+<p>[NOTE] .Instructions ==== This 4-overview.adoc file helps the reader to better
+understand the various sections of the ER. It should be written like an extended
+table of contents.====</p>
+</div>
+<div class="paragraph">
+<p>The ELFIE is intended to test existing OGC and W3C standards with the goal of
+establishing a best practice for exposing links between and among environmental
+domain and sampling features. The IE is focused on two cross-domain use cases:
+1) encoding topological and domain specific relationships between features
+and 2) description of observations available for and linked to sampled domain
+features. While addressing these use cases, the IE will strive to address issues
+of encoding specific views of a rich linked data graph that would be passed
+between systems. These linked data graph views are expected to support
+architectures involving linked data catalogs and registries. For example, data
+providers can use the linked data graph views as a way to advertise their
+monitoring or domain features to catalogs or other applications that want to
+crawl and index available data. Similarly, integrated catalogs that index and
+construct links between features can use the views as a linked data response to
+search queries.</p>
+</div>
+<div class="paragraph">
+<p>Current OGC services, while flexible and capable, do not allow exposure of
+features in a resource oriented way and provide opaque interfaces to structured
+and/or inter-related content. The encodings demonstrated in ELFIE turn the
+normal OGC service pattern (GetCapabilities followed by introspection to
+understand contents) inside out by encoding associations between features as
+linked data predicates. This approach takes the form of subject-resource
+predicate-association object-resource where the resources may be OGC web service
+requests. This leverages the power of services such as WFS to provide feature
+instances, but expresses the structure of complex features or cross-service
+associated features explicitly. The scope of this work could have easily gotten
+out of control. To focus the work, the IE attempted to avoid issues not directly
+related to encoding linked data documents as would be passed from server to
+client via http.</p>
+</div>
+<div class="paragraph">
+<p>As described in detail later, the IE has specified a number of JSON-LD contexts
+that describe useful linked data graph views. JSON-LD documents that rely on
+these contexts could be delivered using the "_view" pattern as described by the
+Linked Data API or as the payload returned from a REST API endpoint. Using this
+approach, the recommendation takes advantage of the power and flexibility of
+Linked Open Data while providing just enough guidance to foster
+interoperability. By describing a partially resolve useful view of a linked data
+graph, it also allows resources that are important but not yet available as
+formal linked open data to be incorporated into a linked data system. This
+mechanism should provide a gateway to inclusion in and understanding the value
+of the Linked Open Data cloud.</p>
+</div>
+<div class="sect2">
+<h3 id="_ie_summary"><a class="anchor" href="#_ie_summary"></a>4.1. IE Summary</h3>
+<div class="paragraph">
+<p>The experiment conducted in ELFIE tested the assumption that broadly adopted
+web technologies for linked data could be applied to environmental linked
+feature use cases to satisfy the needs of a number of compelling use cases.
+The objectives section describes engineering design goals and details the
+assumptions and scope that were used to constrain the magnitude of the IE.
+Much of the IE was a thought experiment among participants where use cases
+were discussed and potential technologies and implementations were explored.
+The use cases section describes these use cases and a select set that were
+implemented to more thoroughly test and evolve the technologies that were
+selected during design discussions.</p>
+</div>
+<div class="paragraph">
+<p>The technologies tested in ELFIE were selected for their adoptability,
+commonality, and suitability to the needs of ELFIE use cases. New and
+thus uncommon domain feature models were applied with the chosen, more common,
+technologies. The standards section is a brief discussion of the technologies
+and standards tested in ELFIE. The technology chosen to provide a precise
+but not overly prescriptive description of the linked data graph views is
+the JSON-LD context. Details of the contexts defined in the ELFIE project are
+discussed in the contexts section.</p>
+</div>
+<div class="paragraph">
+<p>The outcomes of ELFIE provide guidance for providing views of environmental
+features. A simple view intended to be a preview, suitable for basic indexing
+is specified. The IE also experimented with views intended to provide
+topological as well as observational and domain feature model relationships.
+The preview view was largely successful, but there was no one satisfactory
+solution for expression of a preview geometry. The experimentation with domain
+feature models led to the conclusion that the underlying linked data
+technologies are mature enough, but progress is still needed on domain feature
+ontologies and publication of domain feature model data using them. These issues
+are discussed in more detail in the outcomes and recommendations sections.</p>
+</div>
+<div class="paragraph">
+<p>The ELFIE explored a number of interesting but tangential topics. Annex A
+is a summary of one important topic discussed; how to generate a feature
+ontology from a UML model. Annex B is a brief discussion of issues related
+to what the default response should be when resolving a URI for a
+non-information resource that may have multiple representations.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Overview"><a class="anchor" href="#Overview"></a>5. Overview</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="title">Instructions</div>
-<div class="paragraph">
-<p>This 4-overview.adoc file helps the reader to better understand the various sections of the ER. It should be written like an extended table of contents.</p>
-</div>
-<div class="paragraph">
-<p>The following clauses (clause-requirements, clause-solutions, clauses 6-n and Annexes A-D of this template are general recommendations for Engineering Reports. As ERs can be of many different types and purposes, these clauses should be tailored to meet the needs of the report. However in most cases, clause-requirements and clause-solutions should be used.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The ELFIE is intended to test existing OGC and W3C standards with the goal of establishing a best practice for exposing links between and among environmental domain and sampling features.
-The IE is focused on two cross-domain use cases: 1) exposing topological and domain feature model relationships between features and 2) description of sampling data available for and linked to sampled domain features
-While addressing these use cases, the IE will strive to address issues of encoding data as specific views of a linked data graph that would be passed between systems.
-These linked data graph views are expected to support archictures involving linked data catalogs and registries.
-For example, data providers can use the linked data graph views as a way to advertise their monitoring or domain features to catalogs or other applications that want to crawl and index available data.
-Similarly, integrated catalogs that index and construct links between features can use the views as a linked data response to search queries.</p>
-</div>
-<div class="paragraph">
-<p>Current OGC services, while flexible and capable, do not allow exposure of features in a resource oriented way and provide opaque interfaces to structured and/or inter-related content.
-The encodings demonstrated in ELFIE turn the normal OGC service pattern (GetCapabilities followed by introspection to understand contents) inside out by encoding associations between features as linked data predicates.
-This approach takes the form of subject-resource predicate-association object-resource where the resources may be OGC web service requests.
-This leverages the power of services such as WFS to provide feature instances, but expresses the structure of complex features or cross-service associated features explicitely.
-The scope of this work could have easily gotten out of control.
-To focus the work, the IE attempted to avoid issues not directly related to encoding linked data documents as would be passed from server to client via http.</p>
-</div>
-<div class="paragraph">
-<p>As described in detail later, the IE has specified two constrained views of a resolved linked data graph that are specified with modular SHaCL shapes.
-These specific graph views could be implemented using the "_view" pattern of the Linked Data API or as the payload returned from a REST API endpoint.
-Using this approach, the recommendation takes advantage of the power and flexibility of Linked Open Data while providing just enough constraint and guidance to encourage interoperability.
-By specifying a partially resolve graph view, it also allows resources that are not traversable as linked open data (for watever reason) to be incorporated into a linked data system.
-This mechanism should provide a gateway to inclusion in and understanding the value of the Linked Open Data cloud.</p>
-</div>
-<div class="sect2">
-<h3 id="_scope"><a class="anchor" href="#_scope"></a>5.1. Scope</h3>
-<div class="paragraph">
-<p>Out of scope:
-Identifier permanence / referential integrity and implementation patterns to address it.
-Arrangements around discovery of inbound and outbound links. Links are the responsibility of the data provider only.
-ELFIE will not seek to solve problems regarding network architecture for resolving links or systems design and governance for applications that store and retrieving links or concept relationships.</p>
-</div>
-<div class="paragraph">
-<p>“just enough” semantic annotation that allows us to traverse links to and among monitoring data and domain features.
-Note that inclusion of other properties is encouraged and implementors can ignore things that aren&#8217;t in the recommendation.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="Objectives"><a class="anchor" href="#Objectives"></a>6. Objectives</h2>
+<h2 id="Objectives"><a class="anchor" href="#Objectives"></a>5. Objectives</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_goals"><a class="anchor" href="#_goals"></a>6.1. Goals</h3>
+<h3 id="_goals"><a class="anchor" href="#_goals"></a>5.1. Goals</h3>
 <div class="paragraph">
 <p>Functional goals of ELFIE focused on the description and use of links
 between and among features described by domain-specific feature models and
@@ -904,7 +929,7 @@ implementation of compelling test use cases.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_assumptions"><a class="anchor" href="#_assumptions"></a>6.2. Assumptions</h3>
+<h3 id="_assumptions"><a class="anchor" href="#_assumptions"></a>5.2. Assumptions</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -933,7 +958,7 @@ doable.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_scope_2"><a class="anchor" href="#_scope_2"></a>6.3. Scope</h3>
+<h3 id="_scope"><a class="anchor" href="#_scope"></a>5.3. Scope</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -964,7 +989,7 @@ will not seek to analyze the issue thoroughly.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_experiment_summary"><a class="anchor" href="#_experiment_summary"></a>6.4. Experiment Summary</h3>
+<h3 id="_experiment_summary"><a class="anchor" href="#_experiment_summary"></a>5.4. Experiment Summary</h3>
 <div class="paragraph">
 <p>To test the assumptions described above, a number of example use cases
 (described below) were used to guide discussion and testing of potential
@@ -989,267 +1014,148 @@ line that need to be filled. Putting further work and needed new work
 aside, the IE failed to find significant or fundamental problems with the
 best practices and standards tested.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="Use_Cases"><a class="anchor" href="#Use_Cases"></a>7. Use Case Summary</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>7.1. Introduction</h3>
 <div class="paragraph">
-<p>ELFIE design work was directed by a number of use cases with extensive need
-for linked environmental data. These use cases are either hurdles to systems they maintain
-or would be nice additions to systems they rely on as users. Many of these
-use cases were described and used for discussion and vetting of ideas only,
-others were taken further with implementation of example encoded linked data
-documents and client code to visualize data involved in the use case.</p>
-</div>
-<div class="paragraph">
-<p>The full suite of use cases considered durring the design phase of the project
-are described below. Each use cases takes the form of a simple description of
-who or what system has an interest in what related datasets. Specific datasets are
-listed to clarify the scope and provide a starting point for technical design
-work. Use cases that were implemented as demonstrations of the design outcomes
-are described in more detail to include notional diagrams of how datasets
-involved link to each other, a thorough description of the use case, and an
-example application that speaks to and/or satisfies the needs of the use case.</p>
+<p><a id="Use_Cases"></a> == Use Case Summary</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_use_cases_considered_in_design_process"><a class="anchor" href="#_use_cases_considered_in_design_process"></a>7.2. Use Cases Considered in Design Process</h3>
+<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>5.5. Introduction</h3>
+<div class="paragraph">
+<p>ELFIE design work was directed by a number of use cases with
+extensive need for linked environmental data. These use cases are either
+hurdles to systems they maintain or would be nice additions to systems they
+rely on as users. Many of these use cases were described and used for
+discussion and vetting of ideas only, others were taken further with
+implementation of example encoded linked data documents and client code to
+visualize data involved in the use case.</p>
+</div>
+<div class="paragraph">
+<p>The full suite of use cases considered durring the design phase of the
+project are described below. Each use cases takes the form of a simple
+description of who or what system has an interest in what related datasets.
+Specific datasets are listed to clarify the scope and provide a starting
+point for technical design work. Use cases that were implemented as
+demonstrations of the design outcomes are described in more detail to include
+notional diagrams of how datasets involved link to each other, a thorough
+description of the use case, and an example application that speaks to and/or
+satisfies the needs of the use case.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_cases_considered_in_design_process"><a class="anchor" href="#_use_cases_considered_in_design_process"></a>5.6. Use Cases Considered in Design Process</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>River network linked data to address hydrologic drought and ecology</strong></dt>
 <dd>
-<p>Water consumers and decision makers are interested in potential ecological and economic impacts of additional water use.</p>
+<p>Water consumers and decision makers are interested in potential ecological
+and economic impacts of additional water use.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>River network</p>
-</li>
-<li>
-<p>Incremental catchments</p>
-</li>
-<li>
-<p>Low flow and temperature sensitive species distributions</p>
-</li>
-<li>
-<p>Monitoring locations</p>
-</li>
-<li>
-<p>Low flow and temperature forecasts</p>
-</li>
-<li>
-<p>Ecological stream classification</p>
-</li>
-<li>
-<p>Historical streamflow characteristics</p>
-</li>
-<li>
-<p>Flow and temperature regulations</p>
-</li>
-</ul>
-</div>
+<p>* River network * Incremental catchments * Low flow
+and temperature sensitive species distributions * Monitoring locations * Low
+flow and temperature forecasts * Ecological stream classification *
+Historical streamflow characteristics * Flow and temperature regulations</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Stream water quality and quantity monitoring</strong></dt>
 <dd>
-<p>Water consumers are interested in ambient stream characteristics and water quality impacts of water allocation decisions.</p>
+<p>Water consumers are
+interested in ambient stream characteristics and water quality impacts of
+water allocation decisions.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>River network</p>
-</li>
-<li>
-<p>Monitoring locations</p>
-</li>
-<li>
-<p>Water quality data</p>
-</li>
-<li>
-<p>Water quantity data</p>
-</li>
-<li>
-<p>Water allocation information</p>
-</li>
-<li>
-<p>Diversions and discharges</p>
-</li>
-</ul>
-</div>
+<p>* River network * Monitoring locations * Water quality
+data * Water quantity data * Water allocation information * Diversions and
+discharges</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Flood risks and impacts</strong></dt>
 <dd>
-<p>A person in a flood-impacted area needs information about the risks to them for a forecast or ongoing flood event.</p>
+<p>A person in a flood-impacted area needs
+information about the risks to them for a forecast or ongoing flood event.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>River network</p>
-</li>
-<li>
-<p>Stream flow and stage forecasts</p>
-</li>
-<li>
-<p>Topography</p>
-</li>
-<li>
-<p>Flood depth and extent data for event</p>
-</li>
-<li>
-<p>Flood plain map(s)</p>
-</li>
-<li>
-<p>Flood control assets</p>
-</li>
-<li>
-<p>Impacted transportation assets</p>
-</li>
-<li>
-<p>At risk critical infrastructure</p>
-</li>
-</ul>
-</div>
+<p>* River network * Stream flow and stage forecasts *
+Topography * Flood depth and extent data for event * Flood plain map(s) *
+Flood control assets * Impacted transportation assets * At risk critical
+infrastructure</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Water quality impacts monitoring of mining activities</strong></dt>
 <dd>
-<p>A water quality analyst needs to know what data is available to assess baseline and impacted conditions of a waterbody impacted by mine-related runoff.</p>
+<p>A water quality
+analyst needs to know what data is available to assess baseline and impacted
+conditions of a waterbody impacted by mine-related runoff.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>River network</p>
-</li>
-<li>
-<p>On network waterbodies</p>
-</li>
-<li>
-<p>Realtime water quality monitoring locations and data</p>
-</li>
-<li>
-<p>Water quality sampling locations and data</p>
-</li>
-<li>
-<p>Mine locations</p>
-</li>
-<li>
-<p>Snowpack and runoff</p>
-</li>
-<li>
-<p>River flow monitoring locations and data</p>
-</li>
-</ul>
-</div>
+<p>* River network * On network waterbodies * Realtime
+water quality monitoring locations and data * Water quality sampling
+locations and data * Mine locations * Snowpack and runoff * River flow
+monitoring locations and data</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Cross border monitoring index</strong></dt>
 <dd>
-<p>An analyst working in a cross border watershed or aquifer needs information characterizing their study region from another country of jurisdiction.</p>
+<p>An analyst working in a cross border
+watershed or aquifer needs information characterizing their study region from
+another country of jurisdiction.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>River network data</p>
-</li>
-<li>
-<p>Catchment data</p>
-</li>
-<li>
-<p>Aquifer data</p>
-</li>
-<li>
-<p>Streamflow monitoring locations and data</p>
-</li>
-<li>
-<p>Aquifer monitoring wells and data</p>
-</li>
-</ul>
-</div>
+<p>* River network data * Catchment data * Aquifer data *
+Streamflow monitoring locations and data * Aquifer monitoring wells and data</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Water budget summary</strong></dt>
 <dd>
-<p>A person interested in a basic summary of the water budget for a given watershed needs information about the watershed and its water budget data.</p>
+<p>A person interested in a basic summary of the
+water budget for a given watershed needs information about the watershed and
+its water budget data.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Watershed boundary</p>
-</li>
-<li>
-<p>Watershed outlet location</p>
-</li>
-<li>
-<p>Water budget component data</p>
-</li>
-<li>
-<p>Links to additional information</p>
-</li>
-</ul>
-</div>
+<p>* Watershed boundary * Watershed outlet location *
+Water budget component data * Links to additional information</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Watershed data index</strong></dt>
 <dd>
-<p>A person with a stake in the conditions of a given watershed needs an index of all water-quality related information about the watershed.</p>
+<p>A person with a stake in the conditions of a given
+watershed needs an index of all water-quality related information about the
+watershed.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
+<p>* Impaired (e.g. polluted or degraded) waters *
+Drinking water quality violation reports * Facilities with discharge permits</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Impaired (e.g. polluted or degraded) waters</p>
-</li>
-<li>
-<p>Drinking water quality violation reports</p>
-</li>
-<li>
-<p>Facilities with discharge permits</p>
-</li>
-<li>
-<p>Water quality infrastructure investments</p>
-</li>
-<li>
-<p>Watershed characteristics</p>
-</li>
-<li>
-<p>Modeled data such as nutrient concentrations</p>
+<p>Water quality infrastructure investments * Watershed characteristics *
+Modeled data such as nutrient concentrations</p>
 </li>
 </ul>
 </div>
@@ -1259,93 +1165,81 @@ example application that speaks to and/or satisfies the needs of the use case.</
 </dd>
 <dt class="hdlist1"><strong>Flood monitoring at bridges</strong></dt>
 <dd>
-<p>A jurisdiction with significant infrastructure near or over waterways needs a system to link waterways, bridges, and various observations for situational awareness and model calibration/validation.</p>
+<p>A jurisdiction with significant
+infrastructure near or over waterways needs a system to link waterways,
+bridges, and various observations for situational awareness and model
+calibration/validation.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>River network</p>
-</li>
-<li>
-<p>Bridge inventory</p>
-</li>
-<li>
-<p>Monitoring stations and data</p>
-</li>
-<li>
-<p>Locations where model results are available</p>
-</li>
-</ul>
-</div>
+<p>* River network * Bridge inventory * Monitoring
+stations and data * Locations where model results are available</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Flood Impact Study</strong></dt>
 <dd>
-<p>A hydrologist conducting a flood impact study needs to collect relevant information from various agencies.</p>
+<p>A hydrologist conducting a flood impact study needs
+to collect relevant information from various agencies.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>River network</p>
-</li>
-<li>
-<p>Watershed boundaries</p>
-</li>
-<li>
-<p>Hydrologic locations of vulnerable infrastructure</p>
-</li>
-<li>
-<p>Hydrologic locations of monitoring stations and data</p>
-</li>
-<li>
-<p>Meteorological monitoring stations and data</p>
-</li>
-<li>
-<p>Elevation data</p>
-</li>
-<li>
-<p>Water table / aquifer data</p>
-</li>
-<li>
-<p>Rainfall forecast</p>
-</li>
-</ul>
+<p>* River network * Watershed boundaries * Hydrologic
+locations of vulnerable infrastructure * Hydrologic locations of monitoring
+stations and data * Meteorological monitoring stations and data * Elevation
+data * Water table / aquifer data * Rainfall forecast</p>
+</dd>
+</dl>
 </div>
+</dd>
+<dt class="hdlist1"><strong>Ground water level monitoring</strong></dt>
+<dd>
+<p>Groundwater level monitoring networks are
+deployed on the field to monitor Aquifer status. A groundwater specialist needs
+to be able to traverse links from the Well to the piezomter deployed and,
+furthermore to the acquired observation (timeseries).</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<p>* Groundwater wells description * Piezometer description *
+*Groundwater levels at piezometer level</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Surface-ground water networks interaction</strong></dt>
+<dd>
+<p>Management of the pressures on
+natural resources requires properly linking domain features not only using
+surface/ground water interaction at a local level but also taking benefit of
+the broader river networks and aquifer systems connectivity.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Relevant datasets</strong></dt>
+<dd>
+<p>* Borehole/Well * Piezometer (+ associated observations)*
+*Aquifer * AquiferSystem * Aquifer/River interaction * River Network * River
+*gage (+ associated observations)</p>
 </dd>
 </dl>
 </div>
 </dd>
 <dt class="hdlist1"><strong>Surface water impacted groundwater level forecasting</strong></dt>
 <dd>
-<p>A groundwater extraction modeler needs information about surface water that replenishes groundwater so they can understand and forecast groundwater availability.</p>
+<p>A groundwater
+extraction modeler needs information about surface water that replenishes
+groundwater so they can understand and forecast groundwater availability.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>Relevant datasets</strong></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Groundwater wells and level data</p>
-</li>
-<li>
-<p>Surface water monitoring sites and flow data</p>
-</li>
-<li>
-<p>Meteorological monitoring sites and observations</p>
-</li>
-<li>
-<p>Output predictions at groundwater prediction wells</p>
-</li>
-</ul>
-</div>
+<p>* Groundwater wells and level data * Surface water
+monitoring sites and flow data * Meteorological monitoring sites and
+observations * Output predictions at groundwater prediction wells</p>
 </dd>
 </dl>
 </div>
@@ -1354,144 +1248,356 @@ example application that speaks to and/or satisfies the needs of the use case.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="_use_cases_implemented_as_demonstrations_of_outcomes"><a class="anchor" href="#_use_cases_implemented_as_demonstrations_of_outcomes"></a>7.3. Use Cases Implemented as Demonstrations of Outcomes</h3>
+<h3 id="_use_cases_implemented_as_demonstrations_of_outcomes"><a class="anchor" href="#_use_cases_implemented_as_demonstrations_of_outcomes"></a>5.7. Use Cases Implemented as Demonstrations of Outcomes</h3>
 <div class="paragraph">
-<p><strong>Water budget summary</strong>
-This use case provides a person interested in a basic summary of the water budget for a given watershed information about a collection of watersheds and their water budget data. It links together various hydrographic representations of each watershed as well as observational water budget data and related web resources.</p>
+<p><strong>Water budget summary</strong> This use case provides a person interested in a
+basic summary of the water budget for a given watershed information about a
+collection of watersheds and their water budget data. It links together
+various hydrographic representations of each watershed as well as
+observational water budget data and related web resources.</p>
 </div>
 <div class="paragraph">
-<p>As shown in the <a href="#img_uswb_data">Figure 1</a>, the watershed feature is linked to various representations of it. This follows the HY_Features concept of a catchment as an <em>unrealized</em> feature that is related to various realization features, there is no canonical representation of the watershed its self.</p>
+<p>As shown in the <a href="#img_uswb_data">[img_uswb_data]</a>, the watershed feature is linked to various
+representations of it. This follows the HY_Features concept of a catchment as
+an <em>unrealized</em> feature that is related to various realization features,
+there is no canonical representation of the watershed its self.</p>
 </div>
-<div id="img_uswb_data" class="imageblock" style="text-align: center">
+<div class="paragraph">
+<p>[#img_uswb_data,reftext='Figure 1'] .Notional
+diagram of relationships between data in the water budget summary use case.
+image::images/uswb.png[width=800,align="center"]</p>
+</div>
+<div class="paragraph">
+<p>Additional details about the water budget summary use case implementation is
+available on the
+<a href="https://opengeospatial.github.io/ELFIE/demo/uswb">demonstration ELFIE web
+page.</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Watershed data index</strong> This use case is meant to demonstrate the use of
+HY_Features to link a catchment (12 digit hydrologic unit code (HUC12)
+watershed in this case) to the data representing it as well as the monitoring
+network associated with it. It serves as a general demonstration that could
+be used for a wide array of linked watershed information use cases.</p>
+</div>
+<div id="img_huc12obs_data" class="paragraph">
+<div class="title">Notional diagram of relationships between data in the watershed data index</div>
+<p>use case. image::images/uswb.png[width=800,align="center"]</p>
+</div>
+<div class="paragraph">
+<p>Additional details about the water budget summary use case implementation is
+available on the
+<a href="https://opengeospatial.github.io/ELFIE/demo/huc12obs">demonstration ELFIE web
+page.</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Flood risks and impacts</strong> This use case provides a decision maker needing
+to respond to flooded transportation infrastructure the information they need
+to understand the impacted assets and flooded roads for a forecast flood.
+Under this use case, a flood forecasting system would be able to discover
+vulnerable infrastructure and assets published by local juridictions as
+linked data and publish flood forecasts that include potentially impacted
+features in forecast information products.</p>
+</div>
+<div id="img_floodcast_data" class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/uswb.png" alt="uswb" width="800">
+<img src="images/floodcast.png" alt="floodcast" width="800">
 </div>
-<div class="title">Figure 1. Notional diagram of relationships between data in the water budget summary use case.</div>
-</div>
-<div class="paragraph">
-<p>Additional details about the water budget summary use case implementation is available on the <a href="https://opengeospatial.github.io/ELFIE/demo/uswb">demonstration ELFIE web page.</a></p>
+<div class="title">Figure 1. Notional diagram of data in the floodcast use case.</div>
 </div>
 <div class="paragraph">
-<p><strong>Watershed data index</strong>
-This use case is meant to demonstrate the use of HY_Features to link a catchment (12 digit hydrologic unit code (HUC12) watershed in this case) to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.</p>
+<p><strong>Ground water level monitoring</strong> This use case is meant to demonstrate how from
+a given Well URI any user (domain expert, machine) can then traverse to the
+monitoring strategy deployed and then access to the ground water level time
+series. Further than advocating the linked data approach it serves as a
+demonstration artifact on how typed information can trigger type-specific data
+viewer (here map and time series).</p>
 </div>
-<div id="img_huc12obs_data" class="imageblock" style="text-align: center">
+<div id="img_groundwater_monitoring_data" class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/uswb.png" alt="uswb" width="800">
+<img src="images/FR_groundwater_monitoring.png" alt="FR groundwater monitoring" width="350">
 </div>
-<div class="title">Figure 2. Notional diagram of relationships between data in the watershed data index use case.</div>
-</div>
-<div class="paragraph">
-<p>Additional details about the water budget summary use case implementation is available on the <a href="https://opengeospatial.github.io/ELFIE/demo/huc12obs">demonstration ELFIE web page.</a></p>
+<div class="title">Figure 2. Notional diagram of data in the ground water level monitoring use case.</div>
 </div>
 <div class="paragraph">
-<p><strong>Flood risks and impacts</strong></p>
+<p>Additional details about the ground water level monitoring use case
+implementation is available on the
+<a href="https://opengeospatial.github.io/ELFIE/demo/groundwater_monitoring">demonstration
+ELFIE web page.</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Surface water impacted groundwater level forecasting</strong></p>
+<p><strong>Surface-ground water networks interaction</strong> This use case is meant to
+demonstrate how from a given Piezometer URI any user (domain expert, machine)
+can traverse to the ground water monitoring strategy (see Ground water level
+monitoring Use Case) but also to the associated surface water monitoring one.
+Provided each surface/groundwater features are propertly linked together (River
+network, Aquifer system) it is then feasible to acquire knowledge about a fully
+comprehensive water system. This use case can be seen as a flagship one to
+demonstrate the usefulness of linked data in the environnemental context.</p>
+</div>
+<div id="img_surface_groundwater_networks" class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/FR_surface_ground_surface_roundtrip.png" alt="FR surface ground surface roundtrip" width="650">
+</div>
+<div class="title">Figure 3. Notional diagram of data in the surface-ground water networks interaction use case.</div>
+</div>
+<div class="paragraph">
+<p>Additional details about the surface-ground water networks interaction use case
+implementation is available on the
+<a href="https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction">demonstration
+ELFIE web page.</a></p>
+</div>
+<div class="paragraph">
+<p><a id="Standards_Best_Practices"></a> == Applicable Best Practices and Standards</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_introduction_2"><a class="anchor" href="#_introduction_2"></a>5.8. Introduction</h3>
+<div class="paragraph">
+<p>The approach taken in ELFIE was limited in contrast to recent IEs concerning
+environmental information models. ELFIE focused on linked data documents that
+contain collections of linked features and related observations. With regard
+to the OGC Reference Model, the IE seeks to understand how features
+(geospatial information) can be linked to each other in fully dereferenced
+documents or by reference through use of HTTP URIs. ELFIE did not seek to
+solve problems regarding network architecture for resolving links or systems
+design and governance for applications that store and retrieving links or
+concept relationships.</p>
+</div>
+<div class="paragraph">
+<p>Given this, ELFIE sought to define a common approach to encoding links
+between and among environmental domain features that would allow cross-domain
+and cross-system sharing and interoperability of such linked information. To
+do this, ELFIE worked with existing and pending OGC standards for encoding of
+environmental observation data in an integrated dataset of features. Such OGC
+data models were then linked together according to W3C and other Linked Data
+best practices.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_web_standards"><a class="anchor" href="#_ogc_web_standards"></a>5.9. OGC Web Standards</h3>
+<div class="paragraph">
+<p>OGC Web Service standards for features and observations (WFS and SOS
+respectively) were used to construct HTTP URLs for use in ELFIE linked data
+documents as much as possible. While the WFS and SOS APIs present some
+challenges in creating URLs for use in linked data, the APIs do offer
+sufficient HTTP GET functionality to embed useful content in linked data with
+a great degree of flexibility. Issues related to URL structure and a given
+API-call&#8217;s relation to a canonical non-information resource URI were
+encountered but deferred for future investigations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_domain_models"><a class="anchor" href="#_ogc_domain_models"></a>5.10. OGC Domain Models</h3>
+<div class="paragraph">
+<p>OGC data models were used extensively in ELFIE. The Observations and
+Measurements (O&amp;M) conceptual model provided a high level organizing
+framework for most ELFIE documents. The OGC-W3C Spatial Data On the Web
+Working Group implementation of O&amp;M (Sensor, Observation, Sample, and
+Actuator (SOSA)) was used directly because of its applicability to the linked
+data technology pursued in ELFIE. Geosparql ontology was also used directly for
+representing geometries and spatial relations between features.</p>
+</div>
+<div class="paragraph">
+<p>Domain specific data models such as WaterML2 Part 3: Surface Hydrologic
+Features and WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) were also
+used for feature types and relations in ELFIE linked data documents. A major
+limitation for use of these data models in ELFIE was a lack of published
+taxonomies and ontologies of their feature types and relations;
+experimental content was generated for ELFIE and formalization of such
+taxonomies and ontologies was left for future work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_w3c"><a class="anchor" href="#_w3c"></a>5.11. W3C</h3>
+<div class="paragraph">
+<p>W3C best practices for data on the web, spatial data in the web, and linked
+data were used to guide decisions related to ELFIE linked data documents.
+Several members of the ELFIE project team were involved in development of
+these best practices and represented them throughout the project. Given this,
+the ELFIE was an opportunity to apply these best practices in a practical
+engineering process, using them together and attempting to apply them to OGC
+web service and information models.</p>
+</div>
+<div class="paragraph">
+<p>This was largely successful and no major issues were encountered related to
+the best practices themselves. However, they were not achieved fully due to
+realities of the internet, organization&#8217;s operational constraints, and
+limitations of current APIs and data models. In other words, a project
+seeking to apply OGC standards on their current infrastructure within the
+suggested W3C best practices would find it very difficult or expensive to
+achieve them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_json_ld"><a class="anchor" href="#_json_ld"></a>5.12. JSON-LD</h3>
+<div class="paragraph">
+<p>Given ELFIE goals related to adoptability of outcomes and
+applicability to mass market search, JSON-LD was used as the encoding for
+ELFIE documents. For a better search accessibility, Schema.org ontology was used
+to provide basic description for the features. While there were other potential
+options that could be used,
+the ease of use (parsing and serialization) of JSON-LD across practically
+all programming languages made it the clear choice for use in ELFIE. As
+described below, some technical limitations inherent to RDF and thus JSON-LD
+were encountered while attempting to encode preview geometries, but all basic
+requirements of ELFIE were satisfied by the JSON-LD encoding.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Standards_Best_Practices"><a class="anchor" href="#Standards_Best_Practices"></a>8. Applicable Best Practices and Standards</h2>
+<h2 id="Relations_Contexts"><a class="anchor" href="#Relations_Contexts"></a>6. Relations and JSON-LD Contexts</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction_2"><a class="anchor" href="#_introduction_2"></a>8.1. Introduction</h3>
+<h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>6.1. Introduction</h3>
 <div class="paragraph">
-<p><strong>Derive from activity plan and scope notes</strong></p>
+<p>An important goal of the ELFIE was adoptability by web developers and
+compatibility with technologies that are ubiquitous on the internet. Given these
+goals, the IE team started to think in terms of "views" of the linked data graph
+describing a given environmental feature or observation. Two conceptual views,
+preview and network, were the primary focus on ELFIE. Preview is meant to be
+a very simple summary of a feature including type, name, and geometry. Network
+is meant to be a summary of relevant first-neighbor features in a topological
+network. These two views form the core interoperable set of ELFIE "views" but
+lack domain specific relations such as observational relations and hydrologic
+topology.</p>
+</div>
+<div class="paragraph">
+<p>Initial ELFIE discussions of the graph "view" concept used the
+<a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language SHACL</a> technology as the
+logical implementation. Further evaluation and consideration of ELFIE goals
+around adoptability and ubiquity, the
+<a href="https://www.w3.org/TR/json-ld/#the-context">JSON-LD context</a> was chosen as the
+most appropriate technical solution to express the graph "views". ELFIE contexts
+are meant to be precise descriptions of what the IE found to be the most
+appropriate linked data properties (attributes and relations) and types. They
+are not intended to be used as a schema to specify or validate the contents of a
+given document. However, they could provide a useful set of aliases for the only
+types and properties that could be parsed and interpreted by the client. From a
+practical perspective, the contexts provide clear guidelines for what properties
+and types to use while not being overly prescriptive, limiting, or difficult to
+use in a typical web development workflow.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_web_standards"><a class="anchor" href="#_ogc_web_standards"></a>8.2. OGC Web Standards</h3>
+<h3 id="_general_elfie_contexts"><a class="anchor" href="#_general_elfie_contexts"></a>6.2. General ELFIE Contexts</h3>
 <div class="paragraph">
-<p><strong>Re: WFS, SOS, and other applicable feature and observations web (service) standards.</strong></p>
+<p>The ELFIE preview graph "view", is described by the
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld">elf.jsonld</a> context.
+It uses schema.org[<a href="http://schema.org/" class="bare">http://schema.org/</a>], skos[<a href="https://www.w3.org/TR/skos-reference/" class="bare">https://www.w3.org/TR/skos-reference/</a>],
+and geosparql[<a href="http://www.opengeospatial.org/standards/geosparql" class="bare">http://www.opengeospatial.org/standards/geosparql</a>] properties and types.
+Schema.org is used whenever possible to maintain compatibility with search
+engines, uses skos for a lose "related" relationship, and geosparql for precise
+specification of a geometric preview. The geometric preview of a feature was an
+area of contention for the IE.</p>
+</div>
+<div class="paragraph">
+<p>GeoJSON-LD[<a href="http://geojson.org/geojson-ld/" class="bare">http://geojson.org/geojson-ld/</a>] was
+seen as a logical solution, but as described in the outstanding issues for
+GeoJSON-LD[<a href="http://geojson.org/geojson-ld/" class="bare">http://geojson.org/geojson-ld/</a>], nested GeoJSON coordinate arrays
+are not supported by JSON-LD parsers. Additionally, the schema.org geometry
+schema was seen as bring under specified in that among other minor reasons,
+it does not provide a default coordinate reference system or a mechanism to
+declare one. For this reason, the geosparql well known text format was included
+providing a precise and JSON-LD compatible geometry format. However, if some
+logical assumptions are made for the use of schema.org geometry, it can be used
+to satisfy the basic geometry preview use case with significantly lower technical
+overhead than support for the full well known text standard. Further work should
+look more closely at this issue in an attempt to reconcile and or provide guidance.</p>
+</div>
+<div class="paragraph">
+<p>The ELFIE network graph "view", is described by the
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld">elf-network.jsonld</a>
+context. It uses
+geosparql[<a href="http://www.opengeospatial.org/standards/geosparql" class="bare">http://www.opengeospatial.org/standards/geosparql</a>] and
+OWL-time[<a href="https://www.w3.org/TR/owl-time/" class="bare">https://www.w3.org/TR/owl-time/</a>] relations. Its emphasis is on simple
+topological relationships such as touches, intersects, before, etc. A network
+context would logically include additional domain specific topological relations
+derived from other contexts, but they are not included in the general network
+context.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_domain_models"><a class="anchor" href="#_ogc_domain_models"></a>8.3. OGC Domain Models</h3>
+<h3 id="_domain_specific_contexts"><a class="anchor" href="#_domain_specific_contexts"></a>6.3. Domain Specific Contexts</h3>
 <div class="paragraph">
-<p><strong>Re: O&amp;M, GWML2, HY_Features, etc.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_w3c"><a class="anchor" href="#_w3c"></a>8.4. W3C</h3>
-<div class="paragraph">
-<p><strong>Data on the web and spatial data on the web</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_json_ld"><a class="anchor" href="#_json_ld"></a>8.5. JSON-LD</h3>
-<div class="paragraph">
-<p><strong>Schema.org compatibility and applicability to data models and linking standards</strong></p>
+<p>Two extended general contexts and three domain specific contexts were created
+for testing in ELFIE. The extended general contexts have content from the
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld">timeseriesML</a> and
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld">SOSA</a> data models.
+The domain specific contexts have content from
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld">HY_Features</a>,
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld">GWML2</a>, and the
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld">floodcast</a>
+use case. All of these contexts, except SOSA, were created as part of the
+ELFIE project without formal ontologies to back them. Work on these ontologies
+should follow ELFIE.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Relations_Contexts"><a class="anchor" href="#Relations_Contexts"></a>9. Relations and JSON-LD Contexts</h2>
+<h2 id="Experiment_Outcomes_Summary"><a class="anchor" href="#Experiment_Outcomes_Summary"></a>7. Summary of experiment and analysis of outcomes</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>9.1. Introduction</h3>
 <div class="paragraph">
-<p><strong>Overview of and scope of contexts and relations used.</strong>
-<strong>Rationale and motivation for selection of core and extended relations</strong></p>
+<p>As described previously, The ELFIE was intended to test existing OGC and W3C
+standards with the goal of establishing a best practice for exposing links
+between and among environmental domain and sampling features. The project
+sought to test existing solutions to linking data on the web with a "just
+enough" semantic annotation approach that would be approachable by developers
+and adoptable existing systems. Many use cases were discussed and a few of them
+were selected for experimental implementation.</p>
 </div>
+<div class="paragraph">
+<p>All experimental implementations are summarized on the
+<a href="https://opengeospatial.github.io/ELFIE/">ELFIE demo pages.</a> The collection of
+experiments show that existing practices for encoding linked data can be used
+to satisfy the important environmental linked features use cases considered by
+ELFIE. In cases where features and related information were already published
+as linked data or had well established web services, these data and/or service-
+generated representations were easy to incorporate and use. Many of the core
+linked data relations used for search engine optimization were found to be
+suited to typical environmental linked feature use cases.</p>
 </div>
 <div class="sect2">
-<h3 id="_relations"><a class="anchor" href="#_relations"></a>9.2. Relations</h3>
+<h3 id="_future_work"><a class="anchor" href="#_future_work"></a>7.1. Future Work</h3>
 <div class="paragraph">
-<p><strong>Broken down by source&#8201;&#8212;&#8201;schema.org, geojson-ld, sosa, owl, hy_features, gwml2, &#8230;&#8203;</strong></p>
+<p>The experiments exposed several issues with existing and new technologies
+that need to be addressed to realize the full potential of the core linked
+encoding technologies tested. The issue of representation of a preview geometry
+for a feature should be addressed and seems to be a tractable problem that could
+lead to significant benefits. Another tractable and important issue is creation
+of ontologies for domain features. As of the completion of ELFIE, this work was
+already being undertaken for existing domain models where a UML to OWL conversion
+is possible. Other domain models, such as flood impact features, need to be
+created and or vetted by a community.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_contexts"><a class="anchor" href="#_contexts"></a>9.3. Contexts</h3>
 <div class="paragraph">
-<p><strong>Describe each context and its utility</strong></p>
+<p>There were also several issues highlighted by the ELFIE that were deemed out of
+scope and purposefully left for future efforts. The foundational issue in this
+category is the "landing page" or "default representation" problem. That is,
+how should we handle the case where a dereferencable URI meant to identify a
+real world entity with multiple digital representations. There are many related
+issues largely related to the network architecture and expected behavior when
+dereferencing URIs. These were generally out of scope for ELFIE but need to
+be addressed to achieve interoperability and include: URI structure,
+use of non-information URIs with WFS and other services, strategies for managing
+collections of potentially temporary linked data among many data providers.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Experiment_Outcomes_Summary"><a class="anchor" href="#Experiment_Outcomes_Summary"></a>10. Summary of experiment and analysis of outcomes</h2>
+<h2 id="Issues_Recommendations"><a class="anchor" href="#Issues_Recommendations"></a>8. Issues and Recommendations for Future Work.</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction_4"><a class="anchor" href="#_introduction_4"></a>10.1. Introduction</h3>
-<div class="paragraph">
-<p><strong>Recap goals and experiment design&#8201;&#8212;&#8201;what were our expectations that were being tested?</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_what_worked"><a class="anchor" href="#_what_worked"></a>10.2. What Worked?</h3>
-<div class="paragraph">
-<p><strong>Describe standards and best practices that worked as expected.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_what_didn_t_work"><a class="anchor" href="#_what_didn_t_work"></a>10.3. What Didn&#8217;t Work?</h3>
-<div class="paragraph">
-<p><strong>Describe instances where standards and best practices that didn&#8217;t meet our expectations.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_additional_section"><a class="anchor" href="#_additional_section"></a>10.4. Additional Section?</h3>
-<div class="paragraph">
-<p><strong>Is more needed here? Maybe what didn&#8217;t we test that we hoped to?</strong></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="Issues_Recommendations"><a class="anchor" href="#Issues_Recommendations"></a>11. Issues and Recommendations for Future Work.</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_introduction_5"><a class="anchor" href="#_introduction_5"></a>11.1. Introduction</h3>
+<h3 id="_introduction_4"><a class="anchor" href="#_introduction_4"></a>8.1. Introduction</h3>
 <div class="paragraph">
 <p><strong>High level summary of the kinds of issues we found and what future work the IE implies</strong></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_service_standards_and_implementation_issues"><a class="anchor" href="#_ogc_service_standards_and_implementation_issues"></a>11.2. OGC Service Standards and Implementation issues.</h3>
+<h3 id="_ogc_service_standards_and_implementation_issues"><a class="anchor" href="#_ogc_service_standards_and_implementation_issues"></a>8.2. OGC Service Standards and Implementation issues.</h3>
 <div class="paragraph">
 <p><strong>WFS issues and recs for WFS3</strong>
 <strong>SOS and SensorThings commentary?</strong>
@@ -1499,14 +1605,14 @@ This use case is meant to demonstrate the use of HY_Features to link a catchment
 </div>
 </div>
 <div class="sect2">
-<h3 id="_domain_feature_model_issues"><a class="anchor" href="#_domain_feature_model_issues"></a>11.3. Domain Feature Model Issues</h3>
+<h3 id="_domain_feature_model_issues"><a class="anchor" href="#_domain_feature_model_issues"></a>8.3. Domain Feature Model Issues</h3>
 <div class="paragraph">
 <p><strong>Availability of useful encodings / practices to generate them</strong>
 <strong>Monitoring networks <a href="https://github.com/opengeospatial/ELFIE/issues/65">issue 65</a></strong></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_general_linked_data_issues"><a class="anchor" href="#_general_linked_data_issues"></a>11.4. General linked data issues</h3>
+<h3 id="_general_linked_data_issues"><a class="anchor" href="#_general_linked_data_issues"></a>8.4. General linked data issues</h3>
 <div class="paragraph">
 <p><strong>Default behavior for resolution of a URI&#8201;&#8212;&#8201;esp. one with alternatives <a href="https://github.com/opengeospatial/ELFIE/issues/32">issue 32</a></strong>
 <strong>Picky details of namespace URIs and identifiers <a href="https://github.com/opengeospatial/ELFIE/issues/60">issue 60</a></strong></p>

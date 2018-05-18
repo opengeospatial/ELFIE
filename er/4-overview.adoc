@@ -2,21 +2,17 @@
 
 [NOTE] .Instructions ==== This 4-overview.adoc file helps the reader to better
 understand the various sections of the ER. It should be written like an extended
-table of contents.
+table of contents.====
 
-The following clauses (clause-requirements, clause-solutions, clauses 6-n and
-Annexes A-D of this template are general recommendations for Engineering
-Reports. As ERs can be of many different types and purposes, these clauses
-should be tailored to meet the needs of the report. However in most cases,
-clause-requirements and clause-solutions should be used. ====
+// these three paragraphs are fine, but maybe too long?
 
 The ELFIE is intended to test existing OGC and W3C standards with the goal of
 establishing a best practice for exposing links between and among environmental
-domain and sampling features.   The IE is focused on two cross-domain use cases:
-1) exposing topological and domain feature model relationships between features
-and 2) description of sampling data available for and linked to sampled domain
-features While addressing these use cases, the IE will strive to address issues
-of encoding data as specific views of a linked data graph that would be passed
+domain and sampling features. The IE is focused on two cross-domain use cases:
+1) encoding topological and domain specific relationships between features
+and 2) description of observations available for and linked to sampled domain
+features. While addressing these use cases, the IE will strive to address issues
+of encoding specific views of a rich linked data graph that would be passed
 between systems. These linked data graph views are expected to support
 architectures involving linked data catalogs and registries. For example, data
 providers can use the linked data graph views as a way to advertise their
@@ -39,31 +35,53 @@ out of control. To focus the work, the IE attempted to avoid issues not directly
 related to encoding linked data documents as would be passed from server to
 client via http.
 
-// Abdel Feliachi 2018/05/16 : At my (late) knowledge neither SHaCL shapes nor linked data API
-// were considered as core solution in the project
+As described in detail later, the IE has specified a number of JSON-LD contexts
+that describe useful linked data graph views. JSON-LD documents that rely on
+these contexts could be delivered using the "_view" pattern as described by the
+Linked Data API or as the payload returned from a REST API endpoint. Using this
+approach, the recommendation takes advantage of the power and flexibility of
+Linked Open Data while providing just enough guidance to foster
+interoperability. By describing a partially resolve useful view of a linked data
+graph, it also allows resources that are important but not yet available as
+formal linked open data to be incorporated into a linked data system. This
+mechanism should provide a gateway to inclusion in and understanding the value
+of the Linked Open Data cloud.
 
-// As described in detail later, the IE has specified two constrained views of a
-// resolved linked data graph that are specified with modular SHaCL shapes. These
-// specific graph views could be implemented using the "_view" pattern of the
-// Linked Data API or as the payload returned from a REST API endpoint. Using this
-// approach, the recommendation takes advantage of the power and flexibility of
-// Linked Open Data while providing just enough constraint and guidance to
-// encourage interoperability. By specifying a partially resolve graph view, it
-// also allows resources that are not traversable as linked open data (for whatever
-// reason) to be incorporated into a linked data system. This mechanism should
-// provide a gateway to inclusion in and understanding the value of the Linked Open
-// Data cloud.
+=== IE Summary
 
-=== Scope
+The experiment conducted in ELFIE tested the assumption that broadly adopted
+web technologies for linked data could be applied to environmental linked
+feature use cases to satisfy the needs of a number of compelling use cases.
+The objectives section describes engineering design goals and details the
+assumptions and scope that were used to constrain the magnitude of the IE.
+Much of the IE was a thought experiment among participants where use cases
+were discussed and potential technologies and implementations were explored.
+The use cases section describes these use cases and a select set that were
+implemented to more thoroughly test and evolve the technologies that were
+selected during design discussions.
 
-// Just dumping some content in here, maybe Byron can type this up as well as
-// edit what I wrote above? Out of scope: Identifier permanence / referential
-// integrity and implementation patterns to address it. Arrangements around
-// discovery of inbound and outbound links. Links are the responsibility of the
-// data provider only. ELFIE will not seek to solve problems regarding network
-// architecture for resolving links or systems design and governance for
-// applications that store and retrieving links or concept relationships.
+The technologies tested in ELFIE were selected for their adoptability,
+commonality, and suitability to the needs of ELFIE use cases. New and
+thus uncommon domain feature models were applied with the chosen, more common,
+technologies. The standards section is a brief discussion of the technologies
+and standards tested in ELFIE. The technology chosen to provide a precise
+but not overly prescriptive description of the linked data graph views is
+the JSON-LD context. Details of the contexts defined in the ELFIE project are
+discussed in the contexts section.
 
-“just enough” semantic annotation that allows us to traverse links to and among
-monitoring data and domain features. Note that inclusion of other properties is
-encouraged and implementors can ignore things that aren't in the recommendation.
+The outcomes of ELFIE provide guidance for providing views of environmental
+features. A simple view intended to be a preview, suitable for basic indexing
+is specified. The IE also experimented with views intended to provide
+topological as well as observational and domain feature model relationships.
+The preview view was largely successful, but there was no one satisfactory
+solution for expression of a preview geometry. The experimentation with domain
+feature models led to the conclusion that the underlying linked data
+technologies are mature enough, but progress is still needed on domain feature
+ontologies and publication of domain feature model data using them. These issues
+are discussed in more detail in the outcomes and recommendations sections.
+
+The ELFIE explored a number of interesting but tangential topics. Annex A
+is a summary of one important topic discussed; how to generate a feature
+ontology from a UML model. Annex B is a brief discussion of issues related
+to what the default response should be when resolving a URI for a
+non-information resource that may have multiple representations.
