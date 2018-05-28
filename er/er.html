@@ -603,8 +603,16 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#references">2. References</a></li>
 <li><a href="#_terms_and_definitions">3. Terms and definitions</a>
 <ul class="sectlevel2">
-<li><a href="#_term_name">3.1. term name</a></li>
-<li><a href="#_term_name_synonym">3.2. term name|synonym</a></li>
+<li><a href="#_feature">3.1. feature</a></li>
+<li><a href="#_property">3.2. property</a></li>
+<li><a href="#_object_property">3.3. object property</a></li>
+<li><a href="#_subject">3.4. subject</a></li>
+<li><a href="#_predicate">3.5. predicate</a></li>
+<li><a href="#_resource">3.6. resource</a></li>
+<li><a href="#_observation">3.7. observation</a></li>
+<li><a href="#_view">3.8. view</a></li>
+<li><a href="#_non_information_uri">3.9. non-information URI</a></li>
+<li><a href="#_term_name_synonym">3.10. term name|synonym</a></li>
 </ul>
 </li>
 <li><a href="#_abbreviated_terms">4. Abbreviated terms</a></li>
@@ -762,7 +770,7 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <p>For the purposes of this report, the definitions specified in Clause 4 of the OWS Common Implementation Standard <a href="https://portal.opengeospatial.org/files/?artifact_id=38867&amp;version=2">OGC 06-121r9</a> shall apply. In addition, the following terms and definitions apply.</p>
 </div>
 <div class="sect2">
-<h3 id="_term_name"><a class="anchor" href="#_term_name"></a>3.1. term name</h3>
+<h3 id="_feature"><a class="anchor" href="#_feature"></a>3.1. feature</h3>
 <div class="literalblock">
 <div class="content">
 <pre>text of the definition</pre>
@@ -770,7 +778,71 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </div>
 </div>
 <div class="sect2">
-<h3 id="_term_name_synonym"><a class="anchor" href="#_term_name_synonym"></a>3.2. term name|synonym</h3>
+<h3 id="_property"><a class="anchor" href="#_property"></a>3.2. property</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_object_property"><a class="anchor" href="#_object_property"></a>3.3. object property</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_subject"><a class="anchor" href="#_subject"></a>3.4. subject</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_predicate"><a class="anchor" href="#_predicate"></a>3.5. predicate</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resource"><a class="anchor" href="#_resource"></a>3.6. resource</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_observation"><a class="anchor" href="#_observation"></a>3.7. observation</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_view"><a class="anchor" href="#_view"></a>3.8. view</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_non_information_uri"><a class="anchor" href="#_non_information_uri"></a>3.9. non-information URI</h3>
+<div class="literalblock">
+<div class="content">
+<pre>text of the definition</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_term_name_synonym"><a class="anchor" href="#_term_name_synonym"></a>3.10. term name|synonym</h3>
 <div class="literalblock">
 <div class="content">
 <pre>text of the definition</pre>
@@ -837,8 +909,8 @@ features in a resource oriented way and provide opaque interfaces to structured
 and/or inter-related content. The encodings demonstrated in ELFIE turn the
 normal OGC service pattern (GetCapabilities followed by introspection to
 understand contents) inside out by encoding associations between features as
-linked data predicates. This approach takes the form of subject-resource
-predicate-association object-resource where the resources may be OGC web service
+linked data predicates. This approach uses subject-predicate-object triples to
+describe resource-relation-resource associations where the resources may be OGC web service
 requests. This leverages the power of services such as WFS to provide feature
 instances, but expresses the structure of complex features or cross-service
 associated features explicitly. The scope of this work could have easily gotten

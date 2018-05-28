@@ -2,7 +2,31 @@
 
 For the purposes of this report, the definitions specified in Clause 4 of the OWS Common Implementation Standard https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9] shall apply. In addition, the following terms and definitions apply.
 
-===	term name
+===	feature
+ text of the definition
+
+=== property
+ text of the definition
+
+=== object property
+ text of the definition
+ 
+=== subject
+ text of the definition
+
+=== predicate
+ text of the definition
+
+=== resource
+  text of the definition
+
+=== observation
+ text of the definition
+
+=== view
+ text of the definition
+
+=== non-information URI
  text of the definition
 
 ===	term name|synonym

@@ -25,8 +25,8 @@ features in a resource oriented way and provide opaque interfaces to structured
 and/or inter-related content. The encodings demonstrated in ELFIE turn the
 normal OGC service pattern (GetCapabilities followed by introspection to
 understand contents) inside out by encoding associations between features as
-linked data predicates. This approach takes the form of subject-resource
-predicate-association object-resource where the resources may be OGC web service
+linked data predicates. This approach uses subject-predicate-object triples to
+describe resource-relation-resource associations where the resources may be OGC web service
 requests. This leverages the power of services such as WFS to provide feature
 instances, but expresses the structure of complex features or cross-service
 associated features explicitly. The scope of this work could have easily gotten
