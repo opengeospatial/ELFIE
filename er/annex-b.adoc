@@ -1,59 +1,38 @@
 [appendix]
-= XML Schema Documents
+[[linked_data_default]]
+=== Default Response for Multiple Representions and Relations
 
-(( XML Schema Documents may be relevant to an Engineering Report. ))
+// text from wiki page.
 
-The term “XML schema“ means all the XML schema parts having the same XML namespace, usually separated into multiple XML Schema Document files (with the file type “.xsd“. The XML schema parts in one XML namespace are usually separated into multiple XML Schema Documents to ease human understanding.
+Non information resource identifiers, URIs that are an identifier for a thing
+that may or may not have information representations, are useful to provide
+persistent and reusable identifiers for entities such as real-world features.
+These non information resource identifiers provide a means for global
+identification across a system such that multiple members of the system can
+contain information about and/or in reference to shared entities.
 
-In addition to this document, this report includes several XML Schema Documents. These XML Schema Documents are bundled in a zip file with the present document. 
+There is a basic conundrum with non information resource identifiers in that
+there can only be one default response when derefencing a URI and only one member
+of a distributed system can be the source of that default response. Further, in
+order to achieve linked system interoperability, dereferencing behavior of non
+information resource URIs needs to be in accord with the expectations of a
+member node of a system. The https://en.wikipedia.org/wiki/HTTPRange-14[httpRange-14]
+and the https://www.w3.org/TR/cooluris/[Cool URIs Technical Report] provide a
+significant basis for solving this conundrum and https://www.w3.org/2017/dxwg[W3C
+working groups continue to focus on it], but many details remain to be agreed
+upon for use cases such as are being pursued by the ELFIE.
 
-The TBD abilities now specified in this document use TBD specified XML Schema Documents included in the zip file with this document. These XML Schema Documents combine the XML schema fragments listed in various subclauses of this document, eliminating duplications. 
+While details of the default dereferencing behavior of non information resource
+identifiers and subsequent redirects to information resources was discussed in
+the ELFIE, the IE has attempted to focus on encoding of linked data information
+resources rather than the network behavior for discovery and retrieval of
+non-information resources. Future work and best practice development will be
+needed to address these issues:
 
-These XML Schema Documents roughly match the TBD UML packages described in Annex B, and are named:
-
-    TBD.xsd
-    TBD.xsd
-
-These XML Schema Documents use and build on the OWS common XML Schema Documents specified [OGC 06-121r3], named:
-
-    ows19115subset.xsd
-    owsCommon.xsd
-    owsDataIdentification.xsd
-    owsExceptionReport.xsd
-    owsGetCapabilities.xsd
-    owsOperationsMetadata.xsd
-    owsServiceIdentification.xsd
-    owsServiceProvider.xsd
-
-All these XML Schema Documents contain documentation of the meaning of each element and attribute, and this documentation shall be considered normative as specified in Subclause 11.6.3 of [OGC 06-121r9].
-
-.GetCapabilities.xsd
-[source,xml]
-----
-<ows:Operation name="GetCapabilities">
-  <ows:DCP>
-    <ows:HTTP>
-      <ows:Post xlink:href="http://www.opengis.net/?">
-        <ows:Constraint name="PostEncoding">
-          <allowedValues>
-            <ows:Value>SOAP</ows:Value>
-          </ows:AllowedValues>
-        </ows:Constraint>
-      </ows:Post>
-    </ows:HTTP>
-  </ows:DCP>
-</ows:Operation>
-<ows:Operation name="GetTile">
-  <ows:DCP>
-    <ows:HTTP>
-      <ows:Post xlink:href="http://www.opengis.net/?">
-        <ows:Constraint name="PostEncoding">
-          <ows:AllowedValues>
-            <ows:Value>SOAP</ows:Value>
-          </ows:AllowedValues>
-        </ows:Constraint>
-      </ows:Post>
-    </ows:HTTP>
-  </ows:DCP>
-</ows:Operation>
-----
+. HTTP vs HTTPS
+. embedded hints and headers to canonical identifiers vs information resources
+. permanance and bookmarkability of information resource URLs
+. detecting information resource URLs and injecting canonical URIs into systems, so that other resources can be found
+. declaration of sameAs relationships
+. where sameAs relationships are mandatory and optional - where can an agent find these?
+. stricter definition of version vs schema vs content model vs profile

@@ -1,4 +1,5 @@
-[[Use_Cases]] == Use Case Summary
+[[Use_Cases]]
+== Use Case Summary
 
 === Introduction
 ELFIE design work was directed by a number of use cases with

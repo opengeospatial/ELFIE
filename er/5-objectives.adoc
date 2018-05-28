@@ -10,7 +10,7 @@ degree of simplicity toward the goal of adoptability by developers and
 users with a wide array of technical skill levels. Combining these goals
 led to IE participants to seek solutions that
 
-. are ubiquitous and easily adoptable in any programming language,  
+. are ubiquitous and easily adoptable in any programming language,
 . apply best practices for linked data on the web,
 . and adhere, to the extent possible to standard taxonomies and ontologies.
 

@@ -607,49 +607,60 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#_term_name_synonym">3.2. term name|synonym</a></li>
 </ul>
 </li>
-<li><a href="#_abbreviated_terms">4. Abbreviated terms</a>
+<li><a href="#_abbreviated_terms">4. Abbreviated terms</a></li>
+<li><a href="#Overview">5. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_ie_summary">4.1. IE Summary</a></li>
+<li><a href="#_ie_summary">5.1. IE Summary</a></li>
 </ul>
 </li>
-<li><a href="#Objectives">5. Objectives</a>
+<li><a href="#Objectives">6. Objectives</a>
 <ul class="sectlevel2">
-<li><a href="#_goals">5.1. Goals</a></li>
-<li><a href="#_assumptions">5.2. Assumptions</a></li>
-<li><a href="#_scope">5.3. Scope</a></li>
-<li><a href="#_experiment_summary">5.4. Experiment Summary</a></li>
-<li><a href="#_introduction">5.5. Introduction</a></li>
-<li><a href="#_use_cases_considered_in_design_process">5.6. Use Cases Considered in Design Process</a></li>
-<li><a href="#_use_cases_implemented_as_demonstrations_of_outcomes">5.7. Use Cases Implemented as Demonstrations of Outcomes</a></li>
-<li><a href="#_introduction_2">5.8. Introduction</a></li>
-<li><a href="#_ogc_web_standards">5.9. OGC Web Standards</a></li>
-<li><a href="#_ogc_domain_models">5.10. OGC Domain Models</a></li>
-<li><a href="#_w3c">5.11. W3C</a></li>
-<li><a href="#_json_ld">5.12. JSON-LD</a></li>
+<li><a href="#_goals">6.1. Goals</a></li>
+<li><a href="#_assumptions">6.2. Assumptions</a></li>
+<li><a href="#_scope">6.3. Scope</a></li>
+<li><a href="#_experiment_summary">6.4. Experiment Summary</a></li>
 </ul>
 </li>
-<li><a href="#Relations_Contexts">6. Relations and JSON-LD Contexts</a>
+<li><a href="#Use_Cases">7. Use Case Summary</a>
 <ul class="sectlevel2">
-<li><a href="#_introduction_3">6.1. Introduction</a></li>
-<li><a href="#_general_elfie_contexts">6.2. General ELFIE Contexts</a></li>
-<li><a href="#_domain_specific_contexts">6.3. Domain Specific Contexts</a></li>
+<li><a href="#_introduction">7.1. Introduction</a></li>
+<li><a href="#_use_cases_considered_in_design_process">7.2. Use Cases Considered in Design Process</a></li>
+<li><a href="#_use_cases_implemented_as_demonstrations_of_outcomes">7.3. Use Cases Implemented as Demonstrations of Outcomes</a></li>
 </ul>
 </li>
-<li><a href="#Experiment_Outcomes_Summary">7. Summary of experiment and analysis of outcomes</a>
+<li><a href="#Standards_Best_Practices">8. Applicable Best Practices and Standards</a>
 <ul class="sectlevel2">
-<li><a href="#_future_work">7.1. Future Work</a></li>
+<li><a href="#_introduction_2">8.1. Introduction</a></li>
+<li><a href="#_ogc_web_standards">8.2. OGC Web Standards</a></li>
+<li><a href="#_ogc_domain_models">8.3. OGC Domain Models</a></li>
+<li><a href="#_w3c">8.4. W3C</a></li>
+<li><a href="#_json_ld">8.5. JSON-LD</a></li>
 </ul>
 </li>
-<li><a href="#Issues_Recommendations">8. Issues and Recommendations for Future Work.</a>
+<li><a href="#Relations_Contexts">9. Relations and JSON-LD Contexts</a>
 <ul class="sectlevel2">
-<li><a href="#_introduction_4">8.1. Introduction</a></li>
-<li><a href="#_ogc_service_standards_and_implementation_issues">8.2. OGC Service Standards and Implementation issues.</a></li>
-<li><a href="#_domain_feature_model_issues">8.3. Domain Feature Model Issues</a></li>
-<li><a href="#_general_linked_data_issues">8.4. General linked data issues</a></li>
+<li><a href="#_introduction_3">9.1. Introduction</a></li>
+<li><a href="#_general_elfie_contexts">9.2. General ELFIE Contexts</a></li>
+<li><a href="#_domain_specific_contexts">9.3. Domain Specific Contexts</a></li>
 </ul>
 </li>
-<li><a href="#_revision_history">Appendix A: Revision History</a></li>
-<li><a href="#Bibliography">Appendix B: Bibliography</a></li>
+<li><a href="#Experiment_Outcomes_Summary">10. Summary of Experiment and Analysis of Outcomes</a>
+<ul class="sectlevel2">
+<li><a href="#_future_work">10.1. Future Work</a></li>
+</ul>
+</li>
+<li><a href="#Issues_Recommendations">11. Issues and Recommendations for Future Work.</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_4">11.1. Introduction</a></li>
+<li><a href="#_ogc_service_standards_and_implementation_issues">11.2. OGC Service Standards and Implementation issues.</a></li>
+<li><a href="#_domain_feature_model_issues">11.3. Domain Feature Model Issues</a></li>
+<li><a href="#_general_linked_data_issues">11.4. General linked data issues</a></li>
+<li><a href="#ontology_from_uml">Appendix A: Generation of OWL Ontologies from UML</a></li>
+<li><a href="#linked_data_default">Appendix B: Default Response for Multiple Representions and Relations</a></li>
+</ul>
+</li>
+<li><a href="#_revision_history">Appendix C: Revision History</a></li>
+<li><a href="#Bibliography">Appendix D: Bibliography</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -797,28 +808,27 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><a id="Overview"></a> == Overview</p>
 </div>
-<div class="paragraph">
-<p>[NOTE] .Instructions ==== This 4-overview.adoc file helps the reader to better
-understand the various sections of the ER. It should be written like an extended
-table of contents.====</p>
 </div>
+<div class="sect1">
+<h2 id="Overview"><a class="anchor" href="#Overview"></a>5. Overview</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The ELFIE is intended to test existing OGC and W3C standards with the goal of
+<p>The Environmental Linked Feature Interoperability Experiment (ELFIE) is intended
+to test existing OGC and W3C standards with the goal of
 establishing a best practice for exposing links between and among environmental
 domain and sampling features. The IE is focused on two cross-domain use cases:
 1) encoding topological and domain specific relationships between features
 and 2) description of observations available for and linked to sampled domain
 features. While addressing these use cases, the IE will strive to address issues
-of encoding specific views of a rich linked data graph that would be passed
-between systems. These linked data graph views are expected to support
+of encoding specific (simplified and useful) <em>views</em> of a rich (complete but
+complicated) linked data graph that could be passed
+between systems. These linked data graph <em>views</em> are expected to support
 architectures involving linked data catalogs and registries. For example, data
-providers can use the linked data graph views as a way to advertise their
+providers can use the linked data graph <em>views</em> as a way to advertise their
 monitoring or domain features to catalogs or other applications that want to
 crawl and index available data. Similarly, integrated catalogs that index and
-construct links between features can use the views as a linked data response to
+construct links between features can use the <em>views</em> as a linked data response to
 search queries.</p>
 </div>
 <div class="paragraph">
@@ -837,29 +847,31 @@ related to encoding linked data documents as would be passed from server to
 client via http.</p>
 </div>
 <div class="paragraph">
-<p>As described in detail later, the IE has specified a number of JSON-LD contexts
-that describe useful linked data graph views. JSON-LD documents that rely on
-these contexts could be delivered using the "_view" pattern as described by the
-Linked Data API or as the payload returned from a REST API endpoint. Using this
+<p>As described in detail later, the IE has specified a number of
+<a href="https://json-ld.org/">JSON-LD</a> <a href="https://www.w3.org/TR/json-ld/#the-context">contexts</a>
+that describe useful linked data graph <em>views</em>. JSON-LD documents that rely on
+these contexts could be delivered using the <code>view</code> pattern as described by the
+<a href="https://github.com/UKGovLD/linked-data-api/blob/wiki/API_Query_Parameters.md">Linked Data API</a>
+or as the payload returned from a REST API endpoint. Using this
 approach, the recommendation takes advantage of the power and flexibility of
 Linked Open Data while providing just enough guidance to foster
-interoperability. By describing a partially resolve useful view of a linked data
+interoperability. By describing a partially resolve useful <em>view</em> of a linked data
 graph, it also allows resources that are important but not yet available as
 formal linked open data to be incorporated into a linked data system. This
 mechanism should provide a gateway to inclusion in and understanding the value
 of the Linked Open Data cloud.</p>
 </div>
 <div class="sect2">
-<h3 id="_ie_summary"><a class="anchor" href="#_ie_summary"></a>4.1. IE Summary</h3>
+<h3 id="_ie_summary"><a class="anchor" href="#_ie_summary"></a>5.1. IE Summary</h3>
 <div class="paragraph">
 <p>The experiment conducted in ELFIE tested the assumption that broadly adopted
 web technologies for linked data could be applied to environmental linked
 feature use cases to satisfy the needs of a number of compelling use cases.
-The objectives section describes engineering design goals and details the
+The <a href="#Objectives">Objectives</a> section describes engineering design goals and details the
 assumptions and scope that were used to constrain the magnitude of the IE.
 Much of the IE was a thought experiment among participants where use cases
 were discussed and potential technologies and implementations were explored.
-The use cases section describes these use cases and a select set that were
+The <a href="#Use_Cases">Use Case Summary</a> section describes these use cases and a select set that were
 implemented to more thoroughly test and evolve the technologies that were
 selected during design discussions.</p>
 </div>
@@ -867,28 +879,29 @@ selected during design discussions.</p>
 <p>The technologies tested in ELFIE were selected for their adoptability,
 commonality, and suitability to the needs of ELFIE use cases. New and
 thus uncommon domain feature models were applied with the chosen, more common,
-technologies. The standards section is a brief discussion of the technologies
+technologies. The <a href="#Standards_Best_Practices">Applicable Best Practices and Standards</a> section is a brief discussion of the technologies
 and standards tested in ELFIE. The technology chosen to provide a precise
-but not overly prescriptive description of the linked data graph views is
+but not overly prescriptive description of the linked data graph <em>views</em> is
 the JSON-LD context. Details of the contexts defined in the ELFIE project are
-discussed in the contexts section.</p>
+discussed in the <a href="#Relations_Contexts">Relations and JSON-LD Contexts</a> section.</p>
 </div>
 <div class="paragraph">
-<p>The outcomes of ELFIE provide guidance for providing views of environmental
-features. A simple view intended to be a preview, suitable for basic indexing
-is specified. The IE also experimented with views intended to provide
+<p>The outcomes of ELFIE provide guidance for providing <em>views</em> of environmental
+features. A simple <em>view</em> intended to be a preview, suitable for basic indexing
+is specified. The IE also experimented with <em>views</em> intended to provide
 topological as well as observational and domain feature model relationships.
-The preview view was largely successful, but there was no one satisfactory
+The preview <em>view</em> was largely successful, but there was no one satisfactory
 solution for expression of a preview geometry. The experimentation with domain
 feature models led to the conclusion that the underlying linked data
 technologies are mature enough, but progress is still needed on domain feature
 ontologies and publication of domain feature model data using them. These issues
-are discussed in more detail in the outcomes and recommendations sections.</p>
+are discussed in more detail in the <a href="#Experiment_Outcomes_Summary">Summary of Experiment and Analysis of Outcomes</a> and
+<a href="#Issues_Recommendations">Issues and Recommendations for Future Work.</a> sections.</p>
 </div>
 <div class="paragraph">
-<p>The ELFIE explored a number of interesting but tangential topics. Annex A
+<p>The ELFIE explored a number of interesting but tangential topics. Annex A: <a href="#ontology_from_uml">Generation of OWL Ontologies from UML</a>
 is a summary of one important topic discussed; how to generate a feature
-ontology from a UML model. Annex B is a brief discussion of issues related
+ontology from a UML model. Annex B: <a href="#linked_data_default">Default Response for Multiple Representions and Relations</a> is a brief discussion of issues related
 to what the default response should be when resolving a URI for a
 non-information resource that may have multiple representations.</p>
 </div>
@@ -896,10 +909,10 @@ non-information resource that may have multiple representations.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Objectives"><a class="anchor" href="#Objectives"></a>5. Objectives</h2>
+<h2 id="Objectives"><a class="anchor" href="#Objectives"></a>6. Objectives</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_goals"><a class="anchor" href="#_goals"></a>5.1. Goals</h3>
+<h3 id="_goals"><a class="anchor" href="#_goals"></a>6.1. Goals</h3>
 <div class="paragraph">
 <p>Functional goals of ELFIE focused on the description and use of links
 between and among features described by domain-specific feature models and
@@ -929,7 +942,7 @@ implementation of compelling test use cases.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_assumptions"><a class="anchor" href="#_assumptions"></a>5.2. Assumptions</h3>
+<h3 id="_assumptions"><a class="anchor" href="#_assumptions"></a>6.2. Assumptions</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -958,7 +971,7 @@ doable.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_scope"><a class="anchor" href="#_scope"></a>5.3. Scope</h3>
+<h3 id="_scope"><a class="anchor" href="#_scope"></a>6.3. Scope</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -989,7 +1002,7 @@ will not seek to analyze the issue thoroughly.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_experiment_summary"><a class="anchor" href="#_experiment_summary"></a>5.4. Experiment Summary</h3>
+<h3 id="_experiment_summary"><a class="anchor" href="#_experiment_summary"></a>6.4. Experiment Summary</h3>
 <div class="paragraph">
 <p>To test the assumptions described above, a number of example use cases
 (described below) were used to guide discussion and testing of potential
@@ -1014,12 +1027,14 @@ line that need to be filled. Putting further work and needed new work
 aside, the IE failed to find significant or fundamental problems with the
 best practices and standards tested.</p>
 </div>
-<div class="paragraph">
-<p><a id="Use_Cases"></a> == Use Case Summary</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="Use_Cases"><a class="anchor" href="#Use_Cases"></a>7. Use Case Summary</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>5.5. Introduction</h3>
+<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>7.1. Introduction</h3>
 <div class="paragraph">
 <p>ELFIE design work was directed by a number of use cases with
 extensive need for linked environmental data. These use cases are either
@@ -1042,7 +1057,7 @@ satisfies the needs of the use case.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_use_cases_considered_in_design_process"><a class="anchor" href="#_use_cases_considered_in_design_process"></a>5.6. Use Cases Considered in Design Process</h3>
+<h3 id="_use_cases_considered_in_design_process"><a class="anchor" href="#_use_cases_considered_in_design_process"></a>7.2. Use Cases Considered in Design Process</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>River network linked data to address hydrologic drought and ecology</strong></dt>
@@ -1248,7 +1263,7 @@ observations * Output predictions at groundwater prediction wells</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_use_cases_implemented_as_demonstrations_of_outcomes"><a class="anchor" href="#_use_cases_implemented_as_demonstrations_of_outcomes"></a>5.7. Use Cases Implemented as Demonstrations of Outcomes</h3>
+<h3 id="_use_cases_implemented_as_demonstrations_of_outcomes"><a class="anchor" href="#_use_cases_implemented_as_demonstrations_of_outcomes"></a>7.3. Use Cases Implemented as Demonstrations of Outcomes</h3>
 <div class="paragraph">
 <p><strong>Water budget summary</strong> This use case provides a person interested in a
 basic summary of the water budget for a given watershed information about a
@@ -1347,12 +1362,14 @@ implementation is available on the
 <a href="https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction">demonstration
 ELFIE web page.</a></p>
 </div>
-<div class="paragraph">
-<p><a id="Standards_Best_Practices"></a> == Applicable Best Practices and Standards</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="Standards_Best_Practices"><a class="anchor" href="#Standards_Best_Practices"></a>8. Applicable Best Practices and Standards</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction_2"><a class="anchor" href="#_introduction_2"></a>5.8. Introduction</h3>
+<h3 id="_introduction_2"><a class="anchor" href="#_introduction_2"></a>8.1. Introduction</h3>
 <div class="paragraph">
 <p>The approach taken in ELFIE was limited in contrast to recent IEs concerning
 environmental information models. ELFIE focused on linked data documents that
@@ -1375,7 +1392,7 @@ best practices.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_web_standards"><a class="anchor" href="#_ogc_web_standards"></a>5.9. OGC Web Standards</h3>
+<h3 id="_ogc_web_standards"><a class="anchor" href="#_ogc_web_standards"></a>8.2. OGC Web Standards</h3>
 <div class="paragraph">
 <p>OGC Web Service standards for features and observations (WFS and SOS
 respectively) were used to construct HTTP URLs for use in ELFIE linked data
@@ -1388,7 +1405,7 @@ encountered but deferred for future investigations.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_domain_models"><a class="anchor" href="#_ogc_domain_models"></a>5.10. OGC Domain Models</h3>
+<h3 id="_ogc_domain_models"><a class="anchor" href="#_ogc_domain_models"></a>8.3. OGC Domain Models</h3>
 <div class="paragraph">
 <p>OGC data models were used extensively in ELFIE. The Observations and
 Measurements (O&amp;M) conceptual model provided a high level organizing
@@ -1409,7 +1426,7 @@ taxonomies and ontologies was left for future work.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_w3c"><a class="anchor" href="#_w3c"></a>5.11. W3C</h3>
+<h3 id="_w3c"><a class="anchor" href="#_w3c"></a>8.4. W3C</h3>
 <div class="paragraph">
 <p>W3C best practices for data on the web, spatial data in the web, and linked
 data were used to guide decisions related to ELFIE linked data documents.
@@ -1430,7 +1447,7 @@ achieve them.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_json_ld"><a class="anchor" href="#_json_ld"></a>5.12. JSON-LD</h3>
+<h3 id="_json_ld"><a class="anchor" href="#_json_ld"></a>8.5. JSON-LD</h3>
 <div class="paragraph">
 <p>Given ELFIE goals related to adoptability of outcomes and
 applicability to mass market search, JSON-LD was used as the encoding for
@@ -1447,10 +1464,10 @@ requirements of ELFIE were satisfied by the JSON-LD encoding.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Relations_Contexts"><a class="anchor" href="#Relations_Contexts"></a>6. Relations and JSON-LD Contexts</h2>
+<h2 id="Relations_Contexts"><a class="anchor" href="#Relations_Contexts"></a>9. Relations and JSON-LD Contexts</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>6.1. Introduction</h3>
+<h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>9.1. Introduction</h3>
 <div class="paragraph">
 <p>An important goal of the ELFIE was adoptability by web developers and
 compatibility with technologies that are ubiquitous on the internet. Given these
@@ -1481,7 +1498,7 @@ use in a typical web development workflow.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_general_elfie_contexts"><a class="anchor" href="#_general_elfie_contexts"></a>6.2. General ELFIE Contexts</h3>
+<h3 id="_general_elfie_contexts"><a class="anchor" href="#_general_elfie_contexts"></a>9.2. General ELFIE Contexts</h3>
 <div class="paragraph">
 <p>The ELFIE preview graph "view", is described by the
 <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld">elf.jsonld</a> context.
@@ -1519,7 +1536,7 @@ context.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_domain_specific_contexts"><a class="anchor" href="#_domain_specific_contexts"></a>6.3. Domain Specific Contexts</h3>
+<h3 id="_domain_specific_contexts"><a class="anchor" href="#_domain_specific_contexts"></a>9.3. Domain Specific Contexts</h3>
 <div class="paragraph">
 <p>Two extended general contexts and three domain specific contexts were created
 for testing in ELFIE. The extended general contexts have content from the
@@ -1537,7 +1554,7 @@ should follow ELFIE.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Experiment_Outcomes_Summary"><a class="anchor" href="#Experiment_Outcomes_Summary"></a>7. Summary of experiment and analysis of outcomes</h2>
+<h2 id="Experiment_Outcomes_Summary"><a class="anchor" href="#Experiment_Outcomes_Summary"></a>10. Summary of Experiment and Analysis of Outcomes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>As described previously, The ELFIE was intended to test existing OGC and W3C
@@ -1560,7 +1577,7 @@ linked data relations used for search engine optimization were found to be
 suited to typical environmental linked feature use cases.</p>
 </div>
 <div class="sect2">
-<h3 id="_future_work"><a class="anchor" href="#_future_work"></a>7.1. Future Work</h3>
+<h3 id="_future_work"><a class="anchor" href="#_future_work"></a>10.1. Future Work</h3>
 <div class="paragraph">
 <p>The experiments exposed several issues with existing and new technologies
 that need to be addressed to realize the full potential of the core linked
@@ -1588,16 +1605,16 @@ collections of potentially temporary linked data among many data providers.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Issues_Recommendations"><a class="anchor" href="#Issues_Recommendations"></a>8. Issues and Recommendations for Future Work.</h2>
+<h2 id="Issues_Recommendations"><a class="anchor" href="#Issues_Recommendations"></a>11. Issues and Recommendations for Future Work.</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction_4"><a class="anchor" href="#_introduction_4"></a>8.1. Introduction</h3>
+<h3 id="_introduction_4"><a class="anchor" href="#_introduction_4"></a>11.1. Introduction</h3>
 <div class="paragraph">
 <p><strong>High level summary of the kinds of issues we found and what future work the IE implies</strong></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_service_standards_and_implementation_issues"><a class="anchor" href="#_ogc_service_standards_and_implementation_issues"></a>8.2. OGC Service Standards and Implementation issues.</h3>
+<h3 id="_ogc_service_standards_and_implementation_issues"><a class="anchor" href="#_ogc_service_standards_and_implementation_issues"></a>11.2. OGC Service Standards and Implementation issues.</h3>
 <div class="paragraph">
 <p><strong>WFS issues and recs for WFS3</strong>
 <strong>SOS and SensorThings commentary?</strong>
@@ -1605,23 +1622,85 @@ collections of potentially temporary linked data among many data providers.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_domain_feature_model_issues"><a class="anchor" href="#_domain_feature_model_issues"></a>8.3. Domain Feature Model Issues</h3>
+<h3 id="_domain_feature_model_issues"><a class="anchor" href="#_domain_feature_model_issues"></a>11.3. Domain Feature Model Issues</h3>
 <div class="paragraph">
 <p><strong>Availability of useful encodings / practices to generate them</strong>
 <strong>Monitoring networks <a href="https://github.com/opengeospatial/ELFIE/issues/65">issue 65</a></strong></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_general_linked_data_issues"><a class="anchor" href="#_general_linked_data_issues"></a>8.4. General linked data issues</h3>
+<h3 id="_general_linked_data_issues"><a class="anchor" href="#_general_linked_data_issues"></a>11.4. General linked data issues</h3>
 <div class="paragraph">
 <p><strong>Default behavior for resolution of a URI&#8201;&#8212;&#8201;esp. one with alternatives <a href="https://github.com/opengeospatial/ELFIE/issues/32">issue 32</a></strong>
 <strong>Picky details of namespace URIs and identifiers <a href="https://github.com/opengeospatial/ELFIE/issues/60">issue 60</a></strong></p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="ontology_from_uml"><a class="anchor" href="#ontology_from_uml"></a>Appendix A: Generation of OWL Ontologies from UML</h3>
+<div class="paragraph">
+<p>placeholder</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linked_data_default"><a class="anchor" href="#linked_data_default"></a>Appendix B: Default Response for Multiple Representions and Relations</h3>
+<div class="paragraph">
+<p>Non information resource identifiers, URIs that are an identifier for a thing
+that may or may not have information representations, are useful to provide
+persistent and reusable identifiers for entities such as real-world features.
+These non information resource identifiers provide a means for global
+identification across a system such that multiple members of the system can
+contain information about and/or in reference to shared entities.</p>
+</div>
+<div class="paragraph">
+<p>There is a basic conundrum with non information resource identifiers in that
+there can only be one default response when derefencing a URI and only one member
+of a distributed system can be the source of that default response. Further, in
+order to achieve linked system interoperability, dereferencing behavior of non
+information resource URIs needs to be in accord with the expectations of a
+member node of a system. The <a href="https://en.wikipedia.org/wiki/HTTPRange-14">httpRange-14</a>
+and the <a href="https://www.w3.org/TR/cooluris/">Cool URIs Technical Report</a> provide a
+significant basis for solving this conundrum and <a href="https://www.w3.org/2017/dxwg">W3C
+working groups continue to focus on it</a>, but many details remain to be agreed
+upon for use cases such as are being pursued by the ELFIE.</p>
+</div>
+<div class="paragraph">
+<p>While details of the default dereferencing behavior of non information resource
+identifiers and subsequent redirects to information resources was discussed in
+the ELFIE, the IE has attempted to focus on encoding of linked data information
+resources rather than the network behavior for discovery and retrieval of
+non-information resources. Future work and best practice development will be
+needed to address these issues:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>HTTP vs HTTPS</p>
+</li>
+<li>
+<p>embedded hints and headers to canonical identifiers vs information resources</p>
+</li>
+<li>
+<p>permanance and bookmarkability of information resource URLs</p>
+</li>
+<li>
+<p>detecting information resource URLs and injecting canonical URIs into systems, so that other resources can be found</p>
+</li>
+<li>
+<p>declaration of sameAs relationships</p>
+</li>
+<li>
+<p>where sameAs relationships are mandatory and optional - where can an agent find these?</p>
+</li>
+<li>
+<p>stricter definition of version vs schema vs content model vs profile</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Appendix A: Revision History</h2>
+<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Appendix C: Revision History</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -1690,7 +1769,7 @@ collections of potentially temporary linked data among many data providers.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Appendix B: Bibliography</h2>
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Appendix D: Bibliography</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>bibliography::[]</p>
@@ -1700,7 +1779,7 @@ collections of potentially temporary linked data among many data providers.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-02-08 10:18:57 CST
+Last updated 2018-05-28 10:12:43 CDT
 </div>
 </div>
 </body>
