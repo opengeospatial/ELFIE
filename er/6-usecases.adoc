@@ -150,7 +150,7 @@ be used for a wide array of linked watershed information use cases.
 
 [#img_huc12obs_data,reftext='{figure-caption} {counter:figure-num}']
 .Notional diagram of relationships between data in the watershed data index use case.
-image::images/uswb.png[width=800,align="center"]
+image::images/us_huc12_obs.png[width=600,align="center"]
 
 Additional details about the water budget summary use case implementation is
 available on the
