@@ -10,8 +10,8 @@ discussion and vetting of ideas only, others were taken further with
 implementation of example encoded linked data documents and client code to
 visualize data involved in the use case.
 
-The full suite of use cases considered durring the design phase of the
-project are described below. Each use cases takes the form of a simple
+The full suite of use cases considered during the design phase of the
+project are described below. Each use case takes the form of a simple
 description of who or what system has an interest in what related datasets.
 Specific datasets are listed to clarify the scope and provide a starting
 point for technical design work. Use cases that were implemented as
@@ -133,8 +133,8 @@ representations of it. This follows the HY_Features concept of a catchment as
 an _unrealized_ feature that is related to various realization features,
 there is no canonical representation of the watershed its self.
 
-[#img_uswb_data,reftext='{figure-caption} {counter:figure-num}'] .Notional
-diagram of relationships between data in the water budget summary use case.
+[#img_uswb_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of relationships between data in the water budget summary use case.
 image::images/uswb.png[width=800,align="center"]
 
 Additional details about the water budget summary use case implementation is
