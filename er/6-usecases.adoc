@@ -188,7 +188,7 @@ viewer (here map and time series).
 
 [#img_groundwater_monitoring_data,reftext='{figure-caption} {counter:figure-num}']
 .Notional diagram of data in the ground water level monitoring use case.
-image::images/FR_groundwater_monitoring.png[width=350,align="center"]
+image::images/FR_groundwater_monitoring.png[width=450,align="center"]
 
 Additional details about the ground water level monitoring use case
 implementation is available on the
@@ -200,14 +200,14 @@ ELFIE web page.]
 demonstrate how from a given Piezometer URI any user (domain expert, machine)
 can traverse to the ground water monitoring strategy (see Ground water level
 monitoring Use Case) but also to the associated surface water monitoring one.
-Provided each surface/groundwater features are propertly linked together (River
-network, Aquifer system) it is then feasible to acquire knowledge about a fully
+Provided each surface/groundwater features are properly linked together (river
+network, aquifer system) it is then feasible to acquire knowledge about a fully
 comprehensive water system. This use case can be seen as a flagship one to
-demonstrate the usefulness of linked data in the environnemental context.
+demonstrate the usefulness of linked data in the environmental context.
 
 [#img_surface_groundwater_networks,reftext='{figure-caption} {counter:figure-num}']
 .Notional diagram of data in the surface-ground water networks interaction use case.
-image::images/FR_surface_ground_surface_roundtrip.png[width=650,align="center"]
+image::images/FR_surface_ground_surface_roundtrip.png[width=750,align="center"]
 
 Additional details about the surface-ground water networks interaction use case
 implementation is available on the
