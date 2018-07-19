@@ -39,8 +39,8 @@ out of control. To focus the work, the IE attempted to avoid issues not directly
 related to encoding linked data documents as would be passed from server to
 client via http.
 
-// Abdel Feliachi 2018/05/16 : At my (late) knowledge neither SHaCL shapes nor linked data API
-// were considered as core solution in the project
+// Abdel Feliachi 2018/05/16 : At my (late) knowledge neither SHaCL shapes nor
+// linked data API were considered as core solution in the project
 
 // As described in detail later, the IE has specified two constrained views of a
 // resolved linked data graph that are specified with modular SHaCL shapes. These
