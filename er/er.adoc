@@ -1,4 +1,4 @@
-// html conversion: asciidoctor -r asciidoctor-bibtex -a linkcss -a stylesheet=rocket-panda.css -a stylesdir=./stylesheets er.adoc
+// html conversion: asciidoctor -r asciidoctor-bibtex -a linkcss -a stylesheet=./stylesheets/rocket-panda.css er.adoc
 
 // *****************************************************************************
 // please provide the following elements

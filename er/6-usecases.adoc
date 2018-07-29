@@ -26,99 +26,145 @@ satisfies the needs of the use case.
 Water consumers and decision makers are interested in potential ecological
 and economic impacts of additional water use.
 
-*Relevant datasets*::: * River network * Incremental catchments * Low flow
-and temperature sensitive species distributions * Monitoring locations * Low
-flow and temperature forecasts * Ecological stream classification *
-Historical streamflow characteristics * Flow and temperature regulations
+*Relevant datasets*::: 
+* River network
+* Incremental catchments
+* Low flow and temperature sensitive species distributions
+* Monitoring locations
+* Low flow and temperature forecasts
+* Ecological stream classification
+* Historical streamflow characteristics
+* Flow and temperature regulations
 
 **Stream water quality and quantity monitoring**:: Water consumers are
 interested in ambient stream characteristics and water quality impacts of
 water allocation decisions.
 
-*Relevant datasets*::: * River network * Monitoring locations * Water quality
-data * Water quantity data * Water allocation information * Diversions and
-discharges
+*Relevant datasets*:::
+* River network
+* Monitoring locations
+* Water quality data
+* Water quantity data
+* Water allocation information
+* Diversions and discharges
 
 **Flood risks and impacts**:: A person in a flood-impacted area needs
 information about the risks to them for a forecast or ongoing flood event.
 
-*Relevant datasets*::: * River network * Stream flow and stage forecasts *
-Topography * Flood depth and extent data for event * Flood plain map(s) *
-Flood control assets * Impacted transportation assets * At risk critical
-infrastructure
+*Relevant datasets*:::
+* River network
+* Stream flow and stage forecasts
+* Topography
+* Flood depth and extent data for event
+* Flood plain map(s)
+* Flood control assets
+* Impacted transportation assets
+* At risk critical infrastructure
 
 **Water quality impacts monitoring of mining activities**:: A water quality
 analyst needs to know what data is available to assess baseline and impacted
 conditions of a waterbody impacted by mine-related runoff.
 
-*Relevant datasets*::: * River network * On network waterbodies * Realtime
-water quality monitoring locations and data * Water quality sampling
-locations and data * Mine locations * Snowpack and runoff * River flow
-monitoring locations and data
+*Relevant datasets*:::
+* River network
+* On network waterbodies
+* Realtime water quality monitoring locations and data
+* Water quality sampling locations and data
+* Mine locations
+* Snowpack and runoff
+* River flow monitoring locations and data
 
 **Cross border monitoring index**:: An analyst working in a cross border
 watershed or aquifer needs information characterizing their study region from
 another country of jurisdiction.
 
-*Relevant datasets*::: * River network data * Catchment data * Aquifer data *
-Streamflow monitoring locations and data * Aquifer monitoring wells and data
+*Relevant datasets*:::
+* River network data
+* Catchment data
+* Aquifer data
+* Streamflow monitoring locations and data
+* Aquifer monitoring wells and data
 
 **Water budget summary**:: A person interested in a basic summary of the
 water budget for a given watershed needs information about the watershed and
 its water budget data.
 
-*Relevant datasets*::: * Watershed boundary * Watershed outlet location *
-Water budget component data * Links to additional information
+*Relevant datasets*:::
+* Watershed boundary
+* Watershed outlet location
+* Water budget component data
+* Links to additional information
 
 **Watershed data index**:: A person with a stake in the conditions of a given
 watershed needs an index of all water-quality related information about the
 watershed.
 
-*Relevant datasets*::: * Impaired (e.g. polluted or degraded) waters *
-Drinking water quality violation reports * Facilities with discharge permits
-* Water quality infrastructure investments * Watershed characteristics *
-Modeled data such as nutrient concentrations
+*Relevant datasets*:::
+* Impaired (e.g. polluted or degraded) waters
+* Drinking water quality violation reports
+* Facilities with discharge permits
+* Water quality infrastructure investments
+* Watershed characteristics
+* Modeled data such as nutrient concentrations
 
 **Flood monitoring at bridges**:: A jurisdiction with significant
 infrastructure near or over waterways needs a system to link waterways,
 bridges, and various observations for situational awareness and model
 calibration/validation.
 
-*Relevant datasets*::: * River network * Bridge inventory * Monitoring
-stations and data * Locations where model results are available
+*Relevant datasets*:::
+* River network
+* Bridge inventory
+* Monitoring stations and data
+* Locations where model results are available
 
 **Flood Impact Study**:: A hydrologist conducting a flood impact study needs
 to collect relevant information from various agencies.
 
-*Relevant datasets*::: * River network * Watershed boundaries * Hydrologic
-locations of vulnerable infrastructure * Hydrologic locations of monitoring
-stations and data * Meteorological monitoring stations and data * Elevation
-data * Water table / aquifer data * Rainfall forecast
+*Relevant datasets*:::
+* River network
+* Watershed boundaries
+* Hydrologic locations of vulnerable infrastructure
+* Hydrologic locations of monitoring stations and data
+* Meteorological monitoring stations and data
+* Elevation data
+* Water table / aquifer data
+* Rainfall forecast
 
 **Ground water level monitoring**:: Groundwater level monitoring networks are
 deployed on the field to monitor Aquifer status. A groundwater specialist needs
 to be able to traverse links from the Well to the piezomter deployed and,
 furthermore to the acquired observation (timeseries).
 
-*Relevant datasets*::: * Groundwater wells description * Piezometer description *
-*Groundwater levels at piezometer level
+*Relevant datasets*:::
+* Groundwater wells description
+* Piezometer description
+* Groundwater levels at piezometer level
 
 **Surface-ground water networks interaction**:: Management of the pressures on
 natural resources requires properly linking domain features not only using
 surface/ground water interaction at a local level but also taking benefit of
 the broader river networks and aquifer systems connectivity.
 
-*Relevant datasets*::: * Borehole/Well * Piezometer (+ associated observations)*
-*Aquifer * AquiferSystem * Aquifer/River interaction * River Network * River
-*gage (+ associated observations)
+*Relevant datasets*:::
+* Borehole/Well
+* Piezometer (+ associated observations)
+* Aquifer
+* AquiferSystem
+* Aquifer/River interaction
+* River Network
+* River
+* gage (+ associated observations)
 
 **Surface water impacted groundwater level forecasting**:: A groundwater
 extraction modeler needs information about surface water that replenishes
 groundwater so they can understand and forecast groundwater availability.
 
-*Relevant datasets*::: * Groundwater wells and level data * Surface water
-monitoring sites and flow data * Meteorological monitoring sites and
-observations * Output predictions at groundwater prediction wells
+*Relevant datasets*:::
+* Groundwater wells and level data
+* Surface watervmonitoring sites and flow data
+* Meteorological monitoring sites and observations
+* Output predictions at groundwater prediction wells
 
 === Use Cases Implemented as Demonstrations of Outcomes
 
