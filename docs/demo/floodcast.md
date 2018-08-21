@@ -7,8 +7,6 @@ The objectives of the Floodcast prototype system are to develop a strategic fram
 Figure 1. Key data elements in Floodcast
 ![Figure 1. Key data elements in Floodcast](https://opengeospatial.github.io/ELFIE/images/floodcast_fig1.png)
 
-[**Need a prominent link to the demo if possible**](https://opengeospatial.github.io/ELFIE/demo/template)
-
 ### User Story
 
 A person who needs to operate or use transportation or other critical infrastructure needs a dashboard showing what assets and roads are expected to be impacted durring a forecast flood event.

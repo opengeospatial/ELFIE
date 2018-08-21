@@ -8,7 +8,7 @@ network, Aquifer system) it is then feasible to acquire knowledge about a fully
 comprehensive water system. This use case can be seen as a flagship one to
 demonstrate the usefulness of linked data in the environnemental context.
 
-** The demo is available as a set of 2 videos**
+**The demo is available as a set of 2 videos**
 * [link to access video 1 .](https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction_video_1.mp4){:target="_blank"}
 * [link to access video 2 .](https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction_video_2.mp4){:target="_blank"}
 
