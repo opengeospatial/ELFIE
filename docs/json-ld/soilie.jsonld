@@ -1,5 +1,7 @@
 {
     "@context": {
+        "schema": "http://schema.org/",
+        "skos": "https://www.w3.org/TR/skos-reference/",
         "soil": "http://lab.scinfo.org.nz/soil-data-ie/def/feature/",
         "soilprop": "http://lab.scinfo.org.nz/soil-data-ie/def/property/",
         "SO_SoilFeatureType": "soil:SO_SoilFeatureType",
@@ -31,10 +33,11 @@
         "soProportion": "soilprop:soProportion",
         "soDesignation": "soilprop:soDesignation",
         "soSoil": "soilprop:soSoil",
-        "soLabel": "soilprop:soLabel",
-        "soScheme": "soilprop:soScheme",
+        "soLabel": "skos:prefLabel",
+        "soScheme": "skos:inScheme",
         "soSourceRole": "soilprop:soSourceRole",
         "soTargetRole": "soilprop:soTargetRole",
+        "soDescription": "schema:description",
         "soLocation": "soilprop:soLocation",
         "soMinimumValue": "soilprop:soMinimumValue",
         "soMaximumValue": "soilprop:soMaximumValue"
