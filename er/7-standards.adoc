@@ -17,7 +17,8 @@ OGC data models were used extensively in the ELFIE. The Observations and Measure
 
 Domain specific data models such as WaterML2 Part 3: Surface Hydrologic Features and WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) were also used for feature types and relations in the ELFIE linked data documents. 
 
-.Use of Unformalized Identifiers
+[[uris_box]]
+.Box {counter:boxes}: Use of Unformalized Identifiers
 ********************
 A major limitation for use of these data models in the ELFIE was a lack of published taxonomies and ontologies using stable namespaces. Placeholder URIs were minted for their feature types and relations for the ELFIE project and formalization of such taxonomies and ontologies was left for future work.
 

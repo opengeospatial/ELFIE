@@ -3,7 +3,7 @@
 
 === Introduction
 
-An important goal of the ELFIE was "adoptability" by web developers and compatibility with technologies that are ubiquitous on the internet. Given these goals, the IE team started to think in terms of _"views"_ (concept introduced in <<Overview>>) of the linked data graph describing a given environmental feature or observation. Two conceptual _views_, preview and network, were the primary focus of the ELFIE. Preview is meant to be a very simple summary of a feature including type, name, and geometry. Network is meant to be a summary of relevant first-neighbor features in a topological network. These two form the core interoperable set of ELFIE "_views_" but lack domain specific relations such as observational relations and hydrologic topology.
+An important goal of the ELFIE was "adoptability" by web developers and compatibility with technologies that are ubiquitous on the internet. Given these goals, the IE team started to think in terms of _"views"_ (concept introduced in <<view_box>>) of the linked data graph describing a given environmental feature or observation. Two conceptual _views_, preview and network, were the primary focus of the ELFIE. Preview is meant to be a very simple summary of a feature including type, name, and geometry. Network is meant to be a summary of relevant first-neighbor features in a topological network. These two form the core interoperable set of ELFIE "_views_" but lack domain specific relations such as observational relations and hydrologic topology.
 
 Initial ELFIE discussions of the graph view concept used the https://www.w3.org/TR/shacl/[Shapes Constraint Language SHACL] technology as the logical implementation. Further evaluation and consideration of the ELFIE goals regarding adoptability and ubiquity, the https://www.w3.org/TR/json-ld/#the-context[JSON-LD context] was chosen as the most appropriate technical solution to express the graph _views_. The ELFIE contexts are meant to be precise descriptions of what the IE found to be the most appropriate linked data properties (attributes and relations) and types. They are not intended to be used as a schema to specify or validate the contents of a given document. However, they could provide a useful set of aliases for the subset of types and properties that could be expected to be parsed and interpreted by the client.
 
@@ -14,8 +14,8 @@ More information about the design and engineering of ELFIE contexts can be found
 === General ELFIE Contexts
 The ELFIE preview graph _view_, is described by the
 https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld[elf.jsonld] context.
-It uses schema.org[http://schema.org/], skos[https://www.w3.org/TR/skos-reference/],
-and geosparql[http://www.opengeospatial.org/standards/geosparql] properties and types.
+It uses http://schema.org/[schema.org], https://www.w3.org/TR/skos-reference/[skos],
+and http://www.opengeospatial.org/standards/geosparql[geosparql] properties and types.
 Schema.org is used whenever possible to maintain compatibility with search engines, uses SKOS for a lose "related" relationship, and GeoSPARQL for precise specification of a geometric preview. The geometric preview of a feature was an area of contention for the IE.
 
 http://geojson.org/geojson-ld/[GeoJSON-LD] was seen as a logical solution, but as described in the outstanding issues for GeoJSON-LD, nested GeoJSON coordinate arrays are not supported by JSON-LD parsers. Additionally, the schema.org geometry schema was seen as under specified in that among other reasons, it does not provide a default coordinate reference system or a mechanism to declare one. For this reason, the GeoSPARQL well known text format was included providing a precise and JSON-LD compatible geometry format. However, if some logical assumptions are made for the use of schema.org geometry, it can be used to satisfy the basic geometry preview use case with significantly lower technical overhead than support for the full well known text standard. Further work should look more closely at this issue in an attempt to reconcile and or provide guidance.
@@ -26,7 +26,8 @@ context. It uses
 geosparql[http://www.opengeospatial.org/standards/geosparql] and
 OWL-time[https://www.w3.org/TR/owl-time/] relations. As shown below, its emphasis is on simple topological relationships such as touches, intersects, before, etc. A network context would logically include additional domain specific topological relations derived from other contexts, but they are not included in the general network context.
 
-.https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld[elf-network.json-ld]
+[[elf-network-context]]
+.Box {counter:boxes}: https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld[elf-network.json-ld]
 [source,json]
 ----
 {"@context": {
@@ -60,7 +61,8 @@ should follow ELFIE.
 
 As can be seen in the main watershed entry point to the index https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601[here], the watershed data index use case uses two contexts. elf.jsonld and and hyf.jsonld shown below in boxes 2 and 3 respectively. 
 
-.https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld[elf.jsonld]
+[[elf-base-context]]
+.Box {counter:boxes}: https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld[elf.jsonld]
 [source,json]
 ----
 {"@context": {
@@ -81,7 +83,8 @@ As can be seen in the main watershed entry point to the index https://opengeospa
 }}
 ----
 
-.https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[hyf.jsonld]
+[[hyf-context]]
+.Box {counter:boxes}: https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[hyf.jsonld]
 [source,json]
 ----
 {"@context": {
@@ -124,7 +127,8 @@ As can be seen in the main watershed entry point to the index https://opengeospa
 
 Note that the JSON-LD document that describes the watershed using these two contexts does not implement all the relations in either context. Rather, they are limited to relations from them and only implement the relations from them that make sense or have content for the feature that is being described. Box 4 shows this entry point JSON-LD document. Note that it uses elf.jsonld relations like schema:name, and schema:description, but not gsp:hasGeometry or schema:image. This is because a feature of type HY_Catchment is not expected to have a particular geometry and there is no image available for the feature. The flexibility of the JSON-LD context approach (compared to SHACL or other more rigorous approaches) is a strength in that it can be applied to many cases easily, but this may be seen as a weakness if specific requirements and validations need to be implemented.
 
-.https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601[Watershed Data Index Use Case Entry JSON-LD Document]
+[[huc12obs_example]]
+.Box {counter:boxes}: https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601[Watershed Data Index Use Case Entry JSON-LD Document]
 [source,json]
 ----
 {"@context": [

@@ -1,41 +1,127 @@
 [[Experiment_Outcomes_Summary]]
 == Summary of Experiment and Analysis of Outcomes
-As described previously, The ELFIE was intended to test existing OGC and W3C
-standards with the goal of establishing a best practice for exposing links
-between and among environmental domain and sampling features. The project
-sought to test existing solutions to linking data on the web with a "just
-enough" semantic annotation approach that would be approachable by developers
-and adoptable existing systems. Many use cases were discussed and a few of them
-were selected for experimental implementation.
+As described previously, the ELFIE was intended to test existing OGC and W3C standards with the goal of establishing a best practice for expressing and exposing links between and among environmental domain and sampling features. The project sought to test existing solutions to linking data on the web with a "just enough" semantic annotation approach that would be approachable by developers and adoptable existing systems. Many use cases were discussed and a few of them were selected for experimental implementation.
 
-All experimental implementations are summarized on the
-https://opengeospatial.github.io/ELFIE/[ELFIE demo pages.] The collection of
-experiments show that existing practices for encoding linked data can be used
-to satisfy the important environmental linked features use cases considered by
-ELFIE. In cases where features and related information were already published
-as linked data or had well established web services, these data and/or service-
-generated representations were easy to incorporate and use. Many of the core
-linked data relations used for search engine optimization were found to be
-suited to typical environmental linked feature use cases.
+All experimental implementations are summarized on the https://opengeospatial.github.io/ELFIE/[ELFIE demo pages.] The collection of experiments show that existing practices for encoding linked data can be used to satisfy the important environmental linked features use cases considered by the ELFIE. In cases where features and related information were already published as linked data or had well established web services, these data and/or service generated representations were easy to incorporate and use. Many of the core linked data relations used for search engine optimization were found to be suited to typical environmental linked feature use cases
+
+=== Watershed Data Index Use Case Example
+
+While additional content is available on the ELFIE demo pages, the watershed data index use case, that was described in greater detail in previous sections, is described in greater detail here. As shown in Box 4, this use case has a primary entry point JSON-LD document for a single HY_Catchment feature that uses the elf.jsonld and hyf.jsonld contexts. As described in section 7.3, the HY_Catchment is thought of as an unrealized feature that has multiple features that “realize” one of the ways we conceptualize catchments. The JSON-LD documents for these are shown in the source code box below.
+
+Items to note below:
+
+* Only two contexts are shown. While other contexts were used to some extent in ELFIE, this use case was kept purposefully simple and only demonstrates elf.jsonld and hyf.jsonld. See <<elf-network-context>> and <<elf-base-context>> for these context documents.
+* Several geospatial preview geometry options are shown. As described elsewhere, use of the schema:geoshape, schema:geoCoordinates, gsp:hasGeometry, and/or a link to a geojson document are all possible and have potential value.
+* HY_Features relations are draft and will not resolve. Work to publish HY_Features feature types and associations is underway at the time of writing.
+* Much more information could be included in the hydrometricNetwork document or at the feature page of the individual hydrometricFeatures. Those details were not implemented for this demo.
+* The catchment example shows three different representations of the abstract Catchment, each showing a different realization of the catchment. First, it is described as a HY_HydrographicNetwork, which is a network of waterbodies. Second, as a HY_CatchmentDivide, which is defined as the topographic divide around a catchment; and third as a HY_HydrometricNetwork, which lists all the monitoring stations that are found in this catchment. 
+
+[[huc12obs-example]]
+.Box {counter:boxes}: Catchment realizations of: https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601 geometry and networkStation lists truncated for clarity.
+[source,json]
+----
+{
+  "@context": [ <1>
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601", <2>
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork", <3>
+  "name": "NHDPlus V2.0 Network for Waunakee Marsh-Sixmile Creek",
+  "description": "Collection of Flowlines for HUC12 watershed.",
+  "realizedCatchment": [ <4>
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "geo": [
+    {
+      "@type": "schema:GeoCoordinates",
+      "schema:latitude": 43.2103,
+      "schema:longitude": -89.5171
+    },
+    {
+      "@type": "schema:GeoShape",
+      "schema:url": "https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601.geojson",
+      "schema:polygon": "-89.5793623030186 43.1836688965559 ... -89.5793623030186 43.1836688965559"
+    }
+  ],
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "MULTILINESTRING ((-89.57936 43.18367, -89.5793 43.18399, … -89.46324 43.19541, -89.46321 43.19576))"
+  }
+}
+<5>
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide",
+  "name": "Waunakee Marsh-Sixmile Creek Boundary",
+  "description": "USGS Watershed Boundary Dataset Twelve Digit Hydrologic Unit Code Watershed Boundary",
+  "realizedCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "geo": [
+    {
+      "@type": "schema:GeoCoordinates",
+      "schema:latitude": 43.2114,
+      "schema:longitude": -89.521
+    },
+    {
+      "@type": "schema:GeoShape",
+      "schema:url": "https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601.geojson",
+      "schema:polygon": "-89.42488760601 43.216595418436 … -89.42488760601 43.216595418436"
+    }
+  ],
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "MULTIPOLYGON (((-89.42489 43.2166, -89.42525 43.21684, ... -89.42532 43.21637, -89.42489 43.2166)))"
+  }
+}
+<6>
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
+    "https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+  ],
+  "@id": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork",
+  "name": "Waunakee Marsh-Sixmile Creek Monitoring Network",
+  "description": "Monitoring locations in the Waunakee Marsh-Sixmile Creek watershed.",
+  "realizedCatchment": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
+  "networkStation": [
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/nwissite/huc12obs/USGS-05427880",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
+    },
+    {
+      "@id": "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001227",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
+    }
+  ]
+}
+----
+
+<1> The two contexts used here  
+<2> The identifier for this hydrograhic network. If you follow the link, you will see the full example including geospatial property details.  
+<3> The is “HY_HydrographicNetwork”. The link does not resolve yet because HY_Features have not been made available yet on the OGC server. A HY_HydrographicNetwork is a collection of waterbody features that drain to a catchment outlet.  
+<4> The HY_HydrographicNetwork realizes a catchment describing it with as a network of lines representing waterbodies. Each realization of HY_Catchment uses both “schema:geo” and “gsp:hasGeometry” to provide both simplified representations that describe the location of the HY_Catchment  as point or surrounding polygon and a more detailed representation respectively.  
+<5> The second part describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. Howeverm "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries. 
+<6> The third part describes the catchment as a Hydrometric_Network. Here, the Network_Stations are of primary interest. The list of stations is truncated here to improve readability, in reality, there are many more stations located in this catchment.  
 
 === Future Work
-The experiments exposed several issues with existing and new technologies
-that need to be addressed to realize the full potential of the core linked
-encoding technologies tested. The issue of representation of a preview geometry
-for a feature should be addressed and seems to be a tractable problem that could
-lead to significant benefits. Another tractable and important issue is creation
-of ontologies for domain features. As of the completion of ELFIE, this work was
-already being undertaken for existing domain models where a UML to OWL conversion
-is possible. Other domain models, such as flood impact features, need to be
-created and or vetted by a community.
+The experiments exposed several issues with existing and new technologies that need to be addressed to realize the full potential of the core linked data encoding technologies tested. The issue of representation of a preview geometry for a feature should be addressed and seems to be a tractable problem that could lead to significant benefits. Another tractable and important issue is creation of ontologies for domain features. As of the completion of the ELFIE, this work was already being undertaken for existing domain models where a UML to OWL conversion is possible. Other domain models, such as flood impact features, need to be created and or vetted by a community.
 
-There were also several issues highlighted by the ELFIE that were deemed out of
-scope and purposefully left for future efforts. The foundational issue in this
-category is the "landing page" or "default representation" problem. That is,
-how should we handle the case where a dereferencable URI meant to identify a
-real world entity with multiple digital representations. There are many related
-issues largely related to the network architecture and expected behavior when
-dereferencing URIs. These were generally out of scope for ELFIE but need to
-be addressed to achieve interoperability and include: URI structure,
-use of non-information URIs with WFS and other services, strategies for managing
-collections of potentially temporary linked data among many data providers.
+There were also several issues highlighted by the ELFIE that were deemed out of scope and purposefully left for future efforts. The foundational issue in this category is the "landing page" or "default representation" problem. That is, how should we handle the case where a dereferenceable URI meant to identify a real world entity with multiple digital representations. There are many related issues largely related to the network architecture and expected behavior when dereferencing URIs. These were generally out of scope for the ELFIE but need to be addressed to achieve interoperability and include: URI structure, use of non-information URIs with WFS and other services, strategies for managing collections of potentially temporary linked data among many data providers.
