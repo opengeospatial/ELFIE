@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "skos": "https://www.w3.org/TR/skos-reference/",
+        "Concept": "skos:Concept",
+        "ConceptScheme": "skos:ConceptScheme",
+        "prefLabel": "skos:prefLabel",
+        "altLabel": "skos:altLabel",
+        "notation": "skos:notation",
+        "definition": "skos:definition",
+        "broader": "skos:broader",
+        "narrower": "skos:narrower",
+        "inScheme": "skos:inScheme",
+        "hasTopConcept": "skos:hasTopConcept",
+        "topConceptOf": "skos:topConceptOf"
+    }
+}
