@@ -6,7 +6,7 @@ The Environmental Linked Feature Interoperability Experiment (ELFIE) has explore
 . The need to encode topological and domain specific relationships between cross-domain features 
 . The need to link available observations data to sampled domain features. 
 
-.Box 1 Views
+.Linked Data Graph Views
 *******************************
 While considering specific use cases, the IE has addressed issues of encoding specific (simplified and useful) views of a rich (arbitrarily complex) linked data graph that could potentially be known, discovered through links, and passed between systems. These graph views, which are italicized throughout for clarity of usage, support linked data architectures including catalogs and registries. For example, data providers could use these views as a best practice to expose their monitoring features and/or domain features to systems that traverse, harvest, and index available data. Similarly, integrated catalogs that index and construct links between features can use the views as a linked data response to queries.  
 Views may correspond to concepts such as shapes (as per the W3C Shapes Constraint Language – SHACL), schema and profiles, however at this stage the formal correspondence has yet to be fully tested and articulated, and the relationships between these concepts themselves is not fully articulated. The W3C Data Exchange Working Group is currently developing a guidance document around the concept of profiles which may provide a useful baseline for formalizing these concepts in future.
