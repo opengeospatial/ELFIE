@@ -2,185 +2,21 @@
 == Use Case Summary
 
 === Introduction
-ELFIE design work was directed by a number of use cases with
-extensive need for linked environmental data. These use cases are either
-hurdles to systems they maintain or would be nice additions to systems they
-rely on as users. Many of these use cases were described and used for
-discussion and vetting of ideas only, others were taken further with
-implementation of example encoded linked data documents and client code to
-visualize data involved in the use case.
+The design phase of the ELFIE focused on the identification of a number of use cases with extensive need for linked environmental data. These use cases focused on known difficulties of the systems the ELFIE participants maintain or depend on as users. Many of these use cases were used for the discovery and vetting of ideas only.  Others were further developed with implementation of example encoded linked data and client code to produce desired results of the use case.
 
-The full suite of use cases considered during the design phase of the
-project are described below. Each use case takes the form of a simple
-description of who or what system has an interest in what related datasets.
-Specific datasets are listed to clarify the scope and provide a starting
-point for technical design work. Use cases that were implemented as
-demonstrations of the design outcomes are described in more detail to include
-notional diagrams of how datasets involved link to each other, a thorough
-description of the use case, and an example application that speaks to and/or
-satisfies the needs of the use case.
+Test cases that were implemented as demonstrations of the design outcomes are described below in full detail to include notional diagrams of how datasets involved link to each other, a thorough description of the use case, and an example application that speaks to and/or satisfies the needs of the use case.
 
-=== Use Cases Considered in Design Process
+The full suite of use cases considered during the design phase of the project are described in Appendix D: Use Cases. Each use case takes the form of a simple description of who or what system has an interest in what related datasets. Specific datasets are listed to clarify the scope and provide a starting point for future technical design work. 
 
-**River network linked data to address hydrologic drought and ecology**::
-Water consumers and decision makers are interested in potential ecological
-and economic impacts of additional water use.
 
-*Relevant datasets*::: 
-* River network
-* Incremental catchments
-* Low flow and temperature sensitive species distributions
-* Monitoring locations
-* Low flow and temperature forecasts
-* Ecological stream classification
-* Historical streamflow characteristics
-* Flow and temperature regulations
+=== Test Cases Implemented as Demonstrations of Outcomes
 
-**Stream water quality and quantity monitoring**:: Water consumers are
-interested in ambient stream characteristics and water quality impacts of
-water allocation decisions.
+**Water budget summary** This use case provides a person interested in a basic summary of the water budget for a given watershed information about a collection of watersheds and their water budget data. It links together various hydrographic representations of each watershed as well as observational water budget data and related web resources.
 
-*Relevant datasets*:::
-* River network
-* Monitoring locations
-* Water quality data
-* Water quantity data
-* Water allocation information
-* Diversions and discharges
-
-**Flood risks and impacts**:: A person in a flood-impacted area needs
-information about the risks to them for a forecast or ongoing flood event.
-
-*Relevant datasets*:::
-* River network
-* Stream flow and stage forecasts
-* Topography
-* Flood depth and extent data for event
-* Flood plain map(s)
-* Flood control assets
-* Impacted transportation assets
-* At risk critical infrastructure
-
-**Water quality impacts monitoring of mining activities**:: A water quality
-analyst needs to know what data is available to assess baseline and impacted
-conditions of a waterbody impacted by mine-related runoff.
-
-*Relevant datasets*:::
-* River network
-* On network waterbodies
-* Realtime water quality monitoring locations and data
-* Water quality sampling locations and data
-* Mine locations
-* Snowpack and runoff
-* River flow monitoring locations and data
-
-**Cross border monitoring index**:: An analyst working in a cross border
-watershed or aquifer needs information characterizing their study region from
-another country of jurisdiction.
-
-*Relevant datasets*:::
-* River network data
-* Catchment data
-* Aquifer data
-* Streamflow monitoring locations and data
-* Aquifer monitoring wells and data
-
-**Water budget summary**:: A person interested in a basic summary of the
-water budget for a given watershed needs information about the watershed and
-its water budget data.
-
-*Relevant datasets*:::
-* Watershed boundary
-* Watershed outlet location
-* Water budget component data
-* Links to additional information
-
-**Watershed data index**:: A person with a stake in the conditions of a given
-watershed needs an index of all water-quality related information about the
-watershed.
-
-*Relevant datasets*:::
-* Impaired (e.g. polluted or degraded) waters
-* Drinking water quality violation reports
-* Facilities with discharge permits
-* Water quality infrastructure investments
-* Watershed characteristics
-* Modeled data such as nutrient concentrations
-
-**Flood monitoring at bridges**:: A jurisdiction with significant
-infrastructure near or over waterways needs a system to link waterways,
-bridges, and various observations for situational awareness and model
-calibration/validation.
-
-*Relevant datasets*:::
-* River network
-* Bridge inventory
-* Monitoring stations and data
-* Locations where model results are available
-
-**Flood Impact Study**:: A hydrologist conducting a flood impact study needs
-to collect relevant information from various agencies.
-
-*Relevant datasets*:::
-* River network
-* Watershed boundaries
-* Hydrologic locations of vulnerable infrastructure
-* Hydrologic locations of monitoring stations and data
-* Meteorological monitoring stations and data
-* Elevation data
-* Water table / aquifer data
-* Rainfall forecast
-
-**Ground water level monitoring**:: Groundwater level monitoring networks are
-deployed on the field to monitor Aquifer status. A groundwater specialist needs
-to be able to traverse links from the Well to the piezomter deployed and,
-furthermore to the acquired observation (timeseries).
-
-*Relevant datasets*:::
-* Groundwater wells description
-* Piezometer description
-* Groundwater levels at piezometer level
-
-**Surface-ground water networks interaction**:: Management of the pressures on
-natural resources requires properly linking domain features not only using
-surface/ground water interaction at a local level but also taking benefit of
-the broader river networks and aquifer systems connectivity.
-
-*Relevant datasets*:::
-* Borehole/Well
-* Piezometer (+ associated observations)
-* Aquifer
-* AquiferSystem
-* Aquifer/River interaction
-* River Network
-* River
-* gage (+ associated observations)
-
-**Surface water impacted groundwater level forecasting**:: A groundwater
-extraction modeler needs information about surface water that replenishes
-groundwater so they can understand and forecast groundwater availability.
-
-*Relevant datasets*:::
-* Groundwater wells and level data
-* Surface watervmonitoring sites and flow data
-* Meteorological monitoring sites and observations
-* Output predictions at groundwater prediction wells
-
-=== Use Cases Implemented as Demonstrations of Outcomes
-
-**Water budget summary** This use case provides a person interested in a
-basic summary of the water budget for a given watershed information about a
-collection of watersheds and their water budget data. It links together
-various hydrographic representations of each watershed as well as
-observational water budget data and related web resources.
-
-As shown in the <<img_uswb_data>>, the watershed feature is linked to various
-representations of it. This follows the HY_Features concept of a catchment as
-an _unrealized_ feature that is related to various realization features,
-there is no canonical representation of the watershed itself.
+As shown in the <<img_uswb_data>>, the watershed feature (black) is linked to various representations of it or information characterizing it (white). This follows the HY_Features HY_Catchment concept (Watershed in figure 1) as an unrealized feature that is related to various realization features, there is no canonical representation of the watershed itself.
 
 [#img_uswb_data,reftext='{figure-caption} {counter:figure-num}']
-.Notional diagram of relationships between data in the water budget summary use case.
+.Notional diagram of relationships between watershed feature (black) and linked representations and water budget data (white) in the water budget summary use case.
 image::images/uswb.png[width=600,align="center"]
 
 Additional details about the water budget summary use case implementation is
@@ -188,74 +24,71 @@ available on the
 https://opengeospatial.github.io/ELFIE/demo/uswb[demonstration ELFIE web
 page.]
 
-**Watershed data index** This use case is meant to demonstrate the use of
-HY_Features to link a catchment (12 digit hydrologic unit code (HUC12)
-watershed in this case) to the data representing it as well as the monitoring
-network associated with it. It serves as a general demonstration that could
-be used for a wide array of linked watershed information use cases.
+**Flood risks and impacts** This use case provides a decision maker needing to respond to flooded transportation infrastructure the information they need to understand the impacted assets and flooded roads for a forecast flood. Under this use case, a flood forecasting system would be able to discover vulnerable infrastructure and assets published by local jurisdictions as linked data and publish flood forecasts that include potentially impacted features in forecast information products.
+
+[#img_floodcast,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of features (black) and linked data (white) in the floodcast use case. Note that many more relationships could be expressed if desired.
+image::images/floodcast.png[width=600,align="center"]
+
+**Ground water level monitoring** Ground water level monitoring This use case is meant to demonstrate how from a given Well URI any user (domain expert, machine) can then traverse to the monitoring strategy deployed (piezometer information etc.) and then access to the ground water level time series and/or information about the monitored aquifer. 
+
+[#img_groundwater_monitoring_data,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of features (black) and data (white)  in the ground water level monitoring use case.
+image::images/FR_groundwater_monitoring.png[width=450,align="center"]
+
+Additional details about the ground water level monitoring use case implementation is available on the
+https://opengeospatial.github.io/ELFIE/demo/groundwater_monitoring[demonstration
+ELFIE web page.]
+
+**Surface-ground water networks interaction** This use case is meant to demonstrate how from a given Piezometer URI any user (domain expert, machine) can traverse to the ground water monitoring strategy (see Ground water level monitoring Use Case) but also to the associated surface water monitoring one. Provided each surface/groundwater features are properly linked together (River network, Aquifer system) it is then feasible to acquire knowledge about a fully comprehensive water system. This use case can be seen as a flagship one to demonstrate the usefulness of linked data in the environnemental/cross-silos context.
+
+[#img_surface_groundwater_networks,reftext='{figure-caption} {counter:figure-num}']
+.Notional diagram of features (black) and linked observational data (white) in the surface-ground water networks interaction use case.
+image::images/FR_surface_ground_surface_roundtrip.png[width=750,align="center"]
+
+Additional details about the surface-ground water networks interaction use case implementation is available on the https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction[demonstration ELFIE web page.]
+
+**Watershed data index** This use case is meant to demonstrate the use of HY_Features to link a catchment (12 digit hydrologic unit code (HUC12) watershed in this case) to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.
 
 [#img_huc12obs_data,reftext='{figure-caption} {counter:figure-num}']
-.Notional diagram of relationships between data in the watershed data index use case.
+.Notional diagram of relationships between the features (black) and linked data (white) in the watershed data index use case.
 image::images/us_huc12_obs.png[width=600,align="center"]
 
-Additional details about the water budget summary use case implementation is
+Additional details about the watershed data index use case implementation is
 available on the
 https://opengeospatial.github.io/ELFIE/demo/huc12obs[demonstration ELFIE web
 page.]
 
-**Flood risks and impacts** This use case provides a decision maker needing
-to respond to flooded transportation infrastructure the information they need
-to understand the impacted assets and flooded roads for a forecast flood.
-Under this use case, a flood forecasting system would be able to discover
-vulnerable infrastructure and assets published by local jurisdictions as
-linked data and publish flood forecasts that include potentially impacted
-features in forecast information products.
+=== Watershed Data Index Use Case in Depth
 
-[#img_floodcast_data,reftext='{figure-caption} {counter:figure-num}']
-.Notional diagram of data in the floodcast use case.
-image::images/floodcast.png[width=800,align="center"]
+This use case is introduced in more detail than those above here and its technical details are presented below. Technical details of other use cases can be found at the 
+https://opengeospatial.github.io/ELFIE/[ELFIE demonstration web
+page.]
 
-// Sylvain 20180516 -> Dave : did you demonstrate this one ? Because from BRGM
-// this one was not For the moment I commented it
+The watershed data index use case is focused on a single HY_Catchment feature with an identifier of "070900020601" from the https://nhd.usgs.gov/wbd.html[U.S. watershed boundary dataset]. Given that HY_Catchment is an unrealized featuretype, the document describing https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601["070900020601"] links to realizations of "070900020601".  Three catchment realizations are included: 
 
-// **Surface water impacted groundwater level forecasting** This use case tests
-// the ability of established data models to link surfacewater and groundwater
-// features and observations for applications like recharge estimation from
-// rivers or water supply source selection. The implemented solution is a
-// collection of rich linked data documents showing how features, observations,
-// and related data can be encoded in JSON-LD.
+. the https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601[boundary] polygon from the watershed boundary dataset, 
+. the https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601[hydrographic] network from the National Hydrography Dataset, 
+. and the https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601[hydrometric] network, a collection of monitoring sites in the catchment.
 
-**Ground water level monitoring** This use case is meant to demonstrate how from
-a given Well URI any user (domain expert, machine) can then traverse to the
-monitoring strategy deployed and then access to the ground water level time
-series. Further than advocating the linked data approach it serves as a
-demonstration artifact on how typed information can trigger type-specific data
-viewer (here map and time series).
+A more complete implementation could include multiple versions of any of these feature types as well as additional realization types such as a network of channels, or a network of sub-catchments. The boundary polygon and hydrographic network are geospatial features that only link back to the catchment they realize. The hydrometric network is a more complex feature that aggregates a set of network stations, each of type HY_HydrometricFeature.
 
-[#img_groundwater_monitoring_data,reftext='{figure-caption} {counter:figure-num}']
-.Notional diagram of data in the ground water level monitoring use case.
-image::images/FR_groundwater_monitoring.png[width=450,align="center"]
+[#img_huc12obs_screenshot,reftext='{figure-caption} {counter:figure-num}']
+.Screenshot of watershed data index use case.
+image::images/huc12obs_screenshot.png[width=600,align="center"]
 
-Additional details about the ground water level monitoring use case
-implementation is available on the
-https://opengeospatial.github.io/ELFIE/demo/groundwater_monitoring[demonstration
-ELFIE web page.]
+=== Surface-ground water networks interaction Use Case in Depth
 
+This use case is introduced in more detail than those above here and its technical details are presented below as it makes intensive use of linked data technologies.
 
-**Surface-ground water networks interaction** This use case is meant to
-demonstrate how from a given Piezometer URI any user (domain expert, machine)
-can traverse to the ground water monitoring strategy (see Ground water level
-monitoring Use Case) but also to the associated surface water monitoring one.
-Provided each surface/groundwater features are properly linked together (river
-network, aquifer system) it is then feasible to acquire knowledge about a fully
-comprehensive water system. This use case can be seen as a flagship one to
-demonstrate the usefulness of linked data in the environmental context.
+The Surface-ground water networks interaction use case is focused on a single Piezometer with an identifier from the French Ground Water Information Network (00463X0036-H1.2). From its JSON-LD description it is possible to dereference URIs of the acquired observation, the monitored Hydrogeounit but also the associated Stream gage. Indeed, in hydrological contexts where the surface/ground water units interaction is properly described, groundwater and surface water monitoring stations are ‘associated’ with correlation coefficients as behaviour of their monitored featured has an impact on the other. The associated Stream gage description is also an entry point to the river network and its monitoring.
 
-[#img_surface_groundwater_networks,reftext='{figure-caption} {counter:figure-num}']
-.Notional diagram of data in the surface-ground water networks interaction use case.
-image::images/FR_surface_ground_surface_roundtrip.png[width=750,align="center"]
+The implementation use case tested during ELFIE allowed to traverse the data graph depicted below. Using a dedicated application it was possible to interact with it: either displaying on maps geographical features or triggering observation display widgets (timeseries).
 
-Additional details about the surface-ground water networks interaction use case
-implementation is available on the
-https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction[demonstration
-ELFIE web page.]
+[#img_sgn_ss_1,reftext='{figure-caption} {counter:figure-num}']
+.Screenshot of the surface-ground water networks interaction use case (map visualization data graph traversed).
+image::images/surface_groundwater_networks_screenshot_1.png[width=600,align="center"]
+
+[#img_sgn_ss_2,reftext='{figure-caption} {counter:figure-num}']
+.Screenshot of the surface-ground water networks interaction use case (widget visualisations of dereferenced observations).
+image::images/surface_groundwater_networks_screenshot_2.png[width=600,align="center"]

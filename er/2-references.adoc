@@ -3,8 +3,6 @@
 
 The following normative documents are referenced in this document.
 
-.NOTE: 	Only normative standards are referenced here, e.g. OGC, ISO or other SDO standards. All other references are listed in the bibliography. Example:
-
 * https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9, OGC® Web Services Common Standard]
 
 * http://docs.opengeospatial.org/is/14-111r6/14-111r6.html[OGC 14-111r6, OGC® WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model]

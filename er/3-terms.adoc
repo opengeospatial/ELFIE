@@ -2,46 +2,59 @@
 
 For the purposes of this report, the definitions specified in Clause 4 of the OWS Common Implementation Standard https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9] shall apply. In addition, the following terms and definitions apply.
 
-===	feature
- text of the definition
+=== feature
+Abstraction of real-world phenomena. [ISO 19101:2002, definition 4.11]. 
 
 === property
- text of the definition
+facet or attribute of an object referenced by a name [ISO 19143:2010, definition 4.21]
 
-=== object property
- text of the definition
- 
 === subject
- text of the definition
+The subject is the first part of an RDF statement. A subject in the context of a triple <?s ?p ?o> refers to who or what the RDF statement is about. (See https://www.w3.org/TR/ld-glossary/#subject)
 
 === predicate
- text of the definition
+The middle term (the linkage, or "verb") in an RDF statement. For example, in the statement "Alice knows Bob" then "knows" is the predicate which connects "Alice" (the subject of the statement) to "Bob" (the object of the statement). (See https://www.w3.org/TR/ld-glossary)
+
+=== Object
+In the context of RDF, the object is the final part of an RDF statement. (See https://www.w3.org/TR/ld-glossary/#object)
 
 === resource
-  text of the definition
+A resource represents anything that can be identified, including physical things, documents, abstract concepts, numbers and strings (see https://www.w3.org/TR/rdf11-concepts/ ) 
 
 === observation
- text of the definition
+Act of measuring or otherwise determining the value of a property [ISO19156:2011, definition 4.11]
 
-=== view
- text of the definition
+=== (graph) view
+specific (simplified and useful) subset of a rich (complete but complicated) linked data graph
 
 === non-information URI
- text of the definition
+A URI for a non-information resource, which is a web resource that cannot be transmitted electronically. A URI is defined as a non-information URI when a HTTP Get Request does not return a 2xx “Success” response when dereferenced. No data are returned because the URI represents something other than a web information resource. i. e. a person or object.
 
-===	term name|synonym
- text of the definition
-
-.NOTE: 	The Terms and definitions clause is an optional element giving definitions necessary for the understanding of certain terms used in this document.
+=== watershed | catchment
+A physiographic unit defined by a common hydrologic outlet and potentially defined input(s). May have several representations per http://docs.opengeospatial.org/is/14-111r6/14-111r6.html[OGC 14-111r6 HY_Features]. Note that “watershed” translations may be problematic (e.g. translating the term into German leads to two valid but different terms, i.e. “Wasserscheide”, which is the actual drainage divide, and “Einzugsgebiet”, which is the area. The definition here encompases both.). 
 
 ==	Abbreviated terms
 
-.NOTE: The abbreviated terms clause gives a list of the abbreviated terms and the symbols necessary for understanding this document. All symbols should be listed in alphabetical order.	Some more frequently used abbreviated terms are provided below as examples.
-
-* API	Application Program Interface
-* COM	Component Object Model
-* CORBA	Common Object Request Broker Architecture
-* COTS	Commercial Off The Shelf
-* DCE	Distributed Computing Environment
-* DCOM	Distributed Component Object Model
-* IDL	Interface Definition Language
+* API - Application Programming Interface
+* ELFIE - Environmental Linked Features Interoperability Experiment
+* GeoSPARQL - Geospatial SPARQL Protocol and RDF Query Language (recursive acronym)
+* GWML2 - WaterML2 Part 4: Groundwater Markup Language
+* HTTP - Hypertext Transfer Protocol
+* HY_Features - WaterML2 Part 3: Surface Water Hydrologic Features
+* IE - Interoperability Experiment
+* JSON-LD - JavaScript Object Notation for Linked Data
+* O&M - Observations and Measurements
+* OWL - Web Ontology Language
+* OWS - OGC Web Services Common
+* RDF - Resource Description Framework
+* REST - Representational State Transfer
+* SHACL - Shapes Constraint Language
+* SOS - Sensor Observation Service
+* SOSA - Sensor, Observation, Sample, and Actuator
+* URI - Uniform Resource Identifier
+* URL - Uniform Resource Locator
+* WaterML2 - Suite of Data Standards for the Hydrology Domain
+* WFS - Web Feature Service
+* UML - Unified Modeling Language
+* W3C - World Wide Web Consortium
+* WKT - Well Known Text
+* XML - eXtensible Markup Language

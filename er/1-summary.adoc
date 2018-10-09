@@ -29,7 +29,11 @@ All questions regarding this document should be directed to the editor or the co
 |====================
 |Name |Organization
 |David Blodgett | U.S. Geological Survey
-|((contributor)) | ((from org))
+|Byron Cochrane | Land Information New Zealand
+|Ingo Simonis | Open Geospatial Consortium
+|Rob Atkinson | Metalinkage
+|Sylvain Grellet | Bureau de Recherches Géologiques et Minières
+|Abdelfettah Feliachi | Bureau de Recherches Géologiques et Minières
 |====================
 
 
