@@ -84,12 +84,6 @@ include::9-outcomes.adoc[]
 include::10-recommendations.adoc[]
 
 ////
-add or remove annexes as necessary
-
-include::annex-c.adoc[]
-////
-
-////
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
 ////
@@ -97,6 +91,8 @@ Bibliography should be the last annex
 include::annex-a.adoc[]
 
 include::annex-b.adoc[]
+
+include::annex-c.adoc[]
 
 include::annex-history.adoc[]
 
