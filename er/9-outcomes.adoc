@@ -1,5 +1,5 @@
 [[Experiment_Outcomes_Summary]]
-== Summary of experiment and analysis of outcomes
+== Summary of Experiment and Analysis of Outcomes
 As described previously, The ELFIE was intended to test existing OGC and W3C
 standards with the goal of establishing a best practice for exposing links
 between and among environmental domain and sampling features. The project
