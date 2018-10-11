@@ -27,4 +27,6 @@ The IE has produced numerous experimental demonstration JSON-LD instance files. 
 The IE has produced a number of demonstration visualizations. The list below will grow as the IE is wrapped up.  
 - [**Watershed Data Index Demo**](https://opengeospatial.github.io/ELFIE/demo/huc12obs){:target="_blank"}
 - [**US Water Budgets Demo**](https://opengeospatial.github.io/ELFIE/demo/uswb){:target="_blank"}
-
+- [**Surface-Ground Water Networks Interaction Demo**](https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction){:target="_blank"}
+- [**Ground Water Monitoring Demo**](https://opengeospatial.github.io/ELFIE/demo/groundwater_monitoring){:target="_blank"}
+- [**FloodCast Demo**](https://opengeospatial.github.io/ELFIE/demo/floodcast){:target="_blank"}

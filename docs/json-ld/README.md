@@ -4,10 +4,14 @@
 This document summarizes normative [JSON-LD Context
 Files](https://www.w3.org/TR/json-ld/#the-context) to be referenced by
 JSON-LD encoded representations of resources provided by ELFIE participants.
+These contexts and the example files linked below are general in nature and
+do not make reference to any ELFIE use cases or specific demos. This is
+due to the fact that they were developed in support of all use cases and
+slightly preceding primary implementation of the demos.
 
 They have been designed with the 'Testbed-12 JSON and GeoJSON User Guide'
 [OGC 16-122r1](http://docs.opengeospatial.org/guides/16-122r1.html) as a
-guideline. The ELFIE team is relying on that guide as a cumulative summary  
+guideline. The ELFIE team is relying on that guide as a cumulative summary 
 of earlier discussions (e.g. those out of Testbed 11 etc).
 
 The context of a JSON-LD document should not be provided inline but by

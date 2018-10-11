@@ -1,18 +1,11 @@
 [appendix]
 = Revision History
 
-[NOTE]
-.Example History (Delete this note).
-===============================================
-replace below entries as needed
-===============================================
-
 .Revision History
 [width="90%",options="header"]
 |====================
-|Date |Release |Editor | Primary clauses modified |Descriptions
-|June 15, 2016 |I. Simonis | .1 |all |initial version
-|July 22, 2016 |I. Simonis | .9 |all |comments integrate
-|September 7, 2016 |S. Simmons |1.0|various |preparation for publication
-|March 23, 2017 |I. Simonis | 2.0 |all |template simplified
+|Date |Editor |Release | Primary clauses modified |Descriptions
+|July 28, 2018|D. Blodgett |0.1 |all |initial version
+|August 28, 2018 |B. Cochrane |0.2 |all |reorganize and edit
+|September 19, 2018 |R. Atkinson |0.3 |all |Updated status of HY_Features ontology and W3C directions
 |====================

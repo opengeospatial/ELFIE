@@ -1,4 +1,4 @@
-// html conversion: asciidoctor -r asciidoctor-bibtex -a linkcss -a stylesheet=rocket-panda.css -a stylesdir=./stylesheets er.adoc
+// html conversion: asciidoctor -r asciidoctor-bibtex -a linkcss -a stylesheet=./stylesheets/rocket-panda.css er.adoc
 
 // *****************************************************************************
 // please provide the following elements
@@ -84,12 +84,6 @@ include::9-outcomes.adoc[]
 include::10-recommendations.adoc[]
 
 ////
-add or remove annexes as necessary
-
-include::annex-c.adoc[]
-////
-
-////
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
 ////
@@ -97,6 +91,8 @@ Bibliography should be the last annex
 include::annex-a.adoc[]
 
 include::annex-b.adoc[]
+
+include::annex-c.adoc[]
 
 include::annex-history.adoc[]
 
