@@ -8,7 +8,7 @@ Note that in the JSON-LD files provided on ELFIE github, URIs are relative to th
 
 === Watershed Data Index Use Case Example
 
-While additional content is available on the ELFIE demo pages, the watershed data index use case, that was described in greater detail in previous sections, is described in greater detail here. As shown in Box 4, this use case has a primary entry point JSON-LD document for a single HY_Catchment feature that uses the elf.jsonld and hyf.jsonld contexts. As described in section 7.3, the HY_Catchment is thought of as an unrealized feature that has multiple features that “realize” one of the ways we conceptualize catchments. The JSON-LD documents for these are shown in the source code box below.
+While additional content is available on the ELFIE demo pages, the watershed data index use case, that was described in greater detail in previous sections, is described in greater detail here. As shown in Box 4 <<8-contexts.adoc#contexts-in-context-exemple-on-the-watershed-data-index-use-case,here>>, this use case has a primary entry point JSON-LD document for a single HY_Catchment feature that uses the elf.jsonld and hyf.jsonld contexts. As described in this <<6-usecases.adoc#watershed-data-index-use-case-in-depth,section>>, the HY_Catchment is thought of as an unrealized feature that has multiple features that “realize” one of the ways we conceptualize catchments. The JSON-LD documents for these are shown in the source code box below.
 
 Items to note below:
 
