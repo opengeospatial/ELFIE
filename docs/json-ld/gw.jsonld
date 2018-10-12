@@ -1,6 +1,6 @@
 {
     "@context": {
-        "gw": "http://opengeospatial/def/ontology/gwml2#",
+        "gw": "https://www.opengis.net/def/gwml2#",
         "GW_HydrogeoUnit": "gw:GW_HydrogeoUnit",
         "GW_Aquifer": "gw:GW_Aquifer",
         "GW_Well": "gw:GW_Well",
