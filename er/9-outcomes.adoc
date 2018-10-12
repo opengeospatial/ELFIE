@@ -120,7 +120,7 @@ Items to note below:
 <2> The identifier for this hydrograhic network. If you follow the link, you will see the full example including geospatial property details.  
 <3> The is “HY_HydrographicNetwork”. The link does not resolve yet because HY_Features have not been made available yet on the OGC server. A HY_HydrographicNetwork is a collection of waterbody features that drain to a catchment outlet.  
 <4> The HY_HydrographicNetwork realizes a catchment describing it with as a network of lines representing waterbodies. Each realization of HY_Catchment uses both “schema:geo” and “gsp:hasGeometry” to provide both simplified representations that describe the location of the HY_Catchment  as point or surrounding polygon and a more detailed representation respectively.  
-<5> The second part describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. Howeverm "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries. 
+<5> The second part describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. However "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries. 
 <6> The third part describes the catchment as a Hydrometric_Network. Here, the Network_Stations are of primary interest. The list of stations is truncated here to improve readability, in reality, there are many more stations located in this catchment.  
 
 === Surface-ground water networks interaction Use Case Example
