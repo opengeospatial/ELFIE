@@ -1,6 +1,6 @@
 {
     "@context": {
-        "gsmlbh": "https://www.opengis.net/def/ontology/gsmlbh#",
+        "gsmlbh": "https://www.opengis.net/def/gsmlbh#",
 	"Borehole": "gsmlbh:Borehole"        
     }
 }
