@@ -9,13 +9,15 @@ Given this, the ELFIE sought to define a common approach to encoding links betwe
 
 === OGC Web Standards
 
-OGC Web Service standards for features and observations (WFS and SOS respectively) were used to construct HTTP URLs for use in the ELFIE linked data documents as much as possible. While the WFS and SOS APIs present some challenges in creating URLs for use in linked data, the APIs do offer sufficient HTTP GET functionality to embed useful content in linked data with a great degree of flexibility. Issues related to URL structure and a given API-call’s relation to a canonical non-information resource URI were encountered but deferred for future investigations.
+OGC Web Service standards for features and observations (WFS, SOS and SensorThings API respectively) were used to construct HTTP URLs for use in the ELFIE linked data documents as much as possible.
+While the WFS and SOS APIs present some challenges in creating URLs for use in linked data, the APIs do offer sufficient HTTP GET functionality to embed useful content in linked data with a great degree of flexibility. The situation is different from SensorThings API as the HTTP GET functionalities are here but the operation involve 'internal ids' to call the desired features. Workarounds have been tried but they involve URL encode of the features URI in the operation.
+Issues related to URL structure and a given API-call’s relation to a canonical non-information resource URI were encountered but deferred for future investigations.
 
 === OGC Domain Models
 
 OGC data models were used extensively in the ELFIE. The Observations and Measurements (O&M) conceptual model provided a high level organizing framework for most the ELFIE documents. The OGC-W3C Spatial Data On the Web Working Group implementation of O&M (Sensor, Observation, Sample, and Actuator (SOSA)) was used directly because of its applicability to the linked data technology pursued in the ELFIE. The GeoSPARQL ontology was also used directly for representing geometries and spatial relations between features.
 
-Domain specific data models such as WaterML2 Part 3: Surface Hydrologic Features and WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) were also used for feature types and relations in the ELFIE linked data documents. 
+Domain specific data models such as WaterML2 Part 3: Surface Hydrologic Features, WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) and GeoSciML were also used for feature types and relations in the ELFIE linked data documents. 
 
 [[uris_box]]
 .Box {counter:boxes}: Use of Unformalized Identifiers
@@ -29,7 +31,7 @@ Not all URIs used in examples in this project are not intended to be stable. For
 
 W3C best practices for data on the web, spatial data in the web, and linked data were used to guide decisions related to the ELFIE linked data documents. Several members of the ELFIE project team were involved in development of these best practices and represented them throughout the project. Given this, the ELFIE was an opportunity to apply these best practices in a practical engineering process, using them together and attempting to apply them to OGC web service and information models.
 
-This was largely successful and no major issues were encountered related to the best practices themselves. However, they were not achieved fully due to realities of the internet, organization’s operational constraints, and limitations of current APIs and data models. In other words, a project seeking to apply OGC standards on their current infrastructure within the suggested W3C best practices would find it very difficult or expensive to achieve them.
+This was largely successful and no major issues were encountered related to the best practices themselves. However, they were not achieved fully due to realities of the internet, organization’s operational constraints, and limitations of current APIs and data models. In other words, a project seeking today to apply current OGC standards on their infrastructure within the suggested W3C best practices (i.e: DXWG work in progress) would have to set up ad'hoc system behaviour (proxy negociation by 'profiles', feature request by its URI, rewriting to JSON-LD, ...). This situation is mainly due to the fact that several standardisation work are in progress in parallel (W3C DXWG, OGC WFS 3, ...). 
 
 Experiences from the ELFIE project are being taken forward into influencing future W3C standards through the Data Exchange Working Group, where the concept of views is being addressed within the scope of the profiles concept. Description, discovery, metadata and negotiation according to formally identified profiles mirrors the ELFIE architectural choice to publish and reuse JSON-LD contexts.
 
