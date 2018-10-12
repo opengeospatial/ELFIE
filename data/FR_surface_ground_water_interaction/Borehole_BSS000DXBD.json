@@ -2,10 +2,11 @@
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld"
+        "https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+	"https://opengeospatial.github.io/ELFIE/json-ld/gsml.jsonld"
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgwi/BSS000DXBD",
-    "@type": "Sample",
+    "@type": ["Sample", "GW_Well", "Borehole"],
     "name": "Forage BSS000DXBD",
     "gsp:hasGeometry": {
 				"@type":"gsp:Geometry",
