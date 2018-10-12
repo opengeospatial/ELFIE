@@ -123,6 +123,8 @@ Items to note below:
 <5> The second part describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. Howeverm "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries. 
 <6> The third part describes the catchment as a Hydrometric_Network. Here, the Network_Stations are of primary interest. The list of stations is truncated here to improve readability, in reality, there are many more stations located in this catchment.  
 
+=== Surface-ground water networks interaction Use Case Example
+
 === Future Work
 The experiments exposed several issues with existing and new technologies that need to be addressed to realize the full potential of the core linked data encoding technologies tested. The issue of representation of a preview geometry for a feature should be addressed and seems to be a tractable problem that could lead to significant benefits. Another tractable and important issue is creation of ontologies for domain features. As of the completion of the ELFIE, this work was already being undertaken for existing domain models where a UML to OWL conversion is possible. This was the topic of an ad'hoc meeting next to OGC TC March 2018 in Orléans which main outcomes are summarized in Annex A: <<annex-a.adoc#,ontology_from_uml>>. Other domain models, such as flood impact features, need to be created and or vetted by a community.
 
