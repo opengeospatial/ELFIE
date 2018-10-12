@@ -48,3 +48,8 @@ While details of the default dereferencing behavior of non information resource 
 * optimal registration processes and registry provision for identifying, cataloguing , discovering and serving profiles/contexts
 * use of expected W3C/IETF mechanisms for profile negotiation in URI dereferencing
 * Adding additional dimensions of representation choice when dereferencing for geometry type, resolution, CRS etc
+
+
+==== Preview Geometry 
+As demonstrated in the Watershed Data Index use case JSON-LD documents in box 5, how to encode a preview geometry is not clear. The only widely used preview is a point geometry defined by schema.org GeoCoordinates. The schema.org polygon and line features have not been implemented widely and, like GeoSPARQL WKT geometries, require interpretation above and beyond what would be required for GeoJSON. Linking to a GeoJSON file works, but is not common in practice and requires additional web-requests to retrieve, which is undesirable for a basic preview geometry. With the advent of javascript libraries that can handle WKT, it seems likely that a GeoSPARQL WKT geometry could be used effectively, but further experimentation may be needed to confirm this assumption.
+

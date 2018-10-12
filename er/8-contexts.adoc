@@ -18,7 +18,7 @@ It uses http://schema.org/[schema.org], https://www.w3.org/TR/skos-reference/[sk
 and http://www.opengeospatial.org/standards/geosparql[geosparql] properties and types.
 Schema.org is used whenever possible to maintain compatibility with search engines, uses SKOS for a lose "related" relationship, and GeoSPARQL for precise specification of a geometric preview. The geometric preview of a feature was an area of contention for the IE.
 
-http://geojson.org/geojson-ld/[GeoJSON-LD] was seen as a logical solution, but as described in the outstanding issues for GeoJSON-LD, nested GeoJSON coordinate arrays are not supported by JSON-LD parsers. Additionally, the schema.org geometry schema was seen as under specified in that among other reasons, it does not provide a default coordinate reference system or a mechanism to declare one. For this reason, the GeoSPARQL well known text format was included providing a precise and JSON-LD compatible geometry format. However, if some logical assumptions are made for the use of schema.org geometry, it can be used to satisfy the basic geometry preview use case with significantly lower technical overhead than support for the full well known text standard. Further work should look more closely at this issue in an attempt to reconcile and or provide guidance.
+http://geojson.org/geojson-ld/[GeoJSON-LD] was seen as a logical solution, but as described in the outstanding issues for GeoJSON-LD, nested GeoJSON coordinate arrays are not supported by JSON-LD parsers. Additionally, the schema.org geometry schema was seen as under specified in that among other reasons, it does not provide a default coordinate reference system or a mechanism to declare one. For this reason, the GeoSPARQL well known text format was included providing a precise and JSON-LD compatible geometry format. However, provided the technical limitations listed <<10-recommendations#preview-geometry,below>>, if some logical assumptions are made for the use of schema.org geometry (https://schema.org/GeoShape[schema:GeoShape]), it can be used to satisfy the basic geometry preview use case with significantly lower technical overhead than support for the full well known text standard. Further work should look more closely at this issue in an attempt to reconcile and or provide guidance.
 
 The ELFIE network graph _view_, is described by the
 https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld[elf-network.jsonld]
@@ -45,19 +45,21 @@ OWL-time[https://www.w3.org/TR/owl-time/] relations. As shown below, its emphasi
 ----
 
 === Domain Specific Contexts
-Two extended general contexts and three domain specific contexts were created
+Two extended general contexts and five domain specific contexts were created
 for testing in ELFIE. The extended general contexts have content from the
 https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld[timeseriesML] and
 https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld[SOSA] data models.
 The domain specific contexts have content from
 https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[HY_Features],
-https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2], and the
+https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2], 
+https://opengeospatial.github.io/ELFIE/json-ld/soilie.jsonld[soilIE], 
+https://opengeospatial.github.io/ELFIE/json-ld/gsml.jsonld[GeoSciML], and the
 https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld[floodcast]
 use case. All of these contexts, except SOSA, were created as part of the
 ELFIE project without formal ontologies to back them. Work on these ontologies
 should follow ELFIE.
 
-=== Contexts in context: Watershed Data Index Use Case
+=== Contexts in context: exemple on the Watershed Data Index Use Case
 
 As can be seen in the main watershed entry point to the index https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601[here], the watershed data index use case uses two contexts. elf.jsonld and and hyf.jsonld shown below in boxes 2 and 3 respectively. 
 
