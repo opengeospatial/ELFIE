@@ -10,7 +10,11 @@ If queries to WFS or SOS services are used as un-structured links that return re
 
 The work ongoing with WFS appears promising with regard to the issues outlined above. The ability to query by a specific id that can be an http url is supported and is a clear solution that would solve the problem illustrated here. e.g. something like: `http://server.com/wfs/getfeature?id=http://feature.x.y.x` 
 
-**SOS and SensorThings commentary?**
+A similar discussion happened to sensor related services. SOS V2.0 specification (OGC 12-006), already started discussing identifier handling in its Annex B and promoted reuse of global identifier (here gml:identifier) as oppose to local id (gml:id) when querying services. SensorThings API Part 1 implementations use their own internal id for the REST API operations (ex : http://sensorthings.brgm-rec.fr/SensorThingsGroundWater/v1.0/Observations(1752377)). It was tested to query both services endpoints(SOS, SensorThingsAPI) passing them URIs for featuresOfInterest, observed properties, process, observation identifier, ... to use them in a linked data context Resulting queries are overloaded by HTML encode of those elements but its works.
+
+What is not yet provided is JSON-LD response by those services. Response rewriters have been tested on top of SensorThings API (JSON to JSON-LD). It might prove useful to include this capacity in the standards.
+
+Apart from data semantic/serialization itself an open point to be tackled by each data provider on a use case per use case basis is the URI assignation on its observation resources. TimeSeries subsetting is a complex subject by itself. Research Data Alliance https://rd-alliance.org/group/data-citation-wg/outcomes/data-citation-recommendation.html['Data Citation WG Recommendations'] might help on that aspect
 
 === Domain Feature Model Issues
 **Availability of useful encodings / practices to generate them**  

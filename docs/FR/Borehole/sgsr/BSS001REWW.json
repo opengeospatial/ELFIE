@@ -2,11 +2,13 @@
     "@context": [
         "https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld",
         "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-		"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
-		"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld"
+	"https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld",
+	"https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld",
+	"https://opengeospatial.github.io/ELFIE/json-ld/gsml.jsonld"    
+	    
     ],
     "@id": "https://opengeospatial.github.io/ELFIE/FR/Borehole/sgsr/BSS001REWW",
-    "@type": "sosa:Sample",
+    "@type": ["sosa:Sample", "GW_Well", "Borehole"],
     "name": "Forage BSS001REWW",
     "gsp:hasGeometry": {
 				"@type":"gsp:Geometry",
