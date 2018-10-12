@@ -53,7 +53,7 @@ The domain specific contexts have content from
 https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[HY_Features],
 https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2], 
 https://opengeospatial.github.io/ELFIE/json-ld/soilie.jsonld[soilIE], 
-https://opengeospatial.github.io/ELFIE/json-ld/gsml.jsonld[GSML], and the
+https://opengeospatial.github.io/ELFIE/json-ld/gsml.jsonld[GeoSciML], and the
 https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld[floodcast]
 use case. All of these contexts, except SOSA, were created as part of the
 ELFIE project without formal ontologies to back them. Work on these ontologies
