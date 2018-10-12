@@ -1,6 +1,6 @@
 [appendix]
 [[ontology_from_uml]]
-=== Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards
+== Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards
 
 .Authors
 [%header,cols=2*]
@@ -45,7 +45,7 @@
 |AZGS
 |===
 
-== Introduction
+=== Introduction
 
 OGC Environmental Linked Features Interoperability Experiment (ELFIE) has explored publishing environmental observations as linked data, with data interpretation supported by having unambiguous references to key domain concepts in the data represented by additional links (URIs). Such concepts cover the nature of the properties of a data object, but also the key Use Case of linking an observation to the Feature of Interest.
 
