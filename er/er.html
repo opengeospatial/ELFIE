@@ -656,13 +656,14 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#_introduction_3">9.1. Introduction</a></li>
 <li><a href="#_general_elfie_contexts">9.2. General ELFIE Contexts</a></li>
 <li><a href="#_domain_specific_contexts">9.3. Domain Specific Contexts</a></li>
-<li><a href="#_contexts_in_context_watershed_data_index_use_case">9.4. Contexts in context: Watershed Data Index Use Case</a></li>
+<li><a href="#_contexts_in_context_exemple_on_the_watershed_data_index_use_case">9.4. Contexts in context: exemple on the Watershed Data Index Use Case</a></li>
 </ul>
 </li>
 <li><a href="#Experiment_Outcomes_Summary">10. Summary of Experiment and Analysis of Outcomes</a>
 <ul class="sectlevel2">
 <li><a href="#_watershed_data_index_use_case_example">10.1. Watershed Data Index Use Case Example</a></li>
-<li><a href="#_future_work">10.2. Future Work</a></li>
+<li><a href="#_surface_ground_water_networks_interaction_use_case_example">10.2. Surface-ground water networks interaction Use Case Example</a></li>
+<li><a href="#_future_work">10.3. Future Work</a></li>
 </ul>
 </li>
 <li><a href="#Issues_Recommendations">11. Issues and Recommendations for Future Work.</a>
@@ -670,36 +671,40 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#_ogc_service_standards_and_implementation_issues">11.1. OGC Service Standards and Implementation issues.</a></li>
 <li><a href="#_domain_feature_models">11.2. Domain Feature Models</a></li>
 <li><a href="#_publication_of_uris_content_types_and_associations">11.3. Publication of URIs, Content, Types, and Associations</a></li>
-<li><a href="#_default_response_when_a_uri_has_multiple_representations">11.4. Default Response When a URI has Multiple Representations</a></li>
-<li><a href="#ontology_from_uml">Appendix A: Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a></li>
+<li><a href="#_default_response_when_a_uri_has_multiple_representations">11.4. Default Response When a URI has Multiple Representations</a>
+<ul class="sectlevel3">
+<li><a href="#_preview_geometry">11.4.1. Preview Geometry</a></li>
 </ul>
 </li>
-<li><a href="#_introduction_4">12. Introduction</a>
+</ul>
+</li>
+<li><a href="#ontology_from_uml">Appendix C: Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a>
 <ul class="sectlevel2">
-<li><a href="#_problem_statement">12.1. Problem statement</a></li>
-<li><a href="#_background">12.2. Background</a></li>
-<li><a href="#_proposed_strategy">12.3. Proposed strategy</a></li>
-<li><a href="#_issues_identified">12.4. Issues identified</a>
+<li><a href="#_introduction_4">C.1. Introduction</a></li>
+<li><a href="#_problem_statement">C.2. Problem statement</a></li>
+<li><a href="#_background">C.3. Background</a></li>
+<li><a href="#_proposed_strategy">C.4. Proposed strategy</a></li>
+<li><a href="#_issues_identified">C.5. Issues identified</a>
 <ul class="sectlevel3">
-<li><a href="#_naming_policy">12.4.1. Naming Policy</a></li>
-<li><a href="#_weaknesses_or_issues_with_iso_19150_2_rules">12.4.2. Weaknesses or issues with  ISO 19150-2 rules</a></li>
-<li><a href="#_property_names_and_definitions">12.4.3. Property names and definitions</a></li>
-<li><a href="#_alignment_documents_uml_owl">12.4.4. Alignment documents (UML &#8594; OWL)</a></li>
-<li><a href="#_meta_model_issues_expressivity_mismatches_between_owl_and_uml">12.4.5. Meta-model issues (expressivity mismatches between OWL and UML)</a></li>
-<li><a href="#_bugs_and_limitations_in_software_or_things_too_hard_to_configure">12.4.6. Bugs and limitations in software (or things too hard to configure)</a></li>
-<li><a href="#_annotation_practices">12.4.7. Annotation practices</a></li>
-<li><a href="#_proposed_behavior_when_external_classes_is_specified_as_properties_values">12.4.8. Proposed behavior when external classes is specified as properties values</a></li>
-<li><a href="#_standing_issues">12.4.9. Standing issues</a></li>
+<li><a href="#_naming_policy">C.5.1. Naming Policy</a></li>
+<li><a href="#_weaknesses_or_issues_with_iso_19150_2_rules">C.5.2. Weaknesses or issues with  ISO 19150-2 rules</a></li>
+<li><a href="#_property_names_and_definitions">C.5.3. Property names and definitions</a></li>
+<li><a href="#_alignment_documents_uml_owl">C.5.4. Alignment documents (UML &#8594; OWL)</a></li>
+<li><a href="#_meta_model_issues_expressivity_mismatches_between_owl_and_uml">C.5.5. Meta-model issues (expressivity mismatches between OWL and UML)</a></li>
+<li><a href="#_bugs_and_limitations_in_software_or_things_too_hard_to_configure">C.5.6. Bugs and limitations in software (or things too hard to configure)</a></li>
+<li><a href="#_annotation_practices">C.5.7. Annotation practices</a></li>
+<li><a href="#_proposed_behavior_when_external_classes_is_specified_as_properties_values">C.5.8. Proposed behavior when external classes is specified as properties values</a></li>
+<li><a href="#_standing_issues">C.5.9. Standing issues</a></li>
 </ul>
 </li>
-<li><a href="#_support_material">12.5. Support material</a>
+<li><a href="#_support_material">C.6. Support material</a>
 <ul class="sectlevel3">
-<li><a href="#_configuration_references">12.5.1. Configuration references</a></li>
-<li><a href="#_geosciml_encoding_example">12.5.2. GeoSciML encoding example</a></li>
+<li><a href="#_configuration_references">C.6.1. Configuration references</a></li>
+<li><a href="#_geosciml_encoding_example">C.6.2. GeoSciML encoding example</a></li>
 </ul>
 </li>
-<li><a href="#linked_data_default">Appendix B: Default Response for Multiple Representions and Relations</a></li>
-<li><a href="#use_case_data">Appendix C: Use Cases Considered in Design Process</a></li>
+<li><a href="#linked_data_default">Appendix A: Default Response for Multiple Representions and Relations</a></li>
+<li><a href="#use_case_data">Appendix B: Use Cases Considered in Design Process</a></li>
 </ul>
 </li>
 <li><a href="#_revision_history">Appendix D: Revision History</a></li>
@@ -1023,16 +1028,16 @@ Views may correspond to concepts such as shapes (as per the W3C Shapes Constrain
 <div class="sect2">
 <h3 id="_ie_summary"><a class="anchor" href="#_ie_summary"></a>5.1. IE Summary</h3>
 <div class="paragraph">
-<p>The ELFIE tested the assumption that broadly adopted web technologies for linked data could be applied in the environmental domain to satisfy the needs of a number of compelling use cases. The <a href="#Objectives">Objectives</a> section describes engineering design goals and details the assumptions and scope that were used to constrain the magnitude of the IE. Much of the IE involved design discussions amongst participants where candidate use cases were considered and potential technologies and implementations were explored. The <a href="#Use_Cases">Use Case Summary</a> section describes these use cases and the select set that were more thoroughly tested to evolve the technologies that were agreed upon during design discussions.</p>
+<p>The ELFIE tested the assumption that broadly adopted web technologies for linked data could be applied in the environmental domain to satisfy the needs of a number of compelling use cases. The <a href="#">Objectives</a> section describes engineering design goals and details the assumptions and scope that were used to constrain the magnitude of the IE. Much of the IE involved design discussions amongst participants where candidate use cases were considered and potential technologies and implementations were explored. The <a href="#">Use_Cases</a> section describes these use cases and the select set that were more thoroughly tested to evolve the technologies that were agreed upon during design discussions.</p>
 </div>
 <div class="paragraph">
-<p>The ELFIE technology selection criteria were that they be  adoptable, common, and suitable to the needs of the ELFIE use cases. In some cases new and thus lightly tested domain feature models were applied with the chosen, well established, technologies. The <a href="#Standards_Best_Practices">Applicable Best Practices and Standards</a> section is a brief discussion of the technologies and standards tested in the ELFIE. The technology chosen to provide a precise but not overly prescriptive description of the RDF views is the JSON-LD context. Details of the contexts defined in the ELFIE are discussed in the <a href="#Relations_Contexts">Relations and JSON-LD Contexts</a> section.</p>
+<p>The ELFIE technology selection criteria were that they be  adoptable, common, and suitable to the needs of the ELFIE use cases. In some cases new and thus lightly tested domain feature models were applied with the chosen, well established, technologies. The <a href="#">Standards_Best_Practices</a> section is a brief discussion of the technologies and standards tested in the ELFIE. The technology chosen to provide a precise but not overly prescriptive description of the RDF views is the JSON-LD context. Details of the contexts defined in the ELFIE are discussed in the <a href="#">Relations_Contexts</a> section.</p>
 </div>
 <div class="paragraph">
-<p>The outcomes of the ELFIE provide guidance for creating (graph) views of environmental features and observations. A simple view intended to be a preview, suitable for basic indexing is specified. Views intended to provide topological as well as observational and domain feature model relationships were also explored. The preview view was largely successful, but there was no one satisfactory solution for expression of a preview geometry because GeoJSON is incompatible with JSON-LD, WKT is thought to be difficult to work with in typical web environments, and the schema.org geometries were found to have limited utility. The experimentation with domain feature models led to the conclusion that the underlying linked data technologies are mature enough, but progress is still needed on domain feature ontologies and encoding geometry. These issues are discussed in more detail in the <a href="#Experiment_Outcomes_Summary">Summary of Experiment and Analysis of Outcomes</a> and <a href="#Issues_Recommendations">Issues and Recommendations for Future Work.</a> sections.</p>
+<p>The outcomes of the ELFIE provide guidance for creating (graph) views of environmental features and observations. A simple view intended to be a preview, suitable for basic indexing is specified. Views intended to provide topological as well as observational and domain feature model relationships were also explored. The preview view was largely successful, but there was no one satisfactory solution for expression of a preview geometry because GeoJSON is incompatible with JSON-LD, WKT is thought to be difficult to work with in typical web environments, and the schema.org geometries were found to have limited utility. The experimentation with domain feature models led to the conclusion that the underlying linked data technologies are mature enough, but progress is still needed on domain feature ontologies and encoding geometry. These issues are discussed in more detail in the <a href="#">Experiment_Outcomes_Summary</a> and <a href="#">Issues_Recommendations</a> sections.</p>
 </div>
 <div class="paragraph">
-<p>The ELFIE explored a number of interesting but tangential topics. Annex A: <a href="#ontology_from_uml">Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a> is a summary of one important topic discussed; how to generate a feature ontology from a UML model. Annex B: <a href="#linked_data_default">Default Response for Multiple Representions and Relations</a> is a brief discussion of issues related to what the default response should be when resolving a URI for a non-information resource that may have multiple representations.</p>
+<p>The ELFIE explored a number of interesting but tangential topics. Annex A: <a href="#">ontology_from_uml</a> is a summary of one important topic discussed; how to generate a feature ontology from a UML model. Annex B: <a href="#">linked_data_default</a> is a brief discussion of issues related to what the default response should be when resolving a URI for a non-information resource that may have multiple representations.</p>
 </div>
 </div>
 </div>
@@ -1312,7 +1317,9 @@ page.</a></p>
 <div class="sect2">
 <h3 id="_ogc_web_standards"><a class="anchor" href="#_ogc_web_standards"></a>8.2. OGC Web Standards</h3>
 <div class="paragraph">
-<p>OGC Web Service standards for features and observations (WFS and SOS respectively) were used to construct HTTP URLs for use in the ELFIE linked data documents as much as possible. While the WFS and SOS APIs present some challenges in creating URLs for use in linked data, the APIs do offer sufficient HTTP GET functionality to embed useful content in linked data with a great degree of flexibility. Issues related to URL structure and a given API-call’s relation to a canonical non-information resource URI were encountered but deferred for future investigations.</p>
+<p>OGC Web Service standards for features and observations (WFS, SOS and SensorThings API respectively) were used to construct HTTP URLs for use in the ELFIE linked data documents as much as possible.
+While the WFS and SOS APIs present some challenges in creating URLs for use in linked data, the APIs do offer sufficient HTTP GET functionality to embed useful content in linked data with a great degree of flexibility. The situation is different from SensorThings API as the HTTP GET functionalities are here but the operation involve 'internal ids' to call the desired features. Workarounds have been tried but they involve URL encode of the features URI in the operation.
+Issues related to URL structure and a given API-call’s relation to a canonical non-information resource URI were encountered but deferred for future investigations.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1321,7 +1328,7 @@ page.</a></p>
 <p>OGC data models were used extensively in the ELFIE. The Observations and Measurements (O&amp;M) conceptual model provided a high level organizing framework for most the ELFIE documents. The OGC-W3C Spatial Data On the Web Working Group implementation of O&amp;M (Sensor, Observation, Sample, and Actuator (SOSA)) was used directly because of its applicability to the linked data technology pursued in the ELFIE. The GeoSPARQL ontology was also used directly for representing geometries and spatial relations between features.</p>
 </div>
 <div class="paragraph">
-<p>Domain specific data models such as WaterML2 Part 3: Surface Hydrologic Features and WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) were also used for feature types and relations in the ELFIE linked data documents.</p>
+<p>Domain specific data models such as WaterML2 Part 3: Surface Hydrologic Features, WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) and GeoSciML were also used for feature types and relations in the ELFIE linked data documents.</p>
 </div>
 <div id="uris_box" class="sidebarblock">
 <div class="content">
@@ -1341,7 +1348,7 @@ page.</a></p>
 <p>W3C best practices for data on the web, spatial data in the web, and linked data were used to guide decisions related to the ELFIE linked data documents. Several members of the ELFIE project team were involved in development of these best practices and represented them throughout the project. Given this, the ELFIE was an opportunity to apply these best practices in a practical engineering process, using them together and attempting to apply them to OGC web service and information models.</p>
 </div>
 <div class="paragraph">
-<p>This was largely successful and no major issues were encountered related to the best practices themselves. However, they were not achieved fully due to realities of the internet, organization’s operational constraints, and limitations of current APIs and data models. In other words, a project seeking to apply OGC standards on their current infrastructure within the suggested W3C best practices would find it very difficult or expensive to achieve them.</p>
+<p>This was largely successful and no major issues were encountered related to the best practices themselves. However, they were not achieved fully due to realities of the internet, organization’s operational constraints, and limitations of current APIs and data models. In other words, a project seeking today to apply current OGC standards on their infrastructure within the suggested W3C best practices (i.e: DXWG work in progress) would have to set up ad&#8217;hoc system behaviour (proxy negociation by 'profiles', feature request by its URI, rewriting to JSON-LD, &#8230;&#8203;). This situation is mainly due to the fact that several standardisation work are in progress in parallel (W3C DXWG, OGC WFS 3, &#8230;&#8203;).</p>
 </div>
 <div class="paragraph">
 <p>Experiences from the ELFIE project are being taken forward into influencing future W3C standards through the Data Exchange Working Group, where the concept of views is being addressed within the scope of the profiles concept. Description, discovery, metadata and negotiation according to formally identified profiles mirrors the ELFIE architectural choice to publish and reuse JSON-LD contexts.</p>
@@ -1370,7 +1377,7 @@ page.</a></p>
 <p>Initial ELFIE discussions of the graph view concept used the <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language SHACL</a> technology as the logical implementation. Further evaluation and consideration of the ELFIE goals regarding adoptability and ubiquity, the <a href="https://www.w3.org/TR/json-ld/#the-context">JSON-LD context</a> was chosen as the most appropriate technical solution to express the graph <em>views</em>. The ELFIE contexts are meant to be precise descriptions of what the IE found to be the most appropriate linked data properties (attributes and relations) and types. They are not intended to be used as a schema to specify or validate the contents of a given document. However, they could provide a useful set of aliases for the subset of types and properties that could be expected to be parsed and interpreted by the client.</p>
 </div>
 <div class="paragraph">
-<p>From a practical perspective, the contexts provide clear guidelines for what properties and types to use while not being overly prescriptive, limiting, or difficult to use in a typical web development workflow. Unlike <em>schemas</em>, such contexts support the “Open World Assumption” where missing elements simply indicate that this information is not currently available to the data provider, without the burden (and potential for misuse) of stating a placeholder value.</p>
+<p>From a practical perspective, the contexts provide clear guidelines for what properties and types to use while not being overly prescriptive, limiting, or difficult to use in a typical web development workflow. Unlike <em>schemas</em>, such contexts support the “Open World Assumption” where missing elements simply indicate that this information is not currently available to the data provider, without the burden (and potential for misuse) of stating a placeholder value. Furthermore, for simplifying the use of the contexts and reduce the number of possible errors while parsing the <em>views</em>, <a href="https://w3c.github.io/json-ld-syntax/#type-coercion">Type Coercion</a> was not used while aliasing properties in the contexts files.</p>
 </div>
 <div class="paragraph">
 <p>More information about the design and engineering of ELFIE contexts can be found on the <a href="https://opengeospatial.github.io/ELFIE/json-ld/">ELFIE web page</a>. Note that the discussion and examples there is not in direct reference to the use cases used for discussion and testing of the IE.</p>
@@ -1386,7 +1393,7 @@ and <a href="http://www.opengeospatial.org/standards/geosparql">geosparql</a> pr
 Schema.org is used whenever possible to maintain compatibility with search engines, uses SKOS for a lose "related" relationship, and GeoSPARQL for precise specification of a geometric preview. The geometric preview of a feature was an area of contention for the IE.</p>
 </div>
 <div class="paragraph">
-<p><a href="http://geojson.org/geojson-ld/">GeoJSON-LD</a> was seen as a logical solution, but as described in the outstanding issues for GeoJSON-LD, nested GeoJSON coordinate arrays are not supported by JSON-LD parsers. Additionally, the schema.org geometry schema was seen as under specified in that among other reasons, it does not provide a default coordinate reference system or a mechanism to declare one. For this reason, the GeoSPARQL well known text format was included providing a precise and JSON-LD compatible geometry format. However, if some logical assumptions are made for the use of schema.org geometry, it can be used to satisfy the basic geometry preview use case with significantly lower technical overhead than support for the full well known text standard. Further work should look more closely at this issue in an attempt to reconcile and or provide guidance.</p>
+<p><a href="http://geojson.org/geojson-ld/">GeoJSON-LD</a> was seen as a logical solution, but as described in the outstanding issues for GeoJSON-LD, nested GeoJSON coordinate arrays are not supported by JSON-LD parsers. Additionally, the schema.org geometry schema was seen as under specified in that among other reasons, it does not provide a default coordinate reference system or a mechanism to declare one. For this reason, the GeoSPARQL well known text format was included providing a precise and JSON-LD compatible geometry format. However, provided the technical limitations listed <a href="#preview-geometry">below</a>, if some logical assumptions are made for the use of schema.org geometry (<a href="https://schema.org/GeoShape">schema:GeoShape</a>), it can be used to satisfy the basic geometry preview use case with significantly lower technical overhead than support for the full well known text standard. Further work should look more closely at this issue in an attempt to reconcile and or provide guidance.</p>
 </div>
 <div class="paragraph">
 <p>The ELFIE network graph <em>view</em>, is described by the
@@ -1416,13 +1423,15 @@ OWL-time[<a href="https://www.w3.org/TR/owl-time/" class="bare">https://www.w3.o
 <div class="sect2">
 <h3 id="_domain_specific_contexts"><a class="anchor" href="#_domain_specific_contexts"></a>9.3. Domain Specific Contexts</h3>
 <div class="paragraph">
-<p>Two extended general contexts and three domain specific contexts were created
+<p>Two extended general contexts and five domain specific contexts were created
 for testing in ELFIE. The extended general contexts have content from the
 <a href="https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld">timeseriesML</a> and
 <a href="https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld">SOSA</a> data models.
 The domain specific contexts have content from
 <a href="https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld">HY_Features</a>,
-<a href="https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld">GWML2</a>, and the
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld">GWML2</a>,
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/soilie.jsonld">soilIE</a>,
+<a href="https://opengeospatial.github.io/ELFIE/json-ld/gsml.jsonld">GeoSciML</a>, and the
 <a href="https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld">floodcast</a>
 use case. All of these contexts, except SOSA, were created as part of the
 ELFIE project without formal ontologies to back them. Work on these ontologies
@@ -1430,7 +1439,7 @@ should follow ELFIE.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_contexts_in_context_watershed_data_index_use_case"><a class="anchor" href="#_contexts_in_context_watershed_data_index_use_case"></a>9.4. Contexts in context: Watershed Data Index Use Case</h3>
+<h3 id="_contexts_in_context_exemple_on_the_watershed_data_index_use_case"><a class="anchor" href="#_contexts_in_context_exemple_on_the_watershed_data_index_use_case"></a>9.4. Contexts in context: exemple on the Watershed Data Index Use Case</h3>
 <div class="paragraph">
 <p>As can be seen in the main watershed entry point to the index <a href="https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601">here</a>, the watershed data index use case uses two contexts. elf.jsonld and and hyf.jsonld shown below in boxes 2 and 3 respectively.</p>
 </div>
@@ -1536,12 +1545,15 @@ should follow ELFIE.</p>
 <p>As described previously, the ELFIE was intended to test existing OGC and W3C standards with the goal of establishing a best practice for expressing and exposing links between and among environmental domain and sampling features. The project sought to test existing solutions to linking data on the web with a "just enough" semantic annotation approach that would be approachable by developers and adoptable existing systems. Many use cases were discussed and a few of them were selected for experimental implementation.</p>
 </div>
 <div class="paragraph">
-<p>All experimental implementations are summarized on the <a href="https://opengeospatial.github.io/ELFIE/">ELFIE demo pages.</a> The collection of experiments show that existing practices for encoding linked data can be used to satisfy the important environmental linked features use cases considered by the ELFIE. In cases where features and related information were already published as linked data or had well established web services, these data and/or service generated representations were easy to incorporate and use. Many of the core linked data relations used for search engine optimization were found to be suited to typical environmental linked feature use cases</p>
+<p>All experimental implementations are summarized on the <a href="https://opengeospatial.github.io/ELFIE/">ELFIE demo pages.</a> The collection of experiments show that existing practices for encoding linked data can be used to satisfy the important environmental linked features use cases considered by the ELFIE. In cases where features and related information were already published as linked data or had well established web services, these data and/or service generated representations were easy to incorporate and use. Many of the core linked data relations used for search engine optimization were found to be suited to typical environmental linked feature use cases.</p>
+</div>
+<div class="paragraph">
+<p>Note that in the JSON-LD files provided on ELFIE github, URIs are relative to the file locations on opengeospatial.github.io for linked data demo purposes. This choice helped save time for the IE as it avoided each participant to set up the corresponding mechanics within its own data infrastructure. In production situations, each data provider will end-up exposing those file using their own URI policy.</p>
 </div>
 <div class="sect2">
 <h3 id="_watershed_data_index_use_case_example"><a class="anchor" href="#_watershed_data_index_use_case_example"></a>10.1. Watershed Data Index Use Case Example</h3>
 <div class="paragraph">
-<p>While additional content is available on the ELFIE demo pages, the watershed data index use case, that was described in greater detail in previous sections, is described in greater detail here. As shown in Box 4, this use case has a primary entry point JSON-LD document for a single HY_Catchment feature that uses the elf.jsonld and hyf.jsonld contexts. As described in section 7.3, the HY_Catchment is thought of as an unrealized feature that has multiple features that “realize” one of the ways we conceptualize catchments. The JSON-LD documents for these are shown in the source code box below.</p>
+<p>While additional content is available on the ELFIE demo pages, the watershed data index use case, that was described in greater detail in previous sections, is described in greater detail here. As shown in Box 4 <a href="#contexts-in-context-exemple-on-the-watershed-data-index-use-case">here</a>, this use case has a primary entry point JSON-LD document for a single HY_Catchment feature that uses the elf.jsonld and hyf.jsonld contexts. As described in this <a href="#watershed-data-index-use-case-in-depth">section</a>, the HY_Catchment is thought of as an unrealized feature that has multiple features that “realize” one of the ways we conceptualize catchments. The JSON-LD documents for these are shown in the source code box below.</p>
 </div>
 <div class="paragraph">
 <p>Items to note below:</p>
@@ -1677,7 +1689,7 @@ should follow ELFIE.</p>
 <p>The HY_HydrographicNetwork realizes a catchment describing it with as a network of lines representing waterbodies. Each realization of HY_Catchment uses both “schema:geo” and “gsp:hasGeometry” to provide both simplified representations that describe the location of the HY_Catchment  as point or surrounding polygon and a more detailed representation respectively.</p>
 </li>
 <li>
-<p>The second part describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. Howeverm "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries.</p>
+<p>The second part describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. However "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries.</p>
 </li>
 <li>
 <p>The third part describes the catchment as a Hydrometric_Network. Here, the Network_Stations are of primary interest. The list of stations is truncated here to improve readability, in reality, there are many more stations located in this catchment.</p>
@@ -1686,12 +1698,17 @@ should follow ELFIE.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_future_work"><a class="anchor" href="#_future_work"></a>10.2. Future Work</h3>
+<h3 id="_surface_ground_water_networks_interaction_use_case_example"><a class="anchor" href="#_surface_ground_water_networks_interaction_use_case_example"></a>10.2. Surface-ground water networks interaction Use Case Example</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_future_work"><a class="anchor" href="#_future_work"></a>10.3. Future Work</h3>
 <div class="paragraph">
-<p>The experiments exposed several issues with existing and new technologies that need to be addressed to realize the full potential of the core linked data encoding technologies tested. The issue of representation of a preview geometry for a feature should be addressed and seems to be a tractable problem that could lead to significant benefits. Another tractable and important issue is creation of ontologies for domain features. As of the completion of the ELFIE, this work was already being undertaken for existing domain models where a UML to OWL conversion is possible. Other domain models, such as flood impact features, need to be created and or vetted by a community.</p>
+<p>The experiments exposed several issues with existing and new technologies that need to be addressed to realize the full potential of the core linked data encoding technologies tested. The issue of representation of a preview geometry for a feature should be addressed and seems to be a tractable problem that could lead to significant benefits. Another tractable and important issue is creation of ontologies for domain features. As of the completion of the ELFIE, this work was already being undertaken for existing domain models where a UML to OWL conversion is possible. This was the topic of an ad&#8217;hoc meeting next to OGC TC March 2018 in Orléans which main outcomes are summarized in Annex A: <a href="#">ontology_from_uml</a>. Other domain models, such as flood impact features, need to be created and or vetted by a community.</p>
 </div>
 <div class="paragraph">
-<p>There were also several issues highlighted by the ELFIE that were deemed out of scope and purposefully left for future efforts. The foundational issue in this category is the "landing page" or "default representation" problem. That is, how should we handle the case where a dereferenceable URI meant to identify a real world entity with multiple digital representations. There are many related issues largely related to the network architecture and expected behavior when dereferencing URIs. These were generally out of scope for the ELFIE but need to be addressed to achieve interoperability and include: URI structure, use of non-information URIs with WFS and other services, strategies for managing collections of potentially temporary linked data among many data providers.</p>
+<p>There were also several issues highlighted by the ELFIE that were deemed out of scope and purposefully left for future efforts. The foundational issue in this category is the "landing page" or "default representation" problem. That is, how should we handle the case where a dereferenceable URI meant to identify a real world entity with multiple digital representations. There are many related issues largely related to the network architecture and expected behavior when dereferencing URIs. These were generally out of scope for the ELFIE but need to be addressed to achieve interoperability and include: URI structure, use of non-information URIs with WFS and other services, strategies for managing collections of potentially temporary linked data among many data providers.
+Another out of scope element was the actual usage of the domain features ontology declared in the JSON-LD context. JSON-LD files produced by ELFIE were not ingested by reasoners. Those extra vocabulary source are not yet taken into account by major search engines crawlers; they focus mainly on schema.org content.</p>
 </div>
 </div>
 </div>
@@ -1712,6 +1729,15 @@ should follow ELFIE.</p>
 </div>
 <div class="paragraph">
 <p>The work ongoing with WFS appears promising with regard to the issues outlined above. The ability to query by a specific id that can be an http url is supported and is a clear solution that would solve the problem illustrated here. e.g. something like: <code><a href="http://server.com/wfs/getfeature?id=http://feature.x.y.x" class="bare">http://server.com/wfs/getfeature?id=http://feature.x.y.x</a></code></p>
+</div>
+<div class="paragraph">
+<p>A similar discussion has taken place in sensor-related services. SOS V2.0 specification (OGC 12-006), discusses identifier handling in Annex B and promotes reuse of a global identifier (here gml:identifier) as oppose to local identifier (gml:id) when querying services. The SensorThings API Part 1 implementations use their own internal identifier for the REST API operations (ex : <a href="http://sensorthings.brgm-rec.fr/SensorThingsGroundWater/v1.0/Observations(1752377)" class="bare">http://sensorthings.brgm-rec.fr/SensorThingsGroundWater/v1.0/Observations(1752377)</a>). Both services' endpoints (SOS, SensorThingsAPI) were tested, passing them URIs for featuresOfInterest, observed properties, process, observation identifier, etc. to use them in a linked data context. Resulting queries work but further implementation is required to improve usability of the approach.</p>
+</div>
+<div class="paragraph">
+<p>A JSON-LD response from these services is not available. While response rewriters (to convert existing encodings to a linked data form) have been tested on top of the SensorThings API (JSON to JSON-LD). It may be useful to include JSON-LD capabilities in the standards themselves.</p>
+</div>
+<div class="paragraph">
+<p>Apart from the semantic association and serialization of features and observations, assignment of URIs to observational resources remains a system by system and use-case by use-case problem that is not necessarily trivial. Identification of unique observations and maintaining identifiers for them can become very complicated considering that time series subsetting is a complex subject in and of itself. The Research Data Alliance <a href="https://rd-alliance.org/group/data-citation-wg/outcomes/data-citation-recommendation.html">'Data Citation WG Recommendations'</a> might help guide the community to a useful solution on this front.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1786,9 +1812,18 @@ Further experimental work is required to identify the range of different represe
 </li>
 </ul>
 </div>
+<div class="sect3">
+<h4 id="_preview_geometry"><a class="anchor" href="#_preview_geometry"></a>11.4.1. Preview Geometry</h4>
+<div class="paragraph">
+<p>As demonstrated in the <a href="#watershed-data-index-use-case-example">Watershed Data Index use case JSON-LD document</a> in box 1, how to encode a preview geometry is not clear. The only widely used preview is a point geometry defined by schema.org GeoCoordinates. The schema.org polygon and line features have not been implemented widely and, like GeoSPARQL WKT geometries, require interpretation above and beyond what would be required for GeoJSON. Linking to a GeoJSON file works, but is not common in practice and requires additional web-requests to retrieve, which is undesirable for a basic preview geometry. With the advent of javascript libraries that can handle WKT, it seems likely that a GeoSPARQL WKT geometry could be used effectively, but further experimentation may be needed to confirm this assumption.</p>
 </div>
-<div class="sect2">
-<h3 id="ontology_from_uml"><a class="anchor" href="#ontology_from_uml"></a>Appendix A: Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ontology_from_uml"><a class="anchor" href="#ontology_from_uml"></a>Appendix C: Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 2. Authors</caption>
 <colgroup>
@@ -1852,12 +1887,8 @@ Further experimental work is required to identify the range of different represe
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_introduction_4"><a class="anchor" href="#_introduction_4"></a>12. Introduction</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_4"><a class="anchor" href="#_introduction_4"></a>C.1. Introduction</h3>
 <div class="paragraph">
 <p>OGC Environmental Linked Features Interoperability Experiment (ELFIE) has explored publishing environmental observations as linked data, with data interpretation supported by having unambiguous references to key domain concepts in the data represented by additional links (URIs). Such concepts cover the nature of the properties of a data object, but also the key Use Case of linking an observation to the Feature of Interest.</p>
 </div>
@@ -1870,8 +1901,9 @@ Further experimental work is required to identify the range of different represe
 <div class="paragraph">
 <p>This document builds on those joint discussions in order to share best practices. It is shared under GeoSciML SWG GitHub repository (<a href="https://github.com/opengeospatial/GeoSciML/tree/master/documents" class="bare">https://github.com/opengeospatial/GeoSciML/tree/master/documents</a> ).</p>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_problem_statement"><a class="anchor" href="#_problem_statement"></a>12.1. Problem statement</h3>
+<h3 id="_problem_statement"><a class="anchor" href="#_problem_statement"></a>C.2. Problem statement</h3>
 <div class="paragraph">
 <p>Common semantics for the description of key domain concepts and the type of observations’ the Feature of Interest are identified by using published models – such as HY_Features, GWML, GeoSciML. These models (currently) are available in a normative forms as UML notation, and in some cases as XML schema, neither of which is conducive to easily dereference a URI for a concept to get more detail about that specific concept, or even to confidently match the identity of any references to concepts.</p>
 </div>
@@ -1883,7 +1915,7 @@ Further experimental work is required to identify the range of different represe
 </div>
 </div>
 <div class="sect2">
-<h3 id="_background"><a class="anchor" href="#_background"></a>12.2. Background</h3>
+<h3 id="_background"><a class="anchor" href="#_background"></a>C.3. Background</h3>
 <div class="paragraph">
 <p>BRGM and GSC have performed an initial analysis of the issues and questions that
 arise in the context of:</p>
@@ -1913,7 +1945,7 @@ graph)."</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_proposed_strategy"><a class="anchor" href="#_proposed_strategy"></a>12.3. Proposed strategy</h3>
+<h3 id="_proposed_strategy"><a class="anchor" href="#_proposed_strategy"></a>C.4. Proposed strategy</h3>
 <div class="paragraph">
 <p>Resources, time and testing methodology for "hand building" optimal equivalent ontologies are not available (notwithstanding comments that these may lead to iterative refinement and improvement of the model). The only automated pathway available to all participants currently is using Shapechange (<a href="http://shapechange.net" class="bare">http://shapechange.net</a>), which means developing a set of encoding rules from a wide range of choices and options from previous experiments in encoding different styles of UML model. The ISO 19150-2 artefacts will be seen as an intermediate artefact available by an annotation property reference in the metadata describing the provenance of the ontology. For such perspective the use of PROV-O should be used. "Manual interventions" to artefact to correct bugs or apply further rules will be encoded as RDF transformations or additional statements that can be applied in sequence.</p>
 </div>
@@ -1935,11 +1967,41 @@ graph)."</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_issues_identified"><a class="anchor" href="#_issues_identified"></a>12.4. Issues identified</h3>
+<h3 id="_issues_identified"><a class="anchor" href="#_issues_identified"></a>C.5. Issues identified</h3>
 <div class="sect3">
-<h4 id="_naming_policy"><a class="anchor" href="#_naming_policy"></a>12.4.1. Naming Policy</h4>
+<h4 id="_naming_policy"><a class="anchor" href="#_naming_policy"></a>C.5.1. Naming Policy</h4>
 <div class="paragraph">
-<p>OGC published ontologies will have URIs and Linked Data access based on identifiers under a pattern yet to be chosen.</p>
+<p>OGC published ontologies will have URIs and Linked Data access based on identifiers under a pattern yet to be chosen from the following options.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Option 1</dt>
+<dd>
+<p>@prefix s1: http(s)://www.opengis.net/def/{ontology}/&lt;authority&gt;/&lt;schemaAcronym&gt;
+ex: http(s)://www.opengis.net/def/ontology/HydroDWG/hyf or http(s)://www.opengis.net/def/ontology/HydrologicFeaturesSWG/hyf</p>
+</dd>
+<dt class="hdlist1">Option 2</dt>
+<dd>
+<p>http(s)://www.opengis.net/def/&lt;authority&gt;/{ontology}/&lt;schemaAcronym&gt;
+ex: http(s)://www.opengis.net/def/HydroDWG/ontology/hyf or
+http(s)://www.opengis.net/def/HydrologicFeaturesSWG/ontology/hyf</p>
+</dd>
+<dt class="hdlist1">Option 3</dt>
+<dd>
+<p>http(s)://www.opengis.net/def/{ontology}/&lt;schemaAcronym&gt;
+ex: http(s)://www.opengis.net/def/ontology/hyf
+http(s)://www.opengis.net/def/ontology/hyf/HY_Waterbody &#8594; will be the identifier of the class in the ontology</p>
+</dd>
+<dt class="hdlist1">Option 4</dt>
+<dd>
+<p>http(s)://www.opengis.net/def/&lt;schemaAcronym&gt;
+ex: http(s)://www.opengis.net/def/hyf  (http(s)://www.opengis.net/def/hyf/HY_Waterbody)
+http(s)://www.opengis.net/def/gwml2
+http(s)://www.opengis.net/def/gsml
+Under that option, the reserved word {ontology} being removed, the client has to specify which representation is desired. Thus owl model, rdf, xsd, json-ld context will be returned based on content negotiation (Accept:header) or an explicit file extension
+(ex: <a href="https://www.opengis.net/def/gwml2.xsd" class="bare">https://www.opengis.net/def/gwml2.xsd</a> , <a href="https://www.opengis.net/def/gwml2.ttl" class="bare">https://www.opengis.net/def/gwml2.ttl</a> ).</p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p><em>Note:</em></p>
@@ -1983,36 +2045,6 @@ graph)."</p>
 </li>
 <li>
 <p>base/def/ for identifying ontologies and their components</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Option 1</dt>
-<dd>
-<p>@prefix s1: http(s)://www.opengis.net/def/{ontology}/&lt;authority&gt;/&lt;schemaAcronym&gt;
-ex: http(s)://www.opengis.net/def/ontology/HydroDWG/hyf or http(s)://www.opengis.net/def/ontology/HydrologicFeaturesSWG/hyf</p>
-</dd>
-<dt class="hdlist1">Option 2</dt>
-<dd>
-<p>http(s)://www.opengis.net/def/&lt;authority&gt;/{ontology}/&lt;schemaAcronym&gt;
-ex: http(s)://www.opengis.net/def/HydroDWG/ontology/hyf or
-http(s)://www.opengis.net/def/HydrologicFeaturesSWG/ontology/hyf</p>
-</dd>
-<dt class="hdlist1">Option 3</dt>
-<dd>
-<p>http(s)://www.opengis.net/def/{ontology}/&lt;schemaAcronym&gt;
-ex: http(s)://www.opengis.net/def/ontology/hyf
-http(s)://www.opengis.net/def/ontology/hyf/HY_Waterbody &#8594; will be the identifier of the class in the ontology</p>
-</dd>
-<dt class="hdlist1">Option 4</dt>
-<dd>
-<p>http(s)://www.opengis.net/def/&lt;schemaAcronym&gt;
-ex: http(s)://www.opengis.net/def/hyf  (http(s)://www.opengis.net/def/hyf/HY_Waterbody)
-http(s)://www.opengis.net/def/gwml2
-http(s)://www.opengis.net/def/gsml
-Under that option, the reserved word {ontology} being removed, the client has to specify which representation is desired. Thus owl model, rdf, xsd, json-ld context will be returned based on content negotiation (Accept:header) or an explicit file extension
-(ex: <a href="https://www.opengis.net/def/gwml2.xsd" class="bare">https://www.opengis.net/def/gwml2.xsd</a> , <a href="https://www.opengis.net/def/gwml2.ttl" class="bare">https://www.opengis.net/def/gwml2.ttl</a> ).</p>
-</dd>
-</dl>
-</div>
 </li>
 </ul>
 </div>
@@ -2021,7 +2053,7 @@ Under that option, the reserved word {ontology} being removed, the client has to
 </div>
 </div>
 <div class="sect3">
-<h4 id="_weaknesses_or_issues_with_iso_19150_2_rules"><a class="anchor" href="#_weaknesses_or_issues_with_iso_19150_2_rules"></a>12.4.2. Weaknesses or issues with  ISO 19150-2 rules</h4>
+<h4 id="_weaknesses_or_issues_with_iso_19150_2_rules"><a class="anchor" href="#_weaknesses_or_issues_with_iso_19150_2_rules"></a>C.5.2. Weaknesses or issues with  ISO 19150-2 rules</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2040,7 +2072,7 @@ Under that option, the reserved word {ontology} being removed, the client has to
 </div>
 </div>
 <div class="sect3">
-<h4 id="_property_names_and_definitions"><a class="anchor" href="#_property_names_and_definitions"></a>12.4.3. Property names and definitions</h4>
+<h4 id="_property_names_and_definitions"><a class="anchor" href="#_property_names_and_definitions"></a>C.5.3. Property names and definitions</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2080,7 +2112,7 @@ Under that option, the reserved word {ontology} being removed, the client has to
 </div>
 </div>
 <div class="sect3">
-<h4 id="_alignment_documents_uml_owl"><a class="anchor" href="#_alignment_documents_uml_owl"></a>12.4.4. Alignment documents (UML &#8594; OWL)</h4>
+<h4 id="_alignment_documents_uml_owl"><a class="anchor" href="#_alignment_documents_uml_owl"></a>C.5.4. Alignment documents (UML &#8594; OWL)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2117,7 +2149,7 @@ Under that option, the reserved word {ontology} being removed, the client has to
 </div>
 </div>
 <div class="sect3">
-<h4 id="_meta_model_issues_expressivity_mismatches_between_owl_and_uml"><a class="anchor" href="#_meta_model_issues_expressivity_mismatches_between_owl_and_uml"></a>12.4.5. Meta-model issues (expressivity mismatches between OWL and UML)</h4>
+<h4 id="_meta_model_issues_expressivity_mismatches_between_owl_and_uml"><a class="anchor" href="#_meta_model_issues_expressivity_mismatches_between_owl_and_uml"></a>C.5.5. Meta-model issues (expressivity mismatches between OWL and UML)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2143,7 +2175,7 @@ Choice made to replace the "character string" data properties by object properti
 </div>
 </div>
 <div class="sect3">
-<h4 id="_bugs_and_limitations_in_software_or_things_too_hard_to_configure"><a class="anchor" href="#_bugs_and_limitations_in_software_or_things_too_hard_to_configure"></a>12.4.6. Bugs and limitations in software (or things too hard to configure)</h4>
+<h4 id="_bugs_and_limitations_in_software_or_things_too_hard_to_configure"><a class="anchor" href="#_bugs_and_limitations_in_software_or_things_too_hard_to_configure"></a>C.5.6. Bugs and limitations in software (or things too hard to configure)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2156,7 +2188,7 @@ Choice made to replace the "character string" data properties by object properti
 </div>
 </div>
 <div class="sect3">
-<h4 id="_annotation_practices"><a class="anchor" href="#_annotation_practices"></a>12.4.7. Annotation practices</h4>
+<h4 id="_annotation_practices"><a class="anchor" href="#_annotation_practices"></a>C.5.7. Annotation practices</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2169,13 +2201,13 @@ Choice made to replace the "character string" data properties by object properti
 </div>
 </div>
 <div class="sect3">
-<h4 id="_proposed_behavior_when_external_classes_is_specified_as_properties_values"><a class="anchor" href="#_proposed_behavior_when_external_classes_is_specified_as_properties_values"></a>12.4.8. Proposed behavior when external classes is specified as properties values</h4>
+<h4 id="_proposed_behavior_when_external_classes_is_specified_as_properties_values"><a class="anchor" href="#_proposed_behavior_when_external_classes_is_specified_as_properties_values"></a>C.5.8. Proposed behavior when external classes is specified as properties values</h4>
 <div class="paragraph">
 <p>When a UML class from another schema is referenced (Observation class for example ), it should be replaced by the specialized classes from the ontology of that schema (could be automated in ShapeChange). If such ontology isn’t defined (SWE types for example) use (equivalent) classes from other ontologies or define new ones.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standing_issues"><a class="anchor" href="#_standing_issues"></a>12.4.9. Standing issues</h4>
+<h4 id="_standing_issues"><a class="anchor" href="#_standing_issues"></a>C.5.9. Standing issues</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2189,16 +2221,16 @@ Choice made to replace the "character string" data properties by object properti
 </div>
 </div>
 <div class="sect2">
-<h3 id="_support_material"><a class="anchor" href="#_support_material"></a>12.5. Support material</h3>
+<h3 id="_support_material"><a class="anchor" href="#_support_material"></a>C.6. Support material</h3>
 <div class="sect3">
-<h4 id="_configuration_references"><a class="anchor" href="#_configuration_references"></a>12.5.1. Configuration references</h4>
+<h4 id="_configuration_references"><a class="anchor" href="#_configuration_references"></a>C.6.1. Configuration references</h4>
 <div class="paragraph">
 <p>Shapechange configuration: <a href="https://github.com/opengeospatial/GeoSciML/blob/master/tools/shapeChange/gsml4_bh.xml" class="bare">https://github.com/opengeospatial/GeoSciML/blob/master/tools/shapeChange/gsml4_bh.xml</a>
 Example of transforming GeoSciML Borehole UML Model into OWL. Should be re-used for oher (just need to change the source EAP file, appSchemaName, URIbase).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_geosciml_encoding_example"><a class="anchor" href="#_geosciml_encoding_example"></a>12.5.2. GeoSciML encoding example</h4>
+<h4 id="_geosciml_encoding_example"><a class="anchor" href="#_geosciml_encoding_example"></a>C.6.2. GeoSciML encoding example</h4>
 <div class="paragraph">
 <p>Example of transforming GeoSciML Borehole UML Model into OWL
 Resulating raw ontology from Shapechange:
@@ -2209,7 +2241,7 @@ Ontology after manual edition:
 </div>
 </div>
 <div class="sect2">
-<h3 id="linked_data_default"><a class="anchor" href="#linked_data_default"></a>Appendix B: Default Response for Multiple Representions and Relations</h3>
+<h3 id="linked_data_default"><a class="anchor" href="#linked_data_default"></a>Appendix A: Default Response for Multiple Representions and Relations</h3>
 <div class="paragraph">
 <p>Non information resource identifiers, URIs that are an identifier for a thing that may or may not have information representations, are useful to provide persistent and reusable identifiers for entities such as real-world features. These non information resource identifiers provide a means for global identification across a system such that multiple members of the system can contain information about and/or in reference to shared entities.
 There is a basic conundrum with non information resource identifiers in that there can only be one default response when derefencing a URI and only one member of a distributed system can be the source of that default response. Further, in order to achieve linked system interoperability, dereferencing behavior of non information resource URIs needs to be in accord with the expectations of a member node of a system. The  <a href="https://en.wikipedia.org/wiki/HTTPRange-14">httpRange-14</a> and the <a href="https://www.w3.org/TR/cooluris/">Cool URIs Technical Report</a> provide a significant basis for solving this conundrum and <a href="https://www.w3.org/2017/dxwg">W3C working groups continue to focus on it</a>, but many details remain to be agreed upon for use cases such as are being pursued by the ELFIE.</p>
@@ -2244,7 +2276,7 @@ There is a basic conundrum with non information resource identifiers in that the
 </div>
 </div>
 <div class="sect2">
-<h3 id="use_case_data"><a class="anchor" href="#use_case_data"></a>Appendix C: Use Cases Considered in Design Process</h3>
+<h3 id="use_case_data"><a class="anchor" href="#use_case_data"></a>Appendix B: Use Cases Considered in Design Process</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong>River network linked data to address hydrologic drought and ecology</strong></dt>

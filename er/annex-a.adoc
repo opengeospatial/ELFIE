@@ -1,6 +1,6 @@
 [appendix]
 [[ontology_from_uml]]
-=== Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards
+== Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards
 
 .Authors
 [%header,cols=2*]
@@ -45,7 +45,7 @@
 |AZGS
 |===
 
-== Introduction
+=== Introduction
 
 OGC Environmental Linked Features Interoperability Experiment (ELFIE) has explored publishing environmental observations as linked data, with data interpretation supported by having unambiguous references to key domain concepts in the data represented by additional links (URIs). Such concepts cover the nature of the properties of a data object, but also the key Use Case of linking an observation to the Feature of Interest.
 
@@ -96,21 +96,7 @@ If necessary, rules to extract basic OWL and xsd: datatype equivalence, without 
 
 ==== Naming Policy
 
-OGC published ontologies will have URIs and Linked Data access based on identifiers under a pattern yet to be chosen.
-
-_Note:_
-
-* Words between curly brackets (ex:{ontology}) are ‘reserved words’ thus will remain as is when applied in URIs
-* Words between angle brackets will be replaced by the corresponding values when applied in URIs (ex : ‘hyf’, ‘gwml2’, ‘gsml’ for ex:<schemaAcronym>)
-* as http://www.opengis.net/def/ and http://www.opengis.net/def/auth/  resolve to a wide variety of different notions
-* writing convention
-** Class names will be UpperCamelCase names e.g. *s1:Class1*
-** Properties will be lowerCamelCase e.g. *s1:prop1*. Except for class scoped properties which names are ambiguous (ex: 2 classes having homonym properties but with different semantics) where the applied formalism will be *s1:Class1.prop1*
-** For more details: see options below
-* General semantic web BP
-** base/document/ for identifying informative resources
-** base/id/ for identifying real world entities
-** base/def/ for identifying ontologies and their components
+OGC published ontologies will have URIs and Linked Data access based on identifiers under a pattern yet to be chosen from the following options.
 
 Option 1::  
 @prefix s1: http(s)://www.opengis.net/def/{ontology}/<authority>/<schemaAcronym>
@@ -133,6 +119,22 @@ http(s)://www.opengis.net/def/gwml2
 http(s)://www.opengis.net/def/gsml
 Under that option, the reserved word {ontology} being removed, the client has to specify which representation is desired. Thus owl model, rdf, xsd, json-ld context will be returned based on content negotiation (Accept:header) or an explicit file extension
 (ex: https://www.opengis.net/def/gwml2.xsd , https://www.opengis.net/def/gwml2.ttl ).
+
+_Note:_
+
+* Words between curly brackets (ex:{ontology}) are ‘reserved words’ thus will remain as is when applied in URIs
+* Words between angle brackets will be replaced by the corresponding values when applied in URIs (ex : ‘hyf’, ‘gwml2’, ‘gsml’ for ex:<schemaAcronym>)
+* as http://www.opengis.net/def/ and http://www.opengis.net/def/auth/  resolve to a wide variety of different notions
+* writing convention
+** Class names will be UpperCamelCase names e.g. *s1:Class1*
+** Properties will be lowerCamelCase e.g. *s1:prop1*. Except for class scoped properties which names are ambiguous (ex: 2 classes having homonym properties but with different semantics) where the applied formalism will be *s1:Class1.prop1*
+** For more details: see options below
+* General semantic web BP
+** base/document/ for identifying informative resources
+** base/id/ for identifying real world entities
+** base/def/ for identifying ontologies and their components
+
+
 
 ==== Weaknesses or issues with  ISO 19150-2 rules
 * The rules of ISO 19150-2 restrict the resulting ontologies to the way UML metamodel works . Respecting all of the 19150-2 means we don’t take into account the open world assumption when working with ontologies (missing a piece of information doesn’t mean that piece of information is false). For instance, placeholder properties or classes in UML are transformed to OWL properties and classes where there is no need for them.
