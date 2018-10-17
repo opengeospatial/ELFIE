@@ -668,13 +668,9 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#Issues_Recommendations">11. Issues and Recommendations for Future Work.</a>
 <ul class="sectlevel2">
 <li><a href="#_ogc_service_standards_and_implementation_issues">11.1. OGC Service Standards and Implementation issues.</a></li>
-<li><a href="#_domain_feature_model_issues">11.2. Domain Feature Model Issues</a></li>
-<li><a href="#_general_linked_data_issues">11.3. General linked data issues</a>
-<ul class="sectlevel3">
-<li><a href="#_publication_of_uris_content_types_and_associations">11.3.1. Publication of URIs, Content, Types, and Associations</a></li>
-<li><a href="#_default_response_when_a_uri_has_multiple_representations">11.3.2. Default Response When a URI has Multiple Representations</a></li>
-</ul>
-</li>
+<li><a href="#_domain_feature_models">11.2. Domain Feature Models</a></li>
+<li><a href="#_publication_of_uris_content_types_and_associations">11.3. Publication of URIs, Content, Types, and Associations</a></li>
+<li><a href="#_default_response_when_a_uri_has_multiple_representations">11.4. Default Response When a URI has Multiple Representations</a></li>
 <li><a href="#ontology_from_uml">Appendix A: Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a></li>
 </ul>
 </li>
@@ -717,33 +713,30 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>1. Summary</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A The following is, as all texts in double square brackets, a helper text. Please remove this and all other helper texts once done.</p>
-</div>
-<div class="paragraph">
-<p>The Summary clause shall define without ambiguity the subject of this document and the aspect(s) covered. It shall be succinct so that it can be used as a text for bibliographic purposes.</p>
-</div>
-<div class="paragraph">
-<p>The summary shall further contain a business value statement that should describe the value of this Engineering Report to improve interoperability, advance location-based technologies or realize innovations.</p>
+<p>Systems that maintain and disseminate information representing and/or related to spatial features often lack mechanisms to describe or discover how features relate to each other, to other kinds of features, and to a wide variety of related information that may be relevant. The Environmental Linked Features Interoperability Experiment (ELFIE) explored OGC and W3C standards with the goal of establishing a best practice for exposing cross-domain links between environmental domain and sampling features. The IE focused on encoding relationships between cross-domain features and linking available observations data to sampled domain features. An approach that leverages the OGC service baseline, W3C data on the web best practices, and JSON-LD contexts was developed and evaluated. Outcomes of the experiment demonstrate that broadly accepted web technologies for linked data can be applied using OGC services and domain data models to fill important gaps in existing environmental data systems capabilities. While solutions were found to be capable and promising, OGC services and domain model implementations have limited utility for use in linked data applications and the universe of persistent URIs that form the foundation of a linked data infrastructure is still small. In addition to improvement of the standards baseline and publication of linked data URIs, establishing conventions for URI dereferencing behavior and default content given multiple options for a resource remain for future work.</p>
 </div>
 <div class="sect2">
 <h3 id="_requirements_research_motivation"><a class="anchor" href="#_requirements_research_motivation"></a>1.1. Requirements &amp; Research Motivation</h3>
 <div class="paragraph">
-<p>A precise descriptions of the requirements that have been addressed by the work documented in this Engineering Report; together with the research motivation that answers the fundamental question: What motivated us to address this topic in this report?</p>
+<p>Services and linked data for distributed spatio-temporal information on the internet hold the promise to increase interoperability and expressivity while decreasing duplication and data maintenance overhead. In order to achieve this potential, web service APIs and payloads need to work seamlessly with linked open data ontologies and hypermedia. Current OGC services, while flexible and capable, do not directly allow exposure of features in a REST-ful way or provide traversable hypermedia describing available methods, data, or interfaces to related (linked) content. Linked open data has the potential to turn the normal OGC service pattern (GetCapabilities request followed by introspection to understand contents) inside out by encoding associations between features as linked data predicates but specific implementation conventions and best practices are yet to be established.</p>
+</div>
+<div class="paragraph">
+<p>Two core functional goals motivated the engineering described in this report: 1) The need to encode relationships between and among environmental features, and 2) the need to link observational data to the features they describe. Given that relationships in the absence of context are of little value, a third goal was the need for an ultimately general preview of a feature to provide just enough context in a ubiquitous form. These three functional goals coupled with a non-functional goal of using highly-adoptable technologies provided more than enough problem space for the interoperability experiment to take on.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_prior_after_comparison"><a class="anchor" href="#_prior_after_comparison"></a>1.2. Prior-After Comparison</h3>
 <div class="paragraph">
-<p>This section shall provide a prior-after comparison. It describes the situation/status of discussion in the OGC working groups being most relevant for the addressed topic. This part is reviewed in close detail by the appropriate SWG/DWG to ensure that the latest developments have been considered. The section will be complemented at the end of the initiative by comparing the results documented in the ER with the original situation.</p>
+<p>Prior to initiating ELFIE, significant work had been completed on data models for numerous domains including hydrology, hydrogeology, soils, observational data, and timeseries but almost never used together. The OGC services base-line was well implemented across the community but practices for use of OGC services, primarily WFS, were extremely varied and not especially interoperable. ELFIE sought to provide implementation conventions as a target for 1) future data model encodings to serve integrating data across domains, 2) design and use of web services in a linked data context, and 3) design of future services and software to fill an important gap in open distributed environmental data systems.</p>
+</div>
+<div class="paragraph">
+<p>At the conclusion of the project, technical best practices for encoding links between and among features and observations are in sight. A general approach to using the power of OGC web service APIs to expose features in the context of rich domain-feature-model-based linked data while following W3C best practices has been described. The solution requires additional work to establish and publish ontologies and points to a number of opportunities to evolve data and service standards to meet the needs of environmental features and observations. This work has begun or will be proposed under the OGC Naming Authority, relevant OGC and W3C Standards and Domain Working Groups, and a follow-on Second ELFIE (SELFIE) focused on URI dereferencing and default content is being planned.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_future_recommendations"><a class="anchor" href="#_future_recommendations"></a>1.3. Future Recommendations</h3>
 <div class="paragraph">
-<p>This section should answer the question: What does this ER mean for the Working Group and OGC in general? What aspects shall be addressed? In any specific order? What actions are necessary?</p>
-</div>
-<div class="paragraph">
-<p>This is a write up for why this ER should be important to the working group and OGC. This paragraph provides recommendations on how to further proceed with the achievements documented in this ER.</p>
+<p>The ELFIE provides recommendations and conventions for work in working groups across OGC and W3C. The WFS SWG&#8217;s work on WFS 3 appears to be well-suited to ELFIE goals, but consideration for HTTP URIs to identify and query for features should be clearly supported by the future incarnation of WFS. Various OGC Working Groups need to establish ontologies and work through the OGC Naming Authority to publish their feature types and associations for broad use in linked data. Similarly, all data providers should pursue enterprise or community capabilities to mint and publish URIs and available representations of features and observations they own. Without this critical foundation, which can and should be recognized as a rudimentary starting point, linked data applications can not move forward. Finally, the scope of ELFIE was purposefully limited to encoding of links in linked data documents. A future IE should look at an expanded scope to include URL dereferencing and default content for URIs that identify real world features and content that links to various information resources that represent or are linked to the real-world non-information resource.</p>
 </div>
 </div>
 <div class="sect2">
@@ -827,6 +820,18 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 <li>
 <p><a href="https://portal.opengeospatial.org/files/?artifact_id=47599">OGC 12-006,	OGC® Sensor Observation Service Interface Standard</a></p>
+</li>
+<li>
+<p><a href="https://www.iso.org/standard/59164.html">ISO 19101-1:2014, Geographic information&#8201;&#8212;&#8201;Reference model&#8201;&#8212;&#8201;Part 1: Fundamentals</a></p>
+</li>
+<li>
+<p><a href="https://www.iso.org/standard/42137.html">ISO 19143:2010, Geographic information&#8201;&#8212;&#8201;Filter encoding</a></p>
+</li>
+<li>
+<p><a href="https://www.iso.org/standard/57466.html">ISO 19150-2:2015, Geographic information&#8201;&#8212;&#8201;Ontology&#8201;&#8212;&#8201;Part 2: Rules for developing ontologies in the Web Ontology Language (OWL)</a></p>
+</li>
+<li>
+<p><a href="https://www.iso.org/standard/32574.html">ISO 19156:2011, Geographic information&#8201;&#8212;&#8201;Observations and measurements</a></p>
 </li>
 </ul>
 </div>
@@ -1708,21 +1713,18 @@ should follow ELFIE.</p>
 <div class="paragraph">
 <p>The work ongoing with WFS appears promising with regard to the issues outlined above. The ability to query by a specific id that can be an http url is supported and is a clear solution that would solve the problem illustrated here. e.g. something like: <code><a href="http://server.com/wfs/getfeature?id=http://feature.x.y.x" class="bare">http://server.com/wfs/getfeature?id=http://feature.x.y.x</a></code></p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_domain_feature_models"><a class="anchor" href="#_domain_feature_models"></a>11.2. Domain Feature Models</h3>
 <div class="paragraph">
-<p><strong>SOS and SensorThings commentary?</strong></p>
+<p>Domain feature models, such as GWML2 and <a href="http://www.opengeospatial.org/projects/initiatives/soildataie">SoilIEML</a>, are defined for encoding and exchange of representations of environmental features. Other models, like HY_Features, are only available in conceptual (UML) form. For use in linked data, best practices and publication workflows for domain feature models as linked data ontologies need to be established. As described in <a href="#hyf_ontology">Box 8: HY_Features Ontology Note</a> and <a href="#ontology_from_uml">Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a> this work has begun and needs to be brough to conclusion for use across the community.</p>
+</div>
+<div class="paragraph">
+<p>W3C and OGC work on Observations and Measurements and Sensor Ontologies (See <a href="https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a>) is among the most advanced with regard to support to linked data approaches as pursued by ELFIE. While attempting to use the Semantic Sensor Network ontology, the concept of a monitoring network was found to be missing or not handled directly. Ad-hoc collections of monitoring features are a common need. Either as a collection that is meant to characterize a specific regional environmental feature, such as a watershed, or as a collection of monitoring features with common ownership, data offerings, or quality. In any case, further analysis of the nature of collections of monitoring features for use within and among environmental monitoring domains is warranted.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_domain_feature_model_issues"><a class="anchor" href="#_domain_feature_model_issues"></a>11.2. Domain Feature Model Issues</h3>
-<div class="paragraph">
-<p><strong>Availability of useful encodings / practices to generate them</strong>
-<strong>Monitoring networks <a href="https://github.com/opengeospatial/ELFIE/issues/65">issue 65</a></strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_general_linked_data_issues"><a class="anchor" href="#_general_linked_data_issues"></a>11.3. General linked data issues</h3>
-<div class="sect3">
-<h4 id="_publication_of_uris_content_types_and_associations"><a class="anchor" href="#_publication_of_uris_content_types_and_associations"></a>11.3.1. Publication of URIs, Content, Types, and Associations</h4>
+<h3 id="_publication_of_uris_content_types_and_associations"><a class="anchor" href="#_publication_of_uris_content_types_and_associations"></a>11.3. Publication of URIs, Content, Types, and Associations</h3>
 <div class="paragraph">
 <p>A major issue (which was known and out of scope for ELFIE) was the lack of published feature identifiers and a linked-data baseline to build on. It is clear that, to grow the linked-data baseline, features and data linked to them need to be published using existing basic practices as a starting point. This starting point could be as trivial as a URL that returns a JSON-LD document with ID, Type, Name, and representative point location. The addition of a URI broker, content negotiation to provide HTML and RDF representations, and additional linked content would be possible given current techniques, but should not be seen as a necessary prerequisite to publishing linked data. Without a rudimentary starting point, the community has nothing to build on and could continue to debate the nuances of eventual solutions for some time.</p>
 </div>
@@ -1739,8 +1741,8 @@ Further experimental work is required to identify the range of different represe
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_default_response_when_a_uri_has_multiple_representations"><a class="anchor" href="#_default_response_when_a_uri_has_multiple_representations"></a>11.3.2. Default Response When a URI has Multiple Representations</h4>
+<div class="sect2">
+<h3 id="_default_response_when_a_uri_has_multiple_representations"><a class="anchor" href="#_default_response_when_a_uri_has_multiple_representations"></a>11.4. Default Response When a URI has Multiple Representations</h3>
 <div class="paragraph">
 <p>Non information resource identifiers, URIs that are an identifier for a thing that may or may not have information representations, are useful to provide persistent and reusable identifiers for entities such as real-world features. These non information resource identifiers provide a means for global identification across a system such that multiple members of the system can contain information about and/or in reference to shared entities. There is a basic conundrum with non information resource identifiers in that there can only be one default response (for a given encoding) when dereferencing a URI and only one member of a distributed system can be the source of that default response. Further, in order to achieve linked system interoperability, dereferencing behavior of non information resource URIs needs to be in accord with the expectations of a member node of a system. The httpRange-14 and the Cool URIs Technical Report provide a significant basis for solving this conundrum and W3C working groups continue to focus on it, but many details remain to be agreed upon for use cases such as are being pursued by the ELFIE.</p>
 </div>
@@ -1783,7 +1785,6 @@ Further experimental work is required to identify the range of different represe
 <p>Adding additional dimensions of representation choice when dereferencing for geometry type, resolution, CRS etc</p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 <div class="sect2">
