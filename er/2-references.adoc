@@ -22,3 +22,5 @@ The following normative documents are referenced in this document.
 * https://www.iso.org/standard/57466.html[ISO 19150-2:2015, Geographic information -- Ontology -- Part 2: Rules for developing ontologies in the Web Ontology Language (OWL)]
 
 * https://www.iso.org/standard/32574.html[ISO 19156:2011, Geographic information -- Observations and measurements]
+
+* https://www.w3.org/TR/sdw-bp/[W3C Working Group Note 28 September 2017 - Spatial Data on the Web Best Practices] 
