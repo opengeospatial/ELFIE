@@ -7,7 +7,7 @@ An important goal of the ELFIE was "adoptability" by web developers and compatib
 
 Initial ELFIE discussions of the graph view concept used the https://www.w3.org/TR/shacl/[Shapes Constraint Language SHACL] technology as the logical implementation. Further evaluation and consideration of the ELFIE goals regarding adoptability and ubiquity, the https://www.w3.org/TR/json-ld/#the-context[JSON-LD context] was chosen as the most appropriate technical solution to express the graph _views_. The ELFIE contexts are meant to be precise descriptions of what the IE found to be the most appropriate linked data properties (attributes and relations) and types. They are not intended to be used as a schema to specify or validate the contents of a given document. However, they could provide a useful set of aliases for the subset of types and properties that could be expected to be parsed and interpreted by the client.
 
-From a practical perspective, the contexts provide clear guidelines for what properties and types to use while not being overly prescriptive, limiting, or difficult to use in a typical web development workflow. Unlike _schemas_, such contexts support the “Open World Assumption” where missing elements simply indicate that this information is not currently available to the data provider, without the burden (and potential for misuse) of stating a placeholder value. Furthermore, for simplifying the use of the contexts and reduce the number of possible errors while parsing the _views_, https://w3c.github.io/json-ld-syntax/#type-coercion[Type Coercion] was not used while aliasing properties in the contexts files. 
+From a practical perspective, the contexts provide clear guidelines for what properties and types to use while not being overly prescriptive, limiting, or difficult to use in a typical web development workflow. Unlike _schemas_, such contexts support the “Open World Assumption” where missing elements simply indicate that this information is not currently available to the data provider, without the burden (and potential for misuse) of stating a placeholder value. Furthermore, to simplify the use of the contexts and reduce possible errors while parsing the _views_, https://w3c.github.io/json-ld-syntax/#type-coercion[Type Coercion] was not used while aliasing properties in the contexts files. 
 
 More information about the design and engineering of ELFIE contexts can be found on the https://opengeospatial.github.io/ELFIE/json-ld/[ELFIE web page]. Note that the discussion and examples there is not in direct reference to the use cases used for discussion and testing of the IE.
 
@@ -51,8 +51,8 @@ https://opengeospatial.github.io/ELFIE/json-ld/tsml.jsonld[timeseriesML] and
 https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld[SOSA] data models.
 The domain specific contexts have content from
 https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld[HY_Features],
-https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2], 
-https://opengeospatial.github.io/ELFIE/json-ld/soilie.jsonld[soilIE], 
+https://opengeospatial.github.io/ELFIE/json-ld/gw.jsonld[GWML2],
+https://opengeospatial.github.io/ELFIE/json-ld/soilie.jsonld[soilIE],
 https://opengeospatial.github.io/ELFIE/json-ld/gsml.jsonld[GeoSciML], and the
 https://opengeospatial.github.io/ELFIE/json-ld/floodcast.jsonld[floodcast]
 use case. All of these contexts, except SOSA, were created as part of the
@@ -61,7 +61,7 @@ should follow ELFIE.
 
 === Contexts in context: exemple on the Watershed Data Index Use Case
 
-As can be seen in the main watershed entry point to the index https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601[here], the watershed data index use case uses two contexts. elf.jsonld and and hyf.jsonld shown below in boxes 2 and 3 respectively. 
+As can be seen in the main watershed entry point to the index https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601[here], the watershed data index use case uses two contexts. elf.jsonld and and hyf.jsonld shown below in boxes 2 and 3 respectively.
 
 [[elf-base-context]]
 .Box {counter:boxes}: https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld[elf.jsonld]
@@ -156,4 +156,3 @@ Note that the JSON-LD document that describes the watershed using these two cont
   }
 ]}
 ----
-
