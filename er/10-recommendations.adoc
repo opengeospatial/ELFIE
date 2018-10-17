@@ -4,21 +4,19 @@
 The results of ELFIE are quite promising in that all major issues encountered are well known and subject of ongoing work. Technologies tested, where mature and well used, worked well for the purpose and it seems that the future for an easily adoptable resource oriented linked web of data resources is bright. The following sections outline issues encountered and describe recommended prospective path forward to overcome them.
 
 === OGC Service Standards and Implementation issues.
-OGC service interfaces were not the primary focus of ELFIE. However, along the way, both WFS and SOS services were discussed and tested. The major issues encountered is around querying these services by feature identifier. There is something of a chicken and egg situation in that, in most cases, http feature identifiers have not been published so are not available to use to query a web service, but the OGC services also don’t lend themselves to publishing feature identifiers. 
+OGC service interfaces were not the primary focus of ELFIE. However, along the way, both WFS and SOS services were discussed and tested. The major issues encountered is around querying these services by feature identifier. There is something of a chicken and egg situation in that, in most cases, http feature identifiers have not been published so are not available to use to query a web service, but the OGC services also don’t lend themselves to publishing feature identifiers.
 
-If queries to WFS or SOS services are used as un-structured links that return representations of features or results of observations, they can be used readily in linked data systems. But to be used with embedded feature identifiers or with more sophisticated content-negotiated retrievals, changes to the web service APIs will be needed. 
+If queries to WFS or SOS services are used as un-structured links that return representations of features or results of observations, they can be used readily in linked data systems. But to be used with embedded feature identifiers or with more sophisticated content-negotiated retrievals, changes to the web service APIs will be needed.
 
-The work ongoing with WFS appears promising with regard to the issues outlined above. The ability to query by a specific id that can be an http url is supported and is a clear solution that would solve the problem illustrated here. e.g. something like: `http://server.com/wfs/getfeature?id=http://feature.x.y.x` 
+The work ongoing with WFS appears promising with regard to the issues outlined above. The ability to query by a specific id that can be an http url is supported and is a clear solution that would solve the problem illustrated here. e.g. something like: `http://server.com/wfs/getfeature?id=http://feature.x.y.x`
 
-**SOS and SensorThings commentary?**
+=== Domain Feature Models
 
-=== Domain Feature Model Issues
-**Availability of useful encodings / practices to generate them**  
-**Monitoring networks https://github.com/opengeospatial/ELFIE/issues/65[issue 65]**
+Domain feature models, such as GWML2 and http://www.opengeospatial.org/projects/initiatives/soildataie[SoilIEML], are defined for encoding and exchange of representations of environmental features. Other models, like HY_Features, are only available in conceptual (UML) form. For use in linked data, best practices and publication workflows for domain feature models as linked data ontologies need to be established. As described in <<hyf_ontology>> and <<ontology_from_uml>> this work has begun and needs to be brough to conclusion for use across the community.
 
-=== General linked data issues
+W3C and OGC work on Observations and Measurements and Sensor Ontologies (See https://www.w3.org/TR/vocab-ssn/[https://www.w3.org/TR/vocab-ssn/]) is among the most advanced with regard to support to linked data approaches as pursued by ELFIE. While attempting to use the Semantic Sensor Network ontology, the concept of a monitoring network was found to be missing or not handled directly. Ad-hoc collections of monitoring features are a common need. Either as a collection that is meant to characterize a specific regional environmental feature, such as a watershed, or as a collection of monitoring features with common ownership, data offerings, or quality. In any case, further analysis of the nature of collections of monitoring features for use within and among environmental monitoring domains is warranted.
 
-==== Publication of URIs, Content, Types, and Associations
+=== Publication of URIs, Content, Types, and Associations
 
 A major issue (which was known and out of scope for ELFIE) was the lack of published feature identifiers and a linked-data baseline to build on. It is clear that, to grow the linked-data baseline, features and data linked to them need to be published using existing basic practices as a starting point. This starting point could be as trivial as a URL that returns a JSON-LD document with ID, Type, Name, and representative point location. The addition of a URI broker, content negotiation to provide HTML and RDF representations, and additional linked content would be possible given current techniques, but should not be seen as a necessary prerequisite to publishing linked data. Without a rudimentary starting point, the community has nothing to build on and could continue to debate the nuances of eventual solutions for some time.
 
@@ -31,7 +29,7 @@ Since the ELFIE project has completed the OGC Naming Authority has embarked upon
 Further experimental work is required to identify the range of different representations that can be used, such as automatic provision of JSON-LD context resources.
 *****
 
-==== Default Response When a URI has Multiple Representations
+=== Default Response When a URI has Multiple Representations
 
 Non information resource identifiers, URIs that are an identifier for a thing that may or may not have information representations, are useful to provide persistent and reusable identifiers for entities such as real-world features. These non information resource identifiers provide a means for global identification across a system such that multiple members of the system can contain information about and/or in reference to shared entities. There is a basic conundrum with non information resource identifiers in that there can only be one default response (for a given encoding) when dereferencing a URI and only one member of a distributed system can be the source of that default response. Further, in order to achieve linked system interoperability, dereferencing behavior of non information resource URIs needs to be in accord with the expectations of a member node of a system. The httpRange-14 and the Cool URIs Technical Report provide a significant basis for solving this conundrum and W3C working groups continue to focus on it, but many details remain to be agreed upon for use cases such as are being pursued by the ELFIE.
 
