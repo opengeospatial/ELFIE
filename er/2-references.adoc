@@ -14,3 +14,11 @@ The following normative documents are referenced in this document.
 * http://docs.opengeospatial.org/is/09-025r2/09-025r2.html[OGC 09-025r2, OGC® Web Feature Service 2.0 Interface Standard – With Corrigendum]
 
 * https://portal.opengeospatial.org/files/?artifact_id=47599[OGC 12-006,	OGC® Sensor Observation Service Interface Standard]
+
+* https://www.iso.org/standard/59164.html[ISO 19101-1:2014, Geographic information -- Reference model -- Part 1: Fundamentals]
+
+* https://www.iso.org/standard/42137.html[ISO 19143:2010, Geographic information -- Filter encoding]
+
+* https://www.iso.org/standard/57466.html[ISO 19150-2:2015, Geographic information -- Ontology -- Part 2: Rules for developing ontologies in the Web Ontology Language (OWL)]
+
+* https://www.iso.org/standard/32574.html[ISO 19156:2011, Geographic information -- Observations and measurements]
