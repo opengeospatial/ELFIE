@@ -65,6 +65,14 @@ Interaction with the json-ld content can be experienced using BRGM experimental 
 
 ## Demo findings and potential next steps
 
-TODO:
+Setting up the demo proved that actually trying to consume the JSON-LD files helped design and populate them.
+
+It provides another way to discover and interact with surface ground interaction data that are usually mainly described in domain experts reports. And, in turn, helps demonstrate the usefulness of linked data on those information silos.
+
+In order to move this demo to production, several aspects need to be covered, such as,
+
+* deploying the JSON-LD layer on top of the identified silos, applying the ELFIE patterns
+* refining the GUI behaviour especially when data graph become highly populated
+
 Discuss issues that this demo works around or would otherwise need to be solved to take
 it from demonstration/experiment to production.
