@@ -39,11 +39,11 @@ The demonstration makes use of BRGM experimental Linked Data Viewer (BLiV) that 
 
 The ground water monitoring demo is a mashup involving a graph library (viz.js), a map viewer (leaflet), json-ld library (jsonld.js).
 
-![Screenshot1 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot1.png.png)
+![Screenshot1 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot1.png)
 
-![Screenshot2 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot2.png.png)
+![Screenshot2 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot2.png)
 
-![Screenshot3 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot3.png.png)
+![Screenshot3 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot3.png)
 
 ### Links to Demo Resources
 
