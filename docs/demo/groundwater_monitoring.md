@@ -52,6 +52,13 @@ Interaction with the json-ld content can be experienced using BRGM experimental 
 
 ## Demo findings and potential next steps
 
-TODO:
-Discuss issues that this demo works around or would otherwise need to be solved to take
-it from demonstration/experiment to production.
+Setting up the demo proved that actually trying to consume the JSON-LD files helped design and populate them.
+
+It provides a really fast way to discover and interact with groundwater monitoring data. Domain experts don't have to go through various discovery layers (CSW, WFS, SOS/SensorThingAPI). Here, given that each information element is properly linked to the others through their URIs, data content is properly contextualized and accessible 'in a click'.
+It is also a wonderful discussion material with domain colleagues to demonstrate the usefulness of linked data on their information silos.
+
+In order to move this demo to production, several aspects need to be covered, such as,
+
+* deploying the JSON-LD layer on top of the identified silos, applying the ELFIE patterns,
+* putting URIs on timeseries (or subset of) which is a topic of its own,
+* refining the GUI behaviour especially when data graph become highly populated.
