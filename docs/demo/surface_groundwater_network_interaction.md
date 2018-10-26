@@ -39,11 +39,11 @@ The demonstration makes use of BRGM experimental Linked Data Viewer (BLiV) that 
 
 The ground water monitoring demo is a mashup involving a graph library (viz.js), a map viewer (leaflet), json-ld library (jsonld.js).
 
-![Screenshot1 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot1.png.png)
+![Screenshot1 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot1.png)
 
-![Screenshot2 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot2.png.png)
+![Screenshot2 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot2.png)
 
-![Screenshot3 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot3.png.png)
+![Screenshot3 of Surface-ground water networks interaction Demo ](https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot3.png)
 
 ### Links to Demo Resources
 
@@ -65,6 +65,14 @@ Interaction with the json-ld content can be experienced using BRGM experimental 
 
 ## Demo findings and potential next steps
 
-TODO:
+Setting up the demo proved that actually trying to consume the JSON-LD files helped design and populate them.
+
+It provides another way to discover and interact with surface ground interaction data that are usually mainly described in domain experts reports. And, in turn, helps demonstrate the usefulness of linked data on those information silos.
+
+In order to move this demo to production, several aspects need to be covered, such as,
+
+* deploying the JSON-LD layer on top of the identified silos, applying the ELFIE patterns
+* refining the GUI behaviour especially when data graph become highly populated
+
 Discuss issues that this demo works around or would otherwise need to be solved to take
 it from demonstration/experiment to production.
