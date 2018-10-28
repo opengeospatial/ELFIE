@@ -124,6 +124,21 @@ Items to note below:
 <6> The third part describes the catchment as a Hydrometric_Network. Here, the Network_Stations are of primary interest. The list of stations is truncated here to improve readability, in reality, there are many more stations located in this catchment.
 
 === Surface-ground water networks interaction Use Case Example
+While additional content is available on the ELFIE demo pages, experience learnt from the Surface-ground water networks interaction use case, that was described in greater detail in previous sections, is provided here.
+
+[#img_surface_ground_water_interaction,reftext='{figure-caption} {counter:figure-num}']
+.Screenshot3 of Surface-ground water networks interaction Demo.
+image::https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot3.png[width=450,align="center"]
+
+Developping a generic client (here https://github.com/BRGM/BLiv[BLiV.]) in parallel to populating JSON-LD files helped on various points:
+
+* It triggered the geometry related discussion mentionned several times in the ER
+* It led the group to be more cautious and, in addition to validate JSON-LD payload, also validate in JSON-LD playground the contexts. Indeed, the client using the payload triggered various remarks on the contexts themselves
+* Using the @id, @type, name pattern when linking to another domain object proves really useful to propose something dedicated interaction (map, timeseries graph, etc...) in a GUI
+* Keeping the client as generic as possible, allows to vizualize not only Surface-ground water networks interaction Use Case related JSON-LD files but also, those from the other Use Cases.
+* Eventually, such approach proves really powerful to demonstrate domain colleagues what linked-data is on their own dataset and how it helps relate to other information silos without having to revamp them
+
+
 
 === Future Work
 The experiments exposed several issues with existing and new technologies that need to be addressed to realize the full potential of the core linked data encoding technologies tested. The issue of representation of a preview geometry for a feature should be addressed and seems to be a tractable problem that could lead to significant benefits. Another tractable and important issue is creation of ontologies for domain features. As of the completion of the ELFIE, this work was already being undertaken for existing domain models where a UML to OWL conversion is possible. This was the topic of an ad hoc meeting during the OGC TC meeting in March 2018 in Orléans. The main outcomes are summarized in Annex A: <<annex-a.adoc#,ontology_from_uml>>. Other domain models, such as flood impact features, need to be created and or vetted by a community.
