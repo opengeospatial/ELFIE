@@ -1,0 +1,75 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/soilie.jsonld",
+        "https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
+    ],
+    "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_soil/2108",
+    "@type": "SO_Soil",
+    "soRelatedSamplingFeature": {
+        "@id": "https://lab.scinfo.org.nz/elfie/id/sams/sf_spatialsamplingfeature/2108",
+        "@type": "Sample",
+        "name": "SB10000"
+    },
+    "soClassifier": {
+        "@id": "https://lab.scinfo.org.nz/soil/def/nzsc-10/uym",
+        "@type": "Concept",
+        "name": "Mottled Yellow Ultic Soil"
+    },
+    "soDrainage": {
+        "@id": "https://lab.scinfo.org.nz/soil/def/nzsdh-95-soil-drainage/m",
+        "name": "moderately well drained"
+    },
+    "soDepthToRock": {
+        "soMinimumValue": {
+            "@value": 140,
+            "uom": "cm"
+        },
+        "soMaximumValue": {
+            "@value": 140,
+            "uom": "cm"
+        }
+    },
+    "soHorizon": [
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/10386",
+            "@type": "SO_Horizon",
+            "name": "-1-0cm; L (Milne)"
+        },
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/15797",
+            "@type": "SO_Horizon",
+            "name": "0-11cm; Ah (Milne)"
+        },
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/15519",
+            "@type": "SO_Horizon",
+            "name": "11-37cm; BAt (Milne)"
+        },
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/16086",
+            "@type": "SO_Horizon",
+            "name": "37-52cm; Bt1 (Milne)"
+        },
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/8798",
+            "@type": "SO_Horizon",
+            "name": "52-75cm; Bt2 (Milne)"
+        },
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/15391",
+            "@type": "SO_Horizon",
+            "name": "75-95cm; Bt3 (Milne)"
+        },
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/14703",
+            "@type": "SO_Horizon",
+            "name": "95-111cm; C1 (Milne)"
+        },
+        {
+            "@id": "https://lab.scinfo.org.nz/elfie/id/soil/so_horizon/14683",
+            "@type": "SO_Horizon",
+            "name": "111-140cm; CR (Milne)"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
+    ],
+    "@id": "https://lab.scinfo.org.nz/soil/def/nzsc-10/uym",
+    "@type": "Concept",
+    "prefLabel": "Mottled Yellow Ultic Soil",
+    "notation": "UYM",
+    "broader": [
+        {
+            "@id": "https://lab.scinfo.org.nz/soil/def/nzsc-10/uy",
+            "@type": "Concept",
+            "name": "Yellow Ultic Soil"
+        }
+    ],
+    "definition": "Other soils that have a mottled profile form.",
+    "inScheme": {
+        "@id": "https://lab.scinfo.org.nz/soil/def/nzsc-10",
+        "@type": "ConceptScheme",
+        "name": "New Zealand Soil Classification (Hewitt, 2010)"
+    }
+}
