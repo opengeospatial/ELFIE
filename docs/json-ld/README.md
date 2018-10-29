@@ -43,8 +43,8 @@ for users used to TTL etc.
 where the first value(s) is the path(s) to the imported context, followed by
 an object - see
 [JSON-LD Syntax, Example 29](https://www.w3.org/TR/json-ld-syntax/#the-context).
-- Example files (prefixed 'xample-') always contain a single JSON object - we
-are interested in responses that only ever describe a single resource.
+- Example files should only contain a single JSON object - we are only interested 
+in documenys that describe a single resource.
 
 ## ELFIE JSON-LD Best Practices
 - All files/responses shall:
