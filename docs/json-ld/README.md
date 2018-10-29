@@ -9,10 +9,12 @@ do not make reference to any ELFIE use cases or specific demos. This is
 due to the fact that they were developed in support of all use cases and
 slightly preceding primary implementation of the demos.
 
-They have been designed with the 'Testbed-12 JSON and GeoJSON User Guide'
+They have been designed using the 'Testbed-12 JSON and GeoJSON User Guide'
 [OGC 16-122r1](http://docs.opengeospatial.org/guides/16-122r1.html) as a
-guideline. The ELFIE team is relying on that guide as a cumulative summary 
-of earlier discussions (e.g. those out of Testbed 11).
+guideline. The ELFIE team relied on that guide as a cumulative summary 
+of earlier discussions (e.g. those out of Testbed 11). The contexts and 
+linking recommendations were later reviewed against the Architecture DWG's 
+draft [JSON Best Practice](https://github.com/opengeospatial/architecture-dwg/tree/master/json-best-practice).
 
 To ensure confidence that normative contexts are being used the context of 
 a JSON-LD document should not be provided inline but by reference to 
@@ -108,7 +110,8 @@ TimeseriesML. This would be a valuable additional encoding to create.
 - The inline example result is a _tsml:TimeseriesDomainRange_ value - selected
 as the most 'web friendly' (terse) encoding.
 - The inline example only uses the _gml:domainSet_, _gml:rangeSet_ and
-_tsml:deafultPointMetadata_ properties. In an XML doc the latter is nested more deeply `(gmlcov:metadata\gmlcov:Extension\tsml:TimeseriesMetadataExtension\tsml:defaultPointMetadata)`
+_tsml:deafultPointMetadata_ properties. In an XML doc the latter is nested more deeply 
+`(gmlcov:metadata\gmlcov:Extension\tsml:TimeseriesMetadataExtension\tsml:defaultPointMetadata)`
 but this was ignored for clarity, and to stimulate discussion.
 - The inline example vocabulary references ("uom" and "interpolationType") are
 presented as typed and labelled object stubs.
