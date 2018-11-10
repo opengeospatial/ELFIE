@@ -844,6 +844,15 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li>
 <p><a href="https://www.iso.org/standard/32574.html">ISO 19156:2011, Geographic information&#8201;&#8212;&#8201;Observations and measurements</a></p>
 </li>
+<li>
+<p><a href="https://www.w3.org/TR/sdw-bp/">W3C Working Group Note 28 September 2017&#8201;&#8212;&#8201;Spatial Data on the Web Best Practices</a></p>
+</li>
+<li>
+<p><a href="https://www.w3.org/TR/dwbp/">W3C Recommendation 31 January 2017&#8201;&#8212;&#8201;Data on the Web Best Practices</a></p>
+</li>
+<li>
+<p><a href="https://www.w3.org/TR/ld-bp/">W3C Working Group Note 09 January 2014&#8201;&#8212;&#8201;Best Practices for Publishing Linked Data</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -1691,7 +1700,7 @@ should follow ELFIE.</p>
 <div class="colist arabic">
 <ol>
 <li>
-<p>The two contexts used here</p>
+<p>The two contexts used are here</p>
 </li>
 <li>
 <p>The identifier for this hydrograhic network. If you follow the link, you will see the full example including geospatial property details.</p>
@@ -1703,25 +1712,55 @@ should follow ELFIE.</p>
 <p>The HY_HydrographicNetwork realizes a catchment describing it with as a network of lines representing waterbodies. Each realization of HY_Catchment uses both “schema:geo” and “gsp:hasGeometry” to provide both simplified representations that describe the location of the HY_Catchment  as point or surrounding polygon and a more detailed representation respectively.</p>
 </li>
 <li>
-<p>The second part describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. However "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries.</p>
+<p>The second JSON document describes the catchment as a HY_CatchmentDivide. Notice that the geometry types for the "schema:GeoShape" and the "gsp:Geometry" are polygonal. However "schema:GeoShape" only allows an envelope while "gsp:Geometry" can handle multipolygons and other more complex geometries.</p>
 </li>
 <li>
-<p>The third part describes the catchment as a Hydrometric_Network. Here, the Network_Stations are of primary interest. The list of stations is truncated here to improve readability, in reality, there are many more stations located in this catchment.</p>
+<p>The third JSON document describes the catchment as a Hydrometric_Network. Here, the Network_Stations are of primary interest. The list of stations is truncated here to improve readability, in reality, there are many more stations located in this catchment.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_surface_ground_water_networks_interaction_use_case_example"><a class="anchor" href="#_surface_ground_water_networks_interaction_use_case_example"></a>10.2. Surface-ground water networks interaction Use Case Example</h3>
-
+<div class="paragraph">
+<p>While additional content is available on the ELFIE demo pages, experience gained from the Surface-ground water networks interaction use case, that was described in greater detail in previous sections, is provided here.</p>
+</div>
+<div id="img_surface_ground_water_interaction" class="imageblock" style="text-align: center">
+<div class="content">
+<img src="https://opengeospatial.github.io/ELFIE/images/surface-ground_waterinteraction_screenshot3.png" alt="surface ground waterinteraction screenshot3" width="450">
+</div>
+<div class="title">Figure 9. Screenshot of Surface-ground water networks interaction Demo.</div>
+</div>
+<div class="paragraph">
+<p>Developing a generic client (here <a href="https://github.com/BRGM/BLiv">BLiV.</a>) in parallel to populating JSON-LD files helped in various ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It triggered the geometry discussion mentioned several times in the ER</p>
+</li>
+<li>
+<p>It led the group to be more cautious and, in addition to validate JSON-LD payload, also validate in JSON-LD playground the contexts. The client&#8217;s use of JSON-LD documents triggered various remarks on the contexts themselves.</p>
+</li>
+<li>
+<p>Using the @id, @type, name pattern when linking to another domain object proves useful to chose an interaction type (map, timeseries graph, etc&#8230;&#8203;) in a GUI.</p>
+</li>
+<li>
+<p>Keeping the client as generic as possible, allows vizualization of not only Surface-ground water networks interaction Use Case related JSON-LD files but also, those from the other Use Cases.</p>
+</li>
+<li>
+<p>Such an approach should proves valuable for demonstration of what linked-data is using domain-scientists own datasets as well as how it can help relate to other domains without having to modify source data.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_future_work"><a class="anchor" href="#_future_work"></a>10.3. Future Work</h3>
 <div class="paragraph">
-<p>The experiments exposed several issues with existing and new technologies that need to be addressed to realize the full potential of the core linked data encoding technologies tested. The issue of representation of a preview geometry for a feature should be addressed and seems to be a tractable problem that could lead to significant benefits. Another tractable and important issue is creation of ontologies for domain features. As of the completion of the ELFIE, this work was already being undertaken for existing domain models where a UML to OWL conversion is possible. This was the topic of an ad hoc meeting during the OGC TC meeting in March 2018 in Orléans. The main outcomes are summarized in Annex A: <a href="#">ontology_from_uml</a>. Other domain models, such as flood impact features, need to be created and or vetted by a community.</p>
+<p>The experiments exposed several issues with existing and new technologies that need to be addressed to realize the full potential of the core linked data encoding technologies tested. The issue of representation of a preview geometry for a feature should be addressed and seems to be a tractable problem that could lead to significant benefits. Another tractable and important issue is creation of ontologies for domain features. As of the completion of the ELFIE, this work was already being undertaken for existing domain models where a UML to OWL conversion is possible. This was the topic of an ad hoc meeting during the OGC TC meeting in March 2018 in Orléans, France. The main outcomes are summarized in Annex A: <a href="#ontology_from_uml">Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a>. Other domain models, such as flood impact features, need to be created and or vetted by a community.</p>
 </div>
 <div class="paragraph">
-<p>There were also several issues highlighted by the ELFIE that were deemed out of scope and purposefully left for future efforts. The foundational issue in this category is the "landing page" or "default representation" problem. That is, how should we handle the case where a dereferenceable URI meant to identify a real world entity with multiple digital representations. There are many related issues largely related to the network architecture and expected behavior when dereferencing URIs. These were generally out of scope for the ELFIE but need to be addressed to achieve interoperability and include: URI structure, use of non-information URIs with WFS and other services, strategies for managing collections of potentially temporary linked data among many data providers. Use of the domain feature ontologies declared in the JSON-LD contexts was also out of scope. That is, JSON-LD files produced by ELFIE were not ingested by reasoning software. The extra vocabulary source are not yet taken into account by major search engines crawlers that focus mainly on the schema.org ontology.</p>
+<p>There were also several issues highlighted by the ELFIE that were deemed out of scope and purposefully left for future efforts. The foundational issue in this category is the "landing page" or "default representation" problem. That is, how should we handle the case where a dereferenceable URI is meant to identify a real world entity with multiple digital representations. There are many related issues related to the network architecture and expected behavior when dereferencing URIs. These were generally out of scope for the ELFIE but need to be addressed to achieve interoperability and include: URI structure, use of non-information URIs with WFS and other services, and strategies for managing collections of potentially temporary linked data among many data providers. Use of the domain feature ontologies declared in the JSON-LD contexts was also out of scope. That is, JSON-LD files produced by ELFIE were not ingested by reasoning software. The extra vocabulary source are not yet taken into account by major search engines crawlers that focus mainly on the schema.org ontology.</p>
 </div>
 </div>
 </div>
@@ -1735,7 +1774,7 @@ should follow ELFIE.</p>
 <div class="sect2">
 <h3 id="_ogc_service_standards_and_implementation_issues"><a class="anchor" href="#_ogc_service_standards_and_implementation_issues"></a>11.1. OGC Service Standards and Implementation issues.</h3>
 <div class="paragraph">
-<p>OGC service interfaces were not the primary focus of ELFIE. However, along the way, both WFS and SOS services were discussed and tested. The major issues encountered is around querying these services by feature identifier. There is something of a chicken and egg situation in that, in most cases, http feature identifiers have not been published so are not available to use to query a web service, but the OGC services also don’t lend themselves to publishing feature identifiers.</p>
+<p>OGC service interfaces were not the primary focus of ELFIE. However, along the way, both WFS and SOS services were discussed and tested. The major issues encountered were around querying these services by feature identifier. There is something of a chicken and egg situation in that, in most cases, http feature identifiers have not been published so are not available to use to query a web service, but the OGC services also don’t lend themselves to publishing feature identifiers.</p>
 </div>
 <div class="paragraph">
 <p>If queries to WFS or SOS services are used as un-structured links that return representations of features or results of observations, they can be used readily in linked data systems. But to be used with embedded feature identifiers or with more sophisticated content-negotiated retrievals, changes to the web service APIs will be needed.</p>
@@ -1744,7 +1783,7 @@ should follow ELFIE.</p>
 <p>The work ongoing with WFS appears promising with regard to the issues outlined above. The ability to query by a specific id that can be an http url is supported and is a clear solution that would solve the problem illustrated here. e.g. something like: <code><a href="http://server.com/wfs/getfeature?id=http://feature.x.y.x" class="bare">http://server.com/wfs/getfeature?id=http://feature.x.y.x</a></code></p>
 </div>
 <div class="paragraph">
-<p>A similar discussion has taken place in sensor-related services. SOS V2.0 specification (OGC 12-006), discusses identifier handling in Annex B and promotes reuse of a global identifier (here gml:identifier) as oppose to local identifier (gml:id) when querying services. The SensorThings API Part 1 implementations use their own internal identifier for the REST API operations (ex : <a href="http://sensorthings.brgm-rec.fr/SensorThingsGroundWater/v1.0/Observations(1752377)" class="bare">http://sensorthings.brgm-rec.fr/SensorThingsGroundWater/v1.0/Observations(1752377)</a>). Both services' endpoints (SOS, SensorThingsAPI) were tested, passing them URIs for featuresOfInterest, observed properties, process, observation identifier, etc. to use them in a linked data context. Resulting queries work but further implementation is required to improve usability of the approach.</p>
+<p>A similar discussion has taken place in sensor-related services. SOS V2.0 specification (OGC 12-006), discusses identifier handling in Annex B and promotes reuse of a global identifier (here gml:identifier) as oppose to local identifier (gml:id) when querying services. The SensorThings API Part 1 implementations use their own internal identifier for REST API operations (ex : <a href="http://sensorthings.brgm-rec.fr/SensorThingsGroundWater/v1.0/Observations(1752377)" class="bare">http://sensorthings.brgm-rec.fr/SensorThingsGroundWater/v1.0/Observations(1752377)</a>). Both services' endpoints (SOS, SensorThingsAPI) were tested, passing them URIs for featuresOfInterest, observed properties, process, observation identifier, etc. to use them in a linked data context. Resulting queries work but further implementation is required to improve usability of the approach.</p>
 </div>
 <div class="paragraph">
 <p>A JSON-LD response from these services is not available. While response rewriters (to convert existing encodings to a linked data form) have been tested on top of the SensorThings API (JSON to JSON-LD). It may be useful to include JSON-LD capabilities in the standards themselves.</p>
@@ -1756,16 +1795,16 @@ should follow ELFIE.</p>
 <div class="sect2">
 <h3 id="_domain_feature_models"><a class="anchor" href="#_domain_feature_models"></a>11.2. Domain Feature Models</h3>
 <div class="paragraph">
-<p>Domain feature models, such as GWML2 and <a href="http://www.opengeospatial.org/projects/initiatives/soildataie">SoilIEML</a>, are defined for encoding and exchange of representations of environmental features. Other models, like HY_Features, are only available in conceptual (UML) form. For use in linked data, best practices and publication workflows for domain feature models as linked data ontologies need to be established. As described in <a href="#hyf_ontology">Box 8: HY_Features Ontology Note</a> and <a href="#ontology_from_uml">Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a> this work has begun and needs to be brough to conclusion for use across the community.</p>
+<p>Domain feature models, such as GWML2 and <a href="http://www.opengeospatial.org/projects/initiatives/soildataie">SoilIEML</a>, are defined for encoding and exchange of representations of environmental features. Other models, like HY_Features, are only available in conceptual (UML) form. For use in linked data, best practices and publication workflows for domain feature models as linked data ontologies need to be established. As described in <a href="#hyf_ontology">Box 8: HY_Features Ontology Note</a> and <a href="#ontology_from_uml">Strategies for Publishing Domain Ontologies as Linked Data from OGC domain standards</a> this work has begun and needs to be brought to conclusion for use across the community.</p>
 </div>
 <div class="paragraph">
-<p>W3C and OGC work on Observations and Measurements and Sensor Ontologies (See <a href="https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a>) is among the most advanced with regard to support to linked data approaches as pursued by ELFIE. While attempting to use the Semantic Sensor Network ontology, the concept of a monitoring network was found to be missing or not handled directly. Ad-hoc collections of monitoring features are a common need. Either as a collection that is meant to characterize a specific regional environmental feature, such as a watershed, or as a collection of monitoring features with common ownership, data offerings, or quality. In any case, further analysis of the nature of collections of monitoring features for use within and among environmental monitoring domains is warranted.</p>
+<p>W3C and OGC work on Observations and Measurements and Sensor Ontologies (See <a href="https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a>) is among the most advanced with regard to support for linked data approaches as pursued by ELFIE. While attempting to use the Semantic Sensor Network ontology, the concept of a monitoring network was found to be missing or not handled directly. Ad-hoc collections of monitoring features are a common need. Either as a collection that is meant to characterize a specific regional environmental feature, such as a watershed, or as a collection of monitoring features with common ownership, data offerings, or quality. In any case, further analysis of the nature of collections of monitoring features for use within and among environmental monitoring domains is warranted.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_publication_of_uris_content_types_and_associations"><a class="anchor" href="#_publication_of_uris_content_types_and_associations"></a>11.3. Publication of URIs, Content, Types, and Associations</h3>
 <div class="paragraph">
-<p>A major issue (which was known and out of scope for ELFIE) was the lack of published feature identifiers and a linked-data baseline to build on. It is clear that, to grow the linked-data baseline, features and data linked to them need to be published using existing basic practices as a starting point. This starting point could be as trivial as a URL that returns a JSON-LD document with ID, Type, Name, and representative point location. The addition of a URI broker, content negotiation to provide HTML and RDF representations, and additional linked content would be possible given current techniques, but should not be seen as a necessary prerequisite to publishing linked data. Without a rudimentary starting point, the community has nothing to build on and could continue to debate the nuances of eventual solutions for some time.</p>
+<p>A major issue (which was known and out of scope for ELFIE) was the lack of published feature identifiers and a linked-data baseline to build on. It is clear that, to grow the linked-data baseline, features and data linked to them need to be published using existing basic practices as a starting point. This starting point could be as trivial as a URL that returns a JSON-LD document with ID, Type, Name, and representative point location. The addition of a URI broker, content negotiation to provide HTML and RDF representations, and additional linked content would be possible given current techniques, but should not be seen as a necessary prerequisite to publishing linked data. Without a rudimentary starting point, the community has nothing to build on and could continue to debate the nuances of eventual solutions for ever.</p>
 </div>
 <div class="paragraph">
 <p>Similar to publication of features and other linked data, URLs that define feature types and relations are not available in many cases. Without these referenceable, resolvable definitions, the linked data practices described here are very difficult to use across multiple systems that need to use common types and associations. Further, even when URIs have been established, the network behavior and content received when dereferencing them is not consistent across the community. For example, <a href="https://schema.org/GeoCoordinates" class="bare">https://schema.org/GeoCoordinates</a> returns an html page by default and implements both HTTP "accept" headers (e.g. "Accept: application/ld+json") and URL suffixes (e.g. <a href="https://schema.org/GeoCoordinates.jsonld" class="bare">https://schema.org/GeoCoordinates.jsonld</a>) to request specific content types and <a href="http://www.w3.org/2004/02/skos/core#related" class="bare">http://www.w3.org/2004/02/skos/core#related</a> defaults to an html page and implements accept headers but does not support the same content types as schema.org and does not support URL suffixes. Other linked data URIs, those from GeoSPARQL for example (<a href="http://www.opengeospatial.org/standards/geosparql/asWKT" class="bare">http://www.opengeospatial.org/standards/geosparql/asWKT</a>), don&#8217;t resolve anything. If the community is going to start building cross-organization solutions based on linked data, these baseline feature types and associations need to be available and well described in a common way. It should be no surprise that schema.org&#8217;s linked data is used very broadly given that they provide a rich and approachable suite of content for their types and associations.</p>
@@ -1774,7 +1813,7 @@ should follow ELFIE.</p>
 <div class="content">
 <div class="title">Box 8: HY_Features Ontology Note</div>
 <div class="paragraph">
-<p>Since the ELFIE project has completed the OGC Naming Authority has embarked upon provision of a consistent, extensive and extensible Linked Data compatible “Definitions Server” to address some of these concerns. Publication of HY_Features has been prioritized and is now available at <strong><a href="http://www.opengis.net/def/hy_features/ontology/hyf" class="bare">http://www.opengis.net/def/hy_features/ontology/hyf</a></strong>
+<p>Since the ELFIE project has completed the OGC Naming Authority has embarked upon provision of a consistent, extensive and extensible Linked Data compatible “Definitions Server” to address some of these concerns. Publication of HY_Features has been prioritized and is available at <strong><a href="https://www.opengis.net/def/appschema/hy_features/hyf" class="bare">https://www.opengis.net/def/appschema/hy_features/hyf</a></strong>
 Further experimental work is required to identify the range of different representations that can be used, such as automatic provision of JSON-LD context resources.</p>
 </div>
 </div>
@@ -1783,7 +1822,7 @@ Further experimental work is required to identify the range of different represe
 <div class="sect2">
 <h3 id="_default_response_when_a_uri_has_multiple_representations"><a class="anchor" href="#_default_response_when_a_uri_has_multiple_representations"></a>11.4. Default Response When a URI has Multiple Representations</h3>
 <div class="paragraph">
-<p>Non information resource identifiers, URIs that are an identifier for a thing that may or may not have information representations, are useful to provide persistent and reusable identifiers for entities such as real-world features. These non information resource identifiers provide a means for global identification across a system such that multiple members of the system can contain information about and/or in reference to shared entities. There is a basic conundrum with non information resource identifiers in that there can only be one default response (for a given encoding) when dereferencing a URI and only one member of a distributed system can be the source of that default response. Further, in order to achieve linked system interoperability, dereferencing behavior of non information resource URIs needs to be in accord with the expectations of a member node of a system. The httpRange-14 and the Cool URIs Technical Report provide a significant basis for solving this conundrum and W3C working groups continue to focus on it, but many details remain to be agreed upon for use cases such as are being pursued by the ELFIE.</p>
+<p>Non information resource identifiers, URIs that are an identifier for a thing that may or may not have information representations, are useful to provide persistent and reusable identifiers for entities such as real-world features. These non information resource identifiers provide a means for global identification across a distributed system such that multiple members of the system can contain information about and/or in reference to shared entities. There is a basic conundrum with non information resource identifiers in that there can only be one default response (for a given encoding) when dereferencing a URI and only one member of a distributed system can be the source of that default response. Further, in order to achieve linked system interoperability, dereferencing behavior of non information resource URIs needs to be in accord with the expectations of a member node of a system. The <a href="https://www.w3.org/2001/tag/group/track/issues/14">httpRange-14</a> and the <a href="https://www.w3.org/TR/cooluris/">Cool URIs Technical Report</a> provide a significant basis for solving this conundrum and W3C working groups continue to focus on it, but many details remain to be agreed upon for use cases such as are being pursued by the ELFIE.</p>
 </div>
 <div class="paragraph">
 <p>While details of the default dereferencing behavior of non information resource identifiers and subsequent redirects to information resources was discussed in the ELFIE, the IE has attempted to focus on encoding of linked data information resources rather than the network behavior for discovery and retrieval of non-information resources. Future work and best practice development will be needed to address these issues:</p>
@@ -1815,7 +1854,7 @@ Further experimental work is required to identify the range of different represe
 <p>use of expected W3C formalisms for describing profiles</p>
 </li>
 <li>
-<p>optimal registration processes and registry provision for identifying, cataloguing , discovering and serving profiles/contexts</p>
+<p>optimal registration processes and registry provision for identifying, cataloguing, discovering and serving profiles/contexts</p>
 </li>
 <li>
 <p>use of expected W3C/IETF mechanisms for profile negotiation in URI dereferencing</p>
@@ -1828,7 +1867,7 @@ Further experimental work is required to identify the range of different represe
 <div class="sect3">
 <h4 id="_preview_geometry"><a class="anchor" href="#_preview_geometry"></a>11.4.1. Preview Geometry</h4>
 <div class="paragraph">
-<p>As demonstrated in the <a href="#watershed-data-index-use-case-example">Watershed Data Index use case JSON-LD document</a> in box 1, how to encode a preview geometry is not clear. The only widely used preview is a point geometry defined by schema.org GeoCoordinates. The schema.org polygon and line features have not been implemented widely and, like GeoSPARQL WKT geometries, require interpretation above and beyond what would be required for GeoJSON. Linking to a GeoJSON file works, but is not common in practice and requires additional web-requests to retrieve, which is undesirable for a basic preview geometry. With the advent of javascript libraries that can handle WKT, it seems likely that a GeoSPARQL WKT geometry could be used effectively, but further experimentation may be needed to confirm this assumption.</p>
+<p>As demonstrated in the <a href="#_huc12obs-example">Watershed Data Index use case JSON-LD document</a>, how to encode a preview geometry is not clear. The only widely used preview is a point geometry defined by schema.org GeoCoordinates. The schema.org polygon and line features have not been implemented widely and, like GeoSPARQL WKT geometries, require interpretation above and beyond what would be required for GeoJSON. Linking to a GeoJSON file works, but is not common in practice and requires additional web-requests to retrieve, which is undesirable for a basic preview geometry. With the advent of javascript libraries that can handle WKT, it seems likely that a GeoSPARQL WKT geometry could be used effectively, but further experimentation may be needed to confirm this assumption.</p>
 </div>
 </div>
 </div>
