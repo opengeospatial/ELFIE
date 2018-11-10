@@ -36,6 +36,7 @@ A physiographic unit defined by a common hydrologic outlet and potentially defin
 
 * API - Application Programming Interface
 * ELFIE - Environmental Linked Features Interoperability Experiment
+* GeoSciML - Geoscience Markup Language
 * GeoSPARQL - Geospatial SPARQL Protocol and RDF Query Language (recursive acronym)
 * GWML2 - WaterML2 Part 4: Groundwater Markup Language
 * HTTP - Hypertext Transfer Protocol

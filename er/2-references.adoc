@@ -5,9 +5,13 @@ The following normative documents are referenced in this document.
 
 * https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9, OGC® Web Services Common Standard]
 
+* http://www.opengis.net/doc/IS/geosparql/1.0[OGC 11-052r4, OGC® GeoSPARQL - A Geographic Query Language for RDF Data]
+
 * http://docs.opengeospatial.org/is/14-111r6/14-111r6.html[OGC 14-111r6, OGC® WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model]
 
 * http://docs.opengeospatial.org/is/16-032r2/16-032r2.html[OGC 16-032r2, OGC® WaterML 2: Part 4 – GroundWaterML 2 (GWML2)]
+
+* https://docs.opengeospatial.org/is/16-008/16-008.html[OGC 16-008, OGC® Geoscience Markup Language 4.1 (GeoSciML)]
 
 * http://docs.opengeospatial.org/is/15-043r3/15-043r3.html[OGC 15-043r3, Timeseries Profile of Observations and Measurements]
 

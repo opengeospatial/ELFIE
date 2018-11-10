@@ -19,7 +19,7 @@ Within this, the ELFIE aimed to leverage existing standards and best practices w
 . are ubiquitous and easily adoptable in any programming language,
 . support mass market search techniques, (https://www.w3.org/TR/sdw-bp/#bp-indexable[SDW Best Practice 2]: Make your spatial data indexable by search engines)
 . apply best practices for linked data on the web, (https://www.w3.org/TR/sdw-bp/#bp-linking[SDW Best Practice 3]: Link resources together to create the Web of data)
-. and adhere, to the extent possible to standard taxonomies and ontologies.
+. and adhere, to the extent possible, to standard taxonomies and ontologies.
 
 === Assumptions
 
@@ -35,7 +35,7 @@ Within this, the ELFIE aimed to leverage existing standards and best practices w
 .. linked data documents that contain collections of linked features and related observations and 
 .. feature or observation representation documents that contain links to related features or observations.
 . We constrained ourselves to  using existing ontologies and vocabularies wherever possible.
-. Out of scope were problems regarding network architecture for resolving links nor systems design and governance for applications that store and retrieve links or concept relationships.
+. Problems regarding network architecture for resolving links and systems design and governance for applications that store and retrieve links or concept relationships were deemed out of scope.
 . Issues related to default behavior when dereferencing an identifier, while of great importance to the ELFIE goals, was also declared out of scope of this IE.
 . Discovery of available views and negotiation of choice between client and server were deemed out of scope, although the ability to define a view is seen as a key stepping stone to such options in the future.
 

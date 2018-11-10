@@ -812,10 +812,16 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <p><a href="https://portal.opengeospatial.org/files/?artifact_id=38867&amp;version=2">OGC 06-121r9, OGC® Web Services Common Standard</a></p>
 </li>
 <li>
+<p><a href="http://www.opengis.net/doc/IS/geosparql/1.0">OGC 11-052r4, OGC® GeoSPARQL - A Geographic Query Language for RDF Data</a></p>
+</li>
+<li>
 <p><a href="http://docs.opengeospatial.org/is/14-111r6/14-111r6.html">OGC 14-111r6, OGC® WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model</a></p>
 </li>
 <li>
 <p><a href="http://docs.opengeospatial.org/is/16-032r2/16-032r2.html">OGC 16-032r2, OGC® WaterML 2: Part 4 – GroundWaterML 2 (GWML2)</a></p>
+</li>
+<li>
+<p><a href="https://docs.opengeospatial.org/is/16-008/16-008.html">OGC 16-008, OGC® Geoscience Markup Language 4.1 (GeoSciML)</a></p>
 </li>
 <li>
 <p><a href="http://docs.opengeospatial.org/is/15-043r3/15-043r3.html">OGC 15-043r3, Timeseries Profile of Observations and Measurements</a></p>
@@ -920,6 +926,9 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 <li>
 <p>ELFIE - Environmental Linked Features Interoperability Experiment</p>
+</li>
+<li>
+<p>GeoSciML - Geoscience Markup Language</p>
 </li>
 <li>
 <p>GeoSPARQL - Geospatial SPARQL Protocol and RDF Query Language (recursive acronym)</p>
@@ -1086,7 +1095,7 @@ Views may correspond to concepts such as shapes (as per the W3C Shapes Constrain
 <p>apply best practices for linked data on the web, (<a href="https://www.w3.org/TR/sdw-bp/#bp-linking">SDW Best Practice 3</a>: Link resources together to create the Web of data)</p>
 </li>
 <li>
-<p>and adhere, to the extent possible to standard taxonomies and ontologies.</p>
+<p>and adhere, to the extent possible, to standard taxonomies and ontologies.</p>
 </li>
 </ol>
 </div>
@@ -1135,7 +1144,7 @@ Views may correspond to concepts such as shapes (as per the W3C Shapes Constrain
 <p>We constrained ourselves to  using existing ontologies and vocabularies wherever possible.</p>
 </li>
 <li>
-<p>Out of scope were problems regarding network architecture for resolving links nor systems design and governance for applications that store and retrieve links or concept relationships.</p>
+<p>Problems regarding network architecture for resolving links and systems design and governance for applications that store and retrieve links or concept relationships were deemed out of scope.</p>
 </li>
 <li>
 <p>Issues related to default behavior when dereferencing an identifier, while of great importance to the ELFIE goals, was also declared out of scope of this IE.</p>
@@ -1163,13 +1172,13 @@ Views may correspond to concepts such as shapes (as per the W3C Shapes Constrain
 <div class="sect2">
 <h3 id="_introduction"><a class="anchor" href="#_introduction"></a>7.1. Introduction</h3>
 <div class="paragraph">
-<p>The design phase of the ELFIE focused on the identification of a number of use cases with extensive need for linked environmental data. These use cases focused on known difficulties of the systems the ELFIE participants maintain or depend on as users. Many of these use cases were used for the discovery and vetting of ideas only.  Others were further developed with implementation of example encoded linked data and client code to produce desired results of the use case.</p>
+<p>The design phase of the ELFIE focused on identification of a number of use cases with extensive need for linked environmental data. These use cases focused on known difficulties of the systems the ELFIE participants maintain or depend on as users. Many of these use cases were used for the discovery and vetting of ideas only.  Others were further developed with implementation of example encoded linked data and client code to produce desired results of the use case.</p>
 </div>
 <div class="paragraph">
 <p>Test cases that were implemented as demonstrations of the design outcomes are described below in full detail to include notional diagrams of how datasets involved link to each other, a thorough description of the use case, and an example application that speaks to and/or satisfies the needs of the use case.</p>
 </div>
 <div class="paragraph">
-<p>The full suite of use cases considered during the design phase of the project are described in Appendix D: Use Cases. Each use case takes the form of a simple description of who or what system has an interest in what related datasets. Specific datasets are listed to clarify the scope and provide a starting point for future technical design work.</p>
+<p>The full suite of use cases considered during the design phase of the project are described in the <a href="#use_case_data">Use Cases Considered in Design Process</a> appendix. Each use case takes the form of a simple description of who or what system has an interest in what related datasets. Specific datasets are listed to clarify the scope and provide a starting point for future technical design work.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1202,7 +1211,13 @@ page.</a></p>
 <div class="title">Figure 2. Notional diagram of features (black) and linked data (white) in the floodcast use case. Note that many more relationships could be expressed if desired.</div>
 </div>
 <div class="paragraph">
-<p><strong>Ground water level monitoring</strong> Ground water level monitoring This use case is meant to demonstrate how from a given Well URI any user (domain expert, machine) can then traverse to the monitoring strategy deployed (piezometer information etc.) and then access to the ground water level time series and/or information about the monitored aquifer.</p>
+<p>Additional details about the flood risk use case implementation is
+available on the
+<a href="https://opengeospatial.github.io/ELFIE/demo/floodcast">demonstration ELFIE web
+page.</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Ground water level monitoring</strong> This use case is meant to demonstrate how from a given well URI any user (domain expert, machine) can then traverse to the monitoring strategy deployed (piezometer information etc.) and then access ground water level time series and/or information about the monitored aquifer.</p>
 </div>
 <div id="img_groundwater_monitoring_data" class="imageblock" style="text-align: center">
 <div class="content">
@@ -1216,7 +1231,7 @@ page.</a></p>
 ELFIE web page.</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Surface-ground water networks interaction</strong> This use case is meant to demonstrate how from a given Piezometer URI any user (domain expert, machine) can traverse to the ground water monitoring strategy (see Ground water level monitoring Use Case) but also to the associated surface water monitoring one. Provided each surface/groundwater features are properly linked together (River network, Aquifer system) it is then feasible to acquire knowledge about a fully comprehensive water system. This use case can be seen as a flagship one to demonstrate the usefulness of linked data in the environnemental/cross-silos context.</p>
+<p><strong>Surface-ground water networks interaction</strong> This use case is meant to demonstrate how from a given Piezometer URI any user (domain expert, machine) can traverse to the ground water monitoring strategy (see Ground water level monitoring Use Case) but also to the associated surface water monitoring one. Provided each surface/groundwater feature is properly linked together (River network, Aquifer system) it is then feasible to discover information about the full, comprehensive water system. This use case can be seen as a flagship demonstrating the usefulness of linked data in the environnemental/cross-domain context.</p>
 </div>
 <div id="img_surface_groundwater_networks" class="imageblock" style="text-align: center">
 <div class="content">
@@ -1228,7 +1243,7 @@ ELFIE web page.</a></p>
 <p>Additional details about the surface-ground water networks interaction use case implementation is available on the <a href="https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction">demonstration ELFIE web page.</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Watershed data index</strong> This use case is meant to demonstrate the use of HY_Features to link a catchment (12 digit hydrologic unit code (HUC12) watershed in this case) to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.</p>
+<p><strong>Watershed data index</strong> This use case is meant to demonstrate the use of HY_Features to link a catchment to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.</p>
 </div>
 <div id="img_huc12obs_data" class="imageblock" style="text-align: center">
 <div class="content">
@@ -1246,7 +1261,7 @@ page.</a></p>
 <div class="sect2">
 <h3 id="_watershed_data_index_use_case_in_depth"><a class="anchor" href="#_watershed_data_index_use_case_in_depth"></a>7.3. Watershed Data Index Use Case in Depth</h3>
 <div class="paragraph">
-<p>This use case is introduced in more detail than those above here and its technical details are presented below. Technical details of other use cases can be found at the
+<p>This use case is introduced in more detail than those above and its technical details are presented below. Technical details of other use cases can be found at the
 <a href="https://opengeospatial.github.io/ELFIE/">ELFIE demonstration web
 page.</a></p>
 </div>
@@ -1279,13 +1294,13 @@ page.</a></p>
 <div class="sect2">
 <h3 id="_surface_ground_water_networks_interaction_use_case_in_depth"><a class="anchor" href="#_surface_ground_water_networks_interaction_use_case_in_depth"></a>7.4. Surface-ground water networks interaction Use Case in Depth</h3>
 <div class="paragraph">
-<p>This use case is introduced in more detail than those above here and its technical details are presented below as it makes intensive use of linked data technologies.</p>
+<p>This use case is introduced in more detail than those above and its technical details are presented below as it makes intensive use of linked data technologies.</p>
 </div>
 <div class="paragraph">
-<p>The Surface-ground water networks interaction use case is focused on a single Piezometer with an identifier from the French Ground Water Information Network (00463X0036-H1.2). From its JSON-LD description it is possible to dereference URIs of the acquired observation, the monitored Hydrogeounit but also the associated Stream gage. Indeed, in hydrological contexts where the surface/ground water units interaction is properly described, groundwater and surface water monitoring stations are ‘associated’ with correlation coefficients as behaviour of their monitored featured has an impact on the other. The associated Stream gage description is also an entry point to the river network and its monitoring.</p>
+<p>The Surface-ground water networks interaction use case is focused on a single Piezometer with an identifier from the French Ground Water Information Network (00463X0036-H1.2). From its JSON-LD description it is possible to dereference URIs of observations, the monitored Hydrogeounit, and also the associated Stream gage. In hydrological contexts where surface water - groundwater interactions are properly described, groundwater and surface water monitoring stations can be ‘associated’ with correlation coefficients as behaviour of their monitored featured has an impact on the other. The associated Stream gage description is also linked to the river network.</p>
 </div>
 <div class="paragraph">
-<p>The implementation use case tested during ELFIE allowed to traverse the data graph depicted below. Using a dedicated application it was possible to interact with it: either displaying on maps geographical features or triggering observation display widgets (timeseries).</p>
+<p>The implementation use case tested during ELFIE allowed traversal of the data graph depicted below. Using a dedicated application it was possible to interact with it: either displaying on maps geographical features or triggering observation display widgets (timeseries).</p>
 </div>
 <div id="img_sgn_ss_1" class="imageblock" style="text-align: center">
 <div class="content">
@@ -1308,7 +1323,7 @@ page.</a></p>
 <div class="sect2">
 <h3 id="_introduction_2"><a class="anchor" href="#_introduction_2"></a>8.1. Introduction</h3>
 <div class="paragraph">
-<p>The approach taken in the ELFIE was limited in contrast to recent IEs concerning environmental information models. The ELFIE focused on linked data documents that contain collections of linked features and related observations. With regard to the OGC Reference Model, this IE seeks to understand how features (geospatial information, observations) can be linked to each other in specific resolved views of the linked data graph or by reference through use of HTTP URIs. The ELFIE did not seek to solve problems regarding network architecture for resolving links or systems design and governance for applications that store and retrieving links or concept relationships.</p>
+<p>The approach taken in the ELFIE was limited in contrast to recent IEs concerning environmental information models. The ELFIE focused on linked data documents that contain collections of linked features and related observations. With regard to the OGC Reference Model, this IE seeks to understand how features (geospatial information, observations) can be linked to each other in specific resolved views (as in <a href="#view_box">Box 1: Linked Data Graph Views</a>) of the linked data graph or by reference through use of HTTP URIs. The ELFIE did not seek to solve problems regarding network architecture for resolving links or systems design and governance for applications.</p>
 </div>
 <div class="paragraph">
 <p>Given this, the ELFIE sought to define a common approach to encoding links between environmental domain features that would allow cross-domain and cross-system sharing and interoperability of such linked information. To do this, the ELFIE worked with existing and pending OGC standards for encoding of environmental observation data in an integrated dataset of features. Such OGC data models were then linked together according to W3C and other Linked Data best practices.</p>
@@ -1317,17 +1332,17 @@ page.</a></p>
 <div class="sect2">
 <h3 id="_ogc_web_standards"><a class="anchor" href="#_ogc_web_standards"></a>8.2. OGC Web Standards</h3>
 <div class="paragraph">
-<p>OGC Web Service standards for features and observations (WFS, SOS and SensorThings API respectively) were used to construct HTTP URLs for use in the ELFIE linked data documents as much as possible.
+<p>OGC Web Service standards for features and observations (WFS, SOS, and SensorThings API) were used to construct HTTP URLs for use in the ELFIE linked data documents as much as possible.
 While the WFS and SOS APIs present some challenges in creating URLs for use in linked data, the APIs do offer sufficient HTTP GET functionality to embed useful content in linked data with a great degree of flexibility. The situation is different with the SensorThings API, which has HTTP GET functionality, but only supports 'internal ids' to request desired features. Workarounds have been tried but they involve URL encoding features URIs which is not seen as an ideal solution. Issues related to URL structure and a given API-call’s relation to a canonical non-information resource URI were encountered but deferred for future investigations.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_ogc_domain_models"><a class="anchor" href="#_ogc_domain_models"></a>8.3. OGC Domain Models</h3>
 <div class="paragraph">
-<p>OGC data models were used extensively in the ELFIE. The Observations and Measurements (O&amp;M) conceptual model provided a high level organizing framework for most the ELFIE documents. The OGC-W3C Spatial Data On the Web Working Group implementation of O&amp;M (Sensor, Observation, Sample, and Actuator (SOSA)) was used directly because of its applicability to the linked data technology pursued in the ELFIE. The GeoSPARQL ontology was also used directly for representing geometries and spatial relations between features.</p>
+<p>OGC data models were used extensively in the ELFIE. The Observations and Measurements (O&amp;M) conceptual model provided a high level organizing framework for most ELFIE documents. The OGC-W3C Spatial Data On the Web Working Group implementation of O&amp;M <a href="https://www.w3.org/TR/vocab-ssn/">(Sensor, Observation, Sample, and Actuator (SOSA))</a> was used directly because of its applicability to the linked data technology pursued in the ELFIE. The <a href="https://www.opengeospatial.org/standards/geosparql">GeoSPARQL</a> ontology was also used directly for representing geometries and spatial relations between features.</p>
 </div>
 <div class="paragraph">
-<p>Domain specific data models such as WaterML2 Part 3: Surface Hydrologic Features, WaterML2 Part 4: Groundwater Markup Language 2 (GWML2) and GeoSciML were also used for feature types and relations in the ELFIE linked data documents.</p>
+<p>Domain specific data models such as <a href="http://docs.opengeospatial.org/is/14-111r6/14-111r6.html">HY_Features</a>, <a href="http://docs.opengeospatial.org/is/16-032r2/16-032r2.html">GWML2</a> and <a href="https://docs.opengeospatial.org/is/16-008/16-008.html">GeoSciML</a> were also used for feature types and relations in the ELFIE linked data documents.</p>
 </div>
 <div id="uris_box" class="sidebarblock">
 <div class="content">
@@ -1336,7 +1351,7 @@ While the WFS and SOS APIs present some challenges in creating URLs for use in l
 <p>A major limitation for use of these data models in the ELFIE was a lack of published taxonomies and ontologies using stable namespaces. Placeholder URIs were minted for their feature types and relations for the ELFIE project and formalization of such taxonomies and ontologies was left for future work.</p>
 </div>
 <div class="paragraph">
-<p>Not all URIs used in examples in this project are not intended to be stable. Formal publication of these ontologies will supercede interim choices.</p>
+<p>Not all URIs used in examples in this project are intended to be stable. Formal publication of these ontologies will supercede interim choices.</p>
 </div>
 </div>
 </div>
@@ -1344,10 +1359,10 @@ While the WFS and SOS APIs present some challenges in creating URLs for use in l
 <div class="sect2">
 <h3 id="_w3c"><a class="anchor" href="#_w3c"></a>8.4. W3C</h3>
 <div class="paragraph">
-<p>W3C best practices for data on the web, spatial data in the web, and linked data were used to guide decisions related to the ELFIE linked data documents. Several members of the ELFIE project team were involved in development of these best practices and represented them throughout the project. Given this, the ELFIE was an opportunity to apply these best practices in a practical engineering process, using them together and attempting to apply them to OGC web service and information models.</p>
+<p>W3C best practices for data on the web, spatial data on the web, and linked data were used to guide decisions related to the ELFIE linked data documents. Several members of the ELFIE project team were involved in development of these best practices and represented them throughout the project. Given this, the ELFIE was an opportunity to apply these best practices in a practical engineering process, using them together and attempting to apply them to OGC web service and information models.</p>
 </div>
 <div class="paragraph">
-<p>This was largely successful and no major issues were encountered related to the best practices themselves. However, they were not achieved fully due to realities of the internet, organization’s operational constraints, and limitations of current APIs and data models. In other words, a project seeking to apply current OGC standards on their infrastructure within the suggested W3C data on the web best practices would have to implement ad hoc system behavior (proxy negotiation by 'profiles', feature request by its URI, rewriting to JSON-LD, etc.). This situation is mainly due to the fact that several standardization efforts needed to support these practices are in progress (W3C DXWG, OGC WFS 3, etc.) and that such enterprise systems are slow to evolve.</p>
+<p>This was largely successful and no major issues were encountered related to the best practices themselves. However, they were not achieved fully due to realities of the internet, organization’s operational constraints, and limitations of current APIs and data models. In other words, a project seeking to apply current OGC standards on their infrastructure within the suggested W3C data on the web best practices would have to implement ad hoc system behavior (proxy negotiation by 'profiles', feature request by its URI, rewriting to JSON-LD, etc.). This situation is mainly due to the fact that several standardization efforts needed to support these practices are in progress (W3C DXWG, OGC WFS 3, etc.) and that enterprise systems are slow to evolve.</p>
 </div>
 <div class="paragraph">
 <p>Experiences from the ELFIE project are being taken forward into influencing future W3C standards through the Data Exchange Working Group, where the concept of views is being addressed within the scope of the profiles concept. Description, discovery, metadata and negotiation according to formally identified profiles mirrors the ELFIE architectural choice to publish and reuse JSON-LD contexts.</p>
@@ -1356,7 +1371,7 @@ While the WFS and SOS APIs present some challenges in creating URLs for use in l
 <div class="sect2">
 <h3 id="_json_ld"><a class="anchor" href="#_json_ld"></a>8.5. JSON-LD</h3>
 <div class="paragraph">
-<p>Given the ELFIE goals related to adoptability of solutions and support of mass market search techniques, JSON-LD was used as the encoding for the ELFIE documents. While there were other potential options that could be used, the ease of use (parsing and serialization) of JSON-LD across practically all programming languages made it the clear choice for use in the ELFIE. The decision to use JSON-LD was further supported by ongoing work within the OGC Architecture Domain Working Group to modernize OGC standards to support more data types beyond XML, especially JSON. As described below, some technical limitations inherent to RDF and thus JSON-LD were encountered while attempting to encode preview geometries, but all basic requirements of the ELFIE were satisfied by the JSON-LD encoding.</p>
+<p>Given the ELFIE goals related to adoptability of solutions and support of mass market search techniques, JSON-LD was used as the encoding for the ELFIE documents. While there were other potential options that could be used, the ease of use (parsing and serialization) of JSON-LD across practically all programming languages made it the clear choice for use in ELFIE. The decision to use JSON-LD was further supported by ongoing work within the OGC Architecture Domain Working Group to modernize OGC standards to supported JSON. As described below, some technical limitations inherent to RDF and thus JSON-LD were encountered while attempting to encode preview geometries, but all basic requirements of the ELFIE were satisfied by the JSON-LD encoding.</p>
 </div>
 <div class="paragraph">
 <p>The incompatibility of JSON-LD and GeoJSON is a finding that will need further consideration by the OGC community.</p>
@@ -1370,36 +1385,36 @@ While the WFS and SOS APIs present some challenges in creating URLs for use in l
 <div class="sect2">
 <h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>9.1. Introduction</h3>
 <div class="paragraph">
-<p>An important goal of the ELFIE was "adoptability" by web developers and compatibility with technologies that are ubiquitous on the internet. Given these goals, the IE team started to think in terms of <em>"views"</em> (concept introduced in <a href="#view_box">Box 1: Linked Data Graph Views</a>) of the linked data graph describing a given environmental feature or observation. Two conceptual <em>views</em>, preview and network, were the primary focus of the ELFIE. Preview is meant to be a very simple summary of a feature including type, name, and geometry. Network is meant to be a summary of relevant first-neighbor features in a topological network. These two form the core interoperable set of ELFIE "<em>views</em>" but lack domain specific relations such as observational relations and hydrologic topology.</p>
+<p>An important goal of the ELFIE was "adoptability" by web developers and compatibility with technologies that are ubiquitous on the internet. Given these goals, the IE team started to think in terms of <em>"views"</em> (concept introduced in <a href="#view_box">Box 1: Linked Data Graph Views</a>) of the linked data graph describing a given environmental feature or observation. Two conceptual <em>views</em>, "preview" and "network", were the primary focus of the ELFIE. "Preview" is meant to be a very simple summary of a feature including type, name, and geometry. "Network" is meant to be a summary of relevant first-neighbor features in a topological network. These two form the core interoperable set of ELFIE <em>views</em> but lack domain specific relations such as observational relations and hydrologic topology.</p>
 </div>
 <div class="paragraph">
 <p>Initial ELFIE discussions of the graph view concept used the <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language SHACL</a> technology as the logical implementation. Further evaluation and consideration of the ELFIE goals regarding adoptability and ubiquity, the <a href="https://www.w3.org/TR/json-ld/#the-context">JSON-LD context</a> was chosen as the most appropriate technical solution to express the graph <em>views</em>. The ELFIE contexts are meant to be precise descriptions of what the IE found to be the most appropriate linked data properties (attributes and relations) and types. They are not intended to be used as a schema to specify or validate the contents of a given document. However, they could provide a useful set of aliases for the subset of types and properties that could be expected to be parsed and interpreted by the client.</p>
 </div>
 <div class="paragraph">
-<p>From a practical perspective, the contexts provide clear guidelines for what properties and types to use while not being overly prescriptive, limiting, or difficult to use in a typical web development workflow. Unlike <em>schemas</em>, such contexts support the “Open World Assumption” where missing elements simply indicate that this information is not currently available to the data provider, without the burden (and potential for misuse) of stating a placeholder value. Furthermore, to simplify the use of the contexts and reduce possible errors while parsing the <em>views</em>, <a href="https://w3c.github.io/json-ld-syntax/#type-coercion">Type Coercion</a> was not used while aliasing properties in the contexts files.</p>
+<p>From a practical perspective, the contexts provide clear guidelines for what properties and types to use while not being overly prescriptive, limiting, or difficult to use in a typical web development workflow. Unlike schemas, such contexts support the “Open World Assumption” where missing elements simply indicate that this information is not currently available to the data provider, without the burden (and potential for misuse) of stating a placeholder value. Furthermore, to simplify the use of the contexts and reduce possible errors while parsing the <em>views</em>, <a href="https://w3c.github.io/json-ld-syntax/#type-coercion">Type Coercion</a> was not used while aliasing properties in the contexts files.</p>
 </div>
 <div class="paragraph">
-<p>More information about the design and engineering of ELFIE contexts can be found on the <a href="https://opengeospatial.github.io/ELFIE/json-ld/">ELFIE web page</a>. Note that the discussion and examples there is not in direct reference to the use cases used for discussion and testing of the IE.</p>
+<p>More information about the design and engineering of ELFIE contexts can be found on the <a href="https://opengeospatial.github.io/ELFIE/json-ld/">ELFIE JOSN-LD web page</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_general_elfie_contexts"><a class="anchor" href="#_general_elfie_contexts"></a>9.2. General ELFIE Contexts</h3>
 <div class="paragraph">
-<p>The ELFIE preview graph <em>view</em>, is described by the
+<p>The ELFIE "preview" graph <em>view</em>, is described by the
 <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld">elf.jsonld</a> context.
 It uses <a href="http://schema.org/">schema.org</a>, <a href="https://www.w3.org/TR/skos-reference/">skos</a>,
 and <a href="http://www.opengeospatial.org/standards/geosparql">geosparql</a> properties and types.
 Schema.org is used whenever possible to maintain compatibility with search engines, uses SKOS for a lose "related" relationship, and GeoSPARQL for precise specification of a geometric preview. The geometric preview of a feature was an area of contention for the IE.</p>
 </div>
 <div class="paragraph">
-<p><a href="http://geojson.org/geojson-ld/">GeoJSON-LD</a> was seen as a logical solution, but as described in the outstanding issues for GeoJSON-LD, nested GeoJSON coordinate arrays are not supported by JSON-LD parsers. Additionally, the schema.org geometry schema was seen as under specified in that among other reasons, it does not provide a default coordinate reference system or a mechanism to declare one. For this reason, the GeoSPARQL well known text format was included providing a precise and JSON-LD compatible geometry format. However, provided the technical limitations listed <a href="#preview-geometry">below</a>, if some logical assumptions are made for the use of schema.org geometry (<a href="https://schema.org/GeoShape">schema:GeoShape</a>), it can be used to satisfy the basic geometry preview use case with significantly lower technical overhead than support for the full well known text standard. Further work should look more closely at this issue in an attempt to reconcile and or provide guidance.</p>
+<p><a href="http://geojson.org/geojson-ld/">GeoJSON-LD</a> was seen as a logical solution, but as described in the outstanding issues for GeoJSON-LD, nested GeoJSON coordinate arrays are not supported by JSON-LD parsers. Additionally, the schema.org geometry schema was seen as under specified in that among other reasons, it does not provide a default coordinate reference system or a mechanism to declare one. For this reason, the GeoSPARQL well known text format was included providing a precise and JSON-LD compatible geometry format. However, provided the technical limitations listed <a href="#preview-geometry">below</a>, if some logical assumptions are made for the use of schema.org geometry (<a href="https://schema.org/GeoShape">schema:GeoShape</a>), it can be used to satisfy the basic geometry preview use case with significantly lower technical overhead than support for the full well known text standard. Further work should look more closely at this issue in an attempt to reconcile and provide guidance.</p>
 </div>
 <div class="paragraph">
-<p>The ELFIE network graph <em>view</em>, is described by the
+<p>The ELFIE "network" <em>view</em>, is described by the
 <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld">elf-network.jsonld</a>
 context. It uses
-geosparql[<a href="http://www.opengeospatial.org/standards/geosparql" class="bare">http://www.opengeospatial.org/standards/geosparql</a>] and
-OWL-time[<a href="https://www.w3.org/TR/owl-time/" class="bare">https://www.w3.org/TR/owl-time/</a>] relations. As shown below, its emphasis is on simple topological relationships such as touches, intersects, before, etc. A network context would logically include additional domain specific topological relations derived from other contexts, but they are not included in the general network context.</p>
+<a href="http://www.opengeospatial.org/standards/geosparql">GeoSPARQL</a> and
+<a href="https://www.w3.org/TR/owl-time/">OWL-time</a> relations. As shown below, its emphasis is on simple topological relationships such as touches, intersects, before, etc. A "network" context would logically include additional domain specific topological relations derived from other contexts, but they are not included in the general "network" context.</p>
 </div>
 <div id="elf-network-context" class="listingblock">
 <div class="title">Box 3: <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld">elf-network.json-ld</a></div>
@@ -1440,7 +1455,7 @@ should follow ELFIE.</p>
 <div class="sect2">
 <h3 id="_contexts_in_context_exemple_on_the_watershed_data_index_use_case"><a class="anchor" href="#_contexts_in_context_exemple_on_the_watershed_data_index_use_case"></a>9.4. Contexts in context: exemple on the Watershed Data Index Use Case</h3>
 <div class="paragraph">
-<p>As can be seen in the main watershed entry point to the index <a href="https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601">here</a>, the watershed data index use case uses two contexts. elf.jsonld and and hyf.jsonld shown below in boxes 2 and 3 respectively.</p>
+<p>As can be seen in the main watershed entry point to the index <a href="https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601">here</a>, the watershed data index use case uses two contexts. elf.jsonld and and hyf.jsonld shown below in <a href="#elf-base-context">Box 4: <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld">elf.jsonld</a></a> and <a href="#hyf-context">Box 5: <a href="https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld">hyf.jsonld</a></a> respectively.</p>
 </div>
 <div id="elf-base-context" class="listingblock">
 <div class="title">Box 4: <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld">elf.jsonld</a></div>
@@ -1505,7 +1520,7 @@ should follow ELFIE.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that the JSON-LD document that describes the watershed using these two contexts does not implement all the relations in either context. Rather, they are limited to relations from them and only implement the relations from them that make sense or have content for the feature that is being described. Box 4 shows this entry point JSON-LD document. Note that it uses elf.jsonld relations like schema:name, and schema:description, but not gsp:hasGeometry or schema:image. This is because a feature of type HY_Catchment is not expected to have a particular geometry and there is no image available for the feature. The flexibility of the JSON-LD context approach (compared to SHACL or other more rigorous approaches) is a strength in that it can be applied to many cases easily, but this may be seen as a weakness if specific requirements and validations need to be implemented.</p>
+<p>Note that the JSON-LD document that describes the watershed using these two contexts does not implement all the relations in either context. Rather, they are limited to relations from them and only implement the relations from them that make sense or have content for the feature that is being described. <a href="#huc12obs_example">Box 6: <a href="https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601">Watershed Data Index Use Case Entry JSON-LD Document</a></a> shows this entry point JSON-LD document. Note that it uses elf.jsonld relations like schema:name, and schema:description, but not gsp:hasGeometry or schema:image. This is because a feature of type HY_Catchment is not expected to have a particular geometry and there is no image available for the feature. The flexibility of the JSON-LD context approach is a strength in that it can be applied to many cases easily, but this may be seen as a weakness if specific requirements and validations need to be implemented.</p>
 </div>
 <div id="huc12obs_example" class="listingblock">
 <div class="title">Box 6: <a href="https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601">Watershed Data Index Use Case Entry JSON-LD Document</a></div>
@@ -1541,18 +1556,18 @@ should follow ELFIE.</p>
 <h2 id="Experiment_Outcomes_Summary"><a class="anchor" href="#Experiment_Outcomes_Summary"></a>10. Summary of Experiment and Analysis of Outcomes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As described previously, the ELFIE was intended to test existing OGC and W3C standards with the goal of establishing a best practice for expressing and exposing links between and among environmental domain and sampling features. The project sought to test existing solutions to linking data on the web with a "just enough" semantic annotation approach that would be approachable by developers and adoptable existing systems. Many use cases were discussed and a few of them were selected for experimental implementation.</p>
+<p>As described previously, the ELFIE was intended to test existing OGC and W3C standards with the goal of establishing a best practice for expressing and exposing links between and among environmental domain and sampling features. The project sought to test existing solutions to linking data on the web with a "just enough" semantic annotation approach that would be approachable by developers and be adoptable using existing systems. Many use cases were discussed and a few of them were selected for experimental implementation.</p>
 </div>
 <div class="paragraph">
-<p>All experimental implementations are summarized on the <a href="https://opengeospatial.github.io/ELFIE/">ELFIE demo pages.</a> The collection of experiments show that existing practices for encoding linked data can be used to satisfy the important environmental linked features use cases considered by the ELFIE. In cases where features and related information were already published as linked data or had well established web services, these data and/or service generated representations were easy to incorporate and use. Many of the core linked data relations used for search engine optimization were found to be suited to typical environmental linked feature use cases.</p>
+<p>All experimental implementations are summarized on the <a href="https://opengeospatial.github.io/ELFIE/">ELFIE demo pages.</a> The collection of experiments show that existing practices for encoding linked data can be used to satisfy the environmental linked features use cases considered by the ELFIE. In cases where features and related information were already published as linked data or had well established web services, these data and/or service-generated representations were easy to incorporate and use. Many of the core linked data relations used for search engine optimization were found to be suited to typical environmental linked feature use cases.</p>
 </div>
 <div class="paragraph">
-<p>Note that in the JSON-LD files provided on ELFIE github, URIs are relative to the file locations on opengeospatial.github.io for linked data demo purposes. This choice helped save time for the IE as it avoided each participant to set up the corresponding mechanics within its own data infrastructure. In production situations, each data provider will end-up exposing those file using their own URI policy.</p>
+<p>Note that in the JSON-LD files provided on the ELFIE web pages, URIs are relative to the file locations on opengeospatial.github.io for linked data demo purposes. This choice helped save time for the IE as it avoided each participant to set up the corresponding mechanics within its own data infrastructure. In production situations, each data provider will end-up exposing those files using their own URI policy.</p>
 </div>
 <div class="sect2">
 <h3 id="_watershed_data_index_use_case_example"><a class="anchor" href="#_watershed_data_index_use_case_example"></a>10.1. Watershed Data Index Use Case Example</h3>
 <div class="paragraph">
-<p>While additional content is available on the ELFIE demo pages, the watershed data index use case, that was described in greater detail in previous sections, is described in greater detail here. As shown in Box 4 <a href="#contexts-in-context-exemple-on-the-watershed-data-index-use-case">here</a>, this use case has a primary entry point JSON-LD document for a single HY_Catchment feature that uses the elf.jsonld and hyf.jsonld contexts. As described in this <a href="#watershed-data-index-use-case-in-depth">section</a>, the HY_Catchment is thought of as an unrealized feature that has multiple features that “realize” one of the ways we conceptualize catchments. The JSON-LD documents for these are shown in the source code box below.</p>
+<p>While additional content is available on the <a href="https://opengeospatial.github.io/ELFIE/">ELFIE demo pages</a>, the watershed data index use case, that was described in greater detail in previous sections, is described in greater detail here. As shown in the JSON-LD example <a href="#huc12obs_example">here</a>, this use case has a primary entry point JSON-LD document for a single HY_Catchment feature that uses the elf.jsonld and hyf.jsonld contexts. As described in this <a href="#_watershed_data_index_use_case_in_depth">section</a>, the HY_Catchment is thought of as an unrealized feature that has multiple features that “realize” one of the ways we conceptualize catchments. The JSON-LD documents for these are shown in the source code box below.</p>
 </div>
 <div class="paragraph">
 <p>Items to note below:</p>
@@ -1560,13 +1575,13 @@ should follow ELFIE.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Only two contexts are shown. While other contexts were used to some extent in ELFIE, this use case was kept purposefully simple and only demonstrates elf.jsonld and hyf.jsonld. See <a href="#elf-network-context">Box 3: <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf-network.jsonld">elf-network.json-ld</a></a> and <a href="#elf-base-context">Box 4: <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld">elf.jsonld</a></a> for these context documents.</p>
+<p>Only two contexts are shown. While other contexts were used to some extent in ELFIE, this use case was kept purposefully simple and only demonstrates elf.jsonld and hyf.jsonld. See <a href="#elf-base-context">Box 4: <a href="https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld">elf.jsonld</a></a> and <a href="#hyf-context">Box 5: <a href="https://opengeospatial.github.io/ELFIE/json-ld/hyf.jsonld">hyf.jsonld</a></a> for these context documents.</p>
 </li>
 <li>
 <p>Several geospatial preview geometry options are shown. As described elsewhere, use of the schema:geoshape, schema:geoCoordinates, gsp:hasGeometry, and/or a link to a geojson document are all possible and have potential value.</p>
 </li>
 <li>
-<p>HY_Features relations are draft and will not resolve. Work to publish HY_Features feature types and associations is underway at the time of writing.</p>
+<p>HY_Features relations are draft URIs and will not resolve. Work to publish HY_Features feature types and associations is underway at the time of writing.</p>
 </li>
 <li>
 <p>Much more information could be included in the hydrometricNetwork document or at the feature page of the individual hydrometricFeatures. Those details were not implemented for this demo.</p>

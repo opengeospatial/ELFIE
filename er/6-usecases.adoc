@@ -2,11 +2,11 @@
 == Use Case Summary
 
 === Introduction
-The design phase of the ELFIE focused on the identification of a number of use cases with extensive need for linked environmental data. These use cases focused on known difficulties of the systems the ELFIE participants maintain or depend on as users. Many of these use cases were used for the discovery and vetting of ideas only.  Others were further developed with implementation of example encoded linked data and client code to produce desired results of the use case.
+The design phase of the ELFIE focused on identification of a number of use cases with extensive need for linked environmental data. These use cases focused on known difficulties of the systems the ELFIE participants maintain or depend on as users. Many of these use cases were used for the discovery and vetting of ideas only.  Others were further developed with implementation of example encoded linked data and client code to produce desired results of the use case.
 
 Test cases that were implemented as demonstrations of the design outcomes are described below in full detail to include notional diagrams of how datasets involved link to each other, a thorough description of the use case, and an example application that speaks to and/or satisfies the needs of the use case.
 
-The full suite of use cases considered during the design phase of the project are described in Appendix D: Use Cases. Each use case takes the form of a simple description of who or what system has an interest in what related datasets. Specific datasets are listed to clarify the scope and provide a starting point for future technical design work. 
+The full suite of use cases considered during the design phase of the project are described in the <<use_case_data>> appendix. Each use case takes the form of a simple description of who or what system has an interest in what related datasets. Specific datasets are listed to clarify the scope and provide a starting point for future technical design work. 
 
 
 === Test Cases Implemented as Demonstrations of Outcomes
@@ -30,7 +30,12 @@ page.]
 .Notional diagram of features (black) and linked data (white) in the floodcast use case. Note that many more relationships could be expressed if desired.
 image::images/floodcast.png[width=600,align="center"]
 
-**Ground water level monitoring** Ground water level monitoring This use case is meant to demonstrate how from a given Well URI any user (domain expert, machine) can then traverse to the monitoring strategy deployed (piezometer information etc.) and then access to the ground water level time series and/or information about the monitored aquifer. 
+Additional details about the flood risk use case implementation is
+available on the
+https://opengeospatial.github.io/ELFIE/demo/floodcast[demonstration ELFIE web
+page.]
+
+**Ground water level monitoring** This use case is meant to demonstrate how from a given well URI any user (domain expert, machine) can then traverse to the monitoring strategy deployed (piezometer information etc.) and then access ground water level time series and/or information about the monitored aquifer. 
 
 [#img_groundwater_monitoring_data,reftext='{figure-caption} {counter:figure-num}']
 .Notional diagram of features (black) and data (white)  in the ground water level monitoring use case.
@@ -40,7 +45,7 @@ Additional details about the ground water level monitoring use case implementati
 https://opengeospatial.github.io/ELFIE/demo/groundwater_monitoring[demonstration
 ELFIE web page.]
 
-**Surface-ground water networks interaction** This use case is meant to demonstrate how from a given Piezometer URI any user (domain expert, machine) can traverse to the ground water monitoring strategy (see Ground water level monitoring Use Case) but also to the associated surface water monitoring one. Provided each surface/groundwater features are properly linked together (River network, Aquifer system) it is then feasible to acquire knowledge about a fully comprehensive water system. This use case can be seen as a flagship one to demonstrate the usefulness of linked data in the environnemental/cross-silos context.
+**Surface-ground water networks interaction** This use case is meant to demonstrate how from a given Piezometer URI any user (domain expert, machine) can traverse to the ground water monitoring strategy (see Ground water level monitoring Use Case) but also to the associated surface water monitoring one. Provided each surface/groundwater feature is properly linked together (River network, Aquifer system) it is then feasible to discover information about the full, comprehensive water system. This use case can be seen as a flagship demonstrating the usefulness of linked data in the environnemental/cross-domain context.
 
 [#img_surface_groundwater_networks,reftext='{figure-caption} {counter:figure-num}']
 .Notional diagram of features (black) and linked observational data (white) in the surface-ground water networks interaction use case.
@@ -48,7 +53,7 @@ image::images/FR_surface_ground_surface_roundtrip.png[width=750,align="center"]
 
 Additional details about the surface-ground water networks interaction use case implementation is available on the https://opengeospatial.github.io/ELFIE/demo/surface_groundwater_network_interaction[demonstration ELFIE web page.]
 
-**Watershed data index** This use case is meant to demonstrate the use of HY_Features to link a catchment (12 digit hydrologic unit code (HUC12) watershed in this case) to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.
+**Watershed data index** This use case is meant to demonstrate the use of HY_Features to link a catchment to the data representing it as well as the monitoring network associated with it. It serves as a general demonstration that could be used for a wide array of linked watershed information use cases.
 
 [#img_huc12obs_data,reftext='{figure-caption} {counter:figure-num}']
 .Notional diagram of relationships between the features (black) and linked data (white) in the watershed data index use case.
@@ -61,7 +66,7 @@ page.]
 
 === Watershed Data Index Use Case in Depth
 
-This use case is introduced in more detail than those above here and its technical details are presented below. Technical details of other use cases can be found at the 
+This use case is introduced in more detail than those above and its technical details are presented below. Technical details of other use cases can be found at the 
 https://opengeospatial.github.io/ELFIE/[ELFIE demonstration web
 page.]
 
@@ -79,11 +84,11 @@ image::images/huc12obs_screenshot.png[width=600,align="center"]
 
 === Surface-ground water networks interaction Use Case in Depth
 
-This use case is introduced in more detail than those above here and its technical details are presented below as it makes intensive use of linked data technologies.
+This use case is introduced in more detail than those above and its technical details are presented below as it makes intensive use of linked data technologies.
 
-The Surface-ground water networks interaction use case is focused on a single Piezometer with an identifier from the French Ground Water Information Network (00463X0036-H1.2). From its JSON-LD description it is possible to dereference URIs of the acquired observation, the monitored Hydrogeounit but also the associated Stream gage. Indeed, in hydrological contexts where the surface/ground water units interaction is properly described, groundwater and surface water monitoring stations are ‘associated’ with correlation coefficients as behaviour of their monitored featured has an impact on the other. The associated Stream gage description is also an entry point to the river network and its monitoring.
+The Surface-ground water networks interaction use case is focused on a single Piezometer with an identifier from the French Ground Water Information Network (00463X0036-H1.2). From its JSON-LD description it is possible to dereference URIs of observations, the monitored Hydrogeounit, and also the associated Stream gage. In hydrological contexts where surface water - groundwater interactions are properly described, groundwater and surface water monitoring stations can be ‘associated’ with correlation coefficients as behaviour of their monitored featured has an impact on the other. The associated Stream gage description is also linked to the river network.
 
-The implementation use case tested during ELFIE allowed to traverse the data graph depicted below. Using a dedicated application it was possible to interact with it: either displaying on maps geographical features or triggering observation display widgets (timeseries).
+The implementation use case tested during ELFIE allowed traversal of the data graph depicted below. Using a dedicated application it was possible to interact with it: either displaying on maps geographical features or triggering observation display widgets (timeseries).
 
 [#img_sgn_ss_1,reftext='{figure-caption} {counter:figure-num}']
 .Screenshot of the surface-ground water networks interaction use case (map visualization data graph traversed).
