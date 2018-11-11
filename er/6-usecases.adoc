@@ -70,7 +70,7 @@ This use case is introduced in more detail than those above and its technical de
 https://opengeospatial.github.io/ELFIE/[ELFIE demonstration web
 page.]
 
-The watershed data index use case is focused on a single HY_Catchment feature with an identifier of "070900020601" from the https://nhd.usgs.gov/wbd.html[U.S. watershed boundary dataset]. Given that HY_Catchment is an unrealized featuretype, the document describing https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601["070900020601"] links to realizations of "070900020601".  Three catchment realizations are included: 
+The watershed data index use case is focused on a single HY_Catchment feature with an identifier of "070900020601" from the U.S. watershed boundary dataset. Given that HY_Catchment is an unrealized featuretype, the document describing https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601["070900020601"] links to realizations of "070900020601".  Three catchment realizations are included: 
 
 . the https://opengeospatial.github.io/ELFIE/usgs/hucboundary/huc12obs/070900020601[boundary] polygon from the watershed boundary dataset, 
 . the https://opengeospatial.github.io/ELFIE/usgs/nhdplusflowline/huc12obs/070900020601[hydrographic] network from the National Hydrography Dataset, 

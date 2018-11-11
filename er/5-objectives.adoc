@@ -17,8 +17,8 @@ Within this, the ELFIE aimed to leverage existing standards and best practices w
 
 . are adoptable by developers and users with a wide array of technical skill levels, 
 . are ubiquitous and easily adoptable in any programming language,
-. support mass market search techniques, (https://www.w3.org/TR/sdw-bp/#bp-indexable[SDW Best Practice 2]: Make your spatial data indexable by search engines)
-. apply best practices for linked data on the web, (https://www.w3.org/TR/sdw-bp/#bp-linking[SDW Best Practice 3]: Link resources together to create the Web of data)
+. support mass market search techniques, (https://www.w3.org/TR/sdw-bp/#bp-indexable[SDW Best Practice 2]: Make your spatial data indexable by search engines cite:[Barnaghi:17:SDW])
+. apply best practices for linked data on the web, (https://www.w3.org/TR/sdw-bp/#bp-linking[SDW Best Practice 3]: Link resources together to create the Web of data cite:[Barnaghi:17:SDW])
 . and adhere, to the extent possible, to standard taxonomies and ontologies.
 
 === Assumptions

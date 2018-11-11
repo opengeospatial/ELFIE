@@ -9,16 +9,16 @@ Abstraction of real-world phenomena. [ISO 19101:2002, definition 4.11].
 facet or attribute of an object referenced by a name [ISO 19143:2010, definition 4.21]
 
 === subject
-The subject is the first part of an RDF statement. A subject in the context of a triple <?s ?p ?o> refers to who or what the RDF statement is about. (See https://www.w3.org/TR/ld-glossary/#subject)
+The subject is the first part of an RDF statement. A subject in the context of a triple <?s ?p ?o> refers to who or what the RDF statement is about. (See https://www.w3.org/TR/ld-glossary/#subject cite:[Hyland:13:LDG])
 
 === predicate
-The middle term (the linkage, or "verb") in an RDF statement. For example, in the statement "Alice knows Bob" then "knows" is the predicate which connects "Alice" (the subject of the statement) to "Bob" (the object of the statement). (See https://www.w3.org/TR/ld-glossary)
+The middle term (the linkage, or "verb") in an RDF statement. For example, in the statement "Alice knows Bob" then "knows" is the predicate which connects "Alice" (the subject of the statement) to "Bob" (the object of the statement). (See https://www.w3.org/TR/ld-glossary cite:[Hyland:13:LDG])
 
 === Object
-In the context of RDF, the object is the final part of an RDF statement. (See https://www.w3.org/TR/ld-glossary/#object)
+In the context of RDF, the object is the final part of an RDF statement. (See https://www.w3.org/TR/ld-glossary/#object cite:[Hyland:13:LDG])
 
 === resource
-A resource represents anything that can be identified, including physical things, documents, abstract concepts, numbers and strings (see https://www.w3.org/TR/rdf11-concepts/ ) 
+A resource represents anything that can be identified, including physical things, documents, abstract concepts, numbers and strings (see https://www.w3.org/TR/rdf11-concepts/ cite:[Cyganiak:14:RCA]) 
 
 === observation
 Act of measuring or otherwise determining the value of a property [ISO19156:2011, definition 4.11]
