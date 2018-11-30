@@ -1,6 +1,6 @@
 ELFIE Overview and Outcomes
 ========================================================
-author: dblodgett@usgs.gov
+author: David Blodgett dblodgett@usgs.gov
 date: 11/30/18
 autosize: true
 
