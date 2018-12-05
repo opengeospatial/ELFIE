@@ -20,26 +20,26 @@
   <!-- ################################################# -->
       <meta property="og:title" content="US Water Budgets" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://dblodgett-usgs.github.io/uswb-viz/" />
-      <meta property="og:image:url" content="https://dblodgett-usgs.github.io/uswb-viz/images/thumb-facebook.png" />
+      <meta property="og:url" content="https://cida.usgs.gov/nwc-static/waterbudget-viz/" />
+      <meta property="og:image:url" content="https://cida.usgs.gov/nwc-static/waterbudget-viz/images/thumb-facebook.png" />
       <meta property="og:image:height" content="400" />
       <meta property="og:image:width" content="400" />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:description" content="!!! PRELIMINARY AND SUBJECT TO REVISISON !!! U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US." />
+      <meta property="og:description" content="U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US." />
       <meta property="og:locale" content="en_US" />
     
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@USGS_R" />
       <meta name="twitter:title" content="US Water Budgets" />
-      <meta name="twitter:description" content="!!! PRELIMINARY AND SUBJECT TO REVISISON !!! U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US." />
-      <meta name="twitter:image" content="https://dblodgett-usgs.github.io/uswb-viz/images/thumb-twitter.png" />
+      <meta name="twitter:description" content="U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US." />
+      <meta name="twitter:image" content="https://cida.usgs.gov/nwc-static/waterbudget-viz/images/thumb-twitter.png" />
       <meta name="twitter:image:alt" content="How the water cycle varies across the United States" />
       <script type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "WebSite",
           "name": "US Water Budgets",
-          "about": "!!! PRELIMINARY AND SUBJECT TO REVISISON !!! U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US.",
+          "about": "U.S. Water Budgets -- In this data visualization, you can see how three major components of the water budget vary across the conterminous US.",
           "datePublished": "2018-01-20",
           
       "contributor": {
@@ -69,17 +69,17 @@
       </script>
       
   <title>US Water Budgets</title>
-    <script src="js/d3-4.11.0.min.js?_c=1228887" type="text/javascript"></script>
-    <script src="js/jquery-3.2.1.min.js?_c=8037619" type="text/javascript"></script>
-    <script src="js/vizlab.js?_c=8565322" type="text/javascript"></script>
-    <script src="js/svg-injector-1.1.3.min.js?_c=7927418" type="text/javascript"></script>
-    <script src="js/animate.js?_c=8198920" type="text/javascript"></script>
-    <script src="js/tooltip.js?_c=3486936" type="text/javascript"></script>
-    <link href="css/header.css?_c=128249" rel="stylesheet" type="text/css" />
-    <link href="css/viz.css?_c=9417565" rel="stylesheet" type="text/css" />
-    <link href="css/svg.css?_c=6715376" rel="stylesheet" type="text/css" />
-    <link href="css/footer.css?_c=9737222" rel="stylesheet" type="text/css" />
-    <link href="css/socialMedia.css?_c=2813560" rel="stylesheet" type="text/css" />
+    <script src="js/d3-4.11.0.min.js?_c=9815257" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.min.js?_c=4223198" type="text/javascript"></script>
+    <script src="js/vizlab.js?_c=6112529" type="text/javascript"></script>
+    <script src="js/svg-injector-1.1.3.min.js?_c=4923366" type="text/javascript"></script>
+    <script src="js/tooltip.js?_c=2967519" type="text/javascript"></script>
+    <link href="css/header.css?_c=831265" rel="stylesheet" type="text/css" />
+    <link href="css/viz.css?_c=9153687" rel="stylesheet" type="text/css" />
+    <link href="css/svg.css?_c=7768953" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css?_c=4360145" rel="stylesheet" type="text/css" />
+    <link href="css/socialMedia.css?_c=8994189" rel="stylesheet" type="text/css" />
+    <script src="js/animate.js?_c=5277970" type="text/javascript"></script>
   <noscript>Javascript is not enabled</noscript>
     
     <script type="application/javascript" src="https://www2.usgs.gov/scripts/analytics/usgs-analytics.js"></script>
@@ -94,12 +94,12 @@
     </script>
     
 </head>
-<body onload="load_default()">
+<body onload="run_timer()">
 
   <div id="header">
   <div id="logo">
     <a href="https://www.usgs.gov/" target="_blank" onclick="gtag('event','outbound', 'clicked on USGS.gov')">
-    	  <img src="images/usgsLogo.png?_c=4347510" alt="U.S. Geological Survey" title="U.S. Geological Survey" />
+    	  <img src="images/usgsLogo.png?_c=3232919" alt="U.S. Geological Survey" title="U.S. Geological Survey" />
     </a> 
   	
   	<h3>Water Budgets Across the U.S.</h3>
@@ -162,18 +162,13 @@ Freshwater withdrawals in (in/yr): <span class="hide_span" id="wb-id-07070005170
 <span><a href="https://pubs.usgs.gov/sir/2013/5126/" target="_blank">Evapotranspiration: SSEBop</a></span><br>
 <span><a href="https://waterdata.usgs.gov/nwis" target="_blank">Streamflow: NWIS</a></span><br>
 <h3><span>Related Publications</span><br></h3>
-<span><a href="https://pubs.er.usgs.gov/publication/cir1384" target="_blank">National Water Census Description</a></span><br>
+<span><a href="https://pubs.er.usgs.gov/publication/cir1440" target="_blank">National Water Census Description</a></span><br>
 <span><a href="https://pubs.usgs.gov/circ/2007/1308/" target="_blank">Water Budgets Overview</a></span><br>
 </p>
       </div>
     </div>
     <div class="leftSideContent" id="caption">
-        <p><strong>This information is preliminary and is subject to revision. It is being provided to meet the 
-need for timely best science. The information is provided on the condition that neither the 
-U.S. Geological Survey nor the U.S. Government shall be held liable for any damages resulting 
-from the authorized or unauthorized use of this information.</strong></p>
-
-<p>Water budgets are used to understand the movement of water into and out of a
+        <p>Water budgets are used to understand the movement of water into and out of a
 watershed. Much like a financial budget, inflows, storage, and outflows can
 be thought of like income, account balance, and expenses respectively.
 Unlike a bank account, we don&#39;t have perfect information about the flows of
@@ -247,7 +242,7 @@ another and may change under various land use and water management scenarios.  <
     </div>
 
     <div id="github-contact">
-      <a class="githublink" href="" target="_blank" onclick="gtag('event','outbound', 'clicked on repo')">
+      <a class="githublink" href="https://github.com/dblodgett-usgs/uswb-viz" target="_blank" onclick="gtag('event','outbound', 'clicked on repo')">
         <img src="images/github.svg" alt="github icon"/>
       	<p>Get the Code</p>
       </a>
@@ -273,6 +268,16 @@ another and may change under various land use and water management scenarios.  <
         				</div>
         			  <div class="titleHandler">
         				  <h4>Visualizing water use by region and time</h4>
+        				</div>
+        			</a>
+        		</div>
+        		<div class="relatedItem">
+        		  <a href="https://owi.usgs.gov/vizlab/water-use-15/" target="_blank" onclick="gtag('event','outbound', 'clicked on related vizzy')">
+        		    <div class="footerThumbnail">
+        					<img src="https://owi.usgs.gov/vizlab/water-use-15/images/thumb_landing.png" alt=""/>
+        				</div>
+        			  <div class="titleHandler">
+        				  <h4>Water use in the  U.S. by county, 2015</h4>
         				</div>
         			</a>
         		</div>
