@@ -17,10 +17,10 @@ Goals
 ========================================================
 
 - **Increase interoperability while decreasing data duplication and maintenance overhead**
-- _**Combine the power of web services with transparency of linked data**_
+- **Combine the power of web services with transparency of linked data**
 - **Encode relationships between and among environmental features**
-- **Ecode highly general "preview" content for any feature**
-- _**Utilize commonly used and easily adopted approaches**_
+- **Encode highly general "preview" content for any feature**
+- **Utilize commonly used and easily adopted approaches**
 
 Defining the problem... ELFIE was technical.
 ========================================================
