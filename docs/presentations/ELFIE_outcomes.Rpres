@@ -1,7 +1,7 @@
 ELFIE Overview and Outcomes
 ========================================================
-author: David Blodgett dblodgett@usgs.gov
-date: 11/30/18
+author: David Blodgett: dblodgett@usgs.gov (For the ELFIE Team)
+date: 12/11/18
 autosize: true
 
 Environmental Linked Features Interoperability Experiment (ELFIE)
@@ -17,20 +17,20 @@ Goals
 ========================================================
 
 - **Increase interoperability while decreasing data duplication and maintenance overhead**
-- **Combine the power of web services with transparency of linked data**
+- _**Combine the power of web services with transparency of linked data**_
 - **Encode relationships between and among environmental features**
 - **Ecode highly general "preview" content for any feature**
-- **Utilize commonly used and easily adopted approaches**
+- _**Utilize commonly used and easily adopted approaches**_
 
 Defining the problem... ELFIE was technical.
 ========================================================
 
-> Current OGC services, while flexible and capable, do not directly allow exposure of features in a **REST-ful** way or provide traversable *hypermedia* describing available **methods**, data, or interfaces to **related (linked) content**.
+> Current OGC services, while flexible and capable, do not directly allow exposure of features in a **REST-ful** way or provide traversable **hypermedia** describing available **methods**, data, or interfaces to **related (linked) content**.
 
-- REST-ful: GET + "accept: mime-type" gives you the mime-type format if available
-- Hypertext: traversable web of text. Hypermedia: traversible web of any data
-- methods: the things a service knows how to do
-- related (linked) content: things or data from other services that are related
+- **REST-ful:** GET + "accept: mime-type" gives you the mime-type if available
+- **Hypertext:** traversable web of text. Hypermedia: traversible web of data
+- **methods, data, interfaces:** getCapabilities, describeFeaturetype, etc.
+- **related (linked) content:**  things or data that are related from other services 
 
 Linked data graph views
 ========================================================
@@ -50,7 +50,7 @@ Monitoring, and domain data models
 - Surface Hydrology Features (HY_Features)
 - Growndwater Markup Language 2 (GWML2)
 - Geoscience Markup Language 4 (GeoSciML)
-- Soils Interoperability Experiment (SoilIEML)
+- Soil Data Interoperability Experiment (SoilIEML)
 - Floodcast (Experimental)
 
 Use Cases: Watershed Data Index
@@ -81,6 +81,7 @@ Use Cases: FloodCast
 Outcomes
 ========================================================
 
+(note links on this slide are live)
 - [Engineering Report to be Presented to OGC December 2018.](https://portal.opengeospatial.org/files/?artifact_id=81777&version=1)
 - [Web summary of use cases available now.](https://opengeospatial.github.io/ELFIE/)
 - [JSON-LD contexts](https://opengeospatial.github.io/ELFIE/json-ld)
