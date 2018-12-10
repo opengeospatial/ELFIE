@@ -1,6 +1,6 @@
 [appendix]
 [[use_case_data]]
-=== Use Cases Considered in Design Process
+== Use Cases Considered in Design Process
 
 **River network linked data to address hydrologic drought and ecology**::
 Water consumers and decision makers are interested in potential ecological

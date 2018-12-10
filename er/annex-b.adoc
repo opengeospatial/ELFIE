@@ -1,6 +1,6 @@
 [appendix]
 [[linked_data_default]]
-=== Default Response for Multiple Representions and Relations
+== Default Response for Multiple Representions and Relations
 
 Non information resource identifiers, URIs that are an identifier for a thing that may or may not have information representations, are useful to provide persistent and reusable identifiers for entities such as real-world features. These non information resource identifiers provide a means for global identification across a system such that multiple members of the system can contain information about and/or in reference to shared entities.
 There is a basic conundrum with non information resource identifiers in that there can only be one default response when derefencing a URI and only one member of a distributed system can be the source of that default response. Further, in order to achieve linked system interoperability, dereferencing behavior of non information resource URIs needs to be in accord with the expectations of a member node of a system. The  https://en.wikipedia.org/wiki/HTTPRange-14[httpRange-14] and the https://www.w3.org/TR/cooluris/[Cool URIs Technical Report] provide a significant basis for solving this conundrum and https://www.w3.org/2017/dxwg[W3C working groups continue to focus on it], but many details remain to be agreed upon for use cases such as are being pursued by the ELFIE.
