@@ -5,10 +5,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Indian Creek-Wisconsin River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='144.335289523914' width='60' height='110.664710476086' class='precip-bar'/>
-<!--<rect x='105' y='144.335289523914' width='60' height='11.1593420208423' class='unknown-bar'/>-->
+<rect x='45' y='143.687561532275' width='60' height='111.312438467725' class='precip-bar'/>
+<!--<rect x='45' y='137.547656542562' width='60' height='6.13990498971342' class='unknown-bar'/>-->
 <rect x='105' y='217.555322876252' width='60' height='37.4446771237477' class='streamflow-bar'/>
-<rect x='105' y='155.494631544757' width='60' height='62.0606913314956' class='evapotranspiration-bar'/>
+<rect x='105' y='137.547656542562' width='60' height='80.0076663336906' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -37,10 +37,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>33 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.5 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>33.2 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>23.8 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.2 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3.3 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.8 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -51,10 +51,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Mill Creek-Black Warrior River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='56.2194101380323' width='60' height='198.780589861968' class='precip-bar'/>
-<!--<rect x='105' y='56.2194101380323' width='60' height='10.5630122022518' class='unknown-bar'/>-->
+<rect x='45' y='68.2754496144823' width='60' height='186.724550385518' class='precip-bar'/>
+<!--<rect x='45' y='52.6814947390592' width='60' height='15.5939548754231' class='unknown-bar'/>-->
 <rect x='105' y='179.262008565542' width='60' height='75.7379914344579' class='streamflow-bar'/>
-<rect x='105' y='66.7824223402841' width='60' height='112.479586225258' class='evapotranspiration-bar'/>
+<rect x='105' y='52.6814947390592' width='60' height='126.580513826483' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -83,10 +83,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>59.2 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>33.5 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>55.6 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>37.7 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>22.6 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3.1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.6 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -97,10 +97,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">West Weber-Weber River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='169.515742243931' width='60' height='85.4842577560692' class='precip-bar'/>
-<!--<rect x='105' y='169.515742243931' width='60' height='30.5341720428556' class='unknown-bar'/>-->
+<rect x='45' y='193.139256366984' width='60' height='61.8607436330157' class='precip-bar'/>
+<!--<rect x='105' y='193.139256366984' width='60' height='2.90076972693576' class='unknown-bar'/>-->
 <rect x='105' y='248.608922654764' width='60' height='6.3910773452359' class='streamflow-bar'/>
-<rect x='105' y='200.049914286786' width='60' height='48.5590083679777' class='evapotranspiration-bar'/>
+<rect x='105' y='196.04002609392' width='60' height='52.568896560844' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -129,10 +129,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>25.5 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>14.5 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.4 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>15.7 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.9 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>9.1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.9 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -143,10 +143,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Buck Creek-Delaware River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='76.2028209110552' width='60' height='178.797179088945' class='precip-bar'/>
-<!--<rect x='105' y='76.2028209110552' width='60' height='15.8582018359047' class='unknown-bar'/>-->
-<rect x='105' y='163.603547370004' width='60' height='91.3964526299965' class='streamflow-bar'/>
-<rect x='105' y='92.0610227469599' width='60' height='71.5425246230437' class='evapotranspiration-bar'/>
+<rect x='45' y='95.2125096563492' width='60' height='159.787490343651' class='precip-bar'/>
+<!--<rect x='45' y='94.8367780614138' width='60' height='0.375731594935381' class='unknown-bar'/>-->
+<rect x='105' y='163.570432347093' width='60' height='91.4295676529075' class='streamflow-bar'/>
+<rect x='105' y='94.8367780614138' width='60' height='68.7336542856787' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -175,10 +175,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>53.3 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>21.3 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>47.6 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>20.5 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>27.2 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.7 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.1 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -189,10 +189,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Deer Creek-Smoky Hill River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='180.94212034585' width='60' height='74.0578796541499' class='precip-bar'/>
-<!--<rect x='105' y='180.94212034585' width='60' height='7.09349536914846' class='unknown-bar'/>-->
+<rect x='45' y='153.880873657949' width='60' height='101.119126342051' class='precip-bar'/>
+<!--<rect x='105' y='153.880873657949' width='60' height='13.0780591516804' class='unknown-bar'/>-->
 <rect x='105' y='252.928332776439' width='60' height='2.07166722356054' class='streamflow-bar'/>
-<rect x='105' y='188.035615714999' width='60' height='64.8927170614409' class='evapotranspiration-bar'/>
+<rect x='105' y='166.95893280963' width='60' height='85.9693999668097' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -221,10 +221,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>22.1 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>19.3 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>30.1 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>25.6 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.6 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3.9 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -235,10 +235,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Packer Lake-Sacramento River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='143.893277752915' width='60' height='111.106722247085' class='precip-bar'/>
-<!--<rect x='105' y='143.893277752915' width='60' height='5.43423665558212' class='unknown-bar'/>-->
+<rect x='45' y='184.493027560553' width='60' height='70.5069724394474' class='precip-bar'/>
+<!--<rect x='45' y='124.300043892643' width='60' height='60.1929836679095' class='unknown-bar'/>-->
 <rect x='105' y='221.819478169885' width='60' height='33.1805218301155' class='streamflow-bar'/>
-<rect x='105' y='149.327514408497' width='60' height='72.4919637613873' class='evapotranspiration-bar'/>
+<rect x='105' y='124.300043892643' width='60' height='97.5194342772414' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -267,10 +267,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>33.1 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>21.6 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>21 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>29 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>9.9 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.6 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>17.9 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -281,10 +281,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Palouse Lake</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='187.533165370761' width='60' height='67.4668346292394' class='precip-bar'/>
-<!--<rect x='105' y='187.533165370761' width='60' height='13.8547775898165' class='unknown-bar'/>-->
+<rect x='45' y='215.323740980892' width='60' height='39.676259019108' class='precip-bar'/>
+<!--<rect x='105' y='215.323740980892' width='60' height='24.721987365627' class='unknown-bar'/>-->
 <rect x='105' y='245.588980212689' width='60' height='9.41101978731063' class='streamflow-bar'/>
-<rect x='105' y='201.387942960577' width='60' height='44.2010372521123' class='evapotranspiration-bar'/>
+<rect x='105' y='240.045728346519' width='60' height='5.54325186617044' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -313,10 +313,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>20.1 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>13.2 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.8 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.7 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.8 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>7.4 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -327,10 +327,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Bill Williams River-Lake Havasu</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='221.113464194149' width='60' height='33.8865358058507' class='precip-bar'/>
-<!--<rect x='45' y='201.200006544266' width='60' height='19.913457649883' class='unknown-bar'/>-->
+<rect x='45' y='238.462034399901' width='60' height='16.5379656000989' class='precip-bar'/>
+<!--<rect x='45' y='216.946072469762' width='60' height='21.5159619301388' class='unknown-bar'/>-->
 <rect x='105' y='254.5052225666' width='60' height='0.494777433399751' class='streamflow-bar'/>
-<rect x='105' y='201.200006544266' width='60' height='53.3052160223339' class='evapotranspiration-bar'/>
+<rect x='105' y='216.946072469762' width='60' height='37.559150096838' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -359,10 +359,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>10.1 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>15.9 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.9 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.2 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.1 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>5.9 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>6.4 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -373,10 +373,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Appel Creek</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='202.033987634052' width='60' height='52.9660123659483' class='precip-bar'/>
-<!--<rect x='105' y='202.033987634052' width='60' height='9.65164179190732' class='unknown-bar'/>-->
+<rect x='45' y='201.818011614799' width='60' height='53.1819883852007' class='precip-bar'/>
+<!--<rect x='45' y='201.307330789686' width='60' height='0.510680825113077' class='unknown-bar'/>-->
 <rect x='105' y='252.069188750895' width='60' height='2.93081124910469' class='streamflow-bar'/>
-<rect x='105' y='211.685629425959' width='60' height='40.3835593249363' class='evapotranspiration-bar'/>
+<rect x='105' y='201.307330789686' width='60' height='50.7618579612091' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -406,9 +406,9 @@
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
 <g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>15.8 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>12 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>15.1 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.9 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.9 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.2 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -419,10 +419,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Fields Bayou-Trinity River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='128.690221300921' width='60' height='126.309778699079' class='precip-bar'/>
-<!--<rect x='105' y='128.690221300921' width='60' height='3.25571104428993' class='unknown-bar'/>-->
+<rect x='45' y='75.4733123123774' width='60' height='179.526687687623' class='precip-bar'/>
+<!--<rect x='45' y='72.7408204037519' width='60' height='2.7324919086256' class='unknown-bar'/>-->
 <rect x='105' y='233.748245753226' width='60' height='21.2517542467736' class='streamflow-bar'/>
-<rect x='105' y='131.945932345211' width='60' height='101.802313408015' class='evapotranspiration-bar'/>
+<rect x='105' y='72.7408204037519' width='60' height='161.007425349475' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -451,10 +451,10 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>37.6 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>30.3 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>53.5 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>48 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>6.3 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.8 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
@@ -465,608 +465,10 @@
 <g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Los Alamos Canyon-Rio Grande</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='201.976525027298' width='60' height='53.023474972702' class='precip-bar'/>
-<!--<rect x='105' y='201.976525027298' width='60' height='7.49243717376183' class='unknown-bar'/>-->
+<rect x='45' y='217.530833451176' width='60' height='37.4691665488243' class='precip-bar'/>
+<!--<rect x='105' y='217.530833451176' width='60' height='14.0473733666044' class='unknown-bar'/>-->
 <rect x='105' y='251.524861693123' width='60' height='3.47513830687696' class='streamflow-bar'/>
-<rect x='105' y='209.46896220106' width='60' height='42.0558994920632' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>15.8 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>12.5 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.2 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-051202021001" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Lick Creek-White River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='95.9896126872375' width='60' height='159.010387312762' class='precip-bar'/>
-<!--<rect x='105' y='95.9896126872375' width='60' height='20.8976486747698' class='unknown-bar'/>-->
-<rect x='105' y='191.642061877647' width='60' height='63.3579381223532' class='streamflow-bar'/>
-<rect x='105' y='116.887261362007' width='60' height='74.7548005156395' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>47.4 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>22.3 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.9 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>6.2 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-050200050808" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Streets Run-Monongahela River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='90.2069526476797' width='60' height='164.79304735232' class='precip-bar'/>
-<!--<rect x='105' y='90.2069526476797' width='60' height='3.44997424220986' class='unknown-bar'/>-->
-<rect x='105' y='169.596817318012' width='60' height='85.4031826819881' class='streamflow-bar'/>
-<rect x='105' y='93.6569268898895' width='60' height='75.9398904281224' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>49.1 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>22.6 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>25.4 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-140100051906" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">May Flat-Colorado River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='187.790682409181' width='60' height='67.2093175908194' class='precip-bar'/>
-<!--<rect x='105' y='187.790682409181' width='60' height='5.81403690555729' class='unknown-bar'/>-->
-<rect x='105' y='241.438308335818' width='60' height='13.5616916641819' class='streamflow-bar'/>
-<rect x='105' y='193.604719314738' width='60' height='47.8335890210803' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>20 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>14.2 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.7 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-100301012008" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Log Gulch-Missouri River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='193.722897105735' width='60' height='61.2771028942655' class='precip-bar'/>
-<!--<rect x='105' y='193.722897105735' width='60' height='8.65535218041862' class='unknown-bar'/>-->
-<rect x='105' y='243.098715854911' width='60' height='11.9012841450893' class='streamflow-bar'/>
-<rect x='105' y='202.378249286153' width='60' height='40.7204665687575' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.3 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>12.1 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3.5 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.6 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-170900120202" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Balch Creek-Willamette River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='46.7866651789348' width='60' height='208.213334821065' class='precip-bar'/>
-<!--<rect x='105' y='46.7866651789348' width='60' height='9.64806959401845' class='unknown-bar'/>-->
-<rect x='105' y='127.083824673722' width='60' height='127.916175326278' class='streamflow-bar'/>
-<rect x='105' y='56.4347347729532' width='60' height='70.6490899007692' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>62 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>21 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>38.1 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.9 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-180400012103" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Shag Slough-San Joaquin River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='201.738951578219' width='60' height='53.2610484217809' class='precip-bar'/>
-<!--<rect x='45' y='188.211310741305' width='60' height='13.5276408369141' class='unknown-bar'/>-->
-<rect x='105' y='251.645748768418' width='60' height='3.35425123158226' class='streamflow-bar'/>
-<rect x='105' y='188.211310741305' width='60' height='63.4344380271127' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>15.9 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.9 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-010300032404" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Riggs Branch-Kennebec River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='98.1932795757422' width='60' height='156.806720424258' class='precip-bar'/>
-<!--<rect x='105' y='98.1932795757422' width='60' height='9.22532573267561' class='unknown-bar'/>-->
-<rect x='105' y='168.129790918519' width='60' height='86.8702090814809' class='streamflow-bar'/>
-<rect x='105' y='107.418605308418' width='60' height='60.7111856101013' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>46.7 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.1 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>25.9 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.7 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-102200031006" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Big Slough-Elkhorn River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='166.531278931238' width='60' height='88.4687210687619' class='precip-bar'/>
-<!--<rect x='105' y='166.531278931238' width='60' height='13.9785975212045' class='unknown-bar'/>-->
-<rect x='105' y='243.075867810071' width='60' height='11.9241321899287' class='streamflow-bar'/>
-<rect x='105' y='180.509876452443' width='60' height='62.5659913576287' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>26.4 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.6 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3.6 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.2 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-071000091206" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Coppers Creek-Des Moines River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='143.91884723086' width='60' height='111.08115276914' class='precip-bar'/>
-<!--<rect x='105' y='143.91884723086' width='60' height='15.8336698164712' class='unknown-bar'/>-->
-<rect x='105' y='223.122461239991' width='60' height='31.8775387600089' class='streamflow-bar'/>
-<rect x='105' y='159.752517047331' width='60' height='63.3699441926601' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>33.1 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.9 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>9.5 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.7 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-030701060405" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Penholoway Swamp-Altamaha River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='99.5226899304834' width='60' height='155.477310069517' class='precip-bar'/>
-<!--<rect x='105' y='99.5226899304834' width='60' height='5.76274058615821' class='unknown-bar'/>-->
-<rect x='105' y='220.180074403642' width='60' height='34.8199255963584' class='streamflow-bar'/>
-<rect x='105' y='105.285430516642' width='60' height='114.894643887' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>46.3 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>34.2 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>10.4 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.7 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-030300050405" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Mitchell Landing-Cape Fear River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='107.965277088356' width='60' height='147.034722911644' class='precip-bar'/>
-<!--<rect x='105' y='107.965277088356' width='60' height='14.8077082593493' class='unknown-bar'/>-->
-<rect x='105' y='217.561295938109' width='60' height='37.438704061891' class='streamflow-bar'/>
-<rect x='105' y='122.772985347706' width='60' height='94.7883105904032' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>43.8 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>28.2 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.2 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.4 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-110100040606" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Betsey Gill Creek-White River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='99.7601386941023' width='60' height='155.239861305898' class='precip-bar'/>
-<!--<rect x='105' y='99.7601386941023' width='60' height='13.3533630803517' class='unknown-bar'/>-->
-<rect x='105' y='208.291401794321' width='60' height='46.7085982056795' class='streamflow-bar'/>
-<rect x='105' y='113.113501774454' width='60' height='95.1779000198665' class='evapotranspiration-bar'/>
-
-<rect x='45' y='20' width='2' height='235' class='y-axis'/>
-
-<!-- y axis text -->
-<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
-<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
-
-<!-- y axis ticks -->
-<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
-<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
-
-<!-- x axis text  -->
-<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
-<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
-<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
-
-<!-- legend rectangles -->
-<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
-<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
-<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
-<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
-
-<!-- legend text -->
-<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
-<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
-<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
-<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
-<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>46.2 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>28.4 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>13.9 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4 in/yr</text></g>
-<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
-  <tspan>Major water budget components. Imbalance is the</tspan>
-  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
-  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
-</text></g>
-</g>
-<g id="wb-id-100800071208" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Antelope Creek-Bighorn River</text></g>
-
-<!-- Main rectangles -->
-<rect x='45' y='217.498903275652' width='60' height='37.5010967243484' class='precip-bar'/>
-<!--<rect x='105' y='217.498903275652' width='60' height='5.85358409146429' class='unknown-bar'/>-->
-<rect x='105' y='250.420411389496' width='60' height='4.57958861050426' class='streamflow-bar'/>
-<rect x='105' y='223.352487367116' width='60' height='27.0679240223798' class='evapotranspiration-bar'/>
+<rect x='105' y='231.57820681778' width='60' height='19.9466548753429' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -1096,23 +498,23 @@
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
 <g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.2 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>8.1 in/yr</text></g>
-<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.4 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.7 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>5.9 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.2 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
   <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
 </text></g>
 </g>
-<g id="wb-id-150100120904" class="nill">
-<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Anderson Wash-Muddy River</text></g>
+<g id="wb-id-051202021001" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Lick Creek-White River</text></g>
 
 <!-- Main rectangles -->
-<rect x='45' y='220.427547774552' width='60' height='34.5724522254475' class='precip-bar'/>
-<!--<rect x='45' y='217.016087350435' width='60' height='3.41146042411698' class='unknown-bar'/>-->
-<rect x='105' y='254.860578709397' width='60' height='0.139421290603096' class='streamflow-bar'/>
-<rect x='105' y='217.016087350435' width='60' height='37.8444913589614' class='evapotranspiration-bar'/>
+<rect x='45' y='88.0352705279656' width='60' height='166.964729472034' class='precip-bar'/>
+<!--<rect x='105' y='88.0352705279656' width='60' height='9.49169606551374' class='unknown-bar'/>-->
+<rect x='105' y='191.642061877647' width='60' height='63.3579381223532' class='streamflow-bar'/>
+<rect x='105' y='97.5269665934793' width='60' height='94.1150952841674' class='evapotranspiration-bar'/>
 
 <rect x='45' y='20' width='2' height='235' class='y-axis'/>
 
@@ -1141,10 +543,608 @@
 <g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
 <g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
 <g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
-<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>10.3 in/yr</text></g>
-<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.3 in/yr</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>49.7 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>28 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>18.9 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.8 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-050200050808" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Streets Run-Monongahela River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='116.674982817454' width='60' height='138.325017182546' class='precip-bar'/>
+<!--<rect x='105' y='116.674982817454' width='60' height='5.34482268016373' class='unknown-bar'/>-->
+<rect x='105' y='169.596817318012' width='60' height='85.4031826819881' class='streamflow-bar'/>
+<rect x='105' y='122.019805497618' width='60' height='47.5770118203942' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>41.2 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>14.2 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>25.4 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.6 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-140100051906" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">May Flat-Colorado River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='219.983719725953' width='60' height='35.0162802740469' class='precip-bar'/>
+<!--<rect x='105' y='219.983719725953' width='60' height='15.0875763348497' class='unknown-bar'/>-->
+<rect x='105' y='241.438308335818' width='60' height='13.5616916641819' class='streamflow-bar'/>
+<rect x='105' y='235.071296060803' width='60' height='6.36701227501534' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>10.4 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.9 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.5 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-100301012008" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Log Gulch-Missouri River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='207.668192831299' width='60' height='47.3318071687011' class='precip-bar'/>
+<!--<rect x='45' y='200.683999244129' width='60' height='6.98419358717005' class='unknown-bar'/>-->
+<rect x='105' y='243.098715854911' width='60' height='11.9012841450893' class='streamflow-bar'/>
+<rect x='105' y='200.683999244129' width='60' height='42.4147166107819' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>14.1 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>12.6 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3.5 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.1 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-170900120202" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Balch Creek-Willamette River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='119.349799578782' width='60' height='135.650200421218' class='precip-bar'/>
+<!--<rect x='45' y='87.2500333741326' width='60' height='32.0997662046489' class='unknown-bar'/>-->
+<rect x='105' y='127.083824673722' width='60' height='127.916175326278' class='streamflow-bar'/>
+<rect x='105' y='87.2500333741326' width='60' height='39.8337912995898' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>40.4 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.9 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>38.1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>9.6 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-180400012103" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Shag Slough-San Joaquin River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='222.064952681587' width='60' height='32.9350473184133' class='precip-bar'/>
+<!--<rect x='45' y='185.238765019582' width='60' height='36.8261876620052' class='unknown-bar'/>-->
+<rect x='105' y='251.645748768418' width='60' height='3.35425123158226' class='streamflow-bar'/>
+<rect x='105' y='185.238765019582' width='60' height='66.4069837488362' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>9.8 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>19.8 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-010300032404" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Riggs Branch-Kennebec River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='104.21766411185' width='60' height='150.78233588815' class='precip-bar'/>
+<!--<rect x='105' y='104.21766411185' width='60' height='4.98035523892227' class='unknown-bar'/>-->
+<rect x='105' y='168.129790918519' width='60' height='86.8702090814809' class='streamflow-bar'/>
+<rect x='105' y='109.198019350772' width='60' height='58.9317715677472' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>44.9 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>17.6 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>25.9 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.5 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-102200031006" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Big Slough-Elkhorn River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='153.938816240519' width='60' height='101.061183759481' class='precip-bar'/>
+<!--<rect x='105' y='153.938816240519' width='60' height='0.938198540699051' class='unknown-bar'/>-->
+<rect x='105' y='243.075867810071' width='60' height='11.9241321899287' class='streamflow-bar'/>
+<rect x='105' y='154.877014781218' width='60' height='88.1988530288536' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>30.1 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>26.3 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3.6 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.3 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-071000091206" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Coppers Creek-Des Moines River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='124.14256396091' width='60' height='130.85743603909' class='precip-bar'/>
+<!--<rect x='105' y='124.14256396091' width='60' height='1.48789116578798' class='unknown-bar'/>-->
+<rect x='105' y='223.122461239991' width='60' height='31.8775387600089' class='streamflow-bar'/>
+<rect x='105' y='125.630455126698' width='60' height='97.4920061132928' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>39 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>29 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>9.5 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0.4 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-030701060405" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Penholoway Swamp-Altamaha River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='96.0815446506602' width='60' height='158.91845534934' class='precip-bar'/>
+<!--<rect x='45' y='56.0905471184606' width='60' height='39.9909975321996' class='unknown-bar'/>-->
+<rect x='105' y='220.180074403642' width='60' height='34.8199255963584' class='streamflow-bar'/>
+<rect x='105' y='56.0905471184606' width='60' height='164.089527285181' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>47.3 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>48.9 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>10.4 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.9 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-030300050405" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Mitchell Landing-Cape Fear River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='82.7901558808968' width='60' height='172.209844119103' class='precip-bar'/>
+<!--<rect x='45' y='78.1045003470136' width='60' height='4.68565553388319' class='unknown-bar'/>-->
+<rect x='105' y='217.561295938109' width='60' height='37.438704061891' class='streamflow-bar'/>
+<rect x='105' y='78.1045003470136' width='60' height='139.456795591095' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>51.3 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>41.5 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>11.2 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.4 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-110100040606" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Betsey Gill Creek-White River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='81.5646224917391' width='60' height='173.435377508261' class='precip-bar'/>
+<!--<rect x='105' y='81.5646224917391' width='60' height='4.92133266490861' class='unknown-bar'/>-->
+<rect x='105' y='208.291401794321' width='60' height='46.7085982056795' class='streamflow-bar'/>
+<rect x='105' y='86.4859551566477' width='60' height='121.805446637673' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>51.7 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>36.3 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>13.9 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.5 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-100800071208" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Antelope Creek-Bighorn River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='235.744273461133' width='60' height='19.255726538867' class='precip-bar'/>
+<!--<rect x='105' y='235.744273461133' width='60' height='4.5301856814797' class='unknown-bar'/>-->
+<rect x='105' y='250.420411389496' width='60' height='4.57958861050426' class='streamflow-bar'/>
+<rect x='105' y='240.274459142613' width='60' height='10.145952246883' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>5.7 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>3 in/yr</text></g>
+<g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.4 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1.3 in/yr</text></g>
+<g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Imbalance is the</tspan>
+  <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='15' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
+</g>
+<g id="wb-id-150100120904" class="nill">
+<g><text x='15' y='13.3333333333333' class="wb-plot-title" lengthAdjust='spacingAndGlyphs' text-anchor="start">Anderson Wash-Muddy River</text></g>
+
+<!-- Main rectangles -->
+<rect x='45' y='238.924659559405' width='60' height='16.0753404405946' class='precip-bar'/>
+<!--<rect x='105' y='238.924659559405' width='60' height='8.50982184715031' class='unknown-bar'/>-->
+<rect x='105' y='254.860578709397' width='60' height='0.139421290603096' class='streamflow-bar'/>
+<rect x='105' y='247.434481406556' width='60' height='7.42609730284118' class='evapotranspiration-bar'/>
+
+<rect x='45' y='20' width='2' height='235' class='y-axis'/>
+
+<!-- y axis text -->
+<g><text x='35' y='154.285714285714' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">30</text></g>
+<g><text x='35' y='53.5714285714286' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="end" alignment-baseline="middle">60</text></g>
+
+<!-- y axis ticks -->
+<polyline points='38,153.285714285714 43,153.285714285714 ' class='axis-tick' alignment-baseline="middle"/>
+<polyline points='38,52.5714285714286 43,52.5714285714286 ' class='axis-tick' alignment-baseline="middle"/>
+
+<!-- x axis text  -->
+<g><text x='75' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">In</text></g>
+<g><text x='135' y='267.5' class="axis-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">Out</text></g>
+<g><text transform='translate(15,144) rotate(-90)' class="axis-units-label" lengthAdjust='spacingAndGlyphs' text-anchor="middle">inches</text></g>
+
+<!-- legend rectangles -->
+<rect x='175' y='89.5' width='16' height='16' class='precip-bar' />
+<rect x='175' y='121.5' width='16' height='16' class='evapotranspiration-bar' />
+<rect x='175' y='153.5' width='16' height='16' class='streamflow-bar' />
+<!--><rect x='175' y='201.5' width='16' height='16' class='unknown-bar' />-->
+
+<!-- legend text -->
+<g><text x='175' y='75.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
+<g><text x='195' y='97.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Precipitation</text></g>
+<g><text x='195' y='129.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Evapotranspiration</text></g>
+<g><text x='195' y='161.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Streamflow</text></g>
+<g><text x='195' y='209.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>Imbalance</text></g>
+<g><text x='195' y='111.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>4.8 in/yr</text></g>
+<g><text x='195' y='143.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.2 in/yr</text></g>
 <g><text x='195' y='175.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>0 in/yr</text></g>
-<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>1 in/yr</text></g>
+<g><text x='195' y='223.5' class='legend-text' lengthAdjust='spacingAndGlyphs'>2.5 in/yr</text></g>
 <g><text x='15' y='280' class='legend-text' lengthAdjust='spacingAndGlyphs'>
   <tspan>Major water budget components. Imbalance is the</tspan>
   <tspan x='15' dy='1.2em'>difference between in and out and is described</tspan> 

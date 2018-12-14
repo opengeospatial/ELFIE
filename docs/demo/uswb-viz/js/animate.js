@@ -9,6 +9,7 @@ function clicklink(url, event){
 
  
 function setEmphasis(id) {
+  clearInterval(hu_timer);
   $(".emphasis").removeClass("emphasis");
   hovertext(" ");
   $('[id$=' + id + ']').addClass('emphasis');
@@ -31,7 +32,15 @@ function setShow(id) {
 var hus = ["070700051701","031601130201","160201020603","020401050911","102600080802","180201041203","170601080803","150302040410","101102050210","120302030102","130201011304","051202021001","050200050808","140100051906","100301012008","170900120202","180400012103","010300032404","102200031006","071000091206","030701060405","030300050405","110100040606","100800071208","150100120904"];
 var default_hu = hus[Math.floor(Math.random() * hus.length)];
 
-function load_default() {
-  setEmphasis(default_hu);
-  setShow('wb-id-' + default_hu);
+function load_hu() {
+  var hu = hus[Math.floor(Math.random() * hus.length)];
+  setEmphasis(hu);
+  setShow('wb-id-' + hu);
+  hu_timer = setInterval(load_hu, 5000);
+}
+
+var hu_timer;
+
+function run_timer() {
+  hu_timer = setInterval(load_hu, 100);
 }

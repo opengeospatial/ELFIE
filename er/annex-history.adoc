@@ -8,4 +8,6 @@
 |July 28, 2018|D. Blodgett |0.1 |all |initial version
 |August 28, 2018 |B. Cochrane |0.2 |all |reorganize and edit
 |September 19, 2018 |R. Atkinson |0.3 |all |Updated status of HY_Features ontology and W3C directions
+|November 1, 2018 |S. Grellet, A. Feliachi |0.4 |all |Use case additions and technical edits
+|November 12, 2018 |D. Blodgett |0.5 |all |Final formatting and summary sections
 |====================
