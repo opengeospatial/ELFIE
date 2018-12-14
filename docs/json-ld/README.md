@@ -119,12 +119,12 @@ presented as typed and labelled object stubs.
 with different encodings (DR and TVP). _ABHR: this feels like a hack and that
 it is getting too close to the alternative representations problem we're trying
 to avoid getting caught up in. Thoughts?_ An alternative to the typed example 
-(see [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/deprecated/xample-elf-tsml-observation-byref.json)) 
+(see [xample-elf-tsml-observation-byref.json](https://opengeospatial.github.io/ELFIE/json-ld/deprecated/examples/xample-elf-tsml-observation-byref.json)) 
 is a simple array.
 
     ```json
     "hasResult": [
-        "https://opengeospatial.github.io/ELFIE/json-ld/deprecated/xample-elf-tsml-result-dr.xml",
-        "https://opengeospatial.github.io/ELFIE/json-ld/deprecated/xample-elf-tsml-result-tvp.xml"
+        "https://opengeospatial.github.io/ELFIE/json-ld/deprecated/examples/xample-elf-tsml-result-dr.xml",
+        "https://opengeospatial.github.io/ELFIE/json-ld/deprecated/examples/xample-elf-tsml-result-tvp.xml"
     ]
      ```
