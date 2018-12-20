@@ -7,6 +7,8 @@ Slides summarizing the ELFIE plan at the project's outset can be found [here.](h
 
 A summary of the IE outcomes can be found [here.](https://opengeospatial.github.io/ELFIE/presentations/ELFIE_outcomes){:target="_blank"}
 
+A presentation recording of the IE outcomes slides can be found [here.](https://drive.google.com/file/d/1GvyrpWQmUt-AEzwxWdJ_G9VcpltPzSc6/view){:target="_blank"}
+
 The IE is focused on two cross-domain use cases:  
   1) exposing topological and domain feature model relationships between features and   
   2) description of sampling data available for and linked to sampled domain features  
