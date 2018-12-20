@@ -5,6 +5,8 @@ highly adoptible standards compliant way that is compatible with modern web sear
 
 Slides summarizing the ELFIE plan at the project's outset can be found [here.](https://opengeospatial.github.io/ELFIE/ELFIE_overview){:target="_blank"}
 
+A summary of the IE outcomes can be found [here.](https://opengeospatial.github.io/ELFIE/presentations/ELFIE_outcomes){:target="_blank"}
+
 The IE is focused on two cross-domain use cases:  
   1) exposing topological and domain feature model relationships between features and   
   2) description of sampling data available for and linked to sampled domain features  
