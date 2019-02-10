@@ -6,7 +6,7 @@
 Water consumers and decision makers are interested in potential ecological
 and economic impacts of additional water use.
 
-*Relevant datasets*::: 
+*Relevant datasets*:::
 * River network
 * Incremental catchments
 * Low flow and temperature sensitive species distributions
@@ -113,7 +113,7 @@ to collect relevant information from various agencies.
 
 **Ground water level monitoring**:: Groundwater level monitoring networks are
 deployed on the field to monitor Aquifer status. A groundwater specialist needs
-to be able to traverse links from the Well to the piezomter deployed and,
+to be able to traverse links from the Well to the piezometer deployed and,
 furthermore to the acquired observation (timeseries).
 
 *Relevant datasets*:::
@@ -142,6 +142,6 @@ groundwater so they can understand and forecast groundwater availability.
 
 *Relevant datasets*:::
 * Groundwater wells and level data
-* Surface watervmonitoring sites and flow data
+* Surface water monitoring sites and flow data
 * Meteorological monitoring sites and observations
 * Output predictions at groundwater prediction wells
