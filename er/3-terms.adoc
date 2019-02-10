@@ -3,10 +3,10 @@
 For the purposes of this report, the definitions specified in Clause 4 of the OWS Common Implementation Standard https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9] shall apply. In addition, the following terms and definitions apply.
 
 === feature
-Abstraction of real-world phenomena. [ISO 19101:2002, definition 4.11]. 
+Abstraction of real-world phenomena. [ISO 19101:2002, definition 4.11].
 
 === property
-facet or attribute of an object referenced by a name [ISO 19143:2010, definition 4.21]
+Facet or attribute of an object referenced by a name [ISO 19143:2010, definition 4.21]
 
 === subject
 The subject is the first part of an RDF statement. A subject in the context of a triple <?s ?p ?o> refers to who or what the RDF statement is about. (See https://www.w3.org/TR/ld-glossary/#subject cite:[Hyland:13:LDG])
@@ -18,7 +18,7 @@ The middle term (the linkage, or "verb") in an RDF statement. For example, in th
 In the context of RDF, the object is the final part of an RDF statement. (See https://www.w3.org/TR/ld-glossary/#object cite:[Hyland:13:LDG])
 
 === resource
-A resource represents anything that can be identified, including physical things, documents, abstract concepts, numbers and strings (see https://www.w3.org/TR/rdf11-concepts/ cite:[Cyganiak:14:RCA]) 
+A resource represents anything that can be identified, including physical things, documents, abstract concepts, numbers and strings (see https://www.w3.org/TR/rdf11-concepts/ cite:[Cyganiak:14:RCA])
 
 === observation
 Act of measuring or otherwise determining the value of a property [ISO19156:2011, definition 4.11]
@@ -30,7 +30,7 @@ specific (simplified and useful) subset of a rich (complete but complicated) lin
 A URI for a non-information resource, which is a web resource that cannot be transmitted electronically. A URI is defined as a non-information URI when a HTTP Get Request does not return a 2xx “Success” response when dereferenced. No data are returned because the URI represents something other than a web information resource. i. e. a person or object.
 
 === watershed | catchment
-A physiographic unit defined by a common hydrologic outlet and potentially defined input(s). May have several representations per http://docs.opengeospatial.org/is/14-111r6/14-111r6.html[OGC 14-111r6 HY_Features]. Note that “watershed” translations may be problematic (e.g. translating the term into German leads to two valid but different terms, i.e. “Wasserscheide”, which is the actual drainage divide, and “Einzugsgebiet”, which is the area. The definition here encompases both.). 
+A physiographic unit defined by a common hydrologic outlet and potentially defined input(s). May have several representations per http://docs.opengeospatial.org/is/14-111r6/14-111r6.html[OGC 14-111r6 HY_Features]. Note that “watershed” translations may be problematic (e.g. translating the term into German leads to two valid but different terms, i.e. “Wasserscheide”, which is the actual drainage divide, and “Einzugsgebiet”, which is the area. The definition here encompases both.).
 
 ==	Abbreviated terms
 

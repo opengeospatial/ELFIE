@@ -8,14 +8,14 @@ The ELFIE objectives were to create and demonstrate a reusable framework that me
 ==== Functional Goals
 Functional goals of the ELFIE focused on providing
 
-. the ability to describe and use links between features that adhere to domain-specific feature models and 
-. the ability to link the above features to observations and measurements data from samples collected on these features. 
+. the ability to describe and use links between features that adhere to domain-specific feature models and
+. the ability to link the above features to observations and measurements data from samples collected on these features.
 
 ==== Operational Goals
 
-Within this, the ELFIE aimed to leverage existing standards and best practices while maintaining a high degree of simplicity.  This led to IE participants to seek operational solutions that
+Within this, the ELFIE aimed to leverage existing standards and best practices while maintaining a high degree of simplicity.  This led to IE participants to seek operational solutions that:
 
-. are adoptable by developers and users with a wide array of technical skill levels, 
+. are adoptable by developers and users with a wide array of technical skill levels,
 . are ubiquitous and easily adoptable in any programming language,
 . support mass market search techniques, (https://www.w3.org/TR/sdw-bp/#bp-indexable[SDW Best Practice 2]: Make your spatial data indexable by search engines cite:[Barnaghi:17:SDW])
 . apply best practices for linked data on the web, (https://www.w3.org/TR/sdw-bp/#bp-linking[SDW Best Practice 3]: Link resources together to create the Web of data cite:[Barnaghi:17:SDW])
@@ -23,25 +23,24 @@ Within this, the ELFIE aimed to leverage existing standards and best practices w
 
 === Assumptions
 
-. It is possible and desirable to implement a common approach to encoding links between environmental domain features which allow cross-domain and cross-system sharing and interoperability of such linked information 
+. It is possible and desirable to implement a common approach to encoding links between environmental domain features which allow cross-domain and cross-system sharing and interoperability of such linked information
 . Existing and pending OGC standards for the encoding of environmental observation data in an integrated dataset of features can be linked according to RESTful and Linked Data principles
 . The ability to encode documents containing links between monitoring sites and environmental domain features in a common way will enable automation and lines of inquiry that are not possible without manual intervention today.
-. A reusable approach to encode documents that use these information models in cross-disciplinary applications is doable even while currently not apparent given existing encodings, implementation standards, and best practices, 
+. A reusable approach to encode documents that use these information models in cross-disciplinary applications is doable even while currently not apparent given existing encodings, implementation standards, and best practices,
 
 === Scope
 
 . To focus this IE, only environmental domain models concerning landscape interactions with the hydrologic cycle were considered.  This included surface water, groundwater, well/borehole and soil moisture. (WaterML2, GroundwaterML 2, GeosciML 4 and SoilML)
-. Focus was on: 
-.. linked data documents that contain collections of linked features and related observations and 
+. Focus was on:
+.. linked data documents that contain collections of linked features and related observations and
 .. feature or observation representation documents that contain links to related features or observations.
-. We constrained ourselves to  using existing ontologies and vocabularies wherever possible.
+. The IE constrained itself to  using existing ontologies and vocabularies wherever possible.
 . Problems regarding network architecture for resolving links and systems design and governance for applications that store and retrieve links or concept relationships were deemed out of scope.
 . Issues related to default behavior when dereferencing an identifier, while of great importance to the ELFIE goals, was also declared out of scope of this IE.
 . Discovery of available views and negotiation of choice between client and server were deemed out of scope, although the ability to define a view is seen as a key stepping stone to such options in the future.
 
 === Experiment Summary
 
-To test the assumptions described above, a number of example test cases (described below) were used to guide the design and testing of potential technical solutions. The use cases were hypothetical, clearly of value to the domain, and technically difficult using existing technologies and practices. Discussion of use cases was predicated on the assumption that these would be implemented as test cases under the IE. While time and resources did not allow all these use cases to be implemented for the  ELFIE, the use cases provided invaluable context and example systems to guide discussion and vetting of design alternatives.  
+To test the assumptions described above, a number of example test cases (described below) were used to guide the design and testing of potential technical solutions. The use cases were hypothetical, clearly of value to the domain, and technically difficult using existing technologies and practices. Discussion of use cases was predicated on the assumption that these would be implemented as test cases under the IE. While time and resources did not allow all these use cases to be implemented for the  ELFIE, the use cases provided invaluable context and example systems to guide discussion and vetting of design alternatives.
 
 The specifics of technologies and practices the IE tested are described below. With a clear direction, participants implemented test data and code to exercise and demonstrate the IE outcomes. Application of the use cases considered in the design phase led to some refinement to the design, but the design selected largely satisfied the goals of the IE with some clear next steps and further work needed to formalize data models, encodings, and best practices. The experiment succeeded in identifying shortcomings of some existing practices and gaps in the standards base line that need to be filled. Putting further work and needed new work aside, the IE failed to find significant or fundamental problems with the best practices and standards tested.
-
