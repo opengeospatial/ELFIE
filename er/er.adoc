@@ -20,10 +20,10 @@
 // *****************************************************************************
 // please don't change any of the following, but proceed at line 62
 // *****************************************************************************
-:publicationDate: YYYY-MM-DD
-:approvalDate: YYYY-MM-DD
-:referenceURL: ID
-:copyrightYear: 2018
+:publicationDate: 2019-02-11
+:approvalDate: 2018-12-13
+:referenceURL: er
+:copyrightYear: 2019
 //
 :titletext: {title}
 :doctype: book
@@ -37,6 +37,7 @@
 // set media to output format print or screen for pdf export
 :media: print
 :bibtex-file: resources/bibtex-file.bib
+:bibtex-style: resources/lncs.csl
 
 = {title}
 
