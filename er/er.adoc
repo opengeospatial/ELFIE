@@ -10,7 +10,7 @@
 // date when you posted the document to OGC Portal>Pending Documents. Please use the format: yyyy-mm-dd
 :postedDate: 2018-11-21
 // name of all editors. Separate multiple editors by comma, e.g. John Wayne, Bud Spencer
-:editor: David Blodgett, Byron Cochrane, Rob Atkinson, Silvain Grellet, Abdel Feliachi, Alistair Ritchie
+:editor: David Blodgett, Byron Cochrane, Rob Atkinson, Sylvain Grellet, Abdelfettah Feliachi, Alistair Ritchie
 // proposed working group for review, e.g. Architecture DWG, or WCS SWG
 :workingGroup: Hydrology DWG
 // *****************************************************************************
