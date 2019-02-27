@@ -3,6 +3,8 @@ The ELFIE is intended to test existing OGC and W3C standards with the goal of es
 practice for exposing links between and among environmental domain and sampling features in a 
 highly adoptible standards compliant way that is compatible with modern web search technology. 
 
+The ELFIE Engineering Report can be found [here.](https://docs.opengeospatial.org/per/18-097.html)
+
 Slides summarizing the ELFIE plan at the project's outset can be found [here.](https://opengeospatial.github.io/ELFIE/ELFIE_overview){:target="_blank"}
 
 A summary of the IE outcomes can be found [here.](https://opengeospatial.github.io/ELFIE/presentations/ELFIE_outcomes){:target="_blank"}
