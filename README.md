@@ -1,5 +1,7 @@
 # Environmental Linked Features Interoperability Experiment (ELFIE)
 
+## This repository is a record of activities of the first ELFIE. It has been made public and should be considered read only and available for reference purposes only. All current activities are taking place under the Second ELFIE and potentially other projects.
+
 ### The ELFIE github.io home page is here: [https://opengeospatial.github.io/ELFIE/](https://opengeospatial.github.io/ELFIE/)
 
 ## Summary
