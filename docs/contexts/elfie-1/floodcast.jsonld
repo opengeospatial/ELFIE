@@ -1,0 +1,11 @@
+{
+    "@context": {
+        "fc": "https://opengeospatial.github.io/ELFIE/floodcast",
+        "FloodEvent": "fc:FloodEvent",
+        "FloodExtent": "fc:FloodExtent",
+        "FloodDepth": "fc:FloodDepth",
+        "TransportationAssets": "fc:TransportationAssets",
+        "AssetsThreatened": "fc:AssetsThreatened",
+        "AssetsMonitored": "fc:AssetsMonitored"
+    }
+}
