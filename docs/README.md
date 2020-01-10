@@ -10,7 +10,7 @@ A [Second ELFIE (SELFIE)](https://github.com/opengeospatial/SELFIE) is in progre
 [**Summary of the ELFIE outcomes**](https://opengeospatial.github.io/ELFIE/presentations/ELFIE_outcomes){:target="_blank"}  
 [**ELFIE outcomes presentation**](https://drive.google.com/file/d/1GvyrpWQmUt-AEzwxWdJ_G9VcpltPzSc6/view){:target="_blank"}  
 [**ELFIE JSON-LD Contexts**](https://opengeospatial.github.io/ELFIE/json-ld){:target="_blank"}  
-[**DRAFT SELFIE JSON-LD Contexts**](https://opengeospatial.github.io/SELFIE/contexts/){:target="_blank"}  
+[**DRAFT SELFIE JSON-LD Contexts**](https://opengeospatial.github.io/ELFIE/contexts/elfie-2){:target="_blank"}  
 [**DRAFT SELFIE Example Documents**](https://opengeospatial.github.io/SELFIE/examples/){:target="_blank"}  
 
 ### ELFIE Summary
