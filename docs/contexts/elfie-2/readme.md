@@ -11,6 +11,6 @@ Some contexts are new, others are modifications of contexts defined for
 
 | CONTEXT FILE | EXAMPLE | COMMENT | 
 | ------------ | ------- | ------- | 
-| [elf-index.jsonld](https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld) |  | Core properties of each feature that support discovery, indexing and presentation of basic summary information. Each domain specific JSON (any type of resource) file should include these. Modified version of [ELFIE/elf.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld).  |
-| [elf-data.jsonld](https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld) |  | Properties of an object that wraps representations of a real world ('non-information') resource.  |
-| [gw.jsonld](https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld) |  | Extended version of [ELFIE/gw.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld).  |
+| [elf-index.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld) |  | Core properties of each feature that support discovery, indexing and presentation of basic summary information. Each domain specific JSON (any type of resource) file should include these. Modified version of [ELFIE/elf.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld).  |
+| [elf-data.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld) |  | Properties of an object that wraps representations of a real world ('non-information') resource.  |
+| [gw.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gw.jsonld) |  | Extended version of [ELFIE/gw.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld).  |
