@@ -13,10 +13,10 @@ Some contexts are new, others are modifications of contexts defined for
 | ------------ | ------- | 
 | [elf-index.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld) | Core properties of each feature that support discovery, indexing and presentation of basic summary information. Each domain specific JSON (any type of resource) file should include these. Modified version of [ELFIE/elf.jsonld](https://opengeospatial.github.io/ELFIE/json-ld/elf.jsonld).  |
 | [elf-data.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld) | Properties of an object that wraps representations of a real world ('non-information') resource. |
-| [gsmlb_minimal_context.jsonld]() | A minimal but complete set of [GeoscieML](https://www.opengeospatial.org/standards/geosciml) classes and associations. |
-| [gwml2_minimal_context.jsonld]() | A minimal but complete set of [GroundwaterML2](https://www.opengeospatial.org/standards/gwml2) classes and associations. |
-| [hyf_minimal_context.jsonld]() | A minimal but complete set of [HY\_Features](https://www.opengeospatial.org/standards/waterml) classes and associations. |
-| [qudt.jsonld]() | JSON-LD context for some [Quantities Units Dimensions and Types (QUDT)](http://qudt.org/) associations. |
-| [spatial.jsonld]() | Useful [schema.org](https://schema.org) spatial content. |
-| [ssn-ext.jsonld]() | [Extended Semantic Sensor Network Onotology](https://www.w3.org/TR/vocab-ssn-ext/) associations for feature of interest and observation collections. |
-| [void.jsonld]() | [Context for the Vocabulary of Interlinked Datasets (VOID)](http://rdfs.org/ns/void) |
+| [gsmlb_minimal_context.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gsmlb_minimal_context.jsonld) | A minimal but complete set of [GeoscieML](https://www.opengeospatial.org/standards/geosciml) classes and associations. |
+| [gwml2_minimal_context.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2_minimal_context.jsonld) | A minimal but complete set of [GroundwaterML2](https://www.opengeospatial.org/standards/gwml2) classes and associations. |
+| [hyf_minimal_context.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld) | A minimal but complete set of [HY\_Features](https://www.opengeospatial.org/standards/waterml) classes and associations. |
+| [qudt.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/qudt.jsonld) | JSON-LD context for some [Quantities Units Dimensions and Types (QUDT)](http://qudt.org/) associations. |
+| [spatial.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/spatial.jsonld) | Useful [schema.org](https://schema.org) spatial content. |
+| [ssn-ext.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/ssn-ext.jsonld) | [Extended Semantic Sensor Network Onotology](https://www.w3.org/TR/vocab-ssn-ext/) associations for feature of interest and observation collections. |
+| [void.jsonld](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/void.jsonld) | [Context for the Vocabulary of Interlinked Datasets (VOID)](http://rdfs.org/ns/void) |

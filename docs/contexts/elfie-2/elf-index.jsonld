@@ -9,13 +9,10 @@
         "spatialCoverage": "schema:spatialCoverage",
         "geo": "schema:geo",
         "polygon": "schema:polygon",
-        "image": {
-            "@id": "schema:image",
-            "@type": "@id"
-        },
+        "image": schema:image",
         "report": "schema:report",
         "subjectOf": "schema:subjectOf",
-        "sameAs": "owl:sameAs",
+        "sameAs": "schema:sameAs",
         "label": "rdfs:label",
         "note": "http://www.w3.org/2004/02/skos/core#note"
     }
