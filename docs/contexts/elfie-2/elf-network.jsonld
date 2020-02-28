@@ -1,6 +1,6 @@
 {
     "@context": {
-        "gsp": "http://www.opengis.net/ont/geosparql#",
+        "gsp": "hhttp://www.opengis.net/ont/geosparql#",
         "time": "https://www.w3.org/TR/owl-time/",
         "intersects": "gsp:sfIntersects",
         "touches": "gsp:sfTouches",

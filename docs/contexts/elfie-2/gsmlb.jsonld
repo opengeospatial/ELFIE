@@ -1,7 +1,6 @@
 {
     "@context": {
 		"gsmlb": "http://geosciml.org/def/gsmlb",
-			
 		"AnthropogenicGeomorphologicFeature" : "gsmlb:AnthropogenicGeomorphologicFeature" ,
 		"GeomorphologicFeature" : "gsmlb:GeomorphologicFeature" ,
 		"CompositionPart" : "gsmlb:CompositionPart" ,
@@ -30,7 +29,6 @@
 		"NumericAgeRange" : "gsmlb:NumericAgeRange" ,
 		"ShearDisplacementStructure" : "gsmlb:ShearDisplacementStructure" ,
 		"ShearDisplacementStructureAbstractDescription" : "gsmlb:ShearDisplacementStructureAbstractDescription" ,
-		
 		"composition" : "gsmlb:composition" ,
 		"gaEventDescription" : "gsmlb:gaEventDescription" ,
 		"gbMaterialDescription" : "gsmlb:gbMaterialDescription" ,

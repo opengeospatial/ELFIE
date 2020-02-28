@@ -1,9 +1,8 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "dct": "http://purl.org/dc/terms/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "name": "schema:name",
         "description": "schema:description",
         "spatialCoverage": "schema:spatialCoverage",
@@ -14,6 +13,6 @@
         "subjectOf": "schema:subjectOf",
         "sameAs": "schema:sameAs",
         "label": "rdfs:label",
-        "note": "http://www.w3.org/2004/02/skos/core#note"
+        "note": "skos:note"
     }
 }

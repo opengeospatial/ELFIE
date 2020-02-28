@@ -2,7 +2,7 @@
     "@context": {
         "schema": "http://schema.org/",
         "skos": "https://www.w3.org/TR/skos-reference/",
-        "gsp": "http://www.opengeospatial.org/standards/geosparql",
+        "gsp": "http://www.opengis.net/ont/geosparql#",
         "description": "schema:description",
         "geo": "schema:geo",
         "hasGeometry": "gsp:hasGeometry",
