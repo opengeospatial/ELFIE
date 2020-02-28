@@ -9,7 +9,7 @@
         "spatialCoverage": "schema:spatialCoverage",
         "geo": "schema:geo",
         "polygon": "schema:polygon",
-        "image": schema:image",
+        "image": "schema:image",
         "report": "schema:report",
         "subjectOf": "schema:subjectOf",
         "sameAs": "schema:sameAs",
