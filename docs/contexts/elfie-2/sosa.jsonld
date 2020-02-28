@@ -1,0 +1,30 @@
+{
+    "@context": {
+        "rdfs": "https://www.w3.org/TR/rdf-schema/",
+        "gsp": "http://www.opengis.net/ont/geosparql#",
+        "sampling": "http://www.w3.org/ns/sosa/sampling/",
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "time": "http://www.w3.org/2006/time#",
+        "Observation": "sosa:Observation",
+        "Sample": "sosa:Sample",
+        "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
+        "hasResult": "sosa:hasResult",
+        "madeBySensor": "sosa:madeBySensor",
+        "observedProperty": "sosa:observedProperty",
+        "phenomenonTime": "sosa:phenomenonTime",
+        "hasBeginning": "time:hasBeginning",
+        "hasEnd": "time:hasEnd",
+        "resultTime": "sosa:resultTime",
+        "usedProcedure": "sosa:usedProcedure",
+        "hasGeometry": "gsp:hasGeometry",
+        "isSampleOf": "sosa:isSampleOf",
+        "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+        "hasSampleRelationship": "sampling:hasSampleRelationship",
+        "natureOfRelationship": "sampling:natureOfRelationship",
+        "relatedSample": "sampling:relatedSample",
+        "hasUltimateFeatureOfInterest": "sosa:hasUltimateFeatureOfInterest",
+        "ObservationCollection": "sosa:ObservationCollection",
+        "hasMember": "sosa:hasMember",
+        "isMemberOf": "sosa:isMemberOf"
+    }
+}
