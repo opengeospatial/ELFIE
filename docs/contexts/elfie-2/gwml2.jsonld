@@ -1,7 +1,6 @@
 {
     "@context": {
 		"gw": "http://gwml2.org/def/gwml2#",
-			
 		"GW_ManagementArea" :"gw:GW_ManagementArea",
 		"Sealing" :"gw:Sealing",
 		"WellConstruction" :"gw:WellConstruction",
