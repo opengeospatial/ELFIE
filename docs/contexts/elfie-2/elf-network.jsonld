@@ -1,7 +1,7 @@
 {
     "@context": {
         "gsp": "http://www.opengis.net/ont/geosparql#",
-        "time": "https://www.w3.org/TR/owl-time/",
+        "time": "https://www.w3.org/2006/time#",
         "intersects": "gsp:sfIntersects",
         "touches": "gsp:sfTouches",
         "within": "gsp:sfWithin",
