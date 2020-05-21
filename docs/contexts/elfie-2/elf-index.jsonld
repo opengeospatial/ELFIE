@@ -9,7 +9,7 @@
         "geo": "schema:geo",
         "polygon": "schema:polygon",
         "image": "schema:image",
-        "report": "schema:report",
+        "report": "schema:Report",
         "subjectOf": "schema:subjectOf",
         "sameAs": "schema:sameAs",
         "label": "rdfs:label",
