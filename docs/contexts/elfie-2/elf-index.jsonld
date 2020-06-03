@@ -7,9 +7,12 @@
         "description": "schema:description",
         "geo": "schema:geo",
         "image": "schema:image",
-        "report": "schema:Report",
         "subjectOf": "schema:subjectOf",
         "sameAs": "schema:sameAs",
+        "url": "schema:url",
+        "format": "dct:format",
+        "conformsTo": "dct:conformsTo",
+        "provider": "schema:provider",
         "label": "rdfs:label",
         "note": "skos:note"
     }
